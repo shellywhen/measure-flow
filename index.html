@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Measures Flow</title>
+  <meta name="description" content="Dynamic Network Visualization">
+  <meta name="author" content="Liwenhan Xie">
+  <link rel="icon" type="image/png" href="./lib/fig/vis-nodelink.png" />
+  <link rel="stylesheet" href="./src/css/main.css">
+  <link rel="stylesheet" href="./lib/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./lib/css/font-awesome.css">
+  <!-- <link rel="stylesheet" href="./lib/css/mdb.min.css"> -->
+</head>
+
+<body>
+  <script src="./lib/js/networkcube.min.js"></script>
+  <script type="module" src="./src/js/main.js"></script>
+  <script src="./lib/js/jquery-3.4.1.min.js"></script>
+  <script src="./lib/js/popper.min.js"></script>
+  <script src="./lib/js/d3.v5.min.js"></script>
+  <script src="./lib/js/bootstrap.min.js"></script>
+  <script src="./lib/js/mdb.min.js"></script>
+  <div class="container m-0 p-0 wrapper" id="interface">
+    <div class="row m-0 p-0 wrapper">
+      <div class="col-2">
+        <div id="logo">
+          <a href="http://vistorian.net/">
+            <figure>
+              <img src="./lib/fig/logo-networkcube.png" alt="logo" width="100%" height="100%">
+            </figure>
+          </a>
+        </div>
+        <div id="data_selection">
+          <div class="row wrapper">
+            <div class="col-5 wrapper">
+              Dataset:
+            </div>
+            <div class="dropdown">
+              <button class="btn btn-light btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                scientists
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">marieboucher</a>
+                <a class="dropdown-item" href="#">scientists</a>
+                <a class="dropdown-item" href="#">capitals</a>
+                <a class="dropdown-item" href="#">link-tables</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="configuration">
+          <div id="cofig-search">
+            <div class="input-group mb-3 mt-3 input-group-sm">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon" on><i class="fa fa-search"></i></span>
+              </div>
+              <input type="text" class="form-control" placeholder="Press Enter" aria-label="search" aria-describedby="basic-addon" id="searchBar">
+            </div>
+          </div>
+          <div id="config-scatter" class="config">
+            <div class="form-group container m-0 p-0">
+              <div class="row p-0">
+                <div class="col-3 m-0">
+                  <label for="granularity">Gran.</label>
+                </div>
+                <div class="col m-0">
+                  <select class="form-control form-control-sm" id="granularity">
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="form-group container m-0">
+              <div class="row p-0">
+                <div class="col-1 m-0 p-0">
+                  <label for="xaxis">X</label>
+                </div>
+                <div class="col m-0 p-0">
+                  <select class="form-control form-control-sm" id="xaxis">
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="form-group container m-0">
+              <div class="row">
+                <div class="col-1 m-0 p-0">
+                  <label for="axis">Y</label>
+                </div>
+                <div class="col m-0 p-0">
+                  <select class="form-control form-control-sm" id="yaxis">
+                  </select>
+                </div>
+              </div>
+            </div>
+            <p id="selectedNodeList" style="font-size: 0.8rem">Selected Nodes:</p>
+            <div style="text-align: center;">
+              <button type="button" class="btn btn-outline-info btn-sm" id="launchScatter">Compare!</button>
+            </div>
+          </div>
+          <div id="config-style" class="mt-2">
+          </div>
+
+        </div>
+      </div>
+      <div class="col wrapper">
+        <div id="timesliderFrame">
+        </div>
+        <div id="timelineFrame">
+        </div>
+        <div class="row wrapper">
+          <div class="col-6" id="nodelinkFrame">
+            <svg id="nodelink">
+            </svg>
+          </div>
+          <div class="col-6 outer" id="scatterFrame">
+            <svg id="scatter">
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+
+  </script>
+</body>
+
+</html>
