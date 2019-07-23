@@ -10,8 +10,8 @@ const margin = {
 }
 const scatterHeight = divHeight - margin.top - margin.bottom
 const scatterWidth = divWidth - margin.left - margin.right
-const scatterRadius = 2
-const scatterLineWidth = 2
+const scatterRadius = 4
+const scatterLineWidth = 3
 const localMeasureList = ['degree', 'activation', 'volatility']
 const colors = d3.schemeSet3
 const options = {year: 'numeric', month: 'short', day: 'numeric' }
@@ -55,6 +55,7 @@ let makeScatter = function (values, maxx, maxy) {
   let svg = d3.select('#scatter')
     .attr('width', divWidth)
     .attr('height', divHeight)
+  svg.html("")
   let g = svg.append('g')
     .attr('transform', `translate(${margin.left}, ${margin.top})`)
   let xScale = d3.scaleLinear()
@@ -77,13 +78,13 @@ let makeScatter = function (values, maxx, maxy) {
     let line = d3.line()
       .x(d => xScale(d.x))
       .y(d => yScale(d.y))
-      .curve(d3.curveMonotoneX)
+      .curve(d3.curveCardinal)
     g.append('path')
       .datum(v.values)
       .style('fill', 'none')
       .style('stroke', colors[i])
       .style('stroke-width', scatterLineWidth)
-      .style('stroke-opacity', 0.3)
+      .style('stroke-opacity', 0.7)
       .attr('d', line)
 
     g.append('g')
@@ -108,7 +109,7 @@ let scatterNodeOnHover = function (d) {
   tooltip.transition()
     .duration(200)
     .style("opacity", .9)
-  tooltip.html(`${start}</br>~${end}`)
+  tooltip.html(`&nbsp;${start}</br>-${end}`)
     .style("left", (d3.event.pageX) + "px")
     .style("top", (d3.event.pageY - 28) + "px")
 }

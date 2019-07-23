@@ -134,7 +134,7 @@ let drawNodeLink = function () {
           .attr('transform', function(d) { return 'translate(' + d.x + ',' + d.y + ')' })
         d3.select('#' + nodelinkSvgId)
           .call(d3.zoom()
-              .scaleExtent([2 / 3, 4])
+              .scaleExtent([2 / 3, 8])
               .on('zoom', function() {
                 g.attr('transform', d3.event.transform);
               }))
