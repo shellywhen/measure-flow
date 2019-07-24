@@ -30,8 +30,7 @@ let getTimeIntervals = function (timeArray = window.dgraph.timeArrays.momentTime
     }
     period.push([startId, timeArray.length - 1])
     result['period'] = period
-    if(period.length > 3) // avoid overmuch aggregation
-      results.push(result)
+    results.push(result)
   }
   return results
 }
@@ -79,14 +78,62 @@ let getNumberOfLinks = function (dgraph, interval) {
   for (let itv of interval) {
     let sum = 0
     for (let t = itv[0]; t <= itv[1]; t ++) { // aggregation
-      dgraph.timeArrays.links[t].forEach(lid => {
-        sum += dgraph.linkArrays.presence[lid][0]
-      })
+      sum += dgraph.timeArrays.links[t].length
     }
     dots.push({
       'timeStart': dgraph.timeArrays.momentTime[itv[0]]._d,
       'timeEnd': dgraph.timeArrays.momentTime[itv[1]]._d,
       'y': sum})
+  }
+  return dots
+}
+
+let getActivation = function (dgraph, interval) {
+  let dots = []
+  let linkList = dgraph.timeArrays.links
+  let current = new Set()
+  interval.forEach(itv => {
+    for (let t = itv[0]; t <= itv[1]; t ++) { // aggregation
+      linkList[t].forEach(l => {
+        current.add(dgraph.linkArrays.source[l])
+        current.add(dgraph.linkArrays.target[l])
+      })
+    }
+    dots.push({
+      'timeStart': dgraph.timeArrays.momentTime[itv[0]]._d,
+      'timeEnd': dgraph.timeArrays.momentTime[itv[1]]._d,
+      'y': current.size})
+  })
+  return dots
+}
+
+let getRedundancy = function (dgraph, interval) {
+  let dots = [{'timeStart': dgraph.timeArrays.momentTime[interval[0][0]]._d,
+  'timeEnd': dgraph.timeArrays.momentTime[interval[0][1]]._d,
+  'y': 0}]
+  let linkList = dgraph.timeArrays.links
+  let previous = new Set()
+  for (let t = interval[0][0]; t <= interval[0][1]; t++) {
+    linkList[t].forEach( l => {
+      previous.add(dgraph.linkArrays.source[l])
+      previous.add(dgraph.linkArrays.target[l])
+    })
+  }
+  for (let i = 1; i < interval.length; i ++) {
+    let current = new Set()
+    let itv = interval[i]
+    for (let t = itv[0]; t <= itv[1]; t ++) { // aggregation
+      linkList[t].forEach(l => {
+        current.add(dgraph.linkArrays.source[l])
+        current.add(dgraph.linkArrays.target[l])
+      })
+    }
+    let intersection = new Set([...current].filter(x => previous.has(x)))
+    dots.push({
+      'timeStart': dgraph.timeArrays.momentTime[itv[0]]._d,
+      'timeEnd': dgraph.timeArrays.momentTime[itv[1]]._d,
+      'y': intersection.size})
+    previous = current
   }
   return dots
 }
@@ -239,25 +286,9 @@ let drawTimeLine = function () {
   start = Date.now()
   let intervals = getTimeIntervals(dg.timeArrays.momentTime, dg.getMinGranularity(), dg.getMaxGranularity())
   dg.timeArrays.intervals = intervals
-  let nodeNumber = intervals.map(v => {
-    return {
-      'granularity': v.granularity,
-      'dots': getNumberOfNodes(dg, v.period)
-    }
-  })
-  let linkPairNumber = intervals.map(v => {
-    return {
-      'granularity': v.granularity,
-      'dots': getNumberOfLinkPairs(dg, v.period)
-    }
-  })
-  let linkNumber = intervals.map(v => {
-    return {
-      'granularity': v.granularity,
-      'dots': getNumberOfLinks(dg, v.period)
-    }
-  })
-
+  let nodeNumber = getProcessedData(dg, intervals, getNumberOfNodes)
+  let linkPairNumber = getProcessedData(dg, intervals, getNumberOfLinkPairs)
+  let linkNumber = getProcessedData(dg, intervals, getNumberOfLinks)
   let density = intervals.map((v, i) => {
     return {
       'granularity': v.granularity,
@@ -272,8 +303,12 @@ let drawTimeLine = function () {
       })
     }
   })
+  let activation = getProcessedData(dg, intervals, getActivation)
+  let redundancy = getProcessedData (dg, intervals, getRedundancy)
   console.log(`Get Global Properties in ${Date.now()-start} ms`, density)
 
+
+  // draw the time line
   let xScale = d3.scaleTime()
     .range([0, timelineWidth - margin.left - margin.right])
     .domain([startTimeObj, endTimeObj])
@@ -281,7 +316,18 @@ let drawTimeLine = function () {
   drawCollapseTimeLine(1, nodeNumber, 'nodeNumber', 'Node Number', xScale)
   drawCollapseTimeLine(2, linkPairNumber, 'linkPairNumber', 'Link Pair Number', xScale)
   drawCollapseTimeLine(3, linkNumber, 'linkNumber', 'Link Number', xScale)
-    drawCollapseTimeLine(4, density, 'density', 'Density', xScale)
+  drawCollapseTimeLine(4, density, 'density', 'Density', xScale)
+  drawCollapseTimeLine(5, activation, 'activation', 'Global Activation', xScale)
+  drawCollapseTimeLine(6, redundancy, 'redundancy', 'Global Redundancy', xScale)
+}
+
+let getProcessedData = function (dg, intervals, action) {
+  return intervals.map((v, i) => {
+    return {
+      'granularity': v.granularity,
+      'dots': action(dg, v.period)
+    }
+  })
 }
 
 

@@ -134,20 +134,16 @@ let getMeasure = function (node, measure, interval) {
 
 let getDegree = function (node, interval) {
   let results = []
+  let neighbors = dgraph.nodeArrays.neighbors[node].serie
   for (let itv of interval) {
-    let neighbors = new Set()
+    let connected = new Set()
     for (let t = itv[0]; t <= itv[1]; t ++) { // aggregation
-      let links = dgraph.timeArrays.links[t]
-      for (let l of links) {
-        if (node == dgraph.linkArrays.source[l]) {
-          neighbors.add(dgraph.linkArrays.target[l])
-        }
-        else if (node == dgraph.linkArrays.target[l]) {
-          neighbors.add(dgraph)
-        }
+      if (t in neighbors) {
+        connected.push(...neighbors[t])
       }
     }
-    results.push(neighbors.size)
+    let stat = new Set(connected)
+    results.push(stat.size)
   }
 return results
 }
@@ -179,7 +175,6 @@ let getActivation = function (node, interval) {
 }
 let getRedundancy = function (node, interval) {
    let neighborList = dgraph.nodeArrays.neighbors[node].serie
-   console.log('neighborList', neighborList, typeof neighborList, 21 in neighborList)
    let previous = new Set()
    for (let tid = interval[0][0]; tid <= interval[0][1]; tid ++) {
      if(tid in neighborList) {
@@ -190,15 +185,12 @@ let getRedundancy = function (node, interval) {
    for (let itv = 1; itv < interval.length; itv ++) {
      let current = new Set()
      for (let tid = interval[itv][0]; tid <= interval[itv][1]; tid ++) {
-       console.log('iterate', tid)
        if(tid in neighborList) {
-           console.log('if', node, tid)
            neighborList[tid].forEach(v => {current.add(v)})
        }
      }
-     let diff = new Set([...current].filter(x => previous.has(x)))
-     console.log(previous, current)
-     results.push(diff.size)
+     let intersection = new Set([...current].filter(x => previous.has(x)))
+     results.push(intersection.size)
      previous = current
    }
    return results
