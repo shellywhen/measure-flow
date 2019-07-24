@@ -12,7 +12,7 @@ const scatterHeight = divHeight - margin.top - margin.bottom
 const scatterWidth = divWidth - margin.left - margin.right
 const scatterRadius = 4
 const scatterLineWidth = 3
-const localMeasureList = ['degree', 'activation', 'volatility']
+const localMeasureList = ['degree', 'activation', 'redundancy', 'volatility']
 const colors = d3.schemeSet3
 const options = {year: 'numeric', month: 'short', day: 'numeric' }
 let updateScatter = function () {
@@ -32,7 +32,6 @@ let updateScatter = function () {
     let values = nodes.map((v, i) => {
       let xs = getMeasure(v, xType, interval)
       let ys = getMeasure(v, yType, interval)
-      console.log(xs)
       maxx = Math.max(maxx, d3.max(xs))
       maxy = Math.max(maxy, d3.max(ys))
       let arr = times.map(function(t, ti) {
@@ -47,15 +46,15 @@ let updateScatter = function () {
         'values': arr
       }
     })
-    console.log('value of everyone', values)
+    console.log('Scatter Plot values', values)
     makeScatter(values, maxx, maxy)
 }
 
 let makeScatter = function (values, maxx, maxy) {
+  $('#scatter').html('')
   let svg = d3.select('#scatter')
     .attr('width', divWidth)
     .attr('height', divHeight)
-  svg.html("")
   let g = svg.append('g')
     .attr('transform', `translate(${margin.left}, ${margin.top})`)
   let xScale = d3.scaleLinear()
@@ -128,6 +127,8 @@ let getMeasure = function (node, measure, interval) {
       return getActivation(node, interval)
     case 'volatility':
       return getVolatility(node, interval)
+    case 'redundancy':
+      return getRedundancy(node, interval)
   }
 }
 
@@ -155,7 +156,52 @@ let getVolatility = function (node, interval) {
 
 }
 let getActivation = function (node, interval) {
-
+   let neighborList = dgraph.nodeArrays.neighbors[node].serie
+   let previous = new Set()
+   for (let tid = interval[0][0]; tid <= interval[0][1]; tid ++) {
+     if(tid in neighborList) {
+        neighborList[tid].forEach(v => {previous.add(v)})
+     }
+   }
+   let results = [previous.size]
+   for (let itv = 1; itv < interval.length; itv ++) {
+     let current = new Set()
+     for (let tid = interval[itv][0]; tid <= interval[itv][1]; tid ++) {
+       if(tid in neighborList) {
+           neighborList[tid].forEach(v => {current.add(v)})
+       }
+     }
+     let diff = new Set([...current].filter(x => !previous.has(x)))
+     results.push(diff.size)
+     previous = current
+   }
+   return results
+}
+let getRedundancy = function (node, interval) {
+   let neighborList = dgraph.nodeArrays.neighbors[node].serie
+   console.log('neighborList', neighborList, typeof neighborList, 21 in neighborList)
+   let previous = new Set()
+   for (let tid = interval[0][0]; tid <= interval[0][1]; tid ++) {
+     if(tid in neighborList) {
+        neighborList[tid].forEach(v => {previous.add(v)})
+     }
+   }
+   let results = [0]
+   for (let itv = 1; itv < interval.length; itv ++) {
+     let current = new Set()
+     for (let tid = interval[itv][0]; tid <= interval[itv][1]; tid ++) {
+       console.log('iterate', tid)
+       if(tid in neighborList) {
+           console.log('if', node, tid)
+           neighborList[tid].forEach(v => {current.add(v)})
+       }
+     }
+     let diff = new Set([...current].filter(x => previous.has(x)))
+     console.log(previous, current)
+     results.push(diff.size)
+     previous = current
+   }
+   return results
 }
 
 let tooltip = d3.select('.tooltip')
