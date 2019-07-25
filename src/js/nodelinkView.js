@@ -9,10 +9,13 @@ const MaxRadius = 10
 const forceLayout = d3.forceSimulation()
     .force('link', d3.forceLink().id(d => d._id))
     .force('charge', d3.forceManyBody())
-    .force('center', d3.forceCenter(nodelinkWidth / 2, nodelinkHeight / 2));
+    .force('centerX', d3.forceX(nodeWidth / 2))
+    .force('centerY', d3.forceY(nodeHeight / 2))
+        // .force('center', d3.forceCenter(nodelinkWidth / 2, nodelinkHeight / 2))
+
 
 let getNodeRadius = function(d) {
-  return 2
+  return 1
 }
 let getNodeColor = function (d) {
   return '#aaaaaa'
@@ -97,50 +100,50 @@ let drawNodeLink = function () {
   forceLayout
     .nodes(nodes)
     .on('end', function() {
-      let linkLayer = g.append('g')
-        .classed('linkLayer', true)
-        .selectAll('.links')
-        .data(links)
-        .enter()
-        .append('line')
-        .classed('links', true)
-        .attr('id', d => `link_${d.index}`)
-        .style('stroke-width', getLineStroke)
-        .style('stroke', getLineColor)
-        .style('opacity', 0.5)
+  let linkLayer = g.append('g')
+    .classed('linkLayer', true)
+    .selectAll('.links')
+    .data(links)
+    .enter()
+    .append('line')
+    .classed('links', true)
+    .attr('id', d => `link_${d.index}`)
+    .style('stroke-width', getLineStroke)
+    .style('stroke', getLineColor)
+    .style('opacity', 0.5)
 
-      let nodeLayer = g.append('g')
-        .classed('nodeLayer', true)
-        .selectAll('.nodes')
-        .data(nodes)
-        .enter()
-        .append('circle')
-        .classed('nodes', true)
-        .attr('id', d => `node_${d.index}`)
-        .attr('r', getNodeRadius)
-        .style('fill', getNodeColor)
-        .on('click', nodeOnClick)
-        .on('mouseover', nodeOnHover)
-        .on('mouseout', nodeOutHover)
+  let nodeLayer = g.append('g')
+    .classed('nodeLayer', true)
+    .selectAll('.nodes')
+    .data(nodes)
+    .enter()
+    .append('circle')
+    .classed('nodes', true)
+    .attr('id', d => `node_${d.index}`)
+    .attr('r', getNodeRadius)
+    .style('fill', getNodeColor)
+    .on('click', nodeOnClick)
+    .on('mouseover', nodeOnHover)
+    .on('mouseout', nodeOutHover)
 
-        d3.select('#tmp').remove()
+    d3.select('#tmp').remove()
 
-        perfectScale(dg)
-        linkLayer
-            .attr('x1', function(d) { return d.source.x})
-            .attr('y1', function(d) { return d.source.y })
-            .attr('x2', function(d) { return d.target.x })
-            .attr('y2', function(d) { return d.target.y })
+    perfectScale(dg)
+    linkLayer
+        .attr('x1', function(d) { return d.source.x})
+        .attr('y1', function(d) { return d.source.y })
+        .attr('x2', function(d) { return d.target.x })
+        .attr('y2', function(d) { return d.target.y })
 
-        nodeLayer
-          .attr('transform', function(d) { return 'translate(' + d.x + ',' + d.y + ')' })
-        d3.select('#' + nodelinkSvgId)
-          .call(d3.zoom()
-              .scaleExtent([2 / 3, 8])
-              .on('zoom', function() {
-                g.attr('transform', d3.event.transform);
-              }))
-      })
+    nodeLayer
+      .attr('transform', function(d) { return 'translate(' + d.x + ',' + d.y + ')' })
+    d3.select('#' + nodelinkSvgId)
+      .call(d3.zoom()
+          .scaleExtent([2 / 3, 10])
+          .on('zoom', function() {
+            g.attr('transform', d3.event.transform);
+          }))
+  })
   forceLayout.force('link')
     .links(links)
 }

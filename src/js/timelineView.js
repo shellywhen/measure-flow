@@ -5,7 +5,7 @@ const timelineWidth = $('#' + timelineDivId).innerWidth()
 const timelineSvgHeight = timelineHeight * 0.5
 const scatterRadius = 2
 const scatterLineWidth = 2
-const granularityColor = ['#E74C3C', '#8E44AD','#2980B9', '#1ABC9C', '#16A085', '#F1C40F', '#F39C12', '#3498DB', '#3498DB']
+const granularityColor = ['#E74C3C', '#8E44AD','#2980B9', '#1ABC9C', '#16A085', '#F1C40F', '#F39C12', '#3498DB',' #800080', ]
 const timeList = [1, 1000*60, 1000*60*60, 1000*60*60*24, 1000*60*60*24*7, 1000*60*60*24*30, 1000*60*60*24*30*12, 1000*60*60*24*30*12*10, 1000*60*60*24*30*12*100, 1000*60*60*24*30*12*1000]
 const margin = {
   'top': 5,
@@ -14,7 +14,7 @@ const margin = {
   'bottom': 20
 }
 let globalMeasureList = ['numberOfNodes', 'numberOfNodePairs', 'numberOfLinks', 'diameter', 'clusteringCoefficient']
-let timeLineColor = ['silver', 'yellow', 'orange','green', 'teal', 'blue', 'navy', 'brown', 'red', 'purple']
+let timeLineColor = ['silver', 'yellow', 'orange','green', 'teal', 'blue', 'navy', 'brown', 'red', 'maroon', 'fuchisia', 'purple']
 let getTimeIntervals = function (timeArray = window.dgraph.timeArrays.momentTime, minGran, maxGran) {
   let results = []
   for (let granId = minGran; granId <= maxGran; granId ++) {
@@ -35,23 +35,74 @@ let getTimeIntervals = function (timeArray = window.dgraph.timeArrays.momentTime
   return results
 }
 
-let getNumberOfNodes = function (dgraph, interval) {
+let getNodeDuringInterval = function (dgraph, interval) {
+  let nodes = new Set()
+  for (let t = interval[0]; t <= interval[1]; t ++) {
+    dgraph.timeArrays.links[t].forEach(l => {
+      nodes.add(dgraph.linkArrays.source[l])
+      nodes.add(dgraph.linkArrays.target[l])
+    })
+  }
+  return nodes
+}
+
+let getNeighborDuringInterval = function (dgraph, interval, node) {
+  let nodes = []
+  let neighbors = dgraph.nodeArrays.neighbors[node].serie
+  for(let t = interval[0]; t <= interval[1]; t ++) {
+    if (t in neighbors) {
+      neighbors[t].forEach(v => {
+        nodes.push(v)
+      })
+    }
+  }
+  return new Set(nodes)
+}
+
+let getConnectedComponent = function (dgraph, interval) {
   let dots = []
-  for (let itv of interval) {
-    let nodes = new Set()
-    for (let t = itv[0]; t <= itv[1]; t ++) { // aggregation
-      let links = dgraph.timeArrays.links[t]
-      for (let l of links) {
-        nodes.add(dgraph.linkArrays.source[l])
-        nodes.add(dgraph.linkArrays.target[l])
+  interval.forEach(itv => {
+    let nodes = getNodeDuringInterval(dgraph, itv)
+    let nodeList = Array.from(nodes)
+
+    if (nodeList.length === 0) {
+      dots.push(dataWrapper(dgraph, itv, 0))
+      return
+    }
+    let flags = new Array(nodes.size).fill(false)
+    let map = new Map()
+    let component = nodeList.map((v, i) => i)
+    nodeList.forEach((v, i) => {map[v] = i})
+    let queue = [0]
+    for (let nid in nodeList) {
+      if(!flags[nid]) queue.push(nid)
+      while (queue.length > 0) {
+        let i = queue.pop()
+        if (flags[i]==true) continue
+        flags[i] = true
+        let neighbors = [...getNeighborDuringInterval(dgraph, itv, nodeList[i])]
+        neighbors.forEach(v => {
+          if (!flags[map[v]]) {
+            queue.push(map[v])
+            component[map[v]] = component[i]
+          }
+        })
       }
     }
-    dots.push({
-      'timeStart': dgraph.timeArrays.momentTime[itv[0]]._d,
-      'timeEnd': dgraph.timeArrays.momentTime[itv[1]]._d,
-      'y': nodes.size})
-  }
+    let group = new Set()
+    component.forEach((v, i) => {
+      if (v != i) group.add(v)
+    })
+    dots.push(dataWrapper(dgraph, itv, group.size))
+  })
   return dots
+}
+
+let getNumberOfNodes = function (dgraph, interval) {
+   return interval.map(itv => {
+    let nodes = getNodeDuringInterval(dgraph, itv)
+    return dataWrapper(dgraph, itv, nodes.size)
+  })
 }
 
 let getNumberOfLinkPairs = function (dgraph, interval) {
@@ -59,16 +110,11 @@ let getNumberOfLinkPairs = function (dgraph, interval) {
   for (let itv of interval) {
     let linkPairs = new Set()
     for (let t = itv[0]; t <= itv[1]; t ++) { // aggregation
-      let links = dgraph.timeArrays.links[t]
-      for (let l of links) {
-        linkPairs.add(dgraph.linkArrays.source[l].toString() + ' ' + dgraph.linkArrays.target[l].toString())
-        linkPairs.add(dgraph.linkArrays.target[l].toString() + ' ' + dgraph.linkArrays.source[l].toString())
-      }
+      dgraph.timeArrays.links[t].forEach(l => {
+        linkPairs.add(dgraph.linkArrays.nodePair[l])
+      })
     }
-    dots.push({
-      'timeStart': dgraph.timeArrays.momentTime[itv[0]]._d,
-      'timeEnd': dgraph.timeArrays.momentTime[itv[1]]._d,
-      'y': linkPairs.size / 2})
+    dots.push(dataWrapper(dgraph, itv, linkPairs.size / 2))
   }
   return dots
 }
@@ -91,14 +137,10 @@ let getNumberOfLinks = function (dgraph, interval) {
 let getActivation = function (dgraph, interval) {
   let dots = []
   let linkList = dgraph.timeArrays.links
-  let current = new Set()
+  let current = new Set ()
   interval.forEach(itv => {
-    for (let t = itv[0]; t <= itv[1]; t ++) { // aggregation
-      linkList[t].forEach(l => {
-        current.add(dgraph.linkArrays.source[l])
-        current.add(dgraph.linkArrays.target[l])
-      })
-    }
+    let nodes = getNodeDuringInterval(dgraph, itv)
+    nodes.forEach(n => {current.add(n)})
     dots.push({
       'timeStart': dgraph.timeArrays.momentTime[itv[0]]._d,
       'timeEnd': dgraph.timeArrays.momentTime[itv[1]]._d,
@@ -108,35 +150,50 @@ let getActivation = function (dgraph, interval) {
 }
 
 let getRedundancy = function (dgraph, interval) {
-  let dots = [{'timeStart': dgraph.timeArrays.momentTime[interval[0][0]]._d,
-  'timeEnd': dgraph.timeArrays.momentTime[interval[0][1]]._d,
-  'y': 0}]
+  let dots = [dataWrapper(dgraph, interval[0], 0)]
+  let linkList = dgraph.timeArrays.links
+  let previous = getNodeDuringInterval(dgraph, interval[0])
+  for (let i = 1; i < interval.length; i ++) {
+    let current = getNodeDuringInterval(dgraph, interval[i])
+    let intersection = new Set([...current].filter(x => previous.has(x)))
+    dots.push(dataWrapper(dgraph, interval[i], intersection.size))
+    previous = current
+  }
+  return dots
+}
+
+let dataWrapper = function (dgraph, interval, y) {
+  return {
+    'timeStart': dgraph.timeArrays.momentTime[interval[0]]._d,
+    'timeEnd': dgraph.timeArrays.momentTime[interval[1]]._d,
+    'y': y
+  }
+}
+
+let getVolatility = function (dgraph, interval) {
   let linkList = dgraph.timeArrays.links
   let previous = new Set()
   for (let t = interval[0][0]; t <= interval[0][1]; t++) {
     linkList[t].forEach( l => {
-      previous.add(dgraph.linkArrays.source[l])
-      previous.add(dgraph.linkArrays.target[l])
+      previous.add(dgraph.linkArrays.nodePair[l])
     })
   }
+  let dots = [dataWrapper(dgraph, interval[0], previous.size)]
   for (let i = 1; i < interval.length; i ++) {
     let current = new Set()
     let itv = interval[i]
     for (let t = itv[0]; t <= itv[1]; t ++) { // aggregation
       linkList[t].forEach(l => {
-        current.add(dgraph.linkArrays.source[l])
-        current.add(dgraph.linkArrays.target[l])
+        current.add(dgraph.linkArrays.nodePair[l])
       })
     }
     let intersection = new Set([...current].filter(x => previous.has(x)))
-    dots.push({
-      'timeStart': dgraph.timeArrays.momentTime[itv[0]]._d,
-      'timeEnd': dgraph.timeArrays.momentTime[itv[1]]._d,
-      'y': intersection.size})
+    dots.push(dataWrapper(dgraph, itv, current.size + previous.size - intersection.size))
     previous = current
   }
   return dots
 }
+
 let getDots = function (dots) {
   let results = []
   for (let dot of dots) {
@@ -226,7 +283,7 @@ let drawCollapseTimeLine = function(idx, dotList, id, title, xScale) {
   g.append('g')
     .classed('x-axis', true)
     .attr('transform', `translate(0, ${timelineSvgHeight - margin.top - margin.bottom})`)
-    .call(d3.axisBottom(xScale))
+    .call(d3.axisBottom(xScale).ticks(8))
   g.append('g')
    .classed('y-axis', true)
    .call(d3.axisLeft(yScale).ticks(6))
@@ -275,7 +332,6 @@ let drawCollapseTimeLine = function(idx, dotList, id, title, xScale) {
     .style('left', '1vh')
 }
 
-
 let drawTimeLine = function () {
   let dg = window.dgraph
   let timeObjArray = dg.timeArrays.momentTime.map(v => v._d)
@@ -286,6 +342,8 @@ let drawTimeLine = function () {
   start = Date.now()
   let intervals = getTimeIntervals(dg.timeArrays.momentTime, dg.getMinGranularity(), dg.getMaxGranularity())
   dg.timeArrays.intervals = intervals
+
+  // test part
   let nodeNumber = getProcessedData(dg, intervals, getNumberOfNodes)
   let linkPairNumber = getProcessedData(dg, intervals, getNumberOfLinkPairs)
   let linkNumber = getProcessedData(dg, intervals, getNumberOfLinks)
@@ -304,8 +362,10 @@ let drawTimeLine = function () {
     }
   })
   let activation = getProcessedData(dg, intervals, getActivation)
-  let redundancy = getProcessedData (dg, intervals, getRedundancy)
-  console.log(`Get Global Properties in ${Date.now()-start} ms`, density)
+  let redundancy = getProcessedData(dg, intervals, getRedundancy)
+  let volatility = getProcessedData(dg, intervals, getVolatility)
+  let component = getProcessedData(dg, intervals, getConnectedComponent)
+  console.log(`Get Global Properties in ${Date.now()-start} ms`)
 
 
   // draw the time line
@@ -319,6 +379,8 @@ let drawTimeLine = function () {
   drawCollapseTimeLine(4, density, 'density', 'Density', xScale)
   drawCollapseTimeLine(5, activation, 'activation', 'Global Activation', xScale)
   drawCollapseTimeLine(6, redundancy, 'redundancy', 'Global Redundancy', xScale)
+  drawCollapseTimeLine(6, volatility, 'volatility', 'Global Volatility', xScale)
+  drawCollapseTimeLine(7, component, 'connectedComponent', 'Connected Components', xScale)
 }
 
 let getProcessedData = function (dg, intervals, action) {
@@ -329,6 +391,5 @@ let getProcessedData = function (dg, intervals, action) {
     }
   })
 }
-
 
 export {drawTimeLine}

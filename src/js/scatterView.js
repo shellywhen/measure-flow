@@ -29,6 +29,7 @@ let updateScatter = function () {
     ])
     let maxx = 0
     let maxy = 0
+    let start = Date.now()
     let values = nodes.map((v, i) => {
       let xs = getMeasure(v, xType, interval)
       let ys = getMeasure(v, yType, interval)
@@ -46,7 +47,7 @@ let updateScatter = function () {
         'values': arr
       }
     })
-    console.log('Scatter Plot values', values)
+    console.log(`Scatter Plot in ${Date.now() - start} ms`, values)
     makeScatter(values, maxx, maxy)
 }
 
@@ -136,7 +137,7 @@ let getDegree = function (node, interval) {
   let results = []
   let neighbors = dgraph.nodeArrays.neighbors[node].serie
   for (let itv of interval) {
-    let connected = new Set()
+    let connected = []
     for (let t = itv[0]; t <= itv[1]; t ++) { // aggregation
       if (t in neighbors) {
         connected.push(...neighbors[t])

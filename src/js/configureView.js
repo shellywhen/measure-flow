@@ -10,7 +10,7 @@ let addStyleConfig = function (divId, title, callback, min=0, max=3, value=1) {
 
   div.append('input')
     .attr('type', 'range')
-    .attr('step', 0.1)
+    .attr('step', 0.01)
     .attr('min', min)
     .attr('max', max)
     .attr('value', value)
