@@ -9,8 +9,8 @@ const MaxRadius = 10
 const forceLayout = d3.forceSimulation()
     .force('link', d3.forceLink().id(d => d._id))
     .force('charge', d3.forceManyBody())
-    .force('centerX', d3.forceX(nodeWidth / 2))
-    .force('centerY', d3.forceY(nodeHeight / 2))
+    .force('centerX', d3.forceX(nodelinkWidth / 2))
+    .force('centerY', d3.forceY(nodelinkHeight / 2))
         // .force('center', d3.forceCenter(nodelinkWidth / 2, nodelinkHeight / 2))
 
 
