@@ -78,7 +78,7 @@ let drawConfigs = function () {
   $('#searchBar').on('keypress',function(e) {
     if(e.which == 13) {
        let query = this.value
-       networkcube.search(query)
+       networkcube.search(query, 'node')
     }
 })
   // scatter config

@@ -12,10 +12,28 @@ const forceLayout = d3.forceSimulation()
     .force('centerX', d3.forceX(nodelinkWidth / 2))
     .force('centerY', d3.forceY(nodelinkHeight / 2))
         // .force('center', d3.forceCenter(nodelinkWidth / 2, nodelinkHeight / 2))
-
+let linkLayer
+let nodeLayer
+let times
+/**
+ * Return 0 <= i <= array.length such that !pred(array[i - 1]) && pred(array[i]).
+ */
+function binarySearch(array, pred) {
+    let lo = -1, hi = array.length;
+    while (1 + lo < hi) {
+        const mi = lo + ((hi - lo) >> 1);
+        if (pred(array[mi])) {
+            hi = mi;
+        } else {
+            lo = mi;
+        }
+    }
+    return hi;
+}
 
 let getNodeRadius = function(d) {
-  return 1
+    return Math.sqrt(d.links().length) * 0.5 + 1;
+  // return 3
 }
 let getNodeColor = function (d) {
   return '#aaaaaa'
@@ -37,7 +55,7 @@ let nodeOnHover = function (d) {
 }
 let nodeOutHover = function (d) {
   d3.select(this)
-    .style('fill', getNodeColor(d))
+    .style('fill', networkcube.getPriorityColor(d))
   tooltip.transition()
     .duration(500)
     .style("opacity", 0)
@@ -48,7 +66,7 @@ let tooltip = d3.select('body')
   .style('opacity', 0)
 
 let getLineStroke = function (d) {
-  return 1
+  return 2
 }
 let getLineColor = function (d) {
   return '#4dcfff' // lightblue
@@ -58,8 +76,25 @@ let debug = function () {
   console.log('width', nodelinkWidth, 'height', nodelinkHeight)
 }
 
+let drawNodeLinkInPeriod = function (m) {
+  let dg = window.dgraph
+  let start = m.startUnix
+  let end = m.endUnix
+  let startId = binarySearch(dgraph.timeArrays.unixTime, d => d >= start)
+  let endId = binarySearch(dgraph.timeArrays.unixTime, d => d >= end)
+  linkLayer.style('display', d => {
+    if(d.presentIn(times[startId], times[endId])) {
+      return ''
+    }
+    else{
+      return 'none'
+    }
+  })
+}
+
 let drawNodeLink = function () {
   let dg = window.dgraph
+  times = dg.times().toArray()
   let links = dg.links().toArray()
   let nodes = dg.nodes().toArray()
   let perfectScale = function(dg) {
@@ -73,14 +108,9 @@ let drawNodeLink = function () {
     let ratiox =  2 *  Math.max(maxx, -minx) / nodelinkWidth
     let ratioy =  2 * Math.max(maxy, -miny) / nodelinkHeight
     // console.log(minx, maxx, ratiox, nodelinkWidth, miny, maxy, ratioy, nodelinkHeight)
-    nodes.forEach(function (d) {
-      d.x = d.x  / ratiox + nodelinkWidth / 2
-      d.y = d.y / ratioy + nodelinkHeight / 2
-      let radius = getNodeRadius(d)
-      if (nodelinkWidth / 2 - d.x < MaxRadius) d.x -= radius
-      else if (nodelinkWidth / 2 + d.x < - MaxRadius) d.x += radius
-      if (nodelinkHeight/ 2 - d.y < MaxRadius) d.y -= radius
-      else if (nodelinkHeight / 2 + d.y < - MaxRadius) d.y += radius
+    nodes.forEach(d => {
+        d.x = (d.x - nodelinkWidth / 2)  / ratiox + nodelinkWidth / 2
+        d.y = (d.y - nodelinkHeight / 2) / ratioy + nodelinkHeight / 2
     })
   }
   // create canvas
@@ -100,7 +130,7 @@ let drawNodeLink = function () {
   forceLayout
     .nodes(nodes)
     .on('end', function() {
-  let linkLayer = g.append('g')
+  linkLayer = g.append('g')
     .classed('linkLayer', true)
     .selectAll('.links')
     .data(links)
@@ -109,10 +139,10 @@ let drawNodeLink = function () {
     .classed('links', true)
     .attr('id', d => `link_${d.index}`)
     .style('stroke-width', getLineStroke)
-    .style('stroke', getLineColor)
+    .style('stroke', d => networkcube.getPriorityColor(d))
     .style('opacity', 0.5)
 
-  let nodeLayer = g.append('g')
+  nodeLayer = g.append('g')
     .classed('nodeLayer', true)
     .selectAll('.nodes')
     .data(nodes)
@@ -121,7 +151,7 @@ let drawNodeLink = function () {
     .classed('nodes', true)
     .attr('id', d => `node_${d.index}`)
     .attr('r', getNodeRadius)
-    .style('fill', getNodeColor)
+    .style('fill', d => networkcube.getPriorityColor(d))
     .on('click', nodeOnClick)
     .on('mouseover', nodeOnHover)
     .on('mouseout', nodeOutHover)
@@ -146,5 +176,7 @@ let drawNodeLink = function () {
   })
   forceLayout.force('link')
     .links(links)
+
+    networkcube.addEventListener('timeRange', drawNodeLinkInPeriod)
 }
 export {drawNodeLink, debug, getNodeRadius, getLineStroke}

@@ -49,6 +49,8 @@ let drawTimeSlider = function () {
       .text(brushEnd.toLocaleDateString("en-US", options))
       .attr('transform', 'translate('+ selection[1] + ', '+ 3 * height / 4 + ')')
       .attr('text-anchor', 'start')
+
+    networkcube.timeRange(brushStart.getTime(), brushEnd.getTime())
   }
   let brush = d3.brushX()
     .extent([[0, height / 3], [width, 2 * height / 3]])
@@ -61,7 +63,6 @@ let drawTimeSlider = function () {
     .classed('x-axis', true)
     .attr('transform', 'translate(0, ' + height / 3 + ')' )
     .call(xAxis)
-
 }
 
 export {drawTimeSlider}
