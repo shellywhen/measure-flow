@@ -19,8 +19,9 @@ const multipleWidth = multipleSVGWidth - multipleMargin.left - multipleMargin.ri
 const multipleHeight = multipleSVGHeight  - multipleMargin.top - multipleMargin.bottom
 const localMeasureList = ['degree', 'activation', 'redundancy', 'volatility', 'clutering coefficient']
 // const colors = d3.schemeSet3
-const colors = ['orange','green', 'teal', 'blue', 'navy', 'brown', 'red', 'maroon', 'fuchisia', 'purple']
+const colors = ['orange','green', 'teal', 'lightblue', 'blue', 'navy', 'brown', 'red', 'maroon', 'fuchisia', 'purple']
 const options = {year: 'numeric', month: 'short', day: 'numeric' }
+
 let updateScatter = function () {
     let dg = window.dgraph
     let nodes = Array.from(dg.nodeSelection)
@@ -145,6 +146,8 @@ let multiplePlot = function (i, g, value, xScale, yScale, identifier) {
     .attr('r', scatterRadius)
     .style('fill', colors[i])
     .style('opacity', 0.6)
+    .on('mouseover', mouseOverMultiple)
+    .on('mouseout', scatterNodeOutHover)
 }
 
 let makeScatter = function (values, maxx, maxy) {
@@ -320,6 +323,20 @@ let getRedundancy = function (node, interval) {
    }
    return results
 }
-
 let tooltip = d3.select('.tooltip')
+let mouseOverMultiple = function (d) {
+  let start = d.t[0].toLocaleDateString('en-US', options)
+  let end = d.t[1].toLocaleDateString('en-US', options)
+  let content = `x: ${d.x} y: ${d.y}</br>${start}-${end}`
+  if(start === end) {
+    content = `x: ${d.x} y: ${d.y}</br>${start}`
+  }
+  tooltip.transition()
+    .duration(200)
+    .style('opacity', .9)
+  tooltip.html(content)
+    .style('font-size', '0.8rem')
+    .style('left', (d3.event.pageX) + 'px')
+    .style('top', (d3.event.pageY - 40) + 'px')
+}
 export {updateScatter,localMeasureList}
