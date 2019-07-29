@@ -33,9 +33,9 @@ function afterLoadedData(dataset) {
     // import data into browser's localstorage.
     networkcube.importData(session, dataset)
     window.dgraph = networkcube.getDynamicGraph(dataset.name, session)
-    window.dgraph.nodeSelection = new Set()
+    window.dgraph.nodeSelection = new Set([0, 1])
     TimeSlider.drawTimeSlider()
     TimeLine.drawTimeLine()
     Config.drawConfigs()
-    NodeLink.drawNodeLink()
+    //NodeLink.drawNodeLink()
 }

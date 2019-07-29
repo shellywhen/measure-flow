@@ -21,6 +21,7 @@ body {
 }
 #scatterFrame {
   height: 45vh;
+  line-height: 0.5vh;
 }
 #interface {
   height: 100vh;

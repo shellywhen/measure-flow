@@ -50,7 +50,7 @@ let addScatterConfig = function (granList, localMeasureList) {
     .enter()
     .append('option')
     .attr('value', function(d, i) {
-      return i
+      return i + 1
     })
     .text(d => d)
 

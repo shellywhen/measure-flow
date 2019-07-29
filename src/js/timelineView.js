@@ -141,10 +141,7 @@ let getActivation = function (dgraph, interval) {
   interval.forEach(itv => {
     let nodes = getNodeDuringInterval(dgraph, itv)
     nodes.forEach(n => {current.add(n)})
-    dots.push({
-      'timeStart': dgraph.timeArrays.momentTime[itv[0]]._d,
-      'timeEnd': dgraph.timeArrays.momentTime[itv[1]]._d,
-      'y': current.size})
+    dots.push(dataWrapper(dgraph, itv, current.size))
   })
   return dots
 }
@@ -286,7 +283,7 @@ let drawCollapseTimeLine = function(idx, dotList, id, title, xScale) {
     .call(d3.axisBottom(xScale).ticks(8))
   g.append('g')
    .classed('y-axis', true)
-   .call(d3.axisLeft(yScale).ticks(6))
+   .call(d3.axisLeft(yScale).ticks(5))
 
   let detailedColor = d3.scaleOrdinal()
     .domain(dotList.map((d, i) => i))
