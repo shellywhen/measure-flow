@@ -363,6 +363,7 @@ let drawTimeLine = function () {
   let volatility = getProcessedData(dg, intervals, getVolatility)
   let component = getProcessedData(dg, intervals, getConnectedComponent)
   console.log(`Get Global Properties in ${Date.now()-start} ms`)
+  console.log(density, nodeNumber, linkPairNumber)
 
 
   // draw the time line

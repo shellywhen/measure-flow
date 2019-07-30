@@ -8,6 +8,9 @@ body {
 #timesliderFrame {
   height: 15%;
 }
+#timesliderFrame .tick line {
+  stroke: grey;
+}
 #timesliderFrame .tick text{
   font-size: larger;
   display: block;
@@ -86,6 +89,7 @@ div.tooltip {
 }
 .tick line{
   stroke: #E2E6EA;
+  stroke-width: 2px
 }
 .tick text{
   font-family: cursive;

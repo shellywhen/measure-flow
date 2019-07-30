@@ -52,6 +52,17 @@ let drawTimeSlider = function () {
 
     networkcube.timeRange(brushStart.getTime(), brushEnd.getTime())
   }
+  svg.selectAll('.snapshot')
+    .data(dg.timeArrays.momentTime)
+    .enter()
+    .append('line')
+    .style('stroke', '#E2E6EA')
+    .classed('snapshot', true)
+    .attr('x1', d => xScale(d._d))
+    .attr('x2', d => xScale(d._d))
+    .attr('y1', height / 8)
+    .attr('y2', height / 3)
+
   let brush = d3.brushX()
     .extent([[0, height / 3], [width, 2 * height / 3]])
     .on('brush end', brushed)

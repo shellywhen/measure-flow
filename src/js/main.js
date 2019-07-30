@@ -20,10 +20,17 @@ let linkSchema = {  source: 0,
                     time: 5,
                     linkType: 2
                   }
+let linkSchema2 = {
+  source: 7,
+  target: 8,
+  weight: 5,
+  time: 2,
+  linkType: 3
+}
 let session = 'demo'
 const domain = window.location.href
 const dataFolder = 'data'
-let dataFileName = 'scientists.csv'
+let dataFileName = 'scientists.csv' // 'DiplomaticExchange.csv' //  'DD/MM/YYYY'
 let url = `${domain}${dataFolder}/${dataFileName}`
 console.log('find data in ', url)
 // load data file with the above link schema

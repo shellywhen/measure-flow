@@ -205,10 +205,12 @@ let makeScatter = function (values, maxx, maxy) {
 let scatterNodeOnHover = function (d) {
   let start = d.t[0].toLocaleDateString('en-US', options)
   let end = d.t[1].toLocaleDateString('en-US', options)
+  let content = `&nbsp;${start}</br>-${end}`
+  if (start === end) content = `${start}`
   tooltip.transition()
     .duration(200)
     .style('opacity', .9)
-  tooltip.html(`&nbsp;${start}</br>-${end}`)
+  tooltip.html(`${content}`)
     .style('left', (d3.event.pageX) + 'px')
     .style('top', (d3.event.pageY - 28) + 'px')
 }
