@@ -16,11 +16,11 @@
 <body>
   <script src="./lib/js/networkcube.js"></script>
   <script>
-  const domain = window.location.host
+  const domain = `${window.location.origin}${window.location.pathname}`
   const dataFolder = 'data'
   const session = 'demo'
   let params = networkcube.getUrlVars()
-  if(!params['datasetName']) window.location.href =`http://${domain}/?session=demo&datasetName=scientists`
+  if(!params['datasetName']) window.location.href =`${domain}?session=demo&datasetName=scientists`
   </script>
   <script type="module" src="./src/js/main.js"></script>
   <script src="./lib/js/jquery-3.4.1.min.js"></script>

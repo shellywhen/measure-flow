@@ -44,7 +44,7 @@ const configMap = {
 let dataFileName = networkcube.getUrlVars()['datasetName'].replace(/___/g, ' ')
 let config = configMap[dataFileName]
 // 'DiplomaticExchange.csv' //  'DD/MM/YYYY'
-let url = `http://${domain}/${dataFolder}/${dataFileName}.csv`
+let url = `${domain}${dataFolder}/${dataFileName}.csv`
 
 console.log('find data in ', url)
 // load data file with the above link schema
