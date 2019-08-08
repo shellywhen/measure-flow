@@ -31,27 +31,33 @@ let drawTimeSlider = function () {
   svg.append('text')
      .attr('id', 'timeEndText')
 
-  let brushed = function () {
+  let brushendCallback = function (d) {
+    brushed()
+    let selection = d3.event.selection || xScale.range()
+    let brushStart = xScale.invert(selection[0])
+    let brushEnd = xScale.invert(selection[1])
+    networkcube.sendMessage('period', {'start': brushStart.getTime(), 'end': brushEnd.getTime()})
+  }
 
+  let brushed = function () {
     let selection = d3.event.selection || xScale.range()
     let brushStart = xScale.invert(selection[0])
     let brushEnd = xScale.invert(selection[1])
     let options = {weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' }
-
     d3.select('#timeStartText')
       .classed('annotation', true)
       .text(brushStart.toLocaleDateString("en-US", options))
       .attr('transform', 'translate('+ selection[0] + ', '+ 3 * height / 4 + ')')
       .attr('text-anchor', 'end')
-
     d3.select('#timeEndText')
       .classed('annotation', true)
       .text(brushEnd.toLocaleDateString("en-US", options))
       .attr('transform', 'translate('+ selection[1] + ', '+ 3 * height / 4 + ')')
       .attr('text-anchor', 'start')
-
-    networkcube.timeRange(brushStart.getTime(), brushEnd.getTime())
+    // networkcube.timeRange(brushStart.getTime(), brushEnd.getTime())
+    networkcube.sendMessage('timerange', {startUnix: brushStart.getTime(), endUnix: brushEnd.getTime() })
   }
+
   svg.selectAll('.snapshot')
     .data(dg.timeArrays.momentTime)
     .enter()
@@ -60,12 +66,13 @@ let drawTimeSlider = function () {
     .classed('snapshot', true)
     .attr('x1', d => xScale(d._d))
     .attr('x2', d => xScale(d._d))
-    .attr('y1', height / 8)
+    .attr('y1', 0)
     .attr('y2', height / 3)
 
   let brush = d3.brushX()
     .extent([[0, height / 3], [width, 2 * height / 3]])
     .on('brush end', brushed)
+    .on('end', brushendCallback)
   svg.append('g')
     .classed('brush', true)
     .call(brush)
