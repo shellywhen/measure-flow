@@ -26,7 +26,6 @@ let updateStat = function (msg) {
   let end = msg.body.end
   let startId = binarySearch(dgraph.timeArrays.unixTime, d => d >= start)
   let endId = binarySearch(dgraph.timeArrays.unixTime, d => d >= end)
-  console.log('radar', start, end, startId, endId)
   let groups  = [{'id': 1, 'node': [0, 1, 2, 3, 4, 5, 6, 7], 'name': 'Group 1'}, {'id': 2, 'node': [8, 9, 10, 11, 12, 13, 14, 15, 16], 'name': 'Group 2'}]
   let globalNodeList = {'id': 0, 'node': dgraph.nodeArrays.id, 'name': 'global'}
   groups.unshift(globalNodeList)
@@ -113,7 +112,7 @@ let wrapGroup = function (groups, startId, endId) {
 }
 
 let getMaxValue = function (res) {
-  let maxValue = new Array(res[0].length).fill(0)
+  let maxValue = new Array(res[0].length).fill(1)
   res.forEach(item => {
     item.forEach((measure, i) => {
       maxValue[i] = Math.max(maxValue[i], measure.value)

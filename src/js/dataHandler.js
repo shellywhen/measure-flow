@@ -5,6 +5,24 @@ export let handleSelect = function (nodeId) {
   else addNode(nodeId)
 }
 
+export let getLocalMeasure = function (node, flag=false) {
+  let nodes = []
+  let neighbors = window.dgraph.nodeArrays.neighbors[node.index].serie
+  let startId = window.activeTime.startId
+  let endId = window.activeTime.endId
+  if(flag === true) {
+    startId = 0
+    endId = window.dgraph.timeArrays.momentTime.length - 1
+  }
+  switch (window.localMeasure) {
+    case 'degree':
+      for (let t = startId; t <= endId; t++)
+        if(t in neighbors)
+          nodes.push(...neighbors[t])
+      return new Set(nodes).size
+  }
+}
+
 let deleteNode = function (nodeId) {
   let flag = window.dgraph.nodeSelection.delete(nodeId)
   updateSelectionList()
@@ -36,7 +54,6 @@ let updateSelectionList = function () {
     .classed('nodeList', true)
     .classed('mr-1', true)
     .text( (d,i) => {
-      console.log(i, d)
       return `${dg.nodeArrays.label[d]}`
     })
     .on('mouseover', d => {

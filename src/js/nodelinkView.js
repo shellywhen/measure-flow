@@ -6,6 +6,7 @@ const nodelinkHeight = $('#' + nodelinkDivId).innerHeight()
 const nodelinkWidth = $('#' + nodelinkDivId).innerWidth()
 const nodeHighLightColor = 'orange'
 const MaxRadius = 10
+let LINK_GAP = 2
 const forceLayout = d3.forceSimulation()
     .force('link', d3.forceLink().id(d => d._id))
     .force('charge', d3.forceManyBody())
@@ -13,6 +14,7 @@ const forceLayout = d3.forceSimulation()
     .force('centerY', d3.forceY(nodelinkHeight / 2))
 let linkLayer
 let nodeLayer
+let nodeBackLayer
 let nodeLayerG
 let times
 let nodes
@@ -38,19 +40,18 @@ let nodeOnHover = function (d) {
     .style('fill', nodeHighLightColor)
   tooltip.transition()
     .duration(200)
-    .style("opacity", .9)
+    .style('opacity', .9)
   tooltip.html(label)
-    .style("left", (d3.event.pageX) + "px")
-    .style("top", (d3.event.pageY - 28) + "px")
+    .style('left', (d3.event.pageX) + 'px')
+    .style('top', (d3.event.pageY - 28) + 'px')
 }
 let nodeOutHover = function (d) {
   d3.select(this)
     .style('fill', networkcube.getPriorityColor(d))
   tooltip.transition()
     .duration(500)
-    .style("opacity", 0)
+    .style('opacity', 0)
 }
-
 let highlightNodes = function (nodes) {
   nodes.forEach(nid => {
     d3.select(`#node_${nid}`)
@@ -79,33 +80,23 @@ let debug = function () {
 
 let lasso_start = function () {
   lasso.items()
-       .classed("selected",false);
+       .classed('selected',false);
 }
 let lasso_draw = function () {
-  // Style the possible dots
    lasso.possibleItems()
-       .classed("possible",true);
-   // Style the not possible dot
+       .classed('possible',true);
    lasso.notPossibleItems()
-       .classed("possible",false);
+       .classed('possible',false);
 }
 let lasso_end = function () {
-    // Style the selected dots
     let selectedCircles = lasso.selectedItems()
-        .classed("selected",true)
+        .classed('selected',true)
     window.lasso_selection = selectedCircles._groups[0].map(d => d.__data__)
-    // configTooltip.transition()
-    //   .duration(200)
-    //   .style("opacity", .9)
     configCell.style('display', 'block')
+    console.log('selected', window.lasso_selection)
 }
 
-let drawNodeLinkInPeriod = function (m) {
-  let dg = window.dgraph
-  let start = m.startUnix
-  let end = m.endUnix
-  let startId = binarySearch(dg.timeArrays.unixTime, d => d >= start)
-  let endId = binarySearch(dg.timeArrays.unixTime, d => d >= end)
+let drawNodeLinkInPeriod = function (startId, endId) {
   linkLayer.style('display', d => {
     if(d.presentIn(times[startId], times[endId])) {
       return ''
@@ -114,18 +105,24 @@ let drawNodeLinkInPeriod = function (m) {
       return 'none'
     }
   })
+  nodeLayer.attr('r', d => {
+    let value = DataHandler.getLocalMeasure(d)
+     return Math.sqrt(value) * 0.5 + 1;
+    // return Math.log(value + 1)
+  })
 }
 
 let cancelLasso = function () {
-  // configTooltip.transition()
-  //   .duration(500)
-  //   .style("opacity", 0)
+  lasso.items().classed('selected',false)
+  lasso.items().classed('possible',false)
   configCell.style('display', 'none')
 }
-
+let lineGenerator = d3.line().x(d => d.x).y(d => d.y)//.curve(d3.curveCardinal)
 let addSelection = function () {
   let selection = window.lasso_selection
   console.log(window.lasso_selection)
+  lasso.items().classed('selected',false)
+  lasso.items().classed('possible',false)
   configCell.style('display', 'none')
 }
 let drawLassoConfig = function (g) {
@@ -156,29 +153,27 @@ let drawLassoConfig = function (g) {
        d.callback(d)
      })
 }
-
+let perfectScale = function() {
+  let minx = 0, maxx = 0, miny = 0, maxy = 0
+  for (let node of nodes) {
+    minx = Math.min(minx, node.x)
+    maxx = Math.max(maxx, node.x)
+    miny = Math.min(miny, node.y)
+    maxy = Math.max(maxy, node.y)
+  }
+  let ratiox =  2 *  Math.max(maxx, -minx) / nodelinkWidth
+  let ratioy =  2 * Math.max(maxy, -miny) / nodelinkHeight
+  nodes.forEach(d => {
+      d.x = (d.x - nodelinkWidth / 2)  / ratiox + nodelinkWidth / 2
+      d.y = (d.y - nodelinkHeight / 2) / ratioy + nodelinkHeight / 2
+  })
+}
 let drawNodeLink = function () {
   let dg = window.dgraph
   times = dg.times().toArray()
   let links = dg.links().toArray()
   nodes = dg.nodes().toArray()
 
-
-  let perfectScale = function(dg) {
-    let minx = 0, maxx = 0, miny = 0, maxy = 0
-    for (let node of nodes) {
-      minx = Math.min(minx, node.x)
-      maxx = Math.max(maxx, node.x)
-      miny = Math.min(miny, node.y)
-      maxy = Math.max(maxy, node.y)
-    }
-    let ratiox =  2 *  Math.max(maxx, -minx) / nodelinkWidth
-    let ratioy =  2 * Math.max(maxy, -miny) / nodelinkHeight
-    nodes.forEach(d => {
-        d.x = (d.x - nodelinkWidth / 2)  / ratiox + nodelinkWidth / 2
-        d.y = (d.y - nodelinkHeight / 2) / ratioy + nodelinkHeight / 2
-    })
-  }
   // create canvas
   let svg = d3.select('#' + nodelinkSvgId)
     .attr('height', nodelinkHeight)
@@ -189,6 +184,7 @@ let drawNodeLink = function () {
     .text('Calculating')
     .attr('id', 'tmp')
     .style('text-anchor', 'middle')
+    .style('font-size', '3rem')
     .attr('x', nodelinkWidth / 2)
     .attr('y', nodelinkHeight / 2)
 
@@ -196,27 +192,44 @@ let drawNodeLink = function () {
   forceLayout
     .nodes(nodes)
     .on('end', function() {
+
+      perfectScale(dg)
+      calculateCurvedLinks();
         linkLayer = g.append('g')
           .classed('linkLayer', true)
           .selectAll('.links')
           .data(links)
           .enter()
-          .append('line')
+          .append('path')
           .classed('links', true)
           .attr('id', d => `link_${d.index}`)
           .style('stroke-width', getLineStroke)
           .style('stroke', d => networkcube.getPriorityColor(d))
-          .style('opacity', 0.5)
+          .style('fill-opacity', 0.2)
+          .style('stroke-opacity', 0.5)
+          .style('fill', '#d9d3d3')
+          .attr('d', d => lineGenerator(d.path))
 
         nodeLayerG = g.append('g')
           .classed('nodeLayer', true)
+
+        nodeBackLayer = nodeLayerG.selectAll('.back-nodes')
+            .data(nodes)
+            .enter()
+            .append('circle')
+            .classed('back-nodes', true)
+            .attr('r', d =>Math.sqrt(DataHandler.getLocalMeasure(d, true)) * 0.5 + 1 )
+            .attr('transform', function(d) { return 'translate(' + d.x + ',' + d.y + ')' })
+            .style('fill', '#b9b9b9')
+
         nodeLayer = nodeLayerG.selectAll('.nodes')
           .data(nodes)
           .enter()
           .append('circle')
           .classed('nodes', true)
           .attr('id', d => `node_${d.index}`)
-          .attr('r', getNodeRadius)
+          .attr('r', d => Math.sqrt(DataHandler.getLocalMeasure(d, true)) * 0.5 + 1 )
+          .attr('transform', function(d) { return 'translate(' + d.x + ',' + d.y + ')' })
           .style('fill', d => networkcube.getPriorityColor(d))
           .on('click', nodeOnClick)
           .on('mouseover', nodeOnHover)
@@ -227,36 +240,47 @@ let drawNodeLink = function () {
           .closePathDistance(100)
           .items(nodeLayer)
           .targetArea(nodeLayerG)
-          .on("start", lasso_start)
-          .on("draw", lasso_draw)
-          .on("end", lasso_end);
+          .on('start', lasso_start)
+          .on('draw', lasso_draw)
+          .on('end', lasso_end)
+        nodeLayerG.call(lasso)
 
           d3.select('#tmp').remove()
-          nodeLayerG.call(lasso)
-          perfectScale(dg)
-          linkLayer
-              .attr('x1', function(d) { return d.source.x})
-              .attr('y1', function(d) { return d.source.y })
-              .attr('x2', function(d) { return d.target.x })
-              .attr('y2', function(d) { return d.target.y })
 
-          nodeLayer
-            .attr('transform', function(d) { return 'translate(' + d.x + ',' + d.y + ')' })
           d3.select('#' + nodelinkSvgId)
             .call(d3.zoom()
                 .scaleExtent([2 / 3, 10])
                 .on('zoom', function() {
                   g.attr('transform', d3.event.transform);
                 }))
+          networkcube.addEventListener('localMeasure', m => {
+            nodeBackLayer.attr('r', d => {
+              return Math.sqrt(DataHandler.getLocalMeasure(d, true)) * 0.5 + 1
+            })
+            nodeLayer.attr('r', d => {
+              return Math.sqrt(DataHandler.getLocalMeasure(d)) * 0.5 + 1
+            })
+          })
   })
   forceLayout.force('link')
     .links(links)
   networkcube.addEventListener('timeRange', m => {
-    console.log('die!!!')
-    drawNodeLinkInPeriod(m)
+    console.log('Why there is no reaction!!!!!')
+    let dg = window.dgraph
+    let start = m.startUnix
+    let end = m.endUnix
+    let startId = binarySearch(dg.timeArrays.unixTime, d => d >= start)
+    let endId = binarySearch(dg.timeArrays.unixTime, d => d >= end)
+    drawNodeLinkInPeriod(startId, endId)
   })
   networkcube.addEventListener('timerange', m => {
-    drawNodeLinkInPeriod(m.body)
+    let dg = window.dgraph
+    let start = m.body.startUnix
+    let end = m.body.endUnix
+    let startId = binarySearch(dg.timeArrays.unixTime, d => d >= start)
+    let endId = binarySearch(dg.timeArrays.unixTime, d => d >= end)
+    drawNodeLinkInPeriod(startId, endId)
+    window.activeTime = {startId: startId, endId: endId, start: start, end: end}
   })
   networkcube.addEventListener('hint', m => {
     console.log('hint message', m)
@@ -270,7 +294,11 @@ let drawNodeLink = function () {
         redrawNodes(m.body.nodes)
       break
     }
-
+  })
+  networkcube.addEventListener('gap', m => {
+    LINK_GAP = m.body
+    calculateCurvedLinks()
+    linkLayer.attr('d', d => lineGenerator(d.path))
   })
 }
 
@@ -286,5 +314,64 @@ function binarySearch(array, pred) {
     }
     return hi;
 }
-
+function calculateCurvedLinks() {
+  let dgraph = window.dgraph
+    var path, dir, offset, offset2, multiLink;
+    var _links;
+    for (var i = 0; i < dgraph.nodePairs().length; i++) {
+        multiLink = dgraph.nodePair(i);
+        if (multiLink.links().length < 2) {
+            multiLink.links().toArray()[0]['path'] = [
+                { x: multiLink.source.x, y: multiLink.source.y },
+                { x: multiLink.source.x, y: multiLink.source.y },
+                { x: multiLink.target.x, y: multiLink.target.y },
+                { x: multiLink.target.x, y: multiLink.target.y }
+            ];
+        }
+        else {
+            _links = multiLink.links().toArray();
+            if (multiLink.source == multiLink.target) {
+                var minGap = getNodeRadius(multiLink.source) / 2 + 4;
+                for (var j = 0; j < _links.length; j++) {
+                    _links[j]['path'] = [
+                        { x: multiLink.source.x, y: multiLink.source.y },
+                        { x: multiLink.source.x, y: multiLink.source.y - minGap - (i * LINK_GAP) },
+                        { x: multiLink.source.x + minGap + (i * LINK_GAP), y: multiLink.source.y - minGap - (i * LINK_GAP) },
+                        { x: multiLink.source.x + minGap + (i * LINK_GAP), y: multiLink.source.y },
+                        { x: multiLink.source.x, y: -multiLink.source.y },
+                    ];
+                }
+            }
+            else {
+                dir = {
+                    x: multiLink.target.x - multiLink.source.x,
+                    y: multiLink.target.y - multiLink.source.y
+                };
+                offset = stretchVector([-dir.y, dir.x], LINK_GAP);
+                offset2 = stretchVector([dir.x, dir.y], LINK_GAP);
+                for (var j = 0; j < _links.length; j++) {
+                    _links[j]['path'] = [
+                        { x: multiLink.source.x, y: multiLink.source.y },
+                        { x: multiLink.source.x + offset2[0] + (j - _links.length / 2 + .5) * offset[0],
+                            y: (multiLink.source.y + offset2[1] + (j - _links.length / 2 + .5) * offset[1]) },
+                        { x: multiLink.target.x - offset2[0] + (j - _links.length / 2 + .5) * offset[0],
+                            y: (multiLink.target.y - offset2[1] + (j - _links.length / 2 + .5) * offset[1]) },
+                        { x: multiLink.target.x, y: multiLink.target.y }
+                    ];
+                }
+            }
+        }
+    }
+}
+function stretchVector(vec, finalLength) {
+    var len = 0;
+    for (var i = 0; i < vec.length; i++) {
+        len += Math.pow(vec[i], 2);
+    }
+    len = Math.sqrt(len);
+    for (var i = 0; i < vec.length; i++) {
+        vec[i] = vec[i] / len * finalLength;
+    }
+    return vec;
+}
 export {drawNodeLink, debug, getNodeRadius, getLineStroke, getNodeColor}

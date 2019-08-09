@@ -36,6 +36,14 @@ let changeLinkOpacity = function (x) {
     .style('stroke-opacity', x)
 }
 
+let changeEdgeGap = function (x)  {
+  networkcube.sendMessage('gap', x)
+}
+
+let changeEdgeBackground = function (x) {
+  d3.selectAll('.links')
+    .style('fill-opacity', x)
+}
 let handleSearchResult = function (m) {
   console.log('Get Search Result', m)
 }
@@ -71,9 +79,56 @@ let addScatterConfig = function (granList, localMeasureList) {
     .text(d => d)
 }
 
+let addDivToggle = function (divId = 'config-view', checkboxId, name, linkDiv) {
+  let id = `checkbox_${checkboxId}`
+  let div = d3.select(`#${divId}`)
+    .append('div')
+    .classed('form-check', true)
+    .attr('id', `form_${checkboxId}`)
+  div.append('input')
+    .attr('type', 'checkbox')
+    .classed('form-check-input', true)
+    .attr('id', id)
+    .attr('name', checkboxId)
+    .attr('value', checkboxId)
+  div.append('label')
+    .classed('form-check-label', true)
+    .attr('for', checkboxId)
+    .text(name)
+    $(`#${id}`).prop('checked', true);
+    $(`#${id}`).change(function() {
+      let frame = d3.select(`#${linkDiv}`)
+      console.log(this, this.checked)
+        if (this.checked) {
+          frame.style('display', '')
+        } else {
+      frame.style('display', 'none')
+        }
+    })
+
+}
+let addLocalMeasureDropdown = function (divId) {
+  d3.select(`#${divId}`)
+  .append('select')
+  .attr('id', 'localMeasureForm')
+  .attr('name', 'localMeasure')
+  .style('border-radius', '10px')
+  .selectAll('option')
+  .data(['degree', 'volatility', 'activation', 'redundancy'])
+  .enter()
+  .append('option')
+  .text(d => d)
+  $(`#localMeasureForm`).change(function () {
+      $(`#localMeasureForm option:selected`).each(function() {
+        let content = $(this).text()
+        window.localMeasure = content
+        networkcube.sendMessage('localMeasure', content)
+      })
+    })
+    .change();
+}
 let drawConfigs = function () {
   let dg = window.dgraph
-  // search bar
   networkcube.addEventListener('searchResult', handleSearchResult)
   $('#searchBar').on('keypress',function(e) {
     if(e.which == 13) {
@@ -89,6 +144,15 @@ let drawConfigs = function () {
   addStyleConfig('config-style', 'Node Size', changeNodeSize)
   addStyleConfig('config-style', 'Link Width', changeLinkWidth, 0, 5)
   addStyleConfig('config-style', 'Link Opacity', changeLinkOpacity, 0, 1, 0.5)
+  addStyleConfig('config-style', 'Edge Gap', changeEdgeGap, 0, 5, 2)
+  addStyleConfig('config-style', 'Edge Background', changeEdgeBackground, 0, 1, 0.2)
+
+  addDivToggle('config-view', 'boxframe', 'Local Distribution', 'boxFrame')
+  addDivToggle('config-view', 'timelineframe', 'Multi-layer Line', 'timelineFrame')
+
+  addLocalMeasureDropdown('config-localMeasure')
+  window.localMeasure = 'degree'
+
 }
 
 export {drawConfigs}

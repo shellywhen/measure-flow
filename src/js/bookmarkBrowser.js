@@ -7,9 +7,7 @@ var OFFSET = 110
 let WIDTH
 var dgraph
 export let drawBookmark = function (divId) {
-  console.log('load vis')
   WIDTH = $(`#${divId}`).innerWidth()
-  console.log('get width', WIDTH)
   dgraph = window.dgraph
   networkcube.setDefaultEventListener(updateLists)
   networkcube.addEventListener('searchResult', searchResultHandler)

@@ -20,7 +20,7 @@ let drawTimeSlider = function () {
   let timeObjArray = dg.timeArrays.momentTime.map(v => v._d)
   let startTimeObj = timeObjArray[0]
   let endTimeObj = timeObjArray[timeObjArray.length - 1]
-
+  window.activeTime = {start: timeObjArray[0]._d, end: timeObjArray[timeObjArray.length - 1]._d, startId: 0, endId: timeObjArray.length - 1}
   let xScale = d3.scaleTime().range([0, width])
   let xAxis = d3.axisTop(xScale).ticks(5)
   xScale.domain([startTimeObj, endTimeObj])

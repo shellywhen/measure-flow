@@ -29,7 +29,6 @@ export let drawBox = function (divId = 'boxFrame', svgId = 'boxSvg') {
   let raw_data = getBoxData('degree', dgraph.timeArrays.intervals[0].period)
   let data = getQuartile(raw_data, 4, dgraph.timeArrays.intervals[0].period)
   let plotdata = plotData(data)
-  console.log(data, plotdata)
   plotBox(plotdata, data)
 
 
@@ -116,7 +115,6 @@ let getDegreeDistribution = function (interval) {
     list.sort((a, b) => a.size - b.size)
     data.push(list)
   })
-  console.log('raw Data!!!',data)
   return data
 }
 
@@ -147,7 +145,6 @@ let plotBox = function (data, outlier) {
 
 let totalPath = data.length
  data.forEach((datum, i) => {
-   console.log(datum, 'datum')
    svg.append('path')
      .datum(datum)
      .style('fill', color((i + 0.5)/totalPath))

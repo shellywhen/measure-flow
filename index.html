@@ -34,9 +34,12 @@
 
   <div class="container m-0 p-0 wrapper" id="interface">
     <div class="pollSlider">
-      <div id="config-style" class="m-2">
+      <div id="config-style" class="m-4">
       </div>
-
+      <div id="config-view" class="m-4">
+      </div>
+      <div id="config-localMeasure" class="m-4">
+      </div>
     </div>
     <div id="pollSlider-button"><i class="fas fa-sliders-h"></i></div>
     <div class="row m-0 p-0 wrapper">
@@ -56,12 +59,12 @@
             </div>
             <div class="dropdown">
               <button class="btn btn-light btn-sm dropdown-toggle z-depth-0 p-1 m-0" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                scientists
+                Select...
               </button>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">marieboucher</a>
-                <a class="dropdown-item" href="#">scientists</a>
-                <a class="dropdown-item" href="#">capitals</a>
+                <a class="dropdown-item" href="/?session=demo&datasetName=marieboucher">Marie Boucher</a>
+                <a class="dropdown-item" href="/?session=demo&datasetName=scientists">Scientists</a>
+                <a class="dropdown-item" href="/?session=demo&datasetName=DiplomaticExchange">Diplomatic Exchange</a>
                 <a class="dropdown-item" href="#">link-tables</a>
               </div>
             </div>
@@ -162,8 +165,11 @@
                     </div>
                   </div>
                   <p id="selectedNodeList" style="font-size: 1rem">Selected Nodes: &nbsp</p>
-                  <div style="text-align: center;">
-                    <button type="button" class="btn btn-outline-info btn-sm z-depth-0 p-1 m-0" id="launchScatter">Compare!</button>
+                  <p id="selectedLinkList" style="font-size: 1rem">Selected Links: &nbsp</p>
+                  <div style="text-align: center;" class="row">
+                    <div class="col-6"><button type="button" class="btn btn-outline-info btn-sm z-depth-0 p-1 m-0" id="launchScatter">Compare Nodes</button></div>
+                    <div class="col-6"><button type="button" class="btn btn-outline-info btn-sm z-depth-0 p-1 m-0" id="launchScatter2">Compare Edges</button></div>
+
                   </div>
                 </div>
               </div>

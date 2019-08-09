@@ -65,6 +65,6 @@ function afterLoadedData(dataset) {
     Stat.drawStatView('radarDiv')
     Config.drawConfigs()
     Bookmark.drawBookmark('selection-config')
-
+    console.log('check', window.dgraph === networkcube.getDynamicGraph())
 
 }
