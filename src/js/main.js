@@ -20,7 +20,7 @@ import * as Box from './boxView.js'
 import * as Kde from  './kdeView.js'
 import * as Heatmap from './heatmapView.js'
 import * as Measure from './measureView.js'
-import * as DataHandler from './DataHandler.js'
+import * as DataHandler from './dataHandler.js'
 let linkSchema1 = {  source: 0,
                     target: 3,
                     weight: 6,
