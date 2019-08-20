@@ -1,0 +1,486 @@
+ID acte,Nom1,Lieu Vistorian,Lieu paroisse,Qualité,Qualification,Nom2,Lieux Vistorian,Lieux paroisse,,Autres lieux,Etude Notaire,Cote ADLA,Nature acte,Date,ID acte
+1,Mathurin MERAND,Nantes,"Saint-Nicolas, Nantes",Marchand,Finance,François OLLIVIER,Nantes,"Sainte-Croix, Nantes",Maitre de la monnaie,,Bodin,4E2/312,,10/09/1610,1
+2,Antoine BARILLER,Nantes,,Sieur du Saz,Finance,Francois OLLIVIER,Nantes,"Sainte-Croix, Nantes",Maitre de la monnaie,,Bodin,4E2/314,,23/11/1616,2
+2,Antoine BARILLER,Nantes,,Sieur du Saz,Finance,Pierre OLLIVIER,Nantes,"Sainte-Croix, Nantes",,,Bodin,4E2/314,,23/11/1616,2
+2,François OLLIVIER,Nantes,"Sainte-Croix, Nantes",Maitre de la monnaie,Famille,Pierre OLLIVIER,Nantes,"Sainte-Croix, Nantes",,,Bodin,4E2/314,,23/11/1616,2
+2,Jacques GRANDAMY,Nantes,,,Finance,Antoine BARILLER,Nantes,,Sieur du Saz,,Bodin,4E2/314,,23/11/1616,2
+2,Jacques GRANDAMY,Nantes,,,Finance,Francois OLLIVIER,Nantes,"Sainte-Croix, Nantes",Maitre de la monnaie,,Bodin,4E2/314,,23/11/1616,2
+2,Jacques GRANDAMY,Nantes,,,Finance,Jean PIFARD,Nantes,,,,Bodin,4E2/314,,23/11/1616,2
+2,Jean PIFARD,Nantes,,,Finance,? LABBE,Nantes,,,,Bodin,4E2/314,,23/11/1616,2
+2,Jean PIFARD,Nantes,,,Finance,? Denison,Nantes,,,,Bodin,4E2/314,,23/11/1616,2
+2,François BAUDRY,Nantes,,Sieur du Plessis,Finance,François OLLIVIER,Nantes,"Sainte-Croix, Nantes",Maitre de la monnaie,,Chauveau,4E2/488,,25/12/1616,2
+2,Jacques FAUVEAU,Nantes,,Controleur du droit annuel,Finance,Francois OLLIVIER,Nantes,"Sainte-Croix, Nantes",Maitre de la monnaie,,Chauveau,4E2/488,,25/12/1616,2
+2,François BAUDRY,Nantes,,Sieur du Plessis,Finance,Jacques FAUVEAU,Nantes,,Controleur du droit annuel,,Chauveau,4E2/488,,25/12/1616,2
+3,Jeanne LEBRETON,Nantes,"Sainte-Croix, Nantes",,Famille,François MACE,Nantes,"Sainte-Croix, Nantes",,,Bodin,4E2/314,,21/07/1618,3
+3,Jeanne LEBRETON,Nantes,"Sainte-Croix, Nantes",,Finance,Pierre FASHU,Nantes,,Procureur des marchands,,Bodin,4E2/314,,21/07/1618,3
+3,François MACE,Nantes,"Sainte-Croix, Nantes",Procureur des marchands,Finance,Pierre FASHU,Nantes,,Procureur des marchands,,Bodin,4E2/314,,21/07/1618,3
+3,Pierre FASHU,Nantes,,Procureur des marchands,Finance,François OLLIVIER,Nantes,"Sainte-Croix, Nantes",Maitre de la monnaie,,Bodin,4E2/314,,21/07/1618,3
+4,François OLLIVIER,Nantes,"Sainte-Croix, Nantes",Maitre de la monnaie,Finance,Gilles PRESEAU,Nantes,"Saint-Denis, Nantes",Sieur de l'Oyselinière,,Bodin,4E2/314,,22/10/1618,4
+4,François OLLIVIER,Nantes,"Sainte-Croix, Nantes",Maitre de la monnaie,Finance,Guillaume RAPION,Nantes,"Saint-Vincent, Nantes",,,Bodin,4E2/314,,22/10/1618,4
+4,Gilles PRESEAU,Nantes,"Saint-Denis, Nantes",Sieur de l'Oyselinière,Finance,Guillaume RAPION,Nantes,"Saint-Vincent, Nantes",,,Bodin,4E2/314,,22/10/1618,4
+4,François OLLIVIER,Nantes,"Sainte-Croix, Nantes",Maitre de la monnaie,Finance,François DAVY,Nantes,,Graveur de monnaie,,Bodin,4E2/314,,22/10/1618,4
+4,Gilles PRESEAU,Nantes,"Saint-Denis, Nantes",Sieur de l'Oyselinière,Finance,François DAVY,Nantes,,Graveur de monnaie,,Bodin,4E2/314,,22/10/1618,4
+4,Guillaume RAPION,Nantes,"Saint-Vincent, Nantes",,Finance,François DAVY,Nantes,,Graveur de monnaie,,Bodin,4E2/314,,22/10/1618,4
+4,François OLLIVIER,Nantes,"Sainte-Croix, Nantes",Maitre de la monnaie,Finance,Gilles PRESEAU,Nantes,"Saint-Denis, Nantes",Sieur de l'Oyselinière,,Bodin,4E2/314,Vente,22/10/1618,4
+4,François OLLIVIER,Nantes,"Sainte-Croix, Nantes",Maitre de la monnaie,Finance,Guillaume RAPION,Nantes,"Saint-Vincent, Nantes",,,Bodin,4E2/314,Vente,22/10/1618,4
+4,Gilles PRESEAU,Nantes,"Saint-Denis, Nantes",Sieur de l'Oyselinière,Finance,Guillaume RAPION,Nantes,"Saint-Vincent, Nantes",,,Bodin,4E2/314,Vente,22/10/1618,4
+4,François OLLIVIER,Nantes,"Sainte-Croix, Nantes",Maitre de la monnaie,Finance,François DAVY,Nantes,,Graveur de monnaie,,Bodin,4E2/314,Vente,22/10/1618,4
+4,Gilles PRESEAU,Nantes,"Saint-Denis, Nantes",Sieur de l'Oyselinière,Finance,François DAVY,Nantes,,Graveur de monnaie,,Bodin,4E2/314,Vente,22/10/1618,4
+4,Guillaume RAPION,Nantes,"Saint-Vincent, Nantes",,Finance,François DAVY,Nantes,,Graveur de monnaie,,Bodin,4E2/314,Vente,22/10/1618,4
+5,Jean BEAUCHESNE,Tours,"Fondette, Tours",Marchand voiturier,Commerce,Thomas BODINEAU,Tours,"Fondette, Tours",Marchand voiturier,,Bodin,4E2/315,,26/03/1620,5
+5,François OLLIVIER,Nantes,"Sainte-Croix, Nantes",Maitre de la monnaie,Commerce,Jean BEAUCHESNE,Tours,"Fondette, Tours",Marchand voiturier,,Bodin,4E2/315,,26/03/1620,5
+5,François OLLIVIER,Nantes,"Sainte-Croix, Nantes",Maitre de la monnaie,Commerce,Thomas BODINEAU,Tours,"Fondette, Tours",Marchand voiturier,,Bodin,4E2/315,,26/03/1620,5
+5,François OLLIVIER,Nantes,"Sainte-Croix, Nantes",Maitre de la monnaie,Commerce,Pierre LEONARD,Tours,,Marchand  ,,Bodin,4E2/315,,26/03/1620,5
+5,Pierre LEONARD,Tours,,Marchand,Commerce,Jean BEAUCHESNE,Tours,"Fondette, Tours",Marchand voiturier,,Bodin,4E2/315,,26/03/1620,5
+5,Pierre LEONARD,Tours,,Marchand,Commerce,Thomas BODINEAU,Tours,"Fondette, Tours",Marchand voiturier,,Bodin,4E2/315,,26/03/1620,5
+5,Pierre LEONARD,Tours,,Marchand,Commerce,Guillaume DESCHAMPS,Tours,"Fondette, Tours",Marchand  ,,Bodin,4E2/315,,26/03/1620,5
+6,François OLLIVIER,Nantes,"Sainte-Croix, Nantes",Maitre de la monnaie,Commerce,Pierre LEONARD,Tours,,Marchand  ,,Bodin,4E2/315,,16/05/1620,6
+6,François OLLIVIER,Nantes,"Sainte-Croix, Nantes",Maitre de la monnaie,Commerce,Guillaume DESCHAMPS,Tours,"Fondette, Tours",Marchand  ,,Bodin,4E2/315,,16/05/1620,6
+6,François OLLIVIER,Nantes,"Sainte-Croix, Nantes",Maitre de la monnaie,Commerce,Denis DESCHAMPS,Tours,"Fondette, Tours",Marchand  ,,Bodin,4E2/315,,16/05/1620,6
+6,Guillaume DESCHAMPS,Tours,"Fondette, Tours",Marchand,Commerce,Denis DESCHAMPS,Tours,"Fondette, Tours",Marchand  ,,Bodin,4E2/315,,16/05/1620,6
+6,Guillaume DESCHAMPS,Tours,"Fondette, Tours",Marchand,Famille,Denis DESCHAMPS,Tours,"Fondette, Tours",Marchand  ,,Bodin,4E2/315,,16/05/1620,6
+6,Pierre LEONARD,Tours,,Marchand,Commerce,Guillaume DESCHAMPS,Tours,"Fondette, Tours",Marchand  ,,Bodin,4E2/315,,16/05/1620,6
+6,Pierre LEONARD,Tours,,Marchand,Commerce,Denis DESCHAMPS,Tours,"Fondette, Tours",Marchand  ,,Bodin,4E2/315,,16/05/1620,6
+7,Claude de ROYE,Angers,,Conseiller du roi,Famille,Jacqmine POIRIER,Angers,,,,Chauveau,4E2/489,Vente,14/12/1624,7
+7,Jacmine POIRIER,Angers,,,Famille,René de ROYE,Pont-de-Cé,,Receveur,,Chauveau,4E2/489,Vente,14/12/1624,7
+7,Jacmine POIRIER,Angers,,,Famille,Marie de ROYE,Angers,,,,Chauveau,4E2/489,Vente,14/12/1624,7
+7,Claude de ROYE,Angers,,Conseiller du roi,Famille,Marie de ROYE,Angers,,,,Chauveau,4E2/489,Vente,14/12/1624,7
+7,René de ROYE,Pont-de-Cé,,Receveur,Famille,Marie de ROYE,Angers,,,,Chauveau,4E2/489,Vente,14/12/1624,7
+7,Claude de ROYE,Angers,,Conseiller du roi,Finance,François NOBLET,Nantes,,Receveur général du Taillon,,Chauveau,4E2/489,Vente,14/12/1624,7
+7,Claude de ROYE,Angers,,Conseiller du roi,Finance,Renée FRUBERT,Nantes,,,,Chauveau,4E2/489,Vente,14/12/1624,7
+7,François NOBLET,Nantes,,Receveur général du Taillon,Famille,Renée FRUBERT,Nantes,,,,Chauveau,4E2/489,Vente,14/12/1624,7
+7,René CHOTARD,Nantes,,Sieur de la Harderye,Famille,Renée FRUBERT,Nantes,,,,Chauveau,4E2/489,Vente,14/12/1624,7
+7,René CHOTARD,Nantes,,Sieur de la Harderye,Famille,Renée de ROYE,Nantes,,,,Chauveau,4E2/489,Vente,14/12/1624,7
+7,Claude de ROYE,Angers,,Conseiller du roi,Finance,René CHOTARD,Nantes,,,,Chauveau,4E2/489,Vente,14/12/1624,7
+7,René CHOTARD,Nantes,,Sieur de la Harderye,Finance,Renée FRUBERT,Nantes,,,,Chauveau,4E2/489,Vente,14/12/1624,7
+7,René CHOTARD,Nantes,,Sieur de la Harderye,Finance,Renée de ROYE,Nantes,,,,Chauveau,4E2/489,Vente,14/12/1624,7
+7,François NOBLET,Nantes,,Conseiller du roi,Finance,François OLLIVIER,Nantes,,Maitre de la monnaie,,Chauveau,4E2/489,Vente,14/12/1624,7
+7,Renée FRUBERT,Nantes,,,Finance,François OLLIVIER,Nantes,,Maitre de la monnaie,,Chauveau,4E2/489,Vente,14/12/1624,7
+7,René CHOTARD,Nantes,,Sieur de la Harderye,Finance,François OLLIVIER,Nantes,,Maitre de la monnaie,,Chauveau,4E2/489,Vente,14/12/1624,7
+7,François OLLIVIER,Nantes,,Maitre de la monnaie,Finance,Perrine CHEVALIER,Angers,,,,Chauveau,4E2/489,Vente,14/12/1624,7
+7,François OLLIVIER,Nantes,,Maitre de la monnaie,Famille,Perrine CHEVALIER,Angers,,,,Chauveau,4E2/489,Vente,14/12/1624,7
+8,François OLLIVIER,Nantes,,Maitre de la monnaie,Finance,Sieur DU PONT,Nantes,,,Paris,Bodin,4E2/315,Sommation,04/09/1620,8
+8,François OLLIVIER,Nantes,,Maitre de la monnaie,Finance,Sieur de RODON,Paris,,,Paris,Bodin,4E2/315,Sommation,04/09/1620,8
+8,François OLLIVIER,Nantes,,Maitre de la monnaie,Finance,Dame de RODON,Paris,,,Paris,Bodin,4E2/315,Sommation,04/09/1620,8
+8,François OLLIVIER,Nantes,,Maitre de la monnaie,Finance,Sieur de BEAUPUY,Nantes,,,Paris,Bodin,4E2/315,Sommation,04/09/1620,8
+8,François OLLIVIER,Nantes,,Maitre de la monnaie,Finance,Baron de LA GUERE,Nantes,,,Paris,Bodin,4E2/315,Sommation,04/09/1620,8
+8,Sieur DU PONT,Nantes,,,Autres,Mathieu LE VAULLE,Nantes,,,,Bodin,4E2/315,Sommation,04/09/1620,8
+8,François OLLIVIER,Nantes,,Maitre de la monnaie,Finance,Jean de LA FUYE,Nantes,,Procureur,,Bodin,4E2/315,Sommation,04/09/1620,8
+9,Pierre OLLIVIER,Angers,,Sieur du Chaumineau,Finance,René DU ROCHER,Joué-sur-Erdre,,Sieur des Auberdières,,Rapion,4E2/1570,Ferme,27/11/1620,9
+10,François OLLIVIER,Nantes,,Maitre de la monnaie,Finance,François DOMIN,Nantes,,Marchand  ,Paris,Rapion,4E2/1713,Subrogation,12/02/1621,10
+11,François OLLIVIER,Nantes,,Maitre de la monnaie,Commerce,Loys GUIGNOLET,Le Pouliguen,,Marchand marinier,,Bodin,4E2/317,Charte partie,06/09/1621,11
+11,François OLLIVIER,Nantes,,Maitre de la monnaie,Commerce,Sieur OLLIVIER,Lisbonne,,Marchand  ,,Bodin,4E2/317,Charte partie,06/09/1621,11
+11,Loys GUIGNOLET,Le Pouliguen,,Marchand marinier,Commerce,Sieur OLLIVIER,Lisbonne,,Marchand  ,,Bodin,4E2/317,Charte partie,06/09/1621,11
+12,François OLLIVIER,Nantes,,Maitre de la monnaie,Commerce,Pierre BANNEAU,Le Croisic,,Marchand  ,Couéron,Bodin,4E2/317,Charte partie,29/10/1621,12
+12,François OLLIVIER,Nantes,,Maitre de la monnaie,Commerce,Francisco VLAMINX,Nantes,,Marchand  , ,Bodin,4E2/317,Charte partie,29/10/1621,12
+12,François OLLIVIER,Nantes,,Maitre de la monnaie,Commerce,Damien VAUDET,Nantes,,Marchand  , ,Bodin,4E2/317,Charte partie,29/10/1621,12
+12,Francisco VLAMINX,Nantes,,,Commerce,Damien VAUDET,Nantes,,Marchand  ,,Bodin,4E2/317,Charte partie,29/10/1621,12
+12,Pierre BANNEAU,Couéron,,Marchand,Commerce,Francisco VLAMINX,Nantes,,Marchand  ,Hennebont,Bodin,4E2/317,Charte partie,29/10/1621,12
+12,Pierre BANNEAU,Couéron,,Marchand,Commerce,Damien VAUDET,Nantes,,Marchand  ,Hennebont,Bodin,4E2/317,Charte partie,29/10/1621,12
+13,François OLLIVIER,Nantes,,Maitre de la monnaie,Commerce,Michel MOLLE,Pornichet,,Marinier,Couéron,Bodin,4E2/317,Charte partie,06/11/1621,13
+13,François OLLIVIER,Nantes,,Maitre de la monnaie,Commerce,René CHAUNIGAU,Lisbonne,,Marchand  ,,Bodin,4E2/317,Charte partie,06/11/1621,13
+13,François OLLIVIER,Nantes,,Maitre de la monnaie,Commerce,Guillaume VANTATERLOC,Lisbonne,,Marchand  ,,Bodin,4E2/317,Charte partie,06/11/1621,13
+13,Michel MOLLE,Couéron,,Marchand,Commerce,René CHAUNIGAU,Lisbonne,,Marchand  ,,Bodin,4E2/317,Charte partie,06/11/1621,13
+13,Michel MOLLE,Couéron,,Marchand,Commerce,Guillaume VANTATERLOC,Lisbonne,,Marchand  ,,Bodin,4E2/317,Charte partie,06/11/1621,13
+14,François OLLIVIER,Nantes,,Maitre de la monnaie,Commerce,Jean GENTILHOMME,Le Croisic,,Garde-sceau,,Bodin,4E2/317,Charte partie,14/11/1621,14
+14,François OLLIVIER,Nantes,,Maitre de la monnaie,Commerce,Michel BONNARD,Le Croisic,,,,Bodin,4E2/317,Charte partie,14/11/1621,14
+14,François OLLIVIER,Nantes,,Maitre de la monnaie,Commerce,Jean JUMEL,Le Croisic,,Marinier,Hennebont,Bodin,4E2/317,Charte partie,14/11/1621,14
+14,François OLLIVIER,Nantes,,Maitre de la monnaie,Commerce,Guillaume VANTABERGER,Lisbonne,,Marchand  ,,Bodin,4E2/317,Charte partie,14/11/1621,14
+15,François OLLIVIER,Nantes,,Receveur général des décimes,Commerce,Jean DARMONS,Bayonne,,Marchand  ,Le Croisic,Rapion,4E2/1714,Marché,30/12/1621,15
+15,Jean DARMONS,Bayonne,,Marchand,Commerce,Mathieu DOLINES,Bayonne,,Marchand  ,,Rapion,4E2/1714,Marché,30/12/1621,15
+15,Jean DARMONS,Bayonne,,Marchand,Commerce,David de HAGUISSE,Bayonne,,Marchand  ,,Rapion,4E2/1714,Marché,30/12/1621,15
+15,Jean DARMONS,Bayonne,,Marchand,Commerce,Pierre de HOUDELATTE,Bayonne,,Marchand  ,,Rapion,4E2/1714,Marché,30/12/1621,15
+15,Jean DARMONS,Bayonne,,Marchand,Commerce,Jean DAVID,Bayonne,,Marchand  ,,Rapion,4E2/1714,Marché,30/12/1621,15
+15,Jean DARMONS,Bayonne,,Marchand,Commerce,Pierre DARGIREL,Bayonne,,Marchand  ,,Rapion,4E2/1714,Marché,30/12/1621,15
+16,Patrix MAQUAIS,"Barteran, Ecosse",,Marinier,Commerce,François OLLIVIER,Nantes,,Marchand  ,,Rapion,4E2/1572,Charte partie,03/03/1622,16
+16,Patrix MAQUAIS,"Barteran, Ecosse",,Marinier,Commerce,Georges de GELDEX,Ecosse,,Marchand  ,,Rapion,4E2/1572,Charte partie,03/03/1622,16
+16,Patrix MAQUAIS,"Barteran, Ecosse",,Marinier,Commerce,Guillaume VALENTRATE,Lisbonne,,Marchand flamand,,Rapion,4E2/1572,Charte partie,03/03/1622,16
+16,François OLLIVIER,Nantes,,Marchand,Commerce,Guillaume VALENTRATE,Lisbonne,,Marchand flamand,,Rapion,4E2/1572,Charte partie,03/03/1622,16
+17,François OLLIVIER,Nantes,, ,Commerce,François GUILLOTAIN,"Arzon, Morbihan",,Marinier,,Rapion,4E2/1572,Attestation,01/04/1622,17
+17,François GUILLOTAIN,Arzon,,Marinier,Commerce,? ?,"Middleburg, Pays-Bas",,Marchand  ,,Rapion,4E2/1572,Attestation,01/04/1622,17
+17,François OLLIVIER,Nantes,,,Commerce,? ?,"Middleburg, Pays-Bas",,Marchand  ,,Rapion,4E2/1572,Attestation,01/04/1622,17
+17,François GUILLOTAIN,Arzon,,Marinier,Commerce,Louis GENTILLOT,"Saint-Rual, Espagne",,,,Rapion,4E2/1572,Attestation,01/04/1622,17
+17,François GUILLOTAIN,Arzon,,Marinier,Finance,Douart CORBY,"Prenau, Espagne",,,Angleterre,Rapion,4E2/1572,Attestation,01/04/1622,17
+17,François OLLIVIER,Nantes,,,Travail,René CHAUVINAU,Lisbonne,,Facteur,,Rapion,4E2/1572,Attestation,01/04/1622,17
+18,Toul SANSON,Montoir,,Marinier,Commerce,Richard LE GUEUX,Saint-Malo,,,,Rapion,4E2/1572,Procompte,02/04/1622,18
+18,Richard LE GUEUX,Saint-Malo,,,Commerce,François OLLIVIER,Nantes,,,,Rapion,4E2/1572,Procompte,02/04/1622,18
+18,Toul SANSON,Montoir,,Marinier,Commerce,René CHAUVINAU,Lisbonne,,Facteur,"Vigo, Espagne",Rapion,4E2/1572,Procompte,02/04/1622,18
+18,François OLLIVIER,Nantes,,,Commerce,François GUILLOTAIN,Arzon  ,,Marinier,,Rapion,4E2/1572,Procompte,02/04/1622,18
+18,François OLLIVIER,Nantes,,,Commerce,Louis CALMAS,Arzon  ,,,,Rapion,4E2/1572,Procompte,02/04/1622,18
+18,François GUILLOTAIN,Arzon,,,Autres,Louis CALMAS,Arzon  ,,,,Rapion,4E2/1572,Procompte,02/04/1622,18
+19,François OLLIVIER,Nantes,,,Commerce,Guillaume GUYOT,Penerf,,Marinier, ,Rapion,4E2/1572,Attestation,12/05/1622,19
+19,François OLLIVIER,Nantes,,,Commerce,Jean HENRY,Bréar,,Marinier,,Rapion,4E2/1572,Attestation,12/05/1622,19
+19,Guillaume GUYOT,Penerf,,Marinier,Autres,Jean HENRY,Alger,,Marinier,,Rapion,4E2/1572,Attestation,12/05/1622,19
+Marie,Lonnart LAMBERTSEN,"Sequisdame, Hollande",,Marinier,Commerce,Marie COLOMBU,Nantes,,,Hennebont,Rapion,4E2/1572,Charte partie,27/05/1622,Marie
+,Marie COLOMBU,Nantes,,,Famille,François OLLIVIER,Nantes,,,,Rapion,4E2/1572,Charte partie,27/05/1622,
+,Lonnart LAMBERTSEN,"Sequisdame, Hollande",,Marinier,Commerce,? ?,Hennebont,,Marchand  ,,Rapion,4E2/1572,Charte partie,27/05/1622,
+,Lonnart LAMBERTSEN,"Sequisdame, Hollande",,Marinier,Commerce,? ?,Saint-Jean-de-Luz,,,,Rapion,4E2/1572,Charte partie,27/05/1622,
+21,François OLLIVIER,Nantes,,Marchand,Commerce,René PERROTEAU,Sables d'Olonne,,Marchand marinier,,Rapion,4E2/1572,Charte partie,17/06/1622,21
+21,René PERROTEAU,Sables d'Olonne,,Marchand marinier,Commerce,? ?,"Saint-Sebastian, Espagne",,,,Rapion,4E2/1572,Charte partie,17/06/1622,21
+21,René PERROTEAU,Sables d'Olonne,,Marchand marinier,Commerce,? ?,Lisbonne,,,,Rapion,4E2/1572,Charte partie,17/06/1622,21
+21,René PERROTEAU,Sables d'Olonne,,Marchand marinier,Commerce,? ?,Séville,,,,Rapion,4E2/1572,Charte partie,17/06/1622,21
+21,René PERROTEAU,Sables d'Olonne,,Marchand marinier,Commerce,Jacques PERROTEAU,Sables d'Olonne,,,,Rapion,4E2/1572,Charte partie,17/06/1622,21
+21,René PERROTEAU,Sables d'Olonne,,Marchand marinier,Commerce,Jacques PACQUET,Sables d'Olonne,,,,Rapion,4E2/1572,Charte partie,17/06/1622,21
+21,René PERROTEAU,Sables d'Olonne,,Marchand marinier,Commerce,Mathurin BARGE,Sables d'Olonne,,,,Rapion,4E2/1572,Charte partie,17/06/1622,21
+21,René PERROTEAU,Sables d'Olonne,,Marchand marinier,Commerce,Pierre HUARD,Sables d'Olonne,,,,Rapion,4E2/1572,Charte partie,17/06/1622,21
+Marie,Marie COLOMBU,Nantes,,,Commerce,Pierre YVERNOGE,Sables d'Olonne,,,,Rapion,4E2/1572,Charte partie,29/09/1622,Marie
+,Pierre YVERNOGE,Sables d'Olonne,,,Famille,René PERROTEAU,Sables d'Olonne,,,,Rapion,4E2/1572,Charte partie,29/09/1622,
+,François OLLIVIER,Nantes,,,Travail,Sieur Cornuau,Vannes,,Facteur,,Rapion,4E2/1572,Charte partie,29/09/1622,
+23,François OLLIVIER,Nantes,,,Affaires,Jean-Baptiste BELLIOTTE,Saint-Nazaire,,Marchand marinier,,Rapion,4E2/1572,Vente,30/06/1622,23
+24,François OLLIVIER,Nantes,,,Commerce,Olivier PERROTIN,Le Pouliguen,,Marinier,Couéron,Rapion,4E2/1573,Charte partie,06/07/1622,24
+24,Olivier PERROTIN,Le Pouliguen,,Marinier,Commerce,Sieur Cornuau,Vannes,,Facteur,,Rapion,4E2/1573,Charte partie,06/07/1622,24
+24,Olivier PERROTIN,Le Pouliguen,,Marinier,Commerce,Sieur LAURENS,Vannes,,,,Rapion,4E2/1573,Charte partie,06/07/1622,24
+24,Olivier PERROTIN,Le Pouliguen,,Marinier,Commerce,René CHAUVINEAU,Lisbonne,,,,Rapion,4E2/1573,Charte partie,06/07/1622,24
+25,François SEGOUIN,Saint-Brieuc,,Marinier,Travail,Olivier QUERMAREC,Bréac,,Marinier,,Rapion,4E2/1573,Déclaration,07/07/1622,25
+25,François SEGOUIN,Saint-Brieuc,,Marinier,Travail,Colin CORNIC,Bréac,,Marinier,,Rapion,4E2/1573,Déclaration,07/07/1622,25
+25,Olivier QUERMAREC,Bréac,,Marinier,Travail,Colin CORNIC,Bréac,,Marinier,,Rapion,4E2/1573,Déclaration,07/07/1622,25
+25,François OLLIVIER,Nantes,,,Commerce,François SEGOUIN,Saint-Brieuc,,Marinier,,Rapion,4E2/1573,Déclaration,07/07/1622,25
+25,François OLLIVIER,Nantes,,,Commerce,Colin CORNIC,Bréac,,Marinier,,Rapion,4E2/1573,Déclaration,07/07/1622,25
+25,François OLLIVIER,Nantes,,,Commerce,Olivier QUERMAREC,Bréac,,Marinier,,Rapion,4E2/1573,Déclaration,07/07/1622,25
+25,François OLLIVIER,Nantes,,,Commerce,François URVOY,Saint-Brieuc,,Marinier,,Rapion,4E2/1573,Déclaration,07/07/1622,25
+25,François OLLIVIER,Nantes,,,Commerce,Vincent ALBIN,Saint-Brieuc,,,,Rapion,4E2/1573,Déclaration,07/07/1622,25
+25,François OLLIVIER,Nantes,,,Commerce,Sieur BONNARD,Saint-Brieuc,,,,Rapion,4E2/1573,Déclaration,07/07/1622,25
+25,Sieur BONNARD,Saint-Brieuc,,,Commerce,François URVOY,Saint-Brieuc,,Marinier,Saint-Sebastian,Rapion,4E2/1573,Déclaration,07/07/1622,25
+25,François URVOY,Saint-Brieuc,,,Autres,Daniel FORIN,Ile de Ré,,,,Rapion,4E2/1573,Déclaration,07/07/1622,25
+25,François URVOY,Saint-Brieuc,,,Autres,Jacques FORIN,Ile de Ré,,,,Rapion,4E2/1573,Déclaration,07/07/1622,25
+25,Vincent ALBIN,Saint-Brieuc,,,Autres,Daniel FORIN,Ile de Ré,,,,Rapion,4E2/1573,Déclaration,07/07/1622,25
+25,Vincent ALBIN,Saint-Brieuc,,,Autres,Jacques FORIN,Ile de Ré,,,,Rapion,4E2/1573,Déclaration,07/07/1622,25
+25,Guillaume JOUAN,Penerf,,,Commerce,François OLLIVIER,Nantes,,,,Rapion,4E2/1573,Déclaration,07/07/1622,25
+25,Guillaume JOUAN,Penerf,,,Commerce,? ?,"Saint-Sebastian, Espagne",,,,Rapion,4E2/1573,Déclaration,07/07/1622,25
+25,François URVOY,Saint-Brieuc,,,Autres,Richard HOMMEL,"Saint-Neze, Pays de Galles",,,,Rapion,4E2/1573,Déclaration,07/07/1622,25
+25,Vincent ALBIN,Saint-Brieuc,,,Autres,Richard HOMMEL,"Saint-Neze, Pays de Galles",,,,Rapion,4E2/1573,Déclaration,07/07/1622,25
+25,François URVOY,Saint-Brieuc,,,Travail,Nicolas PIER,Nantes,,,,Rapion,4E2/1573,Déclaration,07/07/1622,25
+25,François URVOY,Saint-Brieuc,,,Travail,Mathurin TREHANT,Nantes,,,,Rapion,4E2/1573,Déclaration,07/07/1622,25
+25,François URVOY,Saint-Brieuc,,,Travail,Louis POILAN,Nantes,,,,Rapion,4E2/1573,Déclaration,07/07/1622,25
+25,Vincent ALBIN,Saint-Brieuc,,,Travail,Jean LE BOLOCHE,Nantes,,,,Rapion,4E2/1573,Déclaration,07/07/1622,25
+25,Vincent ALBIN,Saint-Brieuc,,,Travail,Pierre LE GOHELET,Nantes,,,,Rapion,4E2/1573,Déclaration,07/07/1622,25
+26,François OLLIVIER,Nantes,,Marchand,Commerce,André de SANTODOMINGO,Nantes,,Marchand  ,,Rapion,4E2/1573,Charte partie,07/07/1622,26
+26,François OLLIVIER,Nantes,,Marchand,Commerce,Jean de MARQUES,Nantes,,Marchand  ,,Rapion,4E2/1573,Charte partie,07/07/1622,26
+26,François OLLIVIER,Nantes,,Marchand,Commerce,Guillaume JAUNET,Nantes,,Marchand  ,,Rapion,4E2/1573,Charte partie,07/07/1622,26
+26,François OLLIVIER,Nantes,,Marchand,Commerce,François CAILLAUD,Nantes,,Marchand  ,,Rapion,4E2/1573,Charte partie,07/07/1622,26
+26,François OLLIVIER,Nantes,,Marchand,Commerce,Jean-Baptiste BELLIOTTE,Saint-Nazaire,,Marinier,,Rapion,4E2/1573,Charte partie,07/07/1622,26
+26,Jean-Baptiste BELLIOTTE,Saint-Nazaire,,Marinier,Commerce,René CHAUVINEAU,Lisbonne,,Facteur,,Rapion,4E2/1573,Charte partie,07/07/1622,26
+26,René CHAUVINEAU,Lisbonne,,Facteur,Commerce,André de SANTODOMINGO,Nantes,,Marchand  ,,Rapion,4E2/1573,Charte partie,07/07/1622,26
+26,René CHAUVINEAU,Lisbonne,,Facteur,Commerce,Jean de MARQUES,Nantes,,Marchand  ,,Rapion,4E2/1573,Charte partie,07/07/1622,26
+26,René CHAUVINEAU,Lisbonne,,Facteur,Commerce,Guillaume JAUNET,Nantes,,Marchand  ,,Rapion,4E2/1573,Charte partie,07/07/1622,26
+26,René CHAUVINEAU,Lisbonne,,Facteur,Commerce,François CAILLAUD,Nantes,,Marchand  ,,Rapion,4E2/1573,Charte partie,07/07/1622,26
+27,François OLLIVIER,Nantes,,,Affaires,Jean DUPIN,Montoir,,Marchand marinier,,Rapion,4E2/1573,Vente,08/07/1622,27
+27,Jean DUPIN,Montoir,,Marchand marinier,Affaires,Vincent DOUCET,Nantes,,Arrimeur,"Gallice, Espagne",Rapion,4E2/1573,Vente,08/07/1622,27
+28,François OLLIVIER,Nantes,,Marchand,Commerce,François CAILLAUD,Nantes,,Marchand  ,,Rapion,4E2/1573,Charte partie,03/08/1622,28
+28,François OLLIVIER,Nantes,,Marchand,Commerce,Jean TARTOUEZ,Le Croisic,,Marinier,,Rapion,4E2/1573,Charte partie,03/08/1622,28
+28,François CAILLAUD,Nantes,,Marchand,Commerce,Jean TARTOUEZ,Le Croisic,,Marinier,,Rapion,4E2/1573,Charte partie,03/08/1622,28
+28,François CAILLAUD,Nantes,,Marchand,Commerce,Sieur CAPTAN,Bordeaux,,Marchand  ,,Rapion,4E2/1573,Charte partie,03/08/1622,28
+28,Jean TARTOUEZ,Le Croisic,,Marinier,Commerce,Sieur BONNARD,Bordeaux,,Marchand  ,,Rapion,4E2/1573,Charte partie,03/08/1622,28
+28,Jean TARTOUEZ,Le Croisic,,Marinier,Commerce,Sébastien JAUSSE,Lisbonne,,Marchand  ,,Rapion,4E2/1573,Charte partie,03/08/1622,28
+28,Jean TARTOUEZ,Le Croisic,,Marinier,Commerce,René LAVALLEE,Lisbonne,,,,Rapion,4E2/1573,Charte partie,03/08/1622,28
+29,François OLLIVIER,Nantes,,,Commerce,Denis BOSSINOT,Montoir,,Marchand marinier,Saint-Brieuc,Rapion,4E2/1573,Vente,31/08/1622,29
+30,Jean TERTOUX,Le Croisic,,Marinier,Commerce,François OLLIVIER,Nantes,,Marinier,,Rapion,4E2/1573,,03/09/1622,30
+30,Olivier SOLIMAN,Le Croisic,,Marinier,Commerce,François OLLIVIER,Nantes,,Marinier,Lisbonne,Rapion,4E2/1573,,03/09/1622,30
+30,Philippe PEREGAT,Le Croisic,,Marinier,Commerce,François OLLIVIER,Nantes,,Marinier,Lisbonne,Rapion,4E2/1573,,03/09/1622,30
+30,Lorens FLEURY,Le Croisic,,Marinier,Commerce,François OLLIVIER,Nantes,,Marinier,Lisbonne,Rapion,4E2/1573,,03/09/1622,30
+30,Jean RIEL,Le Croisic,,Marinier,Commerce,François OLLIVIER,Nantes,,Marinier,Lisbonne,Rapion,4E2/1573,,03/09/1622,30
+30,Olivier CHENU,Le Croisic,,Marinier,Commerce,François OLLIVIER,Nantes,,Marinier,Lisbonne,Rapion,4E2/1573,,03/09/1622,30
+Marie,Marie COLOMBU,Nantes,,,Finance,René CORNUAU,Vannes,,Sieur de la Rivière,,Rapion,4E2/1573,,15/10/1622,Marie
+,Marie COLOMBU,Nantes,,,Famille,Perrine CHEVALIER,Angers,,,,Rapion,4E2/1573,,15/10/1622,
+,Marie COLOMBU,Nantes,,,Finance,Perrine CHEVALIER,Angers,,,,Rapion,4E2/1573,,15/10/1622,
+,Marie COLOMBU,Nantes,,,Finance,Jacques FAUVEAU,Nantes,,Marchand  ,,Rapion,4E2/1573,,15/10/1622,
+,Marie COLOMBU,Nantes,,,Finance,Jacques HUSTEAU,Nantes,,Conseiller du roi et maitre des comptes,,Rapion,4E2/1573,,15/10/1622,
+,René CORNUAU,Vannes,,,Finance,Jacques HUSTEAU,Nantes,,Conseiller du roi et maitre des comptes,,Rapion,4E2/1573,,15/10/1622,
+,Perrine CHEVALIER,Angers,,,Finance,Jacques HUSTEAU,Nantes,,Conseiller du roi et maitre des comptes,,Rapion,4E2/1573,,15/10/1622,
+,Perrine CHEVALIER,Angers,,,Finance,Pierre OLLIVIER,Angers,,,,Rapion,4E2/1573,,15/10/1622,
+,Jacques FAUVEAU,Nantes,,Marchand,Finance,Jacques HUSTEAU,Nantes,,Conseiller du roi et maitre des comptes,,Rapion,4E2/1573,,15/10/1622,
+32,François OLLIVIER,Nantes,,,Commerce,Mgr de Guyse,Port-Louis,,Lieutenant général et Amiral,,Rapion,4E2/1573,,29/10/1622,32
+32,François OLLIVIER,Nantes,,,Commerce,François NOBLET,Nantes,,Receveur de la prévosté,,Rapion,4E2/1573,,29/10/1622,32
+32,François OLLIVIER,Nantes,,,Commerce,Simon DELACOSTE,Nantes,,Receveur du devoir de ville,,Rapion,4E2/1573,,29/10/1622,32
+32,François OLLIVIER,Nantes,,,Commerce,Olivier BONNEMY,Saumur,,Marchand et bateleur,,Rapion,4E2/1573,,29/10/1622,32
+32,François OLLIVIER,Nantes,,,Commerce,S. DEFAYE,Anjou,,,,Rapion,4E2/1573,,29/10/1622,32
+32,François OLLIVIER,Nantes,,,Commerce,Guillaume LE VAILLANT,Anjou,,Marinier,,Rapion,4E2/1573,,29/10/1622,32
+32,François OLLIVIER,Nantes,,,Commerce,Sébastien GICQUEAU,Nantes,,Receveur,,Rapion,4E2/1573,,29/10/1622,32
+Marie,Olivier LEMISTRAILLE,Le Pouliguen,,Marchand marinier,Commerce,René CHAUMINEAU,Lisbonne,,Facteur,,Rapion,4E2/1573,,09/11/1622,Marie
+,René CHAUMINEAU,Lisbonne,,Facteur,Travail,François OLLIVIER,Nantes,,,,Rapion,4E2/1573,,09/11/1622,
+,Olivier LEMISTRAILLE,Le Pouliguen,,Marchand marinier,Finance,Marie COLOMBU,Nantes,,,,Rapion,4E2/1573,,09/11/1622,
+,Olivier LEMISTRAILLE,Le Pouliguen,,Marchand marinier,Autres,Olivier PERROTIN,Le Pouliguen,,Marinier,,Rapion,4E2/1573,,09/11/1622,
+34,François OLLIVIER,Nantes,,Sous-fermier des devoirs des Etats,Finance,Jean CARIS,Nantes,,Associé,Vannes,Rapion,4E2/1715,Procuration,07/01/1623,34
+35,François OLLIVIER,Nantes,,,Commerce,Guillaume LANDAS,Machecoul,,Marchand  ,,Rapion,4E2/1715,,14/01/1623,35
+35,Guillaume LANDAS,Machecoul,,Marchand,Commerce,S. FOULONNEAU,Machecoul,,Marchand  ,,Rapion,4E2/1715,,14/01/1623,35
+35,François OLLIVIER,Nantes,,Sous-fermier des devoirs des Etats,Commerce,S. FOULONNEAU,Machecoul,,Marchand  ,,Rapion,4E2/1715,,14/01/1623,35
+35,Guillaume LANDAS,Machecoul,,Marchand,Commerce,Jean DUPIN,Montoir,,Marinier,,Rapion,4E2/1715,,14/01/1623,35
+36,François OLLIVIER,Nantes,,,Commerce,Jean DUPIN,Montoir,,Marinier,,Rapion,4E2/1715,,22/01/1623,36
+36,Jean DUPIN,Montoir,,Marinier,Commerce,? ?,Londres,,,,Rapion,4E2/1715,,22/01/1623,36
+37,François OLLIVIER,Nantes,,Maitre de la monnaie,Commerce,Guillaume PHILIPPES,Montoir,,Marinier,,Rapion,4E2/1715,,31/01/1623,37
+37,Guillaume PHILIPPES,Montoir,,Marinier,Commerce,S. de VIEU MOULIN,Auray,,Facteur,,Rapion,4E2/1715,,31/01/1623,37
+37,François OLLIVIER,Nantes,,Maitre de la monnaie,Commerce,S. de VIEU MOULIN,Auray,,Facteur,,Rapion,4E2/1715,,31/01/1623,37
+37,Guillaume PHILIPPES,Montoir,,Marinier,Commerce,? ?,Calais,,, ,Rapion,4E2/1715,,31/01/1623,37
+37,Guillaume PHILIPPES,Montoir,,Marinier,Commerce,Germain LABBE,Paris,,,Rouen,Rapion,4E2/1715,,31/01/1623,37
+37,Guillaume PHILIPPES,Montoir,,Marinier,Commerce,Guillaume HILMENY,Londres,,Marchand  ,,Rapion,4E2/1715,,31/01/1623,37
+38,François OLLIVIER,Nantes,,Maitre de la monnaie,Commerce,Olivier URVOY,Plévin,,Maitre de barque,,Rapion,4E2/1715,,03/02/1623,38
+38,Olivier URVOY,Plévin,,Maitre de barque,Commerce,? ? ,Saint Sebastian,,,,Rapion,4E2/1715,,03/02/1623,38
+38,François OLLIVIER,Nantes,,,Commerce,Guillaume LUCAS,Nantes,,Maitre monnayeur,,Rapion,4E2/1715,,03/02/1623,38
+38,Guillaume LUCAS,Nantes,,Maitre monnayeur,Famille,Guillaume LUCAS PERE,Indre,,,,Rapion,4E2/1715,,03/02/1623,38
+38,François OLLIVIER,Nantes,,,Commerce,Guillaume LUCAS PERE,Indre,,,,Rapion,4E2/1715,,03/02/1623,38
+38,François OLLIVIER,Nantes,,,Affaires,Mgr de Guyse,Port-Louis,,,,Rapion,4E2/1715,,03/02/1623,38
+39,Olivier PERROTIN,Le Pouliguen,,Marinier,Commerce,Julien COUPINET,Le Pouliguen,,Marinier,,Rapion,4E2/1715,,16/03/1623,39
+39,Olivier PERROTIN,Le Pouliguen,,Marinier,Commerce,Yves FORET,Le Pouliguen,,Marinier,,Rapion,4E2/1715,,16/03/1623,39
+39,Olivier PERROTIN,Le Pouliguen,,Marinier,Commerce,Philippe LEMAU,Le Pouliguen,,Marinier,,Rapion,4E2/1715,,16/03/1623,39
+39,Olivier PERROTIN,Le Pouliguen,,Marinier,Commerce,Jean HERVO,Le Pouliguen,,Marinier,,Rapion,4E2/1715,,16/03/1623,39
+39,Olivier PERROTIN,Le Pouliguen,,Marinier,Commerce,François OLLIVIER,Nantes,,,,Rapion,4E2/1715,,16/03/1623,39
+39,Olivier PERROTIN,Le Pouliguen,,Marinier,Commerce,René CHAUVINAU,Lisbonne,,Facteur,,Rapion,4E2/1715,,16/03/1623,39
+39,Olivier PERROTIN,Le Pouliguen,,Marinier,Autres,Jacob PICOSON,Nantes,,Capitaine,,Rapion,4E2/1715,,16/03/1623,39
+39,Olivier PERROTIN,Le Pouliguen,,Marinier,Autres,? ? ,"Penzan, Angleterre",,Vice-Amiral,,Rapion,4E2/1715,,16/03/1623,39
+Marie,François OLLIVIER,Nantes,,Conseiller du roi,Famille,Marie COLOMBU,Nantes,,,,Rapion,4E2/1715,,31/03/1623,Marie
+,François OLLIVIER,Nantes,,Conseiller du roi,Finance,Jacques FAUVEAU,Nantes,,,,Rapion,4E2/1715,,31/03/1623,
+,Marie COLOMBU,Nantes,,,Finance,Jacques FAUVEAU,Nantes,,,,Rapion,4E2/1715,,31/03/1623,
+,François OLLIVIER,Nantes,,Conseiller du roi,Finance,Perrine CHEVALIER,Angers,,,,Rapion,4E2/1715,,31/03/1623,
+,François OLLIVIER,Nantes,,Conseiller du roi,Famille,Perrine CHEVALIER,Angers,,,,Rapion,4E2/1715,,31/03/1623,
+,Marie COLOMBU,Nantes,,,Finance,Perrine CHEVALIER,Angers,,,,Rapion,4E2/1715,,31/03/1623,
+,Marie COLOMBU,Nantes,,,Famille,Perrine CHEVALIER,Angers,,,,Rapion,4E2/1715,,31/03/1623,
+,Perrine CHEVALIER,Angers,,,Famille,Pierre OLLIVIER,Angers,,Receveur des Tailles,Laval,Rapion,4E2/1715,,31/03/1623,
+,François OLLIVIER,Nantes,,Conseiller du roi,Finance,Jacques HUSTEAU,Nantes,,Conseiller du roi et maitre des comptes,,Rapion,4E2/1715,,31/03/1623,
+,Marie COLOMBU,Nantes,,,Finance,Jacques HUSTEAU,Nantes,,Conseiller du roi et maitre des comptes,,Rapion,4E2/1715,,31/03/1623,
+,Perrine CHEVALIER,Angers,,,Finance,Jacques HUSTEAU,Nantes,,Conseiller du roi et maitre des comptes,,Rapion,4E2/1715,,31/03/1623,
+41,François OLLIVIER,Nantes,,,Commerce,Pierre COQUART,Saint-Nazaire,,Marchand marinier,,Rapion,4E2/1715,Vente,17/04/1623,41
+42,François OLLIVIER,Nantes,,,Commerce,Pierre COQUART,Saint-Nazaire,,Marchand marinier,,Rapion,4E2/1715,Charte partie,18/04/1623,42
+42,Pierre COQUART,Saint-Nazaire,,Marchand marinier,Commerce,S. de la VARIETA,"Saint-Sebastian, Espagne",,,,Rapion,4E2/1715,Charte partie,18/04/1623,42
+42,François OLLIVIER,Nantes,,,Commerce,S. de la VARIETA,"Saint-Sebastian, Espagne",,,,Rapion,4E2/1715,Charte partie,18/04/1623,42
+43,"Louis de CONIGAN, sgr de Rodon",Nantes,,,Famille,"Catherine GIFFART, dame de la Clartière",Nantes,,,,Rapion,4E2/1716,Protest,19/04/1623,43
+43,"Louis de CONIGAN, sgr de Rodon",Nantes,,,Finance,"Catherine GIFFART, dame de la Clartière",Nantes,,,,Rapion,4E2/1716,Protest,19/04/1623,43
+43,"Louis de CONIGAN, sgr de Rodon",Nantes,,,Finance,François OLLIVIER,Nantes,,,,Rapion,4E2/1716,Protest,19/04/1623,43
+43,"Louis de CONIGAN, sgr de Rodon",Nantes,,,Finance,Monsieur LABBE,Nantes,,Essayeur général des monnaies,,Rapion,4E2/1716,Protest,19/04/1623,43
+43,François OLLIVIER,Nantes,,Maitre de la monnaie,Travail,Mathurin JULIOT,Nantes,,Facteur,,Rapion,4E2/1716,Protest,19/04/1623,43
+43,Mathurin JULIOT,Nantes,,Facteur,Finance,"Louis de CONIGAN, Sgr de Rodon",Nantes,,,,Rapion,4E2/1716,Protest,19/04/1623,43
+43,Mathurin JULIOT,Nantes,,Facteur,Finance,"Catherine GIFFART, dame de la Clartière",Nantes,,,,Rapion,4E2/1716,Protest,19/04/1623,43
+43,Mathurin JULIOT,Nantes,,Facteur,Finance,"Catherine GIFFART, dame de la Clartière",Rezé,,,,Rapion,4E2/1716,Protest,19/04/1623,43
+43,Mathurin JULIOT,Nantes,,Facteur,Finance,Christophe VIVIEN,Nantes,,Précepteur,,Rapion,4E2/1716,Protest,19/04/1623,43
+44,François COQUART,Saint-Nazaire,,Pilote de navire,Travail,François OLLIVIER,Nantes,,Maitre de la monnaie,,Rapion,4E2/1715,,08/06/1623,44
+44,François COQUART,Saint-Nazaire,,Pilote de navire,Travail,Jacob ADRIENSSEN,Nantes,,Maitre de navire,,Rapion,4E2/1715,,08/06/1623,44
+44,François COQUART,Saint-Nazaire,,Pilote de navire,Travail,Guillaume ROULLEAU,Nantes,,Facteur,,Rapion,4E2/1715,,08/06/1623,44
+44,Guillaume ROULLEAU,Nantes,,Facteur,Travail,François CAILLAUD,Nantes,,Marchand  ,,Rapion,4E2/1715,,08/06/1623,44
+44,François OLLIVIER,Nantes,,,Commerce,François CAILLAUD,Nantes,,Marchand  ,,Rapion,4E2/1715,,08/06/1623,44
+44,Guillaume ROULLEAU,Nantes,,Facteur,Travail,François OLLIVIER,Nantes,,,,Rapion,4E2/1715,,08/06/1623,44
+44,Guillaume ROULLEAU,Nantes,,Facteur,Travail,Jacob ADRIENSSEN,Nantes,,Maitre de navire,,Rapion,4E2/1715,,08/06/1623,44
+44,François COQUART,Saint-Nazaire,,Pilote de navire,Travail,CAPTAN,Bordeaux,,,,Rapion,4E2/1715,,08/06/1623,44
+44,François COQUART,Saint-Nazaire,,Pilote de navire,Autres,? FRICHET,La Rochelle,,Maitre de navire,Royan,Rapion,4E2/1715,,08/06/1623,44
+44,François COQUART,Saint-Nazaire,,Pilote de navire,Autres,? CHABOSSEAU,La Rochelle,,Maitre de navire,,Rapion,4E2/1715,,08/06/1623,44
+44,Jacob ADRIENSSEN,Nantes,,Maitre de navire,Autres,? FRICHET,La Rochelle,,Maitre de navire,,Rapion,4E2/1715,,08/06/1623,44
+44,Jacob ADRIENSSEN,Nantes,,Maitre de navire,Autres,? CHABOSSEAU,La Rochelle,,Maitre de navire,,Rapion,4E2/1715,,08/06/1623,44
+44,Guillaume ROULLEAU,Nantes,,Facteur,Autres,Michel BARON,Ile de Ré,,Tonnelier,,Rapion,4E2/1715,,08/06/1623,44
+45,Jacques DUGUE,Candé,Candé en Touraine,Marchand,Autres,François OLLIVIER,Nantes,,,,Rapion,4E2/1715,,13/06/1623,45
+45,Jacques DUGUE,Candé,,Marchand,Commerce,? ?,Saint-Brieuc,,,,Rapion,4E2/1715,,13/06/1623,45
+45,Mathieu DELAPIERRE,Montsoreau,Montsoreau lez Angers,Marchand,Commerce,? ?,Saint-Brieuc,,,Quintin,Rapion,4E2/1715,,13/06/1623,45
+45,Pierre COQUART,Saint-Nazaire,,Marinier,Autres,François OLLIVIER,Nantes,,Maitre de la monnaie,,Rapion,4E2/1715,,13/06/1623,45
+45,Pierre COQUART,Saint-Nazaire,,Marinier,Autres,Pierre TANGUY,Le Croisic,,,Bretagne,Rapion,4E2/1715,,13/06/1623,45
+46,François OLLIVIER,Nantes,,Maitre de la monnaie,Travail,Guillaume ROULLEAU,Nantes,,Domestique,,Rapion,4E2/1716,,08/07/1623,46
+47,François SENICQ,Auray,,Marchand maitre de navire,Finance,François OLLIVIER,Nantes,,Receveur général des décimes,,Rapion,4E2/1716,,18/08/1623,47
+47,François SENICQ,Auray,,Marchand maitre de navire,Finance,Jean de NENE,La Rochelle,,Marchand  ,,Rapion,4E2/1716,,18/08/1623,47
+47,François SENICQ,Auray,,Marchand maitre de navire,Finance,Jean VANDECASTEL,La Rochelle,,Marchand  ,,Rapion,4E2/1716,,18/08/1623,47
+47,Jean de NENE,La Rochelle,,Marchand,Finance,S. BIBERT,Dunkerque,,Marchand  ,,Rapion,4E2/1716,,18/08/1623,47
+47,Jean de NENE,La Rochelle,,Marchand,Finance,S. CRESPIN DE LA FONTAINE,Dunkerque,,Marchand  ,,Rapion,4E2/1716,,18/08/1623,47
+47,Jean VANDECASTEL,La Rochelle,,Marchand,Finance,S. BIBERT,Dunkerque,,Marchand  ,,Rapion,4E2/1716,,18/08/1623,47
+47,Jean VANDECASTEL,La Rochelle,,Marchand,Finance,S. CRESPIN DE LA FONTAINE,Dunkerque,,Marchand  ,,Rapion,4E2/1716,,18/08/1623,47
+48,François OLLIVIER,Nantes,,Marchand,Travail,Denis BOSSINOT,Montoir,,Maitre conducteur,,Rapion,4E2/1717,,17/01/1624,48
+48,Denis BOSSINOT,Montoir,,Maitre conducteur,Travail,? ?,Saint-Brieuc,,,,Rapion,4E2/1717,,17/01/1624,48
+48,Denis BOSSINOT,Montoir,,Maitre conducteur,Travail,René CHAUMINEAU,Lisbonne,,Facteur,,Rapion,4E2/1717,,17/01/1624,48
+48,Denis BOSSINOT,Montoir,,Maitre conducteur,Famille,Michel BOSSINOT,Montoir,,,,Rapion,4E2/1717,,17/01/1624,48
+48,Denis BOSSINOT,Montoir,,Maitre conducteur,Travail,Pierre COQUART,Saint-Nazaire,,,,Rapion,4E2/1717,,17/01/1624,48
+48,Denis BOSSINOT,Montoir,,Maitre conducteur,Travail,Jean DUPIN,Montoir,,,,Rapion,4E2/1717,,17/01/1624,48
+48,François OLLIVIER,Nantes,,Marchand,Travail,Michel BOSSINOT,Montoir,,,,Rapion,4E2/1717,,17/01/1624,48
+48,François OLLIVIER,Nantes,,Marchand,Travail,Pierre COQUART,Saint-Nazaire,,,,Rapion,4E2/1717,,17/01/1624,48
+48,François OLLIVIER,Nantes,,Marchand,Travail,Jean DUPIN,Montoir,,,,Rapion,4E2/1717,,17/01/1624,48
+48,Michel BOSSINOT,Montoir,,,Autres,? ? Binic,Binic,,,,Rapion,4E2/1717,,17/01/1624,48
+48,? ? Binic,Binic,"Binic, pays de Saint-Brieuc",Marinier,Travail,? ? Terre neuve,Terre Neuve,,,,Rapion,4E2/1717,,17/01/1624,48
+Marie,Marie COLOMBU,Nantes,,,Famille,François OLLIVIER,Nantes,,Conseiller du roi et receveur général des décimes,,Rapion,4E2/1717,,13/03/1624,Marie
+,Marie COLOMBU,Nantes,,,Famille,Perrine CHEVALIER,Angers,,,,Rapion,4E2/1717,,13/03/1624,
+,Perrine CHEVALIER,Angers,,,Famille,Pierre OLLIVIER,Angers,,Receveur des tailles,Laval,Rapion,4E2/1717,,13/03/1624,
+,Marie COLOMBU,Nantes,,,Finance,Perrine CHEVALIER,Angers,,,,Rapion,4E2/1717,,13/03/1624,
+,Marie COLOMBU,Nantes,,,Finance,Trajan de COUSSAYS,Nantes,,Président en la Chambre des comptes,,Rapion,4E2/1717,,13/03/1624,
+50,Jacques de LAULNE,Le Croisic,,Marinier,Travail,François OLLIVIER,Nantes,,,,Rapion,4E2/1717,,04/04/1624,50
+50,Jacques de LAULNE,Le Croisic,,Marinier,Travail,? ? Espagne,Espagne,,,,Rapion,4E2/1717,,04/04/1624,50
+50,Jacques de LAULNE,Le Croisic,,Marinier,Travail,? ? Alger,Alger,,,,Rapion,4E2/1717,,04/04/1624,50
+50,Jacques de LAULNE,Le Croisic,,Marinier,Autres,Jean HENRY,Saint-Brieuc,,,,Rapion,4E2/1717,,04/04/1624,50
+50,Jacques de LAULNE,Le Croisic,,Marinier,Autres,Pierre TANGUY,Le Croisic,,,,Rapion,4E2/1717,,04/04/1624,50
+50,Jean HENRY,Saint-Brieuc,,,Travail,? ? Alger,Alger,,,,Rapion,4E2/1717,,04/04/1624,50
+50,Pierre TANGUY,Le Croisic,,,Travail,? ? Alger,Alger,,,,Rapion,4E2/1717,,04/04/1624,50
+51,Olivier PERROTIN,Le Pouliguen,,Marchand bourgeois,Commerce,François OLLIVIER,Nantes,,Maitre de la monnaie,,Rapion,4E2/1717,,23/04/1624,51
+51,Olivier PERROTIN,Le Pouliguen,,Marchand bourgeois,Travail,François PERROTIN,Le Pouliguen,,Marchand marinier,,Rapion,4E2/1717,,23/04/1624,51
+51,Olivier PERROTIN,Le Pouliguen,,Marchand bourgeois,Travail,Pierre THOMAS,Le Pouliguen,,Marchand marinier,,Rapion,4E2/1717,,23/04/1624,51
+51,Olivier PERROTIN,Le Pouliguen,,Marchand bourgeois,Travail,Olivier CHENE,Le Pouliguen,,Marchand Marinier,,Rapion,4E2/1717,,23/04/1624,51
+51,François PERROTIN,Le Pouliguen,,Marchand marinier,Travail,François OLLIVIER,Nantes,,Maitre de la monnaie,,Rapion,4E2/1717,,23/04/1624,51
+51,Pierre THOMAS,Le Pouliguen,,Marchand marinier,Travail,François OLLIVIER,Nantes,,Maitre de la monnaie,,Rapion,4E2/1717,,23/04/1624,51
+51,Olivier CHENE,Le Pouliguen,,Marchand marinier,Travail,François OLLIVIER,Nantes,,Maitre de la monnaie,,Rapion,4E2/1717,,23/04/1624,51
+51,Olivier PERROTIN,Le Pouliguen,,Marchand bourgeois,Commerce,? ? Lisbonne,Lisbonne,,,,Rapion,4E2/1717,,23/04/1624,51
+51,François PERROTIN,Le Pouliguen,,Marchand marinier,Autres,Mathieu LE TEXIER,Nantes,,,,Rapion,4E2/1717,,23/04/1624,51
+51,Pierre THOMAS,Le Pouliguen,,Marchand marinier,Autres,Jean TESSIER,Nantes,,,,Rapion,4E2/1717,,23/04/1624,51
+52,René ALLART,Paris,,,Finance,Bonaventure MUSSET,Paris,,Marchand bourgeois,,Rapion,4E2/1717,,30/05/1624,52
+52,Bonaventure MUSSET,Paris,,Marchand bourgeois,Finance,François OLLIVIER,Nantes,,Maitre de la monnaie,,Rapion,4E2/1717,,30/05/1624,52
+52,René ALLART,Paris,,,Finance,François OLLIVIER,Nantes,,Maitre de la monnaie,,Rapion,4E2/1717,,30/05/1624,52
+52,Bonaventure MUSSET,Paris,Saint-Jacques de la Boucherie,Marchand bourgeois,Finance,Jean MORIN,Paris,,Marchand  ,,Rapion,4E2/1717,,30/05/1624,52
+52,Bonaventure MUSSET,Paris,Saint-Jacques de la Boucherie,Marchand bourgeois,Finance,Louis FERIN,Paris,,Marchand  ,,Rapion,4E2/1717,,30/05/1624,52
+52,S. VAN LAMZWEERDEN,Nantes,,Marchand flamand,Finance,Ambroise MARCHAIS,Nantes,,Marchand flamand,,Rapion,4E2/1717,,30/05/1624,52
+52,Jean MORIN,Paris,,Marchand,Finance,S. VAN LAMZWEERDEN,Nantes,,Marchand flamand,,Rapion,4E2/1717,,30/05/1624,52
+52,Louis FERIN,Paris,,Marchand,Finance,Ambroise MARCHAIS,Nantes,,Marchand flamand,,Rapion,4E2/1717,,30/05/1624,52
+Marie,Jean LEMESLE,Nantes,,Marchand,Famille,Marie FAUVEAU,Nantes,,,,Rapion,4E2/1717,Contrat de mariage,03/06/1624,Marie
+,Jean LEMESLE,Nantes,,Marchand,Famille,René LEMESLE,Nantes,,,,Rapion,4E2/1717,Contrat de mariage,03/06/1624,
+,Jean LEMESLE,Nantes,,Marchand,Famille,Françoise RAGOT,Nantes,,,,Rapion,4E2/1717,Contrat de mariage,03/06/1624,
+,René LEMESLE,Nantes,,,Famille,Françoise RAGOT,Nantes,,,,Rapion,4E2/1717,Contrat de mariage,03/06/1624,
+,Marie FAUVEAU,Nantes,,,Famille,Jacques FAUVEAU,Nantes,,Maitre de la monnaie,,Rapion,4E2/1717,Contrat de mariage,03/06/1624,
+,Marie FAUVEAU,Nantes,,,Famille,Catherine COLLOMBU,Nantes,,,,Rapion,4E2/1717,Contrat de mariage,03/06/1624,
+,Jacques FAUVEAU,Nantes,,Maitre de la monnaie,Famille,Catherine COLLOMBU,Nantes,,,,Rapion,4E2/1717,Contrat de mariage,03/06/1624,
+,François OLLIVIER,Nantes,,Conseiller du roi et receveur,Famille,Marie COLOMBU,Nantes,,,,Rapion,4E2/1717,Contrat de mariage,03/06/1624,
+,Catherine COLLOMBU,Nantes,,,Famille,Marie COLOMBU,Nantes,,,,Rapion,4E2/1717,Contrat de mariage,03/06/1624,
+,Marie FAUVEAU,Nantes,,,Famille,Jacques FAUVEAU,Nantes,,Avocat à la cour de parlement de Bretagne,,Rapion,4E2/1717,Contrat de mariage,03/06/1624,
+,François OLLIVIER,Nantes,,Maitre de la monnaie,Famille,Perrine CHEVALIER,Angers,,,,Rapion,4E2/1717,Contrat de mariage,03/06/1624,
+,François OLLIVIER,Nantes,,Maitre de la monnaie,Famille,Nicolas OLLIVIER,Angers,,Sieur de Chauvineau,,Rapion,4E2/1717,Contrat de mariage,03/06/1624,
+,Perrine CHEVALIER,Angers,,,Famille,Nicolas OLLIVIER,Angers,,Sieur de Chauvineau,,Rapion,4E2/1717,Contrat de mariage,03/06/1624,
+,François OLLIVIER,Nantes,,Maitre de la monnaie,Famille,François OLLIVIER,Nantes,,,,Rapion,4E2/1717,Contrat de mariage,03/06/1624,
+,Jean LEMESLE,Nantes,,Marchand,Famille,Claude LEMESLE,Nantes,,,,Rapion,4E2/1717,Contrat de mariage,03/06/1624,
+,Marie FAUVEAU,Nantes,,,Famille,Catherine FAUVEAU,Nantes,,,,Rapion,4E2/1717,Contrat de mariage,03/06/1624,
+54,François OLLIVIER,Nantes,,,Famille,Hilayre OLLIVIER,Nantes,,Conseiller du roi et auditeur de ses comptes,,Rapion,4E2/1718,,28/08/1624,54
+54,François OLLIVIER,Nantes,,,Affaires,"Luc VIAUDET, sr de la Bretaudière",Sables d'Olonne,,Avocat en la cour de parlement de Paris,,Rapion,4E2/1718,,28/08/1624,54
+54,François OLLIVIER,Nantes,,,Affaires,"Jean VIAUDET, sr du Puy Rochas",Nantes,,Conseiller du roi et président en l'élection des Sables,,Rapion,4E2/1718,,28/08/1624,54
+54,Luc VIAUDET,Sables d'Olonne,,sr de la Bretaudière,Famille,"Jean VIAUDET, sr du Puy Rochas",Nantes,,Conseiller du roi et président en l'élection des Sables,,Rapion,4E2/1718,,28/08/1624,54
+55,"François CHUPEAU, sr du Plantis",Morlaix,,Marchand,Affaires,François OLLIVIER,Nantes,,Maitre de la monnaie,,Rapion,4E2/1718,,27/09/1624,55
+55,"François CHUPEAU, sr du Plantis",Morlaix,,Marchand,Affaires,Nicolas SOREL,Paris,,Procureur au parlement de Paris,,Rapion,4E2/1718,,27/09/1624,55
+55,François OLLIVIER,Nantes,,Maitre de la monnaie,Affaires,Nicolas SOREL,Paris,,Procureur au parlement de Paris,,Rapion,4E2/1718,,27/09/1624,55
+55,François OLLIVIER,Nantes,,Maitre de la monnaie,Affaires,Nicolas SOREL,Paris,,Procureur au parlement de Paris,,Rapion,4E2/1718,,27/09/1624,55
+56,Pierre TANGUY,Le Croisic,,Maitre de navire,Commerce,François OLLIVIER,Nantes,,,,Rapion,4E2/1718,,03/10/1624,56
+56,S. DU CLOS CORNU,Nantes,,Commis,Travail,François OLLIVIER,Nantes,,,,Rapion,4E2/1718,,03/10/1624,56
+56,Pierre TANGUY,Le Croisic,,Maitre de navire,Commerce,? ? Lisbonne,Lisbonne,,,,Rapion,4E2/1718,,03/10/1624,56
+56,Pierre TANGUY,Le Croisic,,Maitre de navire,Autres,S. de MARQUES,Nantes,,,,Rapion,4E2/1718,,03/10/1624,56
+56,Pierre TANGUY,Le Croisic,,Maitre de navire,Autres,S. de SANTO DOMINGO,Nantes,,,,Rapion,4E2/1718,,03/10/1624,56
+56,Pierre TANGUY,Le Croisic,,Maitre de navire,Autres,? ? Alger,Alger,,,,Rapion,4E2/1718,,03/10/1624,56
+56,François OLLIVIER,Nantes,,,Commerce,Pierre LE FRANC,Nantes,,,,Rapion,4E2/1718,,03/10/1624,56
+56,François OLLIVIER,Nantes,,,Commerce,François GARLOT,Nantes,,,,Rapion,4E2/1718,,03/10/1624,56
+56,Pierre TANGUY,Le Croisic,,Maitre de navire,Autres,Pierre LE FRANC,Alger,,,,Rapion,4E2/1718,,03/10/1624,56
+56,Pierre TANGUY,Le Croisic,,Maitre de navire,Autres,François GARLOT,Alger,,,,Rapion,4E2/1718,,03/10/1624,56
+57,Pierre COQUART,Saint-Nazaire,,Maitre marinier,Affaires,François OLLIVIER,Nantes,,Maitre de la monnaie,,Rapion,4E2/1718,,15/10/1624,57
+Marie,Marie COLOMBU,Nantes,,,Famille,François OLLIVIER,Nantes,,Maitre de la monnaie,,Rapion,4E2/1718,,29/10/1624,Marie
+,Marie COLOMBU,Nantes,,,Commerce,Mathurin DESBOIS,Saint-Brieuc,,Marinier,,Rapion,4E2/1718,,29/10/1624,
+,Mathurin DESBOIS,Saint-Brieuc,,Marinier,Commerce,? ? Coueron,Coueron,,,,Rapion,4E2/1718,,29/10/1624,
+,Mathurin DESBOIS,Saint-Brieuc,,Marinier,Commerce,? ? Morlaix,Morlaix,,,,Rapion,4E2/1718,,29/10/1624,
+Marie,Mathurin ACHARD,Saint-Gilles-Croix-de-Vie,,Maitre de navire,Commerce,Marie COLOMBU,Nantes,,,,Rapion,4E2/1718,,06/11/1624,Marie
+,Marie COLOMBU,Nantes,,,Famille,François OLLIVIER,Nantes,,,,Rapion,4E2/1718,,06/11/1624,
+,Mathurin ACHARD,Saint-Gilles-Croix-de-Vie,,Maitre de navire,Commerce,? ? Lisbonne,Lisbonne,,,,Rapion,4E2/1718,,06/11/1624,
+60,François OLLIVIER,Nantes,,Maitre de la monnaie,Affaires,Jean-Baptiste BELLIOTTE,Saint-Nazaire,,Maitre de navire,,Rapion,4E2/1718,,15/11/1624,60
+60,François OLLIVIER,Nantes,,Maitre de la monnaie,Affaires,Pierre TANGUY,Le Croisic,,Maitre de navire,,Rapion,4E2/1718,,15/11/1624,60
+60,Jean-Baptiste BELLIOTTE,Saint-Nazaire,,Maitre de navire,Affaires,Pierre TANGUY,Le Croisic,,Maitre de navire,,Rapion,4E2/1718,,15/11/1624,60
+60,Pierre COQUART,Saint-Nazaire,,Maitre de navire,Affaires,François OLLIVIER,Nantes,,Maitre de monnaie,,Rapion,4E2/1718,,15/11/1624,60
+60,Pierre TANGUY,Le Croisic,,Maitre de navire,Affaires,François OLLIVIER,Nantes,,Maitre de monnaie,,Rapion,4E2/1718,,15/11/1624,60
+60,Jean BERTAULT,Montoir,,Marinier,Commerce,François OLLIVIER,Nantes,,Maitre de monnaie,,Rapion,4E2/1718,,15/11/1624,60
+60,Jean BERTAULT,Montoir,,Marinier,Commerce,S. AMELOT,Dinan,,,,Rapion,4E2/1718,,15/11/1624,60
+61,Pierre ABRAHANET,Saint-Brieuc,,Marinier,Commerce,François OLLIVIER,Nantes,,Maitre de la monnaie,,Rapion,4E2/1718,,06/12/1624,61
+61,Pierre ABRAHANET,Saint-Brieuc,,Marinier,Commerce,S. MARANT,Morlaix,,Marchand  ,,Rapion,4E2/1718,,06/12/1624,61
+61,Pierre ABRAHANET,Saint-Brieuc,,Marinier,Commerce,S. CHUPEAU,Morlaix,,Fondé,,Rapion,4E2/1718,,06/12/1624,61
+62,Hervé PICQUELAIS,Estables,"Estables, év. De Saint-Brieuc",Propriétaire de barque,Commerce,François OLLIVIER,Nantes,,Maitre de la monnaie,,Rapion,4E2/1718,,24/12/1624,62
+62,Jean SIVELLE,Estables,"Estables, év. De Saint-Brieuc",Maitre de barque,Commerce,François OLLIVIER,Nantes,,Maitre de la monnaie,,Rapion,4E2/1718,,24/12/1624,62
+62,Hervé PICQUELAIS,Estables,"Estables, év. De Saint-Brieuc",Propriétaire de barque,Affaires,Jean SIVELLE,Etables-sur-mer,,Maitre de barque,,Rapion,4E2/1718,,24/12/1624,62
+63,François OLLIVIER,Nantes,,Maitre de la monnaie,Commerce,Mathurin ACHARD,Saint-Gilles-Croix-de-Vie,,Maitre de navire,,Rapion,4E2/1718,Charte partie,31/12/1624,63
+63,Mathurin ACHARD,Saint-Gilles-Croix-de-Vie,,Maitre de navire,Commerce,René CHAUMINEAU,Lisbonne,,,,Rapion,4E2/1718,Charte partie,31/12/1624,63
+64,Jean SIVELLE,Estables,"Estables, év. De Saint-Brieuc",Maitre de barque,Commerce,François OLLIVIER,Nantes,,Maitre de la monnaie,,Rapion,4E2/1718,Charte partie,24/12/1624,64
+64,Jean SIVELLE,Estables,"Estables, év. De Saint-Brieuc",Maitre de barque,Commerce,Michel BOUMARD,Saint-Brieuc,,,,Rapion,4E2/1718,Charte partie,24/12/1624,64
+65,Mathurin RAFFIN,Le Pélerin,,Maitre de navire,Commerce,François OLLIVIER,Nantes,,Maitre de la monnaie,,Rapion,4E2/1718,Charte partie,31/12/1624,65
+65,Mathurin RAFFIN,Le Pélerin,,Maitre de navire,Commerce,? ? Morlaix,Morlaix,,,,Rapion,4E2/1718,Charte partie,31/12/1624,65
+66,Julien COQUART,Montoir,,Maitre de barque,Commerce,François OLLIVIER,Nantes,,Maitre de la monnaie,,Rapion,4E2/1718,Charte partie,07/03/1625,66
+66,Julien COQUART,Montoir,,Maitre de barque,Commerce,? ? Saint-Malo,Saint-Malo,,,Cancale,Rapion,4E2/1718,Charte partie,07/03/1625,66
+67,Jean SIMON,Saint-Nazaire,,Marinier,Commerce,François OLLIVIER,Nantes,,Maitre de la monnaie,,Rapion,4E2/1719,Charte partie,17/03/1625,67
+67,Jean SIMON,Saint-Nazaire,,Marinier,Commerce,? ? Morlaix,Morlaix,,,,Rapion,4E2/1719,Charte partie,17/03/1625,67
+68,François OLLIVIER,Nantes,,Maitre de la monnaie,Affaires,Jacques FAUVEAU,Nantes,,Marchand  ,,Rapion,4E2/1719,,19/03/1625,68
+69,Jean DUSABLE,Saint-Nazaire,,Marinier,Commerce,François OLLIVIER,Nantes,,Maitre de la monnaie,,Rapion,4E2/1719,Charte partie,27/03/1625,69
+69,Jean DUSABLE,Saint-Nazaire,,Marinier,Commerce,? ? Saint-Brieuc,Saint-Brieuc,,,Dinan,Rapion,4E2/1719,Charte partie,27/03/1625,69
+70,Michel BOMMARD,Saint-Brieuc,,Marchand,Commerce,François OLLIVIER,Nantes,,Maitre de la monnaie,,Rapion,4E2/1625,,04/06/1625,
+70,Michel BOMMARD,Saint-Brieuc,,Marchand,Commerce,Perrine CHEVALIER,Angers,,,,Rapion,4E2/1625,,04/06/1625,
+70,François OLLIVIER,Nantes,,Maitre de la monnaie,Famille,Perrine CHEVALIER,Angers,,,,Rapion,4E2/1625,,04/06/1625,
+70,Michel BOMMARD,Saint-Brieuc,,Marchand,Commerce,Mathurin DESBOIS,Saint-Brieuc,,Marinier,,Rapion,4E2/1625,,04/06/1625,
+70,Mathurin DESBOIS,Saint-Brieuc,,Marinier,Travail,? ? Terre neuve,Terre Neuve,,,,Rapion,4E2/1625,,04/06/1625,
+70,? ? Terre neuve,Terre-Neuve,,,Travail,? ? Séville,Séville,,,,Rapion,4E2/1625,,04/06/1625,
+70,? ? Séville,Séville,,,Commerce,? ? Bilbao,Bilbao,,,,Rapion,4E2/1625,,04/06/1625,
+70,? ? Bilbao,Bilbao,,,Commerce,Michel BOMMARD,Saint-Brieuc,,,,Rapion,4E2/1625,,04/06/1625,
+71,Michel BOMMARD,Saint-Brieuc,,Marchand,Commerce,Pierre OLLIVIER,Angers,,,,Rapion,4E2/1720,,07/06/1625,
+72,François OLLIVIER,Nantes,,Maitre de la monnaie,Affaires,Marie COLOMBU,Nantes,,,,Rapion,4E2/1720,Procuration,29/06/1625,
+72,François OLLIVIER,Nantes,,Maitre de la monnaie,Famille,Marie COLOMBU,Nantes,,,,Rapion,4E2/1720,Procuration,29/06/1625,
+73,Noël BOISSONNEAU,Fronteau,"Fronteau, paroisse de Saint-Michel",Marchand potier,Affaires,Jacques CHAUFFETEAU,Nantes,,Maitre fondeur,,Rapion,4E2/1720,,22/08/1625,
+73,Noël BOISSONNEAU,Fronteau,"Fronteau, paroisse de Saint-Michel",Marchand potier,Affaires,François OLLIVIER,Nantes,,Maitre de la monnaie,,Rapion,4E2/1720,,22/08/1625,
+73,Noël BOISSONNEAU,Fronteau,"Fronteau, paroisse de Saint-Michel",Marchand potier,Affaires,Marie COLOMBU,Nantes,,,,Rapion,4E2/1720,,22/08/1625,
+74,François OLLIVIER,Nantes,,Conseiller du roi et receveur,Famille,Marie COLOMBU,Nantes,,,,Chauveau,4E2/490,Vente office,06/12/1625,
+74,François OLLIVIER,Nantes,,Conseiller du roi et receveur,Affaires,François NOBLET,Nantes,,Conseiller du roi et receveur  ,,Chauveau,4E2/490,Vente office,06/12/1625,
+74,Marie COLOMBU,Nantes,,,Affaires,François NOBLET,Nantes,,Conseiller du roi et receveur  ,,Chauveau,4E2/490,Vente office,06/12/1625,
+75,François OLLIVIER,Nantes,,Conseiller du roi et receveur,Affaires,François NOBLET,Nantes,,Conseiller du roi et receveur  ,,Chauveau,4E2/490,,23/12/1625,
+76,Marie COLOMBU,Nantes,,,Commerce,Jeanne PELERIN,Nantes,,,,Rapion,4E2/1722,,26/01/1626,
+76,Jeanne PELERIN,Nantes,,,Famille,Ymbert DORLEANS,Nantes,,,,Rapion,4E2/1722,,26/01/1626,
+76,Jeanne PELERIN,Nantes,,,Commerce,Adrien VARINAUBOURT,Nantes,,Marchand flamand,,Rapion,4E2/1722,,26/01/1626,
+76,Adrien VARINAUBOURT,Nantes,,Marchand flamand,Affaires,Johan VENPOORTE,Nantes,,,,Rapion,4E2/1722,,26/01/1626,
+76,Johan VENPOORTE,Nantes,,,Affaires,Marie COLOMBU,Nantes,,,,Rapion,4E2/1722,,26/01/1626,
+77,Michel BOMMARD,Saint-Brieuc,,Marchand,Commerce,Marie COLOMBU,Nantes,,,,Rapion,4E2/1565,,07/02/1626,
+77,Michel BOMMARD,Saint-Brieuc,,Marchand,Travail,Mathurin DESBOIS,Saint-Brieuc,,Marinier,,Rapion,4E2/1565,,07/02/1626,
+77,Mathurin DESBOIS,Saint-Brieuc,,Marinier,Travail,? ? Lisbonne,Lisbonne,,,,Rapion,4E2/1565,,07/02/1626,
+77,? ? Lisbonne,Lisbonne,,,Travail,Mathurin DESBOIS,Nantes,,,,Rapion,4E2/1565,,07/02/1626,
+77,Michel BOMMARD,Saint-Brieuc,,Marchand,Travail,Laurent VITET,Saint-Brieuc,,,,Rapion,4E2/1565,,07/02/1626,
+77,Laurent VITET,Saint-Brieuc,,Marinier,Travail,? ? Séville,Séville,,,,Rapion,4E2/1565,,07/02/1626,
+77,? ? Séville,Lisbonne,,,Travail,? ? Saint-Malo,Saint-Malo,,,,Rapion,4E2/1565,,07/02/1626,
+77,Michel BOMMARD,Saint-Brieuc,,Marchand,Commerce,Sieur DOUESSEAU,Londres,,,,Rapion,4E2/1565,,07/02/1626,
+77,Marie COLOMBU,Nantes,,,Famille,François OLLIVIER,Nantes,,,,Rapion,4E2/1565,,07/02/1626,
+78,Marie COLOMBU,Nantes,,,Affaires,Michel BUTET,Nantes,,,,Rapion,4E2/1722,,15/05/1626,
+78,Marie COLOMBU,Nantes,,,Famille,François OLLIVIER,Nantes,,,,Rapion,4E2/1722,,15/05/1626,
+78,Marie COLOMBU,Nantes,,,Commerce,Louis RIAU,Penerf,,Bourgeois et maitre de navire,,Rapion,4E2/1722,,15/05/1626,
+78,Michel BUTET,Nantes,,Sieur de la Pannetière,Commerce,Louis RIAU,Penerf,,Bourgeois et maitre de navire,,Rapion,4E2/1722,,15/05/1626,
+78,Louis RIAU,Penerf,,Bourgeois et maitre de navire,Travail,Sieur MARTINEAU,Mesquer,,,,Rapion,4E2/1722,,15/05/1626,
+79,Marie COLOMBU,Nantes,,,Affaires,Michel BUTET,Nantes,,Sieur de la Pannetière,,Rapion,4E2/1722,,15/05/1626,
+79,Marie COLOMBU,Nantes,,,Famille,François OLLIVIER,Nantes,,,,Rapion,4E2/1722,,15/05/1626,
+79,Marie COLOMBU,Nantes,,,Commerce,René DUPIN,Montoir ,,Maitre de navire,,Rapion,4E2/1722,,15/05/1626,
+79,Michel BUTET,Nantes,,Sieur de la Pannetière,Commerce,René DUPIN,Penerf,,Maitre de navire,,Rapion,4E2/1722,,15/05/1626,
+79,René DUPIN,Penerf,,Maitre de navire,Travail,Sieur MARTINEAU,Mesquer,,,,Rapion,4E2/1722,,15/05/1626,
+80,André DU BREUIL,Nantes,,,Travail,Marie COLOMBU,Nantes,,,,Guilloteau,4E2/1022,,16/07/1626,
+80,Marie COLOMBU,Nantes,,,Famille,François OLLIVIER,Nantes,,,,Guilloteau,4E2/1022,,16/07/1626,
+81,Marie COLOMBU,Nantes,,,Famille,François OLLIVIER,Nantes,,,,Guilloteau,4E2/1022,,03/08/1626,
+81,Marie COLOMBU,Nantes,,,Affaires,Pierre PHELIPPE,Montoir,,Marchand marinier,,Guilloteau,4E2/1022,,03/08/1626,
+81,Marie COLOMBU,Nantes,,,Affaires,Denis PICAUD,Montoir,,Marchand marinier,,Guilloteau,4E2/1022,,03/08/1626,
+82,Marie COLOMBU,Nantes,,,Commerce,Pierre PHELIPPE,Montoir,,Marchand marinier,,Guilloteau,4E2/1022,,11/08/1626,
+83,Jacques PAN,Nantes,,Marchand flamand,Commerce,Marie COLOMBU,Nantes,,,,Guilloteau,4E2/1022,,25/09/1626,
+83,Marie COLOMBU,Nantes,,,Travail,Sieur DU CHASTEL,Nantes,,Receveur de la prévosté,,Guilloteau,4E2/1022,,25/09/1626,
+83,Marie COLOMBU,Nantes,,,Travail,Sieur Le COCQ,Nantes,,,,Guilloteau,4E2/1022,,25/09/1626,
+83,Sieur DU CHASTEL,Nantes,,Receveur de la prévosté,Affaires,Sieur LE COCQ,Nantes,,,,Guilloteau,4E2/1022,,25/09/1626,
+84,Jacques FAUVEAU,Nantes,,Marchand,Commerce,Marie COLOMBU,Nantes,,,,Guilloteau,4E2/1022,,31/10/1626,
+84,Marie COLOMBU,Nantes,,,Travail,? ? Redon,Redon,,,,Guilloteau,4E2/1022,,31/10/1626,
+85,François OLLIVIER,Nantes,,Maitre de la monnaie,Famille,Adrien FAUVEAU,Nantes,,,,Guilloteau,4E2/1022,,09/12/1626,
+85,François OLLIVIER,Nantes,,Maitre de la monnaie,Famille,Marie COLOMBU,Nantes,,,,Guilloteau,4E2/1022,,09/12/1626,
+86,Marie COLOMBU,Nantes,,,Famille,Adrien FAUVEAU,Nantes,,,,Guilloteau,4E2/1022,,09/12/1626,
+86,Jacques FAUVEAU,Nantes,,,Famille,Adrien FAUVEAU,Nantes,,,,Guilloteau,4E2/1022,,09/12/1626,
+86,Jacques FAUVEAU,Nantes,,,Famille,Catherine COLLOMBU,Nantes,,,,Guilloteau,4E2/1022,,09/12/1626,
+86,Marie COLOMBU,Nantes,,,Famille,Catherine COLLOMBU,Nantes,,,,Guilloteau,4E2/1022,,09/12/1626,
+86,Catherine COLLOMBU,Nantes,,,Famille,Adrien FAUVEAU,Nantes,,,,Guilloteau,4E2/1022,,09/12/1626,
+86,François OLLIVIER,Nantes,,Maitre de la monnaie,Affaires,Adrien FAUVEAU,Nantes,,,,Guilloteau,4E2/1022,,09/12/1626,
+86,Michel BUTET,Nantes,,Sieur de la Pannetière,Affaires,Jacques FAUVEAU,Nantes,,,,Guilloteau,4E2/1022,,09/12/1626,
+86,Pierre BIRE,Nantes,,Sieur del a Doucinière,Famille,Marguerite BIRE,Nantes,,,,Guilloteau,4E2/1022,,09/12/1626,
+86,Margueite BIRE,Nantes,,,Famille,André DU BREUIL,Nantes,,Garde et juge de la monnaie royale,,Guilloteau,4E2/1022,,09/12/1626,
+86,André DU BREUIL,Nantes,,Garde et juge de la monnaie,Affaires,Jacques FAUVEAU,Nantes,,,,Guilloteau,4E2/1022,,09/12/1626,
+87,Marie COLOMBU,Nantes,,,Affaires,Yves BLONDEAU,Nantes,,,,Rapion,4E2/1723,Droits cédés,06/03/1627,
+87,Yves BLONDEAU,Nantes,,,Affaires,René CHAUMINEAU,Nantes,,,,Rapion,4E2/1723,Droits cédés,06/03/1627,
+88,Marie COLOMBU,Nantes,,,Affaires,Jean BEAUGENDRE,Nantes,,,,Rapion,4E2/1723,,08/04/1627,
+88,Jean BEAUGENDRE,Nantes,,,Affaires,Jacques FAUVEAU,Nantes,,Marchand bourgeois,,Rapion,4E2/1723,,08/04/1627,
+88,Jean LEMESLE,Nantes,,Marchand de draps de soie,Affaires,Jacques FAUVEAU,Nantes,,Marchand bourgeois,,Rapion,4E2/1723,,08/04/1627,
+89,Marie COLOMBU,Nantes,,,Commerce,René CORNUAU,Angers,,Sieur de la Rivière,,Rapton,4E2/1724,,03/07/1627,
+89,Marie COLOMBU,Nantes,,,Commerce,Yves LE MAUGEDRE,Vannes,,Marchand  ,,Rapton,4E2/1724,,03/07/1627,
+90,Marie COLOMBU,Nantes,,,Commerce,Jean-Baptiste BELLIOTTE,Saint-Nazaire,,Maitre de navire,,Rapion,4E2/1724,,07/07/1627,
+90,Jean-Baptiste BELLIOTTE,Saint-Nazaire,,,Travail,? ? Doucarte,Flandres,,,,Rapion,4E2/1724,,07/07/1627,
+91,Marie COLOMBU,Nantes,,,Commerce,René MENARDEAU,Nantes,,"Conseiller du roi, alloué et lieutenant général",,Rapion,4E2/1726,,15/03/1628,
+91,Marie COLOMBU,Nantes,,,Commerce,Janne CORNUAU,Nantes,,,,Rapion,4E2/1726,,15/03/1628,
+91,Janne CORNUAU,Nantes,,,Commerce,René MENARDEAU,Nantes,,"Conseiller du roi, alloué et lieutenant général",,Rapion,4E2/1726,,15/03/1628,
+91,Marie COLOMBU,Nantes,,,Commerce,Jean-Baptiste BELLIOTTE,Saint-Nazaire,,Maitre de navire,,Rapion,4E2/1726,,15/03/1628,
+91,Janne CORNUAU,Nantes,,,Commerce,Jean-Baptiste BELLIOTTE,Saint-Nazaire,,Maitre de navire,,Rapion,4E2/1726,,15/03/1628,
+91,René MENARDEAU,Nantes,,,Commerce,Jean-Baptiste BELLIOTTE,Saint-Nazaire,,Maitre de navire,,Rapion,4E2/1726,,15/03/1628,
+92,François OLLIVIER,Nantes,,Maitre de la monnaie,Commerce,Jacques FAUVEAU,Nantes,,,,Rapion,4E2/1733,,15/09/1630,
+92,François OLLIVIER,Nantes,,Maitre de la monnaie,Commerce,Henry LOOPES,Nantes,,Marchand flamand,,Rapion,4E2/1733,,15/09/1630,
+92,Henry LOOPES,Nantes,,Marchand flamand,Commerce,Paul TRODENY,Nantes,,Marchand flamand,,Rapion,4E2/1733,,15/09/1630,
+92,Henry LOOPES,Nantes,,Marchand flamand,Commerce,Sieur SCHURMANN,Nantes,,,,Rapion,4E2/1733,,15/09/1630,
+93,François OLLIVIER FILS,Nantes,,,Affaires,René DU ROCHER,Angers,,Avocat  ,,Rapion,4E2/1736,,29/09/1631,
+93,François OLLIVIER FILS,Nantes,,,Affaires,Luc BOUCHARD,Paris,,,,Rapion,4E2/1736,,29/09/1631,
+93,René DU ROCHER,Angers,,Avocat,Affaires,Luc BOUCHARD,Paris,,,,Rapion,4E2/1736,,29/09/1631,
+93,François OLLIVIER,Nantes,,,Famille,François OLLIVIER FILS,Nantes,,,,Rapion,4E2/1736,,29/09/1631,
+93,Marie COLOMBU,Nantes,,,Famille,François OLLIVIER FILS,Nantes,,,,Rapion,4E2/1736,,29/09/1631,
+93,René DU ROCHER,Angers,,Avocat,Affaires,Gilles TAVENOT,Nantes,,Marchand bourgeois,,Rapion,4E2/1736,,29/09/1631,
+93,René DU ROCHER,Angers,,Avocat,Affaires,Luc BOUCHARD,Paris,,Banquier,,Rapion,4E2/1736,,29/09/1631,
+93,Gilles TAVENOT,Nantes,,Marchand bourgeois,Affaires,Luc BOUCHARD,Paris,,Banquier,,Rapion,4E2/1736,,29/09/1631,
+94,François OLLIVIER,Nantes,,,Famille,François OLLIVIER Fils,Nantes,,,,Rapion,4E2/1738,,19/05/1632,
+94,François OLLIVIER,Nantes,,,Affaires,François OLLIVIER Fils,Nantes,,,,Rapion,4E2/1738,,19/05/1632,
+94,François OLLIVIER,Nantes,,,Affaires,Gilles TAVENOT,Nantes,,Marchand  ,,Rapion,4E2/1738,,19/05/1632,
+94,François OLLIVIER,Nantes,,,Affaires,François DONDEL,Hennebont,,Marchand  ,,Rapion,4E2/1738,,19/05/1632,
+94,Gilles TAVENOT,Nantes,,Marchand,Affaires,François DONDEL,Hennebont,,Marchand  ,,Rapion,4E2/1738,,19/05/1632,

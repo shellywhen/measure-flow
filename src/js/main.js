@@ -17,6 +17,10 @@ import * as Config from './configureView.js'
 import * as Bookmark from './bookmarkBrowser.js'
 import * as Stat from './statView.js'
 import * as Box from './boxView.js'
+import * as Kde from  './kdeView.js'
+import * as Heatmap from './heatmapView.js'
+import * as Measure from './measureView.js'
+import * as DataHandler from './DataHandler.js'
 let linkSchema1 = {  source: 0,
                     target: 3,
                     weight: 6,
@@ -36,10 +40,32 @@ let linkSchema3 = {
   time: 9,
   linkType: 2
 }
+let linkSchema4= {
+  source: 1,
+  target: 6,
+  time: 14,
+  linkType: 5
+}
+let linkSchema6 = {
+  time: 2,
+  linkType: 10,
+  source: 6,
+  target: 8
+}
+let linkSchema5 = {
+  time: 14,
+  source: 10,
+  target: 11,
+  linkType: 21
+
+}
 const configMap = {
   'scientists': [linkSchema1, 'DD/MM/YYYY'],
   'DiplomaticExchange': [linkSchema2 ,'YYYY'],
-  'marieboucher': [linkSchema3, 'DD/MM/YYYY']
+  'marieboucher': [linkSchema3, 'DD/MM/YYYY'],
+  'marie-colombu': [linkSchema4, 'DD/MM/YYYY'],
+  'RollaCristofoli': [linkSchema5, 'DDMMYY'],
+  'Marguerite': [linkSchema6, 'DD-MM-YYYY']
 }
 let dataFileName = networkcube.getUrlVars()['datasetName'].replace(/___/g, ' ')
 let config = configMap[dataFileName]
@@ -56,12 +82,17 @@ function afterLoadedData(dataset) {
     // import data into browser's localstorage.
     networkcube.importData(session, dataset)
     window.dgraph = networkcube.getDynamicGraph(dataset.name, session)
-    window.dgraph.nodeSelection = new Set()
-    TimeLine.drawTimeLine()
-    Box.drawBox()
+    DataHandler.addGlobalProperty(window.dgraph)
 
-    TimeSlider.drawTimeSlider()
+    // TimeLine.drawTimeLine()
+    Measure.drawMeasureList('measureFrame')
+    TimeSlider.drawTimeSlider(Measure.WIDTH_LEFT, Measure.WIDTH_MIDDLE)
+    //Box.drawBox()
+    // Kde.drawKde('timelineFrame')
+
+    Heatmap.drawHeatmap('heatmapFrame')
     NodeLink.drawNodeLink()
+    //
     Stat.drawStatView('radarDiv')
     Config.drawConfigs()
     Bookmark.drawBookmark('selection-config')

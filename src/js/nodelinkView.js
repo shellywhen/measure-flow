@@ -2,8 +2,8 @@ import * as DataHandler from './dataHandler.js'
 
 const nodelinkDivId = 'nodelinkFrame'
 const nodelinkSvgId = 'nodelink'
-const nodelinkHeight = $('#' + nodelinkDivId).innerHeight()
-const nodelinkWidth = $('#' + nodelinkDivId).innerWidth()
+const nodelinkHeight = $('#' + nodelinkDivId).height()
+const nodelinkWidth = $('#' + nodelinkDivId).width()
 const nodeHighLightColor = 'orange'
 const MaxRadius = 10
 let LINK_GAP = 2
@@ -279,6 +279,7 @@ let drawNodeLink = function () {
     let end = m.body.endUnix
     let startId = binarySearch(dg.timeArrays.unixTime, d => d >= start)
     let endId = binarySearch(dg.timeArrays.unixTime, d => d >= end)
+    endId = Math.min(endId, dg.timeArrays.unixTime.length - 1)
     drawNodeLinkInPeriod(startId, endId)
     window.activeTime = {startId: startId, endId: endId, start: start, end: end}
   })

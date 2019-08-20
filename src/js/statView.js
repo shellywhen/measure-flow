@@ -1,13 +1,21 @@
 import * as RadarChart from '../../lib/js/radarChart.js'
 let svgWidth
 let svgHeight
-const margin = {top: 30, right: 20, bottom: 30, left: 20}
-const color = d3.scale.ordinal().range(["#EDC951","#CC333F","#00A0B0"])
+let width
+let height
+const margin = {top: 5, right: 0, bottom: 35, left: 0}
+const color = d3.scale.ordinal().range(['#EDC951','#CC333F','#00A0B0'])
+let FLAG = false
+const dimensions = [ 'connectedComponent', 'diameter', 'transition', 'nodeNumber', 'linkNumber', 'density']
 let legendWidth
 let legendHeight
+let data
 const legendDiv = 'radarLegendDiv'
 export let drawStatView = function (divId) {
-    svgWidth = $(`#${divId}`).innerWidth()
+    $('#groupMeasure').change(function () {
+      FLAG = $(this).prop('checked')
+    })
+    svgWidth = $(`#${divId}`).innerWidth() * 0.9
     svgHeight = $(`#${divId}`).innerHeight()
     legendWidth = $(`#${legendDiv}`).innerWidth()
     legendHeight = $(`#${legendDiv}`).innerHeight()
@@ -22,34 +30,125 @@ export let drawStatView = function (divId) {
     updateStat(msg)
 }
 let updateStat = function (msg) {
+  if (! FLAG) return
   let start = msg.body.start
   let end = msg.body.end
   let startId = binarySearch(dgraph.timeArrays.unixTime, d => d >= start)
   let endId = binarySearch(dgraph.timeArrays.unixTime, d => d >= end)
+  endId = Math.min(endId, dgraph.timeArrays.unixTime.length - 1)
   let groups  = [{'id': 1, 'node': [0, 1, 2, 3, 4, 5, 6, 7], 'name': 'Group 1'}, {'id': 2, 'node': [8, 9, 10, 11, 12, 13, 14, 15, 16], 'name': 'Group 2'}]
   let globalNodeList = {'id': 0, 'node': dgraph.nodeArrays.id, 'name': 'global'}
   groups.unshift(globalNodeList)
   updateLegend(groups)
-  let data = wrapGroup(groups, startId, endId)
-  let width = svgWidth - margin.left - margin.right
-  let height = svgHeight- margin.top - margin.bottom
+  data = wrapGroup(groups, startId, endId)
+  width = svgWidth - margin.left - margin.right
+  height = svgHeight- margin.top - margin.bottom
 
 
-  let radarChartOptions = {
-    w: width,
-    h: height,
-    margin: margin,
-    maxValue: getMaxValue(data),
-    levels: 3,
-    roundStrokes: true,
-    color: color,
-    dotRadius: 3
-  }
+  // let radarChartOptions = {
+  //   w: width,
+  //   h: height,
+  //   margin: margin,
+  //   maxValue: getMaxValue(data),
+  //   levels: 3,
+  //   roundStrokes: true,
+  //   color: color,
+  //   dotRadius: 3
+  // }
+  plotParallel('radarDiv', data)
   //Call function to draw the Radar chart
-  RadarChart.RadarChart("#radarDiv", data, radarChartOptions)
+//  RadarChart.RadarChart('#radarDiv', data, radarChartOptions)
 }
 
-let updateLegend = function (groups) {
+let plotParallel = function (svgId = 'radarDiv', data) {
+  d3.select(`#${svgId}`).selectAll('svg').remove()
+  let svg = d3.select(`#${svgId}`).append('svg').attr('height', svgHeight).attr('width', svgWidth)
+    .append('g').attr('transform', `translate(${margin.left}, ${margin.top})`)
+  let dimScale = d3.scalePoint().range([0, width]).padding(1).domain(dimensions)
+  let yScale = {}
+  let dragging = {}
+  dimensions.forEach(v => {
+    yScale[v] = d3.scaleLinear().domain(d3.extent(data, d => d[v].value)).range([height - 10, 0]).nice()
+  })
+  let g = svg.selectAll('.dimension')
+    .data(dimensions)
+    .enter()
+    .append('g')
+    .classed('dimension', true)
+    .attr('transform', d => `translate(${dimScale(d)}, 0)`)
+
+  let getPos = function (d) {
+    return dragging[d]? dragging[d]:dimScale(d)
+  }
+
+  let pathGenerator = function (d) {
+    return d3.line()(dimensions.map(function (p) {
+      return [getPos(p), yScale[p](d[p].value)]
+    }))
+  }
+
+  let paths = svg.append('g')
+    .classed('parallel-lines', true)
+    .selectAll('path')
+    .data(data)
+    .enter()
+    .append('path')
+    .attr('d', pathGenerator)
+    .style('fill', 'none')
+    .style('stroke', function (d, i) {
+      return color(i)
+    })
+    .style('stroke-opacity', 0.8)
+
+
+  let dragHandler = d3.drag()
+    .subject(function(d) {
+         let t = d3.select(this);
+         return {x: dimScale(d), y: 0};
+     })
+    .on('start', function (d) {
+      dragging[d] = dimScale(d)
+    })
+    .on('drag', function (d) {
+      dragging[d] = Math.min(width, Math.max(0, d3.event.x))
+      dimensions.sort((a, b) => getPos(a) - getPos(b))
+      dimScale.domain(dimensions)
+      g.attr('transform', v => `translate(${getPos(v)}, 0)`)
+      paths.attr('d', pathGenerator)
+    })
+    .on('end', function (d) {
+      delete dragging[d]
+      g.transition().duration(500).attr('transform', v => `translate(${dimScale(v)}, 0)` )
+      paths.transition().duration(500).attr('d', pathGenerator)
+    })
+  g.append('g')
+    .classed('y-axis', true)
+    .each(function (d) {
+      d3.select(this).call(d3.axisLeft().scale(yScale[d]).ticks(5))
+    })
+    .append('text')
+    .style('text-anchor', 'middle')
+    .style('fill', 'black')
+    .style('font-size', '0.8rem')
+    .call(dragHandler)
+    .style('cursor', 'move')
+    .each(function (d) {
+      let content = data[0][d].axis
+      let words = content.split(/\s+/).reverse()
+      let lineNumber = 0
+      let dy = 0.8
+      let lineHeight = 0.8
+      let tspan = d3.select(this).text(null).append('tspan').attr('x', 0).attr('y', height-10)
+      let word
+      while(word = words.pop()) {
+        tspan = d3.select(this).append('tspan').attr('x', 0).attr('y', height-10).attr('dy', ++lineNumber * lineHeight + dy + 'em').text(word)
+      }
+    })
+
+
+}
+
+let updateLegend = function (groups, canvas) {
   d3.select(`#${legendDiv}`).select('svg').remove()
   let svg = d3.select(`#${legendDiv}`)
     .append('svg')
@@ -57,28 +156,28 @@ let updateLegend = function (groups) {
     .attr('width', legendWidth)
     .append('g')
     .attr('transform', `translate(10, ${margin.right})`)
-  svg.selectAll(".legendDots")
+  svg.selectAll('.legendDots')
   .data(groups)
   .enter()
-  .append("circle")
+  .append('circle')
     .classed('legendDots', true)
-    .attr("cx", 0)
-    .attr("cy", function(d,i){ return 0 + i*20}) // 100 is where the first dot appears. 25 is the distance between dots
-    .attr("r", 7)
-    .style("fill", function(d, i){ return color(i)})
+    .attr('cx', 0)
+    .attr('cy', function(d,i){ return 0 + i*20}) // 100 is where the first dot appears. 25 is the distance between dots
+    .attr('r', 7)
+    .style('fill', function(d, i){ return color(i)})
 
 // Add one dot in the legend for each name.
-  svg.selectAll(".legendLabels")
+  svg.selectAll('.legendLabels')
     .data(groups)
     .enter()
-    .append("text")
+    .append('text')
       .classed('legendLabels', true)
-      .attr("x", 20)
-      .attr("y", function(d,i){ return 0 + i*20}) // 100 is where the first dot appears. 25 is the distance between dots
-      .style("fill", d => 'black')
+      .attr('x', 20)
+      .attr('y', function(d,i){ return 0 + i*20}) // 100 is where the first dot appears. 25 is the distance between dots
+      .style('fill', d => 'black')
       .text(function(d){ return d.name})
-      .attr("text-anchor", "left")
-      .style("alignment-baseline", "middle")
+      .attr('text-anchor', 'left')
+      .style('alignment-baseline', 'middle')
 
 }
 
@@ -112,10 +211,13 @@ let wrapGroup = function (groups, startId, endId) {
 }
 
 let getMaxValue = function (res) {
-  let maxValue = new Array(res[0].length).fill(1)
+  let maxValue = {}
+  dimensions.forEach(name => {
+     maxValue[name] = 1
+  })
   res.forEach(item => {
-    item.forEach((measure, i) => {
-      maxValue[i] = Math.max(maxValue[i], measure.value)
+    dimensions.forEach((measure, i) => {
+      maxValue[measure] = Math.max(maxValue[measure], item[measure])
     })
   })
   return maxValue
@@ -133,14 +235,14 @@ let groupProcess = function (v, startId, endId) {
   let densityValue =  2 * linkPair.value/((nodeNumber.value - 1) * nodeNumber.value)
   if (Number.isNaN(densityValue)) densityValue = 0
   let density = {axis: 'Density', value: densityValue}
-  let results = [
+  let results = {
     connectedComponent,
     diameter,
     transition,
     nodeNumber,
     linkNumber,
     density
-  ]
+  }
   return results
 }
 
@@ -203,12 +305,12 @@ let getConnectedComponent = function(nodeList, startId, endId) {
         }
       })
     }
-    return {axis: 'Connected Component', value: new Set(component).size}
   }
   let group = new Set()
   component.forEach((v, i) => {
     if (v != i) group.add(v)
   })
+  return {axis: 'Connected Component', value: group.size}
 }
 
 let getNeighborDuringInterval = function (node, startId, endId) {
@@ -242,7 +344,7 @@ let getTransition = function (mat) {
     }
   }
   close /= 3
-  let transition = close / (close + open)
+  let transition = (close + open === 0)? 0 : close / (close + open)
   return {axis: 'Transition', value: transition}
 }
 

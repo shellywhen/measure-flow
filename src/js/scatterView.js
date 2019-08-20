@@ -29,7 +29,7 @@ let updateScatter = function () {
     let yType = $('#yaxis').val()
     let granularityIdx = $('#granularity').val()
   //  console.log(xType, yType, granularityIdx)
-    let interval =  dg.timeArrays.intervals[granularityIdx].period
+    let interval =  dg.timeArrays.intervals[granularityIdx].period.map(v => v.interval)
     let times = interval.map(v => [
       dg.timeArrays.momentTime[v[0]]._d,
       dg.timeArrays.momentTime[v[1]]._d
@@ -57,8 +57,8 @@ let updateScatter = function () {
     let startTimeObj = times[0][0]
     let endTimeObj = times[times.length - 1][1]
     makeScatter(values, maxx, maxy)
-    makeMultiple(values, maxx, maxy, [startTimeObj, endTimeObj], {'x': xType, 'y': yType})
-    console.log(`Scatter Plot in ${Date.now() - start} ms`, values)
+  //  makeMultiple(values, maxx, maxy, [startTimeObj, endTimeObj], {'x': xType, 'y': yType})
+//    console.log(`Scatter Plot in ${Date.now() - start} ms`, values)
 }
 
 let makeMultiple = function (values, maxx, maxy, times, label) {

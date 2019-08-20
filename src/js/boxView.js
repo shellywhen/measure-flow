@@ -98,7 +98,7 @@ let getQuartile = function (raw_data, k = 4, interval) {
 let getBoxData = function (measure, interval) {
   if (measure === 'degree') return getDegreeDistribution(interval)
 }
-let getDegreeDistribution = function (interval) {
+export let getDegreeDistribution = function (interval) {
   let data = []
   interval.forEach(itv => {
     let list = []

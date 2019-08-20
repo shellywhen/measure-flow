@@ -3,27 +3,29 @@ const timesliderHeight = $('#' + timeSliderDivId).innerHeight()
 const timesliderWidth = $('#' + timeSliderDivId).innerWidth()
 const margin = {
   'top': 5,
-  'left': 35,
-  'right': 35,
+  'left': 5,
+  'right': 5,
   'bottom': 0
 }
-let drawTimeSlider = function () {
+let drawTimeSlider = function (alignRight = 0, width_middle = 50) {
   let height = timesliderHeight - margin.top - margin.bottom
-  let width = timesliderWidth - margin.left - margin.right
+  //let width = timesliderWidth - margin.left - margin.right - alignRight
+  let width = width_middle
   let svg = d3.select('#' + timeSliderDivId)
     .append('svg')
-    .attr('transform', 'translate(' + margin.left + ','+ margin.top + ')')
-    .attr('height', height)
-    .attr('width', width)
+    .attr('height', timesliderHeight)
+    .attr('width', timesliderWidth)
+    .append('g')
+    .attr('transform', `translate( +${margin.left + alignRight} , ${margin.top})`)
 
-  let dg = window.dgraph
+
+  let dg = networkcube.getDynamicGraph()
   let timeObjArray = dg.timeArrays.momentTime.map(v => v._d)
   let startTimeObj = timeObjArray[0]
   let endTimeObj = timeObjArray[timeObjArray.length - 1]
-  window.activeTime = {start: timeObjArray[0]._d, end: timeObjArray[timeObjArray.length - 1]._d, startId: 0, endId: timeObjArray.length - 1}
-  let xScale = d3.scaleTime().range([0, width])
+  window.activeTime = {start: new Date(dg.roundedStart), end: new Date(dg.roundedEnd), startId: 0, endId: timeObjArray.length - 1}
+  let xScale = d3.scaleTime().range([0, width]).domain([new Date(dg.roundedStart), new Date(dg.roundedEnd)])
   let xAxis = d3.axisTop(xScale).ticks(5)
-  xScale.domain([startTimeObj, endTimeObj])
 
   svg.append('text')
      .attr('id', 'timeStartText')
@@ -73,7 +75,7 @@ let drawTimeSlider = function () {
     .extent([[0, height / 3], [width, 2 * height / 3]])
     .on('brush end', brushed)
     .on('end', brushendCallback)
-  svg.append('g')
+  let brushG = svg.append('g')
     .classed('brush', true)
     .call(brush)
     .call(brush.move, xScale.range())
@@ -81,6 +83,13 @@ let drawTimeSlider = function () {
     .classed('x-axis', true)
     .attr('transform', 'translate(0, ' + height / 3 + ')' )
     .call(xAxis)
+  let moveHandle = function (m) {
+    let msg = m.body
+    let start = new Date(msg.timeStart)
+    let end = new Date(msg.timeEnd)
+    brushG.call(brush.move, [xScale(start), xScale(end)])
+  }
+  networkcube.addEventListener('focusPeriod', moveHandle)
 }
 
 export {drawTimeSlider}

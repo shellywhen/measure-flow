@@ -2,11 +2,12 @@ const timelineDivId = 'timelineFrame'
 const timelineSvgId = 'timeline'
 const timelineHeight = $('#' + timelineDivId).innerHeight()
 const timelineWidth = $('#' + timelineDivId).innerWidth()
-const timelineSvgHeight = timelineHeight * 0.5
+const timelineSvgHeight = timelineHeight * 0.25
 const scatterRadius = 2
 const scatterLineWidth = 2
-const granularityColor = ['#E74C3C', '#8E44AD','#2980B9', '#1ABC9C', '#16A085', '#F1C40F', '#F39C12', '#3498DB',' #800080', ]
-const timeList = [1, 1000, 1000*60, 1000*60*60, 1000*60*60*24, 1000*60*60*24*7, 1000*60*60*24*30, 1000*60*60*24*30*12, 1000*60*60*24*30*12*10, 1000*60*60*24*30*12*100, 1000*60*60*24*30*12*1000]
+const rectPadding = 0.1
+const granularityColor = ['#E74C3C', '#8E44AD', 'blue', '#1ABC9C', '#16A085', '#F1C40F', '#F39C12', '#3498DB',' #800080' ]
+const timeList = [1, 1000, 1000*60, 1000*60*60, 1000*60*60*24, 1000*60*60*24*7, 1000*60*60*24*30, 1000*60*60*24*365, 1000*60*60*24*365*10+2, 1000*60*60*24*36525, 1000*60*60*24*36523*10]
 const margin = {
   'top': 5,
   'left': 35,
@@ -15,6 +16,7 @@ const margin = {
 }
 let globalMeasureList = ['numberOfNodes', 'numberOfNodePairs', 'numberOfLinks', 'diameter', 'clusteringCoefficient']
 let timeLineColor = ['silver', 'yellow', 'orange','green', 'teal', 'blue', 'navy', 'brown', 'red', 'maroon', 'fuchisia', 'purple']
+
 let getTimeIntervals = function (timeArray = window.dgraph.timeArrays.momentTime, minGran, maxGran) {
   let results = []
   for (let granId = minGran; granId <= maxGran; granId ++) {
@@ -276,7 +278,9 @@ let drawCollapseTimeLine = function(idx, dotList, id, title, xScale) {
     .attr('width', $(`#${id}OuterDiv`).innerWidth())
   let g = svg.append('g')
     .attr('transform', `translate(${margin.left}, ${margin.top})`)
-
+  let tooltip = g.append('text')
+    .attr('class', "tooltip")
+    .style('opacity', 0);
   g.append('g')
     .classed('x-axis', true)
     .attr('transform', `translate(0, ${timelineSvgHeight - margin.top - margin.bottom})`)
@@ -290,33 +294,51 @@ let drawCollapseTimeLine = function(idx, dotList, id, title, xScale) {
     .range(d3.schemePaired)
   // changes in different granularity
   dotList.reverse().forEach((res, i) => {
-    let data = getDots(res.dots)
-    // let data = res.dots.map(v => {return{
-    //   'time': v.timeStart,
-    //   'y': v.y
-    // }})
-    let line = d3.line()
-      .x(d => xScale(d.time))
-      .y(d => yScale(d.y))
-      .curve(d3.curveMonotoneX)
-    g.append('path')
-      .datum(data)
-      .style('fill', 'none')
-      .style('stroke', granularityColor[i])
-      .style('stroke-width', scatterLineWidth)
-      .style('stroke-opacity', 0.3)
-      .attr('d', line)
+    let data = res.dots
+    g.selectAll('.bars')
+      .data(data)
+      .enter()
+      .append('rect')
+      .classed('bars', true)
+      .attr('x', d => xScale(d.timeStart) + rectPadding * 2 * i)
+      .attr('y', d => yScale(d.y))
+      .attr('width', d => {
+        let value = xScale(d.timeEnd) - xScale(d.timeStart) - rectPadding * 2 * i
+        return xScale(d.timeEnd) - xScale(d.timeStart) - rectPadding * 2 * i
+      })
+      .attr('data', d => d.y)
+      .attr('height', d => yScale(0) - yScale(d.y))
+      .style('fill', timeLineColor[idx])
+      .style('opacity', i / dotList.length + 1 / dotList.length)
+      .style('stroke-width', Math.log(i*10))
+      .on('mouseover', function (d) {
+        let self = d3.select(this)
+        let newX =  parseFloat(self.attr('x')) + parseFloat(self.attr('width')) / 2
+        let newY =  parseFloat(self.attr('y')) - 5
+        tooltip
+          .attr('x', newX)
+          .attr('y', newY)
+          .text(self.attr('data'))
+          .style('text-anchor', 'middle')
+          .transition().duration(200)
+          .style('opacity', 1)
+      })
+      .on('mouseout', d => {
+        tooltip.transition().duration(200)
+  				.style('opacity', 0)
+      })
+
     g.append('g')
      .classed(`dots_${i}`, true)
      .selectAll('circle')
      .data(data)
      .enter()
      .append('circle')
-     .attr('cx', d => xScale(d.time))
+     .attr('cx', d => xScale(d.timeStart))
      .attr('cy', d => yScale(d.y))
      .attr('r', scatterRadius)
      .style('fill', granularityColor[i])
-     .style('opacity', 0.6)
+     .style('opacity', 0)
   })
 
   // title of the measure
@@ -337,8 +359,8 @@ let drawTimeLine = function () {
   let start
 
   start = Date.now()
-  let intervals = getTimeIntervals(dg.timeArrays.momentTime, dg.getMinGranularity(), dg.getMaxGranularity())
-  dg.timeArrays.intervals = intervals
+
+  let intervals = dg.timeArrays.intervals
 
   // test part
   let nodeNumber = getProcessedData(dg, intervals, getNumberOfNodes)
@@ -362,14 +384,12 @@ let drawTimeLine = function () {
   let redundancy = getProcessedData(dg, intervals, getRedundancy)
   let volatility = getProcessedData(dg, intervals, getVolatility)
   let component = getProcessedData(dg, intervals, getConnectedComponent)
-  console.log(`Get Global Properties in ${Date.now()-start} ms`)
-  console.log(density, nodeNumber, linkPairNumber)
 
 
   // draw the time line
   let xScale = d3.scaleTime()
     .range([0, timelineWidth - margin.left - margin.right])
-    .domain([startTimeObj, endTimeObj])
+    .domain([new Date(dg.roundedStart), new Date(dg.roundedEnd)])
 
   drawCollapseTimeLine(1, nodeNumber, 'nodeNumber', 'Node Number', xScale)
   drawCollapseTimeLine(2, linkPairNumber, 'linkPairNumber', 'Link Pair Number', xScale)
@@ -383,11 +403,54 @@ let drawTimeLine = function () {
 
 let getProcessedData = function (dg, intervals, action) {
   return intervals.map((v, i) => {
+    let result = action(dg, v.period.map(m => m.interval))
+    result.forEach((m, j) => {
+      m.timeStart = v.period[j].x0
+      m.timeEnd = v.period[j].x1
+    })
     return {
       'granularity': v.granularity,
-      'dots': action(dg, v.period)
+      'dots': result
     }
   })
 }
 
-export {drawTimeLine}
+let getData = function (dgraph) {
+  let dg = dgraph
+  let intervals = dg.timeArrays.intervals
+
+  // test part
+  let nodeNumber = getProcessedData(dg, intervals, getNumberOfNodes)
+  let linkPairNumber = getProcessedData(dg, intervals, getNumberOfLinkPairs)
+  let linkNumber = getProcessedData(dg, intervals, getNumberOfLinks)
+  let density = intervals.map((v, i) => {
+    return {
+      'granularity': v.granularity,
+      'dots': linkPairNumber[i].dots.map(function (linkpair, idx) {
+        let nodenumber = nodeNumber[i].dots[idx]
+        let dense = 2 * linkpair.y / (nodenumber.y * (nodenumber.y - 1))
+        return {
+          'timeStart': linkpair.timeStart,
+          'timeEnd': linkpair.timeEnd,
+          'y': dense
+        }
+      })
+    }
+  })
+  let activation = getProcessedData(dg, intervals, getActivation)
+  let redundancy = getProcessedData(dg, intervals, getRedundancy)
+  let volatility = getProcessedData(dg, intervals, getVolatility)
+  let component = getProcessedData(dg, intervals, getConnectedComponent)
+  return {
+    nodeNumber: nodeNumber,
+    linkPairNumber: linkPairNumber,
+    linkNumber: linkNumber,
+    density: density,
+    activation: activation,
+    redundancy: redundancy,
+    volatility: volatility,
+    component: component
+  }
+}
+
+export {drawTimeLine, getData}

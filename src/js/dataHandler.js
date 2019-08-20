@@ -1,4 +1,5 @@
 import * as Nodelink from './nodelinkView.js'
+const timeList = [1, 1000, 1000*60, 1000*60*60, 1000*60*60*24, 1000*60*60*24*7, 1000*60*60*24*30, 1000*60*60*24*365, 1000*60*60*24*365*10+2, 1000*60*60*24*36525, 1000*60*60*24*30*12*1000]
 
 export let handleSelect = function (nodeId) {
   if (window.dgraph.nodeSelection.has(nodeId)) deleteNode(nodeId)
@@ -76,4 +77,101 @@ let updateSelectionList = function () {
 
 export let getLocalDistribution = function (rawdata) {
 
+}
+
+export let getRoundStart = function (start, end) {
+  let round = new Date(start)
+  round.setHours(0)
+  round.setMinutes(0)
+  round.setSeconds(0)
+  round.setMilliseconds(0)
+  if (start.getFullYear() === end.getFullYear()) {
+    if (start.getMonth() === end.getMonth()) {
+       return round.getTime()
+    }
+    round.setDate(1)
+    return round.getTime()
+  }
+  round.setMonth(0)
+  round.setDate(1)
+  return round.getTime()
+}
+
+export let getRoundEnd = function (start, end) {
+  let round = new Date(end)
+  round.setHours(0)
+  round.setMinutes(0)
+  round.setSeconds(0)
+  round.setMilliseconds(0)
+  if (start.getFullYear() === end.getFullYear()) {
+    if (start.getMonth() === end.getMonth()) {
+      round.setMonth(end.getMonth() + 1)
+    }
+    round.setDate(1)
+    return round.getTime()
+  }
+  round.setMonth(0)
+  round.setDate(1)
+  round.setFullYear(end.getFullYear() + 1)
+  return round.getTime()
+}
+
+let getBins = function (timeArray, minGran, maxGran) {
+  let results = []
+  for (let granId = minGran; granId <= maxGran; granId ++) {
+    let result = {'granularity': granId}
+    let idx = 0
+    let box = []
+    let roundedStart = window.dgraph.roundedStart
+    let roundedEnd = window.dgraph.roundedEnd
+    for (let timeStamp = roundedStart; timeStamp <= roundedEnd; timeStamp += timeList[granId]) {
+      let v = {}
+      v.interval = [-1, -1]
+      v.x0 = new Date(timeStamp)
+      v.x1 = new Date(timeStamp + timeList[granId])
+      if(v.x1 > timeArray[timeArray.length - 1]._i) v.x1 = timeArray[timeArray.length - 1]._d
+      if (timeArray[idx]._i >= v.x0 && timeArray[idx]._i <= v.x1) {
+        v.interval[0] = idx
+        while (timeArray[idx]._i >= v.x0 && timeArray[idx]._i <= v.x1) {
+          v.interval[1] = idx
+          if(idx < timeArray.length - 1) idx ++
+          else break
+        }
+      }
+      if(v.interval[0]!== -1) box.push(v)
+    }
+    result.period = box
+    results.push(result)
+  }
+  return results
+}
+
+export let addGlobalProperty = function (dgraph) {
+  let timeArray = dgraph.timeArrays.momentTime
+  let size = timeArray.length
+  let start = timeArray[0]._d
+  let end = timeArray[size - 1]._d
+  dgraph.roundedStart = getRoundStart(start, end)
+  dgraph.roundedEnd = getRoundEnd(start, end)
+
+  dgraph.nodeSelection = new Set()
+
+  let intervals = getBins(dgraph.timeArrays.momentTime, dgraph.getMinGranularity(), dgraph.getMaxGranularity())
+  dgraph.timeArrays.intervals = intervals
+}
+
+export let getTimeStamp = function (dgraph = window.dgraph) {
+  let timeArray = dgraph.timeArrays.momentTime.map(v => v._i)
+  let gran_min = timeList[dgraph.gran_min + 2]
+  let timeStamp = timeArray.map((v, i) => {
+    if (i === 0) return 0
+    return (v - timeArray[i-1])
+  })
+  let timeDelta = d3.mean(timeStamp)
+  dgraph.timeDelta = timeDelta
+  let timeValue = timeArray.map((v, i) => {
+    if (i === 0) return 0
+    return (v - timeArray[0]) / timeDelta
+  })
+  return timeValue
 }

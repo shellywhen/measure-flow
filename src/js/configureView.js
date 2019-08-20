@@ -1,6 +1,7 @@
 import * as NodeLink from './nodelinkView.js'
 import * as Scatter from './scatterView.js'
-let addStyleConfig = function (divId, title, callback, min=0, max=3, value=1) {
+import * as Measure from './measureView.js'
+let addStyleConfig = function (divId, title, callback, min=0, max=3, value=1, step=0.01) {
   let div = d3.select(`#${divId}`)
     .append('div')
     .classed('slidecontainer', true)
@@ -10,7 +11,7 @@ let addStyleConfig = function (divId, title, callback, min=0, max=3, value=1) {
 
   div.append('input')
     .attr('type', 'range')
-    .attr('step', 0.01)
+    .attr('step', step)
     .attr('min', min)
     .attr('max', max)
     .attr('value', value)
@@ -19,6 +20,7 @@ let addStyleConfig = function (divId, title, callback, min=0, max=3, value=1) {
     .on('input', function() {
       callback(this.value)
     })
+  return div
 }
 
 let changeNodeSize = function (x) {
@@ -44,6 +46,14 @@ let changeEdgeBackground = function (x) {
   d3.selectAll('.links')
     .style('fill-opacity', x)
 }
+
+let changeBandWidth = function (x) {
+  let timeDelta = networkcube.getDynamicGraph().timeDelta
+  let day = x * timeDelta / (1000 * 24 * 60 * 60)
+  d3.select('#bandwidthHint').text(day.toFixed(0))
+  networkcube.sendMessage('bandwidth', x)
+}
+
 let handleSearchResult = function (m) {
   console.log('Get Search Result', m)
 }
@@ -78,7 +88,17 @@ let addScatterConfig = function (granList, localMeasureList) {
     .attr('value', d => d)
     .text(d => d)
 }
-
+let addBandwidthConfig = function (timeDelta) {
+  let div = addStyleConfig('config-style', 'Bandwidth', changeBandWidth, 0.001, 4, 0.5, 0.0005)
+  let bandwidth = Measure.BANDWIDTH
+  let day = timeDelta * bandwidth / (1000 * 60 * 60 * 24)
+  let text = div.append('p')
+     .text('≈ ')
+  text.append('span')
+     .attr('id', 'bandwidthHint')
+     .text(day.toFixed(0))
+  text.append('span').text('  days')
+}
 let addDivToggle = function (divId = 'config-view', checkboxId, name, linkDiv) {
   let id = `checkbox_${checkboxId}`
   let div = d3.select(`#${divId}`)
@@ -127,8 +147,18 @@ let addLocalMeasureDropdown = function (divId) {
     })
     .change();
 }
+let addDatasetOption = function () {
+  d3.select('#dataset-selection')
+    .selectAll('a')
+    .data(['Marguerite', 'marieboucher', 'marie-colombu', 'RollaCristofoli', 'DiplomaticExchange'])
+    .enter()
+    .append('a')
+    .classed('dropdown-item', true)
+    .attr('href', d => `/?session=demo&datasetName=${d}`)
+    .text(d => d)
+}
 let drawConfigs = function () {
-  let dg = window.dgraph
+  let dg = networkcube.getDynamicGraph()
   networkcube.addEventListener('searchResult', handleSearchResult)
   $('#searchBar').on('keypress',function(e) {
     if(e.which == 13) {
@@ -136,6 +166,7 @@ let drawConfigs = function () {
        networkcube.search(query, 'node')
     }
 })
+  addDatasetOption()
   // scatter config
   addScatterConfig(networkcube.GRANULARITY.slice(dg.getMinGranularity(), dg.getMaxGranularity() + 1), Scatter.localMeasureList)
   d3.select('#launchScatter')
@@ -146,13 +177,11 @@ let drawConfigs = function () {
   addStyleConfig('config-style', 'Link Opacity', changeLinkOpacity, 0, 1, 0.5)
   addStyleConfig('config-style', 'Edge Gap', changeEdgeGap, 0, 5, 2)
   addStyleConfig('config-style', 'Edge Background', changeEdgeBackground, 0, 1, 0.2)
-
+  addBandwidthConfig(dg.timeDelta)
   addDivToggle('config-view', 'boxframe', 'Local Distribution', 'boxFrame')
   addDivToggle('config-view', 'timelineframe', 'Multi-layer Line', 'timelineFrame')
-
   addLocalMeasureDropdown('config-localMeasure')
   window.localMeasure = 'degree'
-
 }
 
 export {drawConfigs}
