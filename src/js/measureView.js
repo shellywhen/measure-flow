@@ -10,7 +10,7 @@ export let BANDWIDTH = 0.5
 const RATIO_LEFT = 0.13, RATIO_MIDDLE = 0.83, RATIO_RIGHT = 0.04
 const timeList = [1, 1000, 1000*60, 1000*60*60, 1000*60*60*24, 1000*60*60*24*7, 1000*60*60*24*30, 1000*60*60*24*365, 1000*60*60*24*30*12*10, 1000*60*60*24*30*12*100, 1000*60*60*24*30*12*1000]
 let timeLineColor = ['orange','darkgreen', 'teal', 'blue','purple', 'red', 'crimson', 'coral', 'fuchisia']
-let xScale, kdeScale, timeStamp, mainScale
+let xScale, kdeScale, timeStamp, mainScale, mainKDEscale
 let MEASURE_DIV_ID
 let CANVAS_INFO = []
 const ELEMENTS = 8
@@ -48,15 +48,17 @@ export let drawMeasureList = function (divId) {
   let startTime = dgraph.timeArrays.momentTime[0]._i
   let scaleStart =  (dgraph.roundedStart - startTime) / dgraph.timeDelta
   let scaleEnd = (dgraph.roundedEnd - startTime) / dgraph.timeDelta
-  kdeScale = d3.scaleLinear().range([0, WIDTH_MIDDLE]).domain([scaleStart, scaleEnd])
+  mainKDEscale = d3.scaleLinear().range([0, WIDTH_MIDDLE]).domain([scaleStart, scaleEnd])
+  kdeScale = mainKDEscale.copy()
   addGlobalInteraction()
   addMeasureWindow(dgraph)
   networkcube.addEventListener('bandwidth', function (m) {
     BANDWIDTH = m.body
     measureName.forEach((name, i) => {
-        let summary = data[name][data[name].length - 1].dots.map(v => v.y)
-        let g = d3.select(`.vis_${i}`)
-        drawKdeLine(g, i, summary)
+        let summary = data[name][0].dots.map(v => v.y)
+        let g = d3.select(`.vis_${i}`).select('.zoom-layer')
+        let lineGenerator = drawKdeLine(g, i, summary)
+        CANVAS_INFO[i].lineGenerator = lineGenerator
     })
   })
 
@@ -116,7 +118,7 @@ let addTimeline = function () {
 
 let globalZoom = function () {
   xScale = d3.event.transform.rescaleX(mainScale)
-  let newKDE = d3.event.transform.rescaleX(kdeScale)
+  kdeScale = d3.event.transform.rescaleX(mainKDEscale)
   let div = d3.select(`#${MEASURE_DIV_ID}`)
   div.selectAll('.x-axis').call(d3.axisBottom(xScale).ticks(4)).selectAll(".tick text").remove()//.style('fill', 'gray')
   d3.selectAll('.bars').attr('x', d => xScale(d.timeStart)).attr('width', d => {
@@ -124,7 +126,7 @@ let globalZoom = function () {
     return Math.max(value, 1)
   })
   CANVAS_INFO.forEach(vis => {
-    vis.g.selectAll('.kdeLine').attr('d', d => vis.lineGenerator.x(d => newKDE(d.x))(d))
+    vis.g.selectAll('.kdeLine').selectAll('path').attr('d', d => vis.lineGenerator.x(d => kdeScale(d.x))(d))
   })
 }
 
@@ -249,7 +251,7 @@ let drawMeasureOvertime = function (svg, dotList, idx) {
   })
 
   let lineGenerator = drawKdeLine(zoomLayer, idx, summary)
-  CANVAS_INFO.push(new MeasureVis(g, lineGenerator))
+  CANVAS_INFO.push(new MeasureVis(zoomLayer, lineGenerator))
 }
 
 class MeasureVis {
@@ -261,7 +263,7 @@ class MeasureVis {
 
 let drawKdeLine = function (g, idx, summary) {
   let density = Kde.kde(Kde.epanechinikov(BANDWIDTH), kdeScale.ticks(200), summary, timeStamp)
-  g.selectAll(`.kdeLine`).remove()
+  g.select(`.kdeLine`).remove()
   let kdeYScale = d3.scaleLinear()
     .domain([0, d3.max(density.map(v => v.y))])
     .range([SVGheight / 3, 0])
@@ -269,8 +271,9 @@ let drawKdeLine = function (g, idx, summary) {
       .curve(d3.curveCardinal)
       .x(d => kdeScale(d.x))
       .y(d => kdeYScale(d.y))
-  g.append('path')
+  g.append('g')
     .classed('kdeLine', true)
+    .append('path')
     .datum(density)
     .style('fill', 'none')
     .style('stroke', timeLineColor[idx])

@@ -30,8 +30,6 @@ export let drawBox = function (divId = 'boxFrame', svgId = 'boxSvg') {
   let data = getQuartile(raw_data, 4, dgraph.timeArrays.intervals[0].period)
   let plotdata = plotData(data)
   plotBox(plotdata, data)
-
-
 }
 let plotData = function (data) {
   let result = []
@@ -60,7 +58,6 @@ let plotData = function (data) {
     result.push(tmp)
   }
   result.push(lh)
-  console.log(result)
   return result
 }
 let getQuartile = function (raw_data, k = 4, interval) {
