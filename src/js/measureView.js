@@ -1,4 +1,4 @@
-import * as DataHandler from './DataHandler.js'
+import * as DataHandler from './dataHandler.js'
 import * as Timeline from './timelineView.js'
 import * as Kde from './kdeView.js'
 let CANVAS_HEIGHT, CANVAS_WIDTH, SVGHEIGHT, SVGWIDTH, SVGheight, SVGwidth
@@ -176,9 +176,9 @@ let drawMeasureOvertime = function (svg, dotList, idx) {
     .attr('id', `clip_${idx}`)
     .append('SVG:rect')
     .attr('width', WIDTH_MIDDLE)
-    .attr('height', SVGheight)
+    .attr('height', SVGheight+5)
     .attr('x', 0)
-    .attr('y', 0)
+    .attr('y', -5)
   g.append('g')
     .classed('x-axis', true)
     .attr('transform', `translate(0, ${SVGheight})`)
