@@ -154,7 +154,7 @@ let addDatasetOption = function () {
     .enter()
     .append('a')
     .classed('dropdown-item', true)
-    .attr('href', d => `/?session=demo&datasetName=${d}`)
+    .attr('href', d => `${window.location.origin}${window.location.pathname}?session=demo&datasetName=${d}`)
     .text(d => d)
 }
 let drawConfigs = function () {
