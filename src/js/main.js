@@ -71,7 +71,7 @@ const configMap = {
   'marie-colombu': [linkSchema4, 'DD/MM/YYYY'],
   'RollaCristofoli': [linkSchema5, 'DDMMYY'],
   'Marguerite': [linkSchema6, 'DD-MM-YYYY'],
-  'highschool': [linkSchema7, 'MM/DD/YYYY hh:mm:ss']
+  'highschool': [linkSchema7, 'MM/DD/YYYY HH:mm:ss']
 }
 let dataFileName = networkcube.getUrlVars()['datasetName'].replace(/___/g, ' ')
 let config = configMap[dataFileName]

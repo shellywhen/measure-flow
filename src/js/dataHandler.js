@@ -102,7 +102,7 @@ export let getRoundEnd = function (start, end) {
   if (start.getFullYear() === end.getFullYear()) {
     if (start.getMonth() === end.getMonth()) {
      if (end.getDate() - start.getDate() < 10) {
-       return round
+       return round.getTime()
      }
       round.setMonth(end.getMonth() + 1)
         round.setDate(1)

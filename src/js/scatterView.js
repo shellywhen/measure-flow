@@ -3,10 +3,10 @@ const scatterSvgId = 'scatter'
 const divHeight = $('#' + scatterDivId).innerHeight()
 const divWidth = $('#' + scatterDivId).innerWidth() - 20
 const margin = {
-  'top': 30,
+  'top': 15,
   'left': 60,
   'right': 40,
-  'bottom': 60
+  'bottom': 100
 }
 const scatterHeight = divHeight - margin.top - margin.bottom
 const scatterWidth = divWidth - margin.left - margin.right
@@ -18,13 +18,21 @@ const multipleMargin = {'top': 5, 'left': 25, 'right': 5, 'bottom':5}
 const multipleWidth = multipleSVGWidth - multipleMargin.left - multipleMargin.right
 const multipleHeight = multipleSVGHeight  - multipleMargin.top - multipleMargin.bottom
 const localMeasureList = ['degree', 'activation', 'redundancy', 'volatility', 'clutering coefficient']
-// const colors = d3.schemeSet3
 const colors = ['orange','green', 'teal', 'lightblue', 'blue', 'navy', 'brown', 'red', 'maroon', 'fuchisia', 'purple']
+const colorScale = d3.scaleOrdinal()
+     .range(colors)
+const colorLegend = d3.legendColor()
+     .scale(colorScale)
+     .shape('circle')
+// const colors = d3.schemeSet3
+
 const options = {year: 'numeric', month: 'short', day: 'numeric' }
+let dg
 
 let updateScatter = function () {
-    let dg = window.dgraph
+    dg = networkcube.getDynamicGraph()
     let nodes = Array.from(dg.nodeSelection)
+    colorScale.domain(nodes)
     let xType = $('#xaxis').val()
     let yType = $('#yaxis').val()
     let granularityIdx = $('#granularity').val()
@@ -57,8 +65,30 @@ let updateScatter = function () {
     let startTimeObj = times[0][0]
     let endTimeObj = times[times.length - 1][1]
     makeScatter(values, maxx, maxy)
+    makeLegend(nodes)
   //  makeMultiple(values, maxx, maxy, [startTimeObj, endTimeObj], {'x': xType, 'y': yType})
 //    console.log(`Scatter Plot in ${Date.now() - start} ms`, values)
+}
+
+let makeLegend = function (nodes) {
+  let colorLegendG = d3.select('#scatter')
+    .append('g')
+    .attr('transform', `translate(${margin.left}, ${scatterHeight + margin.top})`)
+  colorLegendG.append('text')
+         .attr('class', 'legend-label')
+         .attr('x', -30)
+         .attr('y', -40)
+         .text(d => {
+           console.log('check', d)
+           return window.dgraph.nodeArrays.id[d]
+         })
+  colorLegendG.call(colorLegend)
+    .selectAll('.cell text')
+    .attr('dy', '0.1em')
+    .style('font-size', '0.8rem')
+ colorLegendG.selectAll('circle').attr('r', 2)
+
+  console.log(nodes)
 }
 
 let makeMultiple = function (values, maxx, maxy, times, label) {

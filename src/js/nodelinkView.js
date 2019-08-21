@@ -243,7 +243,7 @@ let drawNodeLink = function () {
           .on('start', lasso_start)
           .on('draw', lasso_draw)
           .on('end', lasso_end)
-        nodeLayerG.call(lasso)
+      //  nodeLayerG.call(lasso)
 
           d3.select('#tmp').remove()
 
