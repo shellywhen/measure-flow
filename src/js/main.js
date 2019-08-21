@@ -57,7 +57,12 @@ let linkSchema5 = {
   source: 10,
   target: 11,
   linkType: 21
-
+}
+let linkSchema7 = {
+  source: 1,
+  target: 2,
+  time: 5,
+  linkType: 3
 }
 const configMap = {
   'scientists': [linkSchema1, 'DD/MM/YYYY'],
@@ -65,7 +70,8 @@ const configMap = {
   'marieboucher': [linkSchema3, 'DD/MM/YYYY'],
   'marie-colombu': [linkSchema4, 'DD/MM/YYYY'],
   'RollaCristofoli': [linkSchema5, 'DDMMYY'],
-  'Marguerite': [linkSchema6, 'DD-MM-YYYY']
+  'Marguerite': [linkSchema6, 'DD-MM-YYYY'],
+  'highschool': [linkSchema7, 'MM/DD/YYYY hh:mm:ss']
 }
 let dataFileName = networkcube.getUrlVars()['datasetName'].replace(/___/g, ' ')
 let config = configMap[dataFileName]

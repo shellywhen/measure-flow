@@ -89,7 +89,7 @@ let addScatterConfig = function (granList, localMeasureList) {
     .text(d => d)
 }
 let addBandwidthConfig = function (timeDelta) {
-  let div = addStyleConfig('config-style', 'Bandwidth', changeBandWidth, 0.001, 4, 0.5, 0.0005)
+  let div = addStyleConfig('config-style', 'Bandwidth', changeBandWidth, 0, 3, 0.5, 0.0005)
   let bandwidth = Measure.BANDWIDTH
   let day = timeDelta * bandwidth / (1000 * 60 * 60 * 24)
   let text = div.append('p')
@@ -150,7 +150,7 @@ let addLocalMeasureDropdown = function (divId) {
 let addDatasetOption = function () {
   d3.select('#dataset-selection')
     .selectAll('a')
-    .data(['Marguerite', 'marieboucher', 'marie-colombu', 'RollaCristofoli', 'DiplomaticExchange'])
+    .data(['Marguerite', 'marieboucher', 'marie-colombu', 'highschool', 'DiplomaticExchange'])
     .enter()
     .append('a')
     .classed('dropdown-item', true)

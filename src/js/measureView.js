@@ -4,6 +4,7 @@ import * as Kde from './kdeView.js'
 let CANVAS_HEIGHT, CANVAS_WIDTH, SVGHEIGHT, SVGWIDTH, SVGheight, SVGwidth
 export let WIDTH_RIGHT, WIDTH_MIDDLE, WIDTH_LEFT
 let CANVAS
+let TIPS_CONFIG = { month: 'short', day: 'numeric' }
 let data
 const measureName = ['nodeNumber', 'linkNumber', 'linkPairNumber', 'density', 'activation', 'redundancy', 'volatility', 'component']
 export let BANDWIDTH = 0.5
@@ -22,7 +23,7 @@ const MARGIN = {
 }
 const rectPadding = 0.5, scatterRadius = 2
 
-let setCanvasParameters = function (divId) {
+let setCanvasParameters = function (divId, dgraph) {
   MEASURE_DIV_ID = divId
   CANVAS_HEIGHT = $(`#${divId}`).innerHeight()
   CANVAS_WIDTH = Math.floor($(`#${divId}`).innerWidth())
@@ -36,13 +37,19 @@ let setCanvasParameters = function (divId) {
   SVGwidth = SVGWIDTH - MARGIN.left - MARGIN.right
   xScale = d3.scaleTime()
       .range([0, WIDTH_MIDDLE])
-      .domain([window.dgraph.roundedStart, window.dgraph.roundedEnd])
+      .domain([dgraph.roundedStart, dgraph.roundedEnd])
   mainScale = xScale.copy()
+  if (dgraph.gran_min < 3) {
+    TIPS_CONFIG['hour'] = 'numeric'
+  }
+  if (dgraph.gran_min > 3) {
+    TIPS_CONFIG['year'] = 'numeric'
+  }
 }
 
 export let drawMeasureList = function (divId) {
   let dgraph = networkcube.getDynamicGraph()
-  setCanvasParameters(divId)
+  setCanvasParameters(divId, dgraph)
   data = Timeline.getData(dgraph)
   timeStamp = DataHandler.getTimeStamp(dgraph)
   let startTime = dgraph.timeArrays.momentTime[0]._i
@@ -107,7 +114,7 @@ let addTimeline = function () {
      }
      g.style('display', '')
      let date = xScale.invert(x)
-     let content = date.toLocaleDateString("en-US", {weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' })
+     let content = date.toLocaleDateString("en-US", TIPS_CONFIG)
      line.attr('x2', x)
          .attr('x1', x)
      g.select('text')

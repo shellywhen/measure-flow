@@ -99,20 +99,23 @@ export let getRoundStart = function (start, end) {
 
 export let getRoundEnd = function (start, end) {
   let round = new Date(end)
-  round.setHours(0)
-  round.setMinutes(0)
-  round.setSeconds(0)
-  round.setMilliseconds(0)
   if (start.getFullYear() === end.getFullYear()) {
     if (start.getMonth() === end.getMonth()) {
+     if (end.getDate() - start.getDate() < 10) {
+       return round
+     }
       round.setMonth(end.getMonth() + 1)
+        round.setDate(1)
     }
-    round.setDate(1)
     return round.getTime()
   }
   round.setMonth(0)
   round.setDate(1)
   round.setFullYear(end.getFullYear() + 1)
+  round.setHours(0)
+  round.setMinutes(0)
+  round.setSeconds(0)
+  round.setMilliseconds(0)
   return round.getTime()
 }
 
