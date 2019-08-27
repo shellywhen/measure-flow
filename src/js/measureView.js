@@ -189,7 +189,7 @@ let brushendCallback = function (d) {
       })
       return
     }
-    let periodData = Timeline.getIntervalData(networkcube.getDynamicGraph(), window.activeTime.startId, window.activeTime.endId)
+    let periodData = Timeline.getIntervalData(dg, window.activeTime.startId, window.activeTime.endId)
 
     CANVAS_INFO.forEach(vis => {
       let content = vis.index
