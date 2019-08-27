@@ -93,7 +93,6 @@ let lasso_end = function () {
         .classed('selected',true)
     window.lasso_selection = selectedCircles._groups[0].map(d => d.__data__)
     configCell.style('display', 'block')
-    console.log('selected', window.lasso_selection)
 }
 
 let drawNodeLinkInPeriod = function (startId, endId) {
@@ -120,8 +119,9 @@ let cancelLasso = function () {
 let lineGenerator = d3.line().x(d => d.x).y(d => d.y)//.curve(d3.curveCardinal)
 let addSelection = function () {
   let selection = window.lasso_selection
-  console.log(window.lasso_selection)
-  lasso.items().classed('selected',false)
+  let subgraph = new Set(selection.map(v => v.index))
+  networkcube.sendMessage('subgraph', subgraph)
+  // lasso.items().classed('selected',false)
   lasso.items().classed('possible',false)
   configCell.style('display', 'none')
 }
@@ -243,7 +243,7 @@ let drawNodeLink = function () {
           .on('start', lasso_start)
           .on('draw', lasso_draw)
           .on('end', lasso_end)
-      //  nodeLayerG.call(lasso)
+        nodeLayerG.call(lasso)
 
           d3.select('#tmp').remove()
 
@@ -264,6 +264,9 @@ let drawNodeLink = function () {
   })
   forceLayout.force('link')
     .links(links)
+    networkcube.setDefaultEventListener(function () {
+      console.log('default')
+    })
   networkcube.addEventListener('timeRange', m => {
     console.log('Why there is no reaction!!!!!')
     let dg = window.dgraph
@@ -303,18 +306,7 @@ let drawNodeLink = function () {
   })
 }
 
-function binarySearch(array, pred) {
-    let lo = -1, hi = array.length;
-    while (1 + lo < hi) {
-        const mi = lo + ((hi - lo) >> 1);
-        if (pred(array[mi])) {
-            hi = mi;
-        } else {
-            lo = mi;
-        }
-    }
-    return hi;
-}
+
 function calculateCurvedLinks() {
   let dgraph = window.dgraph
     var path, dir, offset, offset2, multiLink;
@@ -374,5 +366,18 @@ function stretchVector(vec, finalLength) {
         vec[i] = vec[i] / len * finalLength;
     }
     return vec;
+}
+
+function binarySearch(array, pred) {
+    let lo = -1, hi = array.length;
+    while (1 + lo < hi) {
+        const mi = lo + ((hi - lo) >> 1);
+        if (pred(array[mi])) {
+            hi = mi;
+        } else {
+            lo = mi;
+        }
+    }
+    return hi;
 }
 export {drawNodeLink, debug, getNodeRadius, getLineStroke, getNodeColor}

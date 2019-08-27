@@ -50,7 +50,15 @@ let changeEdgeBackground = function (x) {
 let changeBandWidth = function (x) {
   let timeDelta = networkcube.getDynamicGraph().timeDelta
   let day = x * timeDelta / (1000 * 24 * 60 * 60)
-  d3.select('#bandwidthHint').text(day.toFixed(0))
+  let minute = x * timeDelta / (1000 * 60 * 60)
+  d3.select('#bandwidthHint').text(function () {
+    if (day > 1) return day.toFixed(0)
+    else return minute.toFixed(1)
+  })
+  d3.select('#bandwidthUnit').text(function () {
+    if (day > 1) return ' days'
+    else return ' minutes'
+  })
   networkcube.sendMessage('bandwidth', x)
 }
 
@@ -92,12 +100,21 @@ let addBandwidthConfig = function (timeDelta) {
   let div = addStyleConfig('config-style', 'Bandwidth', changeBandWidth, 0, 3, 0.5, 0.0005)
   let bandwidth = Measure.BANDWIDTH
   let day = timeDelta * bandwidth / (1000 * 60 * 60 * 24)
+  let minute = timeDelta * bandwidth / (1000 * 60 * 60)
   let text = div.append('p')
      .text('≈ ')
   text.append('span')
      .attr('id', 'bandwidthHint')
-     .text(day.toFixed(0))
-  text.append('span').text('  days')
+     .text(function () {
+       if(day < 1) return minute.toFixed(1)
+       else return day.toFixed(0)
+     })
+  text.append('span')
+    .attr('id', 'bandwidthUnit')
+    .text(function () {
+      if(day < 1) return ' minutes'
+      else return ' days'
+  })
 }
 let addDivToggle = function (divId = 'config-view', checkboxId, name, linkDiv) {
   let id = `checkbox_${checkboxId}`
@@ -117,15 +134,13 @@ let addDivToggle = function (divId = 'config-view', checkboxId, name, linkDiv) {
     .text(name)
     $(`#${id}`).prop('checked', true);
     $(`#${id}`).change(function() {
-      let frame = d3.select(`#${linkDiv}`)
-      console.log(this, this.checked)
+      let frame = d3.selectAll(`${linkDiv}`)
         if (this.checked) {
           frame.style('display', '')
         } else {
       frame.style('display', 'none')
         }
     })
-
 }
 let addLocalMeasureDropdown = function (divId) {
   d3.select(`#${divId}`)
@@ -178,8 +193,10 @@ let drawConfigs = function () {
   addStyleConfig('config-style', 'Edge Gap', changeEdgeGap, 0, 5, 2)
   addStyleConfig('config-style', 'Edge Background', changeEdgeBackground, 0, 1, 0.2)
   addBandwidthConfig(dg.timeDelta)
-  addDivToggle('config-view', 'boxframe', 'Local Distribution', 'boxFrame')
-  addDivToggle('config-view', 'timelineframe', 'Multi-layer Line', 'timelineFrame')
+  addDivToggle('config-view', 'boxframe', 'Local Distribution', '#boxFrame')
+  //addDivToggle('config-view', 'timelineframe', 'Multi-layer Line', '#timelineFrame')
+  addDivToggle('config-view', 'strokeTimeline', 'Vertical Timeline', '#strokeTimeline')
+  addDivToggle('config-view', 'brush-result', 'Period Result', '.brush-result')
   addLocalMeasureDropdown('config-localMeasure')
   window.localMeasure = 'degree'
 }

@@ -89,19 +89,22 @@ function afterLoadedData(dataset) {
     networkcube.importData(session, dataset)
     window.dgraph = networkcube.getDynamicGraph(dataset.name, session)
     DataHandler.addGlobalProperty(window.dgraph)
-
+  //  DataHandler.getSubgraphDgraph(window.dgraph, new Set([0,1,2,3,4,5,6,7,8,9]))
     // TimeLine.drawTimeLine()
     Measure.drawMeasureList('measureFrame')
-    TimeSlider.drawTimeSlider(Measure.WIDTH_LEFT, Measure.WIDTH_MIDDLE)
+  //  TimeSlider.drawTimeSlider(Measure.WIDTH_LEFT, Measure.WIDTH_MIDDLE)
     //Box.drawBox()
     // Kde.drawKde('timelineFrame')
 
-    Heatmap.drawHeatmap('heatmapFrame')
+  //  Heatmap.drawHeatmap('heatmapFrame')
     NodeLink.drawNodeLink()
     //
-    Stat.drawStatView('radarDiv')
+  //  Stat.drawStatView('radarDiv')
     Config.drawConfigs()
     Bookmark.drawBookmark('selection-config')
-    console.log('check', window.dgraph === networkcube.getDynamicGraph())
+    networkcube.addEventListener('subgraph', function (m) {
+      let subgraph = DataHandler.getSubgraphDgraph(window.dgraph, m.body)
+      Measure.drawMeasureList('measureFrame', subgraph)
+    })
 
 }

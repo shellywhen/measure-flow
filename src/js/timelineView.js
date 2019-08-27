@@ -116,7 +116,7 @@ let getNumberOfLinkPairs = function (dgraph, interval) {
         linkPairs.add(dgraph.linkArrays.nodePair[l])
       })
     }
-    dots.push(dataWrapper(dgraph, itv, linkPairs.size / 2))
+    dots.push(dataWrapper(dgraph, itv, linkPairs.size))
   }
   return dots
 }
@@ -429,6 +429,7 @@ let getData = function (dgraph) {
       'dots': linkPairNumber[i].dots.map(function (linkpair, idx) {
         let nodenumber = nodeNumber[i].dots[idx]
         let dense = 2 * linkpair.y / (nodenumber.y * (nodenumber.y - 1))
+        if (Number.isNaN(dense)) dense = 0
         return {
           'timeStart': linkpair.timeStart,
           'timeEnd': linkpair.timeEnd,
@@ -453,4 +454,86 @@ let getData = function (dgraph) {
   }
 }
 
-export {drawTimeLine, getData}
+let getNodesDuring = function (startId, endId, dgraph) {
+  let nodes = new Set()
+  for (let t = startId; t <= endId; t ++) {
+    dgraph.timeArrays.links[t].forEach(l => {
+      nodes.add(dgraph.linkArrays.source[l])
+      nodes.add(dgraph.linkArrays.target[l])
+    })
+  }
+  return nodes
+}
+
+let getLinkPairsDuring = function (startId, endId, dgraph) {
+  let linkPairs = new Set()
+  for (let t = startId; t <= endId; t ++) {
+    dgraph.timeArrays.links[t].forEach(l => {
+       linkPairs.add(dgraph.linkArrays.nodePair[l])
+    })
+  }
+  return linkPairs
+}
+
+let getLinkNumberDuring = function (startId, endId, dgraph) {
+  let res = 0
+  for (let t = startId; t <= endId; t ++) {
+     res += dgraph.timeArrays.links[t].length
+  }
+  return res
+}
+
+let getComponentDuring =function (startId, endId, dgraph, nodes) {
+  let nodeList = Array.from(nodes)
+  if (nodeList.length === 0) {
+    return 0
+  }
+  let flags = new Array(nodes.size).fill(false)
+  let map = new Map()
+  let component = nodeList.map((v, i) => i)
+  nodeList.forEach((v, i) => {map[v] = i})
+  let queue = [0]
+  for (let nid in nodeList) {
+    if(!flags[nid]) queue.push(nid)
+    while (queue.length > 0) {
+      let i = queue.pop()
+      if (flags[i]==true) continue
+      flags[i] = true
+      let neighbors = [...getNeighborDuringInterval(dgraph, [startId, endId], nodeList[i])]
+      neighbors.forEach(v => {
+        if (!flags[map[v]]) {
+          queue.push(map[v])
+          component[map[v]] = component[i]
+        }
+      })
+    }
+  }
+  let group = new Set()
+  component.forEach((v, i) => {
+    if (v != i) group.add(v)
+  })
+  return group.size
+}
+
+let getIntervalData = function (dgraph, startId, endId) {
+  let prevNodes = getNodesDuring (0, Math.max(0, startId - 1), dgraph)
+  let currNodes = getNodesDuring (startId, endId, dgraph)
+  let prevPairs = getLinkPairsDuring (0, Math.max(0, startId - 1), dgraph)
+  let currPairs = getLinkPairsDuring (startId, endId, dgraph)
+  let intersectPairs = new Set([...currPairs].filter(x => prevNodes.has(x)))
+  let nodeNumber = currNodes.size
+  let linkNumber = getLinkNumberDuring(startId, endId, dgraph)
+  let linkPairNumber = currPairs.size
+  let tmp = 2 * linkPairNumber / (nodeNumber * (nodeNumber - 1))
+  let density = Number.isNaN(tmp)? 0 : tmp
+  let redundancy = new Set([...currNodes].filter(x => prevNodes.has(x))).size
+  let activation = currNodes.size - redundancy
+  let volatility = prevPairs.size + currPairs.size - intersectPairs.size
+  let component = getComponentDuring (startId, endId, dgraph, currNodes)
+  let result = {
+    nodeNumber, linkNumber, linkPairNumber, density, redundancy, activation, volatility, component
+  }
+  return result
+}
+
+export {drawTimeLine, getData, getIntervalData}

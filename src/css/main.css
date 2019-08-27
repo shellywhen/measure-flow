@@ -1,5 +1,5 @@
 body {
-  height: 100vh;
+  height: 100%;
 }
 #nodelinkFrame {
   height: 45vh;
@@ -8,18 +8,18 @@ body {
 #timesliderFrame {
   height: 10vh;
 }
-#timesliderFrame .tick line {
+.timeslider .tick line {
   stroke: grey;
 }
-#timesliderFrame .tick text{
+.timeslider .tick text{
   font-size: larger;
   display: block;
 }
-#timesliderFrame .domain{
+.timeslider .domain{
   stroke-width: 0.3vh;
 }
 #measureFrame {
-  height: 85vh;
+  height: 95vh;
   /* overflow-y: scroll; */
   position: relative;
 }
@@ -65,7 +65,7 @@ width: 6px;
     line-height: 0.5vh;
 }
 #interface {
-  height: 100vh;
+  height: 100%;
   width: 100%;
   max-width: 100%;
 }
@@ -225,11 +225,11 @@ option {
 }
 
 .possible {
-  stroke: red;
+ fill: brown;
 }
 
 .selected {
-  stroke: red;
+  fill: brown;
 }
 
 #radarDiv {

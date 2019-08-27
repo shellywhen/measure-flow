@@ -56,8 +56,9 @@ let drawTimeSlider = function (alignRight = 0, width_middle = 50) {
       .text(brushEnd.toLocaleDateString("en-US", options))
       .attr('transform', 'translate('+ selection[1] + ', '+ 3 * height / 4 + ')')
       .attr('text-anchor', 'start')
-    // networkcube.timeRange(brushStart.getTime(), brushEnd.getTime())
+     networkcube.timeRange(brushStart.getTime(), brushEnd.getTime(), true)
     networkcube.sendMessage('timerange', {startUnix: brushStart.getTime(), endUnix: brushEnd.getTime() })
+
   }
 
   svg.selectAll('.snapshot')

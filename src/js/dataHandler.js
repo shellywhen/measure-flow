@@ -178,3 +178,45 @@ export let getTimeStamp = function (dgraph = window.dgraph) {
   })
   return timeValue
 }
+
+export let getSubgraphDgraph = function (dgraph, nodeSet) {
+  if (nodeSet.size === dgraph.nodeArrays.links.length) return dgraph
+  let dg = {
+    timeArrays: {unixTime: dgraph.timeArrays.unixTime, intervals: dgraph.timeArrays.intervals, momentTime: dgraph.timeArrays.momentTime, links: dgraph.timeArrays.links.map(v => [])},
+    linkArrays: {nodePair: dgraph.linkArrays.nodePair, target: dgraph.linkArrays.target, source: dgraph.linkArrays.source},
+    nodeArrays: {neighbors: dgraph.nodeArrays.neighbors.map(function(v) {
+      return {
+        serie: {}
+      }
+    })},
+    gran_min: dgraph.gran_min,
+    gran_max: dgraph.gran_max,
+    timeDelta: dgraph.timeDelta,
+    roundedEnd: dgraph.roundedEnd,
+    roundedStart: dgraph.roundedStart
+  }
+  dgraph.timeArrays.links.forEach((period, t) => {
+    period.forEach(lid => {
+      let target = dg.linkArrays.target[lid]
+      let source = dg.linkArrays.source[lid]
+      if (nodeSet.has(target) && nodeSet.has(source)) {
+        dg.timeArrays.links[t].push(lid)
+        if (t in dg.nodeArrays.neighbors[source].serie) {
+          dg.nodeArrays.neighbors[source].serie[t].add(target)
+        }
+        else dg.nodeArrays.neighbors[source].serie[t] = new Set([target])
+        if (t in dg.nodeArrays.neighbors[target].serie) {
+          dg.nodeArrays.neighbors[target].serie[t].add(source)
+        }
+        else dg.nodeArrays.neighbors[target].serie[t] = new Set([source])
+      }
+    })
+  })
+  for (let nodes of dg.nodeArrays.neighbors) {
+     let neighbors = nodes.serie
+     for (let t in neighbors) {
+       neighbors[t] = Array.from(neighbors[t])
+     }
+  }
+return dg
+}

@@ -17,13 +17,14 @@ const multipleSVGWidth = divWidth / 2
 const multipleMargin = {'top': 5, 'left': 25, 'right': 5, 'bottom':5}
 const multipleWidth = multipleSVGWidth - multipleMargin.left - multipleMargin.right
 const multipleHeight = multipleSVGHeight  - multipleMargin.top - multipleMargin.bottom
-const localMeasureList = ['degree', 'activation', 'redundancy', 'volatility', 'clutering coefficient']
+const localMeasureList = ['degree', 'activation', 'redundancy', 'clutering coefficient']
 const colors = ['orange','green', 'teal', 'lightblue', 'blue', 'navy', 'brown', 'red', 'maroon', 'fuchisia', 'purple']
 const colorScale = d3.scaleOrdinal()
      .range(colors)
 const colorLegend = d3.legendColor()
      .scale(colorScale)
      .shape('circle')
+     .shapePadding(12)
 // const colors = d3.schemeSet3
 
 const options = {year: 'numeric', month: 'short', day: 'numeric' }
@@ -73,20 +74,16 @@ let updateScatter = function () {
 let makeLegend = function (nodes) {
   let colorLegendG = d3.select('#scatter')
     .append('g')
-    .attr('transform', `translate(${margin.left}, ${scatterHeight + margin.top})`)
-  colorLegendG.append('text')
-         .attr('class', 'legend-label')
-         .attr('x', -30)
-         .attr('y', -40)
-         .text(d => {
-           console.log('check', d)
-           return window.dgraph.nodeArrays.id[d]
-         })
-  colorLegendG.call(colorLegend)
+    .attr('transform', `translate(${margin.left}, ${scatterHeight + margin.top + 30})`)
+ colorLegendG.call(colorLegend)
     .selectAll('.cell text')
-    .attr('dy', '0.1em')
     .style('font-size', '0.8rem')
- colorLegendG.selectAll('circle').attr('r', 2)
+    .text(function () {
+      let self = d3.select(this)
+      let id = parseInt(self.text())
+      return dg.nodeArrays.label[id]
+    })
+ colorLegendG.selectAll('circle').attr('r', 4)
 
   console.log(nodes)
 }
