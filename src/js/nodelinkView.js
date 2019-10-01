@@ -1,9 +1,11 @@
 import * as DataHandler from './dataHandler.js'
+import * as Timeline from './timelineView.js'
 
 const nodelinkDivId = 'nodelinkFrame'
 const nodelinkSvgId = 'nodelink'
 const nodelinkHeight = $('#' + nodelinkDivId).height()
 const nodelinkWidth = $('#' + nodelinkDivId).width()
+const nodelinkheight = nodelinkHeight * 0.93
 const nodeHighLightColor = 'orange'
 const MaxRadius = 10
 let LINK_GAP = 2
@@ -11,7 +13,7 @@ const forceLayout = d3.forceSimulation()
     .force('link', d3.forceLink().id(d => d._id))
     .force('charge', d3.forceManyBody())
     .force('centerX', d3.forceX(nodelinkWidth / 2))
-    .force('centerY', d3.forceY(nodelinkHeight / 2))
+    .force('centerY', d3.forceY(nodelinkheight / 2))
 let linkLayer
 let nodeLayer
 let nodeBackLayer
@@ -19,6 +21,7 @@ let nodeLayerG
 let times
 let nodes
 let lasso
+let dg
 
 let getNodeRadius = function(d) {
     return Math.sqrt(d.links().length) * 0.5 + 1;
@@ -90,9 +93,9 @@ let lasso_draw = function () {
 }
 let lasso_end = function () {
     let selectedCircles = lasso.selectedItems()
-        .classed('selected',true)
+        .classed('selected', true)
     window.lasso_selection = selectedCircles._groups[0].map(d => d.__data__)
-    configCell.style('display', 'block')
+
 }
 
 let drawNodeLinkInPeriod = function (startId, endId) {
@@ -114,41 +117,94 @@ let drawNodeLinkInPeriod = function (startId, endId) {
 let cancelLasso = function () {
   lasso.items().classed('selected',false)
   lasso.items().classed('possible',false)
-  configCell.style('display', 'none')
+  dg.selection.forEach(v => {
+    if (v.active) {
+      v.active = false
+      d3.select(`#hull_${v.id}`).style('fill-opacity', 0.3)
+    }
+  })
 }
 let lineGenerator = d3.line().x(d => d.x).y(d => d.y)//.curve(d3.curveCardinal)
 let addSelection = function () {
+  let id = dg.selection.length
+  let color = dg.colorScheme[id]
   let selection = window.lasso_selection
+  let convexHull = d3.select('.hullLayer').append("path")
+  .attr("class",'hull')
+  .attr("id", `hull_${id}`)
+  .style('fill', color)
+  .style('stroke', color)
+  .on('click', function(d) {
+    d3.select(this).style('fill-opacity', 0.8)
+    window.selectionId = id
+  })
+  let circleData = d3.select('.nodeLayer').selectAll('.nodes').data()
+  let circles = selection.map(v => {
+    let circle = circleData[v.index]
+    return [circle.x, circle.y]
+  })
+  let hull = d3.polygonHull(circles)
+  convexHull
+    .datum({'hull':hull, 'selection': selection.map(v => v.index), 'toggle': false})
+    .attr('d', d => `M ${d.hull.join("L")} Z`)
   let subgraph = new Set(selection.map(v => v.index))
   networkcube.sendMessage('subgraph', subgraph)
-  // lasso.items().classed('selected',false)
-  lasso.items().classed('possible',false)
-  configCell.style('display', 'none')
+  lasso.items().classed('possible', false)
 }
-let drawLassoConfig = function (g) {
-  let data = [{text:'Add', class:'success', callback: addSelection}, {text:'Cancel', class:'info', callback: cancelLasso}]
-  configCell = g.append('g').style('display', 'none')
+
+let expandSelection = function () {
+  if(dg.selection.length < 1) return
+  let addnodes = window.lasso_selection
+  let oldList = dg.selection[window.selectionId].idList
+  let newSet = new Set([...oldList, ...addnodes])
+  let newList = Array.from(newSet)
+  dg.selection[window.selectionId].idList = newList
+  let circleData = d3.select('.nodeLayer').selectAll('.nodes').data()
+  let circles = newList.map(v => {
+    let circle = circleData[v.index]
+    return [circle.x, circle.y]
+  })
+  let hull = d3.polygonHull(circles)
+  d3.select(`#hull_${window.selectionId}`).datum(hull).enter().attr('d', d => `M ${d.join("L")} Z`)
+  networkcube.sendMessage('subgraph', newSet)
+  lasso.items().classed('possible',false)
+}
+let drawLassoConfig = function (svg) {
+  let buttonWidth = (nodelinkWidth * 0.9 ) / 3
+  let configCell = svg.append('g')
+    .attr('transform', `translate(${0}, ${nodelinkheight})`)
+    .attr('id', 'lassoButton')
+  let data = [{
+    text:'New', class:'success', callback: addSelection
+  }, {
+    text:'Expand', class:'success', callback: expandSelection
+  }, {
+    text:'Cancel', class:'info', callback: cancelLasso
+  }]
   configCell.selectAll('.badge')
     .data(data)
     .enter()
     .append('rect')
-    .attr('x', (d, i) => 40 + 60* i)
-    .attr('y', 40)
-    .attr('width', 50)
-    .attr('height', 20)
+    .attr('x', (d, i) => nodelinkWidth * 0.05 + buttonWidth * i + buttonWidth * 0.05)
+    .attr('y', 0)
+    .attr('width', buttonWidth * 0.9)
+    .attr('height', (nodelinkHeight - nodelinkheight) * 0.9)
     .attr('rx', 2)
     .attr('ry', 5)
-    .style('fill', 'lightblue')
+    .style('stroke', 'gray')
+    .style('stroke-width', 1)
+    .style('fill', 'white')
 
   configCell.selectAll('.config-label')
     .data(data)
     .enter()
     .append('text')
     .text(d => d.text)
-    .attr('x', (d, i) => 40 + 60 * i + 25)
-    .attr('y', d => 55)
+    .attr('x', (d, i) => nodelinkWidth * 0.05 + buttonWidth * i + buttonWidth / 2)
+    .attr('y', d => (nodelinkHeight - nodelinkheight) * 0.65)
     .style('text-anchor', 'middle')
     .style('cursor', 'pointer')
+    .style('fill', 'black')
     .on('click', d => {
        d.callback(d)
      })
@@ -162,31 +218,26 @@ let perfectScale = function() {
     maxy = Math.max(maxy, node.y)
   }
   let ratiox =  2 *  Math.max(maxx, -minx) / nodelinkWidth
-  let ratioy =  2 * Math.max(maxy, -miny) / nodelinkHeight
+  let ratioy =  2 * Math.max(maxy, -miny) / nodelinkheight
   nodes.forEach(d => {
       d.x = (d.x - nodelinkWidth / 2)  / ratiox + nodelinkWidth / 2
-      d.y = (d.y - nodelinkHeight / 2) / ratioy + nodelinkHeight / 2
+      d.y = (d.y - nodelinkheight / 2) / ratioy + nodelinkheight / 2
   })
 }
-let drawNodeLink = function () {
-  let dg = window.dgraph
+
+let drawLayout = function (svg) {
+  dg = window.dgraph
   times = dg.times().toArray()
   let links = dg.links().toArray()
   nodes = dg.nodes().toArray()
-
-  // create canvas
-  let svg = d3.select('#' + nodelinkSvgId)
-    .attr('height', nodelinkHeight)
-    .attr('width', nodelinkWidth)
   let g = svg.append('g')
-  drawLassoConfig(g)
   g.append('text')
     .text('Calculating')
     .attr('id', 'tmp')
     .style('text-anchor', 'middle')
     .style('font-size', '3rem')
     .attr('x', nodelinkWidth / 2)
-    .attr('y', nodelinkHeight / 2)
+    .attr('y', nodelinkheight / 2)
 
 // create simulation of force layout
   forceLayout
@@ -194,7 +245,10 @@ let drawNodeLink = function () {
     .on('end', function() {
 
       perfectScale(dg)
-      calculateCurvedLinks();
+      calculateCurvedLinks()
+      let hullLayerG = g.append('g')
+        .classed('hullLayer', true)
+
         linkLayer = g.append('g')
           .classed('linkLayer', true)
           .selectAll('.links')
@@ -212,6 +266,7 @@ let drawNodeLink = function () {
 
         nodeLayerG = g.append('g')
           .classed('nodeLayer', true)
+
 
         nodeBackLayer = nodeLayerG.selectAll('.back-nodes')
             .data(nodes)
@@ -267,8 +322,17 @@ let drawNodeLink = function () {
     networkcube.setDefaultEventListener(function () {
       console.log('default')
     })
+}
+let drawNodeLink = function () {
+  // create canvas
+  let svg = d3.select('#' + nodelinkSvgId)
+    .attr('height', nodelinkHeight)
+    .attr('width', nodelinkWidth)
+
+  drawLassoConfig(svg)
+  drawLayout(svg)
+
   networkcube.addEventListener('timeRange', m => {
-    console.log('Why there is no reaction!!!!!')
     let dg = window.dgraph
     let start = m.startUnix
     let end = m.endUnix

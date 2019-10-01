@@ -1,5 +1,6 @@
 import * as Nodelink from './nodelinkView.js'
 const timeList = [1, 1000, 1000*60, 1000*60*60, 1000*60*60*24, 1000*60*60*24*7, 1000*60*60*24*30, 1000*60*60*24*365, 1000*60*60*24*365*10+2, 1000*60*60*24*36525, 1000*60*60*24*30*12*1000]
+const timePara = ['milliseconds', 'seconds', 'minutes', 'hours', 'days', 'weeks', 'months', 'years']
 
 export let handleSelect = function (nodeId) {
   if (window.dgraph.nodeSelection.has(nodeId)) deleteNode(nodeId)
@@ -122,16 +123,27 @@ export let getRoundEnd = function (start, end) {
 let getBins = function (timeArray, minGran, maxGran) {
   let results = []
   for (let granId = minGran; granId <= maxGran; granId ++) {
+    let delta = 1
+    let para
+    if(granId > 7) {
+      delta = Math.pow(10, granId - 7)
+      para = 'years'
+      console.log(granId)
+    }
+    else {
+      para = timePara[granId]
+    }
     let result = {'granularity': granId}
     let idx = 0
     let box = []
     let roundedStart = window.dgraph.roundedStart
     let roundedEnd = window.dgraph.roundedEnd
-    for (let timeStamp = roundedStart; timeStamp <= roundedEnd; timeStamp += timeList[granId]) {
+    for (let timeStamp = roundedStart; timeStamp <= roundedEnd;) {
       let v = {}
       v.interval = [-1, -1]
       v.x0 = new Date(timeStamp)
-      v.x1 = new Date(timeStamp + timeList[granId])
+      v.x1 = moment(v.x0).add(delta, para)._d
+      timeStamp = new Date(v.x1)
       if(v.x1 > timeArray[timeArray.length - 1]._i) v.x1 = timeArray[timeArray.length - 1]._d
       if (timeArray[idx]._i >= v.x0 && timeArray[idx]._i <= v.x1) {
         v.interval[0] = idx
@@ -158,7 +170,20 @@ export let addGlobalProperty = function (dgraph) {
   dgraph.roundedEnd = getRoundEnd(start, end)
 
   dgraph.nodeSelection = new Set()
-
+  dgraph.colorScheme = [
+  '#1f78b4',
+  '#33a02c',
+  '#fb9a99',
+  '#e31a1c',
+  '#fdbf6f',
+  '#ff7f00',
+  '#cab2d6',
+  '#6a3d9a',
+  '#ffff99',
+  '#b15928',
+  '#a6cee3',
+  '#b2df8a']
+  dgraph.selection = []
   let intervals = getBins(dgraph.timeArrays.momentTime, dgraph.getMinGranularity(), dgraph.getMaxGranularity())
   dgraph.timeArrays.intervals = intervals
 }

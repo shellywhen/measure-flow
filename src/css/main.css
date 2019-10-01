@@ -225,11 +225,11 @@ option {
 }
 
 .possible {
- fill: brown;
+ fill: yellow;
 }
 
 .selected {
-  fill: brown;
+  fill: yellow;
 }
 
 #radarDiv {
@@ -238,4 +238,10 @@ option {
 }
 .tab-pane {
   height: 45vh;
+}
+.hull {
+  stroke-opacity: 0.3;
+  stroke-width: 10px;
+  stroke-linejoin: round;
+  fill-opacity: 0.3;
 }

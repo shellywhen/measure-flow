@@ -11,7 +11,7 @@ Description: load data to the page
 //define link schema
 import * as TimeSlider from './timeSlider.js'
 import * as NodeLink from './nodelinkView.js'
-// import * as TimeLine from './timelineView.js'
+import * as TimeLine from './timelineView.js'
 import * as Scatter from './scatterView.js'
 import * as Config from './configureView.js'
 import * as Bookmark from './bookmarkBrowser.js'
@@ -103,8 +103,24 @@ function afterLoadedData(dataset) {
     Config.drawConfigs()
     Bookmark.drawBookmark('selection-config')
     networkcube.addEventListener('subgraph', function (m) {
-      let subgraph = DataHandler.getSubgraphDgraph(window.dgraph, m.body)
-      Measure.drawMeasureList('measureFrame', subgraph)
+      let dg = window.dgraph
+      let id = dg.selection.length
+      let selection = m.body
+      let subgraph = DataHandler.getSubgraphDgraph(dg,selection)
+      let dotList = TimeLine.getData(subgraph)
+      console.log(selection)
+      let selectionList = Array.from(selection)
+      let newSelection = {
+        'id': id,
+        'color': dg.colorScheme[id],
+        'idList': selectionList.map(v=>v.index),
+        'active': true,
+        'dotList': dotList,
+        'dgraph': subgraph
+      }
+      dg.selection.push(newSelection)
+      console.log(dg.selection)
+      Measure.drawMeasureList('measureFrame', dg)
     })
 
 }

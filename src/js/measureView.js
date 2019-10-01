@@ -2,7 +2,7 @@ import * as DataHandler from './dataHandler.js'
 import * as Timeline from './timelineView.js'
 import * as Kde from './kdeView.js'
 
-let CANVAS_HEIGHT, CANVAS_WIDTH, SVGHEIGHT, SVGWIDTH, SVGheight, SVGwidth, ZOOM_SLIDER_HEIGHT, STATIC_SLIDER_HEIGHT
+let CANVAS_HEIGHT, CANVAS_WIDTH, SVGHEIGHT, SVGWIDTH, SVGheight, SVGwidth, ZOOM_SLIDER_HEIGHT, STATIC_SLIDER_HEIGHT, svgHeight
 export let WIDTH_RIGHT, WIDTH_MIDDLE, WIDTH_LEFT
 let CANVAS, VIEW
 let TIPS_CONFIG = { month: 'short', day: 'numeric' }
@@ -12,10 +12,12 @@ let measureName = ['nodeNumber', 'linkNumber', 'linkPairNumber', 'density', 'act
 export let BANDWIDTH = 0.5
 const RATIO_LEFT = 0.13, RATIO_MIDDLE = 0.83, RATIO_RIGHT = 0.04
 const GRANULARITY_NAME = ['milisecond', 'second', 'minute', 'hour', 'day', 'weekday', 'month', 'year', 'year', 'year', 'year']
+const GRANULARITY_name = ['milisecond', 'second', 'minute', 'hour', 'day', 'weekday', 'month', 'year', 'decade', 'century', 'millennium']
 const GRANULARITY_CONFIG = ['numeric', 'numeric', 'numeric', 'numeric', '2-digit', 'short', 'short', 'numeric', 'numeric', 'numeric', 'numeric']
 const timeList = [1, 1000, 1000*60, 1000*60*60, 1000*60*60*24, 1000*60*60*24*7, 1000*60*60*24*30, 1000*60*60*24*365, 1000*60*60*24*30*12*10, 1000*60*60*24*30*12*100, 1000*60*60*24*30*12*1000]
-let timeLineColor = ['orange','darkgreen', 'teal', 'blue','purple', 'red', 'crimson', 'coral', 'fuchisia']
-let xScale, kdeScale, timeStamp, mainScale, mainKDEscale, brush
+let timeLineColor = new Array(12).fill('gray')
+let timeLineColor2 = ['orange','darkgreen', 'teal', 'blue','purple', 'red', 'crimson', 'coral', 'fuchisia']
+let xScale, kdeScale, timeStamp, mainScale, mainKDEscale, brush, tooltipTitle
 let MEASURE_DIV_ID
 let CANVAS_INFO = []
 const ELEMENTS = 8
@@ -43,8 +45,9 @@ let setCanvasParameters = function (divId, dgraph) {
   ZOOM_SLIDER_HEIGHT = 0.08 * CANVAS_HEIGHT
   SVGHEIGHT = Math.max((CANVAS_HEIGHT - ZOOM_SLIDER_HEIGHT - STATIC_SLIDER_HEIGHT) / ELEMENTS, 50)
   SVGWIDTH = CANVAS_WIDTH
-  SVGheight = SVGHEIGHT - MARGIN.top - MARGIN.bottom
+  SVGheight = (SVGHEIGHT - MARGIN.top - MARGIN.bottom)
   SVGwidth = SVGWIDTH - MARGIN.left - MARGIN.right
+  svgHeight = SVGheight
   VIEW = CANVAS.append('g').attr('transform', `translate(0, ${ZOOM_SLIDER_HEIGHT + STATIC_SLIDER_HEIGHT})`)
   brush = d3.brushX()
       .extent([[0,0], [WIDTH_MIDDLE, Math.floor(ZOOM_SLIDER_HEIGHT / 5)]])
@@ -75,29 +78,43 @@ export let drawMeasureList = function (divId, subGraph = networkcube.getDynamicG
   kdeScale = mainKDEscale.copy()
   addGlobalInteraction()
   addMeasureWindow(dgraph)
+  tooltipTitle = d3.select('body').append('div').classed('tooltip', true).style('opacity', 0).style('width', '18vh').style('text-align', 'left')
   networkcube.addEventListener('bandwidth', function (m) {
     BANDWIDTH = m.body
     drawKDEsummary()
+    if (dg.selection.length > 0) {
+      CANVAS_INFO.forEach((vis) => {
+         let g =  vis.g
+         let id = vis.item
+         let color = dg.selection[id].color
+         if(dg.selection.length === 1) color = "gray"
+         let index = vis.index
+         let summary = dg.selection[id].dotList[index][0]['dots'].map(v => v.y)
+         let lineGenerator = drawKdeLine(g, color, summary)
+         vis.lineGenerator = lineGenerator
+      })
+  }
+  else {
     measureName.forEach((name, i) => {
         let summary = data[name][0].dots.map(v => v.y)
         let g = d3.select(`.vis_${i}`).select('.zoom-layer')
-        let lineGenerator = drawKdeLine(g, i, summary)
+        let lineGenerator = drawKdeLine(g, 'gray', summary)
         CANVAS_INFO[i].lineGenerator = lineGenerator
-    })
+      })
+    }
   })
-
 }
 
 let addMeasureWindow = function (dgraph) {
   let data = Timeline.getData(dgraph)
-  drawMeasure('Connected Nodes', data.nodeNumber, 'nodeNumber', 0)
-  drawMeasure('Active Links', data.linkNumber, 'linkNumber', 1)
-  drawMeasure('Active Link Pairs', data.linkPairNumber, 'linkPairNumber', 2)
-  drawMeasure('Density', data.density, 'density', 3)
-  drawMeasure('Activation', data.activation, 'activation', 4)
-  drawMeasure('Redundancy', data.redundancy, 'redundancy', 5)
-  drawMeasure('Volatility', data.volatility, 'volatility', 6)
-  drawMeasure('Connected Component', data.component, 'component', 7)
+  drawMeasure('Connected Nodes', data.nodeNumber, 'nodeNumber', 0, 'The number of nodes having connections to others.')
+  drawMeasure('Active Links', data.linkNumber, 'linkNumber', 1, 'The number of active links.')
+  drawMeasure('Active Link Pairs', data.linkPairNumber, 'linkPairNumber', 2, 'The number of active link pairs (dropped duplicates).')
+  drawMeasure('Density', data.density, 'density', 3, 'The ratio of the number of active node pairs and the number of possible node pairs (every node counts).')
+  drawMeasure('Activation', data.activation, 'activation', 4, 'The number of activated nodes from the beginning till current period, which at least connects to others once.')
+  drawMeasure('Redundancy', data.redundancy, 'redundancy', 5, 'The number of the overlapped nodes between the previous period and current period.')
+  drawMeasure('Volatility', data.volatility, 'volatility', 6, 'The number of changing link pairs between the previous period and current period.')
+  drawMeasure('Connected Component', data.component, 'component', 7, 'The number of connected components.')
 
 }
 
@@ -189,21 +206,31 @@ let brushendCallback = function (d) {
       })
       return
     }
-    let periodData = Timeline.getIntervalData(dg, window.activeTime.startId, window.activeTime.endId)
-
+    let periodData = {}
+    if (dg.selection.length==0) {
+     periodData[0] = Timeline.getIntervalData(dg, window.activeTime.startId, window.activeTime.endId)
+    }
+    else {
+      dg.selection.forEach(v => {
+        let data = Timeline.getIntervalData(v.dgraph, window.activeTime.startId, window.activeTime.endId)
+        periodData[v.id] = data
+        console.log(v.id, data, v.dgraph)
+      })
+    }
     CANVAS_INFO.forEach(vis => {
       let content = vis.index
+      let item  = vis.item
       let g = vis.g.select('.brush-result')
       g.style('visibility', 'visible')
       g.select('rect')
         .attr('x', xScale(brushStart))
-        .attr('y', vis.yScale(periodData[content]))
-        .attr('height', vis.yScale(0) - vis.yScale(periodData[content]))
+        .attr('y', vis.yScale(periodData[item][content]))
+        .attr('height', vis.yScale(0) - vis.yScale(periodData[item][content]))
         .attr('width', xScale(brushEnd) - xScale(brushStart))
       g.select('text')
         .attr('x', (xScale(brushStart) + xScale(brushEnd))/2)
-        .attr('y', vis.yScale(periodData[content]))
-        .text(`${Number(periodData[content]).toFixed(2)}`)
+        .attr('y', vis.yScale(periodData[item][content]))
+        .text(`${Number(periodData[item][content]).toFixed(2)}`)
     })
 
   }
@@ -397,37 +424,58 @@ let addGlobalInteraction = function () {
   addTimeline()
 }
 
-let drawMeasure = function (title, dataList, id, idx) {
+let drawMeasure = function (title, dataList, id, idx, description = '') {
   let svg = VIEW.append('g')
     .classed('measureView', true)
     .attr('transform', `translate(0, ${idx * SVGHEIGHT})`)
     .classed(`timeline-${idx}`, true)
     .attr('timeline-id', idx)
-  drawTitle(svg, title)
-  drawMeasureOvertime(svg, dataList, idx, id)
+  drawTitle(svg, title, description)
+  comparisonMeasureOvertime(svg, dataList, idx, id)
   drawIcons(svg, idx)
 }
 
-let drawMeasureOvertime = function (svg, dotList, idx, id) {
-  let maxY = dotList.map(dots => d3.max(dots.dots.map(v => v.y)))
+let comparisonMeasureOvertime = function (svg, dataList, idx, id) {
+  if(dg.selection.length === 0) {
+    drawMeasureOvertime(svg, dataList, idx, id)
+    return
+  }
+  let len = dg.selection.length
+  svgHeight = SVGheight / len
+  for (let i = 0; i < len; i++) {
+    let g = svg.append('g').attr('transform', `translate(${0}, ${svgHeight * i})`)
+    let dotList = dg.selection[i].dotList[id]
+    let maxY =  d3.max(dotList.map(dots => d3.max(dots.dots.map(v => v.y))))
+    let color = dg.selection[i].color
+    let index = dg.selection[i].id
+    if(len===1) color="gray"
+    drawMeasureOvertime(g, dotList, idx, id, index, color, maxY)
+  }
+}
+
+let drawMeasureOvertime = function (svg, dotList, idx, id, item = 0, color = "gray", maxY = 0) {
+  if(maxY===0) {
+    maxY = d3.max(dotList.map(dots => d3.max(dots.dots.map(v => v.y))))
+  }
   let yScale = d3.scaleLinear()
-    .range([SVGheight, SVGheight / 6])
-    .domain([0, d3.max(maxY)])
+    .range([svgHeight, svgHeight / 6])
+    .domain([0, maxY])
     .nice()
   let g = svg.append('g')
     .attr('transform', `translate(${MARGIN.left + WIDTH_LEFT}, ${MARGIN.top})`)
     .classed(`vis_${idx}`, true)
+    .classed('mini_vis', true)
   g.append('defs')
     .append('SVG:clipPath')
-    .attr('id', `clip_${idx}`)
+    .attr('id', `clip_${item}_${idx}`)
     .append('SVG:rect')
     .attr('width', WIDTH_MIDDLE)
-    .attr('height', SVGheight + SVGheight / 6 + 5)
+    .attr('height', svgHeight + svgHeight / 6 + 5)
     .attr('x', 0)
-    .attr('y', -SVGheight / 6 - 5)
+    .attr('y', -svgHeight / 6 - 5)
   g.append('g')
     .classed('x-axis', true)
-    .attr('transform', `translate(0, ${SVGheight})`)
+    .attr('transform', `translate(0, ${svgHeight})`)
     .call(d3.axisBottom(xScale))
     .selectAll(".tick text")
     .remove()
@@ -437,17 +485,24 @@ let drawMeasureOvertime = function (svg, dotList, idx, id) {
   let tooltip = g.append('text')
      .attr('class', 'tooltip')
      .style('opacity', 0)
-  let zoomLayer = g.append('g').attr('clip-path', `url(#clip_${idx})`).classed('zoom-layer', true)
+     .style('text-anchor', 'middle')
+     .style('font-size', )
+  let timeTooltip = g.append('text')
+    .attr('class', 'timeTooltip')
+    .style('opacity', 0)
+    .style('text-anchor', 'middle')
+  let zoomLayer = g.append('g').attr('clip-path', `url(#clip_${item}_${idx})`).classed('zoom-layer', true)
   let summary = dotList[0].dots.map(v => v.y)
-  let lineGenerator = drawKdeLine(zoomLayer, idx, summary)
+  let lineGenerator = drawKdeLine(zoomLayer, color , summary)
   dotList.reverse().forEach((res, i) => {
     let data = res.dots
     zoomLayer.append('g')
+      .classed(`level_${i}`, true)
       .selectAll('.bars')
       .data(data)
       .enter()
       .append('rect')
-      .classed('bars', true)
+      .attr('class', (d, no) => `rank_${no} bars`)
       .attr('x', d => xScale(d.timeStart))
       .attr('y', d => yScale(d.y))
       .attr('width', d => {
@@ -459,36 +514,42 @@ let drawMeasureOvertime = function (svg, dotList, idx, id) {
       })
       .attr('data', d => d.y)
       .attr('height', d => yScale(0) - yScale(d.y))
-      .style('fill', timeLineColor[idx])
+      .style('fill', color)
       .style('opacity', i / dotList.length + 1 / dotList.length)
       .style('stroke-width', Math.log(i*10))
-      .on('mouseover', function (d) {
+      .on('mouseover', function (d, no) {
         let self = d3.select(this)
         d3.select(this).style('stroke', 'yellow').style('stroke-width', 3)
         let newX =  parseFloat(self.attr('x')) + parseFloat(self.attr('width')) / 2
         let newY =  parseFloat(self.attr('y')) - 20
         let value = d.y.toFixed(2)
-        let textArea = tooltip
+        timeTooltip
           .attr('x', newX)
-          .attr('y', newY)
-          .style('text-anchor', 'middle')
-          .style('opacity', 1)
-        tooltip.append('tspan')
-          .attr('x', newX)
-          .attr('y', newY - 10)
+          .attr('y', newY - 13)
           .attr('dy', '1rem')
           .text(getTimeString(d.timeStart, d.timeEnd))
           .style('fill', 'black')
-        tooltip.append('tspan')
-          .attr('x', newX)
-          .attr('y', newY)
-          .attr('dy', '1rem')
-          .text(d.y.toFixed(2))
-          .style('fill', 'black')
+          .style('opacity', 1)
+        d3.selectAll(`.mini_vis`)
+          .each(function(d) {
+            let ele = d3.select(this).select(`.level_${i}`).select(`.rank_${no}`)
+            let y =  parseFloat(ele.attr('y')) - 5
+            let data = ele.datum()
+            d3.select(this)
+             .select('.tooltip')
+             .text(d => data.y.toFixed(2))
+             .attr('x', newX)
+             .attr('y', y)
+             .style('fill', 'black')
+             .style('opacity', 1)
+          })
       })
-      .on('mouseout', function (d) {
-        tooltip.style('opacity', 0)
-       tooltip.selectAll('tspan').remove()
+      .on('mouseout', function (d, no) {
+        let tooltips = d3.selectAll(`.tooltip`)
+       tooltips.style('opacity', 0)
+       tooltips.text('')
+       timeTooltip.style('opacity', 0)
+       timeTooltip.selectAll('tspan').remove()
         d3.select(this).style('stroke', '')
       })
       .on('click', function (d) {
@@ -508,16 +569,17 @@ let drawMeasureOvertime = function (svg, dotList, idx, id) {
     //  .style('display', 'none')
     //  .style('opacity', i / dotList.length + 1 / dotList.length)
   })
+  dotList.reverse()
   let instantG = zoomLayer.append('g')
     .classed('brush-result', true)
   instantG.append('defs')
-    .html(`	<pattern id="pattern_${idx}" patternUnits="userSpaceOnUse" width="5" height="5" patternTransform="rotate(45)"> 	<line x1="0" y="0" x2="0" y2="5" stroke="${timeLineColor[idx]}" stroke-width="6" />	</pattern>`)
+    .html(`	<pattern id="pattern_${item}_${idx}" patternUnits="userSpaceOnUse" width="5" height="5" patternTransform="rotate(45)"> 	<line x1="0" y="0" x2="0" y2="5" stroke="${color}" stroke-width="6" />	</pattern>`)
   instantG.append('rect')
     .attr('x', 0)
     .attr('y', 0)
     .attr('height', 0)
     .attr('width', 0)
-    .style('fill', `url(#pattern_${idx})`)
+    .style('fill', `url(#pattern_${item}_${idx})`)
     .style('opacity', 0.8)
   instantG.append('text')
     .style('fill', 'black')
@@ -527,20 +589,21 @@ let drawMeasureOvertime = function (svg, dotList, idx, id) {
     .style('stroke-width', 0.08)
     .text('')
 
-  CANVAS_INFO.push(new MeasureVis(zoomLayer, lineGenerator, yScale, id))
+  CANVAS_INFO.push(new MeasureVis(zoomLayer, lineGenerator, yScale, id, item))
 }
 
 class MeasureVis {
-  constructor (g, lineGenerator, yScale, index) {
-    this.g = g
-    this.lineGenerator = lineGenerator
-    this.yScale = yScale
-    this.index = index
+  constructor (g, lineGenerator, yScale, index, item) {
+    this.g = g  // zoom-layer
+    this.lineGenerator = lineGenerator  // kdeline
+    this.yScale = yScale  // bar chart scale
+    this.index = index  // index
+    this.item = item  // selection id
   }
 }
 
-let drawKdeLine = function (g, idx, summary) {
-  let density = Kde.kde(Kde.epanechinikov(BANDWIDTH), kdeScale.ticks(200), summary, timeStamp)
+let drawKdeLine = function (g, color, summary) {
+  let density = Kde.kde(Kde.epanechinikov(BANDWIDTH), kdeScale.ticks(400), summary, timeStamp)
   g.select(`.kdeLine`).remove()
   let kdeYScale = d3.scaleLinear()
     .domain([0, d3.max(density.map(v => v.y))])
@@ -554,7 +617,7 @@ let drawKdeLine = function (g, idx, summary) {
     .append('path')
     .datum(density)
     .style('fill', 'none')
-    .style('stroke', timeLineColor[idx])
+    .style('stroke', color)
     .style('stroke-width', 1.5)
     .style('stroke-linejoin', 'round')
     .attr('d', line)
@@ -620,7 +683,7 @@ let drawIcons = function (svg, idx) {
    })
 }
 
-let drawTitle = function (svg, title) {
+let drawTitle = function (svg, title, description) {
   let g = svg.append('g')
   let x = MARGIN.left
   let y = MARGIN.top
@@ -649,6 +712,32 @@ let drawTitle = function (svg, title) {
      tspan = text.append('tspan').attr('x', 0).attr('y', y).attr('dy', ++lineNumber * lineHeight + dy + 'em').text(word)
    }
   }
+  text.append('tspan')
+   .attr('x', tspan.node().getComputedTextLength() + 2)
+   .attr('y', y)
+   .attr('dy', (lineNumber) * lineHeight + dy + 'em')
+   .classed('icon', true)
+   .classed('fas', true)
+   .style('font-family', 'Font Awesome 5 Free')
+   .style('font-weight', 900)
+   .style('font-size', '0.8rem')
+   .style('fill', 'gray')
+   .style('cursor', 'pointer')
+  .text('\uf059')
+  .on('mouseover', function () {
+    tooltipTitle.transition()
+      .duration(200)
+      .style('opacity', 1)
+    tooltipTitle.html(description)
+      .style('left', (d3.event.pageX + 20) + 'px')
+      .style('top', (d3.event.pageY - 28) + 'px')
+  })
+  .on('mouseout', function () {
+    tooltipTitle.transition()
+      .duration(500)
+      .style('opacity', 0)
+  })
+
 }
 function binarySearch(array, pred) {
     let lo = -1, hi = array.length;
@@ -673,7 +762,7 @@ function getTimeString (timeStart, timeEnd) {
   }
   let options = {}
   options[GRANULARITY_NAME[granularity]] = GRANULARITY_CONFIG[granularity]
-  return GRANULARITY_NAME[granularity].capitalize() + ': ' + timeStart.toLocaleDateString("en-US", options) + ' ~ ' + timeEnd.toLocaleDateString("en-US", options)
+  return GRANULARITY_name[granularity].capitalize() + ': ' + timeStart.toLocaleDateString("en-US", options) + ' ~ ' + timeEnd.toLocaleDateString("en-US", options)
 }
 
 String.prototype.capitalize = function() {
