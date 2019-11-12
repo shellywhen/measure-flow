@@ -1,5 +1,3 @@
-import * as Bookmark from './bookmarkBrowser.js'
-
 const DATA_TABLE_MAX_LENGTH = 100
 const NODE_SCHEMA_LIST = ['(None)', 'ID', 'Node', 'Node Type', 'Group']
 const LINK_SCHEMA_LIST = ['(None)', 'ID', 'Time', 'Source Node', 'Target Node', 'Weight', 'Link Type']
