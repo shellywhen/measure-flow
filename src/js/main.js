@@ -2,23 +2,24 @@
 Author: Liwenhan Xie
 Email: xieliwenhan@gmail.com
 Created: Jul 18, 2019
-Version: 1
+Last Modify: Nov 12, 2019
+Version: 3
 Description: load data to the page
 */
 //=================
-//Data Loading
+// Everything starts here.
 //=============
 //define link schema
 import * as TimeSlider from './timeSlider.js'
 import * as NodeLink from './nodelinkView.js'
 import * as TimeLine from './timelineView.js'
-import * as Scatter from './scatterView.js'
+// import * as Scatter from './scatterView.js'
 import * as Config from './configureView.js'
 import * as Bookmark from './bookmarkBrowser.js'
-import * as Stat from './statView.js'
+// import * as Stat from './statView.js'
 // import * as Box from './boxView.js'
 import * as Kde from  './kdeView.js'
-import * as Heatmap from './heatmapView.js'
+// import * as Heatmap from './heatmapView.js'
 import * as Measure from './measureView.js'
 import * as DataHandler from './dataHandler.js'
 import * as Interval from './intervalConfig.js'
@@ -122,7 +123,7 @@ window.afterData = function () {
   networkcube.addEventListener('subgraph', function (m) {
     let dg = window.dgraph
     let id = dg.selection.length
-    let selection = m.body
+    let selection = m.body.selection
     let subgraph = DataHandler.getSubgraphDgraph(dg,selection)
     let dotList = TimeLine.getData(subgraph)
     let linkTypeDotList = TimeLine.getLinkStat(subgraph, dg.timeArrays.intervals, dg.linkTypeArrays.name)
@@ -131,7 +132,7 @@ window.afterData = function () {
     })
     let nodeTypeDotList = TimeLine.getNodeStat(subgraph, dg.timeArrays.intervals, dg.nodeTypeArrays.name)
     Object.keys(nodeTypeDotList).forEach(function(name){
-      dotList[`linkType_${name}`] = linkTypeDotList[name]
+      dotList[`nodeType_${name}`] = nodeTypeDotList[name]
     })
     let selectionList = Array.from(selection)
     let newSelection = {
@@ -143,7 +144,7 @@ window.afterData = function () {
       'dgraph': subgraph
     }
     dg.selection.push(newSelection)
-    Measure.drawMeasureList('measureFrame', dg)
+    if(m.body.flag)  Measure.drawMeasureList('measureFrame', dg)
   })
 
 }

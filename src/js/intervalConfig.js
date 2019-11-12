@@ -35,7 +35,7 @@ let drawSpan = function (datum) {
     })
     .on('mouseout', function (d) {
       let intervalSize = dg.timeArrays.intervals.length
-      let opacity =  d.level / intervalSize
+      let opacity =  (d.level + 1) / intervalSize
       d3.selectAll(`.level_${d.level}`).selectAll('.bars').style('opacity', opacity)
     })
   span.append('i')

@@ -130,10 +130,7 @@ let getNumberOfLinks = function (dgraph, interval) {
           sum += d3.sum(Object.values(dgraph.linkArrays.weights[lid].serie))
       })
     }
-    dots.push({
-      'timeStart': dgraph.timeArrays.momentTime[itv[0]]._d,
-      'timeEnd': dgraph.timeArrays.momentTime[itv[1]]._d,
-      'y': sum})
+    dots.push({'y': sum})
   }
   return dots
 }
@@ -165,8 +162,6 @@ let getRedundancy = function (dgraph, interval) {
 
 let dataWrapper = function (dgraph, interval, y) {
   return {
-    'timeStart': dgraph.timeArrays.momentTime[interval[0]]._d,
-    'timeEnd': dgraph.timeArrays.momentTime[interval[1]]._d,
     'y': y
   }
 }
@@ -434,6 +429,10 @@ let getSingleNodeStat = function (dgraph, intervals, type) {
         }
       }
       result.push(dataWrapper(dgraph, itv, nodes.size))
+      result.forEach((m, j) => {
+        m.timeStart = v.period[j].x0
+        m.timeEnd = v.period[j].x1
+      })
     }
     return {
       'granularity': v.granularity,
@@ -460,6 +459,10 @@ let getSingleLinkStat = function (dgraph, intervals, type) {
       }
       result.push(dataWrapper(dgraph, itv, sum))
     }
+    result.forEach((m, j) => {
+      m.timeStart = v.period[j].x0
+      m.timeEnd = v.period[j].x1
+    })
     return {
       'granularity': v.granularity,
       'dots': result,

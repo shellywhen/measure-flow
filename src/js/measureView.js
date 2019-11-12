@@ -509,9 +509,7 @@ let drawMeasure = function (canvas, title, dataList, id, idx, description = '', 
   visItems.forEach(vis => vis.title = title)
   drawIcons(svg, idx, visItems)
 }
-let drawAttribute = function (svg, title, dataList, id, idx, description = '') {
 
-}
 let comparisonMeasureOvertime = function (svg, dataList, idx, id) {
   if(dg.selection.length === 0) {
     let visItem = drawMeasureOvertime(svg, dataList, idx, id)
@@ -1049,11 +1047,11 @@ export let drawTypeList = function (attribute, subgraph = window.dgraph) {
     .attr('width', CANVAS_WIDTH)
     .append('g')
     .attr('transform', `translate(0,5)`)
+  addGlobalInteractionForTypes (canvas, types.length * SVGHEIGHT + 12)
   let data = Timeline[`get${attribute.capitalize()}Stat`](dgraph, dgraph.timeArrays.intervals, types)
   types.forEach(function(name, i) {
     drawMeasure(canvas, name, data[name], `${attribute}Type_${name}`,  i, `The count of ${attribute} with type: ${name}.`, measureName.length + dgraph.linkTypeArrays.length)
   })
-  addGlobalInteractionForTypes (canvas, types.length * SVGHEIGHT + 12)
 }
 
 function binarySearch(array, pred) {

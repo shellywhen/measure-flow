@@ -89,10 +89,7 @@ let getNumberOfLinks = function (dgraph, interval) {
     for (let t = itv[0]; t <= itv[1]; t ++) { // aggregation
       sum += dgraph.timeArrays.links[t].length
     }
-    dots.push({
-      'timeStart': dgraph.timeArrays.momentTime[itv[0]]._d,
-      'timeEnd': dgraph.timeArrays.momentTime[itv[1]]._d,
-      'y': sum})
+    dots.push(dataWrapper(dgraph, itv, sum))
   }
   return dots
 }
@@ -139,8 +136,6 @@ let getRedundancy = function (dgraph, interval) {
 
 let dataWrapper = function (dgraph, interval, y) {
   return {
-    'timeStart': dgraph.timeArrays.momentTime[interval[0]]._d,
-    'timeEnd': dgraph.timeArrays.momentTime[interval[1]]._d,
     'y': y
   }
 }
@@ -172,10 +167,10 @@ let getVolatility = function (dgraph, interval) {
 let getProcessedData = function (dg, intervals, action, paras=0) {
   return intervals.map((v, i) => {
     let result = action(dg, v.period.map(m => m.interval), paras)
-    // result.forEach((m, j) => {
-    //   m.timeStart = v.period[j].x0
-    //   m.timeEnd = v.period[j].x1
-    // })
+    result.forEach((m, j) => {
+      m.timeStart = v.period[j].x0
+      m.timeEnd = v.period[j].x1
+    })
     return {
       'granularity': v.granularity,
       'dots': result,
@@ -195,6 +190,10 @@ let getSingleLinkStat = function (dgraph, interval, name) {
       })
     }
       result.push(dataWrapper(dgraph, itv, sum))
+      result.forEach((m, j) => {
+        m.timeStart = v.period[j].x0
+        m.timeEnd = v.period[j].x1
+      })
   }
   return result
 }
@@ -214,6 +213,10 @@ let getSingleNodeStat = function (dgraph, interval, name) {
     }
     result.push(dataWrapper(dgraph, itv, nodes.size))
   }
+  result.forEach((m, j) => {
+    m.timeStart = v.period[j].x0
+    m.timeEnd = v.period[j].x1
+  })
   return result
 }
 export let getSingleData = function (dg, interval, content) {

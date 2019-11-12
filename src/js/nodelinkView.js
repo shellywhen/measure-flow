@@ -144,7 +144,10 @@ let addSelection = function () {
     .datum({'hull':hull, 'selection': selection.map(v => v.index), 'toggle': false})
     .attr('d', d => `M ${d.hull.join("L")} Z`)
   let subgraph = new Set(selection.map(v => v.index))
-  networkcube.sendMessage('subgraph', subgraph)
+  networkcube.sendMessage('subgraph', {
+    'selection': subgraph,
+    'flag': true
+  })
   lasso.items().classed('possible', false)
 }
 

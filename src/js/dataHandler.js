@@ -80,10 +80,6 @@ let updateSelectionList = function () {
 
 }
 
-export let getLocalDistribution = function (rawdata) {
-
-}
-
 export let getRoundStart = function (start, end) {
   let round = new Date(start)
   round.setHours(0)
