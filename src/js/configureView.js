@@ -173,6 +173,9 @@ let addDatasetOption = function () {
     .text(d => d)
 }
 let drawConfigs = function () {
+  d3.select('#config-view').html('')
+  d3.select('#config-style').html('')
+  d3.select('#config-localMeasure').html('')
   let dg = networkcube.getDynamicGraph()
   networkcube.addEventListener('searchResult', handleSearchResult)
   $('#searchBar').on('keypress',function(e) {
@@ -195,9 +198,13 @@ let drawConfigs = function () {
   addBandwidthConfig(dg.timeDelta)
   addDivToggle('config-view', 'boxframe', 'Local Distribution', '#boxFrame')
   //addDivToggle('config-view', 'timelineframe', 'Multi-layer Line', '#timelineFrame')
-  addDivToggle('config-view', 'strokeTimeline', 'Vertical Timeline', '#strokeTimeline')
+  addDivToggle('config-view', 'strokeTimeline', 'Vertical Timeline', '.strokeTimeline')
   addDivToggle('config-view', 'brush-result', 'Period Result', '.brush-result')
+  addDivToggle('config-view', 'showLine', 'Density', '.kdeLine')
+  addDivToggle('config-view', 'showLinkType', 'Link Type Stat', '#linkTypeFrame')
+  addDivToggle('config-view', 'showNodeType', 'Node Type Stat', '#nodeTypeFrame')
   addLocalMeasureDropdown('config-localMeasure')
+//  addButton('config-view', resetView)
   window.localMeasure = 'degree'
 }
 

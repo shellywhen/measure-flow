@@ -9,17 +9,13 @@ const nodelinkheight = nodelinkHeight * 0.93
 const nodeHighLightColor = 'orange'
 const MaxRadius = 10
 let LINK_GAP = 2
-const forceLayout = d3.forceSimulation()
-    .force('link', d3.forceLink().id(d => d._id))
-    .force('charge', d3.forceManyBody())
-    .force('centerX', d3.forceX(nodelinkWidth / 2))
-    .force('centerY', d3.forceY(nodelinkheight / 2))
 let linkLayer
 let nodeLayer
 let nodeBackLayer
 let nodeLayerG
 let times
 let nodes
+let links
 let lasso
 let dg
 
@@ -224,13 +220,44 @@ let perfectScale = function() {
       d.y = (d.y - nodelinkheight / 2) / ratioy + nodelinkheight / 2
   })
 }
-
-let drawLayout = function (svg) {
-  dg = window.dgraph
-  times = dg.times().toArray()
-  let links = dg.links().toArray()
+let initNodeLink = function (svg, dgraph) {
+  let g = svg.append('g').attr('id', 'nodeLinkCanvas')
+  links = dgraph.links().toArray()
   nodes = dg.nodes().toArray()
-  let g = svg.append('g')
+  times = dg.times().toArray()
+  let hullLayerG = g.append('g')
+    .classed('hullLayer', true)
+  linkLayer = g.append('g')
+    .classed('linkLayer', true)
+    .selectAll('.links')
+      .data(links)
+      .enter()
+      .append('path')
+      .classed('links', true)
+      .style('stroke-width', getLineStroke)
+      .style('fill-opacity', 0.2)
+      .style('stroke-opacity', 0.5)
+      .style('fill', '#d9d3d3')
+      .attr('d', 'M0 0 L2 0 Z')
+  nodeLayerG = g.append('g')
+    .classed('nodeLayer', true)
+  nodeBackLayer = nodeLayerG.selectAll('.back-nodes')
+      .data(nodes)
+      .enter()
+      .append('circle')
+      .classed('back-nodes', true)
+      .attr('r', 1)
+      .attr('cx', 0)
+      .attr('cy', 0)
+  nodeLayer = nodeLayerG.selectAll('.nodes')
+    .data(nodes)
+    .enter()
+    .append('circle')
+    .classed('nodes', true)
+    .attr('r', 1)
+    .attr('cx', 0)
+    .attr('cy', 0)
+    .style('fill', d => networkcube.getPriorityColor(d))
   g.append('text')
     .text('Calculating')
     .attr('id', 'tmp')
@@ -238,100 +265,96 @@ let drawLayout = function (svg) {
     .style('font-size', '3rem')
     .attr('x', nodelinkWidth / 2)
     .attr('y', nodelinkheight / 2)
+  return g
+}
 
+let drawLayout = function (svg) {
+  dg = window.dgraph
+  let g = initNodeLink(svg, dgraph)
+  let forceLayout =  d3.forceSimulation()
+      .force('link', d3.forceLink().id(d => d._id))
+      .force('charge', d3.forceManyBody())
+      .force('centerX', d3.forceX(nodelinkWidth / 2))
+      .force('centerY', d3.forceY(nodelinkheight / 2))
 // create simulation of force layout
+//
+// .on('tick', function() {
+//   nodeLayer
+//     .attr('r', 1)
+//     .attr('cx', 0)
+//     .attr('cy', 0)
+//     .attr('transform', d => {
+//     return `translate(${d.x}, ${d.y})`
+//   })
+//  // linkLayer.attr('d', d => lineGenerator(d.path))
+// })
   forceLayout
     .nodes(nodes)
     .on('end', function() {
-
+      console.log('end!!!')
       perfectScale(dg)
       calculateCurvedLinks()
-      let hullLayerG = g.append('g')
-        .classed('hullLayer', true)
+      linkLayer
+        .attr('d', d => lineGenerator(d.path))
+        .attr('id', d => `link_${d.index}`)
+        .style('stroke', d => networkcube.getPriorityColor(d))
+     nodeBackLayer.attr('r', d =>Math.sqrt(DataHandler.getLocalMeasure(d, true)) * 0.5 + 1 )
+        .attr('transform', function(d) { return 'translate(' + d.x + ',' + d.y + ')' })
+        .style('fill', '#b9b9b9')
 
-        linkLayer = g.append('g')
-          .classed('linkLayer', true)
-          .selectAll('.links')
-          .data(links)
-          .enter()
-          .append('path')
-          .classed('links', true)
-          .attr('id', d => `link_${d.index}`)
-          .style('stroke-width', getLineStroke)
-          .style('stroke', d => networkcube.getPriorityColor(d))
-          .style('fill-opacity', 0.2)
-          .style('stroke-opacity', 0.5)
-          .style('fill', '#d9d3d3')
-          .attr('d', d => lineGenerator(d.path))
+     nodeLayer.attr('r', d => Math.sqrt(DataHandler.getLocalMeasure(d, true)) * 0.5 + 1)
+       .attr('cx', 0)
+       .attr('cy', 0)
+       .attr('id', d => `node_${d.index}`)
+       .attr('transform', function(d) {
+          return 'translate(' + d.x + ',' + d.y + ')'
+        })
+       .on('click', nodeOnClick)
+       .on('mouseover', nodeOnHover)
+       .on('mouseout', nodeOutHover)
 
-        nodeLayerG = g.append('g')
-          .classed('nodeLayer', true)
+     lasso = d3.lasso()
+      .closePathSelect(true)
+      .closePathDistance(100)
+      .items(nodeLayer)
+      .targetArea(nodeLayerG)
+      .on('start', lasso_start)
+      .on('draw', lasso_draw)
+      .on('end', lasso_end)
+      nodeLayerG.call(lasso)
 
+      d3.select('#tmp').remove()
 
-        nodeBackLayer = nodeLayerG.selectAll('.back-nodes')
-            .data(nodes)
-            .enter()
-            .append('circle')
-            .classed('back-nodes', true)
-            .attr('r', d =>Math.sqrt(DataHandler.getLocalMeasure(d, true)) * 0.5 + 1 )
-            .attr('transform', function(d) { return 'translate(' + d.x + ',' + d.y + ')' })
-            .style('fill', '#b9b9b9')
-
-        nodeLayer = nodeLayerG.selectAll('.nodes')
-          .data(nodes)
-          .enter()
-          .append('circle')
-          .classed('nodes', true)
-          .attr('id', d => `node_${d.index}`)
-          .attr('r', d => Math.sqrt(DataHandler.getLocalMeasure(d, true)) * 0.5 + 1 )
-          .attr('transform', function(d) { return 'translate(' + d.x + ',' + d.y + ')' })
-          .style('fill', d => networkcube.getPriorityColor(d))
-          .on('click', nodeOnClick)
-          .on('mouseover', nodeOnHover)
-          .on('mouseout', nodeOutHover)
-
-         lasso = d3.lasso()
-          .closePathSelect(true)
-          .closePathDistance(100)
-          .items(nodeLayer)
-          .targetArea(nodeLayerG)
-          .on('start', lasso_start)
-          .on('draw', lasso_draw)
-          .on('end', lasso_end)
-        nodeLayerG.call(lasso)
-
-          d3.select('#tmp').remove()
-
-          d3.select('#' + nodelinkSvgId)
-            .call(d3.zoom()
-                .scaleExtent([2 / 3, 10])
-                .on('zoom', function() {
-                  g.attr('transform', d3.event.transform);
-                }))
-          networkcube.addEventListener('localMeasure', m => {
-            nodeBackLayer.attr('r', d => {
-              return Math.sqrt(DataHandler.getLocalMeasure(d, true)) * 0.5 + 1
-            })
-            nodeLayer.attr('r', d => {
-              return Math.sqrt(DataHandler.getLocalMeasure(d)) * 0.5 + 1
-            })
-          })
+      d3.select('#' + nodelinkSvgId)
+        .call(d3.zoom()
+            .scaleExtent([2 / 3, 10])
+            .on('zoom', function() {
+              g.attr('transform', d3.event.transform);
+            }))
+      networkcube.addEventListener('localMeasure', m => {
+        nodeBackLayer.attr('r', d => {
+          return Math.sqrt(DataHandler.getLocalMeasure(d, true)) * 0.5 + 1
+        })
+        nodeLayer.attr('r', d => {
+          return Math.sqrt(DataHandler.getLocalMeasure(d)) * 0.5 + 1
+        })
+      })
   })
   forceLayout.force('link')
     .links(links)
-    networkcube.setDefaultEventListener(function () {
-      console.log('default')
-    })
+    // networkcube.setDefaultEventListener(function () {
+    //   console.log('default')
+    // })
 }
+
 let drawNodeLink = function () {
   // create canvas
+  d3.select('#' + nodelinkSvgId).html('')
   let svg = d3.select('#' + nodelinkSvgId)
     .attr('height', nodelinkHeight)
     .attr('width', nodelinkWidth)
-
   drawLassoConfig(svg)
   drawLayout(svg)
-
   networkcube.addEventListener('timeRange', m => {
     let dg = window.dgraph
     let start = m.startUnix

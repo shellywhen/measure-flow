@@ -8,6 +8,7 @@ let WIDTH
 var dgraph
 export let drawBookmark = function (divId) {
   WIDTH = $(`#${divId}`).innerWidth()
+  d3.select(`#${divId}`).html('')
   dgraph = window.dgraph
   networkcube.setDefaultEventListener(updateLists)
   networkcube.addEventListener('searchResult', searchResultHandler)

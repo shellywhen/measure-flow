@@ -1,7 +1,8 @@
 import * as Nodelink from './nodelinkView.js'
 const timeList = [1, 1000, 1000*60, 1000*60*60, 1000*60*60*24, 1000*60*60*24*7, 1000*60*60*24*30, 1000*60*60*24*365, 1000*60*60*24*365*10+2, 1000*60*60*24*36525, 1000*60*60*24*30*12*1000]
 const timePara = ['milliseconds', 'seconds', 'minutes', 'hours', 'days', 'weeks', 'months', 'years']
-
+const GRANULARITY_name = ['milisecond', 'second', 'minute', 'hour', 'day', 'weekday', 'month', 'year', 'decade', 'century', 'millennium']
+const GRANULARITY_name_normal = ['milisecond', 'second', 'minute', 'hour', 'day', 'week', 'month', 'year', 'decade', 'century', 'millennium']
 export let handleSelect = function (nodeId) {
   if (window.dgraph.nodeSelection.has(nodeId)) deleteNode(nodeId)
   else addNode(nodeId)
@@ -16,13 +17,16 @@ export let getLocalMeasure = function (node, flag=false) {
     startId = 0
     endId = window.dgraph.timeArrays.momentTime.length - 1
   }
+  let res = 0
   switch (window.localMeasure) {
     case 'degree':
       for (let t = startId; t <= endId; t++)
         if(t in neighbors)
           nodes.push(...neighbors[t])
-      return new Set(nodes).size
+      res = new Set(nodes).size
   }
+  let result = res || 1
+  return result
 }
 
 let deleteNode = function (nodeId) {
@@ -120,45 +124,80 @@ export let getRoundEnd = function (start, end) {
   return round.getTime()
 }
 
+export let getSingleBins = function (granId, delta = 1, timeArray = window.dgraph.timeArrays.momentTime) {
+  let para
+  if(granId > 7) {
+    delta = Math.pow(10, granId - 7)
+    para = 'years'
+  }
+  else {
+    para = timePara[granId]
+  }
+  let idx = 0
+  let counter = 0
+  let box = []
+  let roundedStart = window.dgraph.roundedStart
+  let roundedEnd = window.dgraph.roundedEnd
+  for (let timeStamp = roundedStart; timeStamp <= roundedEnd;) {
+    let v = {}
+    v.interval = [-1, -1]
+    v.x0 = new Date(timeStamp)
+    v.x1 = moment(v.x0).add(delta, para)._d
+    timeStamp = new Date(v.x1)
+    if(v.x0 > timeArray[timeArray.length - 1]._i) break
+    if(v.x1 > timeArray[timeArray.length - 1]._i) v.x1 = timeArray[timeArray.length - 1]._d
+    if (timeArray[idx]._i >= v.x0 && timeArray[idx]._i <= v.x1) {
+      v.interval[0] = idx
+      while (timeArray[idx]._i >= v.x0 && timeArray[idx]._i <= v.x1) {
+        v.interval[1] = idx
+        if(idx < timeArray.length - 1) idx ++
+        else break
+      }
+    }
+    if(v.interval[0]!== -1) {
+      v.index = counter
+      box.push(v)
+    }
+    counter++
+  }
+  return {
+    'period': box,
+    'granularity': granId,
+    'delta': delta,
+    'milisecond': moment(0).add(delta, para)._d
+  }
+}
+
 let getBins = function (timeArray, minGran, maxGran) {
   let results = []
   for (let granId = minGran; granId <= maxGran; granId ++) {
-    let delta = 1
-    let para
-    if(granId > 7) {
-      delta = Math.pow(10, granId - 7)
-      para = 'years'
-      console.log(granId)
-    }
-    else {
-      para = timePara[granId]
-    }
-    let result = {'granularity': granId}
-    let idx = 0
-    let box = []
-    let roundedStart = window.dgraph.roundedStart
-    let roundedEnd = window.dgraph.roundedEnd
-    for (let timeStamp = roundedStart; timeStamp <= roundedEnd;) {
-      let v = {}
-      v.interval = [-1, -1]
-      v.x0 = new Date(timeStamp)
-      v.x1 = moment(v.x0).add(delta, para)._d
-      timeStamp = new Date(v.x1)
-      if(v.x1 > timeArray[timeArray.length - 1]._i) v.x1 = timeArray[timeArray.length - 1]._d
-      if (timeArray[idx]._i >= v.x0 && timeArray[idx]._i <= v.x1) {
-        v.interval[0] = idx
-        while (timeArray[idx]._i >= v.x0 && timeArray[idx]._i <= v.x1) {
-          v.interval[1] = idx
-          if(idx < timeArray.length - 1) idx ++
-          else break
-        }
-      }
-      if(v.interval[0]!== -1) box.push(v)
-    }
-    result.period = box
-    results.push(result)
+    let res = getSingleBins(granId)
+    results.push(res)
   }
   return results
+}
+
+export let FourierTransform = function (dots, time) {
+  let FFT = window.FFT
+  let len = time[time.length - 1].index + 1
+  let index = Math.ceil(Math.log2(len))
+  let newlen = Math.pow(2, index)
+  let serie = Array(newlen).fill(0)
+  for(let tid in time) {
+    serie[time[tid].index] = dots[tid].y
+  }
+  let phasors = FFT.fft(serie)
+  let frequencies = FFT.util.fftFreq(phasors, newlen)
+  let magnitudes = FFT.util.fftMag(phasors)
+  // .slice(0, 30).filter(v => v[1]>0)
+  let res  = frequencies.map((f, ix) => {
+    return {frequency: f, magnitude: magnitudes[ix]}
+})
+res.sort((a,b) => b.magnitude - a.magnitude)
+res = res.slice(1, 31)
+//res.sort((a, b) => a.frequency - b.frequency)
+console.log(res, 'phasors')
+return res
 }
 
 export let addGlobalProperty = function (dgraph) {
@@ -168,7 +207,6 @@ export let addGlobalProperty = function (dgraph) {
   let end = timeArray[size - 1]._d
   dgraph.roundedStart = getRoundStart(start, end)
   dgraph.roundedEnd = getRoundEnd(start, end)
-
   dgraph.nodeSelection = new Set()
   dgraph.colorScheme = [
   '#1f78b4',
@@ -184,13 +222,15 @@ export let addGlobalProperty = function (dgraph) {
   '#a6cee3',
   '#b2df8a']
   dgraph.selection = []
+  dgraph.timeArrays.FFTintervals = []
   let intervals = getBins(dgraph.timeArrays.momentTime, dgraph.getMinGranularity(), dgraph.getMaxGranularity())
   dgraph.timeArrays.intervals = intervals
+  dgraph.timeArrays.defalutIntervals = intervals
 }
 
 export let getTimeStamp = function (dgraph = window.dgraph) {
   let timeArray = dgraph.timeArrays.momentTime.map(v => v._i)
-  let gran_min = timeList[dgraph.gran_min + 2]
+  let gran_min = timeList[dgraph.gran_min]
   let timeStamp = timeArray.map((v, i) => {
     if (i === 0) return 0
     return (v - timeArray[i-1])
@@ -207,18 +247,31 @@ export let getTimeStamp = function (dgraph = window.dgraph) {
 export let getSubgraphDgraph = function (dgraph, nodeSet) {
   if (nodeSet.size === dgraph.nodeArrays.links.length) return dgraph
   let dg = {
-    timeArrays: {unixTime: dgraph.timeArrays.unixTime, intervals: dgraph.timeArrays.intervals, momentTime: dgraph.timeArrays.momentTime, links: dgraph.timeArrays.links.map(v => [])},
-    linkArrays: {nodePair: dgraph.linkArrays.nodePair, target: dgraph.linkArrays.target, source: dgraph.linkArrays.source},
-    nodeArrays: {neighbors: dgraph.nodeArrays.neighbors.map(function(v) {
-      return {
-        serie: {}
-      }
-    })},
+    timeArrays: {
+      unixTime: dgraph.timeArrays.unixTime,
+      intervals: dgraph.timeArrays.intervals,
+      momentTime: dgraph.timeArrays.momentTime,
+      links: dgraph.timeArrays.links.map(v => [])},
+    linkArrays: {
+      nodePair: dgraph.linkArrays.nodePair,
+      target: dgraph.linkArrays.target,
+      source: dgraph.linkArrays.source,
+      linkType: dgraph.linkArrays.linkType,
+      weights: dgraph.linkArrays.weights
+    },
+    nodeArrays: {
+      nodeType: dgraph.nodeArrays.nodeType,
+      neighbors: dgraph.nodeArrays.neighbors.map(function(v) {
+        return {  serie: {} }
+    })
+  },
     gran_min: dgraph.gran_min,
     gran_max: dgraph.gran_max,
     timeDelta: dgraph.timeDelta,
     roundedEnd: dgraph.roundedEnd,
-    roundedStart: dgraph.roundedStart
+    roundedStart: dgraph.roundedStart,
+    linkTypeArrays: dgraph.linkTypeArrays,
+    nodeTypeArrays: dgraph.nodeTypeArrays
   }
   dgraph.timeArrays.links.forEach((period, t) => {
     period.forEach(lid => {
@@ -244,4 +297,17 @@ export let getSubgraphDgraph = function (dgraph, nodeSet) {
      }
   }
 return dg
+}
+
+export let generateDateLabel = function (minGran, maxGran) {
+  let data = []
+  for (let i = minGran; i <= maxGran; i ++) {
+    let item = {}
+    item.frequency = timeList[i] / timeList[minGran]
+    item.label = `1 ${GRANULARITY_name_normal[i]}`
+    item.granularity = i
+    item.value = 1
+    data.push(item)
+  }
+  return data
 }

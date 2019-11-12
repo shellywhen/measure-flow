@@ -126,7 +126,9 @@ let getNumberOfLinks = function (dgraph, interval) {
   for (let itv of interval) {
     let sum = 0
     for (let t = itv[0]; t <= itv[1]; t ++) { // aggregation
-      sum += dgraph.timeArrays.links[t].length
+      dgraph.timeArrays.links[t].forEach(function (lid) {
+          sum += d3.sum(Object.values(dgraph.linkArrays.weights[lid].serie))
+      })
     }
     dots.push({
       'timeStart': dgraph.timeArrays.momentTime[itv[0]]._d,
@@ -372,6 +374,7 @@ let drawTimeLine = function () {
       'dots': linkPairNumber[i].dots.map(function (linkpair, idx) {
         let nodenumber = nodeNumber[i].dots[idx]
         let dense = 2 * linkpair.y / (nodenumber.y * (nodenumber.y - 1))
+        if (Number.isNaN(dense)) dense=0
         return {
           'timeStart': linkpair.timeStart,
           'timeEnd': linkpair.timeEnd,
@@ -401,7 +404,7 @@ let drawTimeLine = function () {
   drawCollapseTimeLine(7, component, 'connectedComponent', 'Connected Components', xScale)
 }
 
-let getProcessedData = function (dg, intervals, action) {
+export let getProcessedData = function (dg, intervals, action) {
   return intervals.map((v, i) => {
     let result = action(dg, v.period.map(m => m.interval))
     result.forEach((m, j) => {
@@ -410,15 +413,82 @@ let getProcessedData = function (dg, intervals, action) {
     })
     return {
       'granularity': v.granularity,
-      'dots': result
+      'dots': result,
+      'milisecond': v.milisecond
     }
   })
 }
+let getSingleNodeStat = function (dgraph, intervals, type) {
+  return intervals.map((v, i) => {
+    let interval = v.period.map(m => m.interval)
+    let result = []
+    for (let itv of interval) {
+      let nodes = new Set()
+      for (let t = itv[0]; t <= itv[1]; t ++) { // aggregation
+        let links = dgraph.timeArrays.links[t]
+        for(let lid of links) {
+          let src = dgraph.linkArrays.source[lid]
+          let dst = dgraph.linkArrays.target[lid]
+          if (dgraph.nodeArrays.nodeType[src] === type) nodes.add(src)
+          if (dgraph.nodeArrays.nodeType[dst] === type) nodes.add(dst)
+        }
+      }
+      result.push(dataWrapper(dgraph, itv, nodes.size))
+    }
+    return {
+      'granularity': v.granularity,
+      'dots': result,
+      'milisecond': v.milisecond
+    }
+  })
 
-let getData = function (dgraph) {
+}
+let getSingleLinkStat = function (dgraph, intervals, type) {
+  return intervals.map((v, i) => {
+    let interval = v.period.map(m => m.interval)
+    let result = []
+    for (let itv of interval) {
+      let sum = 0
+      for (let t = itv[0]; t <= itv[1]; t ++) { // aggregation
+        let links = dgraph.timeArrays.links[t]
+        for(let lid of links) {
+          let linkType = dgraph.linkArrays.linkType[lid]
+          if (linkType === type) {
+            sum += d3.sum(Object.values(dgraph.linkArrays.weights[lid].serie))
+          }
+        }
+      }
+      result.push(dataWrapper(dgraph, itv, sum))
+    }
+    return {
+      'granularity': v.granularity,
+      'dots': result,
+      'milisecond': v.milisecond
+    }
+  })
+
+}
+export let getLinkStat= function (dgraph, intervals = dgraph.timeArrays.intervals, typeList  = dgraph.linkTypeArrays.names) {
+  let res = {}
+  typeList.forEach(typename => {
+    let data = getSingleLinkStat(dgraph, intervals, typename)
+    res[typename] = data
+  })
+  return res
+}
+
+export let getNodeStat = function (dgraph, intervals = dgraph.timeArrays.intervals, typeList  = dgraph.nodeTypeArrays.names) {
+  let res = {}
+  typeList.forEach(typename => {
+    let data = getSingleNodeStat(dgraph, intervals, typename)
+    res[typename] = data
+  })
+  return res
+}
+
+let getData = function (dgraph, intervals = [], measureList =  ['nodeNumber', 'linkNumber', 'linkPairNumber', 'density', 'activation', 'redundancy', 'volatility', 'component']) {
   let dg = dgraph
-  let intervals = dg.timeArrays.intervals
-
+  if (intervals.length === 0)  intervals = dg.timeArrays.intervals
   // test part
   let nodeNumber = getProcessedData(dg, intervals, getNumberOfNodes)
   let linkPairNumber = getProcessedData(dg, intervals, getNumberOfLinkPairs)
@@ -515,6 +585,40 @@ let getComponentDuring =function (startId, endId, dgraph, nodes) {
   return group.size
 }
 
+let getLinkTypesDuring = function (startId, endId, dgraph) {
+  let result = {}
+  dgraph.linkTypeArrays.name.forEach(name => {
+    let sum = 0
+    for (let t = startId; t <= endId; t ++) { // aggregation
+      dgraph.timeArrays.links[t].forEach(lid => {
+        let linkType = dgraph.linkArrays.linkType[lid]
+        if (linkType === name)
+         sum += d3.sum(Object.values(dgraph.linkArrays.weights[lid].serie))
+      })
+    }
+    result[`linkType_${name}`] = sum
+  })
+  return result
+}
+
+let getNodeTypesDuring = function (startId, endId, dgraph) {
+  let result = {}
+  dgraph.nodeTypeArrays.name.forEach(name => {
+    let nodes = new Set()
+    for (let t = startId; t <= endId; t ++) {
+      let links = dgraph.timeArrays.links[t]
+      for(let lid of links) {
+        let src = dgraph.linkArrays.source[lid]
+        let dst = dgraph.linkArrays.target[lid]
+        if (dgraph.nodeArrays.nodeType[src] === type) nodes.add(src)
+        if (dgraph.nodeArrays.nodeType[dst] === type) nodes.add(dst)
+      }
+    }
+    result[`nodeType_${name}`] = nodes.size
+  })
+  return result
+}
+
 let getIntervalData = function (dgraph, startId, endId) {
   let prevNodes = getNodesDuring (0, Math.max(0, startId - 1), dgraph)
   let currNodes = getNodesDuring (startId, endId, dgraph)
@@ -533,6 +637,14 @@ let getIntervalData = function (dgraph, startId, endId) {
   let result = {
     nodeNumber, linkNumber, linkPairNumber, density, redundancy, activation, volatility, component
   }
+  let linkTypes = getLinkTypesDuring (startId, endId, dgraph)
+  Object.keys(linkTypes).forEach(k => {
+    result[k] = linkTypes[k]
+  })
+  let nodeTypes = getNodeTypesDuring (startId, endId, dgraph)
+  Object.keys(nodeTypes).forEach(k => {
+    result[k] = linkTypes[k]
+  })
   return result
 }
 

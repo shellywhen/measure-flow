@@ -21,6 +21,18 @@ import * as Kde from  './kdeView.js'
 import * as Heatmap from './heatmapView.js'
 import * as Measure from './measureView.js'
 import * as DataHandler from './dataHandler.js'
+import * as Interval from './intervalConfig.js'
+async function loadFFT(){
+  let res = await load('fft-js').then(fft => {
+      window.FFT = fft
+    })
+  return res
+}
+
+String.prototype.capitalize = function() {
+    return this.charAt(0).toUpperCase() + this.slice(1);
+}
+
 let linkSchema1 = {  source: 0,
                     target: 3,
                     weight: 6,
@@ -61,8 +73,7 @@ let linkSchema5 = {
 let linkSchema7 = {
   source: 1,
   target: 2,
-  time: 5,
-  linkType: 3
+  time: 5
 }
 const configMap = {
   'scientists': [linkSchema1, 'DD/MM/YYYY'],
@@ -81,46 +92,64 @@ let url = `${domain}${dataFolder}/${dataFileName}.csv`
 console.log('find data in ', url)
 // load data file with the above link schema
 let dataset = networkcube.loadLinkTable(url, afterLoadedData, config[0], ',', config[1])
-
 // create a session for this data set.
-function afterLoadedData(dataset) {
+async function afterLoadedData(dataset) {
+    await loadFFT()
     dataset.name = dataFileName
     // import data into browser's localstorage.
     networkcube.importData(session, dataset)
     window.dgraph = networkcube.getDynamicGraph(dataset.name, session)
-    DataHandler.addGlobalProperty(window.dgraph)
-  //  DataHandler.getSubgraphDgraph(window.dgraph, new Set([0,1,2,3,4,5,6,7,8,9]))
-    // TimeLine.drawTimeLine()
-    Measure.drawMeasureList('measureFrame')
-  //  TimeSlider.drawTimeSlider(Measure.WIDTH_LEFT, Measure.WIDTH_MIDDLE)
-    //Box.drawBox()
-    // Kde.drawKde('timelineFrame')
+    afterData()
+}
 
-  //  Heatmap.drawHeatmap('heatmapFrame')
-    NodeLink.drawNodeLink()
-    //
-  //  Stat.drawStatView('radarDiv')
-    Config.drawConfigs()
-    Bookmark.drawBookmark('selection-config')
-    networkcube.addEventListener('subgraph', function (m) {
-      let dg = window.dgraph
-      let id = dg.selection.length
-      let selection = m.body
-      let subgraph = DataHandler.getSubgraphDgraph(dg,selection)
-      let dotList = TimeLine.getData(subgraph)
-      console.log(selection)
-      let selectionList = Array.from(selection)
-      let newSelection = {
-        'id': id,
-        'color': dg.colorScheme[id],
-        'idList': selectionList.map(v=>v.index),
-        'active': true,
-        'dotList': dotList,
-        'dgraph': subgraph
-      }
-      dg.selection.push(newSelection)
-      console.log(dg.selection)
-      Measure.drawMeasureList('measureFrame', dg)
+window.afterData = function () {
+  let dgraph = window.dgraph
+   DataHandler.addGlobalProperty(dgraph)
+//  DataHandler.getSubgraphDgraph(window.dgraph, new Set([0,1,2,3,4,5,6,7,8,9]))
+  // TimeLine.drawTimeLine()
+//  TimeSlider.drawTimeSlider(Measure.WIDTH_LEFT, Measure.WIDTH_MIDDLE)
+  //Box.drawBox()
+  // Kde.drawKde('timelineFrame')
+
+//  Heatmap.drawHeatmap('heatmapFrame')
+  NodeLink.drawNodeLink()
+  Measure.drawMeasureList('measureFrame')
+  //
+//  Stat.drawStatView('radarDiv')
+  Config.drawConfigs()
+  Bookmark.drawBookmark('selection-config')
+  Interval.drawIntervalConfig('config-interval', dgraph)
+  networkcube.addEventListener('subgraph', function (m) {
+    let dg = window.dgraph
+    let id = dg.selection.length
+    let selection = m.body
+    let subgraph = DataHandler.getSubgraphDgraph(dg,selection)
+    let dotList = TimeLine.getData(subgraph)
+    let linkTypeDotList = TimeLine.getLinkStat(subgraph, dg.timeArrays.intervals, dg.linkTypeArrays.name)
+    Object.keys(linkTypeDotList).forEach(function(name){
+      dotList[`linkType_${name}`] = linkTypeDotList[name]
     })
+    let nodeTypeDotList = TimeLine.getNodeStat(subgraph, dg.timeArrays.intervals, dg.nodeTypeArrays.name)
+    Object.keys(nodeTypeDotList).forEach(function(name){
+      dotList[`linkType_${name}`] = linkTypeDotList[name]
+    })
+    let selectionList = Array.from(selection)
+    let newSelection = {
+      'id': id,
+      'color': dg.colorScheme[id],
+      'idList': selectionList.map(v=>v.index),
+      'active': true,
+      'dotList': dotList,
+      'dgraph': subgraph
+    }
+    dg.selection.push(newSelection)
+    Measure.drawMeasureList('measureFrame', dg)
+  })
 
+}
+
+window.resetInterval = function () {
+  Measure.drawMeasureList('measureFrame')
+  Config.drawConfigs()
+  Bookmark.drawBookmark('selection-config')
 }

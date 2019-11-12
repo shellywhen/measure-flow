@@ -73,12 +73,14 @@ export let drawKde = function (divId) {
 
 export let kde = function (kernel, thresholds, summary, timeValue) {
   let datasize = summary.reduce((a, b) => a + b, 0)
+  if(datasize == 0) console.log('shit', summary)
   let ans = thresholds.map(t => {
     let total = 0
     summary.forEach((v, i) => {
       total += v * kernel(t - timeValue[i])
     })
-    return {x: t, y: total / datasize}
+    let y = total / datasize || 0   // NOtice that datasize might be 0
+    return {x: t, y: y}
   })
   return ans
 
