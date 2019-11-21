@@ -15,6 +15,7 @@ const PADDING = {
 }
 const paddingRate = 0.1
 let GLOBAL_ACTIVE_FRAME = null
+let GLOBAL_ACTIVE_LABEL = null
 let shiftSliderCallback = function () {
 
   $('#shift-slider-value').val(str);
