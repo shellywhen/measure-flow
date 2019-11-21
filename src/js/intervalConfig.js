@@ -3,7 +3,7 @@ import * as Calculator from './measureCalculator.js'
 const GRANULARITY_name_normal = ['milisecond', 'second', 'minute', 'hour', 'day', 'week', 'month', 'year', 'decade', 'century', 'millennium']
 let GRANULARITY_names = ['miliseconds', 'seconds', 'minutes', 'hours', 'days', 'weeks', 'months', 'years', 'decades', 'centuries', 'millenniums']
 const timeList = [1, 1000, 1000*60, 1000*60*60, 1000*60*60*24, 1000*60*60*24*7, 1000*60*60*24*30, 1000*60*60*24*365, 1000*60*60*24*30*12*10, 1000*60*60*24*30*12*100, 1000*60*60*24*30*12*1000]
-const minHeight = window.innerHeight / 20
+const minHeight = window.innerHeight / 15
 const paraList = ['milliseconds', 'seconds', 'minutes', 'hours', 'days', 'weeks', 'months', 'years']
 let current = []
 let dg
@@ -95,9 +95,10 @@ let addMoreIntervals = function (shift = 0) {
   let datum = getDatum(val, granId, shift)
   current.push(datum)
   drawSpan(datum)
-  if(GLOBAL_ACTIVE_FRAME) {
+  console.log('glbalactive', GLOBAL_ACTIVE_FRAME)
+  if(GLOBAL_ACTIVE_FRAME!=null) {
     let intervals = DataHandler.getSingleBins(granId, val)
-    let data = dg.selection.length > 0 ? dg.selection.map(v => Calculator.getSingleData(v.dgraph, intervals, GLOBAL_ACTIVE_LABEL)) : [Calculator.getSingleData(dg, intervals, )]
+    let data = dg.selection.length > 0 ? dg.selection.map(v => Calculator.getSingleData(v.dgraph, intervals, GLOBAL_ACTIVE_LABEL)) : [Calculator.getSingleData(dg, intervals, GLOBAL_ACTIVE_LABEL)]
     console.log('data success line 100', data)
     networkcube.sendMessage('slotData', {
       data: data,

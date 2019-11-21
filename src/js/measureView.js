@@ -1370,7 +1370,7 @@ TimeSlider.prototype.updateInterval = function (interval) {
     .attr('width', d => 2)
     .attr('y', 0)
     .attr('height', 6)
-    .style('fill', 'lightcyan')
+    .style('fill', 'blue')
     .style('stroke', 'white')
     .style('stroke-width', '0.5px')
     .style('opacity', 1)
@@ -1796,19 +1796,19 @@ Frame.prototype.drawMeasureOvertime = function () {
 }
 Frame.prototype.drawExternalSvg = function (data) {
   let self = this
-  let g = this.select('.fft-result')
-  data.forEach((datum, idx) => {
+  let g = this.canvas.select('.fft-result')
+  data.forEach(function(datum, idx){
     let bg = g.append('g')
      .attr('transform', `translate(0,${idx * svgHeight + MARGIN.top})`)
      .attr('clip-path', `url(#clip_${idx}_${self.index})`)
-    let maxY = d3.max(datum.map(v => d3.max(v.dots, d => d.y)))
-    if(this.fftYscale[idx]) {
-      maxY = Math.max(this.fftYscale[idx].domain()[1], maxY)
+    let maxY = d3.max(datum.dots.map(v => v.y))
+    if(self.fftYscale[idx]) {
+      maxY = Math.max(self.fftYscale[idx].domain()[1], maxY)
     }
-    let ySclae = d3.scaleLinear().domain([0, maxY]).range([svgHeight, 0])
-    this.fftYscale[idx] = yScale
+    let yScale = d3.scaleLinear().domain([0, maxY]).range([svgHeight, 0])
+    self.fftYscale[idx] = yScale
     bg.selectAll('rect')
-     .data(datum)
+     .data(datum.dots)
      .enter()
      .append('rect')
      .attr('x', d => xScale(d.timeStart))
@@ -1818,7 +1818,7 @@ Frame.prototype.drawExternalSvg = function (data) {
        let value = (xScale(d.timeEnd) - xScale(d.timeStart))
        return Math.max(value, 1)
      })
-     .style('fill', color)
+     .style('fill', 'gray')
      .style('opacity', 0.5)
 
    g.select('.y-axis').html('')
@@ -1852,6 +1852,7 @@ let initInterval = function (msg) {
    timeslider.updateInterval(timeSlot)
 }
 let addBars = function (msg) {
+  console.log(msg, 'addBars')
   let m = msg.body
   let frame = FRAME_INFO[m.index]
   if(!m.flag) {
