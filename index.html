@@ -26,6 +26,7 @@
   </script>
   <script type="module" src="./src/js/main.js"></script>
   <script src="./lib/js/jquery-3.4.1.min.js"></script>
+  <script src="./lib/js/jquery-ui.js"></script>
   <script src="./lib/js/popper.min.js"></script>
   <script src="./lib/js/d3.v5.min.js"></script>
   <script src="./lib/js/d3-lasso.min.js"></script>
@@ -107,7 +108,7 @@
             <div>
               <div class="md-form m-1" style="width: 30%;">
                 <input type="text" id="timeFormatInput" class="form-control">
-                <label for="timeFormatInput">Time Format (e.g. DD-MM-YY)</label>
+                <label for="timeFormatInput"><a target="_blank" href="https://momentjs.com/docs/#/parsing/string-format/">Time Format</a></label>
               </div>
               <div id="linkTableDiv" class="scrollbar scrollbar-sunny-morning thin" style="overflow-x: scroll;">
               </div>
@@ -137,11 +138,14 @@
         <!-- <div id="timesliderFrame">
         </div> -->
         <!-- <div class="scrollbar scrollbar-sunny-morning thin" id="measureFrame"> -->
-        <div id="measureFrame">
-        </div>
-        <div id="linkTypeFrame">
-        </div>
-        <div id="nodeTypeFrame">
+        <div id="outer-measureFrame">
+          <div id="timeSliderFrame"></div>
+          <div id="measureFrame" class="sortable">
+          </div>
+          <div id="linkTypeFrame">
+          </div>
+          <div id="nodeTypeFrame">
+          </div>
         </div>
         <!-- <div id="boxFrame">
         </div> -->
@@ -156,6 +160,7 @@
           <svg id="nodelink">
           </svg>
         </div>
+
         <div class="outer mt-2" id="scatterFrame">
           <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item">
@@ -179,7 +184,7 @@
                   <div class="row p-0">
                     <div class="col-6 m-0  md-form">
                       <input type="text" id="interval-value-input" class="form-control pt-0">
-                      <label for="interval-value-input" class="pl-3">Numerical Value</label>
+                      <label for="interval-value-input" class="pl-3"></label>
                     </div>
                     <div class="col-4 mt-1 ml-0 mb-0 mr-0 p-0">
                       <select class="form-control form-control-sm" id="granularity-selection">
@@ -191,18 +196,32 @@
                   </div>
 
                   <div>
-                    <p class="mt-2 mb-1" style="font-size: 1rem">Interval Selection:</p>
+                    <div class="row p-0 m-0">
+                      <div class="col-7 p-0 m-0">
+                          <p class="mt-2 mb-1" style="font-size: 1rem">Interval Selection:</p>
+                      </div>
+                      <div class="col-3 p-0 mt-1">
+                        <input type="range" step="0.01" min="-0.5" max="0.5" value="0" class="slider" id="config-shift">
+                      </div>
+                      <div class="col-2 p-0 m-0" id="shift-slider-value">
+
+                      </div>
+                    </div>
                     <div id="interval-selection-display"></div>
                   </div>
                 </div>
-                <div style="text-align: center;  position: absolute; bottom: 10px; width:100%;" class="row">
-                  <div class="col-6"><button type="button" class="btn btn-outline-info btn-sm z-depth-0 p-1 m-0" id="resetInterval"><i class="fas fa-check-square"></i>Apply</button></div>
-                  <div class="col-6"><button type="button" class="btn btn-outline-info btn-sm z-depth-0 p-1 m-0" id="restoreInterval"><i class="fas fa-undo"></i>Reset</button></div>
-                </div>
-                </div>
+                <div id="fft-result-div" style="width:100%;">
 
+                </div>
+                <div style="text-align: center;  position: absolute; bottom: 10px; width:100%;" class="row">
+                  <div class="col-4"><button type="button" class="btn btn-outline-info btn-sm z-depth-0 p-1 m-0" id="resetInterval"><i class="fas fa-vial"></i>Test</button></div>
+                    <div class="col-4"><button type="button" class="btn btn-outline-info btn-sm z-depth-0 p-1 m-0" id="resetInterval"><i class="fas fa-check-square"></i>Apply</button></div>
+                  <div class="col-4"><button type="button" class="btn btn-outline-info btn-sm z-depth-0 p-1 m-0" id="restoreInterval"><i class="fas fa-undo"></i>Reset</button></div>
+                </div>
               </div>
+
             </div>
+
 
             <div class="tab-pane fade" id="scatterConfigDiv" role="tabpanel" aria-labelledby="scatter-config-tab">
               <div id="config-scatter" class="config p-4">
@@ -271,15 +290,8 @@
         </div>
       </div>
     </div>
-  </div>
-
-  <!-- <div id="heatmapFrame">
-  </div> -->
-  </div>
-  <div id="detailedTimeline" class="mymodal z-depth-1">
-
     <!-- Modal content -->
-    <div id="modal-content" class="mymodal-content">
+    <!-- <div id="modal-content" class="mymodal-content">
       <span class="close">&times;</span>
       <h3 id="modal-title"></h3>
       <svg id="detailedSVG"></svg>
@@ -299,9 +311,19 @@
       </div>
       <svg id="detailTimeline"></svg>
       <p>Note that frequency 0 with the highest magnitude is dropped.</p>
+    </div> -->
+    <div id="detailedTimeline" class="mymodal z-depth-1">
     </div>
-
   </div>
+
+  <!-- <div id="heatmapFrame">
+  </div> -->
+
+
+
+
+
+
 </body>
 <script>
   function showDataConfig() {
@@ -364,6 +386,9 @@
         }
       }
     })
+   $("#measureFrame").sortable({
+     handle: '.handle'
+   })
   })
 </script>
 

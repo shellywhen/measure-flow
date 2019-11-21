@@ -99,7 +99,10 @@ let getDensity = function (dg, interval) {
   let linkPairNumber = getProcessedData(dg, [interval], getNumberOfLinkPairs)[0]
   let densityDots = nodeNumber.dots.map((nodenumber, nodeidx) => {
     let linkpair = linkPairNumber.dots[nodeidx]
-    let value = 2 * linkpair.y / (nodenumber.y * (nodenumber.y - 1))
+    let currentPossible =  nodenumber.y * (nodenumber.y - 1) / 2
+    let totalNode = dg.nodeArrays.length
+    let totalPossible = totalNode * (totalNode - 1) / 2
+    let value = linkpair.y / totalPossible
     value = Number.isNaN(value)? 0 : value
     return {
       'timeStart': nodenumber.timeStart,

@@ -1,0 +1,1075 @@
+nl;contrat_code;contrat_code_lieu;contrat_annee;contrat_chantier;contrat_lieu;contrat_fonction;contrat_code_fonction;contrat_okfonction;ind_label;ind_num;ind_nom;ind_prenom;ind_Code_PR;ind_Origlx_std;ind_Code_Origlx
+1;C1715_03_003;CA;1715;casale fiume po;casale;I1;I;;45 Bertola A. (NS/ING);45;bertola;antonio;ING;;NS
+2;C1715_03_006;VAL;1715;valenza fortificazioni;valenza;I1;I;;45 Bertola A. (NS/ING);45;bertola;antonio;ING;;NS
+3;C1713_01_252;BR;1713;brunetta;brunetta;I1;I;;45 Bertola A. (NS/ING);45;bertola;antonio;ING;;NS
+4;C1713_01_256;BR;1713;brunetta;brunetta;I1;I;;45 Bertola A. (NS/ING);45;bertola;antonio;ING;;NS
+5;C1713_01_271;TO;1713;torino castello di rivoli;torino;I1;I;;45 Bertola A. (NS/ING);45;bertola;antonio;ING;;NS
+6;C1711_01_001;BRDE;1711;brunetta e demonte;brunetta e demonte;I1;I;;45 Bertola A. (NS/ING);45;bertola;antonio;ING;;NS
+7;C1713_01_241;VAL;1713;valenza fortificazioni;valenza;I1;I;;45 Bertola A. (NS/ING);45;bertola;antonio;ING;;NS
+8;C1711_01_047;TO;1711;torino città e cittadella;torino;I1;I;;45 Bertola A. (NS/ING);45;bertola;antonio;ING;;NS
+9;C1713_01_220;PIN;1713;pinerolo arsenale;pinerolo;I1;I;;45 Bertola A. (NS/ING);45;bertola;antonio;ING;;NS
+10;C1711_01_057;BR;1711;brunetta;brunetta;I1;I;;45 Bertola A. (NS/ING);45;bertola;antonio;ING;;NS
+11;C1712_01_061;BR;1712;brunetta;brunetta;I1;I;;45 Bertola A. (NS/ING);45;bertola;antonio;ING;;NS
+12;C1712_01_073;DE;1712;demonte;demonte;I1;I;;45 Bertola A. (NS/ING);45;bertola;antonio;ING;;NS
+13;C1712_01_076;AL;1712;alessandria fortificazioni;alessadria;I1;I;;45 Bertola A. (NS/ING);45;bertola;antonio;ING;;NS
+14;C1714_02_019;MOR;1714;mortara fortificazioni;mortara;I1;I;;45 Bertola A. (NS/ING);45;bertola;antonio;ING;;NS
+15;C1714_02_027;BR;1714;brunetta;brunetta;I1;I;;45 Bertola A. (NS/ING);45;bertola;antonio;ING;;NS
+16;C1711_01_008;VALAL;1711;valenza e alessandria;valenza e alessandria;I1;I;;45 Bertola A. (NS/ING);45;bertola;antonio;ING;;NS
+17;C1713_01_151;BR;1713;brunetta;brunetta;I1;I;;45 Bertola A. (NS/ING);45;bertola;antonio;ING;;NS
+18;C1712_01_085;TO;1712;torino cittadella;torino;I1;I;;45 Bertola A. (NS/ING);45;bertola;antonio;ING;;NS
+19;C1712_01_091;CA;1712;casale fiume po;casale;I1;I;;45 Bertola A. (NS/ING);45;bertola;antonio;ING;;NS
+20;C1712_01_095;IV;1712;ivrea forte e castello;ivrea;I1;I;;45 Bertola A. (NS/ING);45;bertola;antonio;ING;;NS
+21;C1712_01_099;MOR;1712;mortara fortificazioni;mortara;I1;I;;45 Bertola A. (NS/ING);45;bertola;antonio;ING;;NS
+22;C1712_01_103;TO;1712;torino cittadella;torino;I1;I;;45 Bertola A. (NS/ING);45;bertola;antonio;ING;;NS
+23;C1713_01_248;CA;1713;casale castello;casale;I1;I;;45 Bertola A. (NS/ING);45;bertola;antonio;ING;;NS
+24;C1712_01_119;TO;1712;torino cittadella;torino;I1;I;;45 Bertola A. (NS/ING);45;bertola;antonio;ING;;NS
+25;C1711_01_054;BR;1711;brunetta;brunetta;I1;I;;45 Bertola A. (NS/ING);45;bertola;antonio;ING;;NS
+26;C1713_01_168;AL;1713;alessandria bastione;alessadria;I1;I;;45 Bertola A. (NS/ING);45;bertola;antonio;ING;;NS
+27;C1713_01_174;TO;1713;torino cittadella;torino;I1;I;;45 Bertola A. (NS/ING);45;bertola;antonio;ING;;NS
+28;C1713_01_178;TO;1713;torino caserma della cittadella;torino;I1;I;;45 Bertola A. (NS/ING);45;bertola;antonio;ING;;NS
+29;C1713_01_198;TO;1713;torino porta susina;torino;I1;I;;45 Bertola A. (NS/ING);45;bertola;antonio;ING;;NS
+30;C1713_01_210;TO;1713;torino cittadella;torino;I1;I;;45 Bertola A. (NS/ING);45;bertola;antonio;ING;;NS
+31;C1713_01_216;TO;1713;torino cittadella;torino;I1;I;;45 Bertola A. (NS/ING);45;bertola;antonio;ING;;NS
+32;C1712_01_112;VERR;1712;verrua e asti forte;verrua;I1;I;;45 Bertola A. (NS/ING);45;bertola;antonio;ING;;NS
+33;C1714_02_001;TO;1714;torino castello di rivoli;torino;I1;I;;45 Bertola A. (NS/ING);45;bertola;antonio;ING;;NS
+34;C1715_03_014;TO;1715;torino cittadella;torino;I1;I;;45 Bertola A. (NS/ING);45;bertola;antonio;ING;;NS
+35;C1716_03_104;BR;1716;brunetta;brunetta;I1;I;;45 Bertola A. (NS/ING);45;bertola;antonio;ING;;NS
+36;C1711_01_038;CA;1711;casale citta e castello;casale;I1;I;;45 Bertola A. (NS/ING);45;bertola;antonio;ING;;NS
+37;C1716_03_095;CA;1716;casale castello;casale;I1;I;;45 Bertola A. (NS/ING);45;bertola;antonio;ING;;NS
+38;C1716_03_090;TO;1716;torino cittadella;torino;I1;I;;45 Bertola A. (NS/ING);45;bertola;antonio;ING;;NS
+39;C1714_02_053;AL;1714;alessandria fortificazioni;alessadria;I1;I;;45 Bertola A. (NS/ING);45;bertola;antonio;ING;;NS
+40;C1716_03_085;VALAL;1716;valenza e alessandria fortificazioni;valenza e alessandria;I1;I;;558 Brum A. (PI/NS);45;bertola;antonio;ING;;NS
+41;C1730_19_174;FE;1730;fenestrelle;fenestrelle;A1;A;ok;517 Peraldo C. (BI/NS);558;brum;abramo;NS;mentoulle, val chisone;PI
+42;C1730_19_179;FE;1730;fenestrelle;fenestrelle;S1;S;ok;516 Peraldo B. (BI/NS);517;peraldo;carlo;NS;pie di cavallo, andorno BI;BI
+43;C1730_19_179;FE;1730;fenestrelle;fenestrelle;S2;S;ok;519 Peraldo G. (BI/NS);516;peraldo;bernardo;NS;pie di cavallo, andorno BI;BI
+44;C1730_19_179;FE;1730;fenestrelle;fenestrelle;G1;G;ok;518 Peraldo G. (BI/NS);519;peraldo;gio detto vercellotto;NS;pie di cavallo, andorno BI;BI
+45;C1730_19_179;FE;1730;fenestrelle;fenestrelle;A1;A;ok;86 Cantone D. (TO C/CM_B);518;peraldo;gio detto toniò;NS;pie di cavallo, andorno BI;BI
+46;C1730_19_182;TO;1730;torino regia università;torino;S1;S;ok;525 Rachetto G. (TO C/NS);86;cantone;domenico;CM_B;torino;TO C
+47;C1730_19_182;TO;1730;torino regia università;torino;G1;G;ok;469 Ferrero A. (BI/NS);525;rachetto;gio domenico;NS;torino;TO C
+48;C1730_19_182;TO;1730;torino regia università;torino;A1;A;ok;360 Toniaca L. (LU/CM_M);469;ferrero;antonio;NS;graglia BI;BI
+49;C1730_19_186;TO;1730;torino regia accademia;torino;S1;S;ok;139 Fontana D. (MI/IMP);360;toniaca;ludovico;CM_M;lugano;LU
+50;C1730_19_186;TO;1730;torino regia accademia;torino;S2;S;ok;523 Pizzoni G. (MI/NS);139;fontana;domenico;IMP;valsolda stato di milano;MI
+51;C1730_19_186;TO;1730;torino regia accademia;torino;G1;G;ok;473 Fontana G. (MI/NS);523;pizzoni;giacomo antonio;NS;drano, valsolda;MI
+52;C1730_19_186;TO;1730;torino regia accademia;torino;A1;A;ok;248 Parodi G. (GE/CM_P);473;fontana;giacomo;NS;valsolda stato di milano;MI
+53;C1730_19_190;SUP;1730;superga reale chiesa;superga;S1;S;ok;420 Bonino P. (TO C/NS);248;parodi;gio batta;CM_P;genova;GE
+54;C1730_19_190;SUP;1730;superga reale chiesa;superga;G1;G;ok;411 Bignotti G. (MI/NS);420;bonino;pietro domenico;NS;torino;TO C
+55;C1730_19_190;SUP;1730;superga reale chiesa;superga;A1;A;ok;402 Bello G. (BI/NS);411;bignotti;gio pietro;NS;valsolda stato di milano;MI
+56;C1730_19_199;SUP;1730;superga reale fabrica;superga;S1;S;ok;86 Cantone D. (TO C/CM_B);402;bello;giorgio;NS;valle d'andorno;BI
+57;C1730_19_199;SUP;1730;superga reale fabrica;superga;G1;G;ok;470 Ferrero C. (TO C/NS);86;cantone;domenico;CM_B;torino;TO C
+58;C1730_19_199;SUP;1730;superga reale fabrica;superga;A1;A;ok;124 Demichelis G. (NS/M_F);470;ferrero;carlo giuseppe;NS;torino;TO C
+59;C1730_19_201;BR;1730;brunetta;brunetta;S1;S;ok;344 Sino B. (NS/M_F);124;demichelis;guglielmo;M_F;;NS
+60;C1730_19_201;BR;1730;brunetta;brunetta;G1;G;ok;421 Borioli G. (NS/NS);344;sino;bartolomeo;M_F;;NS
+61;C1730_19_201;BR;1730;brunetta;brunetta;A1;A;ok;545 Teppa L. (VL/NS);421;borioli;giulio;NS;;NS
+62;C1730_19_205;TO;1730;torino reale accademia;torino;S1;S;ok;436 Chianale G. (NS/NS);545;teppa;lorenzo giacinto;NS;valle di lanzo;VL
+63;C1730_19_209;FE;1730;fenestrelle;fenestrelle;S1;S;ok;484 Giordano C. (Vsu/NS);436;chianale;giuseppe;NS;;NS
+64;C1730_19_214;EX;1730;exilles;exilles;S1;S;ok;412 Bior G. (AO/NS);484;giordano;claudio;NS;giaglione, val di susa;Vsu
+65;C1730_19_214;EX;1730;exilles;exilles;S2;S;ok;539 Rusca G. (LU/IMP);412;bior;gaspare;NS;chamois, savoia AO;AO
+66;C1730_19_214;EX;1730;exilles;exilles;S3;S;ok;485 Giordano V. (Vsu/NS);539;rusca;gio santo;IMP;rovio, luganese;LU
+67;C1730_19_214;EX;1730;exilles;exilles;G1;G;ok;404 Benit M. (Vsu/negoziante);485;giordano;vincenzo;NS;giaglione, val di susa;Vsu
+68;C1730_19_214;EX;1730;exilles;exilles;A1;A;ok;248 Parodi G. (GE/CM_P);404;benit;michelle;negoziante;susa;Vsu
+69;C1730_19_221;SUP;1730;superga;superga;S1;S;ok;420 Bonino P. (TO C/NS);248;parodi;gio batta;CM_P;genova;GE
+70;C1730_19_221;SUP;1730;superga;superga;G1;G;ok;487 Giudice C. (MI/M);420;bonino;pietro domenico;NS;torino;TO C
+71;C1730_19_221;SUP;1730;superga;superga;A1;A;ok;457 De Stefanis G. (BI/NS);487;giudice;carlo;M;stato di milano;MI
+72;C1730_19_227;SUP;1730;superga;superga;S1;S;ok;454 Crosa C. (BI/NS);457;de stefanis;gio;NS;graglia BI;BI
+73;C1730_19_227;SUP;1730;superga;superga;G1;G;ok;455 Crosa G. (BI/NS);454;crosa;carlo;NS;graglia BI;BI
+74;C1730_19_227;SUP;1730;superga;superga;A1;A;ok;545 Teppa L. (VL/NS);455;crosa;giuseppe;NS;graglia BI;BI
+75;C1730_19_229;TO;1730;torino regio arsenale;torino;S1;S;ok;450 Coha P. (PI/notaio);545;teppa;lorenzo giacinto;NS;valle di lanzo;VL
+76;C1730_19_229;TO;1730;torino regio arsenale;torino;G1;G;ok;77 Bussolino F. (MI/CM_M);450;coha;pietro ludovico;notaio;oglianico;PI
+77;C1730_19_229;TO;1730;torino regio arsenale;torino;A1;A;ok;172 Gianone P. (TO C/NS);77;bussolino;francesco;CM_M;varese MI;MI
+78;C1730_19_233;TO;1730;torino regia università regia accademia regio arsenale;torino;S1;S;ok;369 Ugliengo C. (BI/M_Min);172;gianone;pietro;NS;torino;TO C
+79;C1730_19_240;TO;1730;torino reale accademia;torino;S1;S;ok;13 Arizio G. (BI/M_F);369;ugliengo;carlo maria;M_Min;bioglio BI;BI
+80;C1730_19_240;TO;1730;torino reale accademia;torino;G1;G;ok;45 Bertola A. (NS/ING);13;arizio;giacomo;M_F;alice superiore BI;BI
+81;C1714_02_073;CH;1714;chivasso e verrua fortificazioni;chivasso;I1;I;;45 Bertola A. (NS/ING);45;bertola;antonio;ING;;NS
+82;C1714_02_042;RI;1714;rivoli castello;rivoli;I1;I;;45 Bertola A. (NS/ING);45;bertola;antonio;ING;;NS
+83;C1714_02_037;MOR;1714;mortara fortificazioni;mortara;I1;I;;45 Bertola A. (NS/ING);45;bertola;antonio;ING;;NS
+84;C1714_02_031;MOR;1714;mortara fortificazioni;mortara;I1;I;;45 Bertola A. (NS/ING);45;bertola;antonio;ING;;NS
+85;C1714_02_048;AL;1714;alessandria fortificazioni;alessadria;I1;I;;45 Bertola A. (NS/ING);45;bertola;antonio;ING;;NS
+86;C1714_02_092;BR;1714;brunetta;brunetta;I1;I;;45 Bertola A. (NS/ING);45;bertola;antonio;ING;;NS
+87;C1715_03_075;TO;1715;torino recinto verso porta susina;torino;I1;I;;45 Bertola A. (NS/ING);45;bertola;antonio;ING;;NS
+88;C1714_02_007;BR;1714;brunetta;brunetta;I1;I;;45 Bertola A. (NS/ING);45;bertola;antonio;ING;;NS
+89;C1714_02_039;CH;1714;chivasso fortificazioni;chivasso;I1;I;;45 Bertola A. (NS/ING);45;bertola;antonio;ING;;NS
+90;C1715_03_063;VALD;1715;valdocco fabbrica canne da fucile;valdocco;I1;I;;45 Bertola A. (NS/ING);45;bertola;antonio;ING;;NS
+91;C1715_03_058;TO;1715;torino unversità degli studi;torino;I1;I;;45 Bertola A. (NS/ING);45;bertola;antonio;ING;;NS
+92;C1715_03_054;TO;1715;torino unversità degli studi;torino;I1;I;;45 Bertola A. (NS/ING);45;bertola;antonio;ING;;NS
+93;C1714_02_046;CA;1714;casale fortificazioni;casale;I1;I;;45 Bertola A. (NS/ING);45;bertola;antonio;ING;;NS
+94;C1715_03_050;TO;1715;torino unversità degli studi;torino;I1;I;;45 Bertola A. (NS/ING);45;bertola;antonio;ING;;NS
+95;C1715_03_044;BR;1715;brunetta;brunetta;I1;I;;45 Bertola A. (NS/ING);45;bertola;antonio;ING;;NS
+96;C1714_02_013;BR;1714;brunetta;brunetta;I1;I;;45 Bertola A. (NS/ING);45;bertola;antonio;ING;;NS
+97;C1715_03_033;TO;1715;torino ingrandimento porta susa;torino;I1;I;;45 Bertola A. (NS/ING);45;bertola;antonio;ING;;NS
+98;C1715_03_019;FE;1715;fenestrelle;fenestrelle;I1;I;;45 Bertola A. (NS/ING);45;bertola;antonio;ING;;NS
+99;C1714_02_083;FE;1714;fenestrelle;fenestrelle;I1;I;;45 Bertola A. (NS/ING);45;bertola;antonio;ING;;NS
+100;C1711_01_014;TO;1711;torino cittadella;torino;I1;I;;46 Besone . (NS/ING);45;bertola;antonio;ING;;NS
+101;C1712_01_067;SAO;1712;sargio [saorge] forte;saorge;I1;I;;339 Sclaverano B. (NS/ING);46;besone;;ING;;NS
+102;C1715_03_070;VALD;1715;valdocco edificio della fucina;valdocco;I1;I;;191 Juvarra F. (NS/ING);339;sclaverano;biaggio;ING;;NS
+103;C1716_03_098;RI;1716;rivoli castello;rivoli;I1;I;;191 Juvarra F. (NS/ING);191;juvarra;filippo;ING;;NS
+104;C1716_03_077;VEN;1716;venaria regia cappella;venaria;I1;I;;157 Gallo F. (NS/ING);191;juvarra;filippo;ING;;NS
+105;C1713_01_228;MON;1713;mondovì caserma;mondovì;I1;I;;295 Ricca G. (NS/ING);157;gallo;francesco;ING;;NS
+106;C1713_01_277;TO;1713;torino castello di rivoli;torino;I1;I;;295 Ricca G. (NS/ING);295;ricca;gio antonio;ING;;NS
+107;C1715_03_041;RI;1715;rivoli castello;rivoli;I1;I;;295 Ricca G. (NS/ING);295;ricca;gio antonio;ING;;NS
+108;C1713_01_264;TO;1713;torino università degli studi;torino;I1;I;;295 Ricca G. (NS/ING);295;ricca;gio antonio;ING;;NS
+109;C1714_02_059;TO;1714;torino fabrica dell'università;torino;I1;I;;295 Ricca G. (NS/ING);295;ricca;gio antonio;ING;;NS
+110;C1714_02_096;TO;1714;torino università degli studi e susa castello;torino;I1;I;;336 Scapitta G. (NS/ING);295;ricca;gio antonio;ING;;NS
+111;C1712_01_132;CA;1712;casale fortificazioni;casale;I1;I;;163 Garove M. (NS/ING);336;scapitta;gio batta;ING;;NS
+112;C1712_01_082;TO;1712;torino palazzo reale;torino;I1;I;;163 Garove M. (NS/ING);163;garove;michel angelo;ING;;NS
+113;C1711_01_033;TO;1711;torino arsenale;torino;I1;I;;163 Garove M. (NS/ING);163;garove;michel angelo;ING;;NS
+114;C1711_01_029;MO;1711;moncaglieri castello;moncaglieri;I1;I;;163 Garove M. (NS/ING);163;garove;michel angelo;ING;;NS
+115;C1712_01_107;TO;1712;torino porta susina;torino;I1;I;;163 Garove M. (NS/ING);163;garove;michel angelo;ING;;NS
+116;C1711_01_018;TO;1711;torino palazzi reali;torino;I1;I;;163 Garove M. (NS/ING);163;garove;michel angelo;ING;;NS
+117;C1713_01_235;TO;1713;torino unversità degli studi;torino;I1;I;;163 Garove M. (NS/ING);163;garove;michel angelo;ING;;NS
+118;C1712_01_125;VEN;1712;venaria reale gran padiglio;venaria;I1;I;;163 Garove M. (NS/ING);163;garove;michel angelo;ING;;NS
+119;C1713_01_187;VEN;1713;venaria;venaria;I1;I;;163 Garove M. (NS/ING);163;garove;michel angelo;ING;;NS
+120;C1713_01_142;RI;1713;rivoli castello;rivoli;I1;I;;163 Garove M. (NS/ING);163;garove;michel angelo;ING;;NS
+121;C1713_01_158;TO;1713;torino università degli studi;torino;I1;I;;163 Garove M. (NS/ING);163;garove;michel angelo;ING;;NS
+122;C1713_01_204;VEN;1713;venaria;venaria;I1;I;;163 Garove M. (NS/ING);163;garove;michel angelo;ING;;NS
+123;C1713_01_181;TO;1713;torino università e rivoli castello;torino;I1;I;;163 Garove M. (NS/ING);163;garove;michel angelo;ING;;NS
+124;C1712_01_115;RI;1712;rivoli castello;rivoli;I1;I;;427 Bovero G. (BI/NS);163;garove;michel angelo;ING;;NS
+125;C1730_19_20;VER;1730;vercelli;vercelli;S1;S;ok;429 Buscaglione G. (BI/NS);427;bovero;gio bernardo;NS;graglia BI;BI
+126;C1730_19_20;VER;1730;vercelli;vercelli;S2;S;ok;426 Bovero C. (BI/NS);429;buscaglione;giuseppe;NS;graglia BI;BI
+127;C1730_19_20;VER;1730;vercelli;vercelli;G1;G;ok;532 Romano G. (BI/M_M);426;bovero;carlo giuseppe;NS;graglia BI;BI
+128;C1730_19_22;TO;1730;torino cittadella;torino;S1;S;ok;86 Cantone D. (TO C/CM_B);532;romano;gio tomaso;M_M;valle d'andorno;BI
+129;C1730_19_22;TO;1730;torino cittadella;torino;G1;G;ok;415 Boggio T. (NS/NS);86;cantone;domenico;CM_B;torino;TO C
+130;C1730_19_22;TO;1730;torino cittadella;torino;A1;A;ok;210 Magnano G. (BI/CM_M);415;boggio;tomaso;NS;;NS
+131;C1730_19_32;FE;1730;fenestrelle;fenestrelle;S1;S;ok;215 Martello T. (BI/CM_M);210;magnano;gio batta;CM_M;valle d'andorno;BI
+132;C1730_19_32;FE;1730;fenestrelle;fenestrelle;S2;S;ok;532 Romano G. (BI/M_M);215;martello;tomaso;CM_M;quittengo BI;BI
+133;C1730_19_32;FE;1730;fenestrelle;fenestrelle;S3;S;ok;307 Rivo G. (TO C/mercante di tele);532;romano;gio tomaso;M_M;valle d'andorno;BI
+134;C1730_19_32;FE;1730;fenestrelle;fenestrelle;G1;G;ok;174 Gillonio E. (BI/NS);307;rivo;giuseppe antonio;mercante di tele;torino;TO C
+135;C1730_19_32;FE;1730;fenestrelle;fenestrelle;A1;A;ok;535 Rosso G. (AO/NS);174;gillonio;eusebio;NS;muzzano BI;BI
+136;C1730_19_42;FE;1730;fenestrelle;fenestrelle;S1;S;ok;550 Vercellino M. (NS/NS);535;rosso;gio giacono;NS;fontananova AO;AO
+137;C1730_19_42;FE;1730;fenestrelle;fenestrelle;S2;S;ok;529 Rolio G. (Vsu/NS);550;vercellino;mastrino;NS;;NS
+138;C1730_19_48;FE;1730;fenestrelle;fenestrelle;S1;S;ok;374 Vanera M. (VL/IMP);529;rolio;gio bernardino;NS;meana, susa;Vsu
+139;C1730_19_48;FE;1730;fenestrelle;fenestrelle;S2;S;ok;399 Baietto F. (TO/NS);374;vanera;michele;IMP;groscavallo, valle di lanzo;VL
+140;C1730_19_48;FE;1730;fenestrelle;fenestrelle;G1;G;ok;520 Perotino L. (TO C/NS);399;baietto;francesco;NS;leinì TO;TO
+141;C1730_19_48;FE;1730;fenestrelle;fenestrelle;A1;A;ok;559 Fontana D. (MI/IMP);520;perotino;lorenzo;NS;torino;TO C
+142;C1730_19_51;FE;1730;fenestrelle;fenestrelle;S1;S;ok;275 Pinchetti D. (MI/CM_M);559;fontana;domenico;IMP;valsolda stato di milano;MI
+143;C1730_19_51;FE;1730;fenestrelle;fenestrelle;S2;S;ok;551 Verrati G. (NS/NS);275;pinchetti;domenico;CM_M;stato di milano;MI
+144;C1730_19_51;FE;1730;fenestrelle;fenestrelle;S3;S;ok;227 Menafoglio F. (MI/NS);551;verrati;giulio;NS;;NS
+145;C1730_19_51;FE;1730;fenestrelle;fenestrelle;G1;G;ok;292 Rechettino A. (MI/CM);227;menafoglio;francesco andrea;NS;stato di milano;MI
+146;C1730_19_51;FE;1730;fenestrelle;fenestrelle;G2;G;ok;131 Fenoglio C. (TO/NS);292;rechettino;antonio;CM;stato di milano;MI
+147;C1730_19_55;TO;1730;torino città e cittadella;torino;S1;S;ok;483 Gilardo B. (TO/NS);131;fenoglio;carlo antonio;NS;monte di superga TO;TO
+148;C1730_19_55;TO;1730;torino città e cittadella;torino;S2;S;ok;549 Tua C. (BI/NS);483;gilardo;bartolomeo;NS;san mauro TO;TO
+149;C1730_19_55;TO;1730;torino città e cittadella;torino;G1;G;ok;364 Trivero G. (CN/NS);549;tua;carlo giuseppe;NS;occhieppo superiore BI;BI
+150;C1730_19_55;TO;1730;torino città e cittadella;torino;G2;G;ok;298 Righino F. (MI/IMP);364;trivero;gio batta;NS;baldissero CN;CN
+151;C1730_19_57;CH;1730;chivasso fortificazioni;chivasso;S1;S;ok;511 Pagano G. (MI/IMP);298;righino;francesco maria;IMP;marcio, stato di milano;MI
+152;C1730_19_57;CH;1730;chivasso fortificazioni;chivasso;S2;S;ok;369 Ugliengo C. (BI/M_Min);511;pagano;giuseppe;IMP;valsolda, stato di milano;MI
+153;C1730_19_57;CH;1730;chivasso fortificazioni;chivasso;G1;G;ok;367 Trolli F. (MI/CM_M);369;ugliengo;carlo maria;M_Min;bioglio BI;BI
+154;C1730_19_57;CH;1730;chivasso fortificazioni;chivasso;G2;G;ok;461 Deleani S. (NS/NS);367;trolli;francesco;CM_M;laveno, stato di milano;MI
+155;C1730_19_60;VAL;1730;valenza fortificazioni;valenza;S1;S;ok;459 Deleani A. (NS/NS);461;deleani;simone;NS;;NS
+156;C1730_19_60;VAL;1730;valenza fortificazioni;valenza;G1;G;ok;56 Billotti L. (BI/M_M);459;deleani;antonio;NS;;NS
+157;C1730_19_60;VAL;1730;valenza fortificazioni;valenza;G2;G;ok;460 Deleani A. (NS/NS);56;billotti;lorenzo;M_M;pollone BI;BI
+158;C1730_19_60;VAL;1730;valenza fortificazioni;valenza;A1;A;ok;314 Rocco N. (TO/NS);460;deleani;antonio domenico;NS;;NS
+159;C1730_19_63;SUP;1730;superga real fabrica;superga;S1;S;ok;44 Bertoglio G. (TO/NS);314;rocco;nicolao;NS;monte di superga TO;TO
+160;C1730_19_63;SUP;1730;superga real fabrica;superga;S2;S;ok;528 Rocco G. (TO C/NS);44;bertoglio;giacomo;NS;monte di superga TO;TO
+161;C1730_19_63;SUP;1730;superga real fabrica;superga;G1;G;ok;408 Bertoglio G. (TO C/NS);528;rocco;gio;NS;torino;TO C
+162;C1730_19_63;SUP;1730;superga real fabrica;superga;A1;A;ok;407 Bertoglio G. (CN/NS);408;bertoglio;giuseppe maria;NS;torino;TO C
+163;C1730_19_65;SUP;1730;superga real fabrica;superga;S1;S;ok;467 Fenoglio A. (CN/NS);407;bertoglio;gio batta;NS;baldissero CN;CN
+164;C1730_19_65;SUP;1730;superga real fabrica;superga;S2;S;ok;509 Oreglia A. (CN/NS);467;fenoglio;antonio;NS;baldissero CN;CN
+165;C1730_19_65;SUP;1730;superga real fabrica;superga;G1;G;ok;510 Oreglia B. (CN/NS);509;oreglia;antonio;NS;baldissero CN;CN
+166;C1730_19_65;SUP;1730;superga real fabrica;superga;A1;A;ok;477 Galliardo G. (TO/NS);510;oreglia;bartolomeo;NS;baldissero CN;CN
+167;C1730_19_67;SUP;1730;superga real fabrica;superga;S1;S;ok;452 Corino M. (NS/NS);477;galliardo;gio battista;NS;moncalieri;TO
+168;C1730_19_67;SUP;1730;superga real fabrica;superga;G1;G;ok;481 Ghiia G. (NS/NS);452;corino;marco antonio;NS;;NS
+169;C1730_19_67;SUP;1730;superga real fabrica;superga;A1;A;ok;364 Trivero G. (CN/NS);481;ghiia;gio lorenzo;NS;;NS
+170;C1730_19_69;TO;1730;torino e superga;torino;S1;S;ok;406 Bertoglio A. (TO C/NS);364;trivero;gio batta;NS;baldissero CN;CN
+171;C1730_19_69;TO;1730;torino e superga;torino;G1;G;ok;548 Trivero L. (CN/NS);406;bertoglio;angelo matteo;NS;torino;TO C
+172;C1730_19_69;TO;1730;torino e superga;torino;A1;A;ok;215 Martello T. (BI/CM_M);548;trivero;lorenzo;NS;baldissero CN;CN
+173;C1730_19_71;FE;1730;fenestrelle;fenestrelle;S1;S;ok;532 Romano G. (BI/M_M);215;martello;tomaso;CM_M;quittengo BI;BI
+174;C1730_19_71;FE;1730;fenestrelle;fenestrelle;S2;S;ok;210 Magnano G. (BI/CM_M);532;romano;gio tomaso;M_M;valle d'andorno;BI
+175;C1730_19_71;FE;1730;fenestrelle;fenestrelle;S3;S;ok;253 Peijrone F. (Vsu/NS);210;magnano;gio batta;CM_M;valle d'andorno;BI
+176;C1730_19_71;FE;1730;fenestrelle;fenestrelle;G1;G;ok;315 Romano G. (BI/IMP);253;peijrone;francesco;NS;susa;Vsu
+177;C1730_19_71;FE;1730;fenestrelle;fenestrelle;A1;A;ok;549 Tua C. (BI/NS);315;romano;gio batta;IMP;valle d'andorno;BI
+178;C1730_19_76;TO;1730;valentino fiume po;torino;S1;S;ok;472 Fiorina G. (BI/NS);549;tua;carlo giuseppe;NS;occhieppo superiore BI;BI
+179;C1730_19_76;TO;1730;valentino fiume po;torino;G1;G;ok;75 Buscaglione S. (NS/CM_B);472;fiorina;gio pietro;NS;graglia BI;BI
+180;C1730_19_76;TO;1730;valentino fiume po;torino;A1;A;ok;493 Jean A. (AO/NS);75;buscaglione;stefano;CM_B;;NS
+181;C1730_19_82;EX;1730;exilles;exilles;S1;S;ok;458 Del Piano A. (AO/IMP);493;jean;antonio;NS;valle d'aosta;AO
+182;C1730_19_82;EX;1730;exilles;exilles;G1;G;ok;462 Derosso G. (AO/NS);458;del piano;antonio;IMP;lilianes AO;AO
+183;C1730_19_82;EX;1730;exilles;exilles;G2;G;ok;463 Derosso P. (AO/NS);462;derosso;giacomo;NS;fontainemore AO;AO
+184;C1730_19_82;EX;1730;exilles;exilles;A1;A;ok;553 Visconti P. (NS/NS);463;derosso;pietro;NS;fontainemore AO;AO
+185;C1730_19_88;TO;1730;torino città e cittadella;torino;S1;S;ok;530 Romano A. (PI/NS);553;visconti;pietro;NS;;NS
+186;C1730_19_88;TO;1730;torino città e cittadella;torino;G1;G;ok;419 Bonesio R. (BI/NS);530;romano;antonio;NS;vico [canavese];PI
+187;C1730_19_88;TO;1730;torino città e cittadella;torino;A1;A;ok;44 Bertoglio G. (TO/NS);419;bonesio;rocho;NS;caciorna, valle d'andorno;BI
+188;C1730_19_92;SUP;1730;superga reale fabrica;superga;S1;S;ok;394 Antonetti G. (TO C/NS);44;bertoglio;giacomo;NS;monte di superga TO;TO
+189;C1730_19_92;SUP;1730;superga reale fabrica;superga;G1;G;ok;408 Bertoglio G. (TO C/NS);394;antonetti;giovanni;NS;torino;TO C
+190;C1730_19_92;SUP;1730;superga reale fabrica;superga;G1;G;ok;556 Pezzi A. (NS/NS);408;bertoglio;giuseppe maria;NS;torino;TO C
+191;C1730_19_96;SUP;1730;superga reale fabrica;superga;S1;S;ok;349 Somazzo F. (LU/STU);556;pezzi;antonio;NS;;NS
+192;C1730_19_96;SUP;1730;superga reale fabrica;superga;S2;S;ok;488 Giudice G. (NS/NS);349;somazzo;filippo;STU;cannobio;LU
+193;C1730_19_96;SUP;1730;superga reale fabrica;superga;G1;G;ok;418 Bonasco S. (NS/NS);488;giudice;gio domenico;NS;;NS
+194;C1730_19_96;SUP;1730;superga reale fabrica;superga;A1;A;ok;84 Candellero G. (TO C/TOL);418;bonasco;stefano;NS;;NS
+195;C1730_19_102;SUP;1730;superga fabrica della chiesa;superga;S1;S;ok;95 Casasopra G. (LU/TOL);84;candellero;giuseppe;TOL;torino;TO C
+196;C1730_19_102;SUP;1730;superga fabrica della chiesa;superga;G1;G;ok;417 Bollano D. (NS/NS);95;casasopra;gio batta;TOL;lugano;LU
+197;C1730_19_102;SUP;1730;superga fabrica della chiesa;superga;A1;A;ok;536 Rosso M. (VL/NS);417;bollano;domenico;NS;;NS
+198;C1730_19_111;SUP;1730;superga fabrica della chiesa;superga;S1;S;ok;18 Darbesio G. (TO/NS);536;rosso;martino;NS;viù, valle di lanzo;VL
+199;C1730_19_111;SUP;1730;superga fabrica della chiesa;superga;G1;G;ok;513 Pappa G. (NS/NS);18;darbesio;gio batta;NS;avigliana TO;TO
+200;C1730_19_111;SUP;1730;superga fabrica della chiesa;superga;A1;A;ok;205 Maffei C. (TO C/CM_B);513;pappa;giacomo antonio;NS;;NS
+201;C1730_19_115;TO;1730;torino regio arsenale;torino;S1;S;ok;549 Tua C. (BI/NS);205;maffei;carlo;CM_B;torino;TO C
+202;C1730_19_115;TO;1730;torino regio arsenale;torino;S2;S;ok;390 Zo G. (BI/M_F);549;tua;carlo giuseppe;NS;occhieppo superiore BI;BI
+203;C1730_19_115;TO;1730;torino regio arsenale;torino;G1;G;ok;472 Fiorina G. (BI/NS);390;zo;gio batta;M_F;graglia BI;BI
+204;C1730_19_115;TO;1730;torino regio arsenale;torino;A1;A;ok;494 Lonati C. (MI/NS);472;fiorina;gio pietro;NS;graglia BI;BI
+205;C1730_19_121;MO;1730;moncaglieri reale castello;moncaglieri;S1;S;ok;128 Ermoglio D. (MI/CM_M);494;lonati;carlo francesco;NS;stato di milano;MI
+206;C1730_19_121;MO;1730;moncaglieri reale castello;moncaglieri;G1;G;ok;414 Boggialla G. (TO C/NS);128;ermoglio;domenico;CM_M;varese MI;MI
+207;C1730_19_121;MO;1730;moncaglieri reale castello;moncaglieri;A1;A;ok;435 Chemisa V. (Vsu/NS);414;boggialla;gerolamo giuseppe;NS;torino;TO C
+208;C1730_19_125;EX;1730;exilles;exilles;S1;S;ok;307 Rivo G. (TO C/mercante di tele);435;chemisa;vincenzo;NS;giaglione, val di susa;Vsu
+209;C1730_19_125;EX;1730;exilles;exilles;G1;G;ok;342 Sereno M. (Vsu/IMP);307;rivo;giuseppe antonio;mercante di tele;torino;TO C
+210;C1730_19_125;EX;1730;exilles;exilles;A1;A;ok;187 Groppi C. (MI/CM_M);342;sereno;michele;IMP;giaglione, val di susa;Vsu
+211;C1730_19_127;BR;1730;brunetta;brunetta;S1;S;ok;66 Bonesio B. (BI/CM);187;groppi;carlo;CM_M;stato di milano;MI
+212;C1730_19_127;BR;1730;brunetta;brunetta;S2;S;ok;35 Bellotto G. (MI/IMP);66;bonesio;bartolomeo;CM;caciorna, valle d'andorno;BI
+213;C1730_19_127;BR;1730;brunetta;brunetta;G1;G;ok;14 Astrano G. (TO C/misuratore);35;bellotto;giacomo;IMP;valsolda;MI
+214;C1730_19_127;BR;1730;brunetta;brunetta;A1;A;ok;490 Gobbetto L. (TO/NS);14;astrano;gio antonio;misuratore;torino;TO C
+215;C1730_19_137;TO;1730;torino città superga;torino;S1;S;ok;539 Rusca G. (LU/IMP);490;gobbetto;luiggi;NS;gassino TO;TO
+216;C1730_19_139;BR;1730;brunetta;brunetta;S1;S;ok;422 Borzano S. (MI/IMP);539;rusca;gio santo;IMP;rovio, luganese;LU
+217;C1730_19_139;BR;1730;brunetta;brunetta;S2;S;ok;484 Giordano C. (Vsu/NS);422;borzano;stefano;IMP;viggù MI;MI
+218;C1730_19_139;BR;1730;brunetta;brunetta;G1;G;ok;464 Dior G. (altro/NS);484;giordano;claudio;NS;giaglione, val di susa;Vsu
+219;C1730_19_139;BR;1730;brunetta;brunetta;A1;A;ok;262 Pezzi D. (MI/CM_M);464;dior;garspar;NS;faucigny, savoia;altro
+220;C1730_19_143;TO;1730;torino regia università;torino;S1;S;ok;246 Pagano G. (MI/CM_M);262;pezzi;domenico;CM_M;valsolda stato di milano;MI
+221;C1730_19_143;TO;1730;torino regia università;torino;S2;S;ok;552 Vinai G. (TO C/NS);246;pagano;galeazzo;CM_M;valsolda, stato di milano;MI
+222;C1730_19_143;TO;1730;torino regia università;torino;G1;G;ok;86 Cantone D. (TO C/CM_B);552;vinai;gio valentino;NS;torino;TO C
+223;C1730_19_143;TO;1730;torino regia università;torino;A1;A;ok;10 Aprile F. (LU/CM_P);86;cantone;domenico;CM_B;torino;TO C
+224;C1730_19_148;SUP;1730;superga reale chiesa;superga;S1;S;ok;95 Casasopra G. (LU/TOL);10;aprile;francesco;CM_P;carona, valle di lugano;LU
+225;C1730_19_148;SUP;1730;superga reale chiesa;superga;G1;G;ok;554 Visetti G. (NS/NS);95;casasopra;gio batta;TOL;lugano;LU
+226;C1730_19_148;SUP;1730;superga reale chiesa;superga;A1;A;ok;505 Mosca M. (BI/IMP);554;visetti;giuseppe;NS;;NS
+227;C1730_19_152;FE;1730;fenestrelle;fenestrelle;S1;S;ok;500 Mazzucchetto L. (BI/IMP);505;mosca;marco;IMP;valle d'andorno;BI
+228;C1730_19_152;FE;1730;fenestrelle;fenestrelle;S2;S;ok;476 Galletto F. (BI/M);500;mazzucchetto;lorenzo;IMP;valle d'andorno;BI
+229;C1730_19_152;FE;1730;fenestrelle;fenestrelle;G1;G;ok;437 Chiapassone G. (AO/M);476;galletto;francesco;M;mongrando BI;BI
+230;C1730_19_152;FE;1730;fenestrelle;fenestrelle;A1;A;ok;263 Pezzi G. (MI/CM_M);437;chiapassone;gio;M;fontainemore AO;AO
+231;C1730_19_153;TO;1730;torino nuova cappella;torino;S1;S;ok;349 Somazzo F. (LU/STU);263;pezzi;gio antonio;CM_M;valsolda stato di milano;MI
+232;C1730_19_153;TO;1730;torino nuova cappella;torino;S2;S;ok;554 Visetti G. (NS/NS);349;somazzo;filippo;STU;cannobio;LU
+233;C1730_19_153;TO;1730;torino nuova cappella;torino;G1;G;ok;10 Aprile F. (LU/CM_P);554;visetti;giuseppe;NS;;NS
+234;C1730_19_153;TO;1730;torino nuova cappella;torino;A1;A;ok;10 Aprile F. (LU/CM_P);10;aprile;francesco;CM_P;carona, valle di lugano;LU
+235;C1730_19_157;TO;1730;torino nuova cappella;torino;S1;S;ok;213 Marchese A. (CN/M_P);10;aprile;francesco;CM_P;carona, valle di lugano;LU
+236;C1730_19_160;SUP;1730;superga reale chiesa;superga;S1;S;ok;409 Bertoli L. (PI/NS);213;marchese;andrea;M_P;brozasco marchesato di saluzzo;CN
+237;C1730_19_160;SUP;1730;superga reale chiesa;superga;G1;G;ok;502 Mo B. (CN/NS);409;bertoli;lorenzo;NS;brusasco;PI
+238;C1730_19_160;SUP;1730;superga reale chiesa;superga;G2;G;ok;541 Sceto G. (Vse/NS);502;mo;bartolomeo;NS;montelupo CN;CN
+239;C1730_19_164;SUP;1730;superga reale chiesa;superga;S1;S;ok;544 Taschero C. (TO C/NS);541;sceto;giuseppe maria;NS;valsesia;Vse
+240;C1730_19_164;SUP;1730;superga reale chiesa;superga;G1;G;ok;414 Boggialla G. (TO C/NS);544;taschero;carlo giuseppe;NS;torino;TO C
+241;C1730_19_164;SUP;1730;superga reale chiesa;superga;A1;A;ok;532 Romano G. (BI/M_M);414;boggialla;gerolamo giuseppe;NS;torino;TO C
+242;C1730_19_170;TO;1730;torino città e cittadella;torino;S1;S;ok;486 Giroldo G. (altro/NS);532;romano;gio tomaso;M_M;valle d'andorno;BI
+243;C1730_19_170;TO;1730;torino città e cittadella;torino;G1;G;ok;531 Romano G. (BI/NS);486;giroldo;giuseppe;NS;monteglio;altro
+244;C1730_19_170;TO;1730;torino città e cittadella;torino;A1;A;ok;428 Bressiano B. (BI/NS);531;romano;giacomo;NS;valle d'andorno;BI
+245;C1730_19_174;FE;1730;fenestrelle;fenestrelle;S1;S;ok;413 Blanc G. (PI/NS);428;bressiano;bartolomeo;NS;coggiola BI;BI
+246;C1730_19_174;FE;1730;fenestrelle;fenestrelle;G1;G;ok;522 Picco A. (TO/NS);413;blanc;gio;NS;mentoulle, val chisone;PI
+247;C1730_19_240;TO;1730;torino reale accademia;torino;A1;A;ok;18 Darbesio G. (TO/NS);522;picco;antonio;NS;carignano TO;TO
+248;C1730_19_243;TO;1730;torino reale accademia;torino;S1;S;ok;536 Rosso M. (VL/NS);18;darbesio;gio batta;NS;avigliana TO;TO
+249;C1730_19_243;TO;1730;torino reale accademia;torino;G1;G;ok;491 Goffi G. (TO/NS);536;rosso;martino;NS;viù, valle di lanzo;VL
+250;C1730_19_243;TO;1730;torino reale accademia;torino;A1;A;ok;18 Darbesio G. (TO/NS);491;goffi;gio matteo;NS;avigliana TO;TO
+251;C1730_19_245;SUP;1730;superga real chiesa;superga;S1;S;ok;205 Maffei C. (TO C/CM_B);18;darbesio;gio batta;NS;avigliana TO;TO
+252;C1730_19_247;TO;1730;torino reale accademia;torino;S1;S;ok;511 Pagano G. (MI/IMP);205;maffei;carlo;CM_B;torino;TO C
+253;C1730_19_247;TO;1730;torino reale accademia;torino;G1;G;ok;262 Pezzi D. (MI/CM_M);511;pagano;giuseppe;IMP;valsolda, stato di milano;MI
+254;C1730_19_247;TO;1730;torino reale accademia;torino;A1;A;ok;355 Togliardo G. (TO C/M_F);262;pezzi;domenico;CM_M;valsolda stato di milano;MI
+255;C1730_19_252;TO;1730;torino reale accademia;torino;S1;S;ok;431 Carrera F. (TO C/NS);355;togliardo;gerolamo;M_F;torino;TO C
+256;C1730_19_252;TO;1730;torino reale accademia;torino;G1;G;ok;492 Gorta C. (TO C/NS);431;carrera;francesco;NS;torino;TO C
+257;C1730_19_252;TO;1730;torino reale accademia;torino;A1;A;ok;511 Pagano G. (MI/IMP);492;gorta;claudio;NS;torino;TO C
+258;C1720_07_128;RI;1720;rivoli castello;rivoli;S1;S;ok;274 Piazzolo G. (NS/CM_P);511;pagano;giuseppe;IMP;valsolda, stato di milano;MI
+259;C1720_07_128;RI;1720;rivoli castello;rivoli;S2;S;ok;369 Ugliengo C. (BI/M_Min);274;piazzolo;gio batta;CM_P;;NS
+260;C1720_07_128;RI;1720;rivoli castello;rivoli;G1;G;ok;496 Maffei A. (BI/CM);369;ugliengo;carlo maria;M_Min;bioglio BI;BI
+261;C1720_07_128;RI;1720;rivoli castello;rivoli;A1;A;ok;389 Zo C. (BI/M_F);496;maffei;antonio maria;CM;graglia BI;BI
+262;C1720_07_135;VEN;1720;venaria regio palazzo;venaria;S1;S;ok;524 Pollolio E. (NS/M_F);389;zo;carlo antonio;M_F;graglia BI;BI
+263;C1720_07_135;VEN;1720;venaria regio palazzo;venaria;G1;G;ok;13 Arizio G. (BI/M_F);524;pollolio;evangelista;M_F;;NS
+264;C1720_07_135;VEN;1720;venaria regio palazzo;venaria;A1;A;ok;180 Gobbi A. (MI/CM);13;arizio;giacomo;M_F;alice superiore BI;BI
+265;C1720_07_138;VEN;1720;venaria regio palazzo;venaria;S1;S;ok;237 Mosso G. (TO C/NS);180;gobbi;ambroggio;CM;stato di milano;MI
+266;C1720_07_138;VEN;1720;venaria regio palazzo;venaria;G1;G;ok;97 Casella A. (LU/CM_P);237;mosso;gio eusebio;NS;torino;TO C
+267;C1720_07_138;VEN;1720;venaria regio palazzo;venaria;A1;A;ok;546 Tirolo G. (NS/CM_P);97;casella;antonio;CM_P;lugano;LU
+268;C1720_07_145;SUP;1720;superga;superga;S1;S;ok;489 Giudici D. (NS/CM_P);546;tirolo;gio batta;CM_P;;NS
+269;C1720_07_145;SUP;1720;superga;superga;S2;S;ok;248 Parodi G. (GE/CM_P);489;giudici;domenico;CM_P;;NS
+270;C1720_07_145;SUP;1720;superga;superga;S3;S;ok;179 Giudici F. (MI/NS);248;parodi;gio batta;CM_P;genova;GE
+271;C1720_07_145;SUP;1720;superga;superga;G1;G;ok;411 Bignotti G. (MI/NS);179;giudici;francesco maria;NS;viggù MI;MI
+272;C1720_07_145;SUP;1720;superga;superga;A1;A;ok;23 Bello G. (TO C/IMP);411;bignotti;gio pietro;NS;valsolda stato di milano;MI
+273;C1720_07_149;SUP;1720;superga;superga;S1;S;ok;28 Bello P. (TO C/negoziante);23;bello;giacomo1;IMP;torino;TO C
+274;C1720_07_149;SUP;1720;superga;superga;G1;G;ok;128 Ermoglio D. (MI/CM_M);28;bello;pietro maria;negoziante;torino;TO C
+275;C1720_07_149;SUP;1720;superga;superga;A1;A;ok;369 Ugliengo C. (BI/M_Min);128;ermoglio;domenico;CM_M;varese MI;MI
+276;C1720_07_152;SUP;1720;superga;superga;S1;S;ok;389 Zo C. (BI/M_F);369;ugliengo;carlo maria;M_Min;bioglio BI;BI
+277;C1720_07_152;SUP;1720;superga;superga;G1;G;ok;344 Sino B. (NS/M_F);389;zo;carlo antonio;M_F;graglia BI;BI
+278;C1720_07_152;SUP;1720;superga;superga;A1;A;ok;180 Gobbi A. (MI/CM);344;sino;bartolomeo;M_F;;NS
+279;C1720_07_155;BR;1720;brunetta;brunetta;S1;S;ok;405 Berardi C. (NS/CM);180;gobbi;ambroggio;CM;stato di milano;MI
+280;C1720_07_155;BR;1720;brunetta;brunetta;S2;S;ok;84 Candellero G. (TO C/TOL);405;berardi;carlo;CM;;NS
+281;C1720_07_155;BR;1720;brunetta;brunetta;G1;G;ok;128 Ermoglio D. (MI/CM_M);84;candellero;giuseppe;TOL;torino;TO C
+282;C1720_07_155;BR;1720;brunetta;brunetta;A1;A;ok;533 Rosazza E. (BI/NS);128;ermoglio;domenico;CM_M;varese MI;MI
+283;C1720_07_163;SUP;1720;superga;superga;S1;S;ok;503 Mosca B. (BI/NS);533;rosazza;eusebio;NS;valle d'andorno;BI
+284;C1720_07_163;SUP;1720;superga;superga;S2;S;ok;546 Tirolo G. (NS/CM_P);503;mosca;batta;NS;valle d'andorno;BI
+285;C1720_07_167;SUP;1720;superga;superga;S1;S;ok;489 Giudici D. (NS/CM_P);546;tirolo;gio batta;CM_P;;NS
+286;C1720_07_167;SUP;1720;superga;superga;S2;S;ok;248 Parodi G. (GE/CM_P);489;giudici;domenico;CM_P;;NS
+287;C1720_07_167;SUP;1720;superga;superga;S3;S;ok;179 Giudici F. (MI/NS);248;parodi;gio batta;CM_P;genova;GE
+288;C1720_07_167;SUP;1720;superga;superga;G1;G;ok;416 Bolino C. (NS/SCU);179;giudici;francesco maria;NS;viggù MI;MI
+289;C1720_07_167;SUP;1720;superga;superga;A1;A;ok;465 Ducca A. (NS/CM);416;bolino;carlo giuseppe;SCU;;NS
+290;C1720_07_169;BR;1720;brunetta;brunetta;S1;S;ok;542 Solaro G. (NS/CM);465;ducca;antonio;CM;;NS
+291;C1720_07_169;BR;1720;brunetta;brunetta;S2;S;ok;527 Roccato B. (NS/NS);542;solaro;gio antonio;CM;;NS
+292;C1720_07_169;BR;1720;brunetta;brunetta;G1;G;ok;143 Francone P. (NS/M_F);527;roccato;bartolomeo;NS;;NS
+293;C1720_07_169;BR;1720;brunetta;brunetta;A1;A;ok;23 Bello G. (TO C/IMP);143;francone;pietro gio;M_F;;NS
+294;C1720_07_175;TO;1720;torino senato;torino;S1;S;ok;139 Fontana D. (MI/IMP);23;bello;giacomo1;IMP;torino;TO C
+295;C1720_07_175;TO;1720;torino senato;torino;G1;G;ok;14 Astrano G. (TO C/misuratore);139;fontana;domenico;IMP;valsolda stato di milano;MI
+296;C1720_07_175;TO;1720;torino senato;torino;A1;A;ok;23 Bello G. (TO C/IMP);14;astrano;gio antonio;misuratore;torino;TO C
+297;C1720_07_178;TO;1720;torino senato;torino;S1;S;ok;369 Ugliengo C. (BI/M_Min);23;bello;giacomo1;IMP;torino;TO C
+298;C1720_07_178;TO;1720;torino senato;torino;S2;S;ok;139 Fontana D. (MI/IMP);369;ugliengo;carlo maria;M_Min;bioglio BI;BI
+299;C1720_07_178;TO;1720;torino senato;torino;G1;G;ok;14 Astrano G. (TO C/misuratore);139;fontana;domenico;IMP;valsolda stato di milano;MI
+300;C1720_07_178;TO;1720;torino senato;torino;A1;A;ok;534 Rosso F. (LU/M_P);14;astrano;gio antonio;misuratore;torino;TO C
+301;C1720_07_192;SUP;1720;superga;superga;S1;S;ok;537 Rosso S. (LU/M_P);534;rosso;francesco;M_P;stato di lugano;LU
+302;C1720_07_192;SUP;1720;superga;superga;S2;S;ok;474 Fontana S. (NS/NS);537;rosso;simone;M_P;lugano;LU
+303;C1720_07_200;TO;1720;torino senato;torino;S1;S;ok;456 De Petri G. (NS/NS);474;fontana;salvatore;NS;;NS
+304;C1720_07_200;TO;1720;torino senato;torino;S2;S;ok;475 Gabet A. (PI/NS);456;de petri;gio batta;NS;;NS
+305;C1720_07_206;FE;1720;fenestrelle;fenestrelle;S1;S;ok;497 Maiolo G. (BI/NS);475;gabet;antonio;NS;fenestrelle;PI
+306;C1720_07_206;FE;1720;fenestrelle;fenestrelle;S2;S;ok;512 Pagliardi L. (LU/SCU);497;maiolo;giacomo;NS;;BI
+307;C1720_07_207;SUP;1720;superga;superga;S1;S;ok;433 Ceresoli B. (LU/SCU);512;pagliardi;luca;SCU;lugano;LU
+308;C1720_07_207;SUP;1720;superga;superga;S2;S;ok;540 Rusconi B. (LU/SCU);433;ceresoli;bernardo;SCU;lugano;LU
+309;C1720_07_207;SUP;1720;superga;superga;S3;S;ok;515 Pelle F. (LU/SCU);540;rusconi;basiglio;SCU;lugano;LU
+310;C1720_07_207;SUP;1720;superga;superga;S4;S;ok;487 Giudice C. (MI/M);515;pelle;federico;SCU;lugano;LU
+311;C1720_07_207;SUP;1720;superga;superga;G1;G;ok;468 Ferreri G. (NS/NS);487;giudice;carlo;M;stato di milano;MI
+312;C1720_07_207;SUP;1720;superga;superga;A1;A;ok;223 Menafoglio A. (MI/CM_M);468;ferreri;gio maria;NS;;NS
+313;C1720_07_216;FE;1720;fenestrelle;fenestrelle;S1;S;ok;501 Menafoglio G. (NS/NS);223;menafoglio;agostino;CM_M;stato di milano;MI
+314;C1720_07_216;FE;1720;fenestrelle;fenestrelle;S2;S;ok;302 Righino P. (MI/IMP);501;menafoglio;gio maria;NS;;NS
+315;C1720_07_216;FE;1720;fenestrelle;fenestrelle;S3;S;ok;438 Chiarina G. (PI/CM_B);302;righino;paulo andrea;IMP;como MI;MI
+316;C1720_07_222;BR;1720;brunetta;brunetta;S1;S;ok;397 Badarello C. (Vse/CM_B);438;chiarina;giacinto;CM_B;pinerolo;PI
+317;C1720_07_222;BR;1720;brunetta;brunetta;G1;G;ok;398 Badarello P. (NS/M_B);397;badarello;carlo;CM_B;campertogno, valsesia;Vse
+318;C1720_07_222;BR;1720;brunetta;brunetta;A1;A;ok;430 Calderare G. (NS/CM_P);398;badarello;pietro francesco;M_B;;NS
+319;C1720_07_228;SUP;1720;superga;superga;S1;S;ok;403 Belloto C. (NS/NS);430;calderare;gio pietro;CM_P;;NS
+320;C1720_07_228;SUP;1720;superga;superga;G1;G;ok;466 Fantardini C. (NS/NS);403;belloto;carlo francesco;NS;;NS
+321;C1720_07_228;SUP;1720;superga;superga;A1;A;ok;84 Candellero G. (TO C/TOL);466;fantardini;carlo;NS;;NS
+322;C1720_07_238;TO;1720;torino caserme porta susina;torino;S1;S;ok;95 Casasopra G. (LU/TOL);84;candellero;giuseppe;TOL;torino;TO C
+323;C1720_07_238;TO;1720;torino caserme porta susina;torino;S2;S;ok;498 Marcho G. (NS/mercante di ferro);95;casasopra;gio batta;TOL;lugano;LU
+324;C1720_07_238;TO;1720;torino caserme porta susina;torino;G1;G;ok;395 Arito G. (BI/NS);498;marcho;giuseppe clemente;mercante di ferro;;NS
+325;C1720_07_238;TO;1720;torino caserme porta susina;torino;A1;A;ok;401 Basilio P. (TO C/NS);395;arito;giovanni;NS;alice superiore BI;BI
+326;C1720_07_241;BR;1720;brunetta;brunetta;S1;S;ok;507 Nemo M. (Vsu/NS);401;basilio;pietro michele;NS;torino;TO C
+327;C1720_07_241;BR;1720;brunetta;brunetta;S2;S;ok;432 Castagno G. (TO C/NS);507;nemo;marco;NS;novalesa, valsusa;Vsu
+328;C1720_07_241;BR;1720;brunetta;brunetta;G1;G;ok;471 Ferroglio F. (TO C/NS);432;castagno;gio stefano;NS;torino;TO C
+329;C1720_07_241;BR;1720;brunetta;brunetta;NS;N;ok;392 Zo G. (BI/M_F);471;ferroglio;francesco stefano;NS;torino;TO C
+330;C1720_07_244;TO;1720;torino e brunetta;torino;S1;S;ok;389 Zo C. (BI/M_F);392;zo;gio henrico;M_F;graglia BI;BI
+331;C1720_07_244;TO;1720;torino e brunetta;torino;S2;S;ok;390 Zo G. (BI/M_F);389;zo;carlo antonio;M_F;graglia BI;BI
+332;C1720_07_244;TO;1720;torino e brunetta;torino;G1;G;ok;480 Gastaldo F. (BI/NS);390;zo;gio batta;M_F;graglia BI;BI
+333;C1720_07_244;TO;1720;torino e brunetta;torino;A1;A;ok;23 Bello G. (TO C/IMP);480;gastaldo;francesco;NS;netro BI;BI
+334;C1720_07_255;SUP;1720;superga condotte di colonne;superga;S1;S;ok;14 Astrano G. (TO C/misuratore);23;bello;giacomo1;IMP;torino;TO C
+335;C1720_07_255;SUP;1720;superga condotte di colonne;superga;G1;G;ok;423 Boschi P. (TO C/NS);14;astrano;gio antonio;misuratore;torino;TO C
+336;C1720_07_255;SUP;1720;superga condotte di colonne;superga;A1;A;ok;504 Mosca C. (TO/NS);423;boschi;pietro giacomo;NS;torino;TO C
+337;C1720_07_259;SUP;1720;superga condotte di colonne;superga;S1;S;ok;520 Perotino L. (TO C/NS);504;mosca;carlo;NS;chieri TO;TO
+338;C1720_07_259;SUP;1720;superga condotte di colonne;superga;G1;G;ok;396 Armandi G. (TO C/NS);520;perotino;lorenzo;NS;torino;TO C
+339;C1720_07_259;SUP;1720;superga condotte di colonne;superga;A1;A;ok;543 Tamagnone P. (TO/NS);396;armandi;giuseppe;NS;torino;TO C
+340;C1720_07_261;SUP;1720;superga sabbia;superga;S1;S;ok;424 Bosco G. (TO/NS);543;tamagnone;pietro francesco;NS;cassinaggi di moriondo fini di moncalieri;TO
+341;C1720_07_261;SUP;1720;superga sabbia;superga;S2;S;ok;479 Gareglio G. (TO/NS);424;bosco;giuseppe;NS;cassinaggi di moriondo fini di moncalieri;TO
+342;C1720_07_261;SUP;1720;superga sabbia;superga;G1;G;ok;555 Vittone C. (TO C/IMP);479;gareglio;gio domenico;NS;moncalieri;TO
+343;C1720_07_261;SUP;1720;superga sabbia;superga;A1;A;ok;478 Garbeto A. (PI/NS);555;vittone;cesare;IMP;torino;TO C
+344;C1720_07_264;FE;1720;fenestrelle;fenestrelle;S1;S;ok;439 Chiarina G. (PI/NS);478;garbeto;antonio;NS;fenestrelle;PI
+345;C1720_07_264;FE;1720;fenestrelle;fenestrelle;S2;S;ok;392 Zo G. (BI/M_F);439;chiarina;giacomo;NS;pinerolo;PI
+346;C1720_07_264;FE;1720;fenestrelle;fenestrelle;G1;G;ok;389 Zo C. (BI/M_F);392;zo;gio henrico;M_F;graglia BI;BI
+347;C1720_07_264;FE;1720;fenestrelle;fenestrelle;A1;A;ok;425 Botta D. (BI/CM);389;zo;carlo antonio;M_F;graglia BI;BI
+348;C1720_07_268;SUP;1720;superga mattoni;superga;S1;S;ok;369 Ugliengo C. (BI/M_Min);425;botta;domenico;CM;piatto BI;BI
+349;C1720_07_268;SUP;1720;superga mattoni;superga;G1;G;ok;506 Negro B. (BI/NS);369;ugliengo;carlo maria;M_Min;bioglio BI;BI
+350;C1720_07_268;SUP;1720;superga mattoni;superga;A1;A;ok;44 Bertoglio G. (TO/NS);506;negro;bernardino;NS;piatto BI;BI
+351;C1720_07_274;SUP;1720;supega calcina;superga;S1;S;ok;314 Rocco N. (TO/NS);44;bertoglio;giacomo;NS;monte di superga TO;TO
+352;C1720_07_274;SUP;1720;supega calcina;superga;S2;S;ok;557 Trivero B. (TO/NS);314;rocco;nicolao;NS;monte di superga TO;TO
+353;C1720_07_274;SUP;1720;supega calcina;superga;S3;S;ok;42 Bertinetti P. (TO/NS);557;trivero;battista;NS;monte di superga TO;TO
+354;C1720_07_274;SUP;1720;supega calcina;superga;S4;S;ok;131 Fenoglio C. (TO/NS);42;bertinetti;paolo;NS;monte di superga TO;TO
+355;C1720_07_274;SUP;1720;supega calcina;superga;S5;S;ok;41 Bertinetti M. (TO/NS);131;fenoglio;carlo antonio;NS;monte di superga TO;TO
+356;C1720_07_274;SUP;1720;supega calcina;superga;G1;G;ok;205 Maffei C. (TO C/CM_B);41;bertinetti;matteo;NS;monte di superga TO;TO
+357;C1720_07_274;SUP;1720;supega calcina;superga;A1;A;ok;170 Gianoglio A. (TO/NS);205;maffei;carlo;CM_B;torino;TO C
+358;C1720_07_276;SUP;1720;superga assi albera;superga;S1;S;ok;526 Roasio G. (TO/NS);170;gianoglio;andrea;NS;bardassano TO;TO
+359;C1720_07_276;SUP;1720;superga assi albera;superga;G1;G;ok;538 Rovetto D. (TO/NS);526;roasio;gioanni;NS;bardassano TO;TO
+360;C1720_07_276;SUP;1720;superga assi albera;superga;A1;A;ok;521 Pia F. (TO/NS);538;rovetto;domenico secondo;NS;bardassano TO;TO
+361;C1720_07_278;SUP;1720;supega calcina;superga;S1;S;ok;451 Conterno L. (TO C/NS);521;pia;francesco;NS;monte di superga TO;TO
+362;C1720_07_278;SUP;1720;supega calcina;superga;G1;G;ok;86 Cantone D. (TO C/CM_B);451;conterno;lorenzo;NS;torino;TO C
+363;C1720_07_278;SUP;1720;supega calcina;superga;A1;A;ok;495 Lorieto G. (Vse/NS);86;cantone;domenico;CM_B;torino;TO C
+364;C1730_19_268;TO;1730;torino reale università;torino;A1;A;ok;86 Cantone D. (TO C/CM_B);495;lorieto;giuseppe;NS;valsesia;Vse
+365;C1730_19_270;SUP;1730;superga;superga;S1;S;ok;514 Peireto B. (Vse/NS);86;cantone;domenico;CM_B;torino;TO C
+366;C1730_19_270;SUP;1730;superga;superga;G1;G;ok;86 Cantone D. (TO C/CM_B);514;peireto;batta;NS;valsesia;Vse
+367;C1730_19_275;TO;1730;torino regio arsenale;torino;S1;S;ok;95 Casasopra G. (LU/TOL);86;cantone;domenico;CM_B;torino;TO C
+368;C1730_19_275;TO;1730;torino regio arsenale;torino;G1;G;ok;397 Badarello C. (Vse/CM_B);95;casasopra;gio batta;TOL;lugano;LU
+369;C1730_19_275;TO;1730;torino regio arsenale;torino;A1;A;ok;499 Marmori P. (MI/NS);397;badarello;carlo;CM_B;campertogno, valsesia;Vse
+370;C1730_19_282;TO;1730;torino palazzo nuovo;torino;S1;S;ok;508 Novello C. (LU/NS);499;marmori;pietro;NS;pola superiore stato di milano;MI
+371;C1730_19_282;TO;1730;torino palazzo nuovo;torino;G1;G;ok;95 Casasopra G. (LU/TOL);508;novello;carlo;NS;lugano;LU
+372;C1730_19_282;TO;1730;torino palazzo nuovo;torino;A1;A;ok;349 Somazzo F. (LU/STU);95;casasopra;gio batta;TOL;lugano;LU
+373;C1730_19_290;TO;1730;torino palazzo nuovo;torino;S1;S;ok;35 Bellotto G. (MI/IMP);349;somazzo;filippo;STU;cannobio;LU
+374;C1730_19_290;TO;1730;torino palazzo nuovo;torino;G1;G;ok;400 Barelli C. (MI/NS);35;bellotto;giacomo;IMP;valsolda;MI
+375;C1730_19_290;TO;1730;torino palazzo nuovo;torino;A1;A;ok;434 Champ S. (PI/NS);400;barelli;carlo;NS;valle d'intelvi;MI
+376;C1730_19_293;FE;1730;fenestrelle;fenestrelle;G1;G;ok;189 Griot G. (PI/NS);434;champ;stefano;NS;fenestrelle;PI
+377;C1730_19_293;FE;1730;fenestrelle;fenestrelle;A1;A;ok;478 Garbeto A. (PI/NS);189;griot;giovanni;NS;rua, valle di fenestrelle;PI
+378;C1730_19_293;FE;1730;fenestrelle;fenestrelle;S1;S;ok;453 Cornacchini A. (altro/SCU);478;garbeto;antonio;NS;fenestrelle;PI
+379;C1730_19_296;SUP;1730;superga;superga;S1;S;ok;86 Cantone D. (TO C/CM_B);453;cornacchini;agostino;SCU;pescia in toscana;altro
+380;C1720_07_280;COLVE;1720;strada collegno venaria;strada collegno venaria;S1;S;ok;560 Maffeo G. (BI/CM_B);86;cantone;domenico;CM_B;torino;TO C
+381;C1720_07_280;COLVE;1720;strada collegno venaria;strada collegno venaria;G1;G;ok;205 Maffei C. (TO C/CM_B);560;maffeo;gioanni;CM_B;graglia BI;BI
+382;C1720_07_280;COLVE;1720;strada collegno venaria;strada collegno venaria;A1;A;ok;547 Torre C. (MI/CM_P);205;maffei;carlo;CM_B;torino;TO C
+383;C1720_07_286;VEN;1720;venaria pavimento a quadri per galleria;venaria;S1;S;ok;181 Gobbi P. (MI/CM_P);547;torre;carlo ambrogio;CM_P;stato di milano;MI
+384;C1720_07_286;VEN;1720;venaria pavimento a quadri per galleria;venaria;S2;S;ok;523 Pizzoni G. (MI/NS);181;gobbi;paolo;CM_P;stato di milano;MI
+385;C1720_07_286;VEN;1720;venaria pavimento a quadri per galleria;venaria;G1;G;ok;410 Bignetti P. (MI/NS);523;pizzoni;giacomo antonio;NS;drano, valsolda;MI
+386;C1720_07_286;VEN;1720;venaria pavimento a quadri per galleria;venaria;A1;A;ok;495 Lorieto G. (Vse/NS);410;bignetti;pietro;NS;valsolda;MI
+387;C1730_19_270;SUP;1730;superga;superga;A1;A;ok;360 Toniaca L. (LU/CM_M);495;lorieto;giuseppe;NS;valsesia;Vse
+388;C1730_19_257;TO;1730;torino reale accademia;torino;S1;S;ok;139 Fontana D. (MI/IMP);360;toniaca;ludovico;CM_M;lugano;LU
+389;C1730_19_257;TO;1730;torino reale accademia;torino;A1;A;ok;523 Pizzoni G. (MI/NS);139;fontana;domenico;IMP;valsolda stato di milano;MI
+390;C1730_19_257;TO;1730;torino reale accademia;torino;G1;G;ok;205 Maffei C. (TO C/CM_B);523;pizzoni;giacomo antonio;NS;drano, valsolda;MI
+391;C1730_19_261;TO;1730;torino reale accademia;torino;S1;S;ok;549 Tua C. (BI/NS);205;maffei;carlo;CM_B;torino;TO C
+392;C1730_19_261;TO;1730;torino reale accademia;torino;G1;G;ok;496 Maffei A. (BI/CM);549;tua;carlo giuseppe;NS;occhieppo superiore BI;BI
+393;C1730_19_261;TO;1730;torino reale accademia;torino;A1;A;ok;254 Pelloli F. (MI/M_F);496;maffei;antonio;CM;graglia BI;BI
+394;C1730_19_266;TO;1730;torino reale accademia;torino;S1;S;ok;482 Ghio S. (TO C/NS);254;pelloli;francesco antonio;M_F;milano;MI
+395;C1730_19_266;TO;1730;torino reale accademia;torino;G1;G;ok;255 Pellolio C. (MI/M_F);482;ghio;stefano;NS;torino;TO C
+396;C1730_19_266;TO;1730;torino reale accademia;torino;A1;A;ok;86 Cantone D. (TO C/CM_B);255;pellolio;carlo;M_F;aveno, stato di milano;MI
+397;C1730_19_268;TO;1730;torino reale università;torino;S1;S;ok;514 Peireto B. (Vse/NS);86;cantone;domenico;CM_B;torino;TO C
+398;C1730_19_268;TO;1730;torino reale università;torino;G1;G;ok;369 Ugliengo C. (BI/M_Min);514;peireto;batta;NS;valsesia;Vse
+399;C1712_01_082;TO;1712;torino palazzo reale;torino;S1;S;ok;331 Sardi G. (LU/NS);369;ugliengo;carlo maria;M_Min;bioglio BI;BI
+400;C1712_01_085;TO;1712;torino cittadella;torino;S1;S;ok;226 Menafoglio C. (MI/CM_M);331;sardi;giorgio;NS;lugano;LU
+401;C1712_01_091;CA;1712;casale fiume po;casale;S1;S;ok;226 Menafoglio C. (MI/CM_M);226;menafoglio;carlo andrea;CM_M;stato di milano;MI
+402;C1712_01_095;IV;1712;ivrea forte e castello;ivrea;S1;S;ok;226 Menafoglio C. (MI/CM_M);226;menafoglio;carlo andrea;CM_M;stato di milano;MI
+403;C1712_01_099;MOR;1712;mortara fortificazioni;mortara;S1;S;ok;140 Fontana F. (MI/IMP);226;menafoglio;carlo andrea;CM_M;stato di milano;MI
+404;C1712_01_103;TO;1712;torino cittadella;torino;S1;S;ok;175 Gillonio G. (BI/IMP);140;fontana;francesco;IMP;valsolda stato di milano;MI
+405;C1712_01_107;TO;1712;torino porta susina;torino;S1;S;ok;226 Menafoglio C. (MI/CM_M);175;gillonio;gio pietro;IMP;muzzano BI;BI
+406;C1712_01_112;VERR;1712;verrua e asti forte;verrua;S1;S;ok;393 Zo G. (BI/NS);226;menafoglio;carlo andrea;CM_M;stato di milano;MI
+407;C1712_01_115;RI;1712;rivoli castello;rivoli;S1;S;ok;108 Clerico S. (BI/CM_B);393;zo;giuseppe;NS;graglia BI;BI
+408;C1712_01_119;TO;1712;torino cittadella;torino;S1;S;ok;288 Quadrone B. (MI/CM_P);108;clerico;sebastiano;CM_B;muzzano BI;BI
+409;C1712_01_125;VEN;1712;venaria reale gran padiglio;venaria;S1;S;ok;65 Bonacosa A. (CN/paron);288;quadrone;bartolomeo;CM_P;san fedele intelvi CO;MI
+410;C1712_01_128;SA;1712;saluggia collegno ponti;saluggia;S1;S;ok;331 Sardi G. (LU/NS);65;bonacosa;agostino;paron;casalgrasso CN;CN
+411;C1712_01_132;CA;1712;casale fortificazioni;casale;S1;S;ok;331 Sardi G. (LU/NS);331;sardi;giorgio;NS;lugano;LU
+412;C1713_01_138;CA;1713;casale castello;casale;S1;S;ok;223 Menafoglio A. (MI/CM_M);331;sardi;giorgio;NS;lugano;LU
+413;C1713_01_142;RI;1713;rivoli castello;rivoli;S1;S;ok;281 Pistone G. (BI/IMP);223;menafoglio;agostino;CM_M;stato di milano;MI
+414;C1713_01_151;BR;1713;brunetta;brunetta;S1;S;ok;332 Sardi P. (LU/IMP);281;pistone;gio stefano;IMP;mongrando BI;BI
+415;C1713_01_158;TO;1713;torino università degli studi;torino;S1;S;ok;69 Borrione C. (BI/NS);332;sardi;pietro;IMP;lugano;LU
+416;C1713_01_166;MOR;1713;mortara sterniti;mortara;S1;S;ok;39 Berti G. (MI/IMP);69;borrione;carlo;NS;graglia BI;BI
+417;C1713_01_168;AL;1713;alessandria bastione;alessadria;S1;S;ok;200 Maciotta C. (BI/IMP);39;berti;gio batta;IMP;como MI;MI
+418;C1713_01_174;TO;1713;torino cittadella;torino;S1;S;ok;108 Clerico S. (BI/CM_B);200;maciotta;carlo;IMP;valle d'andorno;BI
+419;C1713_01_178;TO;1713;torino caserma della cittadella;torino;S1;S;ok;392 Zo G. (BI/M_F);108;clerico;sebastiano;CM_B;muzzano BI;BI
+420;C1713_01_181;TO;1713;torino università e rivoli castello;torino;S1;S;ok;380 Vercelli G. (Vse/M_P);392;zo;gio henrico;M_F;graglia BI;BI
+421;C1713_01_187;VEN;1713;venaria;venaria;S1;S;ok;374 Vanera M. (VL/IMP);380;vercelli;giacomo detto canova;M_P;valsesia;Vse
+422;C1713_01_198;TO;1713;torino porta susina;torino;S1;S;ok;119 Crosa T. (TO C/NS);374;vanera;michele;IMP;groscavallo, valle di lanzo;VL
+423;C1713_01_202;TO;1713;torino palazzo reale;torino;S1;S;ok;84 Candellero G. (TO C/TOL);119;crosa;tomaso andrea;NS;torino;TO C
+424;C1713_01_204;VEN;1713;venaria;venaria;S1;S;ok;380 Vercelli G. (Vse/M_P);84;candellero;giuseppe;TOL;torino;TO C
+425;C1713_01_194;VEN;1713;venaria;venaria;S1;S;ok;389 Zo C. (BI/M_F);380;vercelli;giacomo detto canova;M_P;valsesia;Vse
+426;C1713_01_208;TO;1713;torino cappella del santissimo sudario;torino;S1;S;ok;18 Darbesio G. (TO/NS);389;zo;carlo antonio;M_F;graglia BI;BI
+427;C1713_01_210;TO;1713;torino cittadella;torino;S1;S;ok;389 Zo C. (BI/M_F);18;darbesio;gio batta;NS;avigliana TO;TO
+428;C1713_01_216;TO;1713;torino cittadella;torino;S1;S;ok;386 Vittino G. (BI/IMP);389;zo;carlo antonio;M_F;graglia BI;BI
+429;C1713_01_220;PIN;1713;pinerolo arsenale;pinerolo;S1;S;ok;266 Pianarosa G. (MI/IMP);386;vittino;gio francesco;IMP;pollone BI;BI
+430;C1713_01_228;MON;1713;mondovì caserma;mondovì;S1;S;ok;288 Quadrone B. (MI/CM_P);266;pianarosa;giacomo;IMP;stato di milano;MI
+431;C1713_01_235;TO;1713;torino unversità degli studi;torino;S1;S;ok;223 Menafoglio A. (MI/CM_M);288;quadrone;bartolomeo;CM_P;san fedele intelvi CO;MI
+432;C1713_01_241;VAL;1713;valenza fortificazioni;valenza;S1;S;ok;223 Menafoglio A. (MI/CM_M);223;menafoglio;agostino;CM_M;stato di milano;MI
+433;C1713_01_248;CA;1713;casale castello;casale;S1;S;ok;374 Vanera M. (VL/IMP);223;menafoglio;agostino;CM_M;stato di milano;MI
+434;C1713_01_252;BR;1713;brunetta;brunetta;S1;S;ok;202 Maciotta G. (BI/IMP);374;vanera;michele;IMP;groscavallo, valle di lanzo;VL
+435;C1713_01_256;BR;1713;brunetta;brunetta;S1;S;ok;193 Langier S. (TO C/negoziante);202;maciotta;giacomo;IMP;valle d'andorno;BI
+436;C1713_01_264;TO;1713;torino università degli studi;torino;S1;S;ok;369 Ugliengo C. (BI/M_Min);193;langier;spirito;negoziante;torino;TO C
+437;C1713_01_271;TO;1713;torino castello di rivoli;torino;S1;S;ok;169 Giani G. (BI/NS);369;ugliengo;carlo maria;M_Min;bioglio BI;BI
+438;C1713_01_277;TO;1713;torino castello di rivoli;torino;S1;S;ok;223 Menafoglio A. (MI/CM_M);169;giani;gerolamo;NS;stato di milano;BI
+439;C1711_01_001;BRDE;1711;brunetta e demonte;brunetta e demonte;S1;S;ok;40 Bertinello P. (MI/IMP);223;menafoglio;agostino;CM_M;stato di milano;MI
+440;C1711_01_008;VALAL;1711;valenza e alessandria;valenza e alessandria;S1;S;ok;250 Parone C. (NS/NS);40;bertinello;pietro;IMP;como MI;MI
+441;C1711_01_012;BA;1711;piemonte ponti;ponti;S1;S;ok;26 Bello L. (BI/IMP);250;parone;carlo;NS;;NS
+442;C1711_01_014;TO;1711;torino cittadella;torino;S1;S;ok;26 Bello L. (BI/IMP);26;bello;lorenzo;IMP;valle d'andorno;BI
+443;C1711_01_018;TO;1711;torino palazzi reali;torino;S1;S;ok;64 Bollino G. (MI/M);26;bello;lorenzo;IMP;valle d'andorno;BI
+444;C1711_01_029;MO;1711;moncaglieri castello;moncaglieri;S1;S;ok;361 Toscanello F. (LU/impresaro minatore);64;bollino;giuseppe;M;valsolda;MI
+445;C1711_01_033;TO;1711;torino arsenale;torino;S1;S;ok;368 Tua G. (BI/M);361;toscanello;francesco;impresaro minatore;lugano;LU
+446;C1711_01_038;CA;1711;casale citta e castello;casale;S1;S;ok;224 Menafoglio A. (MI/M_M);368;tua;gio batta;M;occhieppo superiore BI;BI
+447;C1711_01_047;TO;1711;torino città e cittadella;torino;S1;S;ok;341 Sereno G. (Vsu/IMP);224;menafoglio;andrea;M_M;stato di milano;MI
+448;C1711_01_054;BR;1711;brunetta;brunetta;S1;S;ok;331 Sardi G. (LU/NS);341;sereno;gioanni;IMP;giaglione, val di susa;Vsu
+449;C1711_01_057;BR;1711;brunetta;brunetta;S1;S;ok;39 Berti G. (MI/IMP);331;sardi;giorgio;NS;lugano;LU
+450;C1712_01_061;BR;1712;brunetta;brunetta;S1;S;ok;108 Clerico S. (BI/CM_B);39;berti;gio batta;IMP;como MI;MI
+451;C1711_01_065;DORA;1711;dora ponte;dora;S1;S;ok;247 Paneaglio S. (TO C/NS);108;clerico;sebastiano;CM_B;muzzano BI;BI
+452;C1711_01_066;TO;1711;torino cittadella;torino;S1;S;ok;267 Pianarosa G. (MI/NS);247;paneaglio;spirito giuseppe;NS;torino;TO C
+453;C1712_01_067;SAO;1712;sargio [saorge] forte;saorge;S1;S;ok;226 Menafoglio C. (MI/CM_M);267;pianarosa;guglielmo;NS;valle d'intelvi;MI
+454;C1712_01_071;EX;1712;exilles;exilles;S1;S;ok;159 Gallo G. (TO/M);226;menafoglio;carlo andrea;CM_M;stato di milano;MI
+455;C1712_01_073;DE;1712;demonte;demonte;S1;S;ok;39 Berti G. (MI/IMP);159;gallo;gio francesco;M;leinì TO;TO
+456;C1712_01_076;AL;1712;alessandria fortificazioni;alessadria;S1;S;ok;226 Menafoglio C. (MI/CM_M);39;berti;gio batta;IMP;como MI;MI
+457;C1714_02_019;MOR;1714;mortara fortificazioni;mortara;S1;S;ok;375 Vani A. (BI/IMP);226;menafoglio;carlo andrea;CM_M;stato di milano;MI
+458;C1714_02_027;BR;1714;brunetta;brunetta;S1;S;ok;168 Ghibaudo G. (TO/NS);375;vani;antonio;IMP;valle d'andorno;BI
+459;C1720_07_021;SUP;1720;superga chiesa;superga;S1;S;ok;43 Bertinetti P. (TO/NS);168;ghibaudo;gio batta;NS;bardassano TO;TO
+460;C1720_07_023;SUP;1720;superga chiesa;superga;S1;S;ok;264 Pia P. (TO/NS);43;bertinetti;paolo;NS;monte di superga TO;TO
+461;C1720_07_025;SUP;1720;superga chiesa;superga;S1;S;ok;127 Emanuel P. (NS/CM_B);264;pia;pietro;NS;monte di superga TO;TO
+462;C1720_07_026;VEN;1720;venaria reale regio palazzo;venaria;S1;S;ok;173 Gilardo F. (TO/NS);127;emanuel;pietro;CM_B;;NS
+463;C1720_07_030;NS;1720;regio servitio;;S1;S;ok;213 Marchese A. (CN/M_P);173;gilardo;francesco;NS;san mauro TO;TO
+464;C1720_07_033;TO;1720;torino real palazzo;torino;S1;S;ok;132 Fenoglio P. (TO/NS);213;marchese;andrea;M_P;brozasco marchesato di saluzzo;CN
+465;C1720_07_036;SUP;1720;superga chiesa;superga;S1;S;ok;48 Bianchetto G. (NS/CM_B);132;fenoglio;pietro;NS;monte di superga TO;TO
+466;C1720_07_037;TO;1720;torino caserme porta susina;torino;S1;S;ok;341 Sereno G. (Vsu/IMP);48;bianchetto;gio andrea;CM_B;;NS
+467;C1720_07_044;BR;1720;brunetta;brunetta;S1;S;ok;202 Maciotta G. (BI/IMP);341;sereno;gioanni;IMP;giaglione, val di susa;Vsu
+468;C1720_07_054;BR;1720;brunetta;brunetta;S1;S;ok;44 Bertoglio G. (TO/NS);202;maciotta;giacomo;IMP;valle d'andorno;BI
+469;C1720_07_079;SUP;1720;superga chiesa;superga;S1;S;ok;181 Gobbi P. (MI/CM_P);44;bertoglio;giacomo;NS;monte di superga TO;TO
+470;C1720_07_086;VEN;1720;venaria reale paviglione dei regi palazzi;venaria;S1;S;ok;270 Piazza D. (NS/CM);181;gobbi;paolo;CM_P;stato di milano;MI
+471;C1720_07_090;TO;1720;torino caserme porta susina;torino;S1;S;ok;133 Ferrari G. (NS/M);270;piazza;defendente;CM;;NS
+472;C1720_07_094;TO;1720;torino caserme porta susina;torino;S1;S;ok;68 Borriglione C. (TO/NS);133;ferrari;giacomo;M;;NS
+473;C1720_07_011;VEN;1720;venaria reale;venaria;S1;S;ok;121 Culiero M. (TO/NS);68;borriglione;carlo lorenzo;NS;venaria reale;TO
+474;C1720_07_100;NS;1720;;;S1;S;ok;289 Quadrone D. (NS/IMP);121;culiero;matteo;NS;settimo torinese TO;TO
+475;C1720_07_102;TO;1720;torino fabriche;torino;S1;S;ok;147 Gaglia G. (TO/NS);289;quadrone;domenico;IMP;;NS
+476;C1720_07_106;SUP;1720;superga fabrica della chiesa;superga;S1;S;ok;23 Bello G. (TO C/IMP);147;gaglia;gio batta;NS;moncalieri;TO
+477;C1720_07_108;BR;1720;brunetta;brunetta;S1;S;ok;143 Francone P. (NS/M_F);23;bello;giacomo1;IMP;torino;TO C
+478;C1720_07_113;VEN;1720;venaria paviglione regio;venaria;S1;S;ok;323 Ronsil P. (PI/NS);143;francone;pietro gio;M_F;;NS
+479;C1720_07_120;NS;1720;;;S1;S;ok;128 Ermoglio D. (MI/CM_M);323;ronsil;pietro;NS;exilles;PI
+480;C1720_07_122;SUP;1720;superga fabrica della chiesa;superga;S1;S;ok;338 Schioppo S. (TO/NS);128;ermoglio;domenico;CM_M;varese MI;MI
+481;C1720_07_001;SUP;1720;superga;superga;S1;S;ok;44 Bertoglio G. (TO/NS);338;schioppo;sebastiano;NS;giaveno TO;TO
+482;C1720_07_009;SUP;1720;superga chiesa;superga;S1;S;ok;162 Garcin E. (PI/NS);44;bertoglio;giacomo;NS;monte di superga TO;TO
+483;C1742_37_019;FE;1742;fenestrelle forte;fenestrelle;S1;S;ok;284 Plato P. (TO/NS);162;garcin;emanuel;NS;villaretto, valle di fenestrelle;PI
+484;C1742_38_001;BA;1742;barche da ponte;barche;S1;S;ok;32 Bellotti P. (MI/CM_M);284;plato;pietro antonio;NS;moncalieri;TO
+485;C1742_38_005;CN;1742;cuneo fortificazioni;cuneo;S1;S;ok;118 Croppi C. (MI/CM_M);32;bellotti;pietro;CM_M;valsolda;MI
+486;C1742_38_017;FE;1742;fenestrelle fortificazioni;fenestrelle;S1;S;ok;274 Piazzolo G. (NS/CM_P);118;croppi;carlo;CM_M;suno, stato di milano;MI
+487;C1742_38_038;TOR;1742;tortona fortificazioni;tortona;S1;S;ok;52 Biglia P. (BI/CM_M);274;piazzolo;gio batta;CM_P;;NS
+488;C1742_38_042;FE;1742;fenestrelle fortificazioni;fenestrelle;S1;S;ok;209 Magnano C. (BI/CM_M);52;biglia;pietro giuseppe;CM_M;san paolo, andorno BI;BI
+489;C1742_38_054;TA;1742;tanaro;tanaro;S1;S;ok;182 Goggia P. (MI/NS);209;magnano;carlo giuseppe;CM_M;san paolo, andorno BI;BI
+490;C1742_38_080;BA;1742;barche;barche;S1;S;ok;350 Sormani G. (MI/CM_M);182;goggia;pietro;NS;vestreno, stato di milano;MI
+491;C1742_38_084;TOR;1742;tortona castello;tortona;S1;S;ok;209 Magnano C. (BI/CM_M);350;sormani;gerolamo;CM_M;brusimpiano, stato di milano;MI
+492;C1742_38_092;BR;1742;brunetta fortificazioni;brunetta;S1;S;ok;54 Biglia G. (BI/CM_M);209;magnano;carlo giuseppe;CM_M;san paolo, andorno BI;BI
+493;C1742_38_106;EX;1742;exilles fortificazioni;exilles;S1;S;ok;76 Bussi P. (LU/CM_M);54;biglia;gio batta;CM_M;san paolo, andorno BI;BI
+494;C1742_38_118;CN;1742;cuneo fortificazioni;cuneo;S1;S;ok;376 Vani G. (BI/CM_M);76;bussi;pietro;CM_M;puria, luganese;LU
+495;C1742_38_126;DE;1742;demonte fortificazioni;demonte;S1;S;ok;142 Fos C. (altro/NS);376;vani;gio batta;CM_M;san paolo, andorno BI;BI
+496;C1742_38_154;DE;1742;demonte magazzini;demonte;S1;S;ok;366 Trolli D. (MI/CM_M);142;fos;cristofaro;NS;soria, stato di brunsvich;altro
+497;C1742_38_158;CA;1742;casale fiume po;casale;S1;S;ok;261 Pezzi A. (TO C/CM_M);366;trolli;domenico;CM_M;laveno, stato di milano;MI
+498;C1742_38_170;TO;1742;torino cittadella;torino;S1;S;ok;11 Aprile G. (LU/NS);261;pezzi;antonio;CM_M;torino;TO C
+499;C1742_38_189;BR;1742;brunetta;brunetta;S1;S;ok;190 Iacazio G. (BI/CM_M);11;aprile;giacomo;NS;figino luganese;LU
+500;C1742_38_205;CN;1742;cuneo palazzo del governo;cuneo;S1;S;ok;128 Ermoglio D. (MI/CM_M);190;iacazio;giuseppe;CM_M;campiglia (cervo) BI;BI
+501;C1742_37_014;FE;1742;fenestrelle forte;fenestrelle;S1;S;ok;205 Maffei C. (TO C/CM_B);128;ermoglio;domenico;CM_M;varese MI;MI
+502;C1742_38_213;CA;1742;casale castello;casale;S1;S;ok;37 Bernascone G. (MI/CM_M);205;maffei;carlo;CM_B;torino;TO C
+503;C1742_38_221;CAMO;1742;casale castello e moncalvo carceri;casale moncalvo;S1;S;ok;196 Leve G. (BI/CM_M);37;bernascone;giacomo;CM_M;varese MI;MI
+504;C1742_38_250;CN;1742;cuneo magazzini;cuneo;S1;S;ok;79 Calleri S. (PI/NS);196;leve;gio antonio;CM_M;san paolo, andorno BI;BI
+505;C1742_38_257;BA;1742;barche;barche;S1;S;ok;137 Fongi G. (NS/NS);79;calleri;sebastiano antonio;NS;villafranca di piemonte;PI
+506;C1742_38_262;BA;1742;barche;barche;S1;S;ok;312 Roberti G. (altro/NS);137;fongi;giuseppe;NS;;NS
+507;C1742_38_266;VILLAF;1742;villafranca forti;villafranca;S1;S;ok;216 Masella G. (LU/NS);312;roberti;gio;NS;nizza;altro
+508;C1742_38_276;VERR;1742;verrua forte;verrua;S1;S;ok;91 Capra A. (TO/NS);216;masella;giuseppe;NS;casaro, lugano;LU
+509;C1742_38_280;BA;1742;barche;barche;S1;S;ok;15 Audero F. (CN/NS);91;capra;andrea;NS;moncalieri;TO
+510;C1742_38_284;BA;1742;barche;barche;S1;S;ok;55 Billotti G. (BI/CM);15;audero;francesco;NS;casalgrasso CN;CN
+511;C1742_38_288;DE;1742;demonte forni e magazzini;demonte;S1;S;ok;391 Zo G. (TO C/NS);55;billotti;gio lorenzo;CM;pollone BI;BI
+512;C1742_38_298;AT;1742;asti castello;asti;S1;S;ok;263 Pezzi G. (MI/CM_M);391;zo;gio bernardo;NS;torino;TO C
+513;C1742_38_308;NO;1742;novara fortificazioni;novara;S1;S;ok;285 Pol G. (TO/NS);263;pezzi;gio antonio;CM_M;valsolda stato di milano;MI
+514;C1742_38_320;BR;1742;brunetta forte;brunetta;S1;S;ok;162 Garcin E. (PI/NS);285;pol;giuseppe;NS;giaveno TO;TO
+515;C1742_38_327;FE;1742;fenestrelle forte;fenestrelle;S1;S;ok;240 Nolfi G. (MI/CM_M);162;garcin;emanuel;NS;villaretto, valle di fenestrelle;PI
+516;C1742_38_337;DE;1742;demonte forte;demonte;S1;S;ok;271 Piazza G. (MI/CM_M);240;nolfi;giuseppe;CM_M;valle d'intelvi, luganese;MI
+517;C1742_38_345;CH;1742;chivasso forte;chivasso;S1;S;ok;234 Mossino G. (MI/CM_M);271;piazza;gio batta;CM_M;valsolda, stato di milano;MI
+518;C1742_38_361;TO;1742;torino cittadella;torino;S1;S;ok;388 Zeppa L. (TO/mercante di ferro);234;mossino;giuseppe antonio;CM_M;valsolda, stato di milano;MI
+519;C1742_38_365;FE;1742;fenestrelle forte;fenestrelle;S1;S;ok;246 Pagano G. (MI/CM_M);388;zeppa;lorenzo giacinto;mercante di ferro;cantoira TO;TO
+520;C1742_38_375;NO;1742;novara castello;novara;S1;S;ok;205 Maffei C. (TO C/CM_B);246;pagano;galeazzo;CM_M;valsolda, stato di milano;MI
+521;C1742_38_381;DORA;1742;dora ponte sulla dora;dora;S1;S;ok;275 Pinchetti D. (MI/CM_M);205;maffei;carlo;CM_B;torino;TO C
+522;C1715_03_006;VAL;1715;valenza fortificazioni;valenza;S1;S;ok;275 Pinchetti D. (MI/CM_M);275;pinchetti;domenico;CM_M;stato di milano;MI
+523;C1715_03_014;TO;1715;torino cittadella;torino;S1;S;ok;117 Cribiatello F. (MI/IMP);275;pinchetti;domenico;CM_M;stato di milano;MI
+524;C1715_03_019;FE;1715;fenestrelle;fenestrelle;S1;S;ok;226 Menafoglio C. (MI/CM_M);117;cribiatello;francesco;IMP;varese MI;MI
+525;C1715_03_024;SAL;1715;saluzzo castello;saluzzo;S1;S;ok;23 Bello G. (TO C/IMP);226;menafoglio;carlo andrea;CM_M;stato di milano;MI
+526;C1715_03_033;TO;1715;torino ingrandimento porta susa;torino;S1;S;ok;219 Mazzoni C. (MI/CM_P);23;bello;giacomo1;IMP;torino;TO C
+527;C1715_03_041;RI;1715;rivoli castello;rivoli;S1;S;ok;361 Toscanello F. (LU/impresaro minatore);219;mazzoni;carlo giuseppe;CM_P;stato di milano;MI
+528;C1715_03_044;BR;1715;brunetta;brunetta;S1;S;ok;353 Tepati B. (VL/NS);361;toscanello;francesco;impresaro minatore;lugano;LU
+529;C1715_03_050;TO;1715;torino unversità degli studi;torino;S1;S;ok;392 Zo G. (BI/M_F);353;tepati;bernardo;NS;mezzanile, valle di lanzo;VL
+530;C1715_03_054;TO;1715;torino unversità degli studi;torino;S1;S;ok;369 Ugliengo C. (BI/M_Min);392;zo;gio henrico;M_F;graglia BI;BI
+531;C1715_03_058;TO;1715;torino unversità degli studi;torino;S1;S;ok;226 Menafoglio C. (MI/CM_M);369;ugliengo;carlo maria;M_Min;bioglio BI;BI
+532;C1715_03_063;VALD;1715;valdocco fabbrica canne da fucile;valdocco;S1;S;ok;172 Gianone P. (TO C/NS);226;menafoglio;carlo andrea;CM_M;stato di milano;MI
+533;C1715_03_068;TO;1715;torino università degli studi;torino;S1;S;ok;319 Rondoletto C. (BI/CM_B);172;gianone;pietro;NS;torino;TO C
+534;C1715_03_075;TO;1715;torino recinto verso porta susina;torino;S1;S;ok;180 Gobbi A. (MI/CM);319;rondoletto;carlo matteo;CM_B;muzzano BI;BI
+535;C1716_03_077;VEN;1716;venaria regia cappella;venaria;S1;S;ok;223 Menafoglio A. (MI/CM_M);180;gobbi;ambroggio;CM;stato di milano;MI
+536;C1716_03_085;VALAL;1716;valenza e alessandria fortificazioni;valenza e alessandria;S1;S;ok;226 Menafoglio C. (MI/CM_M);223;menafoglio;agostino;CM_M;stato di milano;MI
+537;C1716_03_090;TO;1716;torino cittadella;torino;S1;S;ok;266 Pianarosa G. (MI/IMP);226;menafoglio;carlo andrea;CM_M;stato di milano;MI
+538;C1716_03_095;CA;1716;casale castello;casale;S1;S;ok;319 Rondoletto C. (BI/CM_B);266;pianarosa;giacomo;IMP;stato di milano;MI
+539;C1716_03_098;RI;1716;rivoli castello;rivoli;S1;S;ok;281 Pistone G. (BI/IMP);319;rondoletto;carlo matteo;CM_B;muzzano BI;BI
+540;C1716_03_104;BR;1716;brunetta;brunetta;S1;S;ok;86 Cantone D. (TO C/CM_B);281;pistone;gio stefano;IMP;mongrando BI;BI
+541;C1720_07_017;TO;1720;porta susina caserme;torino;S1;S;ok;4 Abbondiolo P. (LU/IMP);86;cantone;domenico;CM_B;torino;TO C
+542;C1714_02_031;MOR;1714;mortara fortificazioni;mortara;S1;S;ok;153 Galimberti G. (MI/negoziante);4;abbondiolo;pietro;IMP;lugano;LU
+543;C1714_02_037;MOR;1714;mortara fortificazioni;mortara;S1;S;ok;318 Rondoletto C. (BI/NS);153;galimberti;giuseppe maria;negoziante;stato di milano;MI
+544;C1714_02_039;CH;1714;chivasso fortificazioni;chivasso;S1;S;ok;349 Somazzo F. (LU/STU);318;rondoletto;carlo maria;NS;muzzano BI;BI
+545;C1714_02_042;RI;1714;rivoli castello;rivoli;S1;S;ok;108 Clerico S. (BI/CM_B);349;somazzo;filippo;STU;cannobio;LU
+546;C1714_02_046;CA;1714;casale fortificazioni;casale;S1;S;ok;223 Menafoglio A. (MI/CM_M);108;clerico;sebastiano;CM_B;muzzano BI;BI
+547;C1714_02_048;AL;1714;alessandria fortificazioni;alessadria;S1;S;ok;175 Gillonio G. (BI/IMP);223;menafoglio;agostino;CM_M;stato di milano;MI
+548;C1714_02_053;AL;1714;alessandria fortificazioni;alessadria;S1;S;ok;347 Solari G. (LU/CM_P);175;gillonio;gio pietro;IMP;muzzano BI;BI
+549;C1714_02_059;TO;1714;torino fabrica dell'università;torino;S1;S;ok;223 Menafoglio A. (MI/CM_M);347;solari;gio batta;CM_P;stato di lugano;LU
+550;C1714_02_073;CH;1714;chivasso e verrua fortificazioni;chivasso;S1;S;ok;177 Gillonio P. (BI/IMP);223;menafoglio;agostino;CM_M;stato di milano;MI
+551;C1714_02_079;TO;1714;torino univeristà degli studi;torino;S1;S;ok;392 Zo G. (BI/M_F);177;gillonio;pietro;IMP;muzzano BI;BI
+552;C1714_02_081;RI;1714;rivoli castello e torino università degli studi;rivoli;S1;S;ok;281 Pistone G. (BI/IMP);392;zo;gio henrico;M_F;graglia BI;BI
+553;C1714_02_083;FE;1714;fenestrelle;fenestrelle;S1;S;ok;288 Quadrone B. (MI/CM_P);281;pistone;gio stefano;IMP;mongrando BI;BI
+554;C1714_02_088;TO;1714;torino università degli studi;torino;S1;S;ok;347 Solari G. (LU/CM_P);288;quadrone;bartolomeo;CM_P;san fedele intelvi CO;MI
+555;C1714_02_090;TO;1714;torino università degli studi;torino;S1;S;ok;281 Pistone G. (BI/IMP);347;solari;gio batta;CM_P;stato di lugano;LU
+556;C1714_02_092;BR;1714;brunetta;brunetta;S1;S;ok;84 Candellero G. (TO C/TOL);281;pistone;gio stefano;IMP;mongrando BI;BI
+557;C1714_02_096;TO;1714;torino università degli studi e susa castello;torino;S1;S;ok;392 Zo G. (BI/M_F);84;candellero;giuseppe;TOL;torino;TO C
+558;C1714_02_001;TO;1714;torino castello di rivoli;torino;S1;S;ok;223 Menafoglio A. (MI/CM_M);392;zo;gio henrico;M_F;graglia BI;BI
+559;C1714_02_007;BR;1714;brunetta;brunetta;S1;S;ok;374 Vanera M. (VL/IMP);223;menafoglio;agostino;CM_M;stato di milano;MI
+560;C1714_02_013;BR;1714;brunetta;brunetta;S1;S;ok;119 Crosa T. (TO C/NS);374;vanera;michele;IMP;groscavallo, valle di lanzo;VL
+561;C1715_03_001;RI;1715;rivoli castello;rivoli;S1;S;ok;302 Righino P. (MI/IMP);119;crosa;tomaso andrea;NS;torino;TO C
+562;C1715_03_003;CA;1715;casale fiume po;casale;S1;S;ok;332 Sardi P. (LU/IMP);302;righino;paulo andrea;IMP;como MI;MI
+563;C1712_01_085;TO;1712;torino cittadella;torino;S2;S;ok;275 Pinchetti D. (MI/CM_M);332;sardi;pietro;IMP;lugano;LU
+564;C1712_01_091;CA;1712;casale fiume po;casale;S2;S;ok;279 Pistone G. (BI/NS);275;pinchetti;domenico;CM_M;stato di milano;MI
+565;C1712_01_095;IV;1712;ivrea forte e castello;ivrea;S2;S;ok;302 Righino P. (MI/IMP);279;pistone;gio giulio;NS;mongrando BI;BI
+566;C1712_01_099;MOR;1712;mortara fortificazioni;mortara;S2;S;ok;320 Rondoletto G. (BI/IMP);302;righino;paulo andrea;IMP;como MI;MI
+567;C1712_01_103;TO;1712;torino cittadella;torino;S2;S;ok;105 Clerico G. (BI/NS);320;rondoletto;gio martino;IMP;muzzano BI;BI
+568;C1712_01_107;TO;1712;torino porta susina;torino;S2;S;ok;136 Fiorina G. (BI/NS);105;clerico;gio;NS;muzzano BI;BI
+569;C1712_01_115;RI;1712;rivoli castello;rivoli;S2;S;ok;97 Casella A. (LU/CM_P);136;fiorina;gio pietro;NS;graglia BI;BI
+570;C1712_01_125;VEN;1712;venaria reale gran padiglio;venaria;S2;S;ok;102 Ceresio G. (CN/NS);97;casella;antonio;CM_P;lugano;LU
+571;C1712_01_128;SA;1712;saluggia collegno ponti;saluggia;S2;S;ok;226 Menafoglio C. (MI/CM_M);102;ceresio;gio antonio;NS;casalgrasso CN;CN
+572;C1713_01_142;RI;1713;rivoli castello;rivoli;S2;S;ok;202 Maciotta G. (BI/IMP);226;menafoglio;carlo andrea;CM_M;stato di milano;MI
+573;C1713_01_151;BR;1713;brunetta;brunetta;S2;S;ok;331 Sardi G. (LU/NS);202;maciotta;giacomo;IMP;valle d'andorno;BI
+574;C1713_01_158;TO;1713;torino università degli studi;torino;S2;S;ok;319 Rondoletto C. (BI/CM_B);331;sardi;giorgio;NS;lugano;LU
+575;C1713_01_178;TO;1713;torino caserma della cittadella;torino;S2;S;ok;381 Vercelli G. (Vse/M_P);319;rondoletto;carlo matteo;CM_B;muzzano BI;BI
+576;C1713_01_187;VEN;1713;venaria;venaria;S2;S;ok;218 Mastalone P. (TO C/NS);381;vercelli;gio batta detto canova;M_P;valsesia;Vse
+577;C1713_01_198;TO;1713;torino porta susina;torino;S2;S;ok;381 Vercelli G. (Vse/M_P);218;mastalone;pietro francesco;NS;torino;TO C
+578;C1713_01_194;VEN;1713;venaria;venaria;S2;S;ok;242 Oreglia C. (TO C/NS);381;vercelli;gio batta detto canova;M_P;valsesia;Vse
+579;C1713_01_210;TO;1713;torino cittadella;torino;S2;S;ok;228 Menafoglio G. (MI/IMP);242;oreglia;carlo giuseppe;NS;torino;TO C
+580;C1713_01_220;PIN;1713;pinerolo arsenale;pinerolo;S2;S;ok;97 Casella A. (LU/CM_P);228;menafoglio;gioanni;IMP;stato di milano;MI
+581;C1713_01_235;TO;1713;torino unversità degli studi;torino;S2;S;ok;266 Pianarosa G. (MI/IMP);97;casella;antonio;CM_P;lugano;LU
+582;C1713_01_241;VAL;1713;valenza fortificazioni;valenza;S2;S;ok;276 Pinchetti P. (MI/NS);266;pianarosa;giacomo;IMP;stato di milano;MI
+583;C1713_01_248;CA;1713;casale castello;casale;S2;S;ok;341 Sereno G. (Vsu/IMP);276;pinchetti;paolo;NS;stato di milano;MI
+584;C1713_01_252;BR;1713;brunetta;brunetta;S2;S;ok;315 Romano G. (BI/IMP);341;sereno;gioanni;IMP;giaglione, val di susa;Vsu
+585;C1713_01_256;BR;1713;brunetta;brunetta;S2;S;ok;192 Langier G. (TO C/negoziante);315;romano;gio batta;IMP;valle d'andorno;BI
+586;C1713_01_264;TO;1713;torino università degli studi;torino;S2;S;ok;7 Andicola G. (MI/NS);192;langier;gio vittorio;negoziante;torino;TO C
+587;C1713_01_277;TO;1713;torino castello di rivoli;torino;S2;S;ok;224 Menafoglio A. (MI/M_M);7;andicola;giacomo;NS;stato di milano;MI
+588;C1711_01_001;BRDE;1711;brunetta e demonte;brunetta e demonte;S2;S;ok;159 Gallo G. (TO/M);224;menafoglio;andrea;M_M;stato di milano;MI
+589;C1711_01_008;VALAL;1711;valenza e alessandria;valenza e alessandria;S2;S;ok;80 Camerata A. (MI/IMP);159;gallo;gio francesco;M;leinì TO;TO
+590;C1711_01_014;TO;1711;torino cittadella;torino;S2;S;ok;80 Camerata A. (MI/IMP);80;camerata;antonio;IMP;valsolda;MI
+591;C1711_01_018;TO;1711;torino palazzi reali;torino;S2;S;ok;244 Pagano C. (MI/M);80;camerata;antonio;IMP;valsolda;MI
+592;C1711_01_029;MO;1711;moncaglieri castello;moncaglieri;S2;S;ok;149 Gaja P. (BI/M);244;pagano;carlo;M;valsolda;MI
+593;C1711_01_033;TO;1711;torino arsenale;torino;S2;S;ok;239 Negro B. (BI/M);149;gaja;pietro;M;valle d'andorno;BI
+594;C1711_01_038;CA;1711;casale citta e castello;casale;S2;S;ok;296 Riccio F. (TO C/M);239;negro;bartolomeo;M;[occhieppo superiore];BI
+595;C1711_01_047;TO;1711;torino città e cittadella;torino;S2;S;ok;21 Beletto L. (Vsu/M);296;riccio;francesco antonio;M;torino;TO C
+596;C1711_01_054;BR;1711;brunetta;brunetta;S2;S;ok;16 Baietto G. (TO/M);21;beletto;lorenzo;M;giaglione, val di susa;Vsu
+597;C1712_01_061;BR;1712;brunetta;brunetta;S2;S;ok;238 Mosso G. (BI/CM_B);16;baietto;gio francesco;M;leinì TO;TO
+598;C1711_01_065;DORA;1711;dora ponte;dora;S2;S;ok;305 Riva M. (TO/NS);238;mosso;giuseppe;CM_B;muzzano BI;BI
+599;C1711_01_066;TO;1711;torino cittadella;torino;S2;S;ok;281 Pistone G. (BI/IMP);305;riva;michele antonio;NS;grugliasco TO;TO
+600;C1712_01_071;EX;1712;exilles;exilles;S2;S;ok;375 Vani A. (BI/IMP);281;pistone;gio stefano;IMP;mongrando BI;BI
+601;C1712_01_073;DE;1712;demonte;demonte;S2;S;ok;40 Bertinello P. (MI/IMP);375;vani;antonio;IMP;valle d'andorno;BI
+602;C1712_01_076;AL;1712;alessandria fortificazioni;alessadria;S2;S;ok;223 Menafoglio A. (MI/CM_M);40;bertinello;pietro;IMP;como MI;MI
+603;C1714_02_019;MOR;1714;mortara fortificazioni;mortara;S2;S;ok;210 Magnano G. (BI/CM_M);223;menafoglio;agostino;CM_M;stato di milano;MI
+604;C1714_02_027;BR;1714;brunetta;brunetta;S2;S;ok;170 Gianoglio A. (TO/NS);210;magnano;gio batta;CM_M;muzzano BI;BI
+605;C1720_07_021;SUP;1720;superga chiesa;superga;S2;S;ok;251 Pasquale B. (NS/CM_B);170;gianoglio;andrea;NS;bardassano TO;TO
+606;C1720_07_026;VEN;1720;venaria reale regio palazzo;venaria;S2;S;ok;206 Maffeo G. (TO C/CM_B);251;pasquale;bonifacio;CM_B;;NS
+607;C1720_07_037;TO;1720;torino caserme porta susina;torino;S2;S;ok;343 Sereno M. (Vsu/IMP);206;maffeo;gioannino;CM_B;torino;TO C
+608;C1720_07_044;BR;1720;brunetta;brunetta;S2;S;ok;51 Biglia G. (BI/CM_M);343;sereno;michele (cugino);IMP;giaglione, val di susa;Vsu
+609;C1720_07_054;BR;1720;brunetta;brunetta;S2;S;ok;289 Quadrone D. (NS/IMP);51;biglia;gio batta;CM_M;valle d'andorno;BI
+610;C1720_07_090;TO;1720;torino caserme porta susina;torino;S2;S;ok;124 Demichelis G. (NS/M_F);289;quadrone;domenico;IMP;;NS
+611;C1720_07_094;TO;1720;torino caserme porta susina;torino;S2;S;ok;287 Pozzo F. (NS/IMP);124;demichelis;guglielmo;M_F;;NS
+612;C1720_07_102;TO;1720;torino fabriche;torino;S2;S;ok;374 Vanera M. (VL/IMP);287;pozzo;francesco;IMP;;NS
+613;C1720_07_108;BR;1720;brunetta;brunetta;S2;S;ok;19 Barello F. (NS/M_F);374;vanera;michele;IMP;groscavallo, valle di lanzo;VL
+614;C1720_07_113;VEN;1720;venaria paviglione regio;venaria;S2;S;ok;66 Bonesio B. (BI/CM);19;barello;filippo;M_F;;NS
+615;C1720_07_122;SUP;1720;superga fabrica della chiesa;superga;S2;S;ok;314 Rocco N. (TO/NS);66;bonesio;bartolomeo;CM;caciorna, valle d'andorno;BI
+616;C1720_07_009;SUP;1720;superga chiesa;superga;S2;S;ok;30 Bellotti C. (MI/CM_M);314;rocco;nicolao;NS;monte di superga TO;TO
+617;C1742_38_005;CN;1742;cuneo fortificazioni;cuneo;S2;S;ok;300 Righino G. (MI/CM_M);30;bellotti;carlo;CM_M;valsolda;MI
+618;C1742_38_017;FE;1742;fenestrelle fortificazioni;fenestrelle;S2;S;ok;215 Martello T. (BI/CM_M);300;righino;giacomo;CM_M;marcio, stato di milano;MI
+619;C1742_38_042;FE;1742;fenestrelle fortificazioni;fenestrelle;S2;S;ok;144 Furno A. (BI/CM_M);215;martello;tomaso;CM_M;quittengo BI;BI
+620;C1742_38_092;BR;1742;brunetta fortificazioni;brunetta;S2;S;ok;165 Gatto A. (BI/CM_M);144;furno;antonio;CM_M;piatto BI;BI
+621;C1742_38_106;EX;1742;exilles fortificazioni;exilles;S2;S;ok;188 Guabello F. (BI/CM_M);165;gatto;antonio;CM_M;graglia BI;BI
+622;C1742_38_126;DE;1742;demonte fortificazioni;demonte;S2;S;ok;300 Righino G. (MI/CM_M);188;guabello;francesco antonio;CM_M;mongrando BI;BI
+623;C1742_38_158;CA;1742;casale fiume po;casale;S2;S;ok;286 Pollaro G. (LU/CM_M);300;righino;giacomo;CM_M;marcio, stato di milano;MI
+624;C1742_38_170;TO;1742;torino cittadella;torino;S2;S;ok;120 Cucco P. (BI/NS);286;pollaro;gio muzio;CM_M;lugano;LU
+625;C1742_38_205;CN;1742;cuneo palazzo del governo;cuneo;S2;S;ok;122 De Magistris G. (PI/NS);120;cucco;pietro;NS;campiglia, cervo BI;BI
+626;C1742_37_014;FE;1742;fenestrelle forte;fenestrelle;S2;S;ok;37 Bernascone G. (MI/CM_M);122;de magistris;giacomo;NS;domodossola;PI
+627;C1742_38_213;CA;1742;casale castello;casale;S2;S;ok;6 Alino G. (MI/CM_M);37;bernascone;giacomo;CM_M;varese MI;MI
+628;C1742_38_221;CAMO;1742;casale castello e moncalvo carceri;casale moncalvo;S2;S;ok;257 Peraldo G. (BI/CM_M);6;alino;gio batta;CM_M;varese MI;MI
+629;C1742_38_250;CN;1742;cuneo magazzini;cuneo;S2;S;ok;90 Capello G. (PI/NS);257;peraldo;giuseppe antonio;CM_M;san paolo, andorno BI;BI
+630;C1742_38_284;BA;1742;barche;barche;S2;S;ok;337 Schiera D. (MI/CM);90;capello;giuseppe;NS;pancaglieri;PI
+631;C1742_38_288;DE;1742;demonte forni e magazzini;demonte;S2;S;ok;6 Alino G. (MI/CM_M);337;schiera;domenico;CM;torre, stato di milano;MI
+632;C1742_38_298;AT;1742;asti castello;asti;S2;S;ok;245 Pagano D. (MI/CM_M);6;alino;gio batta;CM_M;varese MI;MI
+633;C1742_38_308;NO;1742;novara fortificazioni;novara;S2;S;ok;207 Maffei M. (MI/CM_M);245;pagano;domenico;CM_M;valsolda, stato di milano;MI
+634;C1742_38_337;DE;1742;demonte forte;demonte;S2;S;ok;263 Pezzi G. (MI/CM_M);207;maffei;matteo antonio;CM_M;marcio, stato di milano;MI
+635;C1742_38_375;NO;1742;novara castello;novara;S2;S;ok;226 Menafoglio C. (MI/CM_M);263;pezzi;gio antonio;CM_M;valsolda stato di milano;MI
+636;C1715_03_006;VAL;1715;valenza fortificazioni;valenza;S2;S;ok;226 Menafoglio C. (MI/CM_M);226;menafoglio;carlo andrea;CM_M;stato di milano;MI
+637;C1715_03_014;TO;1715;torino cittadella;torino;S2;S;ok;332 Sardi P. (LU/IMP);226;menafoglio;carlo andrea;CM_M;stato di milano;MI
+638;C1715_03_019;FE;1715;fenestrelle;fenestrelle;S2;S;ok;316 Romano T. (BI/IMP);332;sardi;pietro;IMP;lugano;LU
+639;C1715_03_024;SAL;1715;saluzzo castello;saluzzo;S2;S;ok;29 Bello P. (TO C/IMP);316;romano;tomaso;IMP;valle d'andorno;BI
+640;C1715_03_033;TO;1715;torino ingrandimento porta susa;torino;S2;S;ok;110 Compassi C. (MI/M_P);29;bello;pietro maria (fratello di giacomo);IMP;torino;TO C
+641;C1715_03_041;RI;1715;rivoli castello;rivoli;S2;S;ok;130 Favre F. (AO/IMP);110;compassi;carlo stefano;M_P;stato di milano;MI
+642;C1715_03_044;BR;1715;brunetta;brunetta;S2;S;ok;100 Castelli M. (RO/M_F);130;favre;francesco giuseppe;IMP;chamois, savoia AO;AO
+643;C1715_03_054;TO;1715;torino unversità degli studi;torino;S2;S;ok;200 Maciotta C. (BI/IMP);100;castelli;marco fabio detto il romano;M_F;romano;RO
+644;C1715_03_063;VALD;1715;valdocco fabbrica canne da fucile;valdocco;S2;S;ok;292 Rechettino A. (MI/CM);200;maciotta;carlo;IMP;valle d'andorno;BI
+645;C1716_03_077;VEN;1716;venaria regia cappella;venaria;S2;S;ok;275 Pinchetti D. (MI/CM_M);292;rechettino;antonio;CM;stato di milano;MI
+646;C1716_03_085;VALAL;1716;valenza e alessandria fortificazioni;valenza e alessandria;S2;S;ok;266 Pianarosa G. (MI/IMP);275;pinchetti;domenico;CM_M;stato di milano;MI
+647;C1716_03_090;TO;1716;torino cittadella;torino;S2;S;ok;226 Menafoglio C. (MI/CM_M);266;pianarosa;giacomo;IMP;stato di milano;MI
+648;C1716_03_095;CA;1716;casale castello;casale;S2;S;ok;283 Pistone G. (BI/IMP);226;menafoglio;carlo andrea;CM_M;stato di milano;MI
+649;C1716_03_104;BR;1716;brunetta;brunetta;S2;S;ok;205 Maffei C. (TO C/CM_B);283;pistone;giuseppe antonio;IMP;mongrando BI;BI
+650;C1720_07_017;TO;1720;porta susina caserme;torino;S2;S;ok;175 Gillonio G. (BI/IMP);205;maffei;carlo;CM_B;torino;TO C
+651;C1714_02_031;MOR;1714;mortara fortificazioni;mortara;S2;S;ok;223 Menafoglio A. (MI/CM_M);175;gillonio;gio pietro;IMP;muzzano BI;BI
+652;C1714_02_037;MOR;1714;mortara fortificazioni;mortara;S2;S;ok;108 Clerico S. (BI/CM_B);223;menafoglio;agostino;CM_M;stato di milano;MI
+653;C1714_02_039;CH;1714;chivasso fortificazioni;chivasso;S2;S;ok;158 Gallo G. (MI/STU);108;clerico;sebastiano;CM_B;muzzano BI;BI
+654;C1714_02_042;RI;1714;rivoli castello;rivoli;S2;S;ok;111 Constanzo B. (PI/IMP);158;gallo;gian giacomo;STU;san fedele intelvi CO;MI
+655;C1714_02_048;AL;1714;alessandria fortificazioni;alessadria;S2;S;ok;4 Abbondiolo P. (LU/IMP);111;constanzo;bartolomeo;IMP;alessandria;PI
+656;C1714_02_053;AL;1714;alessandria fortificazioni;alessadria;S2;S;ok;345 Solari C. (LU/CM_P);4;abbondiolo;pietro;IMP;lugano;LU
+657;C1714_02_059;TO;1714;torino fabrica dell'università;torino;S2;S;ok;226 Menafoglio C. (MI/CM_M);345;solari;carlo;CM_P;stato di lugano;LU
+658;C1714_02_073;CH;1714;chivasso e verrua fortificazioni;chivasso;S2;S;ok;374 Vanera M. (VL/IMP);226;menafoglio;carlo andrea;CM_M;stato di milano;MI
+659;C1714_02_083;FE;1714;fenestrelle;fenestrelle;S2;S;ok;10 Aprile F. (LU/CM_P);374;vanera;michele;IMP;groscavallo, valle di lanzo;VL
+660;C1714_02_088;TO;1714;torino università degli studi;torino;S2;S;ok;348 Solari M. (LU/M_P);10;aprile;francesco;CM_P;carona, valle di lugano;LU
+661;C1714_02_090;TO;1714;torino università degli studi;torino;S2;S;ok;374 Vanera M. (VL/IMP);348;solari;martino;M_P;stato di lugano;LU
+662;C1714_02_092;BR;1714;brunetta;brunetta;S2;S;ok;100 Castelli M. (RO/M_F);374;vanera;michele;IMP;groscavallo, valle di lanzo;VL
+663;C1714_02_001;TO;1714;torino castello di rivoli;torino;S2;S;ok;302 Righino P. (MI/IMP);100;castelli;marco fabio detto il romano;M_F;romano;RO
+664;C1714_02_007;BR;1714;brunetta;brunetta;S2;S;ok;341 Sereno G. (Vsu/IMP);302;righino;paulo andrea;IMP;como MI;MI
+665;C1714_02_013;BR;1714;brunetta;brunetta;S2;S;ok;275 Pinchetti D. (MI/CM_M);341;sereno;gioanni;IMP;giaglione, val di susa;Vsu
+666;C1715_03_003;CA;1715;casale fiume po;casale;S2;S;ok;292 Rechettino A. (MI/CM);275;pinchetti;domenico;CM_M;stato di milano;MI
+667;C1712_01_091;CA;1712;casale fiume po;casale;S3;S;ok;561 Boggio P. (MI/IMP);292;rechettino;antonio;CM;stato di milano;MI
+668;C1712_01_095;IV;1712;ivrea forte e castello;ivrea;S3;S;ok;313 Rochettino A. (MI/NS);561;boggio;pietro1;IMP;como MI;MI
+669;C1712_01_099;MOR;1712;mortara fortificazioni;mortara;S3;S;ok;211 Manfreddo G. (BI/NS);313;rochettino;antonio;NS;stato di milano;MI
+670;C1712_01_103;TO;1712;torino cittadella;torino;S3;S;ok;319 Rondoletto C. (BI/CM_B);211;manfreddo;giacomo;NS;valle d'andorno;BI
+671;C1712_01_107;TO;1712;torino porta susina;torino;S3;S;ok;24 Bello G. (MI/NS);319;rondoletto;carlo matteo;CM_B;muzzano BI;BI
+672;C1712_01_115;RI;1712;rivoli castello;rivoli;S3;S;ok;10 Aprile F. (LU/CM_P);24;bello;giacomo2;NS;valsolda;MI
+673;C1712_01_125;VEN;1712;venaria reale gran padiglio;venaria;S3;S;ok;150 Gaido G. (CN/NS);10;aprile;francesco;CM_P;carona, valle di lugano;LU
+674;C1712_01_128;SA;1712;saluggia collegno ponti;saluggia;S3;S;ok;139 Fontana D. (MI/IMP);150;gaido;giuseppe;NS;casalgrasso CN;CN
+675;C1713_01_142;RI;1713;rivoli castello;rivoli;S3;S;ok;315 Romano G. (BI/IMP);139;fontana;domenico;IMP;valsolda stato di milano;MI
+676;C1713_01_151;BR;1713;brunetta;brunetta;S3;S;ok;231 Miretto V. (Vse/M_P);315;romano;gio batta;IMP;valle d'andorno;BI
+677;C1713_01_187;VEN;1713;venaria;venaria;S3;S;ok;371 Valzo G. (BI/M_P);231;miretto;valentino;M_P;valsesia;Vse
+678;C1713_01_194;VEN;1713;venaria;venaria;S3;S;ok;205 Maffei C. (TO C/CM_B);371;valzo;gio lorenzo;M_P;valle d'andorno;BI
+679;C1713_01_220;PIN;1713;pinerolo arsenale;pinerolo;S3;S;ok;10 Aprile F. (LU/CM_P);205;maffei;carlo;CM_B;torino;TO C
+680;C1713_01_235;TO;1713;torino unversità degli studi;torino;S3;S;ok;275 Pinchetti D. (MI/CM_M);10;aprile;francesco;CM_P;carona, valle di lugano;LU
+681;C1713_01_241;VAL;1713;valenza fortificazioni;valenza;S3;S;ok;302 Righino P. (MI/IMP);275;pinchetti;domenico;CM_M;stato di milano;MI
+682;C1713_01_248;CA;1713;casale castello;casale;S3;S;ok;36 Bellotto L. (Vsu/IMP);302;righino;paulo andrea;IMP;como MI;MI
+683;C1713_01_252;BR;1713;brunetta;brunetta;S3;S;ok;200 Maciotta C. (BI/IMP);36;bellotto;lorenzo;IMP;giaglione, val di susa;Vsu
+684;C1713_01_256;BR;1713;brunetta;brunetta;S3;S;ok;275 Pinchetti D. (MI/CM_M);200;maciotta;carlo;IMP;valle d'andorno;BI
+685;C1711_01_001;BRDE;1711;brunetta e demonte;brunetta e demonte;S3;S;ok;20 Baietto D. (TO/M);275;pinchetti;domenico;CM_M;stato di milano;MI
+686;C1711_01_008;VALAL;1711;valenza e alessandria;valenza e alessandria;S3;S;ok;374 Vanera M. (VL/IMP);20;baietto;domenico;M;leinì TO;TO
+687;C1711_01_014;TO;1711;torino cittadella;torino;S3;S;ok;374 Vanera M. (VL/IMP);374;vanera;michele;IMP;groscavallo, valle di lanzo;VL
+688;C1711_01_018;TO;1711;torino palazzi reali;torino;S3;S;ok;62 Boggio P. (BI/IMP);374;vanera;michele;IMP;groscavallo, valle di lanzo;VL
+689;C1711_01_033;TO;1711;torino arsenale;torino;S3;S;ok;85 Canova A. (BI/M);62;boggio;pietro;IMP;valle d'andorno;BI
+690;C1711_01_038;CA;1711;casale citta e castello;casale;S3;S;ok;374 Vanera M. (VL/IMP);85;canova;antonio;M;[occhieppo superiore];BI
+691;C1712_01_061;BR;1712;brunetta;brunetta;S3;S;ok;51 Biglia G. (BI/CM_M);374;vanera;michele;IMP;groscavallo, valle di lanzo;VL
+692;C1712_01_073;DE;1712;demonte;demonte;S3;S;ok;115 Costanzo B. (MI/IMP);51;biglia;gio batta;CM_M;valle d'andorno;BI
+693;C1712_01_076;AL;1712;alessandria fortificazioni;alessadria;S3;S;ok;275 Pinchetti D. (MI/CM_M);115;costanzo;bartolomeo;IMP;como MI;MI
+694;C1714_02_019;MOR;1714;mortara fortificazioni;mortara;S3;S;ok;320 Rondoletto G. (BI/IMP);275;pinchetti;domenico;CM_M;stato di milano;MI
+695;C1714_02_027;BR;1714;brunetta;brunetta;S3;S;ok;310 Roasio M. (TO/NS);320;rondoletto;gio martino;IMP;muzzano BI;BI
+696;C1720_07_021;SUP;1720;superga chiesa;superga;S3;S;ok;94 Casanova A. (CN/CM_B);310;roasio;michele;NS;bardassano TO;TO
+697;C1720_07_026;VEN;1720;venaria reale regio palazzo;venaria;S3;S;ok;200 Maciotta C. (BI/IMP);94;casanova;antonio;CM_B;cherasco CN;CN
+698;C1720_07_054;BR;1720;brunetta;brunetta;S3;S;ok;344 Sino B. (NS/M_F);200;maciotta;carlo;IMP;valle d'andorno;BI
+699;C1720_07_094;TO;1720;torino caserme porta susina;torino;S3;S;ok;306 Rivantella G. (NS/M_F);344;sino;bartolomeo;M_F;;NS
+700;C1720_07_113;VEN;1720;venaria paviglione regio;venaria;S3;S;ok;364 Trivero G. (CN/NS);306;rivantella;gio andrea;M_F;;NS
+701;C1720_07_009;SUP;1720;superga chiesa;superga;S3;S;ok;233 Mosca A. (BI/CM_M);364;trivero;gio batta;NS;baldissero CN;CN
+702;C1742_38_092;BR;1742;brunetta fortificazioni;brunetta;S3;S;ok;71 Bosazzo G. (BI/CM_M);233;mosca;antonio;CM_M;pie di cavallo, andorno BI;BI
+703;C1742_38_106;EX;1742;exilles fortificazioni;exilles;S3;S;ok;164 Gastaldetto G. (BI/CM_M);71;bosazzo;gio batta;CM_M;quittengo BI;BI
+704;C1742_38_126;DE;1742;demonte fortificazioni;demonte;S3;S;ok;235 Mossino M. (TO C/CM_M);164;gastaldetto;gio eusebio;CM_M;muzzano BI;BI
+705;C1742_38_170;TO;1742;torino cittadella;torino;S3;S;ok;77 Bussolino F. (MI/CM_M);235;mossino;michele;CM_M;torino;TO C
+706;C1742_38_213;CA;1742;casale castello;casale;S3;S;ok;76 Bussi P. (LU/CM_M);77;bussolino;francesco;CM_M;varese MI;MI
+707;C1742_38_337;DE;1742;demonte forte;demonte;S3;S;ok;202 Maciotta G. (BI/IMP);76;bussi;pietro;CM_M;puria, luganese;LU
+708;C1715_03_006;VAL;1715;valenza fortificazioni;valenza;S3;S;ok;202 Maciotta G. (BI/IMP);202;maciotta;giacomo;IMP;valle d'andorno;BI
+709;C1715_03_014;TO;1715;torino cittadella;torino;S3;S;ok;35 Bellotto G. (MI/IMP);202;maciotta;giacomo;IMP;valle d'andorno;BI
+710;C1715_03_033;TO;1715;torino ingrandimento porta susa;torino;S3;S;ok;117 Cribiatello F. (MI/IMP);35;bellotto;giacomo;IMP;valsolda;MI
+711;C1715_03_044;BR;1715;brunetta;brunetta;S3;S;ok;50 Bianco A. (NS/CM);117;cribiatello;francesco;IMP;varese MI;MI
+712;C1715_03_063;VALD;1715;valdocco fabbrica canne da fucile;valdocco;S3;S;ok;35 Bellotto G. (MI/IMP);50;bianco;andrea;CM;;NS
+713;C1716_03_077;VEN;1716;venaria regia cappella;venaria;S3;S;ok;187 Groppi C. (MI/CM_M);35;bellotto;giacomo;IMP;valsolda;MI
+714;C1716_03_085;VALAL;1716;valenza e alessandria fortificazioni;valenza e alessandria;S3;S;ok;187 Groppi C. (MI/CM_M);187;groppi;carlo;CM_M;stato di milano;MI
+715;C1716_03_090;TO;1716;torino cittadella;torino;S3;S;ok;229 Menafoglio N. (MI/IMP);187;groppi;carlo;CM_M;stato di milano;MI
+716;C1716_03_095;CA;1716;casale castello;casale;S3;S;ok;88 Capellaro F. (BI/IMP);229;menafoglio;natale;IMP;stato di milano;MI
+717;C1716_03_104;BR;1716;brunetta;brunetta;S3;S;ok;75 Buscaglione S. (NS/CM_B);88;capellaro;francesco;IMP;mongrando BI;BI
+718;C1720_07_017;TO;1720;porta susina caserme;torino;S3;S;ok;49 Bianchi G. (LU/STU);75;buscaglione;stefano;CM_B;;NS
+719;C1714_02_042;RI;1714;rivoli castello;rivoli;S3;S;ok;26 Bello L. (BI/IMP);49;bianchi;giacomo;STU;campione;LU
+720;C1714_02_053;AL;1714;alessandria fortificazioni;alessadria;S3;S;ok;346 Solari G. (LU/CM_P);26;bello;lorenzo;IMP;valle d'andorno;BI
+721;C1714_02_059;TO;1714;torino fabrica dell'università;torino;S3;S;ok;275 Pinchetti D. (MI/CM_M);346;solari;giacomo;CM_P;stato di lugano;LU
+722;C1714_02_073;CH;1714;chivasso e verrua fortificazioni;chivasso;S3;S;ok;373 Vanera G. (VL/IMP);275;pinchetti;domenico;CM_M;stato di milano;MI
+723;C1714_02_083;FE;1714;fenestrelle;fenestrelle;S3;S;ok;97 Casella A. (LU/CM_P);373;vanera;giulio;IMP;groscavallo, valle di lanzo;VL
+724;C1714_02_088;TO;1714;torino università degli studi;torino;S3;S;ok;345 Solari C. (LU/CM_P);97;casella;antonio;CM_P;lugano;LU
+725;C1714_02_090;TO;1714;torino università degli studi;torino;S3;S;ok;341 Sereno G. (Vsu/IMP);345;solari;carlo;CM_P;stato di lugano;LU
+726;C1714_02_092;BR;1714;brunetta;brunetta;S3;S;ok;275 Pinchetti D. (MI/CM_M);341;sereno;gioanni;IMP;giaglione, val di susa;Vsu
+727;C1714_02_007;BR;1714;brunetta;brunetta;S3;S;ok;342 Sereno M. (Vsu/IMP);275;pinchetti;domenico;CM_M;stato di milano;MI
+728;C1714_02_013;BR;1714;brunetta;brunetta;S3;S;ok;226 Menafoglio C. (MI/CM_M);342;sereno;michele;IMP;giaglione, val di susa;Vsu
+729;C1715_03_003;CA;1715;casale fiume po;casale;S3;S;ok;201 Maciotta G. (BI/NS);226;menafoglio;carlo andrea;CM_M;stato di milano;MI
+730;C1712_01_091;CA;1712;casale fiume po;casale;S4;S;ok;302 Righino P. (MI/IMP);201;maciotta;giacinto;NS;valle d'andorno;BI
+731;C1712_01_095;IV;1712;ivrea forte e castello;ivrea;S4;S;ok;275 Pinchetti D. (MI/CM_M);302;righino;paulo andrea;IMP;como MI;MI
+732;C1712_01_099;MOR;1712;mortara fortificazioni;mortara;S4;S;ok;176 Gillonio G. (BI/IMP);275;pinchetti;domenico;CM_M;stato di milano;MI
+733;C1712_01_107;TO;1712;torino porta susina;torino;S4;S;ok;125 Desio N. (CN/NS);176;gillonio;giuseppe;IMP;muzzano BI;BI
+734;C1712_01_128;SA;1712;saluggia collegno ponti;saluggia;S4;S;ok;80 Camerata A. (MI/IMP);125;desio;nicolao;NS;casalgrasso CN;CN
+735;C1713_01_142;RI;1713;rivoli castello;rivoli;S4;S;ok;316 Romano T. (BI/IMP);80;camerata;antonio;IMP;valsolda;MI
+736;C1713_01_151;BR;1713;brunetta;brunetta;S4;S;ok;371 Valzo G. (BI/M_P);316;romano;tomaso;IMP;valle d'andorno;BI
+737;C1713_01_187;VEN;1713;venaria;venaria;S4;S;ok;220 Meietto V. (NS/M_P);371;valzo;gio lorenzo;M_P;valle d'andorno;BI
+738;C1713_01_194;VEN;1713;venaria;venaria;S4;S;ok;58 Blenio P. (MI/IMP);220;meietto;valentino (non presente solo nominato);M_P;;NS
+739;C1713_01_220;PIN;1713;pinerolo arsenale;pinerolo;S4;S;ok;302 Righino P. (MI/IMP);58;blenio;paolo;IMP;stato di milano;MI
+740;C1713_01_241;VAL;1713;valenza fortificazioni;valenza;S4;S;ok;266 Pianarosa G. (MI/IMP);302;righino;paulo andrea;IMP;como MI;MI
+741;C1713_01_248;CA;1713;casale castello;casale;S4;S;ok;294 Remo M. (Vsu/IMP);266;pianarosa;giacomo;IMP;stato di milano;MI
+742;C1713_01_252;BR;1713;brunetta;brunetta;S4;S;ok;187 Groppi C. (MI/CM_M);294;remo;marco;IMP;novalesa, valsusa;Vsu
+743;C1711_01_001;BRDE;1711;brunetta e demonte;brunetta e demonte;S4;S;ok;39 Berti G. (MI/IMP);187;groppi;carlo;CM_M;stato di milano;MI
+744;C1711_01_008;VALAL;1711;valenza e alessandria;valenza e alessandria;S4;S;ok;373 Vanera G. (VL/IMP);39;berti;gio batta;IMP;como MI;MI
+745;C1712_01_061;BR;1712;brunetta;brunetta;S4;S;ok;266 Pianarosa G. (MI/IMP);373;vanera;giulio;IMP;groscavallo, valle di lanzo;VL
+746;C1714_02_019;MOR;1714;mortara fortificazioni;mortara;S4;S;ok;12 Arduino G. (NS/NS);266;pianarosa;giacomo;IMP;stato di milano;MI
+747;C1714_02_027;BR;1714;brunetta;brunetta;S4;S;ok;151 Gaij M. (TO/NS);12;arduino;giacomo;NS;;NS
+748;C1720_07_021;SUP;1720;superga chiesa;superga;S4;S;ok;309 Rizzo G. (NS/CM_B);151;gaij;michele;NS;bardassano TO;TO
+749;C1720_07_026;VEN;1720;venaria reale regio palazzo;venaria;S4;S;ok;281 Pistone G. (BI/IMP);309;rizzo;giorgio;CM_B;;NS
+750;C1720_07_054;BR;1720;brunetta;brunetta;S4;S;ok;208 Maffiotto G. (BI/CM_M);281;pistone;gio stefano;IMP;mongrando BI;BI
+751;C1742_38_170;TO;1742;torino cittadella;torino;S4;S;ok;93 Carpighi B. (MI/CM_M);208;maffiotto;giacomo;CM_M;camburzano BI;BI
+752;C1742_38_337;DE;1742;demonte forte;demonte;S4;S;ok;89 Capellaro G. (BI/IMP);93;carpighi;bieniamino;CM_M;como MI;MI
+753;C1715_03_014;TO;1715;torino cittadella;torino;S4;S;ok;330 Salla G. (MI/CM);89;capellaro;gio francesco;IMP;mongrando BI;BI
+754;C1716_03_077;VEN;1716;venaria regia cappella;venaria;S4;S;ok;111 Constanzo B. (PI/IMP);330;salla;gioanni;CM;stato di milano;MI
+755;C1716_03_085;VALAL;1716;valenza e alessandria fortificazioni;valenza e alessandria;S4;S;ok;223 Menafoglio A. (MI/CM_M);111;constanzo;bartolomeo;IMP;alessandria;PI
+756;C1716_03_090;TO;1716;torino cittadella;torino;S4;S;ok;187 Groppi C. (MI/CM_M);223;menafoglio;agostino;CM_M;stato di milano;MI
+757;C1716_03_095;CA;1716;casale castello;casale;S4;S;ok;219 Mazzoni C. (MI/CM_P);187;groppi;carlo;CM_M;stato di milano;MI
+758;C1714_02_059;TO;1714;torino fabrica dell'università;torino;S4;S;ok;187 Groppi C. (MI/CM_M);219;mazzoni;carlo giuseppe;CM_P;stato di milano;MI
+759;C1714_02_073;CH;1714;chivasso e verrua fortificazioni;chivasso;S4;S;ok;283 Pistone G. (BI/IMP);187;groppi;carlo;CM_M;stato di milano;MI
+760;C1714_02_083;FE;1714;fenestrelle;fenestrelle;S4;S;ok;346 Solari G. (LU/CM_P);283;pistone;giuseppe antonio;IMP;mongrando BI;BI
+761;C1714_02_090;TO;1714;torino università degli studi;torino;S4;S;ok;258 Peraldo P. (BI/IMP);346;solari;giacomo;CM_P;stato di lugano;LU
+762;C1714_02_092;BR;1714;brunetta;brunetta;S4;S;ok;283 Pistone G. (BI/IMP);258;peraldo;pietro;IMP;valle d'andorno;BI
+763;C1714_02_007;BR;1714;brunetta;brunetta;S4;S;ok;372 Vanera G. (VL/IMP);283;pistone;giuseppe antonio;IMP;mongrando BI;BI
+764;C1714_02_013;BR;1714;brunetta;brunetta;S4;S;ok;278 Pistone C. (BI/NS);372;vanera;gioanni;IMP;groscavallo, valle di lanzo;VL
+765;C1712_01_091;CA;1712;casale fiume po;casale;S5;S;ok;81 Camerata C. (MI/IMP);278;pistone;carlo;NS;mongrando BI;BI
+766;C1713_01_142;RI;1713;rivoli castello;rivoli;S5;S;ok;51 Biglia G. (BI/CM_M);81;camerata;carlo;IMP;stato di milano;MI
+767;C1713_01_151;BR;1713;brunetta;brunetta;S5;S;ok;111 Constanzo B. (PI/IMP);51;biglia;gio batta;CM_M;valle d'andorno;BI
+768;C1713_01_241;VAL;1713;valenza fortificazioni;valenza;S5;S;ok;51 Biglia G. (BI/CM_M);111;constanzo;bartolomeo;IMP;alessandria;PI
+769;C1712_01_061;BR;1712;brunetta;brunetta;S5;S;ok;302 Righino P. (MI/IMP);51;biglia;gio batta;CM_M;valle d'andorno;BI
+770;C1714_02_019;MOR;1714;mortara fortificazioni;mortara;S5;S;ok;361 Toscanello F. (LU/impresaro minatore);302;righino;paulo andrea;IMP;como MI;MI
+771;C1714_02_027;BR;1714;brunetta;brunetta;S5;S;ok;226 Menafoglio C. (MI/CM_M);361;toscanello;francesco;impresaro minatore;lugano;LU
+772;C1716_03_085;VALAL;1716;valenza e alessandria fortificazioni;valenza e alessandria;S5;S;ok;275 Pinchetti D. (MI/CM_M);226;menafoglio;carlo andrea;CM_M;stato di milano;MI
+773;C1716_03_090;TO;1716;torino cittadella;torino;S5;S;ok;202 Maciotta G. (BI/IMP);275;pinchetti;domenico;CM_M;stato di milano;MI
+774;C1714_02_073;CH;1714;chivasso e verrua fortificazioni;chivasso;S5;S;ok;342 Sereno M. (Vsu/IMP);202;maciotta;giacomo;IMP;valle d'andorno;BI
+775;C1714_02_083;FE;1714;fenestrelle;fenestrelle;S5;S;ok;219 Mazzoni C. (MI/CM_P);342;sereno;michele;IMP;giaglione, val di susa;Vsu
+776;C1714_02_090;TO;1714;torino università degli studi;torino;S5;S;ok;283 Pistone G. (BI/IMP);219;mazzoni;carlo giuseppe;CM_P;stato di milano;MI
+777;C1714_02_092;BR;1714;brunetta;brunetta;S5;S;ok;373 Vanera G. (VL/IMP);283;pistone;giuseppe antonio;IMP;mongrando BI;BI
+778;C1714_02_013;BR;1714;brunetta;brunetta;S5;S;ok;200 Maciotta C. (BI/IMP);373;vanera;giulio;IMP;groscavallo, valle di lanzo;VL
+779;C1712_01_091;CA;1712;casale fiume po;casale;S6;S;ok;275 Pinchetti D. (MI/CM_M);200;maciotta;carlo;IMP;valle d'andorno;BI
+780;C1713_01_142;RI;1713;rivoli castello;rivoli;S6;S;ok;159 Gallo G. (TO/M);275;pinchetti;domenico;CM_M;stato di milano;MI
+781;C1712_01_061;BR;1712;brunetta;brunetta;S6;S;ok;187 Groppi C. (MI/CM_M);159;gallo;gio francesco;M;leinì TO;TO
+782;C1714_02_019;MOR;1714;mortara fortificazioni;mortara;S6;S;ok;266 Pianarosa G. (MI/IMP);187;groppi;carlo;CM_M;stato di milano;MI
+783;C1716_03_085;VALAL;1716;valenza e alessandria fortificazioni;valenza e alessandria;S6;S;ok;62 Boggio P. (BI/IMP);266;pianarosa;giacomo;IMP;stato di milano;MI
+784;C1714_02_073;CH;1714;chivasso e verrua fortificazioni;chivasso;S6;S;ok;258 Peraldo P. (BI/IMP);62;boggio;pietro;IMP;valle d'andorno;BI
+785;C1714_02_083;FE;1714;fenestrelle;fenestrelle;S6;S;ok;88 Capellaro F. (BI/IMP);258;peraldo;pietro;IMP;valle d'andorno;BI
+786;C1714_02_092;BR;1714;brunetta;brunetta;S6;S;ok;266 Pianarosa G. (MI/IMP);88;capellaro;francesco;IMP;mongrando BI;BI
+787;C1713_01_142;RI;1713;rivoli castello;rivoli;S7;S;ok;3 [Vassi] A. (BI/NS);266;pianarosa;giacomo;IMP;stato di milano;MI
+788;C1712_01_061;BR;1712;brunetta;brunetta;S7;S;ok;111 Constanzo B. (PI/IMP);3;[vassi];antonio;NS;valle d'andorno;BI
+789;C1714_02_019;MOR;1714;mortara fortificazioni;mortara;S7;S;ok;316 Romano T. (BI/IMP);111;constanzo;bartolomeo;IMP;alessandria;PI
+790;C1714_02_073;CH;1714;chivasso e verrua fortificazioni;chivasso;S7;S;ok;80 Camerata A. (MI/IMP);316;romano;tomaso;IMP;valle d'andorno;BI
+791;C1712_01_082;TO;1712;torino palazzo reale;torino;G1;G;ok;385 Vitale P. (altro/silaro);80;camerata;antonio;IMP;valsolda;MI
+792;C1712_01_085;TO;1712;torino cittadella;torino;G1;G;ok;223 Menafoglio A. (MI/CM_M);385;vitale;pietro;silaro;[volleggo];altro
+793;C1712_01_091;CA;1712;casale fiume po;casale;G1;G;ok;316 Romano T. (BI/IMP);223;menafoglio;agostino;CM_M;stato di milano;MI
+794;C1712_01_095;IV;1712;ivrea forte e castello;ivrea;G1;G;ok;202 Maciotta G. (BI/IMP);316;romano;tomaso;IMP;valle d'andorno;BI
+795;C1712_01_099;MOR;1712;mortara fortificazioni;mortara;G1;G;ok;25 Bello G. (BI/NS);202;maciotta;giacomo;IMP;valle d'andorno;BI
+796;C1712_01_103;TO;1712;torino cittadella;torino;G1;G;ok;27 Bello P. (BI/NS);25;bello;giulio;NS;valle d'andorno;BI
+797;C1712_01_107;TO;1712;torino porta susina;torino;G1;G;ok;62 Boggio P. (BI/IMP);27;bello;pietro;NS;valle d'andorno;BI
+798;C1712_01_112;VERR;1712;verrua e asti forte;verrua;G1;G;ok;83 Candellero G. (TO C/NS);62;boggio;pietro;IMP;valle d'andorno;BI
+799;C1712_01_115;RI;1712;rivoli castello;rivoli;G1;G;ok;107 Clerico G. (BI/NS);83;candellero;gio batta;NS;torino;TO C
+800;C1712_01_119;TO;1712;torino cittadella;torino;G1;G;ok;34 Bellotto C. (MI/NS);107;clerico;gio pietro;NS;muzzano BI;BI
+801;C1712_01_125;VEN;1712;venaria reale gran padiglio;venaria;G1;G;ok;103 Ceresio P. (CN/NS);34;bellotto;carlo francesco;NS;valsolda;MI
+802;C1712_01_128;SA;1712;saluggia collegno ponti;saluggia;G1;G;ok;332 Sardi P. (LU/IMP);103;ceresio;pietro antonio;NS;casalgrasso CN;CN
+803;C1712_01_132;CA;1712;casale fortificazioni;casale;G1;G;ok;332 Sardi P. (LU/IMP);332;sardi;pietro;IMP;lugano;LU
+804;C1713_01_138;CA;1713;casale castello;casale;G1;G;ok;153 Galimberti G. (MI/negoziante);332;sardi;pietro;IMP;lugano;LU
+805;C1713_01_142;RI;1713;rivoli castello;rivoli;G1;G;ok;280 Pistone G. (BI/NS);153;galimberti;giuseppe maria;negoziante;stato di milano;MI
+806;C1713_01_151;BR;1713;brunetta;brunetta;G1;G;ok;291 Raschioni B. (TO C/NS);280;pistone;gio giulio (padre di gio stefano);NS;mongrando BI;BI
+807;C1713_01_158;TO;1713;torino università degli studi;torino;G1;G;ok;390 Zo G. (BI/M_F);291;raschioni;bartolomeo;NS;torino;TO C
+808;C1713_01_166;MOR;1713;mortara sterniti;mortara;G1;G;ok;356 Tognasco C. (LU/NS);390;zo;gio batta;M_F;graglia BI;BI
+809;C1713_01_168;AL;1713;alessandria bastione;alessadria;G1;G;ok;62 Boggio P. (BI/IMP);356;tognasco;christofaro;NS;lugano;LU
+810;C1713_01_174;TO;1713;torino cittadella;torino;G1;G;ok;106 Clerico G. (BI/NS);62;boggio;pietro;IMP;valle d'andorno;BI
+811;C1713_01_178;TO;1713;torino caserma della cittadella;torino;G1;G;ok;100 Castelli M. (RO/M_F);106;clerico;gio pietro;NS;muzzano BI;BI
+812;C1713_01_181;TO;1713;torino università e rivoli castello;torino;G1;G;ok;152 Gaja P. (BI/M);100;castelli;marco fabio detto il romano;M_F;romano;RO
+813;C1713_01_187;VEN;1713;venaria;venaria;G1;G;ok;321 Rondoletto M. (BI/NS);152;gaja;pietro;M;valle d'andorno;BI
+814;C1713_01_198;TO;1713;torino porta susina;torino;G1;G;ok;96 Casasopra L. (LU/TOL);321;rondoletto;martino;NS;muzzano BI;BI
+815;C1713_01_204;VEN;1713;venaria;venaria;G1;G;ok;392 Zo G. (BI/M_F);96;casasopra;ludovico;TOL;lugano;LU
+816;C1713_01_208;TO;1713;torino cappella del santissimo sudario;torino;G1;G;ok;363 Tovazzo C. (NS/mercante);392;zo;gio henrico;M_F;graglia BI;BI
+817;C1713_01_210;TO;1713;torino cittadella;torino;G1;G;ok;392 Zo G. (BI/M_F);363;tovazzo;claudio;mercante;;NS
+818;C1713_01_216;TO;1713;torino cittadella;torino;G1;G;ok;96 Casasopra L. (LU/TOL);392;zo;gio henrico;M_F;graglia BI;BI
+819;C1713_01_220;PIN;1713;pinerolo arsenale;pinerolo;G1;G;ok;194 Lanzavecchia G. (TO C/NS);96;casasopra;ludovico;TOL;lugano;LU
+820;C1713_01_228;MON;1713;mondovì caserma;mondovì;G1;G;ok;38 Berta G. (LU/NS);194;lanzavecchia;gioanni;NS;torino;TO C
+821;C1713_01_235;TO;1713;torino unversità degli studi;torino;G1;G;ok;153 Galimberti G. (MI/negoziante);38;berta;giacomo;NS;lugano;LU
+822;C1713_01_241;VAL;1713;valenza fortificazioni;valenza;G1;G;ok;357 Tognasco C. (LU/NS);153;galimberti;giuseppe maria;negoziante;stato di milano;MI
+823;C1713_01_248;CA;1713;casale castello;casale;G1;G;ok;304 Rippelli F. (VL/NS);357;tognasco;christoforo;NS;lugano;LU
+824;C1713_01_252;BR;1713;brunetta;brunetta;G1;G;ok;153 Galimberti G. (MI/negoziante);304;rippelli;francesco;NS;groscavallo, valle di lanzo;VL
+825;C1713_01_256;BR;1713;brunetta;brunetta;G1;G;ok;325 Rossi G. (TO C/NS);153;galimberti;giuseppe maria;negoziante;stato di milano;MI
+826;C1713_01_264;TO;1713;torino università degli studi;torino;G1;G;ok;94 Casanova A. (CN/CM_B);325;rossi;gio batta;NS;torino;TO C
+827;C1713_01_271;TO;1713;torino castello di rivoli;torino;G1;G;ok;273 Piazzolo F. (MI/NS);94;casanova;antonio;CM_B;cherasco CN;CN
+828;C1713_01_277;TO;1713;torino castello di rivoli;torino;G1;G;ok;243 Origone A. (MI/NS);273;piazzolo;francesco;NS;stato di milano;MI
+829;C1711_01_001;BRDE;1711;brunetta e demonte;brunetta e demonte;G1;G;ok;249 Paron F. (TO/NS);243;origone;antonio maria;NS;milano;MI
+830;C1711_01_012;BA;1711;piemonte ponti;ponti;G1;G;ok;27 Bello P. (BI/NS);249;paron;francesco;NS;borgo po;TO
+831;C1711_01_014;TO;1711;torino cittadella;torino;G1;G;ok;27 Bello P. (BI/NS);27;bello;pietro;NS;valle d'andorno;BI
+832;C1711_01_018;TO;1711;torino palazzi reali;torino;G1;G;ok;260 Persivale G. (CN/NS);27;bello;pietro;NS;valle d'andorno;BI
+833;C1711_01_029;MO;1711;moncaglieri castello;moncaglieri;G1;G;ok;146 Gaffino M. (PI/NS);260;persivale;giuseppe maria;NS;rocca de baldi CN;CN
+834;C1711_01_038;CA;1711;casale citta e castello;casale;G1;G;ok;293 Reghino P. (MI/fondichiere);146;gaffino;martino;NS;col san giovanni;PI
+835;C1711_01_047;TO;1711;torino città e cittadella;torino;G1;G;ok;332 Sardi P. (LU/IMP);293;reghino;pietro maria;fondichiere;stato di milano;MI
+836;C1711_01_057;BR;1711;brunetta;brunetta;G1;G;ok;362 Toscasco C. (LU/CM);332;sardi;pietro;IMP;lugano;LU
+837;C1712_01_061;BR;1712;brunetta;brunetta;G1;G;ok;328 Salazza B. (NS/NS);362;toscasco;christofaro;CM;lugano;LU
+838;C1711_01_065;DORA;1711;dora ponte;dora;G1;G;ok;268 Piazzollo F. (MI/NS);328;salazza;bartolomeo;NS;;NS
+839;C1712_01_067;SAO;1712;sargio [saorge] forte;saorge;G1;G;ok;223 Menafoglio A. (MI/CM_M);268;piazzollo;francesco;NS;stato di milano;MI
+840;C1712_01_071;EX;1712;exilles;exilles;G1;G;ok;59 Bodoira G. (NS/panattaro);223;menafoglio;agostino;CM_M;stato di milano;MI
+841;C1712_01_073;DE;1712;demonte;demonte;G1;G;ok;358 Tognasco G. (LU/NS);59;bodoira;gio domenico;panattaro;;NS
+842;C1712_01_076;AL;1712;alessandria fortificazioni;alessadria;G1;G;ok;299 Righino G. (TO C/fondichiere);358;tognasco;gerolamo;NS;lugano;LU
+843;C1714_02_019;MOR;1714;mortara fortificazioni;mortara;G1;G;ok;186 Griva G. (TO C/NS);299;righino;gerolamo;fondichiere;torino;TO C
+844;C1714_02_027;BR;1714;brunetta;brunetta;G1;G;ok;335 Scalafiotto B. (NS/NS);186;griva;gio antonio;NS;torino;TO C
+845;C1720_07_021;SUP;1720;superga chiesa;superga;G1;G;ok;41 Bertinetti M. (TO/NS);335;scalafiotto;biaggio;NS;;NS
+846;C1720_07_023;SUP;1720;superga chiesa;superga;G1;G;ok;265 Piacenza P. (PI/NS);41;bertinetti;matteo;NS;monte di superga TO;TO
+847;C1720_07_025;SUP;1720;superga chiesa;superga;G1;G;ok;359 Tognasco P. (TO C/NS);265;piacenza;pietro;NS;contado di nizza;PI
+848;C1720_07_026;VEN;1720;venaria reale regio palazzo;venaria;G1;G;ok;359 Tognasco P. (TO C/NS);359;tognasco;pietro martire;NS;torino;TO C
+849;C1720_07_030;NS;1720;regio servitio;;G1;G;ok;126 Dragone G. (TO C/NS);359;tognasco;pietro martire;NS;torino;TO C
+850;C1720_07_033;TO;1720;torino real palazzo;torino;G1;G;ok;42 Bertinetti P. (TO/NS);126;dragone;giuseppe;NS;torino;TO C
+851;C1720_07_036;SUP;1720;superga chiesa;superga;G1;G;ok;84 Candellero G. (TO C/TOL);42;bertinetti;paolo;NS;monte di superga TO;TO
+852;C1720_07_037;TO;1720;torino caserme porta susina;torino;G1;G;ok;369 Ugliengo C. (BI/M_Min);84;candellero;giuseppe;TOL;torino;TO C
+853;C1720_07_044;BR;1720;brunetta;brunetta;G1;G;ok;166 Gatto C. (BI/misuratore);369;ugliengo;carlo maria;M_Min;bioglio BI;BI
+854;C1720_07_054;BR;1720;brunetta;brunetta;G1;G;ok;248 Parodi G. (GE/CM_P);166;gatto;carlo;misuratore;graglia BI;BI
+855;C1720_07_086;VEN;1720;venaria reale paviglione dei regi palazzi;venaria;G1;G;ok;290 Raggio D. (altro/NS);248;parodi;gio batta;CM_P;genova;GE
+856;C1720_07_094;TO;1720;torino caserme porta susina;torino;G1;G;ok;74 Buscaglione L. (BI/NS);290;raggio;domenico;NS;valle d'oneglia;altro
+857;C1720_07_011;VEN;1720;venaria reale;venaria;G1;G;ok;23 Bello G. (TO C/IMP);74;buscaglione;ludovico;NS;graglia BI;BI
+858;C1720_07_100;NS;1720;;;G1;G;ok;288 Quadrone B. (MI/CM_P);23;bello;giacomo1;IMP;torino;TO C
+859;C1720_07_102;TO;1720;torino fabriche;torino;G1;G;ok;44 Bertoglio G. (TO/NS);288;quadrone;bartolomeo;CM_P;san fedele intelvi CO;MI
+860;C1720_07_106;SUP;1720;superga fabrica della chiesa;superga;G1;G;ok;14 Astrano G. (TO C/misuratore);44;bertoglio;giacomo;NS;monte di superga TO;TO
+861;C1720_07_108;BR;1720;brunetta;brunetta;G1;G;ok;184 Goltio G. (TO C/NS);14;astrano;gio antonio;misuratore;torino;TO C
+862;C1720_07_113;VEN;1720;venaria paviglione regio;venaria;G1;G;ok;23 Bello G. (TO C/IMP);184;goltio;gio michele;NS;torino;TO C
+863;C1720_07_122;SUP;1720;superga fabrica della chiesa;superga;G1;G;ok;365 Trivero V. (TO/NS);23;bello;giacomo1;IMP;torino;TO C
+864;C1720_07_009;SUP;1720;superga chiesa;superga;G1;G;ok;259 Perron G. (PI/NS);365;trivero;vincenzo;NS;monte di superga TO;TO
+865;C1742_37_019;FE;1742;fenestrelle forte;fenestrelle;G1;G;ok;230 Millo G. (CN/NS);259;perron;giacomo;NS;fenestrelle;PI
+866;C1742_38_001;BA;1742;barche da ponte;barche;G1;G;ok;248 Parodi G. (GE/CM_P);230;millo;gio batta;NS;saluzzo CN;CN
+867;C1742_38_005;CN;1742;cuneo fortificazioni;cuneo;G1;G;ok;367 Trolli F. (MI/CM_M);248;parodi;gio batta;CM_P;genova;GE
+868;C1742_38_017;FE;1742;fenestrelle fortificazioni;fenestrelle;G1;G;ok;221 Meiranesio G. (NS/fondichiere);367;trolli;francesco;CM_M;laveno, stato di milano;MI
+869;C1742_38_038;TOR;1742;tortona fortificazioni;tortona;G1;G;ok;28 Bello P. (TO C/negoziante);221;meiranesio;guglielmo antonio;fondichiere;;NS
+870;C1742_38_042;FE;1742;fenestrelle fortificazioni;fenestrelle;G1;G;ok;144 Furno A. (BI/CM_M);28;bello;pietro maria;negoziante;torino;TO C
+871;C1742_38_054;TA;1742;tanaro;tanaro;G1;G;ok;183 Goggia P. (MI/M_F);144;furno;antonio;CM_M;piatto BI;BI
+872;C1742_38_080;BA;1742;barche;barche;G1;G;ok;92 Carona A. (NS/CM_P);183;goggia;pietro antonio;M_F;vestreno, stato di milano;MI
+873;C1742_38_084;TOR;1742;tortona castello;tortona;G1;G;ok;87 Cantone D. (TO C/negoziante);92;carona;antonio;CM_P;;NS
+874;C1742_38_092;BR;1742;brunetta fortificazioni;brunetta;G1;G;ok;166 Gatto C. (BI/misuratore);87;cantone;domenico1;negoziante;torino;TO C
+875;C1742_38_106;EX;1742;exilles fortificazioni;exilles;G1;G;ok;8 Angelino G. (CN/oste);166;gatto;carlo;misuratore;graglia BI;BI
+876;C1742_38_118;CN;1742;cuneo fortificazioni;cuneo;G1;G;ok;307 Rivo G. (TO C/mercante di tele);8;angelino;gio batta;oste;demonte CN;CN
+877;C1742_38_126;DE;1742;demonte fortificazioni;demonte;G1;G;ok;277 Pino G. (MI/mercante di ferro);307;rivo;giuseppe antonio;mercante di tele;torino;TO C
+878;C1742_38_154;DE;1742;demonte magazzini;demonte;G1;G;ok;367 Trolli F. (MI/CM_M);277;pino;gio maria;mercante di ferro;como MI;MI
+879;C1742_38_158;CA;1742;casale fiume po;casale;G1;G;ok;47 Bettino C. (LU/NS);367;trolli;francesco;CM_M;laveno, stato di milano;MI
+880;C1742_38_170;TO;1742;torino cittadella;torino;G1;G;ok;97 Casella A. (LU/CM_P);47;bettino;carlo francesco;NS;lugano;LU
+881;C1742_38_189;BR;1742;brunetta;brunetta;G1;G;ok;138 Fontana C. (NS/NS);97;casella;antonio;CM_P;lugano;LU
+882;C1742_38_205;CN;1742;cuneo palazzo del governo;cuneo;G1;G;ok;367 Trolli F. (MI/CM_M);138;fontana;carlo michelangelo;NS;;NS
+883;C1742_37_014;FE;1742;fenestrelle forte;fenestrelle;G1;G;ok;13 Arizio G. (BI/M_F);367;trolli;francesco;CM_M;laveno, stato di milano;MI
+884;C1742_38_213;CA;1742;casale castello;casale;G1;G;ok;155 Galliardo F. (TO/NS);13;arizio;giacomo;M_F;alice superiore BI;BI
+885;C1742_38_221;CAMO;1742;casale castello e moncalvo carceri;casale moncalvo;G1;G;ok;324 Rosazza P. (BI/NS);155;galliardo;francesco andrea;NS;borgo po;TO
+886;C1742_38_250;CN;1742;cuneo magazzini;cuneo;G1;G;ok;195 Lardone G. (CN/NS);324;rosazza;pietro;NS;valle d'andorno;BI
+887;C1742_38_257;BA;1742;barche;barche;G1;G;ok;98 Casella G. (LU/CM_P);195;lardone;gio;NS;casalgrasso CN;CN
+888;C1742_38_262;BA;1742;barche;barche;G1;G;ok;82 Caminada F. (LU/TOL);98;casella;giacomo;CM_P;lugano;LU
+889;C1742_38_276;VERR;1742;verrua forte;verrua;G1;G;ok;252 Peijla G. (TO/NS);82;caminada;francesco antonio;TOL;gentilino, luganese;LU
+890;C1742_38_280;BA;1742;barche;barche;G1;G;ok;101 Ceresio F. (CN/NS);252;peijla;gio pietro;NS;carmagnola TO;TO
+891;C1742_38_284;BA;1742;barche;barche;G1;G;ok;31 Bellotti G. (TO C/NS);101;ceresio;francesco;NS;casalgrasso CN;CN
+892;C1742_38_288;DE;1742;demonte forni e magazzini;demonte;G1;G;ok;205 Maffei C. (TO C/CM_B);31;bellotti;giacomo;NS;torino;TO C
+893;C1742_38_298;AT;1742;asti castello;asti;G1;G;ok;246 Pagano G. (MI/CM_M);205;maffei;carlo;CM_B;torino;TO C
+894;C1742_38_308;NO;1742;novara fortificazioni;novara;G1;G;ok;352 Tardi G. (NS/M_F);246;pagano;galeazzo;CM_M;valsolda, stato di milano;MI
+895;C1742_38_320;BR;1742;brunetta forte;brunetta;G1;G;ok;379 Veillier G. (altro/NS);352;tardi;gio nicola;M_F;;NS
+896;C1742_38_327;FE;1742;fenestrelle forte;fenestrelle;G1;G;ok;248 Parodi G. (GE/CM_P);379;veillier;gio;NS;mentorella;altro
+897;C1742_38_337;DE;1742;demonte forte;demonte;G1;G;ok;241 Olivetto G. (BI/CM_M);248;parodi;gio batta;CM_P;genova;GE
+898;C1742_38_345;CH;1742;chivasso forte;chivasso;G1;G;ok;246 Pagano G. (MI/CM_M);241;olivetto;gio stefano;CM_M;occhieppo superiore BI;BI
+899;C1742_38_361;TO;1742;torino cittadella;torino;G1;G;ok;255 Pellolio C. (MI/M_F);246;pagano;galeazzo;CM_M;valsolda, stato di milano;MI
+900;C1742_38_365;FE;1742;fenestrelle forte;fenestrelle;G1;G;ok;135 Filippis C. (MI/CM_M);255;pellolio;carlo;M_F;aveno, stato di milano;MI
+901;C1742_38_375;NO;1742;novara castello;novara;G1;G;ok;5 Aimetti L. (MI/CM_M);135;filippis;cesare;CM_M;varese MI;MI
+902;C1742_38_381;DORA;1742;dora ponte sulla dora;dora;G1;G;ok;303 Righino P. (MI/NS);5;aimetti;leonardo;CM_M;ganna, stato di milano;MI
+903;C1715_03_006;VAL;1715;valenza fortificazioni;valenza;G1;G;ok;153 Galimberti G. (MI/negoziante);303;righino;paulo gerolamo;NS;stato di milano;MI
+904;C1715_03_014;TO;1715;torino cittadella;torino;G1;G;ok;387 Zanetti B. (TO C/IMP);153;galimberti;giuseppe maria;negoziante;stato di milano;MI
+905;C1715_03_019;FE;1715;fenestrelle;fenestrelle;G1;G;ok;227 Menafoglio F. (MI/NS);387;zanetti;bartolomeo;IMP;torino;TO C
+906;C1715_03_024;SAL;1715;saluzzo castello;saluzzo;G1;G;ok;14 Astrano G. (TO C/misuratore);227;menafoglio;francesco andrea;NS;stato di milano;MI
+907;C1715_03_033;TO;1715;torino ingrandimento porta susa;torino;G1;G;ok;139 Fontana D. (MI/IMP);14;astrano;gio antonio;misuratore;torino;TO C
+908;C1715_03_041;RI;1715;rivoli castello;rivoli;G1;G;ok;22 Bellico G. (TO C/misuratore);139;fontana;domenico;IMP;valsolda stato di milano;MI
+909;C1715_03_044;BR;1715;brunetta;brunetta;G1;G;ok;232 Morino C. (NS/panattaro);22;bellico;gio francesco;misuratore;torino;TO C
+910;C1715_03_050;TO;1715;torino unversità degli studi;torino;G1;G;ok;389 Zo C. (BI/M_F);232;morino;carlo francesco;panattaro;;NS
+911;C1715_03_054;TO;1715;torino unversità degli studi;torino;G1;G;ok;390 Zo G. (BI/M_F);389;zo;carlo antonio;M_F;graglia BI;BI
+912;C1715_03_058;TO;1715;torino unversità degli studi;torino;G1;G;ok;153 Galimberti G. (MI/negoziante);390;zo;gio batta;M_F;graglia BI;BI
+913;C1715_03_063;VALD;1715;valdocco fabbrica canne da fucile;valdocco;G1;G;ok;327 Saccarello O. (TO C/NS);153;galimberti;giuseppe maria;negoziante;stato di milano;MI
+914;C1715_03_068;TO;1715;torino università degli studi;torino;G1;G;ok;237 Mosso G. (TO C/NS);327;saccarello;ottavio;NS;torino;TO C
+915;C1716_03_077;VEN;1716;venaria regia cappella;venaria;G1;G;ok;269 Piazzollo F. (MI/NS);237;mosso;gio eusebio;NS;torino;TO C
+916;C1716_03_085;VALAL;1716;valenza e alessandria fortificazioni;valenza e alessandria;G1;G;ok;153 Galimberti G. (MI/negoziante);269;piazzollo;francesco;NS;stato di milano;MI
+917;C1716_03_090;TO;1716;torino cittadella;torino;G1;G;ok;153 Galimberti G. (MI/negoziante);153;galimberti;giuseppe maria;negoziante;stato di milano;MI
+918;C1716_03_095;CA;1716;casale castello;casale;G1;G;ok;374 Vanera M. (VL/IMP);153;galimberti;giuseppe maria;negoziante;stato di milano;MI
+919;C1716_03_104;BR;1716;brunetta;brunetta;G1;G;ok;139 Fontana D. (MI/IMP);374;vanera;michele;IMP;groscavallo, valle di lanzo;VL
+920;C1720_07_017;TO;1720;porta susina caserme;torino;G1;G;ok;272 Piazzollo F. (MI/NS);139;fontana;domenico;IMP;valsolda stato di milano;MI
+921;C1714_02_031;MOR;1714;mortara fortificazioni;mortara;G1;G;ok;227 Menafoglio F. (MI/NS);272;piazzollo;francesco;NS;stato di milano;MI
+922;C1714_02_037;MOR;1714;mortara fortificazioni;mortara;G1;G;ok;104 Clerico G. (BI/NS);227;menafoglio;francesco andrea;NS;stato di milano;MI
+923;C1714_02_039;CH;1714;chivasso fortificazioni;chivasso;G1;G;ok;319 Rondoletto C. (BI/CM_B);104;clerico;gian pietro;NS;muzzano BI;BI
+924;C1714_02_046;CA;1714;casale fortificazioni;casale;G1;G;ok;153 Galimberti G. (MI/negoziante);319;rondoletto;carlo matteo;CM_B;muzzano BI;BI
+925;C1714_02_048;AL;1714;alessandria fortificazioni;alessadria;G1;G;ok;272 Piazzollo F. (MI/NS);153;galimberti;giuseppe maria;negoziante;stato di milano;MI
+926;C1714_02_053;AL;1714;alessandria fortificazioni;alessadria;G1;G;ok;236 Mosso C. (BI/NS);272;piazzollo;francesco;NS;stato di milano;MI
+927;C1714_02_057;VAL;1714;valenza fortificazioni;valenza;G1;G;ok;351 Succi G. (BI/NS);236;mosso;carlo giuseppe;NS;muzzano BI;BI
+928;C1714_02_059;TO;1714;torino fabrica dell'università;torino;G1;G;ok;153 Galimberti G. (MI/negoziante);351;succi;gio batta;NS;valle d'andorno;BI
+929;C1714_02_073;CH;1714;chivasso e verrua fortificazioni;chivasso;G1;G;ok;4 Abbondiolo P. (LU/IMP);153;galimberti;giuseppe maria;negoziante;stato di milano;MI
+930;C1714_02_079;TO;1714;torino univeristà degli studi;torino;G1;G;ok;278 Pistone C. (BI/NS);4;abbondiolo;pietro;IMP;lugano;LU
+931;C1714_02_083;FE;1714;fenestrelle;fenestrelle;G1;G;ok;351 Succi G. (BI/NS);278;pistone;carlo;NS;mongrando BI;BI
+932;C1714_02_090;TO;1714;torino università degli studi;torino;G1;G;ok;95 Casasopra G. (LU/TOL);351;succi;gio batta;NS;valle d'andorno;BI
+933;C1714_02_096;TO;1714;torino università degli studi e susa castello;torino;G1;G;ok;390 Zo G. (BI/M_F);95;casasopra;gio batta;TOL;lugano;LU
+934;C1714_02_001;TO;1714;torino castello di rivoli;torino;G1;G;ok;226 Menafoglio C. (MI/CM_M);390;zo;gio batta;M_F;graglia BI;BI
+935;C1714_02_007;BR;1714;brunetta;brunetta;G1;G;ok;199 Machiolo G. (VL/NS);226;menafoglio;carlo andrea;CM_M;stato di milano;MI
+936;C1714_02_013;BR;1714;brunetta;brunetta;G1;G;ok;223 Menafoglio A. (MI/CM_M);199;machiolo;gio giacomo;NS;bonzo, valle di lanzo;VL
+937;C1715_03_003;CA;1715;casale fiume po;casale;G1;G;ok;389 Zo C. (BI/M_F);223;menafoglio;agostino;CM_M;stato di milano;MI
+938;C1712_01_082;TO;1712;torino palazzo reale;torino;G2;G;ok;134 Ferraris B. (NS/NS);389;zo;carlo antonio;M_F;graglia BI;BI
+939;C1712_01_085;TO;1712;torino cittadella;torino;G2;G;ok;282 Pistone G. (BI/IMP);134;ferraris;bartolomeo;NS;;NS
+940;C1712_01_091;CA;1712;casale fiume po;casale;G2;G;ok;275 Pinchetti D. (MI/CM_M);282;pistone;giulio;IMP;mongrando BI;BI
+941;C1712_01_095;IV;1712;ivrea forte e castello;ivrea;G2;G;ok;315 Romano G. (BI/IMP);275;pinchetti;domenico;CM_M;stato di milano;MI
+942;C1712_01_099;MOR;1712;mortara fortificazioni;mortara;G2;G;ok;141 Fornione Q. (BI/NS);315;romano;gio batta;IMP;valle d'andorno;BI
+943;C1712_01_103;TO;1712;torino cittadella;torino;G2;G;ok;109 Coda G. (TO C/NS);141;fornione;quirico;NS;valle d'andorno;BI
+944;C1712_01_107;TO;1712;torino porta susina;torino;G2;G;ok;200 Maciotta C. (BI/IMP);109;coda;gaspare;NS;torino;TO C
+945;C1712_01_112;VERR;1712;verrua e asti forte;verrua;G2;G;ok;33 Bellotto A. (MI/NS);200;maciotta;carlo;IMP;valle d'andorno;BI
+946;C1712_01_115;RI;1712;rivoli castello;rivoli;G2;G;ok;236 Mosso C. (BI/NS);33;bellotto;antonio;NS;valsolda;MI
+947;C1712_01_119;TO;1712;torino cittadella;torino;G2;G;ok;99 Casella S. (LU/NS);236;mosso;carlo giuseppe;NS;muzzano BI;BI
+948;C1712_01_125;VEN;1712;venaria reale gran padiglio;venaria;G2;G;ok;101 Ceresio F. (CN/NS);99;casella;secondo;NS;lugano;LU
+949;C1712_01_128;SA;1712;saluggia collegno ponti;saluggia;G2;G;ok;212 Marcandi G. (altro/NS);101;ceresio;francesco;NS;casalgrasso CN;CN
+950;C1712_01_132;CA;1712;casale fortificazioni;casale;G2;G;ok;27 Bello P. (BI/NS);212;marcandi;giacomo;NS;folisso;altro
+951;C1713_01_138;CA;1713;casale castello;casale;G2;G;ok;273 Piazzolo F. (MI/NS);27;bello;pietro;NS;valle d'andorno;BI
+952;C1713_01_142;RI;1713;rivoli castello;rivoli;G2;G;ok;200 Maciotta C. (BI/IMP);273;piazzolo;francesco;NS;stato di milano;MI
+953;C1713_01_151;BR;1713;brunetta;brunetta;G2;G;ok;123 De Mora P. (TO C/NS);200;maciotta;carlo;IMP;valle d'andorno;BI
+954;C1713_01_158;TO;1713;torino università degli studi;torino;G2;G;ok;70 Borrione D. (BI/NS);123;de mora;pompeo e avvocato alessandro padre e figlio;NS;torino;TO C
+955;C1713_01_166;MOR;1713;mortara sterniti;mortara;G2;G;ok;375 Vani A. (BI/IMP);70;borrione;defendente;NS;graglia BI;BI
+956;C1713_01_168;AL;1713;alessandria bastione;alessadria;G2;G;ok;279 Pistone G. (BI/NS);375;vani;antonio;IMP;valle d'andorno;BI
+957;C1713_01_174;TO;1713;torino cittadella;torino;G2;G;ok;326 Rosso F. (BI/NS);279;pistone;gio giulio;NS;mongrando BI;BI
+958;C1713_01_178;TO;1713;torino caserma della cittadella;torino;G2;G;ok;389 Zo C. (BI/M_F);326;rosso;francesco pietro;NS;muzzano BI;BI
+959;C1713_01_181;TO;1713;torino università e rivoli castello;torino;G2;G;ok;2 [Seitto] G. (Vse/NS);389;zo;carlo antonio;M_F;graglia BI;BI
+960;C1713_01_187;VEN;1713;venaria;venaria;G2;G;ok;152 Gaja P. (BI/M);2;[seitto];giuseppe;NS;valsesia;Vse
+961;C1713_01_198;TO;1713;torino porta susina;torino;G2;G;ok;297 Richiardo G. (TO C/NS);152;gaja;pietro;M;valle d'andorno;BI
+962;C1713_01_204;VEN;1713;venaria;venaria;G2;G;ok;100 Castelli M. (RO/M_F);297;richiardo;gio francesco;NS;torino;TO C
+963;C1713_01_208;TO;1713;torino cappella del santissimo sudario;torino;G2;G;ok;1 [Morinache] C. (TO C/NS);100;castelli;marco fabio detto il romano;M_F;romano;RO
+964;C1713_01_210;TO;1713;torino cittadella;torino;G2;G;ok;254 Pelloli F. (MI/M_F);1;[morinache];carlo giuseppe;NS;torino;TO C
+965;C1713_01_216;TO;1713;torino cittadella;torino;G2;G;ok;308 Rizzo F. (TO C/NS);254;pelloli;francesco antonio;M_F;milano;MI
+966;C1713_01_220;PIN;1713;pinerolo arsenale;pinerolo;G2;G;ok;27 Bello P. (BI/NS);308;rizzo;francesco antonio;NS;torino;TO C
+967;C1713_01_235;TO;1713;torino unversità degli studi;torino;G2;G;ok;227 Menafoglio F. (MI/NS);27;bello;pietro;NS;valle d'andorno;BI
+968;C1713_01_241;VAL;1713;valenza fortificazioni;valenza;G2;G;ok;292 Rechettino A. (MI/CM);227;menafoglio;francesco andrea;NS;stato di milano;MI
+969;C1713_01_248;CA;1713;casale castello;casale;G2;G;ok;342 Sereno M. (Vsu/IMP);292;rechettino;antonio;CM;stato di milano;MI
+970;C1713_01_252;BR;1713;brunetta;brunetta;G2;G;ok;223 Menafoglio A. (MI/CM_M);342;sereno;michele;IMP;giaglione, val di susa;Vsu
+971;C1713_01_256;BR;1713;brunetta;brunetta;G2;G;ok;86 Cantone D. (TO C/CM_B);223;menafoglio;agostino;CM_M;stato di milano;MI
+972;C1713_01_264;TO;1713;torino università degli studi;torino;G2;G;ok;389 Zo C. (BI/M_F);86;cantone;domenico;CM_B;torino;TO C
+973;C1713_01_271;TO;1713;torino castello di rivoli;torino;G2;G;ok;161 Gambone P. (NS/NS);389;zo;carlo antonio;M_F;graglia BI;BI
+974;C1713_01_277;TO;1713;torino castello di rivoli;torino;G2;G;ok;384 Violino P. (MI/fondichiere);161;gambone;pietro giacomo;NS;;NS
+975;C1711_01_001;BRDE;1711;brunetta e demonte;brunetta e demonte;G2;G;ok;383 Vietto A. (NS/NS);384;violino;pietro giacomo;fondichiere;stato di milano;MI
+976;C1711_01_012;BA;1711;piemonte ponti;ponti;G2;G;ok;175 Gillonio G. (BI/IMP);383;vietto;antonio;NS;;NS
+977;C1711_01_014;TO;1711;torino cittadella;torino;G2;G;ok;175 Gillonio G. (BI/IMP);175;gillonio;gio pietro;IMP;muzzano BI;BI
+978;C1711_01_018;TO;1711;torino palazzi reali;torino;G2;G;ok;145 Furno G. (TO C/NS);175;gillonio;gio pietro;IMP;muzzano BI;BI
+979;C1711_01_029;MO;1711;moncaglieri castello;moncaglieri;G2;G;ok;171 Gianone G. (BI/NS);145;furno;gio domenico;NS;torino;TO C
+980;C1711_01_038;CA;1711;casale citta e castello;casale;G2;G;ok;369 Ugliengo C. (BI/M_Min);171;gianone;gio batta;NS;graglia BI;BI
+981;C1711_01_047;TO;1711;torino città e cittadella;torino;G2;G;ok;185 Grecca G. (NS/negoziante);369;ugliengo;carlo maria;M_Min;bioglio BI;BI
+982;C1711_01_057;BR;1711;brunetta;brunetta;G2;G;ok;120 Cucco P. (BI/NS);185;grecca;gio antonio;negoziante;;NS
+983;C1712_01_061;BR;1712;brunetta;brunetta;G2;G;ok;279 Pistone G. (BI/NS);120;cucco;pietro;NS;campiglia, cervo BI;BI
+984;C1712_01_071;EX;1712;exilles;exilles;G2;G;ok;39 Berti G. (MI/IMP);279;pistone;gio giulio;NS;mongrando BI;BI
+985;C1712_01_073;DE;1712;demonte;demonte;G2;G;ok;159 Gallo G. (TO/M);39;berti;gio batta;IMP;como MI;MI
+986;C1712_01_076;AL;1712;alessandria fortificazioni;alessadria;G2;G;ok;311 Roasio A. (TO/NS);159;gallo;gio francesco;M;leinì TO;TO
+987;C1720_07_021;SUP;1720;superga chiesa;superga;G2;G;ok;322 Rondoletto C. (BI/CM);311;roasio;antonio;NS;bardassano TO;TO
+988;C1720_07_026;VEN;1720;venaria reale regio palazzo;venaria;G2;G;ok;60 Boeri F. (altro/NS);322;rondoletto;carlo matteo;CM;muzzano BI;BI
+989;C1720_07_033;TO;1720;torino real palazzo;torino;G2;G;ok;73 Buscaglione E. (TO C/CM);60;boeri;filippo;NS;riasco;altro
+990;C1720_07_037;TO;1720;torino caserme porta susina;torino;G2;G;ok;222 Melisino A. (TO C/NS);73;buscaglione;eusebio;CM;torino;TO C
+991;C1720_07_044;BR;1720;brunetta;brunetta;G2;G;ok;62 Boggio P. (BI/IMP);222;melisino;antonio;NS;torino;TO C
+992;C1720_07_054;BR;1720;brunetta;brunetta;G2;G;ok;53 Bignetta G. (TO C/NS);62;boggio;pietro;IMP;valle d'andorno;BI
+993;C1720_07_086;VEN;1720;venaria reale paviglione dei regi palazzi;venaria;G2;G;ok;317 Ronco M. (CN/NS);53;bignetta;gio pietro;NS;torino;TO C
+994;C1720_07_094;TO;1720;torino caserme porta susina;torino;G2;G;ok;72 Bosso G. (TO C/NS);317;ronco;melchiorre;NS;fossano;CN
+995;C1720_07_011;VEN;1720;venaria reale;venaria;G2;G;ok;148 Gagliardo F. (TO/NS);72;bosso;gioanni;NS;torino;TO C
+996;C1720_07_106;SUP;1720;superga fabrica della chiesa;superga;G2;G;ok;253 Peijrone F. (Vsu/NS);148;gagliardo;francesco;NS;moncalieri;TO
+997;C1720_07_108;BR;1720;brunetta;brunetta;G2;G;ok;197 Lubati P. (NS/M_F);253;peijrone;francesco;NS;susa;Vsu
+998;C1720_07_113;VEN;1720;venaria paviglione regio;venaria;G2;G;ok;382 Verle G. (NS/NS);197;lubati;paolo;M_F;;NS
+999;C1720_07_122;SUP;1720;superga fabrica della chiesa;superga;G2;G;ok;131 Fenoglio C. (TO/NS);382;verle;gio batta;NS;;NS
+1000;C1720_07_009;SUP;1720;superga chiesa;superga;G2;G;ok;167 Gavin G. (PI/NS);131;fenoglio;carlo antonio;NS;monte di superga TO;TO
+1001;C1742_37_019;FE;1742;fenestrelle forte;fenestrelle;G2;G;ok;354 Tesier G. (TO/NS);167;gavin;gio batta;NS;villaretto, valle di fenestrelle;PI
+1002;C1742_38_001;BA;1742;barche da ponte;barche;G2;G;ok;31 Bellotti G. (TO C/NS);354;tesier;gio batta;NS;chieri TO;TO
+1003;C1742_38_005;CN;1742;cuneo fortificazioni;cuneo;G2;G;ok;360 Toniaca L. (LU/CM_M);31;bellotti;giacomo;NS;torino;TO C
+1004;C1742_38_017;FE;1742;fenestrelle fortificazioni;fenestrelle;G2;G;ok;154 Galleani G. (NS/mercante);360;toniaca;ludovico;CM_M;lugano;LU
+1005;C1742_38_038;TOR;1742;tortona fortificazioni;tortona;G2;G;ok;210 Magnano G. (BI/CM_M);154;galleani;giuseppe;mercante;;NS
+1006;C1742_38_042;FE;1742;fenestrelle fortificazioni;fenestrelle;G2;G;ok;233 Mosca A. (BI/CM_M);210;magnano;gio batta;CM_M;quittengo BI;BI
+1007;C1742_38_054;TA;1742;tanaro;tanaro;G2;G;ok;63 Bolgero G. (MI/vetriaro);233;mosca;antonio;CM_M;pie di cavallo, andorno BI;BI
+1008;C1742_38_080;BA;1742;barche;barche;G2;G;ok;255 Pellolio C. (MI/M_F);63;bolgero;gio batta;vetriaro;civenna, stato di milano;MI
+1009;C1742_38_084;TOR;1742;tortona castello;tortona;G2;G;ok;241 Olivetto G. (BI/CM_M);255;pellolio;carlo;M_F;aveno, stato di milano;MI
+1010;C1742_38_092;BR;1742;brunetta fortificazioni;brunetta;G2;G;ok;277 Pino G. (MI/mercante di ferro);241;olivetto;gio stefano;CM_M;occhieppo superiore BI;BI
+1011;C1742_38_106;EX;1742;exilles fortificazioni;exilles;G2;G;ok;112 Coppa G. (MI/mercante di ferro);277;pino;gio maria;mercante di ferro;como MI;MI
+1012;C1742_38_118;CN;1742;cuneo fortificazioni;cuneo;G2;G;ok;174 Gillonio E. (BI/NS);112;coppa;gio paolo;mercante di ferro;como MI;MI
+1013;C1742_38_126;DE;1742;demonte fortificazioni;demonte;G2;G;ok;17 Bandino C. (NS/NS);174;gillonio;eusebio;NS;muzzano BI;BI
+1014;C1742_38_154;DE;1742;demonte magazzini;demonte;G2;G;ok;5 Aimetti L. (MI/CM_M);17;bandino;carlo;NS;;NS
+1015;C1742_38_158;CA;1742;casale fiume po;casale;G2;G;ok;234 Mossino G. (MI/CM_M);5;aimetti;leonardo;CM_M;ganna, stato di milano;MI
+1016;C1742_38_170;TO;1742;torino cittadella;torino;G2;G;ok;10 Aprile F. (LU/CM_P);234;mossino;giuseppe antonio;CM_M;valsolda, stato di milano;MI
+1017;C1742_38_189;BR;1742;brunetta;brunetta;G2;G;ok;262 Pezzi D. (MI/CM_M);10;aprile;francesco;CM_P;carona, valle di lugano;LU
+1018;C1742_38_205;CN;1742;cuneo palazzo del governo;cuneo;G2;G;ok;298 Righino F. (MI/IMP);262;pezzi;domenico;CM_M;valsolda stato di milano;MI
+1019;C1742_37_014;FE;1742;fenestrelle forte;fenestrelle;G2;G;ok;6 Alino G. (MI/CM_M);298;righino;francesco maria;IMP;marcio, stato di milano;MI
+1020;C1742_38_213;CA;1742;casale castello;casale;G2;G;ok;205 Maffei C. (TO C/CM_B);6;alino;gio batta;CM_M;varese MI;MI
+1021;C1742_38_221;CAMO;1742;casale castello e moncalvo carceri;casale moncalvo;G2;G;ok;156 Galliardo F. (TO/NS);205;maffei;carlo;CM_B;torino;TO C
+1022;C1742_38_250;CN;1742;cuneo magazzini;cuneo;G2;G;ok;214 Marchetti F. (NS/filatore da seta);156;galliardo;francesco maria;NS;borgo po;TO
+1023;C1742_38_257;BA;1742;barche;barche;G2;G;ok;9 Aprile A. (LU/NS);214;marchetti;filiberto;filatore da seta;;NS
+1024;C1742_38_262;BA;1742;barche;barche;G2;G;ok;355 Togliardo G. (TO C/M_F);9;aprile;alessandro;NS;figino luganese;LU
+1025;C1742_38_276;VERR;1742;verrua forte;verrua;G2;G;ok;237 Mosso G. (TO C/NS);355;togliardo;gerolamo;M_F;torino;TO C
+1026;C1742_38_280;BA;1742;barche;barche;G2;G;ok;67 Bongioanni G. (PI/NS);237;mosso;gio eusebio;NS;torino;TO C
+1027;C1742_38_284;BA;1742;barche;barche;G2;G;ok;116 Cravasio M. (BI/tenente magazzeno);67;bongioanni;gio maria;NS;pancaglieri;PI
+1028;C1742_38_288;DE;1742;demonte forni e magazzini;demonte;G2;G;ok;56 Billotti L. (BI/M_M);116;cravasio;matteo;tenente magazzeno;muzzano BI;BI
+1029;C1742_38_298;AT;1742;asti castello;asti;G2;G;ok;256 Pellolio E. (MI/M_F);56;billotti;lorenzo;M_M;pollone BI;BI
+1030;C1742_38_308;NO;1742;novara fortificazioni;novara;G2;G;ok;370 Ugliengo G. (BI/M_Min);256;pellolio;evangelista;M_F;aveno, stato di milano;MI
+1031;C1742_38_320;BR;1742;brunetta forte;brunetta;G2;G;ok;189 Griot G. (PI/NS);370;ugliengo;gio batta;M_Min;bioglio BI;BI
+1032;C1742_38_327;FE;1742;fenestrelle forte;fenestrelle;G2;G;ok;204 Maffei B. (MI/CM_M);189;griot;giovanni;NS;rua, valle di fenestrelle;PI
+1033;C1742_38_337;DE;1742;demonte forte;demonte;G2;G;ok;61 Boggio G. (BI/CM_M);204;maffei;bernardo andrea;CM_M;marcio, stato di milano;MI
+1034;C1742_38_345;CH;1742;chivasso forte;chivasso;G2;G;ok;241 Olivetto G. (BI/CM_M);61;boggio;giuseppe antonio;CM_M;valle d'andorno;BI
+1035;C1742_38_361;TO;1742;torino cittadella;torino;G2;G;ok;370 Ugliengo G. (BI/M_Min);241;olivetto;gio stefano;CM_M;occhieppo superiore BI;BI
+1036;C1742_38_365;FE;1742;fenestrelle forte;fenestrelle;G2;G;ok;5 Aimetti L. (MI/CM_M);370;ugliengo;gio batta;M_Min;bioglio BI;BI
+1037;C1742_38_375;NO;1742;novara castello;novara;G2;G;ok;217 Massazza G. (NS/M_B);5;aimetti;leonardo;CM_M;ganna, stato di milano;MI
+1038;C1742_38_381;DORA;1742;dora ponte sulla dora;dora;G2;G;ok;206 Maffeo G. (TO C/CM_B);217;massazza;gio batta;M_B;;NS
+1039;C1720_07_017;TO;1720;porta susina caserme;torino;G2;G;ok;377 Vanone A. (MI/negoziante);206;maffeo;gioannino;CM_B;torino;TO C
+1040;C1714_02_019;MOR;1714;mortara fortificazioni;mortara;A1;A;ok;114 Corte G. (BI/NS);377;vanone;antonio maria;negoziante;stato di milano;MI
+1041;C1714_02_027;BR;1714;brunetta;brunetta;A1;A;ok;78 Caligaris A. (BI/NS);114;corte;giuseppe;NS;valle d'andorno;BI
+1042;C1715_03_006;VAL;1715;valenza fortificazioni;valenza;A1;A;ok;282 Pistone G. (BI/IMP);78;caligaris;antonio;NS;mongrando BI;BI
+1043;C1715_03_014;TO;1715;torino cittadella;torino;A1;A;ok;378 Vanotti P. (TO C/NS);282;pistone;giulio;IMP;mongrando BI;BI
+1044;C1715_03_019;FE;1715;fenestrelle;fenestrelle;A1;A;ok;390 Zo G. (BI/M_F);378;vanotti;pietro;NS;torino;TO C
+1045;C1715_03_024;SAL;1715;saluzzo castello;saluzzo;A1;A;ok;113 Corte A. (MI/NS);390;zo;gio batta;M_F;graglia BI;BI
+1046;C1715_03_033;TO;1715;torino ingrandimento porta susa;torino;A1;A;ok;179 Giudici F. (MI/NS);113;corte;ambrogio;NS;milano;MI
+1047;C1715_03_041;RI;1715;rivoli castello;rivoli;A1;A;ok;57 Biolaro P. (VL/M_F);179;giudici;francesco maria;NS;viggù MI;MI
+1048;C1715_03_044;BR;1715;brunetta;brunetta;A1;A;ok;160 Gambassone G. (NS/NS);57;biolaro;pietro antonio;M_F;mezzanile, valle di lanzo;VL
+1049;C1715_03_050;TO;1715;torino unversità degli studi;torino;A1;A;ok;254 Pelloli F. (MI/M_F);160;gambassone;gio martino;NS;;NS
+1050;C1715_03_054;TO;1715;torino unversità degli studi;torino;A1;A;ok;389 Zo C. (BI/M_F);254;pelloli;francesco antonio;M_F;milano;MI
+1051;C1715_03_058;TO;1715;torino unversità degli studi;torino;A1;A;ok;301 Righino P. (NS/fondichiere);389;zo;carlo antonio;M_F;graglia BI;BI
+1052;C1715_03_063;VALD;1715;valdocco fabbrica canne da fucile;valdocco;A1;A;ok;129 Faiola A. (TO C/NS);301;righino;paulo;fondichiere;;NS
+1053;C1715_03_068;TO;1715;torino università degli studi;torino;A1;A;ok;108 Clerico S. (BI/CM_B);129;faiola;antonio;NS;torino;TO C
+1054;C1716_03_077;VEN;1716;venaria regia cappella;venaria;A1;A;ok;40 Bertinello P. (MI/IMP);108;clerico;sebastiano;CM_B;muzzano BI;BI
+1055;C1716_03_085;VALAL;1716;valenza e alessandria fortificazioni;valenza e alessandria;A1;A;ok;384 Violino P. (MI/fondichiere);40;bertinello;pietro;IMP;como MI;MI
+1056;C1716_03_090;TO;1716;torino cittadella;torino;A1;A;ok;225 Menafoglio C. (MI/NS);384;violino;pietro giacomo;fondichiere;stato di milano;MI
+1057;C1716_03_095;CA;1716;casale castello;casale;A1;A;ok;203 Maciotta G. (BI/NS);225;menafoglio;carlo agostino;NS;stato di milano;MI
+1058;C1716_03_104;BR;1716;brunetta;brunetta;A1;A;ok;27 Bello P. (BI/NS);203;maciotta;gio maria;NS;valle d'andorno;BI
+1059;C1714_02_031;MOR;1714;mortara fortificazioni;mortara;A1;A;ok;377 Vanone A. (MI/negoziante);27;bello;pietro;NS;valle d'andorno;BI
+1060;C1714_02_037;MOR;1714;mortara fortificazioni;mortara;A1;A;ok;238 Mosso G. (BI/CM_B);377;vanone;antonio maria;negoziante;stato di milano;MI
+1061;C1714_02_039;CH;1714;chivasso fortificazioni;chivasso;A1;A;ok;238 Mosso G. (BI/CM_B);238;mosso;giuseppe;CM_B;muzzano BI;BI
+1062;C1714_02_046;CA;1714;casale fortificazioni;casale;A1;A;ok;377 Vanone A. (MI/negoziante);238;mosso;giuseppe;CM_B;muzzano BI;BI
+1063;C1714_02_048;AL;1714;alessandria fortificazioni;alessadria;A1;A;ok;109 Coda G. (TO C/NS);377;vanone;antonio maria;negoziante;stato di milano;MI
+1064;C1714_02_053;AL;1714;alessandria fortificazioni;alessadria;A1;A;ok;179 Giudici F. (MI/NS);109;coda;gaspare;NS;torino;TO C
+1065;C1714_02_059;TO;1714;torino fabrica dell'università;torino;A1;A;ok;78 Caligaris A. (BI/NS);179;giudici;francesco maria;NS;viggù MI;MI
+1066;C1714_02_073;CH;1714;chivasso e verrua fortificazioni;chivasso;A1;A;ok;109 Coda G. (TO C/NS);78;caligaris;antonio;NS;mongrando BI;BI
+1067;C1714_02_079;TO;1714;torino univeristà degli studi;torino;A1;A;ok;392 Zo G. (BI/M_F);109;coda;gaspare;NS;torino;TO C
+1068;C1714_02_083;FE;1714;fenestrelle;fenestrelle;A1;A;ok;10 Aprile F. (LU/CM_P);392;zo;gio henrico;M_F;graglia BI;BI
+1069;C1714_02_090;TO;1714;torino università degli studi;torino;A1;A;ok;334 Sartoris G. (MI/TOL);10;aprile;francesco;CM_P;carona, valle di lugano;LU
+1070;C1714_02_096;TO;1714;torino università degli studi e susa castello;torino;A1;A;ok;329 Salié P. (NS/NS);334;sartoris;giuseppe;TOL;paruzzaro;MI
+1071;C1714_02_001;TO;1714;torino castello di rivoli;torino;A1;A;ok;266 Pianarosa G. (MI/IMP);329;salié;pietro;NS;;NS
+1072;C1714_02_007;BR;1714;brunetta;brunetta;A1;A;ok;198 Machiolo G. (TO C/NS);266;pianarosa;giacomo;IMP;stato di milano;MI
+1073;C1714_02_013;BR;1714;brunetta;brunetta;A1;A;ok;316 Romano T. (BI/IMP);198;machiolo;gaspare;NS;torino;TO C
+1074;C1715_03_003;CA;1715;casale fiume po;casale;A1;A;ok;316 Romano T. (BI/IMP);316;romano;tomaso;IMP;valle d'andorno;BI

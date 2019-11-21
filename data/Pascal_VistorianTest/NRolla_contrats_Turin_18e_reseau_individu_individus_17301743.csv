@@ -1,0 +1,450 @@
+nl;contrat_code;contrat_annee;contrat_lieu;contrat_code_lieu;cantiere;lien_F1F2;Lien_codeF1CodeF2;ind_fonction1;ind1_label;ind1_n_act;ind1_C_std;ind1_N_std;ind1_Code_PR;ind1_Code_O;ind_fonction2;ind2_label;ind2_n_act;ind2_C_std;ind2_N_std;ind2_Code_PR;ind2_Code_O
+1247;C1730_19_102;1730;superga;SUP;superga fabrica della chiesa;A1-G1;A-G;A1;417 Bollano D. (NS/NS);417;bollano;domenico;NS;NS;G1;95 Casasopra G. (TOL/LU);95;casasopra;gio batta;TOL;LU
+1248;C1730_19_102;1730;superga;SUP;superga fabrica della chiesa;A1-S1;A-S;A1;417 Bollano D. (NS/NS);417;bollano;domenico;NS;NS;S1;84 Candellero G. (TOL/TO C);84;candellero;giuseppe;TOL;TO C
+1249;C1730_19_102;1730;superga;SUP;superga fabrica della chiesa;G1-S1;G-S;G1;95 Casasopra G. (TOL/LU);95;casasopra;gio batta;TOL;LU;S1;84 Candellero G. (TOL/TO C);84;candellero;giuseppe;TOL;TO C
+1250;C1730_19_111;1730;superga;SUP;superga fabrica della chiesa;A1-G1;A-G;A1;513 Pappa G. (NS/NS);513;pappa;giacomo antonio;NS;NS;G1;18 Darbesio G. (NS/TO);18;darbesio;gio batta;NS;TO
+1251;C1730_19_111;1730;superga;SUP;superga fabrica della chiesa;A1-S1;A-S;A1;513 Pappa G. (NS/NS);513;pappa;giacomo antonio;NS;NS;S1;536 Rosso M. (NS/VL);536;rosso;martino;NS;VL
+1252;C1730_19_111;1730;superga;SUP;superga fabrica della chiesa;G1-S1;G-S;G1;18 Darbesio G. (NS/TO);18;darbesio;gio batta;NS;TO;S1;536 Rosso M. (NS/VL);536;rosso;martino;NS;VL
+1253;C1730_19_115;1730;torino;TO;torino regio arsenale;A1-G1;A-G;A1;472 Fiorina G. (NS/BI);472;fiorina;gio pietro;NS;BI;G1;390 Zo G. (M_F/BI);390;zo;gio batta;M_F;BI
+1254;C1730_19_115;1730;torino;TO;torino regio arsenale;A1-S1;A-S;A1;472 Fiorina G. (NS/BI);472;fiorina;gio pietro;NS;BI;S1;205 Maffei C. (CM_B/TO C);205;maffei;carlo;CM_B;TO C
+1255;C1730_19_115;1730;torino;TO;torino regio arsenale;A1-S2;A-S;A1;472 Fiorina G. (NS/BI);472;fiorina;gio pietro;NS;BI;S2;549 Tua C. (NS/BI);549;tua;carlo giuseppe;NS;BI
+1256;C1730_19_115;1730;torino;TO;torino regio arsenale;G1-S1;G-S;G1;390 Zo G. (M_F/BI);390;zo;gio batta;M_F;BI;S1;205 Maffei C. (CM_B/TO C);205;maffei;carlo;CM_B;TO C
+1257;C1730_19_115;1730;torino;TO;torino regio arsenale;G1-S2;G-S;G1;390 Zo G. (M_F/BI);390;zo;gio batta;M_F;BI;S2;549 Tua C. (NS/BI);549;tua;carlo giuseppe;NS;BI
+1258;C1730_19_115;1730;torino;TO;torino regio arsenale;S1-S2;S-S;S1;205 Maffei C. (CM_B/TO C);205;maffei;carlo;CM_B;TO C;S2;549 Tua C. (NS/BI);549;tua;carlo giuseppe;NS;BI
+1259;C1730_19_121;1730;moncaglieri;MO;moncaglieri reale castello;A1-G1;A-G;A1;414 Boggialla G. (NS/TO C);414;boggialla;gerolamo giuseppe;NS;TO C;G1;128 Ermoglio D. (CM_M/MI);128;ermoglio;domenico;CM_M;MI
+1260;C1730_19_121;1730;moncaglieri;MO;moncaglieri reale castello;A1-S1;A-S;A1;414 Boggialla G. (NS/TO C);414;boggialla;gerolamo giuseppe;NS;TO C;S1;494 Lonati C. (NS/MI);494;lonati;carlo francesco;NS;MI
+1261;C1730_19_121;1730;moncaglieri;MO;moncaglieri reale castello;G1-S1;G-S;G1;128 Ermoglio D. (CM_M/MI);128;ermoglio;domenico;CM_M;MI;S1;494 Lonati C. (NS/MI);494;lonati;carlo francesco;NS;MI
+1262;C1730_19_125;1730;exilles;EX;exilles;A1-G1;A-G;A1;342 Sereno M. (IMP/Vsu);342;sereno;michele;IMP;Vsu;G1;307 Rivo G. (mercante di tele/TO C);307;rivo;giuseppe antonio;mercante di tele;TO C
+1263;C1730_19_125;1730;exilles;EX;exilles;A1-S1;A-S;A1;342 Sereno M. (IMP/Vsu);342;sereno;michele;IMP;Vsu;S1;435 Chemisa V. (NS/Vsu);435;chemisa;vincenzo;NS;Vsu
+1264;C1730_19_125;1730;exilles;EX;exilles;G1-S1;G-S;G1;307 Rivo G. (mercante di tele/TO C);307;rivo;giuseppe antonio;mercante di tele;TO C;S1;435 Chemisa V. (NS/Vsu);435;chemisa;vincenzo;NS;Vsu
+1265;C1730_19_127;1730;brunetta;BR;brunetta;A1-G1;A-G;A1;14 Astrano G. (misuratore/TO C);14;astrano;gio antonio;misuratore;TO C;G1;35 Bellotto G. (IMP/MI);35;bellotto;giacomo;IMP;MI
+1266;C1730_19_127;1730;brunetta;BR;brunetta;A1-S1;A-S;A1;14 Astrano G. (misuratore/TO C);14;astrano;gio antonio;misuratore;TO C;S1;187 Groppi C. (CM_M/MI);187;groppi;carlo;CM_M;MI
+1267;C1730_19_127;1730;brunetta;BR;brunetta;A1-S2;A-S;A1;14 Astrano G. (misuratore/TO C);14;astrano;gio antonio;misuratore;TO C;S2;66 Bonesio B. (CM/BI);66;bonesio;bartolomeo;CM;BI
+1268;C1730_19_127;1730;brunetta;BR;brunetta;G1-S1;G-S;G1;35 Bellotto G. (IMP/MI);35;bellotto;giacomo;IMP;MI;S1;187 Groppi C. (CM_M/MI);187;groppi;carlo;CM_M;MI
+1269;C1730_19_127;1730;brunetta;BR;brunetta;G1-S2;G-S;G1;35 Bellotto G. (IMP/MI);35;bellotto;giacomo;IMP;MI;S2;66 Bonesio B. (CM/BI);66;bonesio;bartolomeo;CM;BI
+1270;C1730_19_127;1730;brunetta;BR;brunetta;S1-S2;S-S;S1;187 Groppi C. (CM_M/MI);187;groppi;carlo;CM_M;MI;S2;66 Bonesio B. (CM/BI);66;bonesio;bartolomeo;CM;BI
+1271;C1730_19_139;1730;brunetta;BR;brunetta;A1-G1;A-G;A1;464 Dior G. (NS/altro);464;dior;garspar;NS;altro;G1;484 Giordano C. (NS/Vsu);484;giordano;claudio;NS;Vsu
+1272;C1730_19_139;1730;brunetta;BR;brunetta;A1-S1;A-S;A1;464 Dior G. (NS/altro);464;dior;garspar;NS;altro;S1;539 Rusca G. (IMP/LU);539;rusca;gio santo;IMP;LU
+1273;C1730_19_139;1730;brunetta;BR;brunetta;A1-S2;A-S;A1;464 Dior G. (NS/altro);464;dior;garspar;NS;altro;S2;422 Borzano S. (IMP/MI);422;borzano;stefano;IMP;MI
+1274;C1730_19_139;1730;brunetta;BR;brunetta;G1-S1;G-S;G1;484 Giordano C. (NS/Vsu);484;giordano;claudio;NS;Vsu;S1;539 Rusca G. (IMP/LU);539;rusca;gio santo;IMP;LU
+1275;C1730_19_139;1730;brunetta;BR;brunetta;G1-S2;G-S;G1;484 Giordano C. (NS/Vsu);484;giordano;claudio;NS;Vsu;S2;422 Borzano S. (IMP/MI);422;borzano;stefano;IMP;MI
+1276;C1730_19_139;1730;brunetta;BR;brunetta;S1-S2;S-S;S1;539 Rusca G. (IMP/LU);539;rusca;gio santo;IMP;LU;S2;422 Borzano S. (IMP/MI);422;borzano;stefano;IMP;MI
+1277;C1730_19_143;1730;torino;TO;torino regia università;A1-G1;A-G;A1;86 Cantone D. (CM_B/TO C);86;cantone;domenico;CM_B;TO C;G1;552 Vinai G. (NS/TO C);552;vinai;gio valentino;NS;TO C
+1278;C1730_19_143;1730;torino;TO;torino regia università;A1-S1;A-S;A1;86 Cantone D. (CM_B/TO C);86;cantone;domenico;CM_B;TO C;S1;262 Pezzi D. (CM_M/MI);262;pezzi;domenico;CM_M;MI
+1279;C1730_19_143;1730;torino;TO;torino regia università;A1-S2;A-S;A1;86 Cantone D. (CM_B/TO C);86;cantone;domenico;CM_B;TO C;S2;246 Pagano G. (CM_M/MI);246;pagano;galeazzo;CM_M;MI
+1280;C1730_19_143;1730;torino;TO;torino regia università;G1-S1;G-S;G1;552 Vinai G. (NS/TO C);552;vinai;gio valentino;NS;TO C;S1;262 Pezzi D. (CM_M/MI);262;pezzi;domenico;CM_M;MI
+1281;C1730_19_143;1730;torino;TO;torino regia università;G1-S2;G-S;G1;552 Vinai G. (NS/TO C);552;vinai;gio valentino;NS;TO C;S2;246 Pagano G. (CM_M/MI);246;pagano;galeazzo;CM_M;MI
+1282;C1730_19_143;1730;torino;TO;torino regia università;S1-S2;S-S;S1;262 Pezzi D. (CM_M/MI);262;pezzi;domenico;CM_M;MI;S2;246 Pagano G. (CM_M/MI);246;pagano;galeazzo;CM_M;MI
+1283;C1730_19_148;1730;superga;SUP;superga reale chiesa;A1-G1;A-G;A1;554 Visetti G. (NS/NS);554;visetti;giuseppe;NS;NS;G1;95 Casasopra G. (TOL/LU);95;casasopra;gio batta;TOL;LU
+1284;C1730_19_148;1730;superga;SUP;superga reale chiesa;A1-S1;A-S;A1;554 Visetti G. (NS/NS);554;visetti;giuseppe;NS;NS;S1;10 Aprile F. (CM_P/LU);10;aprile;francesco;CM_P;LU
+1285;C1730_19_148;1730;superga;SUP;superga reale chiesa;G1-S1;G-S;G1;95 Casasopra G. (TOL/LU);95;casasopra;gio batta;TOL;LU;S1;10 Aprile F. (CM_P/LU);10;aprile;francesco;CM_P;LU
+1286;C1730_19_152;1730;fenestrelle;FE;fenestrelle;A1-G1;A-G;A1;437 Chiapassone G. (M/AO);437;chiapassone;gio;M;AO;G1;476 Galletto F. (M/BI);476;galletto;francesco;M;BI
+1287;C1730_19_152;1730;fenestrelle;FE;fenestrelle;A1-S1;A-S;A1;437 Chiapassone G. (M/AO);437;chiapassone;gio;M;AO;S1;505 Mosca M. (IMP/BI);505;mosca;marco;IMP;BI
+1288;C1730_19_152;1730;fenestrelle;FE;fenestrelle;A1-S2;A-S;A1;437 Chiapassone G. (M/AO);437;chiapassone;gio;M;AO;S2;500 Mazzucchetto L. (IMP/BI);500;mazzucchetto;lorenzo;IMP;BI
+1289;C1730_19_152;1730;fenestrelle;FE;fenestrelle;G1-S1;G-S;G1;476 Galletto F. (M/BI);476;galletto;francesco;M;BI;S1;505 Mosca M. (IMP/BI);505;mosca;marco;IMP;BI
+1290;C1730_19_152;1730;fenestrelle;FE;fenestrelle;G1-S2;G-S;G1;476 Galletto F. (M/BI);476;galletto;francesco;M;BI;S2;500 Mazzucchetto L. (IMP/BI);500;mazzucchetto;lorenzo;IMP;BI
+1291;C1730_19_152;1730;fenestrelle;FE;fenestrelle;S1-S2;S-S;S1;505 Mosca M. (IMP/BI);505;mosca;marco;IMP;BI;S2;500 Mazzucchetto L. (IMP/BI);500;mazzucchetto;lorenzo;IMP;BI
+1292;C1730_19_153;1730;torino;TO;torino nuova cappella;A1-G1;A-G;A1;10 Aprile F. (CM_P/LU);10;aprile;francesco;CM_P;LU;G1;554 Visetti G. (NS/NS);554;visetti;giuseppe;NS;NS
+1293;C1730_19_153;1730;torino;TO;torino nuova cappella;A1-S1;A-S;A1;10 Aprile F. (CM_P/LU);10;aprile;francesco;CM_P;LU;S1;263 Pezzi G. (CM_M/MI);263;pezzi;gio antonio;CM_M;MI
+1294;C1730_19_153;1730;torino;TO;torino nuova cappella;A1-S2;A-S;A1;10 Aprile F. (CM_P/LU);10;aprile;francesco;CM_P;LU;S2;349 Somazzo F. (STU/LU);349;somazzo;filippo;STU;LU
+1295;C1730_19_153;1730;torino;TO;torino nuova cappella;G1-S1;G-S;G1;554 Visetti G. (NS/NS);554;visetti;giuseppe;NS;NS;S1;263 Pezzi G. (CM_M/MI);263;pezzi;gio antonio;CM_M;MI
+1296;C1730_19_153;1730;torino;TO;torino nuova cappella;G1-S2;G-S;G1;554 Visetti G. (NS/NS);554;visetti;giuseppe;NS;NS;S2;349 Somazzo F. (STU/LU);349;somazzo;filippo;STU;LU
+1297;C1730_19_153;1730;torino;TO;torino nuova cappella;S1-S2;S-S;S1;263 Pezzi G. (CM_M/MI);263;pezzi;gio antonio;CM_M;MI;S2;349 Somazzo F. (STU/LU);349;somazzo;filippo;STU;LU
+1298;C1730_19_160;1730;superga;SUP;superga reale chiesa;G1-G2;G-G;G1;409 Bertoli L. (NS/PI);409;bertoli;lorenzo;NS;PI;G2;502 Mo B. (NS/CN);502;mo;bartolomeo;NS;CN
+1299;C1730_19_160;1730;superga;SUP;superga reale chiesa;G1-S1;G-S;G1;409 Bertoli L. (NS/PI);409;bertoli;lorenzo;NS;PI;S1;213 Marchese A. (M_P/CN);213;marchese;andrea;M_P;CN
+1300;C1730_19_160;1730;superga;SUP;superga reale chiesa;G2-S1;G-S;G2;502 Mo B. (NS/CN);502;mo;bartolomeo;NS;CN;S1;213 Marchese A. (M_P/CN);213;marchese;andrea;M_P;CN
+1301;C1730_19_164;1730;superga;SUP;superga reale chiesa;A1-G1;A-G;A1;414 Boggialla G. (NS/TO C);414;boggialla;gerolamo giuseppe;NS;TO C;G1;544 Taschero C. (NS/TO C);544;taschero;carlo giuseppe;NS;TO C
+1302;C1730_19_164;1730;superga;SUP;superga reale chiesa;A1-S1;A-S;A1;414 Boggialla G. (NS/TO C);414;boggialla;gerolamo giuseppe;NS;TO C;S1;541 Sceto G. (NS/Vse);541;sceto;giuseppe maria;NS;Vse
+1303;C1730_19_164;1730;superga;SUP;superga reale chiesa;G1-S1;G-S;G1;544 Taschero C. (NS/TO C);544;taschero;carlo giuseppe;NS;TO C;S1;541 Sceto G. (NS/Vse);541;sceto;giuseppe maria;NS;Vse
+1304;C1730_19_170;1730;torino;TO;torino città e cittadella;A1-G1;A-G;A1;531 Romano G. (NS/BI);531;romano;giacomo;NS;BI;G1;486 Giroldo G. (NS/altro);486;giroldo;giuseppe;NS;altro
+1305;C1730_19_170;1730;torino;TO;torino città e cittadella;A1-S1;A-S;A1;531 Romano G. (NS/BI);531;romano;giacomo;NS;BI;S1;532 Romano G. (M_M/BI);532;romano;gio tomaso;M_M;BI
+1306;C1730_19_170;1730;torino;TO;torino città e cittadella;G1-S1;G-S;G1;486 Giroldo G. (NS/altro);486;giroldo;giuseppe;NS;altro;S1;532 Romano G. (M_M/BI);532;romano;gio tomaso;M_M;BI
+1307;C1730_19_174;1730;fenestrelle;FE;fenestrelle;A1-G1;A-G;A1;558 Brum A. (NS/PI);558;brum;abramo;NS;PI;G1;413 Blanc G. (NS/PI);413;blanc;gio;NS;PI
+1308;C1730_19_174;1730;fenestrelle;FE;fenestrelle;A1-S1;A-S;A1;558 Brum A. (NS/PI);558;brum;abramo;NS;PI;S1;428 Bressiano B. (NS/BI);428;bressiano;bartolomeo;NS;BI
+1309;C1730_19_174;1730;fenestrelle;FE;fenestrelle;G1-S1;G-S;G1;413 Blanc G. (NS/PI);413;blanc;gio;NS;PI;S1;428 Bressiano B. (NS/BI);428;bressiano;bartolomeo;NS;BI
+1310;C1730_19_179;1730;fenestrelle;FE;fenestrelle;A1-G1;A-G;A1;518 Peraldo G. (NS/BI);518;peraldo;gio detto toniò;NS;BI;G1;519 Peraldo G. (NS/BI);519;peraldo;gio detto vercellotto;NS;BI
+1311;C1730_19_179;1730;fenestrelle;FE;fenestrelle;A1-S1;A-S;A1;518 Peraldo G. (NS/BI);518;peraldo;gio detto toniò;NS;BI;S1;517 Peraldo C. (NS/BI);517;peraldo;carlo;NS;BI
+1312;C1730_19_179;1730;fenestrelle;FE;fenestrelle;A1-S2;A-S;A1;518 Peraldo G. (NS/BI);518;peraldo;gio detto toniò;NS;BI;S2;516 Peraldo B. (NS/BI);516;peraldo;bernardo;NS;BI
+1313;C1730_19_179;1730;fenestrelle;FE;fenestrelle;G1-S1;G-S;G1;519 Peraldo G. (NS/BI);519;peraldo;gio detto vercellotto;NS;BI;S1;517 Peraldo C. (NS/BI);517;peraldo;carlo;NS;BI
+1314;C1730_19_179;1730;fenestrelle;FE;fenestrelle;G1-S2;G-S;G1;519 Peraldo G. (NS/BI);519;peraldo;gio detto vercellotto;NS;BI;S2;516 Peraldo B. (NS/BI);516;peraldo;bernardo;NS;BI
+1315;C1730_19_179;1730;fenestrelle;FE;fenestrelle;S1-S2;S-S;S1;517 Peraldo C. (NS/BI);517;peraldo;carlo;NS;BI;S2;516 Peraldo B. (NS/BI);516;peraldo;bernardo;NS;BI
+1316;C1730_19_182;1730;torino;TO;torino regia università;A1-G1;A-G;A1;469 Ferrero A. (NS/BI);469;ferrero;antonio;NS;BI;G1;525 Rachetto G. (NS/TO C);525;rachetto;gio domenico;NS;TO C
+1317;C1730_19_182;1730;torino;TO;torino regia università;A1-S1;A-S;A1;469 Ferrero A. (NS/BI);469;ferrero;antonio;NS;BI;S1;86 Cantone D. (CM_B/TO C);86;cantone;domenico;CM_B;TO C
+1318;C1730_19_182;1730;torino;TO;torino regia università;G1-S1;G-S;G1;525 Rachetto G. (NS/TO C);525;rachetto;gio domenico;NS;TO C;S1;86 Cantone D. (CM_B/TO C);86;cantone;domenico;CM_B;TO C
+1319;C1730_19_186;1730;torino;TO;torino regia accademia;A1-G1;A-G;A1;473 Fontana G. (NS/MI);473;fontana;giacomo;NS;MI;G1;523 Pizzoni G. (NS/MI);523;pizzoni;giacomo antonio;NS;MI
+1320;C1730_19_186;1730;torino;TO;torino regia accademia;A1-S1;A-S;A1;473 Fontana G. (NS/MI);473;fontana;giacomo;NS;MI;S1;360 Toniaca L. (CM_M/LU);360;toniaca;ludovico;CM_M;LU
+1321;C1730_19_186;1730;torino;TO;torino regia accademia;A1-S2;A-S;A1;473 Fontana G. (NS/MI);473;fontana;giacomo;NS;MI;S2;139 Fontana D. (IMP/MI);139;fontana;domenico;IMP;MI
+1322;C1730_19_186;1730;torino;TO;torino regia accademia;G1-S1;G-S;G1;523 Pizzoni G. (NS/MI);523;pizzoni;giacomo antonio;NS;MI;S1;360 Toniaca L. (CM_M/LU);360;toniaca;ludovico;CM_M;LU
+1323;C1730_19_186;1730;torino;TO;torino regia accademia;G1-S2;G-S;G1;523 Pizzoni G. (NS/MI);523;pizzoni;giacomo antonio;NS;MI;S2;139 Fontana D. (IMP/MI);139;fontana;domenico;IMP;MI
+1324;C1730_19_186;1730;torino;TO;torino regia accademia;S1-S2;S-S;S1;360 Toniaca L. (CM_M/LU);360;toniaca;ludovico;CM_M;LU;S2;139 Fontana D. (IMP/MI);139;fontana;domenico;IMP;MI
+1325;C1730_19_190;1730;superga;SUP;superga reale chiesa;A1-G1;A-G;A1;411 Bignotti G. (NS/MI);411;bignotti;gio pietro;NS;MI;G1;420 Bonino P. (NS/TO C);420;bonino;pietro domenico;NS;TO C
+1326;C1730_19_190;1730;superga;SUP;superga reale chiesa;A1-S1;A-S;A1;411 Bignotti G. (NS/MI);411;bignotti;gio pietro;NS;MI;S1;248 Parodi G. (CM_P/GE);248;parodi;gio batta;CM_P;GE
+1327;C1730_19_190;1730;superga;SUP;superga reale chiesa;G1-S1;G-S;G1;420 Bonino P. (NS/TO C);420;bonino;pietro domenico;NS;TO C;S1;248 Parodi G. (CM_P/GE);248;parodi;gio batta;CM_P;GE
+1328;C1730_19_199;1730;superga;SUP;superga reale fabrica;A1-G1;A-G;A1;470 Ferrero C. (NS/TO C);470;ferrero;carlo giuseppe;NS;TO C;G1;86 Cantone D. (CM_B/TO C);86;cantone;domenico;CM_B;TO C
+1329;C1730_19_199;1730;superga;SUP;superga reale fabrica;A1-S1;A-S;A1;470 Ferrero C. (NS/TO C);470;ferrero;carlo giuseppe;NS;TO C;S1;402 Bello G. (NS/BI);402;bello;giorgio;NS;BI
+1330;C1730_19_199;1730;superga;SUP;superga reale fabrica;G1-S1;G-S;G1;86 Cantone D. (CM_B/TO C);86;cantone;domenico;CM_B;TO C;S1;402 Bello G. (NS/BI);402;bello;giorgio;NS;BI
+1331;C1730_19_20;1730;vercelli;VER;vercelli;G1-S1;G-S;G1;426 Bovero C. (NS/BI);426;bovero;carlo giuseppe;NS;BI;S1;427 Bovero G. (NS/BI);427;bovero;gio bernardo;NS;BI
+1332;C1730_19_20;1730;vercelli;VER;vercelli;G1-S2;G-S;G1;426 Bovero C. (NS/BI);426;bovero;carlo giuseppe;NS;BI;S2;429 Buscaglione G. (NS/BI);429;buscaglione;giuseppe;NS;BI
+1333;C1730_19_20;1730;vercelli;VER;vercelli;S1-S2;S-S;S1;427 Bovero G. (NS/BI);427;bovero;gio bernardo;NS;BI;S2;429 Buscaglione G. (NS/BI);429;buscaglione;giuseppe;NS;BI
+1334;C1730_19_201;1730;brunetta;BR;brunetta;A1-G1;A-G;A1;421 Borioli G. (NS/NS);421;borioli;giulio;NS;NS;G1;344 Sino B. (M_F/NS);344;sino;bartolomeo;M_F;NS
+1335;C1730_19_201;1730;brunetta;BR;brunetta;A1-S1;A-S;A1;421 Borioli G. (NS/NS);421;borioli;giulio;NS;NS;S1;124 Demichelis G. (M_F/NS);124;demichelis;guglielmo;M_F;NS
+1336;C1730_19_201;1730;brunetta;BR;brunetta;G1-S1;G-S;G1;344 Sino B. (M_F/NS);344;sino;bartolomeo;M_F;NS;S1;124 Demichelis G. (M_F/NS);124;demichelis;guglielmo;M_F;NS
+1337;C1730_19_214;1730;exilles;EX;exilles;A1-G1;A-G;A1;404 Benit M. (negoziante/Vsu);404;benit;michelle;negoziante;Vsu;G1;485 Giordano V. (NS/Vsu);485;giordano;vincenzo;NS;Vsu
+1338;C1730_19_214;1730;exilles;EX;exilles;A1-S1;A-S;A1;404 Benit M. (negoziante/Vsu);404;benit;michelle;negoziante;Vsu;S1;484 Giordano C. (NS/Vsu);484;giordano;claudio;NS;Vsu
+1339;C1730_19_214;1730;exilles;EX;exilles;A1-S2;A-S;A1;404 Benit M. (negoziante/Vsu);404;benit;michelle;negoziante;Vsu;S2;412 Bior G. (NS/AO);412;bior;gaspare;NS;AO
+1340;C1730_19_214;1730;exilles;EX;exilles;A1-S3;A-S;A1;404 Benit M. (negoziante/Vsu);404;benit;michelle;negoziante;Vsu;S3;539 Rusca G. (IMP/LU);539;rusca;gio santo;IMP;LU
+1341;C1730_19_214;1730;exilles;EX;exilles;G1-S1;G-S;G1;485 Giordano V. (NS/Vsu);485;giordano;vincenzo;NS;Vsu;S1;484 Giordano C. (NS/Vsu);484;giordano;claudio;NS;Vsu
+1342;C1730_19_214;1730;exilles;EX;exilles;G1-S2;G-S;G1;485 Giordano V. (NS/Vsu);485;giordano;vincenzo;NS;Vsu;S2;412 Bior G. (NS/AO);412;bior;gaspare;NS;AO
+1343;C1730_19_214;1730;exilles;EX;exilles;G1-S3;G-S;G1;485 Giordano V. (NS/Vsu);485;giordano;vincenzo;NS;Vsu;S3;539 Rusca G. (IMP/LU);539;rusca;gio santo;IMP;LU
+1344;C1730_19_214;1730;exilles;EX;exilles;S1-S2;S-S;S1;484 Giordano C. (NS/Vsu);484;giordano;claudio;NS;Vsu;S2;412 Bior G. (NS/AO);412;bior;gaspare;NS;AO
+1345;C1730_19_214;1730;exilles;EX;exilles;S1-S3;S-S;S1;484 Giordano C. (NS/Vsu);484;giordano;claudio;NS;Vsu;S3;539 Rusca G. (IMP/LU);539;rusca;gio santo;IMP;LU
+1346;C1730_19_214;1730;exilles;EX;exilles;S2-S3;S-S;S2;412 Bior G. (NS/AO);412;bior;gaspare;NS;AO;S3;539 Rusca G. (IMP/LU);539;rusca;gio santo;IMP;LU
+1347;C1730_19_22;1730;torino;TO;torino cittadella;A1-G1;A-G;A1;415 Boggio T. (NS/NS);415;boggio;tomaso;NS;NS;G1;86 Cantone D. (CM_B/TO C);86;cantone;domenico;CM_B;TO C
+1348;C1730_19_22;1730;torino;TO;torino cittadella;A1-S1;A-S;A1;415 Boggio T. (NS/NS);415;boggio;tomaso;NS;NS;S1;532 Romano G. (M_M/BI);532;romano;gio tomaso;M_M;BI
+1349;C1730_19_22;1730;torino;TO;torino cittadella;G1-S1;G-S;G1;86 Cantone D. (CM_B/TO C);86;cantone;domenico;CM_B;TO C;S1;532 Romano G. (M_M/BI);532;romano;gio tomaso;M_M;BI
+1350;C1730_19_221;1730;superga;SUP;superga;A1-G1;A-G;A1;487 Giudice C. (M/MI);487;giudice;carlo;M;MI;G1;420 Bonino P. (NS/TO C);420;bonino;pietro domenico;NS;TO C
+1351;C1730_19_221;1730;superga;SUP;superga;A1-S1;A-S;A1;487 Giudice C. (M/MI);487;giudice;carlo;M;MI;S1;248 Parodi G. (CM_P/GE);248;parodi;gio batta;CM_P;GE
+1352;C1730_19_221;1730;superga;SUP;superga;G1-S1;G-S;G1;420 Bonino P. (NS/TO C);420;bonino;pietro domenico;NS;TO C;S1;248 Parodi G. (CM_P/GE);248;parodi;gio batta;CM_P;GE
+1353;C1730_19_227;1730;superga;SUP;superga;A1-G1;A-G;A1;455 Crosa G. (NS/BI);455;crosa;giuseppe;NS;BI;G1;454 Crosa C. (NS/BI);454;crosa;carlo;NS;BI
+1354;C1730_19_227;1730;superga;SUP;superga;A1-S1;A-S;A1;455 Crosa G. (NS/BI);455;crosa;giuseppe;NS;BI;S1;457 De Stefanis G. (NS/BI);457;de stefanis;gio;NS;BI
+1355;C1730_19_227;1730;superga;SUP;superga;G1-S1;G-S;G1;454 Crosa C. (NS/BI);454;crosa;carlo;NS;BI;S1;457 De Stefanis G. (NS/BI);457;de stefanis;gio;NS;BI
+1356;C1730_19_229;1730;torino;TO;torino regio arsenale;A1-G1;A-G;A1;77 Bussolino F. (CM_M/MI);77;bussolino;francesco;CM_M;MI;G1;450 Coha P. (notaio/PI);450;coha;pietro ludovico;notaio;PI
+1357;C1730_19_229;1730;torino;TO;torino regio arsenale;A1-S1;A-S;A1;77 Bussolino F. (CM_M/MI);77;bussolino;francesco;CM_M;MI;S1;545 Teppa L. (NS/VL);545;teppa;lorenzo giacinto;NS;VL
+1358;C1730_19_229;1730;torino;TO;torino regio arsenale;G1-S1;G-S;G1;450 Coha P. (notaio/PI);450;coha;pietro ludovico;notaio;PI;S1;545 Teppa L. (NS/VL);545;teppa;lorenzo giacinto;NS;VL
+1359;C1730_19_240;1730;torino;TO;torino reale accademia;A1-G1;A-G;A1;522 Picco A. (NS/TO);522;picco;antonio;NS;TO;G1;13 Arizio G. (M_F/BI);13;arizio;giacomo;M_F;BI
+1360;C1730_19_240;1730;torino;TO;torino reale accademia;A1-S1;A-S;A1;522 Picco A. (NS/TO);522;picco;antonio;NS;TO;S1;369 Ugliengo C. (M_Min/BI);369;ugliengo;carlo maria;M_Min;BI
+1361;C1730_19_240;1730;torino;TO;torino reale accademia;G1-S1;G-S;G1;13 Arizio G. (M_F/BI);13;arizio;giacomo;M_F;BI;S1;369 Ugliengo C. (M_Min/BI);369;ugliengo;carlo maria;M_Min;BI
+1362;C1730_19_243;1730;torino;TO;torino reale accademia;A1-G1;A-G;A1;491 Goffi G. (NS/TO);491;goffi;gio matteo;NS;TO;G1;536 Rosso M. (NS/VL);536;rosso;martino;NS;VL
+1363;C1730_19_243;1730;torino;TO;torino reale accademia;A1-S1;A-S;A1;491 Goffi G. (NS/TO);491;goffi;gio matteo;NS;TO;S1;18 Darbesio G. (NS/TO);18;darbesio;gio batta;NS;TO
+1364;C1730_19_243;1730;torino;TO;torino reale accademia;G1-S1;G-S;G1;536 Rosso M. (NS/VL);536;rosso;martino;NS;VL;S1;18 Darbesio G. (NS/TO);18;darbesio;gio batta;NS;TO
+1365;C1730_19_247;1730;torino;TO;torino reale accademia;A1-G1;A-G;A1;262 Pezzi D. (CM_M/MI);262;pezzi;domenico;CM_M;MI;G1;511 Pagano G. (IMP/MI);511;pagano;giuseppe;IMP;MI
+1366;C1730_19_247;1730;torino;TO;torino reale accademia;A1-S1;A-S;A1;262 Pezzi D. (CM_M/MI);262;pezzi;domenico;CM_M;MI;S1;205 Maffei C. (CM_B/TO C);205;maffei;carlo;CM_B;TO C
+1367;C1730_19_247;1730;torino;TO;torino reale accademia;G1-S1;G-S;G1;511 Pagano G. (IMP/MI);511;pagano;giuseppe;IMP;MI;S1;205 Maffei C. (CM_B/TO C);205;maffei;carlo;CM_B;TO C
+1368;C1730_19_252;1730;torino;TO;torino reale accademia;A1-G1;A-G;A1;492 Gorta C. (NS/TO C);492;gorta;claudio;NS;TO C;G1;431 Carrera F. (NS/TO C);431;carrera;francesco;NS;TO C
+1369;C1730_19_252;1730;torino;TO;torino reale accademia;A1-S1;A-S;A1;492 Gorta C. (NS/TO C);492;gorta;claudio;NS;TO C;S1;355 Togliardo G. (M_F/TO C);355;togliardo;gerolamo;M_F;TO C
+1370;C1730_19_252;1730;torino;TO;torino reale accademia;G1-S1;G-S;G1;431 Carrera F. (NS/TO C);431;carrera;francesco;NS;TO C;S1;355 Togliardo G. (M_F/TO C);355;togliardo;gerolamo;M_F;TO C
+1371;C1730_19_257;1730;torino;TO;torino reale accademia;A1-G1;A-G;A1;139 Fontana D. (IMP/MI);139;fontana;domenico;IMP;MI;G1;523 Pizzoni G. (NS/MI);523;pizzoni;giacomo antonio;NS;MI
+1372;C1730_19_257;1730;torino;TO;torino reale accademia;A1-S1;A-S;A1;139 Fontana D. (IMP/MI);139;fontana;domenico;IMP;MI;S1;360 Toniaca L. (CM_M/LU);360;toniaca;ludovico;CM_M;LU
+1373;C1730_19_257;1730;torino;TO;torino reale accademia;G1-S1;G-S;G1;523 Pizzoni G. (NS/MI);523;pizzoni;giacomo antonio;NS;MI;S1;360 Toniaca L. (CM_M/LU);360;toniaca;ludovico;CM_M;LU
+1374;C1730_19_261;1730;torino;TO;torino reale accademia;A1-G1;A-G;A1;496 Maffei A. (CM/BI);496;maffei;antonio;CM;BI;G1;549 Tua C. (NS/BI);549;tua;carlo giuseppe;NS;BI
+1375;C1730_19_261;1730;torino;TO;torino reale accademia;A1-S1;A-S;A1;496 Maffei A. (CM/BI);496;maffei;antonio;CM;BI;S1;205 Maffei C. (CM_B/TO C);205;maffei;carlo;CM_B;TO C
+1376;C1730_19_261;1730;torino;TO;torino reale accademia;G1-S1;G-S;G1;549 Tua C. (NS/BI);549;tua;carlo giuseppe;NS;BI;S1;205 Maffei C. (CM_B/TO C);205;maffei;carlo;CM_B;TO C
+1377;C1730_19_266;1730;torino;TO;torino reale accademia;A1-G1;A-G;A1;255 Pellolio C. (M_F/MI);255;pellolio;carlo;M_F;MI;G1;482 Ghio S. (NS/TO C);482;ghio;stefano;NS;TO C
+1378;C1730_19_266;1730;torino;TO;torino reale accademia;A1-S1;A-S;A1;255 Pellolio C. (M_F/MI);255;pellolio;carlo;M_F;MI;S1;254 Pelloli F. (M_F/MI);254;pelloli;francesco antonio;M_F;MI
+1379;C1730_19_266;1730;torino;TO;torino reale accademia;G1-S1;G-S;G1;482 Ghio S. (NS/TO C);482;ghio;stefano;NS;TO C;S1;254 Pelloli F. (M_F/MI);254;pelloli;francesco antonio;M_F;MI
+1380;C1730_19_268;1730;torino;TO;torino reale università;A1-G1;A-G;A1;495 Lorieto G. (NS/Vse);495;lorieto;giuseppe;NS;Vse;G1;514 Peireto B. (NS/Vse);514;peireto;batta;NS;Vse
+1381;C1730_19_268;1730;torino;TO;torino reale università;A1-S1;A-S;A1;495 Lorieto G. (NS/Vse);495;lorieto;giuseppe;NS;Vse;S1;86 Cantone D. (CM_B/TO C);86;cantone;domenico;CM_B;TO C
+1382;C1730_19_268;1730;torino;TO;torino reale università;G1-S1;G-S;G1;514 Peireto B. (NS/Vse);514;peireto;batta;NS;Vse;S1;86 Cantone D. (CM_B/TO C);86;cantone;domenico;CM_B;TO C
+1383;C1730_19_270;1730;superga;SUP;superga;A1-G1;A-G;A1;495 Lorieto G. (NS/Vse);495;lorieto;giuseppe;NS;Vse;G1;514 Peireto B. (NS/Vse);514;peireto;batta;NS;Vse
+1384;C1730_19_270;1730;superga;SUP;superga;A1-S1;A-S;A1;495 Lorieto G. (NS/Vse);495;lorieto;giuseppe;NS;Vse;S1;86 Cantone D. (CM_B/TO C);86;cantone;domenico;CM_B;TO C
+1385;C1730_19_270;1730;superga;SUP;superga;G1-S1;G-S;G1;514 Peireto B. (NS/Vse);514;peireto;batta;NS;Vse;S1;86 Cantone D. (CM_B/TO C);86;cantone;domenico;CM_B;TO C
+1386;C1730_19_275;1730;torino;TO;torino regio arsenale;A1-G1;A-G;A1;397 Badarello C. (CM_B/Vse);397;badarello;carlo;CM_B;Vse;G1;95 Casasopra G. (TOL/LU);95;casasopra;gio batta;TOL;LU
+1387;C1730_19_275;1730;torino;TO;torino regio arsenale;A1-S1;A-S;A1;397 Badarello C. (CM_B/Vse);397;badarello;carlo;CM_B;Vse;S1;86 Cantone D. (CM_B/TO C);86;cantone;domenico;CM_B;TO C
+1388;C1730_19_275;1730;torino;TO;torino regio arsenale;G1-S1;G-S;G1;95 Casasopra G. (TOL/LU);95;casasopra;gio batta;TOL;LU;S1;86 Cantone D. (CM_B/TO C);86;cantone;domenico;CM_B;TO C
+1389;C1730_19_282;1730;torino;TO;torino palazzo nuovo;A1-G1;A-G;A1;95 Casasopra G. (TOL/LU);95;casasopra;gio batta;TOL;LU;G1;508 Novello C. (NS/LU);508;novello;carlo;NS;LU
+1390;C1730_19_282;1730;torino;TO;torino palazzo nuovo;A1-S1;A-S;A1;95 Casasopra G. (TOL/LU);95;casasopra;gio batta;TOL;LU;S1;499 Marmori P. (NS/MI);499;marmori;pietro;NS;MI
+1391;C1730_19_282;1730;torino;TO;torino palazzo nuovo;G1-S1;G-S;G1;508 Novello C. (NS/LU);508;novello;carlo;NS;LU;S1;499 Marmori P. (NS/MI);499;marmori;pietro;NS;MI
+1392;C1730_19_290;1730;torino;TO;torino palazzo nuovo;A1-G1;A-G;A1;400 Barelli C. (NS/MI);400;barelli;carlo;NS;MI;G1;35 Bellotto G. (IMP/MI);35;bellotto;giacomo;IMP;MI
+1393;C1730_19_290;1730;torino;TO;torino palazzo nuovo;A1-S1;A-S;A1;400 Barelli C. (NS/MI);400;barelli;carlo;NS;MI;S1;349 Somazzo F. (STU/LU);349;somazzo;filippo;STU;LU
+1394;C1730_19_290;1730;torino;TO;torino palazzo nuovo;G1-S1;G-S;G1;35 Bellotto G. (IMP/MI);35;bellotto;giacomo;IMP;MI;S1;349 Somazzo F. (STU/LU);349;somazzo;filippo;STU;LU
+1395;C1730_19_293;1730;fenestrelle;FE;fenestrelle;A1-G1;A-G;A1;189 Griot G. (NS/PI);189;griot;giovanni;NS;PI;G1;434 Champ S. (NS/PI);434;champ;stefano;NS;PI
+1396;C1730_19_293;1730;fenestrelle;FE;fenestrelle;A1-S1;A-S;A1;189 Griot G. (NS/PI);189;griot;giovanni;NS;PI;S1;478 Garbeto A. (NS/PI);478;garbeto;antonio;NS;PI
+1397;C1730_19_293;1730;fenestrelle;FE;fenestrelle;G1-S1;G-S;G1;434 Champ S. (NS/PI);434;champ;stefano;NS;PI;S1;478 Garbeto A. (NS/PI);478;garbeto;antonio;NS;PI
+1398;C1730_19_32;1730;fenestrelle;FE;fenestrelle;A1-G1;A-G;A1;174 Gillonio E. (NS/BI);174;gillonio;eusebio;NS;BI;G1;307 Rivo G. (mercante di tele/TO C);307;rivo;giuseppe antonio;mercante di tele;TO C
+1399;C1730_19_32;1730;fenestrelle;FE;fenestrelle;A1-S1;A-S;A1;174 Gillonio E. (NS/BI);174;gillonio;eusebio;NS;BI;S1;210 Magnano G. (CM_M/BI);210;magnano;gio batta;CM_M;BI
+1400;C1730_19_32;1730;fenestrelle;FE;fenestrelle;A1-S2;A-S;A1;174 Gillonio E. (NS/BI);174;gillonio;eusebio;NS;BI;S2;215 Martello T. (CM_M/BI);215;martello;tomaso;CM_M;BI
+1401;C1730_19_32;1730;fenestrelle;FE;fenestrelle;A1-S3;A-S;A1;174 Gillonio E. (NS/BI);174;gillonio;eusebio;NS;BI;S3;532 Romano G. (M_M/BI);532;romano;gio tomaso;M_M;BI
+1402;C1730_19_32;1730;fenestrelle;FE;fenestrelle;G1-S1;G-S;G1;307 Rivo G. (mercante di tele/TO C);307;rivo;giuseppe antonio;mercante di tele;TO C;S1;210 Magnano G. (CM_M/BI);210;magnano;gio batta;CM_M;BI
+1403;C1730_19_32;1730;fenestrelle;FE;fenestrelle;G1-S2;G-S;G1;307 Rivo G. (mercante di tele/TO C);307;rivo;giuseppe antonio;mercante di tele;TO C;S2;215 Martello T. (CM_M/BI);215;martello;tomaso;CM_M;BI
+1404;C1730_19_32;1730;fenestrelle;FE;fenestrelle;G1-S3;G-S;G1;307 Rivo G. (mercante di tele/TO C);307;rivo;giuseppe antonio;mercante di tele;TO C;S3;532 Romano G. (M_M/BI);532;romano;gio tomaso;M_M;BI
+1405;C1730_19_32;1730;fenestrelle;FE;fenestrelle;S1-S2;S-S;S1;210 Magnano G. (CM_M/BI);210;magnano;gio batta;CM_M;BI;S2;215 Martello T. (CM_M/BI);215;martello;tomaso;CM_M;BI
+1406;C1730_19_32;1730;fenestrelle;FE;fenestrelle;S1-S3;S-S;S1;210 Magnano G. (CM_M/BI);210;magnano;gio batta;CM_M;BI;S3;532 Romano G. (M_M/BI);532;romano;gio tomaso;M_M;BI
+1407;C1730_19_32;1730;fenestrelle;FE;fenestrelle;S2-S3;S-S;S2;215 Martello T. (CM_M/BI);215;martello;tomaso;CM_M;BI;S3;532 Romano G. (M_M/BI);532;romano;gio tomaso;M_M;BI
+1408;C1730_19_42;1730;fenestrelle;FE;fenestrelle;S1-S2;S-S;S1;535 Rosso G. (NS/AO);535;rosso;gio giacono;NS;AO;S2;550 Vercellino M. (NS/NS);550;vercellino;mastrino;NS;NS
+1409;C1730_19_48;1730;fenestrelle;FE;fenestrelle;A1-G1;A-G;A1;520 Perotino L. (NS/TO C);520;perotino;lorenzo;NS;TO C;G1;399 Baietto F. (NS/TO);399;baietto;francesco;NS;TO
+1410;C1730_19_48;1730;fenestrelle;FE;fenestrelle;A1-S1;A-S;A1;520 Perotino L. (NS/TO C);520;perotino;lorenzo;NS;TO C;S1;529 Rolio G. (NS/Vsu);529;rolio;gio bernardino;NS;Vsu
+1411;C1730_19_48;1730;fenestrelle;FE;fenestrelle;A1-S2;A-S;A1;520 Perotino L. (NS/TO C);520;perotino;lorenzo;NS;TO C;S2;374 Vanera M. (IMP/VL);374;vanera;michele;IMP;VL
+1412;C1730_19_48;1730;fenestrelle;FE;fenestrelle;G1-S1;G-S;G1;399 Baietto F. (NS/TO);399;baietto;francesco;NS;TO;S1;529 Rolio G. (NS/Vsu);529;rolio;gio bernardino;NS;Vsu
+1413;C1730_19_48;1730;fenestrelle;FE;fenestrelle;G1-S2;G-S;G1;399 Baietto F. (NS/TO);399;baietto;francesco;NS;TO;S2;374 Vanera M. (IMP/VL);374;vanera;michele;IMP;VL
+1414;C1730_19_48;1730;fenestrelle;FE;fenestrelle;S1-S2;S-S;S1;529 Rolio G. (NS/Vsu);529;rolio;gio bernardino;NS;Vsu;S2;374 Vanera M. (IMP/VL);374;vanera;michele;IMP;VL
+1415;C1730_19_51;1730;fenestrelle;FE;fenestrelle;G1-G2;G-G;G1;227 Menafoglio F. (NS/MI);227;menafoglio;francesco andrea;NS;MI;G2;292 Rechettino A. (CM/MI);292;rechettino;antonio;CM;MI
+1416;C1730_19_51;1730;fenestrelle;FE;fenestrelle;G1-S1;G-S;G1;227 Menafoglio F. (NS/MI);227;menafoglio;francesco andrea;NS;MI;S1;559 Fontana D. (IMP/MI);559;fontana;domenico;IMP;MI
+1417;C1730_19_51;1730;fenestrelle;FE;fenestrelle;G1-S2;G-S;G1;227 Menafoglio F. (NS/MI);227;menafoglio;francesco andrea;NS;MI;S2;275 Pinchetti D. (CM_M/MI);275;pinchetti;domenico;CM_M;MI
+1418;C1730_19_51;1730;fenestrelle;FE;fenestrelle;G1-S3;G-S;G1;227 Menafoglio F. (NS/MI);227;menafoglio;francesco andrea;NS;MI;S3;551 Verrati G. (NS/NS);551;verrati;giulio;NS;NS
+1419;C1730_19_51;1730;fenestrelle;FE;fenestrelle;G2-S1;G-S;G2;292 Rechettino A. (CM/MI);292;rechettino;antonio;CM;MI;S1;559 Fontana D. (IMP/MI);559;fontana;domenico;IMP;MI
+1420;C1730_19_51;1730;fenestrelle;FE;fenestrelle;G2-S2;G-S;G2;292 Rechettino A. (CM/MI);292;rechettino;antonio;CM;MI;S2;275 Pinchetti D. (CM_M/MI);275;pinchetti;domenico;CM_M;MI
+1421;C1730_19_51;1730;fenestrelle;FE;fenestrelle;G2-S3;G-S;G2;292 Rechettino A. (CM/MI);292;rechettino;antonio;CM;MI;S3;551 Verrati G. (NS/NS);551;verrati;giulio;NS;NS
+1422;C1730_19_51;1730;fenestrelle;FE;fenestrelle;S1-S2;S-S;S1;559 Fontana D. (IMP/MI);559;fontana;domenico;IMP;MI;S2;275 Pinchetti D. (CM_M/MI);275;pinchetti;domenico;CM_M;MI
+1423;C1730_19_51;1730;fenestrelle;FE;fenestrelle;S1-S3;S-S;S1;559 Fontana D. (IMP/MI);559;fontana;domenico;IMP;MI;S3;551 Verrati G. (NS/NS);551;verrati;giulio;NS;NS
+1424;C1730_19_51;1730;fenestrelle;FE;fenestrelle;S2-S3;S-S;S2;275 Pinchetti D. (CM_M/MI);275;pinchetti;domenico;CM_M;MI;S3;551 Verrati G. (NS/NS);551;verrati;giulio;NS;NS
+1425;C1730_19_55;1730;torino;TO;torino città e cittadella;G1-G2;G-G;G1;549 Tua C. (NS/BI);549;tua;carlo giuseppe;NS;BI;G2;364 Trivero G. (NS/CN);364;trivero;gio batta;NS;CN
+1426;C1730_19_55;1730;torino;TO;torino città e cittadella;G1-S1;G-S;G1;549 Tua C. (NS/BI);549;tua;carlo giuseppe;NS;BI;S1;131 Fenoglio C. (NS/TO);131;fenoglio;carlo antonio;NS;TO
+1427;C1730_19_55;1730;torino;TO;torino città e cittadella;G1-S2;G-S;G1;549 Tua C. (NS/BI);549;tua;carlo giuseppe;NS;BI;S2;483 Gilardo B. (NS/TO);483;gilardo;bartolomeo;NS;TO
+1428;C1730_19_55;1730;torino;TO;torino città e cittadella;G2-S1;G-S;G2;364 Trivero G. (NS/CN);364;trivero;gio batta;NS;CN;S1;131 Fenoglio C. (NS/TO);131;fenoglio;carlo antonio;NS;TO
+1429;C1730_19_55;1730;torino;TO;torino città e cittadella;G2-S2;G-S;G2;364 Trivero G. (NS/CN);364;trivero;gio batta;NS;CN;S2;483 Gilardo B. (NS/TO);483;gilardo;bartolomeo;NS;TO
+1430;C1730_19_55;1730;torino;TO;torino città e cittadella;S1-S2;S-S;S1;131 Fenoglio C. (NS/TO);131;fenoglio;carlo antonio;NS;TO;S2;483 Gilardo B. (NS/TO);483;gilardo;bartolomeo;NS;TO
+1431;C1730_19_57;1730;chivasso;CH;chivasso fortificazioni;G1-G2;G-G;G1;369 Ugliengo C. (M_Min/BI);369;ugliengo;carlo maria;M_Min;BI;G2;367 Trolli F. (CM_M/MI);367;trolli;francesco;CM_M;MI
+1432;C1730_19_57;1730;chivasso;CH;chivasso fortificazioni;G1-S1;G-S;G1;369 Ugliengo C. (M_Min/BI);369;ugliengo;carlo maria;M_Min;BI;S1;298 Righino F. (IMP/MI);298;righino;francesco maria;IMP;MI
+1433;C1730_19_57;1730;chivasso;CH;chivasso fortificazioni;G1-S2;G-S;G1;369 Ugliengo C. (M_Min/BI);369;ugliengo;carlo maria;M_Min;BI;S2;511 Pagano G. (IMP/MI);511;pagano;giuseppe;IMP;MI
+1434;C1730_19_57;1730;chivasso;CH;chivasso fortificazioni;G2-S1;G-S;G2;367 Trolli F. (CM_M/MI);367;trolli;francesco;CM_M;MI;S1;298 Righino F. (IMP/MI);298;righino;francesco maria;IMP;MI
+1435;C1730_19_57;1730;chivasso;CH;chivasso fortificazioni;G2-S2;G-S;G2;367 Trolli F. (CM_M/MI);367;trolli;francesco;CM_M;MI;S2;511 Pagano G. (IMP/MI);511;pagano;giuseppe;IMP;MI
+1436;C1730_19_57;1730;chivasso;CH;chivasso fortificazioni;S1-S2;S-S;S1;298 Righino F. (IMP/MI);298;righino;francesco maria;IMP;MI;S2;511 Pagano G. (IMP/MI);511;pagano;giuseppe;IMP;MI
+1437;C1730_19_60;1730;valenza;VAL;valenza fortificazioni;A1-G1;A-G;A1;460 Deleani A. (NS/NS);460;deleani;antonio domenico;NS;NS;G1;459 Deleani A. (NS/NS);459;deleani;antonio;NS;NS
+1438;C1730_19_60;1730;valenza;VAL;valenza fortificazioni;A1-G2;A-G;A1;460 Deleani A. (NS/NS);460;deleani;antonio domenico;NS;NS;G2;56 Billotti L. (M_M/BI);56;billotti;lorenzo;M_M;BI
+1439;C1730_19_60;1730;valenza;VAL;valenza fortificazioni;A1-S1;A-S;A1;460 Deleani A. (NS/NS);460;deleani;antonio domenico;NS;NS;S1;461 Deleani S. (NS/NS);461;deleani;simone;NS;NS
+1440;C1730_19_60;1730;valenza;VAL;valenza fortificazioni;G1-G2;G-G;G1;459 Deleani A. (NS/NS);459;deleani;antonio;NS;NS;G2;56 Billotti L. (M_M/BI);56;billotti;lorenzo;M_M;BI
+1441;C1730_19_60;1730;valenza;VAL;valenza fortificazioni;G1-S1;G-S;G1;459 Deleani A. (NS/NS);459;deleani;antonio;NS;NS;S1;461 Deleani S. (NS/NS);461;deleani;simone;NS;NS
+1442;C1730_19_60;1730;valenza;VAL;valenza fortificazioni;G2-S1;G-S;G2;56 Billotti L. (M_M/BI);56;billotti;lorenzo;M_M;BI;S1;461 Deleani S. (NS/NS);461;deleani;simone;NS;NS
+1443;C1730_19_63;1730;superga;SUP;superga real fabrica;A1-G1;A-G;A1;408 Bertoglio G. (NS/TO C);408;bertoglio;giuseppe maria;NS;TO C;G1;528 Rocco G. (NS/TO C);528;rocco;gio;NS;TO C
+1444;C1730_19_63;1730;superga;SUP;superga real fabrica;A1-S1;A-S;A1;408 Bertoglio G. (NS/TO C);408;bertoglio;giuseppe maria;NS;TO C;S1;314 Rocco N. (NS/TO);314;rocco;nicolao;NS;TO
+1445;C1730_19_63;1730;superga;SUP;superga real fabrica;A1-S2;A-S;A1;408 Bertoglio G. (NS/TO C);408;bertoglio;giuseppe maria;NS;TO C;S2;44 Bertoglio G. (NS/TO);44;bertoglio;giacomo;NS;TO
+1446;C1730_19_63;1730;superga;SUP;superga real fabrica;G1-S1;G-S;G1;528 Rocco G. (NS/TO C);528;rocco;gio;NS;TO C;S1;314 Rocco N. (NS/TO);314;rocco;nicolao;NS;TO
+1447;C1730_19_63;1730;superga;SUP;superga real fabrica;G1-S2;G-S;G1;528 Rocco G. (NS/TO C);528;rocco;gio;NS;TO C;S2;44 Bertoglio G. (NS/TO);44;bertoglio;giacomo;NS;TO
+1448;C1730_19_63;1730;superga;SUP;superga real fabrica;S1-S2;S-S;S1;314 Rocco N. (NS/TO);314;rocco;nicolao;NS;TO;S2;44 Bertoglio G. (NS/TO);44;bertoglio;giacomo;NS;TO
+1449;C1730_19_65;1730;superga;SUP;superga real fabrica;A1-G1;A-G;A1;510 Oreglia B. (NS/CN);510;oreglia;bartolomeo;NS;CN;G1;509 Oreglia A. (NS/CN);509;oreglia;antonio;NS;CN
+1450;C1730_19_65;1730;superga;SUP;superga real fabrica;A1-S1;A-S;A1;510 Oreglia B. (NS/CN);510;oreglia;bartolomeo;NS;CN;S1;407 Bertoglio G. (NS/CN);407;bertoglio;gio batta;NS;CN
+1451;C1730_19_65;1730;superga;SUP;superga real fabrica;A1-S2;A-S;A1;510 Oreglia B. (NS/CN);510;oreglia;bartolomeo;NS;CN;S2;467 Fenoglio A. (NS/CN);467;fenoglio;antonio;NS;CN
+1452;C1730_19_65;1730;superga;SUP;superga real fabrica;G1-S1;G-S;G1;509 Oreglia A. (NS/CN);509;oreglia;antonio;NS;CN;S1;407 Bertoglio G. (NS/CN);407;bertoglio;gio batta;NS;CN
+1453;C1730_19_65;1730;superga;SUP;superga real fabrica;G1-S2;G-S;G1;509 Oreglia A. (NS/CN);509;oreglia;antonio;NS;CN;S2;467 Fenoglio A. (NS/CN);467;fenoglio;antonio;NS;CN
+1454;C1730_19_65;1730;superga;SUP;superga real fabrica;S1-S2;S-S;S1;407 Bertoglio G. (NS/CN);407;bertoglio;gio batta;NS;CN;S2;467 Fenoglio A. (NS/CN);467;fenoglio;antonio;NS;CN
+1455;C1730_19_67;1730;superga;SUP;superga real fabrica;A1-G1;A-G;A1;481 Ghiia G. (NS/NS);481;ghiia;gio lorenzo;NS;NS;G1;452 Corino M. (NS/NS);452;corino;marco antonio;NS;NS
+1456;C1730_19_67;1730;superga;SUP;superga real fabrica;A1-S1;A-S;A1;481 Ghiia G. (NS/NS);481;ghiia;gio lorenzo;NS;NS;S1;477 Galliardo G. (NS/TO);477;galliardo;gio battista;NS;TO
+1457;C1730_19_67;1730;superga;SUP;superga real fabrica;G1-S1;G-S;G1;452 Corino M. (NS/NS);452;corino;marco antonio;NS;NS;S1;477 Galliardo G. (NS/TO);477;galliardo;gio battista;NS;TO
+1458;C1730_19_69;1730;torino;TO;torino e superga;A1-G1;A-G;A1;548 Trivero L. (NS/CN);548;trivero;lorenzo;NS;CN;G1;406 Bertoglio A. (NS/TO C);406;bertoglio;angelo matteo;NS;TO C
+1459;C1730_19_69;1730;torino;TO;torino e superga;A1-S1;A-S;A1;548 Trivero L. (NS/CN);548;trivero;lorenzo;NS;CN;S1;364 Trivero G. (NS/CN);364;trivero;gio batta;NS;CN
+1460;C1730_19_69;1730;torino;TO;torino e superga;G1-S1;G-S;G1;406 Bertoglio A. (NS/TO C);406;bertoglio;angelo matteo;NS;TO C;S1;364 Trivero G. (NS/CN);364;trivero;gio batta;NS;CN
+1461;C1730_19_71;1730;fenestrelle;FE;fenestrelle;A1-G1;A-G;A1;315 Romano G. (IMP/BI);315;romano;gio batta;IMP;BI;G1;253 Peijrone F. (NS/Vsu);253;peijrone;francesco;NS;Vsu
+1462;C1730_19_71;1730;fenestrelle;FE;fenestrelle;A1-S1;A-S;A1;315 Romano G. (IMP/BI);315;romano;gio batta;IMP;BI;S1;215 Martello T. (CM_M/BI);215;martello;tomaso;CM_M;BI
+1463;C1730_19_71;1730;fenestrelle;FE;fenestrelle;A1-S2;A-S;A1;315 Romano G. (IMP/BI);315;romano;gio batta;IMP;BI;S2;532 Romano G. (M_M/BI);532;romano;gio tomaso;M_M;BI
+1464;C1730_19_71;1730;fenestrelle;FE;fenestrelle;A1-S3;A-S;A1;315 Romano G. (IMP/BI);315;romano;gio batta;IMP;BI;S3;210 Magnano G. (CM_M/BI);210;magnano;gio batta;CM_M;BI
+1465;C1730_19_71;1730;fenestrelle;FE;fenestrelle;G1-S1;G-S;G1;253 Peijrone F. (NS/Vsu);253;peijrone;francesco;NS;Vsu;S1;215 Martello T. (CM_M/BI);215;martello;tomaso;CM_M;BI
+1466;C1730_19_71;1730;fenestrelle;FE;fenestrelle;G1-S2;G-S;G1;253 Peijrone F. (NS/Vsu);253;peijrone;francesco;NS;Vsu;S2;532 Romano G. (M_M/BI);532;romano;gio tomaso;M_M;BI
+1467;C1730_19_71;1730;fenestrelle;FE;fenestrelle;G1-S3;G-S;G1;253 Peijrone F. (NS/Vsu);253;peijrone;francesco;NS;Vsu;S3;210 Magnano G. (CM_M/BI);210;magnano;gio batta;CM_M;BI
+1468;C1730_19_71;1730;fenestrelle;FE;fenestrelle;S1-S2;S-S;S1;215 Martello T. (CM_M/BI);215;martello;tomaso;CM_M;BI;S2;532 Romano G. (M_M/BI);532;romano;gio tomaso;M_M;BI
+1469;C1730_19_71;1730;fenestrelle;FE;fenestrelle;S1-S3;S-S;S1;215 Martello T. (CM_M/BI);215;martello;tomaso;CM_M;BI;S3;210 Magnano G. (CM_M/BI);210;magnano;gio batta;CM_M;BI
+1470;C1730_19_71;1730;fenestrelle;FE;fenestrelle;S2-S3;S-S;S2;532 Romano G. (M_M/BI);532;romano;gio tomaso;M_M;BI;S3;210 Magnano G. (CM_M/BI);210;magnano;gio batta;CM_M;BI
+1471;C1730_19_76;1730;torino;TO;valentino fiume po;A1-G1;A-G;A1;75 Buscaglione S. (CM_B/NS);75;buscaglione;stefano;CM_B;NS;G1;472 Fiorina G. (NS/BI);472;fiorina;gio pietro;NS;BI
+1472;C1730_19_76;1730;torino;TO;valentino fiume po;A1-S1;A-S;A1;75 Buscaglione S. (CM_B/NS);75;buscaglione;stefano;CM_B;NS;S1;549 Tua C. (NS/BI);549;tua;carlo giuseppe;NS;BI
+1473;C1730_19_76;1730;torino;TO;valentino fiume po;G1-S1;G-S;G1;472 Fiorina G. (NS/BI);472;fiorina;gio pietro;NS;BI;S1;549 Tua C. (NS/BI);549;tua;carlo giuseppe;NS;BI
+1474;C1730_19_82;1730;exilles;EX;exilles;A1-G1;A-G;A1;463 Derosso P. (NS/AO);463;derosso;pietro;NS;AO;G1;458 Del Piano A. (IMP/AO);458;del piano;antonio;IMP;AO
+1475;C1730_19_82;1730;exilles;EX;exilles;A1-G2;A-G;A1;463 Derosso P. (NS/AO);463;derosso;pietro;NS;AO;G2;462 Derosso G. (NS/AO);462;derosso;giacomo;NS;AO
+1476;C1730_19_82;1730;exilles;EX;exilles;A1-S1;A-S;A1;463 Derosso P. (NS/AO);463;derosso;pietro;NS;AO;S1;493 Jean A. (NS/AO);493;jean;antonio;NS;AO
+1477;C1730_19_82;1730;exilles;EX;exilles;G1-G2;G-G;G1;458 Del Piano A. (IMP/AO);458;del piano;antonio;IMP;AO;G2;462 Derosso G. (NS/AO);462;derosso;giacomo;NS;AO
+1478;C1730_19_82;1730;exilles;EX;exilles;G1-S1;G-S;G1;458 Del Piano A. (IMP/AO);458;del piano;antonio;IMP;AO;S1;493 Jean A. (NS/AO);493;jean;antonio;NS;AO
+1479;C1730_19_82;1730;exilles;EX;exilles;G2-S1;G-S;G2;462 Derosso G. (NS/AO);462;derosso;giacomo;NS;AO;S1;493 Jean A. (NS/AO);493;jean;antonio;NS;AO
+1480;C1730_19_88;1730;torino;TO;torino città e cittadella;A1-G1;A-G;A1;419 Bonesio R. (NS/BI);419;bonesio;rocho;NS;BI;G1;530 Romano A. (NS/PI);530;romano;antonio;NS;PI
+1481;C1730_19_88;1730;torino;TO;torino città e cittadella;A1-S1;A-S;A1;419 Bonesio R. (NS/BI);419;bonesio;rocho;NS;BI;S1;553 Visconti P. (NS/NS);553;visconti;pietro;NS;NS
+1482;C1730_19_88;1730;torino;TO;torino città e cittadella;G1-S1;G-S;G1;530 Romano A. (NS/PI);530;romano;antonio;NS;PI;S1;553 Visconti P. (NS/NS);553;visconti;pietro;NS;NS
+1483;C1730_19_92;1730;superga;SUP;superga reale fabrica;G1-S1;G-S;G1;408 Bertoglio G. (NS/TO C);408;bertoglio;giuseppe maria;NS;TO C;S1;44 Bertoglio G. (NS/TO);44;bertoglio;giacomo;NS;TO
+1484;C1730_19_92;1730;superga;SUP;superga reale fabrica;G1-S1;G-S;G1;394 Antonetti G. (NS/TO C);394;antonetti;giovanni;NS;TO C;S1;44 Bertoglio G. (NS/TO);44;bertoglio;giacomo;NS;TO
+1485;C1730_19_96;1730;superga;SUP;superga reale fabrica;A1-G1;A-G;A1;418 Bonasco S. (NS/NS);418;bonasco;stefano;NS;NS;G1;488 Giudice G. (NS/NS);488;giudice;gio domenico;NS;NS
+1486;C1730_19_96;1730;superga;SUP;superga reale fabrica;A1-S1;A-S;A1;418 Bonasco S. (NS/NS);418;bonasco;stefano;NS;NS;S1;556 Pezzi A. (NS/NS);556;pezzi;antonio;NS;NS
+1487;C1730_19_96;1730;superga;SUP;superga reale fabrica;A1-S2;A-S;A1;418 Bonasco S. (NS/NS);418;bonasco;stefano;NS;NS;S2;349 Somazzo F. (STU/LU);349;somazzo;filippo;STU;LU
+1488;C1730_19_96;1730;superga;SUP;superga reale fabrica;G1-S1;G-S;G1;488 Giudice G. (NS/NS);488;giudice;gio domenico;NS;NS;S1;556 Pezzi A. (NS/NS);556;pezzi;antonio;NS;NS
+1489;C1730_19_96;1730;superga;SUP;superga reale fabrica;G1-S2;G-S;G1;488 Giudice G. (NS/NS);488;giudice;gio domenico;NS;NS;S2;349 Somazzo F. (STU/LU);349;somazzo;filippo;STU;LU
+1490;C1730_19_96;1730;superga;SUP;superga reale fabrica;S1-S2;S-S;S1;556 Pezzi A. (NS/NS);556;pezzi;antonio;NS;NS;S2;349 Somazzo F. (STU/LU);349;somazzo;filippo;STU;LU
+1491;C1742_37_014;1742;fenestrelle;FE;fenestrelle forte;G1-G2;G-G;G1;367 Trolli F. (CM_M/MI);367;trolli;francesco;CM_M;MI;G2;298 Righino F. (IMP/MI);298;righino;francesco maria;IMP;MI
+1492;C1742_37_014;1742;fenestrelle;FE;fenestrelle forte;G1-S1;G-S;G1;367 Trolli F. (CM_M/MI);367;trolli;francesco;CM_M;MI;S1;128 Ermoglio D. (CM_M/MI);128;ermoglio;domenico;CM_M;MI
+1493;C1742_37_014;1742;fenestrelle;FE;fenestrelle forte;G1-S2;G-S;G1;367 Trolli F. (CM_M/MI);367;trolli;francesco;CM_M;MI;S2;122 De Magistris G. (NS/PI);122;de magistris;giacomo;NS;PI
+1494;C1742_37_014;1742;fenestrelle;FE;fenestrelle forte;G2-S1;G-S;G2;298 Righino F. (IMP/MI);298;righino;francesco maria;IMP;MI;S1;128 Ermoglio D. (CM_M/MI);128;ermoglio;domenico;CM_M;MI
+1495;C1742_37_014;1742;fenestrelle;FE;fenestrelle forte;G2-S2;G-S;G2;298 Righino F. (IMP/MI);298;righino;francesco maria;IMP;MI;S2;122 De Magistris G. (NS/PI);122;de magistris;giacomo;NS;PI
+1496;C1742_37_014;1742;fenestrelle;FE;fenestrelle forte;S1-S2;S-S;S1;128 Ermoglio D. (CM_M/MI);128;ermoglio;domenico;CM_M;MI;S2;122 De Magistris G. (NS/PI);122;de magistris;giacomo;NS;PI
+1497;C1742_37_019;1742;fenestrelle;FE;fenestrelle forte;G1-G2;G-G;G1;259 Perron G. (NS/PI);259;perron;giacomo;NS;PI;G2;167 Gavin G. (NS/PI);167;gavin;gio batta;NS;PI
+1498;C1742_37_019;1742;fenestrelle;FE;fenestrelle forte;G1-S1;G-S;G1;259 Perron G. (NS/PI);259;perron;giacomo;NS;PI;S1;162 Garcin E. (NS/PI);162;garcin;emanuel;NS;PI
+1499;C1742_37_019;1742;fenestrelle;FE;fenestrelle forte;G2-S1;G-S;G2;167 Gavin G. (NS/PI);167;gavin;gio batta;NS;PI;S1;162 Garcin E. (NS/PI);162;garcin;emanuel;NS;PI
+1500;C1742_38_001;1742;barche;BA;barche da ponte;G1-G2;G-G;G1;230 Millo G. (NS/CN);230;millo;gio batta;NS;CN;G2;354 Tesier G. (NS/TO);354;tesier;gio batta;NS;TO
+1501;C1742_38_001;1742;barche;BA;barche da ponte;G1-S1;G-S;G1;230 Millo G. (NS/CN);230;millo;gio batta;NS;CN;S1;284 Plato P. (NS/TO);284;plato;pietro antonio;NS;TO
+1502;C1742_38_001;1742;barche;BA;barche da ponte;G2-S1;G-S;G2;354 Tesier G. (NS/TO);354;tesier;gio batta;NS;TO;S1;284 Plato P. (NS/TO);284;plato;pietro antonio;NS;TO
+1503;C1742_38_005;1742;cuneo;CN;cuneo fortificazioni;G1-G2;G-G;G1;248 Parodi G. (CM_P/GE);248;parodi;gio batta;CM_P;GE;G2;31 Bellotti G. (NS/TO C);31;bellotti;giacomo;NS;TO C
+1504;C1742_38_005;1742;cuneo;CN;cuneo fortificazioni;G1-S1;G-S;G1;248 Parodi G. (CM_P/GE);248;parodi;gio batta;CM_P;GE;S1;32 Bellotti P. (CM_M/MI);32;bellotti;pietro;CM_M;MI
+1505;C1742_38_005;1742;cuneo;CN;cuneo fortificazioni;G1-S2;G-S;G1;248 Parodi G. (CM_P/GE);248;parodi;gio batta;CM_P;GE;S2;30 Bellotti C. (CM_M/MI);30;bellotti;carlo;CM_M;MI
+1506;C1742_38_005;1742;cuneo;CN;cuneo fortificazioni;G2-S1;G-S;G2;31 Bellotti G. (NS/TO C);31;bellotti;giacomo;NS;TO C;S1;32 Bellotti P. (CM_M/MI);32;bellotti;pietro;CM_M;MI
+1507;C1742_38_005;1742;cuneo;CN;cuneo fortificazioni;G2-S2;G-S;G2;31 Bellotti G. (NS/TO C);31;bellotti;giacomo;NS;TO C;S2;30 Bellotti C. (CM_M/MI);30;bellotti;carlo;CM_M;MI
+1508;C1742_38_005;1742;cuneo;CN;cuneo fortificazioni;S1-S2;S-S;S1;32 Bellotti P. (CM_M/MI);32;bellotti;pietro;CM_M;MI;S2;30 Bellotti C. (CM_M/MI);30;bellotti;carlo;CM_M;MI
+1509;C1742_38_017;1742;fenestrelle;FE;fenestrelle fortificazioni;G1-G2;G-G;G1;367 Trolli F. (CM_M/MI);367;trolli;francesco;CM_M;MI;G2;360 Toniaca L. (CM_M/LU);360;toniaca;ludovico;CM_M;LU
+1510;C1742_38_017;1742;fenestrelle;FE;fenestrelle fortificazioni;G1-S1;G-S;G1;367 Trolli F. (CM_M/MI);367;trolli;francesco;CM_M;MI;S1;118 Croppi C. (CM_M/MI);118;croppi;carlo;CM_M;MI
+1511;C1742_38_017;1742;fenestrelle;FE;fenestrelle fortificazioni;G1-S2;G-S;G1;367 Trolli F. (CM_M/MI);367;trolli;francesco;CM_M;MI;S2;300 Righino G. (CM_M/MI);300;righino;giacomo;CM_M;MI
+1512;C1742_38_017;1742;fenestrelle;FE;fenestrelle fortificazioni;G2-S1;G-S;G2;360 Toniaca L. (CM_M/LU);360;toniaca;ludovico;CM_M;LU;S1;118 Croppi C. (CM_M/MI);118;croppi;carlo;CM_M;MI
+1513;C1742_38_017;1742;fenestrelle;FE;fenestrelle fortificazioni;G2-S2;G-S;G2;360 Toniaca L. (CM_M/LU);360;toniaca;ludovico;CM_M;LU;S2;300 Righino G. (CM_M/MI);300;righino;giacomo;CM_M;MI
+1514;C1742_38_017;1742;fenestrelle;FE;fenestrelle fortificazioni;S1-S2;S-S;S1;118 Croppi C. (CM_M/MI);118;croppi;carlo;CM_M;MI;S2;300 Righino G. (CM_M/MI);300;righino;giacomo;CM_M;MI
+1515;C1742_38_038;1742;tortona;TOR;tortona fortificazioni;G1-G2;G-G;G1;221 Meiranesio G. (fondichiere/NS);221;meiranesio;guglielmo antonio;fondichiere;NS;G2;154 Galleani G. (mercante/NS);154;galleani;giuseppe;mercante;NS
+1516;C1742_38_038;1742;tortona;TOR;tortona fortificazioni;G1-S1;G-S;G1;221 Meiranesio G. (fondichiere/NS);221;meiranesio;guglielmo antonio;fondichiere;NS;S1;274 Piazzolo G. (CM_P/NS);274;piazzolo;gio batta;CM_P;NS
+1517;C1742_38_038;1742;tortona;TOR;tortona fortificazioni;G2-S1;G-S;G2;154 Galleani G. (mercante/NS);154;galleani;giuseppe;mercante;NS;S1;274 Piazzolo G. (CM_P/NS);274;piazzolo;gio batta;CM_P;NS
+1518;C1742_38_042;1742;fenestrelle;FE;fenestrelle fortificazioni;G1-G2;G-G;G1;28 Bello P. (negoziante/TO C);28;bello;pietro maria;negoziante;TO C;G2;210 Magnano G. (CM_M/BI);210;magnano;gio batta;CM_M;BI
+1519;C1742_38_042;1742;fenestrelle;FE;fenestrelle fortificazioni;G1-S1;G-S;G1;28 Bello P. (negoziante/TO C);28;bello;pietro maria;negoziante;TO C;S1;52 Biglia P. (CM_M/BI);52;biglia;pietro giuseppe;CM_M;BI
+1520;C1742_38_042;1742;fenestrelle;FE;fenestrelle fortificazioni;G1-S2;G-S;G1;28 Bello P. (negoziante/TO C);28;bello;pietro maria;negoziante;TO C;S2;215 Martello T. (CM_M/BI);215;martello;tomaso;CM_M;BI
+1521;C1742_38_042;1742;fenestrelle;FE;fenestrelle fortificazioni;G2-S1;G-S;G2;210 Magnano G. (CM_M/BI);210;magnano;gio batta;CM_M;BI;S1;52 Biglia P. (CM_M/BI);52;biglia;pietro giuseppe;CM_M;BI
+1522;C1742_38_042;1742;fenestrelle;FE;fenestrelle fortificazioni;G2-S2;G-S;G2;210 Magnano G. (CM_M/BI);210;magnano;gio batta;CM_M;BI;S2;215 Martello T. (CM_M/BI);215;martello;tomaso;CM_M;BI
+1523;C1742_38_042;1742;fenestrelle;FE;fenestrelle fortificazioni;S1-S2;S-S;S1;52 Biglia P. (CM_M/BI);52;biglia;pietro giuseppe;CM_M;BI;S2;215 Martello T. (CM_M/BI);215;martello;tomaso;CM_M;BI
+1524;C1742_38_054;1742;tanaro;TA;tanaro;G1-G2;G-G;G1;144 Furno A. (CM_M/BI);144;furno;antonio;CM_M;BI;G2;233 Mosca A. (CM_M/BI);233;mosca;antonio;CM_M;BI
+1525;C1742_38_054;1742;tanaro;TA;tanaro;G1-S1;G-S;G1;144 Furno A. (CM_M/BI);144;furno;antonio;CM_M;BI;S1;209 Magnano C. (CM_M/BI);209;magnano;carlo giuseppe;CM_M;BI
+1526;C1742_38_054;1742;tanaro;TA;tanaro;G2-S1;G-S;G2;233 Mosca A. (CM_M/BI);233;mosca;antonio;CM_M;BI;S1;209 Magnano C. (CM_M/BI);209;magnano;carlo giuseppe;CM_M;BI
+1527;C1742_38_080;1742;barche;BA;barche;G1-G2;G-G;G1;183 Goggia P. (M_F/MI);183;goggia;pietro antonio;M_F;MI;G2;63 Bolgero G. (vetriaro/MI);63;bolgero;gio batta;vetriaro;MI
+1528;C1742_38_080;1742;barche;BA;barche;G1-S1;G-S;G1;183 Goggia P. (M_F/MI);183;goggia;pietro antonio;M_F;MI;S1;182 Goggia P. (NS/MI);182;goggia;pietro;NS;MI
+1529;C1742_38_080;1742;barche;BA;barche;G2-S1;G-S;G2;63 Bolgero G. (vetriaro/MI);63;bolgero;gio batta;vetriaro;MI;S1;182 Goggia P. (NS/MI);182;goggia;pietro;NS;MI
+1530;C1742_38_084;1742;tortona;TOR;tortona castello;G1-G2;G-G;G1;92 Carona A. (CM_P/NS);92;carona;antonio;CM_P;NS;G2;255 Pellolio C. (M_F/MI);255;pellolio;carlo;M_F;MI
+1531;C1742_38_084;1742;tortona;TOR;tortona castello;G1-S1;G-S;G1;92 Carona A. (CM_P/NS);92;carona;antonio;CM_P;NS;S1;350 Sormani G. (CM_M/MI);350;sormani;gerolamo;CM_M;MI
+1532;C1742_38_084;1742;tortona;TOR;tortona castello;G2-S1;G-S;G2;255 Pellolio C. (M_F/MI);255;pellolio;carlo;M_F;MI;S1;350 Sormani G. (CM_M/MI);350;sormani;gerolamo;CM_M;MI
+1533;C1742_38_092;1742;brunetta;BR;brunetta fortificazioni;G1-G2;G-G;G1;87 Cantone D. (negoziante/TO C);87;cantone;domenico1;negoziante;TO C;G2;241 Olivetto G. (CM_M/BI);241;olivetto;gio stefano;CM_M;BI
+1534;C1742_38_092;1742;brunetta;BR;brunetta fortificazioni;G1-S1;G-S;G1;87 Cantone D. (negoziante/TO C);87;cantone;domenico1;negoziante;TO C;S1;209 Magnano C. (CM_M/BI);209;magnano;carlo giuseppe;CM_M;BI
+1535;C1742_38_092;1742;brunetta;BR;brunetta fortificazioni;G1-S2;G-S;G1;87 Cantone D. (negoziante/TO C);87;cantone;domenico1;negoziante;TO C;S2;144 Furno A. (CM_M/BI);144;furno;antonio;CM_M;BI
+1536;C1742_38_092;1742;brunetta;BR;brunetta fortificazioni;G1-S3;G-S;G1;87 Cantone D. (negoziante/TO C);87;cantone;domenico1;negoziante;TO C;S3;233 Mosca A. (CM_M/BI);233;mosca;antonio;CM_M;BI
+1537;C1742_38_092;1742;brunetta;BR;brunetta fortificazioni;G2-S1;G-S;G2;241 Olivetto G. (CM_M/BI);241;olivetto;gio stefano;CM_M;BI;S1;209 Magnano C. (CM_M/BI);209;magnano;carlo giuseppe;CM_M;BI
+1538;C1742_38_092;1742;brunetta;BR;brunetta fortificazioni;G2-S2;G-S;G2;241 Olivetto G. (CM_M/BI);241;olivetto;gio stefano;CM_M;BI;S2;144 Furno A. (CM_M/BI);144;furno;antonio;CM_M;BI
+1539;C1742_38_092;1742;brunetta;BR;brunetta fortificazioni;G2-S3;G-S;G2;241 Olivetto G. (CM_M/BI);241;olivetto;gio stefano;CM_M;BI;S3;233 Mosca A. (CM_M/BI);233;mosca;antonio;CM_M;BI
+1540;C1742_38_092;1742;brunetta;BR;brunetta fortificazioni;S1-S2;S-S;S1;209 Magnano C. (CM_M/BI);209;magnano;carlo giuseppe;CM_M;BI;S2;144 Furno A. (CM_M/BI);144;furno;antonio;CM_M;BI
+1541;C1742_38_092;1742;brunetta;BR;brunetta fortificazioni;S1-S3;S-S;S1;209 Magnano C. (CM_M/BI);209;magnano;carlo giuseppe;CM_M;BI;S3;233 Mosca A. (CM_M/BI);233;mosca;antonio;CM_M;BI
+1542;C1742_38_092;1742;brunetta;BR;brunetta fortificazioni;S2-S3;S-S;S2;144 Furno A. (CM_M/BI);144;furno;antonio;CM_M;BI;S3;233 Mosca A. (CM_M/BI);233;mosca;antonio;CM_M;BI
+1543;C1742_38_106;1742;exilles;EX;exilles fortificazioni;G1-G2;G-G;G1;166 Gatto C. (misuratore/BI);166;gatto;carlo;misuratore;BI;G2;277 Pino G. (mercante di ferro/MI);277;pino;gio maria;mercante di ferro;MI
+1544;C1742_38_106;1742;exilles;EX;exilles fortificazioni;G1-S1;G-S;G1;166 Gatto C. (misuratore/BI);166;gatto;carlo;misuratore;BI;S1;54 Biglia G. (CM_M/BI);54;biglia;gio batta;CM_M;BI
+1545;C1742_38_106;1742;exilles;EX;exilles fortificazioni;G1-S2;G-S;G1;166 Gatto C. (misuratore/BI);166;gatto;carlo;misuratore;BI;S2;165 Gatto A. (CM_M/BI);165;gatto;antonio;CM_M;BI
+1546;C1742_38_106;1742;exilles;EX;exilles fortificazioni;G1-S3;G-S;G1;166 Gatto C. (misuratore/BI);166;gatto;carlo;misuratore;BI;S3;71 Bosazzo G. (CM_M/BI);71;bosazzo;gio batta;CM_M;BI
+1547;C1742_38_106;1742;exilles;EX;exilles fortificazioni;G2-S1;G-S;G2;277 Pino G. (mercante di ferro/MI);277;pino;gio maria;mercante di ferro;MI;S1;54 Biglia G. (CM_M/BI);54;biglia;gio batta;CM_M;BI
+1548;C1742_38_106;1742;exilles;EX;exilles fortificazioni;G2-S2;G-S;G2;277 Pino G. (mercante di ferro/MI);277;pino;gio maria;mercante di ferro;MI;S2;165 Gatto A. (CM_M/BI);165;gatto;antonio;CM_M;BI
+1549;C1742_38_106;1742;exilles;EX;exilles fortificazioni;G2-S3;G-S;G2;277 Pino G. (mercante di ferro/MI);277;pino;gio maria;mercante di ferro;MI;S3;71 Bosazzo G. (CM_M/BI);71;bosazzo;gio batta;CM_M;BI
+1550;C1742_38_106;1742;exilles;EX;exilles fortificazioni;S1-S2;S-S;S1;54 Biglia G. (CM_M/BI);54;biglia;gio batta;CM_M;BI;S2;165 Gatto A. (CM_M/BI);165;gatto;antonio;CM_M;BI
+1551;C1742_38_106;1742;exilles;EX;exilles fortificazioni;S1-S3;S-S;S1;54 Biglia G. (CM_M/BI);54;biglia;gio batta;CM_M;BI;S3;71 Bosazzo G. (CM_M/BI);71;bosazzo;gio batta;CM_M;BI
+1552;C1742_38_106;1742;exilles;EX;exilles fortificazioni;S2-S3;S-S;S2;165 Gatto A. (CM_M/BI);165;gatto;antonio;CM_M;BI;S3;71 Bosazzo G. (CM_M/BI);71;bosazzo;gio batta;CM_M;BI
+1553;C1742_38_118;1742;cuneo;CN;cuneo fortificazioni;G1-G2;G-G;G1;8 Angelino G. (oste/CN);8;angelino;gio batta;oste;CN;G2;112 Coppa G. (mercante di ferro/MI);112;coppa;gio paolo;mercante di ferro;MI
+1554;C1742_38_118;1742;cuneo;CN;cuneo fortificazioni;G1-S1;G-S;G1;8 Angelino G. (oste/CN);8;angelino;gio batta;oste;CN;S1;76 Bussi P. (CM_M/LU);76;bussi;pietro;CM_M;LU
+1555;C1742_38_118;1742;cuneo;CN;cuneo fortificazioni;G2-S1;G-S;G2;112 Coppa G. (mercante di ferro/MI);112;coppa;gio paolo;mercante di ferro;MI;S1;76 Bussi P. (CM_M/LU);76;bussi;pietro;CM_M;LU
+1556;C1742_38_126;1742;demonte;DE;demonte fortificazioni;G1-G2;G-G;G1;307 Rivo G. (mercante di tele/TO C);307;rivo;giuseppe antonio;mercante di tele;TO C;G2;174 Gillonio E. (NS/BI);174;gillonio;eusebio;NS;BI
+1557;C1742_38_126;1742;demonte;DE;demonte fortificazioni;G1-S1;G-S;G1;307 Rivo G. (mercante di tele/TO C);307;rivo;giuseppe antonio;mercante di tele;TO C;S1;376 Vani G. (CM_M/BI);376;vani;gio batta;CM_M;BI
+1558;C1742_38_126;1742;demonte;DE;demonte fortificazioni;G1-S2;G-S;G1;307 Rivo G. (mercante di tele/TO C);307;rivo;giuseppe antonio;mercante di tele;TO C;S2;188 Guabello F. (CM_M/BI);188;guabello;francesco antonio;CM_M;BI
+1559;C1742_38_126;1742;demonte;DE;demonte fortificazioni;G1-S3;G-S;G1;307 Rivo G. (mercante di tele/TO C);307;rivo;giuseppe antonio;mercante di tele;TO C;S3;164 Gastaldetto G. (CM_M/BI);164;gastaldetto;gio eusebio;CM_M;BI
+1560;C1742_38_126;1742;demonte;DE;demonte fortificazioni;G2-S1;G-S;G2;174 Gillonio E. (NS/BI);174;gillonio;eusebio;NS;BI;S1;376 Vani G. (CM_M/BI);376;vani;gio batta;CM_M;BI
+1561;C1742_38_126;1742;demonte;DE;demonte fortificazioni;G2-S2;G-S;G2;174 Gillonio E. (NS/BI);174;gillonio;eusebio;NS;BI;S2;188 Guabello F. (CM_M/BI);188;guabello;francesco antonio;CM_M;BI
+1562;C1742_38_126;1742;demonte;DE;demonte fortificazioni;G2-S3;G-S;G2;174 Gillonio E. (NS/BI);174;gillonio;eusebio;NS;BI;S3;164 Gastaldetto G. (CM_M/BI);164;gastaldetto;gio eusebio;CM_M;BI
+1563;C1742_38_126;1742;demonte;DE;demonte fortificazioni;S1-S2;S-S;S1;376 Vani G. (CM_M/BI);376;vani;gio batta;CM_M;BI;S2;188 Guabello F. (CM_M/BI);188;guabello;francesco antonio;CM_M;BI
+1564;C1742_38_126;1742;demonte;DE;demonte fortificazioni;S1-S3;S-S;S1;376 Vani G. (CM_M/BI);376;vani;gio batta;CM_M;BI;S3;164 Gastaldetto G. (CM_M/BI);164;gastaldetto;gio eusebio;CM_M;BI
+1565;C1742_38_126;1742;demonte;DE;demonte fortificazioni;S2-S3;S-S;S2;188 Guabello F. (CM_M/BI);188;guabello;francesco antonio;CM_M;BI;S3;164 Gastaldetto G. (CM_M/BI);164;gastaldetto;gio eusebio;CM_M;BI
+1566;C1742_38_154;1742;demonte;DE;demonte magazzini;G1-G2;G-G;G1;277 Pino G. (mercante di ferro/MI);277;pino;gio maria;mercante di ferro;MI;G2;17 Bandino C. (NS/NS);17;bandino;carlo;NS;NS
+1567;C1742_38_154;1742;demonte;DE;demonte magazzini;G1-S1;G-S;G1;277 Pino G. (mercante di ferro/MI);277;pino;gio maria;mercante di ferro;MI;S1;142 Fos C. (NS/altro);142;fos;cristofaro;NS;altro
+1568;C1742_38_154;1742;demonte;DE;demonte magazzini;G2-S1;G-S;G2;17 Bandino C. (NS/NS);17;bandino;carlo;NS;NS;S1;142 Fos C. (NS/altro);142;fos;cristofaro;NS;altro
+1569;C1742_38_158;1742;casale;CA;casale fiume po;G1-G2;G-G;G1;367 Trolli F. (CM_M/MI);367;trolli;francesco;CM_M;MI;G2;5 Aimetti L. (CM_M/MI);5;aimetti;leonardo;CM_M;MI
+1570;C1742_38_158;1742;casale;CA;casale fiume po;G1-S1;G-S;G1;367 Trolli F. (CM_M/MI);367;trolli;francesco;CM_M;MI;S1;366 Trolli D. (CM_M/MI);366;trolli;domenico;CM_M;MI
+1571;C1742_38_158;1742;casale;CA;casale fiume po;G1-S2;G-S;G1;367 Trolli F. (CM_M/MI);367;trolli;francesco;CM_M;MI;S2;300 Righino G. (CM_M/MI);300;righino;giacomo;CM_M;MI
+1572;C1742_38_158;1742;casale;CA;casale fiume po;G2-S1;G-S;G2;5 Aimetti L. (CM_M/MI);5;aimetti;leonardo;CM_M;MI;S1;366 Trolli D. (CM_M/MI);366;trolli;domenico;CM_M;MI
+1573;C1742_38_158;1742;casale;CA;casale fiume po;G2-S2;G-S;G2;5 Aimetti L. (CM_M/MI);5;aimetti;leonardo;CM_M;MI;S2;300 Righino G. (CM_M/MI);300;righino;giacomo;CM_M;MI
+1574;C1742_38_158;1742;casale;CA;casale fiume po;S1-S2;S-S;S1;366 Trolli D. (CM_M/MI);366;trolli;domenico;CM_M;MI;S2;300 Righino G. (CM_M/MI);300;righino;giacomo;CM_M;MI
+1575;C1742_38_170;1742;torino;TO;torino cittadella;G1-G2;G-G;G1;47 Bettino C. (NS/LU);47;bettino;carlo francesco;NS;LU;G2;234 Mossino G. (CM_M/MI);234;mossino;giuseppe antonio;CM_M;MI
+1576;C1742_38_170;1742;torino;TO;torino cittadella;G1-S1;G-S;G1;47 Bettino C. (NS/LU);47;bettino;carlo francesco;NS;LU;S1;261 Pezzi A. (CM_M/TO C);261;pezzi;antonio;CM_M;TO C
+1577;C1742_38_170;1742;torino;TO;torino cittadella;G1-S2;G-S;G1;47 Bettino C. (NS/LU);47;bettino;carlo francesco;NS;LU;S2;286 Pollaro G. (CM_M/LU);286;pollaro;gio muzio;CM_M;LU
+1578;C1742_38_170;1742;torino;TO;torino cittadella;G1-S3;G-S;G1;47 Bettino C. (NS/LU);47;bettino;carlo francesco;NS;LU;S3;235 Mossino M. (CM_M/TO C);235;mossino;michele;CM_M;TO C
+1579;C1742_38_170;1742;torino;TO;torino cittadella;G1-S4;G-S;G1;47 Bettino C. (NS/LU);47;bettino;carlo francesco;NS;LU;S4;208 Maffiotto G. (CM_M/BI);208;maffiotto;giacomo;CM_M;BI
+1580;C1742_38_170;1742;torino;TO;torino cittadella;G2-S1;G-S;G2;234 Mossino G. (CM_M/MI);234;mossino;giuseppe antonio;CM_M;MI;S1;261 Pezzi A. (CM_M/TO C);261;pezzi;antonio;CM_M;TO C
+1581;C1742_38_170;1742;torino;TO;torino cittadella;G2-S2;G-S;G2;234 Mossino G. (CM_M/MI);234;mossino;giuseppe antonio;CM_M;MI;S2;286 Pollaro G. (CM_M/LU);286;pollaro;gio muzio;CM_M;LU
+1582;C1742_38_170;1742;torino;TO;torino cittadella;G2-S3;G-S;G2;234 Mossino G. (CM_M/MI);234;mossino;giuseppe antonio;CM_M;MI;S3;235 Mossino M. (CM_M/TO C);235;mossino;michele;CM_M;TO C
+1583;C1742_38_170;1742;torino;TO;torino cittadella;G2-S4;G-S;G2;234 Mossino G. (CM_M/MI);234;mossino;giuseppe antonio;CM_M;MI;S4;208 Maffiotto G. (CM_M/BI);208;maffiotto;giacomo;CM_M;BI
+1584;C1742_38_170;1742;torino;TO;torino cittadella;S1-S2;S-S;S1;261 Pezzi A. (CM_M/TO C);261;pezzi;antonio;CM_M;TO C;S2;286 Pollaro G. (CM_M/LU);286;pollaro;gio muzio;CM_M;LU
+1585;C1742_38_170;1742;torino;TO;torino cittadella;S1-S3;S-S;S1;261 Pezzi A. (CM_M/TO C);261;pezzi;antonio;CM_M;TO C;S3;235 Mossino M. (CM_M/TO C);235;mossino;michele;CM_M;TO C
+1586;C1742_38_170;1742;torino;TO;torino cittadella;S1-S4;S-S;S1;261 Pezzi A. (CM_M/TO C);261;pezzi;antonio;CM_M;TO C;S4;208 Maffiotto G. (CM_M/BI);208;maffiotto;giacomo;CM_M;BI
+1587;C1742_38_170;1742;torino;TO;torino cittadella;S2-S3;S-S;S2;286 Pollaro G. (CM_M/LU);286;pollaro;gio muzio;CM_M;LU;S3;235 Mossino M. (CM_M/TO C);235;mossino;michele;CM_M;TO C
+1588;C1742_38_170;1742;torino;TO;torino cittadella;S2-S4;S-S;S2;286 Pollaro G. (CM_M/LU);286;pollaro;gio muzio;CM_M;LU;S4;208 Maffiotto G. (CM_M/BI);208;maffiotto;giacomo;CM_M;BI
+1589;C1742_38_170;1742;torino;TO;torino cittadella;S3-S4;S-S;S3;235 Mossino M. (CM_M/TO C);235;mossino;michele;CM_M;TO C;S4;208 Maffiotto G. (CM_M/BI);208;maffiotto;giacomo;CM_M;BI
+1590;C1742_38_189;1742;brunetta;BR;brunetta;G1-G2;G-G;G1;97 Casella A. (CM_P/LU);97;casella;antonio;CM_P;LU;G2;10 Aprile F. (CM_P/LU);10;aprile;francesco;CM_P;LU
+1591;C1742_38_189;1742;brunetta;BR;brunetta;G1-S1;G-S;G1;97 Casella A. (CM_P/LU);97;casella;antonio;CM_P;LU;S1;11 Aprile G. (NS/LU);11;aprile;giacomo;NS;LU
+1592;C1742_38_189;1742;brunetta;BR;brunetta;G2-S1;G-S;G2;10 Aprile F. (CM_P/LU);10;aprile;francesco;CM_P;LU;S1;11 Aprile G. (NS/LU);11;aprile;giacomo;NS;LU
+1593;C1742_38_205;1742;cuneo;CN;cuneo palazzo del governo;G1-G2;G-G;G1;138 Fontana C. (NS/NS);138;fontana;carlo michelangelo;NS;NS;G2;262 Pezzi D. (CM_M/MI);262;pezzi;domenico;CM_M;MI
+1594;C1742_38_205;1742;cuneo;CN;cuneo palazzo del governo;G1-S1;G-S;G1;138 Fontana C. (NS/NS);138;fontana;carlo michelangelo;NS;NS;S1;190 Iacazio G. (CM_M/BI);190;iacazio;giuseppe;CM_M;BI
+1595;C1742_38_205;1742;cuneo;CN;cuneo palazzo del governo;G1-S2;G-S;G1;138 Fontana C. (NS/NS);138;fontana;carlo michelangelo;NS;NS;S2;120 Cucco P. (NS/BI);120;cucco;pietro;NS;BI
+1596;C1742_38_205;1742;cuneo;CN;cuneo palazzo del governo;G2-S1;G-S;G2;262 Pezzi D. (CM_M/MI);262;pezzi;domenico;CM_M;MI;S1;190 Iacazio G. (CM_M/BI);190;iacazio;giuseppe;CM_M;BI
+1597;C1742_38_205;1742;cuneo;CN;cuneo palazzo del governo;G2-S2;G-S;G2;262 Pezzi D. (CM_M/MI);262;pezzi;domenico;CM_M;MI;S2;120 Cucco P. (NS/BI);120;cucco;pietro;NS;BI
+1598;C1742_38_205;1742;cuneo;CN;cuneo palazzo del governo;S1-S2;S-S;S1;190 Iacazio G. (CM_M/BI);190;iacazio;giuseppe;CM_M;BI;S2;120 Cucco P. (NS/BI);120;cucco;pietro;NS;BI
+1599;C1742_38_213;1742;casale;CA;casale castello;G1-G2;G-G;G1;13 Arizio G. (M_F/BI);13;arizio;giacomo;M_F;BI;G2;6 Alino G. (CM_M/MI);6;alino;gio batta;CM_M;MI
+1600;C1742_38_213;1742;casale;CA;casale castello;G1-S1;G-S;G1;13 Arizio G. (M_F/BI);13;arizio;giacomo;M_F;BI;S1;205 Maffei C. (CM_B/TO C);205;maffei;carlo;CM_B;TO C
+1601;C1742_38_213;1742;casale;CA;casale castello;G1-S2;G-S;G1;13 Arizio G. (M_F/BI);13;arizio;giacomo;M_F;BI;S2;37 Bernascone G. (CM_M/MI);37;bernascone;giacomo;CM_M;MI
+1602;C1742_38_213;1742;casale;CA;casale castello;G1-S3;G-S;G1;13 Arizio G. (M_F/BI);13;arizio;giacomo;M_F;BI;S3;77 Bussolino F. (CM_M/MI);77;bussolino;francesco;CM_M;MI
+1603;C1742_38_213;1742;casale;CA;casale castello;G2-S1;G-S;G2;6 Alino G. (CM_M/MI);6;alino;gio batta;CM_M;MI;S1;205 Maffei C. (CM_B/TO C);205;maffei;carlo;CM_B;TO C
+1604;C1742_38_213;1742;casale;CA;casale castello;G2-S2;G-S;G2;6 Alino G. (CM_M/MI);6;alino;gio batta;CM_M;MI;S2;37 Bernascone G. (CM_M/MI);37;bernascone;giacomo;CM_M;MI
+1605;C1742_38_213;1742;casale;CA;casale castello;G2-S3;G-S;G2;6 Alino G. (CM_M/MI);6;alino;gio batta;CM_M;MI;S3;77 Bussolino F. (CM_M/MI);77;bussolino;francesco;CM_M;MI
+1606;C1742_38_213;1742;casale;CA;casale castello;S1-S2;S-S;S1;205 Maffei C. (CM_B/TO C);205;maffei;carlo;CM_B;TO C;S2;37 Bernascone G. (CM_M/MI);37;bernascone;giacomo;CM_M;MI
+1607;C1742_38_213;1742;casale;CA;casale castello;S1-S3;S-S;S1;205 Maffei C. (CM_B/TO C);205;maffei;carlo;CM_B;TO C;S3;77 Bussolino F. (CM_M/MI);77;bussolino;francesco;CM_M;MI
+1608;C1742_38_213;1742;casale;CA;casale castello;S2-S3;S-S;S2;37 Bernascone G. (CM_M/MI);37;bernascone;giacomo;CM_M;MI;S3;77 Bussolino F. (CM_M/MI);77;bussolino;francesco;CM_M;MI
+1609;C1742_38_221;1742;casale moncalvo;CAMO;casale castello e moncalvo carceri;G1-G2;G-G;G1;155 Galliardo F. (NS/TO);155;galliardo;francesco andrea;NS;TO;G2;205 Maffei C. (CM_B/TO C);205;maffei;carlo;CM_B;TO C
+1610;C1742_38_221;1742;casale moncalvo;CAMO;casale castello e moncalvo carceri;G1-S1;G-S;G1;155 Galliardo F. (NS/TO);155;galliardo;francesco andrea;NS;TO;S1;37 Bernascone G. (CM_M/MI);37;bernascone;giacomo;CM_M;MI
+1611;C1742_38_221;1742;casale moncalvo;CAMO;casale castello e moncalvo carceri;G1-S2;G-S;G1;155 Galliardo F. (NS/TO);155;galliardo;francesco andrea;NS;TO;S2;6 Alino G. (CM_M/MI);6;alino;gio batta;CM_M;MI
+1612;C1742_38_221;1742;casale moncalvo;CAMO;casale castello e moncalvo carceri;G2-S1;G-S;G2;205 Maffei C. (CM_B/TO C);205;maffei;carlo;CM_B;TO C;S1;37 Bernascone G. (CM_M/MI);37;bernascone;giacomo;CM_M;MI
+1613;C1742_38_221;1742;casale moncalvo;CAMO;casale castello e moncalvo carceri;G2-S2;G-S;G2;205 Maffei C. (CM_B/TO C);205;maffei;carlo;CM_B;TO C;S2;6 Alino G. (CM_M/MI);6;alino;gio batta;CM_M;MI
+1614;C1742_38_221;1742;casale moncalvo;CAMO;casale castello e moncalvo carceri;S1-S2;S-S;S1;37 Bernascone G. (CM_M/MI);37;bernascone;giacomo;CM_M;MI;S2;6 Alino G. (CM_M/MI);6;alino;gio batta;CM_M;MI
+1615;C1742_38_250;1742;cuneo;CN;cuneo magazzini;G1-G2;G-G;G1;324 Rosazza P. (NS/BI);324;rosazza;pietro;NS;BI;G2;156 Galliardo F. (NS/TO);156;galliardo;francesco maria;NS;TO
+1616;C1742_38_250;1742;cuneo;CN;cuneo magazzini;G1-S1;G-S;G1;324 Rosazza P. (NS/BI);324;rosazza;pietro;NS;BI;S1;196 Leve G. (CM_M/BI);196;leve;gio antonio;CM_M;BI
+1617;C1742_38_250;1742;cuneo;CN;cuneo magazzini;G1-S2;G-S;G1;324 Rosazza P. (NS/BI);324;rosazza;pietro;NS;BI;S2;257 Peraldo G. (CM_M/BI);257;peraldo;giuseppe antonio;CM_M;BI
+1618;C1742_38_250;1742;cuneo;CN;cuneo magazzini;G2-S1;G-S;G2;156 Galliardo F. (NS/TO);156;galliardo;francesco maria;NS;TO;S1;196 Leve G. (CM_M/BI);196;leve;gio antonio;CM_M;BI
+1619;C1742_38_250;1742;cuneo;CN;cuneo magazzini;G2-S2;G-S;G2;156 Galliardo F. (NS/TO);156;galliardo;francesco maria;NS;TO;S2;257 Peraldo G. (CM_M/BI);257;peraldo;giuseppe antonio;CM_M;BI
+1620;C1742_38_250;1742;cuneo;CN;cuneo magazzini;S1-S2;S-S;S1;196 Leve G. (CM_M/BI);196;leve;gio antonio;CM_M;BI;S2;257 Peraldo G. (CM_M/BI);257;peraldo;giuseppe antonio;CM_M;BI
+1621;C1742_38_257;1742;barche;BA;barche;G1-G2;G-G;G1;195 Lardone G. (NS/CN);195;lardone;gio;NS;CN;G2;214 Marchetti F. (filatore da seta/NS);214;marchetti;filiberto;filatore da seta;NS
+1622;C1742_38_257;1742;barche;BA;barche;G1-S1;G-S;G1;195 Lardone G. (NS/CN);195;lardone;gio;NS;CN;S1;79 Calleri S. (NS/PI);79;calleri;sebastiano antonio;NS;PI
+1623;C1742_38_257;1742;barche;BA;barche;G2-S1;G-S;G2;214 Marchetti F. (filatore da seta/NS);214;marchetti;filiberto;filatore da seta;NS;S1;79 Calleri S. (NS/PI);79;calleri;sebastiano antonio;NS;PI
+1624;C1742_38_262;1742;barche;BA;barche;G1-G2;G-G;G1;98 Casella G. (CM_P/LU);98;casella;giacomo;CM_P;LU;G2;9 Aprile A. (NS/LU);9;aprile;alessandro;NS;LU
+1625;C1742_38_262;1742;barche;BA;barche;G1-S1;G-S;G1;98 Casella G. (CM_P/LU);98;casella;giacomo;CM_P;LU;S1;137 Fongi G. (NS/NS);137;fongi;giuseppe;NS;NS
+1626;C1742_38_262;1742;barche;BA;barche;G2-S1;G-S;G2;9 Aprile A. (NS/LU);9;aprile;alessandro;NS;LU;S1;137 Fongi G. (NS/NS);137;fongi;giuseppe;NS;NS
+1627;C1742_38_276;1742;verrua;VERR;verrua forte;G1-G2;G-G;G1;82 Caminada F. (TOL/LU);82;caminada;francesco antonio;TOL;LU;G2;355 Togliardo G. (M_F/TO C);355;togliardo;gerolamo;M_F;TO C
+1628;C1742_38_276;1742;verrua;VERR;verrua forte;G1-S1;G-S;G1;82 Caminada F. (TOL/LU);82;caminada;francesco antonio;TOL;LU;S1;216 Masella G. (NS/LU);216;masella;giuseppe;NS;LU
+1629;C1742_38_276;1742;verrua;VERR;verrua forte;G2-S1;G-S;G2;355 Togliardo G. (M_F/TO C);355;togliardo;gerolamo;M_F;TO C;S1;216 Masella G. (NS/LU);216;masella;giuseppe;NS;LU
+1630;C1742_38_280;1742;barche;BA;barche;G1-G2;G-G;G1;252 Peijla G. (NS/TO);252;peijla;gio pietro;NS;TO;G2;237 Mosso G. (NS/TO C);237;mosso;gio eusebio;NS;TO C
+1631;C1742_38_280;1742;barche;BA;barche;G1-S1;G-S;G1;252 Peijla G. (NS/TO);252;peijla;gio pietro;NS;TO;S1;91 Capra A. (NS/TO);91;capra;andrea;NS;TO
+1632;C1742_38_280;1742;barche;BA;barche;G2-S1;G-S;G2;237 Mosso G. (NS/TO C);237;mosso;gio eusebio;NS;TO C;S1;91 Capra A. (NS/TO);91;capra;andrea;NS;TO
+1633;C1742_38_284;1742;barche;BA;barche;G1-G2;G-G;G1;101 Ceresio F. (NS/CN);101;ceresio;francesco;NS;CN;G2;67 Bongioanni G. (NS/PI);67;bongioanni;gio maria;NS;PI
+1634;C1742_38_284;1742;barche;BA;barche;G1-S1;G-S;G1;101 Ceresio F. (NS/CN);101;ceresio;francesco;NS;CN;S1;15 Audero F. (NS/CN);15;audero;francesco;NS;CN
+1635;C1742_38_284;1742;barche;BA;barche;G1-S2;G-S;G1;101 Ceresio F. (NS/CN);101;ceresio;francesco;NS;CN;S2;90 Capello G. (NS/PI);90;capello;giuseppe;NS;PI
+1636;C1742_38_284;1742;barche;BA;barche;G2-S1;G-S;G2;67 Bongioanni G. (NS/PI);67;bongioanni;gio maria;NS;PI;S1;15 Audero F. (NS/CN);15;audero;francesco;NS;CN
+1637;C1742_38_284;1742;barche;BA;barche;G2-S2;G-S;G2;67 Bongioanni G. (NS/PI);67;bongioanni;gio maria;NS;PI;S2;90 Capello G. (NS/PI);90;capello;giuseppe;NS;PI
+1638;C1742_38_284;1742;barche;BA;barche;S1-S2;S-S;S1;15 Audero F. (NS/CN);15;audero;francesco;NS;CN;S2;90 Capello G. (NS/PI);90;capello;giuseppe;NS;PI
+1639;C1742_38_288;1742;demonte;DE;demonte forni e magazzini;G1-G2;G-G;G1;31 Bellotti G. (NS/TO C);31;bellotti;giacomo;NS;TO C;G2;116 Cravasio M. (tenente magazzeno/BI);116;cravasio;matteo;tenente magazzeno;BI
+1640;C1742_38_288;1742;demonte;DE;demonte forni e magazzini;G1-S1;G-S;G1;31 Bellotti G. (NS/TO C);31;bellotti;giacomo;NS;TO C;S1;55 Billotti G. (CM/BI);55;billotti;gio lorenzo;CM;BI
+1641;C1742_38_288;1742;demonte;DE;demonte forni e magazzini;G1-S2;G-S;G1;31 Bellotti G. (NS/TO C);31;bellotti;giacomo;NS;TO C;S2;337 Schiera D. (CM/MI);337;schiera;domenico;CM;MI
+1642;C1742_38_288;1742;demonte;DE;demonte forni e magazzini;G2-S1;G-S;G2;116 Cravasio M. (tenente magazzeno/BI);116;cravasio;matteo;tenente magazzeno;BI;S1;55 Billotti G. (CM/BI);55;billotti;gio lorenzo;CM;BI
+1643;C1742_38_288;1742;demonte;DE;demonte forni e magazzini;G2-S2;G-S;G2;116 Cravasio M. (tenente magazzeno/BI);116;cravasio;matteo;tenente magazzeno;BI;S2;337 Schiera D. (CM/MI);337;schiera;domenico;CM;MI
+1644;C1742_38_288;1742;demonte;DE;demonte forni e magazzini;S1-S2;S-S;S1;55 Billotti G. (CM/BI);55;billotti;gio lorenzo;CM;BI;S2;337 Schiera D. (CM/MI);337;schiera;domenico;CM;MI
+1645;C1742_38_298;1742;asti;AT;asti castello;G1-G2;G-G;G1;205 Maffei C. (CM_B/TO C);205;maffei;carlo;CM_B;TO C;G2;56 Billotti L. (M_M/BI);56;billotti;lorenzo;M_M;BI
+1646;C1742_38_298;1742;asti;AT;asti castello;G1-S1;G-S;G1;205 Maffei C. (CM_B/TO C);205;maffei;carlo;CM_B;TO C;S1;391 Zo G. (NS/TO C);391;zo;gio bernardo;NS;TO C
+1647;C1742_38_298;1742;asti;AT;asti castello;G1-S2;G-S;G1;205 Maffei C. (CM_B/TO C);205;maffei;carlo;CM_B;TO C;S2;6 Alino G. (CM_M/MI);6;alino;gio batta;CM_M;MI
+1648;C1742_38_298;1742;asti;AT;asti castello;G2-S1;G-S;G2;56 Billotti L. (M_M/BI);56;billotti;lorenzo;M_M;BI;S1;391 Zo G. (NS/TO C);391;zo;gio bernardo;NS;TO C
+1649;C1742_38_298;1742;asti;AT;asti castello;G2-S2;G-S;G2;56 Billotti L. (M_M/BI);56;billotti;lorenzo;M_M;BI;S2;6 Alino G. (CM_M/MI);6;alino;gio batta;CM_M;MI
+1650;C1742_38_298;1742;asti;AT;asti castello;S1-S2;S-S;S1;391 Zo G. (NS/TO C);391;zo;gio bernardo;NS;TO C;S2;6 Alino G. (CM_M/MI);6;alino;gio batta;CM_M;MI
+1651;C1742_38_308;1742;novara;NO;novara fortificazioni;G1-G2;G-G;G1;246 Pagano G. (CM_M/MI);246;pagano;galeazzo;CM_M;MI;G2;256 Pellolio E. (M_F/MI);256;pellolio;evangelista;M_F;MI
+1652;C1742_38_308;1742;novara;NO;novara fortificazioni;G1-S1;G-S;G1;246 Pagano G. (CM_M/MI);246;pagano;galeazzo;CM_M;MI;S1;263 Pezzi G. (CM_M/MI);263;pezzi;gio antonio;CM_M;MI
+1653;C1742_38_308;1742;novara;NO;novara fortificazioni;G1-S2;G-S;G1;246 Pagano G. (CM_M/MI);246;pagano;galeazzo;CM_M;MI;S2;245 Pagano D. (CM_M/MI);245;pagano;domenico;CM_M;MI
+1654;C1742_38_308;1742;novara;NO;novara fortificazioni;G2-S1;G-S;G2;256 Pellolio E. (M_F/MI);256;pellolio;evangelista;M_F;MI;S1;263 Pezzi G. (CM_M/MI);263;pezzi;gio antonio;CM_M;MI
+1655;C1742_38_308;1742;novara;NO;novara fortificazioni;G2-S2;G-S;G2;256 Pellolio E. (M_F/MI);256;pellolio;evangelista;M_F;MI;S2;245 Pagano D. (CM_M/MI);245;pagano;domenico;CM_M;MI
+1656;C1742_38_308;1742;novara;NO;novara fortificazioni;S1-S2;S-S;S1;263 Pezzi G. (CM_M/MI);263;pezzi;gio antonio;CM_M;MI;S2;245 Pagano D. (CM_M/MI);245;pagano;domenico;CM_M;MI
+1657;C1742_38_320;1742;brunetta;BR;brunetta forte;G1-G2;G-G;G1;352 Tardi G. (M_F/NS);352;tardi;gio nicola;M_F;NS;G2;370 Ugliengo G. (M_Min/BI);370;ugliengo;gio batta;M_Min;BI
+1658;C1742_38_320;1742;brunetta;BR;brunetta forte;G1-S1;G-S;G1;352 Tardi G. (M_F/NS);352;tardi;gio nicola;M_F;NS;S1;285 Pol G. (NS/TO);285;pol;giuseppe;NS;TO
+1659;C1742_38_320;1742;brunetta;BR;brunetta forte;G2-S1;G-S;G2;370 Ugliengo G. (M_Min/BI);370;ugliengo;gio batta;M_Min;BI;S1;285 Pol G. (NS/TO);285;pol;giuseppe;NS;TO
+1660;C1742_38_327;1742;fenestrelle;FE;fenestrelle forte;G1-G2;G-G;G1;379 Veillier G. (NS/altro);379;veillier;gio;NS;altro;G2;189 Griot G. (NS/PI);189;griot;giovanni;NS;PI
+1661;C1742_38_327;1742;fenestrelle;FE;fenestrelle forte;G1-S1;G-S;G1;379 Veillier G. (NS/altro);379;veillier;gio;NS;altro;S1;162 Garcin E. (NS/PI);162;garcin;emanuel;NS;PI
+1662;C1742_38_327;1742;fenestrelle;FE;fenestrelle forte;G2-S1;G-S;G2;189 Griot G. (NS/PI);189;griot;giovanni;NS;PI;S1;162 Garcin E. (NS/PI);162;garcin;emanuel;NS;PI
+1663;C1742_38_337;1742;demonte;DE;demonte forte;G1-G2;G-G;G1;248 Parodi G. (CM_P/GE);248;parodi;gio batta;CM_P;GE;G2;204 Maffei B. (CM_M/MI);204;maffei;bernardo andrea;CM_M;MI
+1664;C1742_38_337;1742;demonte;DE;demonte forte;G1-S1;G-S;G1;248 Parodi G. (CM_P/GE);248;parodi;gio batta;CM_P;GE;S1;240 Nolfi G. (CM_M/MI);240;nolfi;giuseppe;CM_M;MI
+1665;C1742_38_337;1742;demonte;DE;demonte forte;G1-S2;G-S;G1;248 Parodi G. (CM_P/GE);248;parodi;gio batta;CM_P;GE;S2;207 Maffei M. (CM_M/MI);207;maffei;matteo antonio;CM_M;MI
+1666;C1742_38_337;1742;demonte;DE;demonte forte;G1-S3;G-S;G1;248 Parodi G. (CM_P/GE);248;parodi;gio batta;CM_P;GE;S3;76 Bussi P. (CM_M/LU);76;bussi;pietro;CM_M;LU
+1667;C1742_38_337;1742;demonte;DE;demonte forte;G1-S4;G-S;G1;248 Parodi G. (CM_P/GE);248;parodi;gio batta;CM_P;GE;S4;93 Carpighi B. (CM_M/MI);93;carpighi;bieniamino;CM_M;MI
+1668;C1742_38_337;1742;demonte;DE;demonte forte;G2-S1;G-S;G2;204 Maffei B. (CM_M/MI);204;maffei;bernardo andrea;CM_M;MI;S1;240 Nolfi G. (CM_M/MI);240;nolfi;giuseppe;CM_M;MI
+1669;C1742_38_337;1742;demonte;DE;demonte forte;G2-S2;G-S;G2;204 Maffei B. (CM_M/MI);204;maffei;bernardo andrea;CM_M;MI;S2;207 Maffei M. (CM_M/MI);207;maffei;matteo antonio;CM_M;MI
+1670;C1742_38_337;1742;demonte;DE;demonte forte;G2-S3;G-S;G2;204 Maffei B. (CM_M/MI);204;maffei;bernardo andrea;CM_M;MI;S3;76 Bussi P. (CM_M/LU);76;bussi;pietro;CM_M;LU
+1671;C1742_38_337;1742;demonte;DE;demonte forte;G2-S4;G-S;G2;204 Maffei B. (CM_M/MI);204;maffei;bernardo andrea;CM_M;MI;S4;93 Carpighi B. (CM_M/MI);93;carpighi;bieniamino;CM_M;MI
+1672;C1742_38_337;1742;demonte;DE;demonte forte;S1-S2;S-S;S1;240 Nolfi G. (CM_M/MI);240;nolfi;giuseppe;CM_M;MI;S2;207 Maffei M. (CM_M/MI);207;maffei;matteo antonio;CM_M;MI
+1673;C1742_38_337;1742;demonte;DE;demonte forte;S1-S3;S-S;S1;240 Nolfi G. (CM_M/MI);240;nolfi;giuseppe;CM_M;MI;S3;76 Bussi P. (CM_M/LU);76;bussi;pietro;CM_M;LU
+1674;C1742_38_337;1742;demonte;DE;demonte forte;S1-S4;S-S;S1;240 Nolfi G. (CM_M/MI);240;nolfi;giuseppe;CM_M;MI;S4;93 Carpighi B. (CM_M/MI);93;carpighi;bieniamino;CM_M;MI
+1675;C1742_38_337;1742;demonte;DE;demonte forte;S2-S3;S-S;S2;207 Maffei M. (CM_M/MI);207;maffei;matteo antonio;CM_M;MI;S3;76 Bussi P. (CM_M/LU);76;bussi;pietro;CM_M;LU
+1676;C1742_38_337;1742;demonte;DE;demonte forte;S2-S4;S-S;S2;207 Maffei M. (CM_M/MI);207;maffei;matteo antonio;CM_M;MI;S4;93 Carpighi B. (CM_M/MI);93;carpighi;bieniamino;CM_M;MI
+1677;C1742_38_337;1742;demonte;DE;demonte forte;S3-S4;S-S;S3;76 Bussi P. (CM_M/LU);76;bussi;pietro;CM_M;LU;S4;93 Carpighi B. (CM_M/MI);93;carpighi;bieniamino;CM_M;MI
+1678;C1742_38_345;1742;chivasso;CH;chivasso forte;G1-G2;G-G;G1;241 Olivetto G. (CM_M/BI);241;olivetto;gio stefano;CM_M;BI;G2;61 Boggio G. (CM_M/BI);61;boggio;giuseppe antonio;CM_M;BI
+1679;C1742_38_345;1742;chivasso;CH;chivasso forte;G1-S1;G-S;G1;241 Olivetto G. (CM_M/BI);241;olivetto;gio stefano;CM_M;BI;S1;271 Piazza G. (CM_M/MI);271;piazza;gio batta;CM_M;MI
+1680;C1742_38_345;1742;chivasso;CH;chivasso forte;G2-S1;G-S;G2;61 Boggio G. (CM_M/BI);61;boggio;giuseppe antonio;CM_M;BI;S1;271 Piazza G. (CM_M/MI);271;piazza;gio batta;CM_M;MI
+1681;C1742_38_361;1742;torino;TO;torino cittadella;G1-G2;G-G;G1;246 Pagano G. (CM_M/MI);246;pagano;galeazzo;CM_M;MI;G2;241 Olivetto G. (CM_M/BI);241;olivetto;gio stefano;CM_M;BI
+1682;C1742_38_361;1742;torino;TO;torino cittadella;G1-S1;G-S;G1;246 Pagano G. (CM_M/MI);246;pagano;galeazzo;CM_M;MI;S1;234 Mossino G. (CM_M/MI);234;mossino;giuseppe antonio;CM_M;MI
+1683;C1742_38_361;1742;torino;TO;torino cittadella;G2-S1;G-S;G2;241 Olivetto G. (CM_M/BI);241;olivetto;gio stefano;CM_M;BI;S1;234 Mossino G. (CM_M/MI);234;mossino;giuseppe antonio;CM_M;MI
+1684;C1742_38_365;1742;fenestrelle;FE;fenestrelle forte;G1-G2;G-G;G1;255 Pellolio C. (M_F/MI);255;pellolio;carlo;M_F;MI;G2;370 Ugliengo G. (M_Min/BI);370;ugliengo;gio batta;M_Min;BI
+1685;C1742_38_365;1742;fenestrelle;FE;fenestrelle forte;G1-S1;G-S;G1;255 Pellolio C. (M_F/MI);255;pellolio;carlo;M_F;MI;S1;388 Zeppa L. (mercante di ferro/TO);388;zeppa;lorenzo giacinto;mercante di ferro;TO
+1686;C1742_38_365;1742;fenestrelle;FE;fenestrelle forte;G2-S1;G-S;G2;370 Ugliengo G. (M_Min/BI);370;ugliengo;gio batta;M_Min;BI;S1;388 Zeppa L. (mercante di ferro/TO);388;zeppa;lorenzo giacinto;mercante di ferro;TO
+1687;C1742_38_375;1742;novara;NO;novara castello;G1-G2;G-G;G1;135 Filippis C. (CM_M/MI);135;filippis;cesare;CM_M;MI;G2;5 Aimetti L. (CM_M/MI);5;aimetti;leonardo;CM_M;MI
+1688;C1742_38_375;1742;novara;NO;novara castello;G1-S1;G-S;G1;135 Filippis C. (CM_M/MI);135;filippis;cesare;CM_M;MI;S1;246 Pagano G. (CM_M/MI);246;pagano;galeazzo;CM_M;MI
+1689;C1742_38_375;1742;novara;NO;novara castello;G1-S2;G-S;G1;135 Filippis C. (CM_M/MI);135;filippis;cesare;CM_M;MI;S2;263 Pezzi G. (CM_M/MI);263;pezzi;gio antonio;CM_M;MI
+1690;C1742_38_375;1742;novara;NO;novara castello;G2-S1;G-S;G2;5 Aimetti L. (CM_M/MI);5;aimetti;leonardo;CM_M;MI;S1;246 Pagano G. (CM_M/MI);246;pagano;galeazzo;CM_M;MI
+1691;C1742_38_375;1742;novara;NO;novara castello;G2-S2;G-S;G2;5 Aimetti L. (CM_M/MI);5;aimetti;leonardo;CM_M;MI;S2;263 Pezzi G. (CM_M/MI);263;pezzi;gio antonio;CM_M;MI
+1692;C1742_38_375;1742;novara;NO;novara castello;S1-S2;S-S;S1;246 Pagano G. (CM_M/MI);246;pagano;galeazzo;CM_M;MI;S2;263 Pezzi G. (CM_M/MI);263;pezzi;gio antonio;CM_M;MI
+1693;C1742_38_381;1742;dora;DORA;dora ponte sulla dora;G1-G2;G-G;G1;5 Aimetti L. (CM_M/MI);5;aimetti;leonardo;CM_M;MI;G2;217 Massazza G. (M_B/NS);217;massazza;gio batta;M_B;NS
+1694;C1742_38_381;1742;dora;DORA;dora ponte sulla dora;G1-S1;G-S;G1;5 Aimetti L. (CM_M/MI);5;aimetti;leonardo;CM_M;MI;S1;205 Maffei C. (CM_B/TO C);205;maffei;carlo;CM_B;TO C
+1695;C1742_38_381;1742;dora;DORA;dora ponte sulla dora;G2-S1;G-S;G2;217 Massazza G. (M_B/NS);217;massazza;gio batta;M_B;NS;S1;205 Maffei C. (CM_B/TO C);205;maffei;carlo;CM_B;TO C

@@ -63,7 +63,7 @@ width: 6px;
 }
 
 #config-interval {
-  height: 40vh;
+  min-height: 40vh;
   position:relative;
 }
 .nav-tabs {

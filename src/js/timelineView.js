@@ -368,7 +368,10 @@ let drawTimeLine = function () {
       'granularity': v.granularity,
       'dots': linkPairNumber[i].dots.map(function (linkpair, idx) {
         let nodenumber = nodeNumber[i].dots[idx]
-        let dense = 2 * linkpair.y / (nodenumber.y * (nodenumber.y - 1))
+        let totalNode = dg.nodeArrays.length
+        let totalPossible = totalNode * (totalNode - 1) / 2
+        let currentPossible = nodenumber.y * (nodenumber.y - 1) / 2
+        let dense = linkpair.y / totalPossible
         if (Number.isNaN(dense)) dense=0
         return {
           'timeStart': linkpair.timeStart,
@@ -501,7 +504,10 @@ let getData = function (dgraph, intervals = [], measureList =  ['nodeNumber', 'l
       'granularity': v.granularity,
       'dots': linkPairNumber[i].dots.map(function (linkpair, idx) {
         let nodenumber = nodeNumber[i].dots[idx]
-        let dense = 2 * linkpair.y / (nodenumber.y * (nodenumber.y - 1))
+        let totalNode = dg.nodeArrays.length
+        let totalPossible = totalNode * (totalNode - 1) /2
+        let currentPossible =  nodenumber.y * (nodenumber.y - 1) / 2
+        let dense = linkpair.y / totalPossible
         if (Number.isNaN(dense)) dense = 0
         return {
           'timeStart': linkpair.timeStart,

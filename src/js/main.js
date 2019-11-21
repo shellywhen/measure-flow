@@ -114,7 +114,8 @@ window.afterData = function () {
 
 //  Heatmap.drawHeatmap('heatmapFrame')
   NodeLink.drawNodeLink()
-  Measure.drawMeasureList('measureFrame')
+//  Measure.drawMeasureList('measureFrame')
+  Measure.measureFrameInit(dgraph)
   //
 //  Stat.drawStatView('radarDiv')
   Config.drawConfigs()
@@ -144,13 +145,15 @@ window.afterData = function () {
       'dgraph': subgraph
     }
     dg.selection.push(newSelection)
-    if(m.body.flag)  Measure.drawMeasureList('measureFrame', dg)
+    if(m.body.flag)  {
+      Measure.subgraphUpdateMeasure(dg, 1)
+    }
   })
 
 }
 
 window.resetInterval = function () {
-  Measure.drawMeasureList('measureFrame')
+  Measure.measureFrameInit(window.dgraph, 'measureFrame')
   Config.drawConfigs()
   Bookmark.drawBookmark('selection-config')
 }

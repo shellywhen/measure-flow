@@ -1,0 +1,489 @@
+index,source,source_addr,type,target,target_addr,5,6,7,8,date
+0,0,"St Nicolas, Nantes",Commerce ,1,"St Nicolas, Nantes",,Delalande,4/2E/626,procompte,06/08/1975
+1,0,"St Nicolas, Nantes",Famille,1,"St Nicolas, Nantes",,Delalande,4/2E/626,procompte,06/08/1975
+2,0,"St Nicolas, Nantes",Famille,2,"St Nicolas, Nantes",,Delalande,4/2E/626,Quittance,15/09/1971
+3,0,Paris,Commerce ,2,"St Nicolas, Nantes",,Delalande,4/2E/626,Quittance,15/09/1971
+4,0,Paris,Commerce ,1,Paris,,Delalande,4/2E/626,Quittance,15/09/1971
+5,3,Ile St Domingue,Travail,4,,,Delalande,4/2E/627,Déclaration,01/01/1976
+6,3,Ile St Domingue,Commerce,5,"Léogane, Ile St Domingue",,Delalande,4/2E/627,Déclaration,01/01/1976
+7,3,Ile St Domingue,Famille,3,Ile Guadeloupe,,Delalande,4/2E/627,Déclaration,01/01/1976
+8,3,Ile St Domingue,Famille,6,Brest,,Delalande,4/2E/627,Déclaration,01/01/1976
+9,3,Ile St Domingue,Commerce,7,,,Delalande,4/2E/627,Déclaration,01/01/1976
+10,3,Ile St Domingue,Commerce,8,,,Delalande,4/2E/627,Déclaration,01/01/1976
+11,3,Ile St Domingue,Commerce,1,"St Nicolas, Nantes",La Rochelle,Delalande,4/2E/627,Déclaration,01/01/1976
+12,3,Ile St Domingue,Finance ,9,,,Delalande,4/2E/627,Déclaration,01/01/1976
+13,3,Ile St Domingue,Finance ,10,La Rochelle,,Delalande,4/2E/627,Déclaration,01/01/1976
+14,10,"St Nicolas, Nantes",Famille,11,"St Nicolas, Nantes",,Delalande,4/2E/627,Déclaration,01/01/1976
+15,12,St Eustache Paris,Travail,13,St Eustache Paris,,Delalande,4/2E/627,Procuration,12/06/1976
+16,12,St Eustache Paris,Commerce,14,St Eustache Paris,,Delalande,4/2E/627,Procuration,12/06/1976
+17,12,St Eustache Paris,Famille,14,St Eustache Paris,,Delalande,4/2E/627,Procuration,12/06/1976
+18,13,St Eustache Paris,Famille,15,St Eustache Paris,,Delalande,4/2E/627,Procuration,12/06/1976
+19,12,St Eustache Paris,Commerce,1,Ile St Domingue,,Delalande,4/2E/627,Procuration,12/06/1976
+20,13,St Eustache Paris,Commerce,15,St Eustache Paris,,Delalande,4/2E/627,Procuration,12/06/1976
+21,13,St Eustache Paris,Commerce,1,Ile St Domingue,,Delalande,4/2E/627,Procuration,12/06/1976
+22,14,St Eustache Paris,Travail,1,Ile St Domingue,,Delalande,4/2E/627,Procuration,12/06/1976
+23,14,St Eustache Paris,Famille,16,St Eustache Paris,,Delalande,4/2E/627,Procuration,12/06/1976
+24,12,St Eustache Paris,Famille,16,St Eustache Paris,,Delalande,4/2E/627,Procuration,12/06/1976
+25,15,St Eustache Paris,Travail,1,Ile St Domingue,,Delalande,4/2E/627,Procuration,12/06/1976
+26,15,St Eustache Paris,Famille,17,St Eustache Paris,,Delalande,4/2E/627,Procuration,12/06/1976
+27,17,St Eustache Paris,Famille,13,St Eustache Paris,,Delalande,4/2E/627,Procuration,12/06/1976
+28,15,St Eustache Paris,Travail,18,"St Nicolas, Nantes",,Delalande,4/2E/627,Engagement,31/07/1976
+29,15,St Eustache Paris,Famille,17,St Eustache Paris,,Delalande,4/2E/627,Engagement,31/07/1976
+30,17,St Eustache Paris,Famille,13,St Eustache Paris,,Delalande,4/2E/627,Engagement,31/07/1976
+31,13,St Eustache Paris,Famille,15,St Eustache Paris,,Delalande,4/2E/627,Engagement,31/07/1976
+32,18,"St Nicolas, Nantes",Commerce ,1,"St Nicolas, Nantes",,Delalande,4/2E/627,Engagement,31/07/1976
+33,1,"St Nicolas, Nantes",Commerce ,19,"Léogane, Ile St Domingue",,Delalande,4/2E/627,Engagement,31/07/1976
+34,15,"St Eustache, Paris",Travail,19,"Léogane, Ile St Domingue",,Delalande,4/2E/627,Engagement,31/07/1976
+35,20,Orléans,Commerce ,21,Orléans,,Delalande,4/2E/627,Déclaration,18/09/1976
+36,21,Orléans,Commerce ,1,"St Nicolas, Nantes",,Delalande,4/2E/627,Déclaration,18/09/1976
+37,22,Orléans,Commerce ,1,"St Nicolas, Nantes",,Delalande,4/2E/627,Déclaration,18/09/1976
+38,22,Orléans,Commerce ,23,Orléans,,Delalande,4/2E/627,Déclaration,18/09/1976
+39,21,Orléans,Commerce ,23,Orléans,,Delalande,4/2E/627,Déclaration,18/09/1976
+40,1,"St Nicolas, Nantes",Commerce ,18,"St Nicolas, Nantes","Ile St Domingue, Ile St Christophe, Ile de la Martinique, Ile de la Guadeloupe",Delalande,4/2E/627,société,03/12/1976
+41,1,"St Nicolas, Nantes",Commerce ,18,"St Nicolas, Nantes",,Delalande,4/2E/632,dissolution sté,07/02/1981
+42,1,"St Nicolas, Nantes",Commerce ,24,"St Paul, Orléans",,Delalande,4/2E/633,société,24/03/1982
+43,1,"St Nicolas, Nantes",Famille,25,"St Nicolas, Nantes",,Delalande,4/2E/634,Procuration,28/11/1985
+44,1,"St Nicolas, Nantes",Famille ,25,"St Nicolas, Nantes",,Delalande,4/2E/634,Procuration,02/09/1983
+45,25,"St Nicolas, Nantes",Famille ,1,"St Nicolas, Nantes",,Delalande,4/2E/640,Assiette,25/10/1989
+46,25,"St Nicolas, Nantes",Famille ,1,"St Nicolas, Nantes",,Delalande,4/2E/640,Assiette,25/10/1989
+47,1,"St Nicolas, Nantes",Commerce ,26,Paris,,Delalande,4/2E/640,Assiette,25/10/1989
+48,1,"St Nicolas, Nantes",Commerce ,27,Nantes,,Delalande,4/2E/640,Assiette,25/10/1989
+49,25,"St Nicolas, Nantes",Commerce ,27,Nantes,,Delalande,4/2E/640,Assiette,25/10/1989
+50,1,"St Nicolas, Nantes",Finance ,2,"St Nicolas, Nantes",,Delalande,4/2E/640,Cession,26/12/1989
+51,1,"St Nicolas, Nantes",Finance ,28,,,Delalande,4/2E/640,Rente,20/12/1983
+52,1,"St Nicolas, Nantes",Famille,29,"St Nicolas, Nantes",,Delalande,4/2E/640,Testament,31/12/1989
+53,1,"St Nicolas, Nantes",Famille,2,"St Nicolas, Nantes",,Delalande,4/2E/640,Testament,31/12/1989
+54,2,"St Nicolas, Nantes",Famille,29,"St Nicolas, Nantes",,Delalande,4/2E/640,Testament,31/12/1989
+55,2,"St Nicolas, Nantes",Famille,0,"St Nicolas, Nantes",,Delalande,4/2E/640,Testament,31/12/1989
+56,1,"St Nicolas, Nantes",Famille,0,"St Nicolas, Nantes",,Delalande,4/2E/640,Testament,31/12/1989
+57,1,"St Nicolas, Nantes",Finance ,30,Ile St Domingue,,Delalande,4/2E/640,Testament,31/12/1989
+58,1,"St Nicolas, Nantes",Famille,30,Ile St Domingue,,Delalande,4/2E/640,Testament,31/12/1989
+59,25,"St Nicolas, Nantes",Famille,30,Ile St Domingue,,Delalande,4/2E/640,Testament,31/12/1989
+60,1,"St Nicolas, Nantes",Commerce ,31,Ile St Domingue,,Delalande,4/2E/640,Testament,31/12/1989
+61,1,"St Nicolas, Nantes",Commerce ,32,Ile St Domingue,,Delalande,4/2E/640,Testament,31/12/1989
+62,31,Ile St Domingue,Commerce ,32,Ile St Domingue,,Delalande,4/2E/640,Testament,31/12/1989
+63,1,"St Nicolas, Nantes",Travail,33,"St Nicolas, Nantes",,Delalande,4/2E/640,Testament,31/12/1989
+64,1,"St Nicolas, Nantes",Famille,34,Paris,,Delalande,4/2E/640,Testament,07/01/1990
+65,1,"St Nicolas, Nantes",Famille,35,Paris,,Delalande,4/2E/640,Testament,07/01/1990
+66,34,Paris,Famille,35,Paris,,Delalande,4/2E/640,Testament,07/01/1990
+67,25,"St Nicolas, Nantes",Finance ,34,Paris,,Delalande,4/2E/640,Testament,07/01/1990
+68,1,"St Nicolas, Nantes",Finance ,34,Paris,,Delalande,4/2E/640,Testament,07/01/1990
+69,25,"St Nicolas, Nantes",Famille,34,Paris,,Delalande,4/2E/640,Testament,07/01/1990
+70,25,"St Nicolas, Nantes",Finance ,36,"St Nicolas, Nantes",,Delalande,4/2E/640,Transport,06/06/1990
+71,25,"St Nicolas, Nantes",Finance ,37,"St Nicolas, Nantes",,Delalande,4/2E/640,Transport,06/06/1990
+72,25,"St Nicolas, Nantes",Finance ,38,"St Nicolas, Nantes",,Delalande,4/2E/640,Transport,06/06/1990
+73,25,"St Nicolas, Nantes",Finance ,39,"St Nicolas, Nantes",,Delalande,4/2E/640,Transport,06/06/1990
+74,25,"St Nicolas, Nantes",Finance ,40,"St Nicolas, Nantes",,Delalande,4/2E/640,Transport,06/06/1990
+75,25,"St Nicolas, Nantes",Finance ,41,"St Nicolas, Nantes",,Delalande,4/2E/640,Transport,06/06/1990
+76,25,"St Nicolas, Nantes",Finance ,42,"St Nicolas, Nantes",,Delalande,4/2E/640,Transport,06/06/1990
+77,25,"St Nicolas, Nantes",Finance ,43,"St Nicolas, Nantes",,Delalande,4/2E/640,Transport,06/06/1990
+78,25,"St Nicolas, Nantes",Finance ,44,"St Nicolas, Nantes",,Delalande,4/2E/640,Transport,06/06/1990
+79,25,"St Nicolas, Nantes",Finance ,45,"St Nicolas, Nantes",,Delalande,4/2E/640,Transport,06/06/1990
+80,25,"St Nicolas, Nantes",Finance ,46,"St Nicolas, Nantes",,Delalande,4/2E/640,Transport,06/06/1990
+81,25,"St Nicolas, Nantes",Finance ,47,St Sébastien,,Delalande,4/2E/640,Transport,06/06/1990
+82,25,"St Nicolas, Nantes",Finance ,48,"St Nicolas, Nantes",,Delalande,4/2E/640,Transport,06/06/1990
+83,1,"St Nicolas, Nantes",Finance ,36,"St Nicolas, Nantes",,Delalande,4/2E/640,Transport,06/06/1990
+84,1,"St Nicolas, Nantes",Finance ,49,"St Nicolas, Nantes",,Delalande,4/2E/640,Transport,06/06/1990
+85,1,"St Nicolas, Nantes",Finance ,38,"St Nicolas, Nantes",,Delalande,4/2E/640,Transport,06/06/1990
+86,1,"St Nicolas, Nantes",Finance ,39,"St Nicolas, Nantes",,Delalande,4/2E/640,Transport,06/06/1990
+87,1,"St Nicolas, Nantes",Finance ,40,"St Nicolas, Nantes",,Delalande,4/2E/640,Transport,06/06/1990
+88,1,"St Nicolas, Nantes",Finance ,41,"St Nicolas, Nantes",,Delalande,4/2E/640,Transport,06/06/1990
+89,1,"St Nicolas, Nantes",Finance ,42,"St Nicolas, Nantes",,Delalande,4/2E/640,Transport,06/06/1990
+90,1,"St Nicolas, Nantes",Finance ,43,"St Nicolas, Nantes",,Delalande,4/2E/640,Transport,06/06/1990
+91,1,"St Nicolas, Nantes",Finance ,44,"St Nicolas, Nantes",,Delalande,4/2E/640,Transport,06/06/1990
+92,1,"St Nicolas, Nantes",Finance ,45,"St Nicolas, Nantes",,Delalande,4/2E/640,Transport,06/06/1990
+93,1,"St Nicolas, Nantes",Finance ,46,"St Nicolas, Nantes",,Delalande,4/2E/640,Transport,06/06/1990
+94,1,"St Nicolas, Nantes",Finance ,47,St Sébastien,,Delalande,4/2E/640,Transport,06/06/1990
+95,1,"St Nicolas, Nantes",Finance ,48,"St Nicolas, Nantes",,Delalande,4/2E/640,Transport,06/06/1990
+96,25,"St Nicolas, Nantes",Famille,1,"St Nicolas, Nantes",,Delalande,4/2E/640,Transport,06/06/1990
+97,25,"St Nicolas, Nantes",Travail ,50,Dunkerque,,Delalande,4/2E/640,Transport,06/06/1990
+98,51,"St Nicolas, Nantes",Commerce,25,"St Nicolas, Nantes",,Delalande,4/2E/643,Procuration,19/01/1992
+99,52,"St Saturnin, Nantes",Famille,25,"St Nicolas, Nantes",St Sébastien,Delalande,4/2E/643,mariage,03/06/1992
+100,0,"St Nicolas, Nantes",Travail ,53,Rhuys,"Auray, Vannes",Verger,4/2E/1929,Transaction,13/12/1960
+101,0,"St Nicolas, Nantes",Commerce ,54,Bordeaux,,Verger,4/2E/1933,Attestation,11/07/1962
+102,54,Bordeaux,Travail ,55,Mornac sur Seudre,,Verger,4/2E/1933,Attestation,11/07/1962
+103,54,Bordeaux,Travail ,56,Chastain en Saintonge,,Verger,4/2E/1933,Attestation,11/07/1962
+104,54,Bordeaux,Travail ,57,Chastain en Saintonge,,Verger,4/2E/1933,Attestation,11/07/1962
+105,0,"St Nicolas, Nantes",Travail ,55,Mornac sur Seudre,,Verger,4/2E/1933,Attestation,11/07/1962
+106,0,"St Nicolas, Nantes",Travail ,56,Chastain en Saintonge,,Verger,4/2E/1933,Attestation,11/07/1962
+107,0,"St Nicolas, Nantes",Travail ,57,Chastain en Saintonge,,Verger,4/2E/1933,Attestation,11/07/1962
+108,0,"St Nicolas, Nantes",Famille ,58,Amsterdam,,Verger,4/2E/1935,Contrat apprentiissage,14/12/1963
+109,59,Nantes,Famille ,60,Amsterdam,,Verger,4/2E/1935,Contrat apprentiissage,14/12/1963
+110,59,Nantes,Famille ,60,Amsterdam,,Verger,4/2E/1935,Contrat apprentiissage,14/12/1963
+111,0,"St Nicolas, Nantes",Commerce ,59,Nantes,,Verger,4/2E/1935,Contrat apprentiissage,14/12/1963
+112,58,Amsterdam,Commerce ,60,Amsterdam,,Verger,4/2E/1935,Contrat apprentiissage,14/12/1963
+113,61,"St Nicolas, Nantes",Famille,62,"St Nicolas, Nantes",,Verger,4/2E/1936,Cambie,01/02/1964
+114,62,"St Nicolas, Nantes",Travail ,63,La Chaume,,Verger,4/2E/1936,Cambie,01/02/1964
+115,64,,Commerce,65,,,Verger,4/2E/1936,Cambie,01/02/1964
+116,66,,Finance ,67,,,Verger,4/2E/1936,Cambie,01/02/1964
+117,66,,Finance ,68,,,Verger,4/2E/1936,Cambie,01/02/1964
+118,68,,Commerce,69,Orléans,,Verger,4/2E/1936,Cambie,01/02/1964
+119,66,,Finance ,0,"St Nicolas, Nantes",,Verger,4/2E/1936,Cambie,01/02/1964
+120,0,"St Nicolas, Nantes",Commerce,70,Orléans,,Verger,4/2E/1936,Cambie,01/02/1964
+121,67,,Finance ,68,,,Verger,4/2E/1936,Cambie,01/02/1964
+122,67,,Finance ,0,"St Nicolas, Nantes",,Verger,4/2E/1936,Cambie,01/02/1964
+123,68,,Finance ,0,"St Nicolas, Nantes",,Verger,4/2E/1936,Cambie,01/02/1964
+124,62,,Finance ,66,,,Verger,4/2E/1936,Cambie,01/02/1964
+125,62,,Finance ,67,,,Verger,4/2E/1936,Cambie,01/02/1964
+126,62,,Finance ,68,,,Verger,4/2E/1936,Cambie,01/02/1964
+127,62,,Finance ,0,"St Nicolas, Nantes",,Verger,4/2E/1936,Cambie,01/02/1964
+128,61,"St Nicolas, Nantes",Finance ,66,,,Verger,4/2E/1936,Cambie,01/02/1964
+129,61,"St Nicolas, Nantes",Finance ,67,,,Verger,4/2E/1936,Cambie,01/02/1964
+130,61,"St Nicolas, Nantes",Finance ,68,,,Verger,4/2E/1936,Cambie,01/02/1964
+131,61,"St Nicolas, Nantes",Finance ,0,"St Nicolas, Nantes",,Verger,4/2E/1936,Cambie,01/02/1964
+132,0,"St Nicolas, Nantes",Commerce ,54, Bordeaux, ,Verger,4/2E/1936,Attestation,09/04/1964
+133,54,Bordeaux,Travail ,71,Olonne,,Verger,4/2E/1936,Attestation,09/04/1964
+134,54,Bordeaux,Travail ,72,Bordeaux,,Verger,4/2E/1936,Attestation,09/04/1964
+135,54,Bordeaux,Travail ,73,Mesquer,,Verger,4/2E/1936,Attestation,09/04/1964
+136,54,Bordeaux,Travail ,74,Le Pouliguen,,Verger,4/2E/1936,Attestation,09/04/1964
+137,54,Bordeaux,Travail ,75,Audierne,,Verger,4/2E/1936,Attestation,09/04/1964
+138,0,"St Nicolas, Nantes",Travail ,71,Olonne,,Verger,4/2E/1936,Attestation,09/04/1964
+139,0,"St Nicolas, Nantes",Travail ,72,Bordeaux,,Verger,4/2E/1936,Attestation,09/04/1964
+140,0,"St Nicolas, Nantes",Travail ,73,Mesquer,,Verger,4/2E/1936,Attestation,09/04/1964
+141,0,"St Nicolas, Nantes",Travail ,74,Le Pouliguen,,Verger,4/2E/1936,Attestation,09/04/1964
+142,0,"St Nicolas, Nantes",Travail ,75,Audierne,,Verger,4/2E/1936,Attestation,09/04/1964
+143,0,"St Nicolas, Nantes",Famille ,58,"St Nicolas, Nantes",,Verger,4/2E/1941,Fretement,12/08/1966
+144,0,"St Nicolas, Nantes",Commerce ,58,"St Nicolas, Nantes",Lisbonne,Verger,4/2E/1941,Fretement,12/08/1966
+145,0,"St Nicolas, Nantes",Travail ,76,Le Pouliguen,"Lisbonne, La Rochelle, Bordeaux",Verger,4/2E/1941,Assurance,12/08/1966
+146,0,"St Nicolas, Nantes",Finance ,77,,,Verger,4/2E/1941,Assurance,12/08/1966
+147,0,"St Nicolas, Nantes",Finance ,78,,,Verger,4/2E/1941,Assurance,12/08/1966
+148,77,,Finance ,78,,,Verger,4/2E/1941,Assurance,12/08/1966
+149,0,"St Nicolas, Nantes",Finance ,79, ,Lisbonne,Verger,4/2E/1941,Assurance,25/08/1966
+150,80, ,Commerce ,81, ,,Verger,4/2E/1941,Assurance,25/08/1966
+151,0,"St Nicolas, Nantes",Finance ,37, ,,Verger,4/2E/1941,Assurance,25/08/1966
+152,82, ,Commerce ,83, ,,Verger,4/2E/1941,Assurance,25/08/1966
+153,0,"St Nicolas, Nantes",Finance ,84, ,,Verger,4/2E/1941,Assurance,25/08/1966
+154,0,"St Nicolas, Nantes",Finance ,85,,,Verger,4/2E/1941,Assurance,25/08/1966
+155,0,"St Nicolas, Nantes",Finance ,86,,,Verger,4/2E/1941,Assurance,25/08/1966
+156,0,"St Nicolas, Nantes",Finance ,87,,,Verger,4/2E/1941,Assurance,25/08/1966
+157,0,"St Nicolas, Nantes",Finance ,88,,,Verger,4/2E/1941,Assurance,25/08/1966
+158,0,"St Nicolas, Nantes",Finance ,89,Orléans,,Verger,4/2E/1941,Assurance,25/08/1966
+159,90,Le Croisic,Finance ,91,Le Croisic,,Verger,4/2E/1941,Protest,31/08/1966
+160,0,"St Nicolas, Nantes",Finance ,91,Le Croisic,,Verger,4/2E/1941,Protest,31/08/1966
+161,92,Le Croisic,Finance ,93,Brest,,Verger,4/2E/1941,Protest,31/08/1966
+162,93,Brest,Finance ,94,Le Croisic,,Verger,4/2E/1941,Protest,31/08/1966
+163,94,Le Croisic,Finance ,90,Le Croisic,,Verger,4/2E/1941,Protest,31/08/1966
+164,0,"St Nicolas, Nantes",Finance ,92,Le Croisic,,Verger,4/2E/1941,Protest,31/08/1966
+165,0,"St Nicolas, Nantes",Finance ,90,Le Croisic,,Verger,4/2E/1941,Protest,31/08/1966
+166,0,"St Nicolas, Nantes",Finance ,93,Brest,,Verger,4/2E/1941,Protest,31/08/1966
+167,0,"St Nicolas, Nantes",Finance ,94,Le Croisic,,Verger,4/2E/1941,Protest,31/08/1966
+168,0,"St Nicolas, Nantes",Commerce ,95,Orléans,,Verger,4/2E/1942,Fretement,17/11/1966
+169,0,"St Nicolas, Nantes",Commerce ,96,Orléans,,Verger,4/2E/1942,Fretement,17/11/1966
+170,95,Orléans,Famille,96,Orléans,,Verger,4/2E/1942,Fretement,17/11/1966
+171,95,Orléans,Commerce ,96,Orléans,,Verger,4/2E/1942,Fretement,17/11/1966
+172,0,"St Nicolas, Nantes",Travail ,97,St Gilles sur Vie,"Le Pellerin, Vannes, Auray, Cadix",Verger,4/2E/1942,Fretement,17/11/1966
+173,0,"St Nicolas, Nantes",Travail ,98,Bourgneuf,Lisbonne,Verger,4/2E/1944,Quittance,28/09/1967
+174,0,"St Nicolas, Nantes",Famille,58,"Bouffay, Nantes",,Verger,4/2E/1944,Quittance,28/09/1967
+175,58,"Bouffay, Nantes",Finance,99,,Bourgneuf,Verger,4/2E/1944,Fretement,08/03/1967
+176,58,"St Nicolas, Nantes",Famille,0,"St Nicolas, Nantes","Iles Canaries, Lisbonne",Verger,4/2E/1944,Testament,27/11/1967
+177,58,"St Nicolas, Nantes",Commerce ,0,"St Nicolas, Nantes",,Verger,4/2E/1944,Testament,27/11/1967
+178,58,"St Nicolas, Nantes",Travail ,100,Orléans,,Verger,4/2E/1944,Testament,27/11/1967
+179,58,"St Nicolas, Nantes",Travail ,96,Orléans,,Verger,4/2E/1944,Testament,27/11/1967
+180,58,"St Nicolas, Nantes",Travail ,101,Orléans,,Verger,4/2E/1944,Testament,27/11/1967
+181,100,Orléans,Finance,96,Orléans,,Verger,4/2E/1944,Testament,27/11/1967
+182,100,Orléans,Finance,101,Orléans,,Verger,4/2E/1944,Testament,27/11/1967
+183,96,Orléans,Finance,101,Orléans,,Verger,4/2E/1944,Testament,27/11/1967
+184,58,"St Nicolas, Nantes",Travail ,102,Bourgneuf,,Verger,4/2E/1944,Testament,27/11/1967
+185,58,"St Nicolas, Nantes",Commerce ,103,Lisbonne,,Verger,4/2E/1944,Testament,27/11/1967
+186,104,Lisbonne,Commerce ,105,Lisbonne,,Verger,4/2E/1944,Testament,27/11/1967
+187,58,"St Nicolas, Nantes",Commerce ,106,Nantes,,Verger,4/2E/1944,Testament,27/11/1967
+188,107,Bourgneuf,Commerce,108,Bourgneuf,,Verger,4/2E/1945,Pouvoir,28/04/1968
+189,108,Bourgneuf,Finance ,109,,,Verger,4/2E/1945,Pouvoir,28/04/1968
+190,107,Bourgneuf,Finance ,109,,,Verger,4/2E/1945,Pouvoir,28/04/1968
+191,0,"St Nicolas, Nantes",Commerce,110,,,Verger,4/2E/1945,Pouvoir,01/05/1968
+192,108,Bourgneuf,Commerce,0,"St Nicolas, Nantes",,Verger,4/2E/1945,Pouvoir,01/05/1968
+193,108,Bourgneuf,Famille,111,Bourgneuf,,Verger,4/2E/1945,Pouvoir,01/05/1968
+194,0,"St Nicolas, Nantes",Finance ,112,Nantes,,Verger,4/2E/1950,Protest,22/07/1970
+195,112,Nantes,Finance ,113,Orléans,,Verger,4/2E/1950,Protest,22/07/1970
+196,113,Orléans,Finance ,114,,,Verger,4/2E/1950,Protest,22/07/1970
+197,114,,Finance ,112,Nantes,,Verger,4/2E/1950,Protest,22/07/1970
+198,0,"St Nicolas, Nantes",Finance ,113,Orléans,,Verger,4/2E/1950,Protest,22/07/1970
+199,115,Nantes,Finance ,112,Nantes,,Verger,4/2E/1950,Protest,22/07/1970
+200,116,Nantes,Finance ,112,Nantes,,Verger,4/2E/1950,Protest,22/07/1970
+201,117,Nantes,Finance ,112,Nantes,,Verger,4/2E/1950,Protest,22/07/1970
+202,0,"St Nicolas, Nantes",Famille,118,"St Nicolas, Nantes","Paimbeuf, Antilles, Bordeaux",Verger,4/2E/1950,Fretement,09/09/1970
+203,0,"St Nicolas, Nantes",Commerce ,119,"St Nicolas, Nantes",,Verger,4/2E/1950,Fretement,09/09/1970
+204,118,"St Nicolas, Nantes",Commerce ,119,"St Nicolas, Nantes",,Verger,4/2E/1950,Fretement,09/09/1970
+205,120,Le Croisic,Travail ,118,"St Nicolas, Nantes",,Verger,4/2E/1950,Fretement,09/09/1970
+206,120,Le Croisic,Travail ,119,"St Nicolas, Nantes",,Verger,4/2E/1950,Fretement,09/09/1970
+207,120,Le Croisic,Travail ,0,"St Nicolas, Nantes",,Verger,4/2E/1950,Fretement,09/09/1970
+208,0,"St Nicolas, Nantes",Commerce,118,"St Nicolas, Nantes",,Verger,4/2E/1950,Fretement,09/09/1970
+209,120,Le Croisic,Travail ,121,Le Croisic,,Verger,4/2E/1950,Fretement,09/09/1970
+210,1,"St Nicolas, Nantes",Famille,25,"St Nicolas, Nantes",,Verger,4/2E/1950,Mariage,12/10/1970
+211,1,"St Nicolas, Nantes",Famille,34,"St Sulpice, Paris",,Verger,4/2E/1950,Mariage,12/10/1970
+212,1,"St Nicolas, Nantes",Famille,122,"St Sulpice, Paris",,Verger,4/2E/1950,Mariage,12/10/1970
+213,34,"St Sulpice, Paris",Famille,122,"St Sulpice, Paris",,Verger,4/2E/1950,Mariage,12/10/1970
+214,1,"St Nicolas, Nantes",Famille,0,"St Nicolas, Nantes",,Verger,4/2E/1950,Mariage,12/10/1970
+215,25,"St Nicolas, Nantes",Famille,58,Ile St Christophe,,Verger,4/2E/1950,Mariage,12/10/1970
+216,25,"St Nicolas, Nantes",Famille,123,Ile St Christophe,,Verger,4/2E/1950,Mariage,12/10/1970
+217,58,Ile St Christophe,Famille,123,Ile St Christophe,,Verger,4/2E/1950,Mariage,12/10/1970
+218,25,"St Nicolas, Nantes",Famille,0,"St Nicolas, Nantes",,Verger,4/2E/1950,Mariage,12/10/1970
+219,0,"St Nicolas, Nantes",Famille,58,Ile St Christophe,,Verger,4/2E/1950,Mariage,12/10/1970
+220,0,"St Nicolas, Nantes",Commerce,58,Ile St Christophe,,Verger,4/2E/1950,Mariage,12/10/1970
+221,124,"St Nicolas, Nantes",Finance ,25,"St Nicolas, Nantes",,Verger,4/2E/1950,Mariage,12/10/1970
+222,124,"St Nicolas, Nantes",Commerce,1,"St Nicolas, Nantes",,Verger,4/2E/1950,Mariage,12/10/1970
+223,125,Ile St Domingue,Famille,1,"St Nicolas, Nantes",,Verger,4/2E/1951,Procuration,12/06/1969
+224,125,Ile St Domingue,Commerce,1,"St Nicolas, Nantes",,Verger,4/2E/1951,Procuration,12/06/1969
+225,126,Ancenis,Travail,1,"St Nicolas, Nantes",,Verger,4/2E/1951,Engagement,11/02/1971
+226,126,Ancenis,Famille,127,Ancenis,,Verger,4/2E/1951,Engagement,11/02/1971
+227,126,Ancenis,Famille,128,Ancenis,,Verger,4/2E/1951,Engagement,11/02/1971
+228,127,Ancenis,Famille,128,Ancenis,,Verger,4/2E/1951,Engagement,11/02/1971
+229,1,"St Nicolas, Nantes",Commerce,129,Ile St Domingue,,Verger,4/2E/1951,Engagement,11/02/1971
+230,126,Ancenis,Travail,130,St Nazaire,,Verger,4/2E/1951,Engagement,11/02/1971
+231,126,Ancenis,Travail,129,Ile St Domingue,,Verger,4/2E/1951,Engagement,11/02/1971
+232,131,Ile de la Tortue, ,132,Ile de la Tortue,,Verger,4/2E/1951,Procuration,23/02/1971
+233,1,"St Nicolas, Nantes",Finance ,131,Ile de la Tortue,,Verger,4/2E/1951,Procuration,23/02/1971
+234,0,"St Nicolas, Nantes",Famille,1,"St Nicolas, Nantes",,Verger,4/2E/1951,Procuration,11/03/1971
+235,0,"St Nicolas, Nantes",Famille,25,"St Nicolas, Nantes",,Verger,4/2E/1951,Procuration,11/03/1971
+236,1,"St Nicolas, Nantes",Famille,133,"St Nicolas, Nantes",,Verger,4/2E/1951,Procuration,11/03/1971
+237,0,"St Nicolas, Nantes",Commerce,1,"St Nicolas, Nantes",,Verger,4/2E/1951,Procuration,11/03/1971
+238,0,"St Nicolas, Nantes",Commerce,25,"St Nicolas, Nantes",,Verger,4/2E/1951,Procuration,11/03/1971
+239,1,"St Nicolas, Nantes",Commerce,133,"St Nicolas, Nantes",,Verger,4/2E/1951,Procuration,11/03/1971
+240,0,"St Nicolas, Nantes",Famille,2,"St Nicolas, Nantes",,Verger,4/2E/1953,Déclaration,28/01/1972
+241,0,"St Nicolas, Nantes",Commerce,2,"St Nicolas, Nantes",,Verger,4/2E/1953,Déclaration,28/01/1972
+242,134,La Rochelle,Commerce,135,La Rochelle,,Verger,4/2E/1953,Cambie,08/01/1972
+243,134,La Rochelle,Commerce,136,La Rochelle,,Verger,4/2E/1953,Cambie,08/01/1972
+244,134,La Rochelle,Commerce,137,La Rochelle,,Verger,4/2E/1953,Cambie,08/01/1972
+245,136,La Rochelle,Commerce,137,La Rochelle,,Verger,4/2E/1953,Cambie,08/01/1972
+246,136,La Rochelle,Commerce,135,La Rochelle,,Verger,4/2E/1953,Cambie,08/01/1972
+247,137,La Rochelle,Commerce,135,La Rochelle,,Verger,4/2E/1953,Cambie,08/01/1972
+248,135,La Rochelle,Commerce,138,Ile de Ré,,Verger,4/2E/1953,Cambie,08/01/1972
+249,139,,Finance,140,,,Verger,4/2E/1953,Cambie,08/01/1972
+250,140,,Finance,141,,,Verger,4/2E/1953,Cambie,08/01/1972
+251,141,,Finance,139,,,Verger,4/2E/1953,Cambie,08/01/1972
+252,113,Orléans,Finance,142,Orléans,,Verger,4/2E/1953,Cambie,08/01/1972
+253,143,"St Nicolas, Nantes",Finance,113,Orléans,,Verger,4/2E/1953,Cambie,08/01/1972
+254,143,"St Nicolas, Nantes",Commerce,142,Orléans,,Verger,4/2E/1953,Cambie,08/01/1972
+255,113,Orléans,Commerce,142,Orléans,,Verger,4/2E/1953,Cambie,08/01/1972
+256,136,La Rochelle,Commerce ,138,Ile de Ré,,Verger,4/2E/1953,Cambie,08/01/1972
+257,137,La Rochelle,Commerce ,138,Ile de Ré,,Verger,4/2E/1953,Cambie,08/01/1972
+258,134,La Rochelle,Commerce ,138,Ile de Ré,,Verger,4/2E/1953,Cambie,08/01/1972
+259,143,"St Nicolas, Nantes",Finance,139,,,Verger,4/2E/1953,Cambie,08/01/1972
+260,143,"St Nicolas, Nantes",Finance,140,,,Verger,4/2E/1953,Cambie,08/01/1972
+261,143,"St Nicolas, Nantes",Finance,141,,,Verger,4/2E/1953,Cambie,08/01/1972
+262,144,,Finance,140,,,Verger,4/2E/1954,Cambie,12/10/1972
+263,144,,Finance,145,,,Verger,4/2E/1954,Cambie,12/10/1972
+264,144,,Finance,143,"St Nicolas, Nantes",,Verger,4/2E/1954,Cambie,12/10/1972
+265,144,,Finance,146,,,Verger,4/2E/1954,Cambie,12/10/1972
+266,144,,Finance,68,,,Verger,4/2E/1954,Cambie,12/10/1972
+267,144,,Finance,147,,,Verger,4/2E/1954,Cambie,12/10/1972
+268,144,,Finance,148,,,Verger,4/2E/1954,Cambie,12/10/1972
+269,140,,Finance,145,,,Verger,4/2E/1954,Cambie,12/10/1972
+270,140,,Finance,143,"St Nicolas, Nantes",,Verger,4/2E/1954,Cambie,12/10/1972
+271,140,,Finance,146,,,Verger,4/2E/1954,Cambie,12/10/1972
+272,140,,Finance,68,,,Verger,4/2E/1954,Cambie,12/10/1972
+273,140,,Finance,147,,,Verger,4/2E/1954,Cambie,12/10/1972
+274,140,,Finance,148,,,Verger,4/2E/1954,Cambie,12/10/1972
+275,145,,Finance,143,"St Nicolas, Nantes",,Verger,4/2E/1954,Cambie,12/10/1972
+276,145,,Finance,146,,,Verger,4/2E/1954,Cambie,12/10/1972
+277,145,,Finance,68,,,Verger,4/2E/1954,Cambie,12/10/1972
+278,145,,Finance,147,,,Verger,4/2E/1954,Cambie,12/10/1972
+279,145,,Finance,148,,,Verger,4/2E/1954,Cambie,12/10/1972
+280,148,,Commerce,149,,,Verger,4/2E/1954,Cambie,12/10/1972
+281,148,,Famille,149,,,Verger,4/2E/1954,Cambie,12/10/1972
+282,148,,Finance,143,"St Nicolas, Nantes",,Verger,4/2E/1954,Cambie,12/10/1972
+283,148,,Finance,146,,,Verger,4/2E/1954,Cambie,12/10/1972
+284,148,,Finance,68,,,Verger,4/2E/1954,Cambie,12/10/1972
+285,148,,Finance,147,,,Verger,4/2E/1954,Cambie,12/10/1972
+286,143,"St Nicolas, Nantes",Commerce,113,,,Verger,4/2E/1954,Cambie,12/10/1972
+287,143,"St Nicolas, Nantes",Commerce,142,Orléans,,Verger,4/2E/1954,Cambie,12/10/1972
+288,113,Orléans,Finance,142,Orléans,,Verger,4/2E/1954,Cambie,12/10/1972
+289,143,"St Nicolas, Nantes",Finance,146,,,Verger,4/2E/1954,Cambie,12/10/1972
+290,143,"St Nicolas, Nantes",Finance,68,,,Verger,4/2E/1954,Cambie,12/10/1972
+291,143,"St Nicolas, Nantes",Finance,147,,,Verger,4/2E/1954,Cambie,12/10/1972
+292,146,,Commerce,150,,,Verger,4/2E/1954,Cambie,12/10/1972
+293,146,,Finance,68,,,Verger,4/2E/1954,Cambie,12/10/1972
+294,146,,Finance,147,,,Verger,4/2E/1954,Cambie,12/10/1972
+295,68,,Commerce,69,,,Verger,4/2E/1954,Cambie,12/10/1972
+296,68,,Finance,147,,,Verger,4/2E/1954,Cambie,12/10/1972
+297,144,,Finance ,151,Montoir,,Verger,4/2E/1954,Cambie,12/10/1972
+298,140,,Finance ,151,Montoir,,Verger,4/2E/1954,Cambie,12/10/1972
+299,145, ,Finance ,151,Montoir,,Verger,4/2E/1954,Cambie,12/10/1972
+300,148,,Finance ,151,Montoir,,Verger,4/2E/1954,Cambie,12/10/1972
+301,143,"St Nicolas, Nantes",Finance ,151,Montoir,,Verger,4/2E/1954,Cambie,12/10/1972
+302,146,,Finance ,151,Montoir,,Verger,4/2E/1954,Cambie,12/10/1972
+303,68,,Finance ,151,Montoir,,Verger,4/2E/1954,Cambie,12/10/1972
+304,147,,Finance ,151,Montoir,,Verger,4/2E/1954,Cambie,12/10/1972
+305,152,"St Nicolas, Nantes",Finance ,144,,,Verger,4/2E/1954,Cambie,12/10/1972
+306,152,"St Nicolas, Nantes",Finance ,143,"St Nicolas, Nantes",,Verger,4/2E/1954,Cambie,12/10/1972
+307,34,"St Gilles, Paris",Famille,153,Paris,,Le Vasseur,MC/ET/XCVIII/227,Inventaire,19/03/1968
+308,34,"St Gilles, Paris",Famille,154,"St Nicolas des Champs, Paris",,Le Vasseur,MC/ET/XCVIII/227,Inventaire,19/03/1968
+309,34,"St Gilles, Paris",Famille,155,"St Nicolas des Champs, Paris",,Le Vasseur,MC/ET/XCVIII/227,Inventaire,19/03/1968
+310,154,"St Nicolas des Champs, Paris",Famille,155,"St Nicolas des Champs, Paris",,Le Vasseur,MC/ET/XCVIII/227,Inventaire,19/03/1968
+311,153,Paris,Famille,156,"St Nicolas des Champs, Paris",,Le Vasseur,MC/ET/XCVIII/227,Inventaire,19/03/1968
+312,154,"St Nicolas des Champs, Paris",Famille,34,"St Gilles, Paris",,Le Vasseur,MC/ET/XCVIII/227,Inventaire,19/03/1968
+313,34,"St Gilles, Paris",Famille,153,Paris,,Bourlet,MC/ET/XCIX/255,Partage,25/06/1973
+314,0,"St Nicolas des Champs, Paris",Commerce,1,"St Nicolas, Nantes",,Bourlet,MC/ET/XCIX/255,Partage,25/06/1973
+315,0,"St Nicolas des Champs, Paris",Famille,1,"St Nicolas, Nantes",,Bourlet,MC/ET/XCIX/255,Partage,25/06/1973
+316,153,Paris,Famille,1,"St Nicolas, Nantes",,Bourlet,MC/ET/XCIX/255,Partage,25/06/1973
+317,153,Paris,Famille,155,"St Eustache, Paris",,Bourlet,MC/ET/XCIX/255,Partage,25/06/1973
+318,153,Paris,Famille,125,"St Nicolas des Champs, Paris",,Bourlet,MC/ET/XCIX/255,Partage,25/06/1973
+319,153,Paris,Famille,122,Paris,,Bourlet,MC/ET/XCIX/255,Partage,25/06/1973
+320,155,"St Eustache, Paris",Famille,154,"St Eustache, Paris",,Bourlet,MC/ET/XCIX/255,Partage,25/06/1973
+321,34,"St Gilles, Paris",Famille,1,"St Nicolas, Nantes",,Bourlet,MC/ET/XCIX/255,Partage,25/06/1973
+322,34,"St Gilles, Paris",Famille,155,"St Eustache, Paris",,Bourlet,MC/ET/XCIX/255,Partage,25/06/1973
+323,34,"St Gilles, Paris",Famille,125,"St Nicolas des Champs, Paris",,Bourlet,MC/ET/XCIX/255,Partage,25/06/1973
+324,1,"St Nicolas, Nantes",Famille,155,"St Eustache, Paris",,Bourlet,MC/ET/XCIX/255,Partage,25/06/1973
+325,1,"St Nicolas, Nantes",Famille,125,"St Nicolas des Champs, Paris",,Bourlet,MC/ET/XCIX/255,Partage,25/06/1973
+326,155,"St Eustache, Paris",Famille,125,"St Nicolas des Champs, Paris",,Bourlet,MC/ET/XCIX/255,Partage,25/06/1973
+327,122,Paris,Famille,157,,,Bourlet,MC/ET/XCIX/255,Partage,25/06/1973
+328,122,Paris,Famille,158,,,Bourlet,MC/ET/XCIX/255,Partage,25/06/1973
+329,157,Paris,Famille,158,,,Bourlet,MC/ET/XCIX/255,Partage,25/06/1973
+330,34,"St Gilles, Paris",Famille,153,Paris,,Bourlet,MC/ET/XCIX/258,Transaction,17/03/1974
+331,0,"St Severin, Paris",Commerce,1,"St Nicolas, Nantes",,Bourlet,MC/ET/XCIX/258,Transaction,17/03/1974
+332,0,"St Severin, Paris",Famille,1,"St Nicolas, Nantes",,Bourlet,MC/ET/XCIX/258,Transaction,17/03/1974
+333,153,Paris,Famille,1,"St Nicolas, Nantes",,Bourlet,MC/ET/XCIX/258,Transaction,17/03/1974
+334,153,Paris,Famille,155,"St Germain L'Auxerrois, Paris",,Bourlet,MC/ET/XCIX/258,Transaction,17/03/1974
+335,153,Paris,Famille,125,"St Nicolas des Champs, Paris",,Bourlet,MC/ET/XCIX/258,Transaction,17/03/1974
+336,153,Paris,Famille,122,Paris,,Bourlet,MC/ET/XCIX/258,Transaction,17/03/1974
+337,155,"St Germain L'Auxerrois, Paris",Famille,154,"St Germain L'Auxerrois, Paris",,Bourlet,MC/ET/XCIX/258,Transaction,17/03/1974
+338,34,"St Gilles, Paris",Famille,1,"St Nicolas, Nantes",,Bourlet,MC/ET/XCIX/258,Transaction,17/03/1974
+339,34,"St Gilles, Paris",Famille,155,"St Germain L'Auxerrois, Paris",,Bourlet,MC/ET/XCIX/258,Transaction,17/03/1974
+340,34,"St Gilles, Paris",Famille,125,"St Nicolas des Champs, Paris",,Bourlet,MC/ET/XCIX/258,Transaction,17/03/1974
+341,1,"St Nicolas, Nantes",Famille,155,"St Germain L'Auxerrois, Paris",,Bourlet,MC/ET/XCIX/258,Transaction,17/03/1974
+342,1,"St Nicolas, Nantes",Famille,125,"St Nicolas des Champs, Paris",,Bourlet,MC/ET/XCIX/258,Transaction,17/03/1974
+343,155,"St Germain L'Auxerrois, Paris",Famille,125,"St Nicolas des Champs, Paris",,Bourlet,MC/ET/XCIX/258,Transaction,17/03/1974
+344,122,Paris,Famille,159,,,Bourlet,MC/ET/XCIX/258,Transaction,17/03/1974
+345,160,Paris,Famille,161,,,Bourlet,MC/ET/XCIX/258,Transaction,17/03/1974
+346,162,"St Sulpice, Paris",Finance ,34,"St Gilles, Paris",,Bourlet,MC/ET/XCIX/258,Transaction,17/03/1974
+347,162,"St Sulpice, Paris",Finance ,0,"St Severin, Paris",,Bourlet,MC/ET/XCIX/258,Transaction,17/03/1974
+348,162,"St Sulpice, Paris",Finance ,155,"St Germain L'Auxerrois, Paris",,Bourlet,MC/ET/XCIX/258,Transaction,17/03/1974
+349,162,"St Sulpice, Paris",Finance ,125,"St Nicolas des Champs, Paris",,Bourlet,MC/ET/XCIX/258,Transaction,17/03/1974
+350,122,Paris,Finance ,160,Paris,,Bourlet,MC/ET/XCIX/258,Transaction,17/03/1974
+351,153,Paris,Finance ,160,Paris,,Bourlet,MC/ET/XCIX/258,Transaction,17/03/1974
+352,1,"St Severin, Paris",Commerce,0,,,Langlois,MC/ET/CIX/249,Procuration,19/08/1971
+353,1,"St Severin, Paris",Famille,0,,,Langlois,MC/ET/CIX/249,Procuration,19/08/1971
+354,163,"St Germain des Prés, Paris",Famille,122,"St Germain des Prés, Paris",,Langlois,MC/ET/CIX/249,Procuration,19/08/1971
+355,1,"St Severin, Paris",Famille,163,"St Germain des Prés, Paris",,Langlois,MC/ET/CIX/249,Procuration,19/08/1971
+356,1,"St Severin, Paris",Famille,122,"St Germain des Prés, Paris",,Langlois,MC/ET/CIX/249,Procuration,19/08/1971
+357,34,"St Leu St Gilles, Paris",Famille,35,"St Leu St Gilles, Paris",,Langlois,MC/ET/CIX/249,Constitution,28/08/1971
+358,34,"St Leu St Gilles, Paris",Famille,1,"St Severin, Paris",,Langlois,MC/ET/CIX/249,Constitution,28/08/1971
+359,34,"St Leu St Gilles, Paris",Famille,125,"St Nicolas des Champs, Paris",,Langlois,MC/ET/CIX/249,Constitution,28/08/1971
+360,34,"St Leu St Gilles, Paris",Famille,164,"St Lazare, Paris",,Langlois,MC/ET/CIX/249,Constitution,28/08/1971
+361,1,"St Severin, Paris",Famille,125,"St Nicolas des Champs, Paris",,Langlois,MC/ET/CIX/249,Constitution,28/08/1971
+362,1,"St Severin, Paris",Famille,164,"St Nicolas des Champs, Paris",,Langlois,MC/ET/CIX/249,Constitution,28/08/1971
+363,125,"St Nicolas des Champs, Paris",Famille,164,"St Nicolas des Champs, Paris",,Langlois,MC/ET/CIX/249,Constitution,28/08/1971
+364,164,"St Nicolas des Champs, Paris",Famille,154,"St Nicolas des Champs, Paris",,Langlois,MC/ET/CIX/249,Constitution,28/08/1971
+365,165,"St Nicolas des Champs, Paris",Famille,166,"St Nicolas des Champs, Paris",,Langlois,MC/ET/CIX/249,Constitution,28/08/1971
+366,165,"St Nicolas des Champs, Paris",Famille,167,"St Nicolas des Champs, Paris",,Langlois,MC/ET/CIX/249,Constitution,28/08/1971
+367,165,"St Nicolas des Champs, Paris",Famille,168,"St Nicolas des Champs, Paris",,Langlois,MC/ET/CIX/249,Constitution,28/08/1971
+368,165,"St Nicolas des Champs, Paris",Famille,169,"St Eustache, Paris",,Langlois,MC/ET/CIX/249,Constitution,28/08/1971
+369,165,"St Nicolas des Champs, Paris",Famille,170,"St André des Arts, Paris",,Langlois,MC/ET/CIX/249,Constitution,28/08/1971
+370,167,"St Nicolas des Champs, Paris",Famille,168,"St Nicolas des Champs, Paris",,Langlois,MC/ET/CIX/249,Constitution,28/08/1971
+371,167,,Famille,169,"St Eustache, Paris",,Langlois,MC/ET/CIX/249,Constitution,28/08/1971
+372,167,,Famille,170,"St André des Arts, Paris",,Langlois,MC/ET/CIX/249,Constitution,28/08/1971
+373,168,"St Nicolas des Champs, Paris",Famille,169,"St Eustache, Paris",,Langlois,MC/ET/CIX/249,Constitution,28/08/1971
+374,168,"St Nicolas des Champs, Paris",Famille,171,"St André des Arts, Paris",,Langlois,MC/ET/CIX/249,Constitution,28/08/1971
+375,169,"St Eustache, Paris",Famille,170,"St André des Arts, Paris",,Langlois,MC/ET/CIX/249,Constitution,28/08/1971
+376,169,"St Eustache, Paris",Famille,172,"St Eustache, Paris",,Langlois,MC/ET/CIX/249,Constitution,28/08/1971
+377,170,"St André des Arts, Paris",Famille,173,"St André des Arts, Paris",,Langlois,MC/ET/CIX/249,Constitution,28/08/1971
+378,163, ,Famille,34,"St Leu St Gilles, Paris",,Langlois,MC/ET/CIX/249,Constitution,28/08/1971
+379,163, ,Famille,1,"St Severin, Paris",,Langlois,MC/ET/CIX/249,Constitution,28/08/1971
+380,163, ,Famille,125,"St Nicolas des Champs, Paris",,Langlois,MC/ET/CIX/249,Constitution,28/08/1971
+381,163,,Famille,164,"St Nicolas des Champs, Paris",,Langlois,MC/ET/CIX/249,Constitution,28/08/1971
+382,163,,Famille,122,,,Langlois,MC/ET/CIX/249,Constitution,28/08/1971
+383,122,,Famille,34,"St Leu St Gilles, Paris",,Langlois,MC/ET/CIX/249,Constitution,28/08/1971
+384,122,,Famille,1,"St Severin, Paris",,Langlois,MC/ET/CIX/249,Constitution,28/08/1971
+385,122,,Famille,125,"St Nicolas des Champs, Paris",,Langlois,MC/ET/CIX/249,Constitution,28/08/1971
+386,122,,Famille,164,"St Nicolas des Champs, Paris",,Langlois,MC/ET/CIX/249,Constitution,28/08/1971
+387,122,,Famille,174,,,Langlois,MC/ET/CIX/249,Constitution,28/08/1971
+388,122,,Famille,175,,,Langlois,MC/ET/CIX/249,Constitution,28/08/1971
+389,174,,Famille,175,,,Langlois,MC/ET/CIX/249,Constitution,28/08/1971
+390,34,"St Leu St Gilles, Paris",,176,"St Germain l'Auxerrois, Paris",,Langlois,MC/ET/CIX/249,Constitution,28/08/1971
+391,1,"St Severin, Paris",Finance ,176,"St Germain l'Auxerrois, Paris",,Langlois,MC/ET/CIX/249,Constitution,28/08/1971
+392,125,"St Nicolas des Champs, Paris",,176,"St Germain l'Auxerrois, Paris",,Langlois,MC/ET/CIX/249,Constitution,28/08/1971
+393,164,"St Nicolas des Champs, Paris",,176,"St Germain l'Auxerrois, Paris",,Langlois,MC/ET/CIX/249,Constitution,28/08/1971
+394,34,"St Leu St Gilles, Paris",,165,"St Nicolas des Champs, Paris",,Langlois,MC/ET/CIX/249,Constitution,28/08/1971
+395,1,"St Severin, Paris",Finance ,165,"St Nicolas des Champs, Paris",,Langlois,MC/ET/CIX/249,Constitution,28/08/1971
+396,125,"St Nicolas des Champs, Paris",,165,"St Nicolas des Champs, Paris",,Langlois,MC/ET/CIX/249,Constitution,28/08/1971
+397,164,"St Nicolas des Champs, Paris",,165,"St Nicolas des Champs, Paris",,Langlois,MC/ET/CIX/249,Constitution,28/08/1971
+398,34,"St Leu St Gilles, Paris",Famille,35,"St Leu St Gilles, Paris",,Langlois,MC/ET/CIX/249,Indempnité,28/08/1971
+399,34,"St Leu St Gilles, Paris",Famille,1,"St Severin, Paris",,Langlois,MC/ET/CIX/249,Indempnité,28/08/1971
+400,34,"St Leu St Gilles, Paris",Famille,125,"St Nicolas des Champs, Paris",,Langlois,MC/ET/CIX/249,Indempnité,28/08/1971
+401,34,"St Leu St Gilles, Paris",Famille,154,"St Nicolas des Champs, Paris",,Langlois,MC/ET/CIX/249,Indempnité,28/08/1971
+402,34,"St Leu St Gilles, Paris",Famille,164,"St Nicolas des Champs, Paris",,Langlois,MC/ET/CIX/249,Indempnité,28/08/1971
+403,1,"St Severin, Paris",Famille,125,"St Nicolas des Champs, Paris",,Langlois,MC/ET/CIX/249,Indempnité,28/08/1971
+404,1,"St Severin, Paris",Famille,164,"St Nicolas des Champs, Paris",,Langlois,MC/ET/CIX/249,Indempnité,28/08/1971
+405,125,"St Nicolas des Champs, Paris",Famille,164,"St Nicolas des Champs, Paris",,Langlois,MC/ET/CIX/249,Indempnité,28/08/1971
+406,164,"St Nicolas des Champs, Paris",Famille,154,"St Nicolas des Champs, Paris",,Langlois,MC/ET/CIX/249,Indempnité,28/08/1971
+407,165,"St Nicolas des Champs, Paris",Famille,166,"St Nicolas des Champs, Paris",,Langlois,MC/ET/CIX/249,Indempnité,28/08/1971
+408,34,"St Leu St Gilles, Paris",Finance ,165,"St Nicolas des Champs, Paris",,Langlois,MC/ET/CIX/249,Indempnité,28/08/1971
+409,1,"St Severin, Paris",Finance ,165,"St Nicolas des Champs, Paris",,Langlois,MC/ET/CIX/249,Indempnité,28/08/1971
+410,125,"St Nicolas des Champs, Paris",,165,"St Nicolas des Champs, Paris",,Langlois,MC/ET/CIX/249,Indempnité,28/08/1971
+411,164,"St Nicolas des Champs, Paris",,165,"St Nicolas des Champs, Paris",,Langlois,MC/ET/CIX/249,Indempnité,28/08/1971
+412,34,"St Leu St Gilles, Paris",Famille,35,"St Leu St Gilles, Paris",,Langlois,MC/ET/CIX/249,Déclaration,28/08/1971
+413,34,"St Leu St Gilles, Paris",Famille,1,"St Severin, Paris",,Langlois,MC/ET/CIX/249,Déclaration,28/08/1971
+414,34,"St Leu St Gilles, Paris",Famille,125,"St Nicolas des Champs, Paris",,Langlois,MC/ET/CIX/249,Déclaration,28/08/1971
+415,34,"St Leu St Gilles, Paris",Famille,154,"St Nicolas des Champs, Paris",,Langlois,MC/ET/CIX/249,Déclaration,28/08/1971
+416,34,"St Leu St Gilles, Paris",Famille,164,"St Nicolas des Champs, Paris",,Langlois,MC/ET/CIX/249,Déclaration,28/08/1971
+417,1,"St Severin, Paris",Famille,125,"St Nicolas des Champs, Paris",,Langlois,MC/ET/CIX/249,Déclaration,28/08/1971
+418,1,"St Severin, Paris",Famille,164,"St Nicolas des Champs, Paris",,Langlois,MC/ET/CIX/249,Déclaration,28/08/1971
+419,125,"St Nicolas des Champs, Paris",Famille,164,"St Nicolas des Champs, Paris",,Langlois,MC/ET/CIX/249,Déclaration,28/08/1971
+420,164,"St Nicolas des Champs, Paris",Famille,154,"St Nicolas des Champs, Paris",,Langlois,MC/ET/CIX/249,Déclaration,28/08/1971
+421,165,"St Nicolas des Champs, Paris",Famille,166,"St Nicolas des Champs, Paris",,Langlois,MC/ET/CIX/249,Déclaration,28/08/1971
+422,34,"St Leu St Gilles, Paris",,165,"St Nicolas des Champs, Paris",,Langlois,MC/ET/CIX/249,Déclaration,28/08/1971
+423,1,"St Severin, Paris",Finance ,165,"St Nicolas des Champs, Paris",,Langlois,MC/ET/CIX/249,Déclaration,28/08/1971
+424,125,"St Nicolas des Champs, Paris",,165,"St Nicolas des Champs, Paris",,Langlois,MC/ET/CIX/249,Déclaration,28/08/1971
+425,164,"St Nicolas des Champs, Paris",,165,"St Nicolas des Champs, Paris",,Langlois,MC/ET/CIX/249,Déclaration,28/08/1971
+426,34,"St Leu St Gilles, Paris",,1,"St Severin, Paris",Indes,Langlois,MC/ET/CIX/249,Compte,28/08/1971
+427,34,"St Leu St Gilles, Paris",,125,"St Nicolas des Champs, Paris",,Langlois,MC/ET/CIX/249,Compte,28/08/1971
+428,34,"St Leu St Gilles, Paris",,164,"St Nicolas des Champs, Paris",,Langlois,MC/ET/CIX/249,Compte,28/08/1971
+429,164,"St Nicolas des Champs, Paris",Famille,154,"St Nicolas des Champs, Paris",,Langlois,MC/ET/CIX/249,Compte,28/08/1971
+430,1,"St Severin, Paris",Finance ,125,"St Nicolas des Champs, Paris",,Langlois,MC/ET/CIX/249,Compte,28/08/1971
+431,1,"St Severin, Paris",Finance ,164,"St Nicolas des Champs, Paris",,Langlois,MC/ET/CIX/249,Compte,28/08/1971
+432,125,"St Nicolas des Champs, Paris",,164,"St Nicolas des Champs, Paris",,Langlois,MC/ET/CIX/249,Compte,28/08/1971
+433,163, ,Famille,34,"St Leu St Gilles, Paris",,Langlois,MC/ET/CIX/249,Compte,28/08/1971
+434,163, ,Famille,1,"St Severin, Paris",,Langlois,MC/ET/CIX/249,Compte,28/08/1971
+435,163, ,Famille,125,"St Nicolas des Champs, Paris",,Langlois,MC/ET/CIX/249,Compte,28/08/1971
+436,163,,Famille,164,"St Nicolas des Champs, Paris",,Langlois,MC/ET/CIX/249,Compte,28/08/1971
+437,163,,Famille,122,,,Langlois,MC/ET/CIX/249,Compte,28/08/1971
+438,122,,Famille,34,"St Leu St Gilles, Paris",,Langlois,MC/ET/CIX/249,Compte,28/08/1971
+439,122,,Famille,1,"St Severin, Paris",,Langlois,MC/ET/CIX/249,Compte,28/08/1971
+440,122,,Famille,125,"St Nicolas des Champs, Paris",,Langlois,MC/ET/CIX/249,Compte,28/08/1971
+441,122,,Famille,164,"St Nicolas des Champs, Paris",,Langlois,MC/ET/CIX/249,Compte,28/08/1971
+442,122,,Famille,174,,,Langlois,MC/ET/CIX/249,Compte,28/08/1971
+443,122,,Famille,175,,,Langlois,MC/ET/CIX/249,Compte,28/08/1971
+444,174,,Famille,175,,,Langlois,MC/ET/CIX/249,Compte,28/08/1971
+445,34,"St Leu St Gilles, Paris",Famille,177,,,Langlois,MC/ET/CIX/249,Compte,28/08/1971
+446,0,"St Nicolas, Nantes",,178,"St Saturnin, Nantes",Terre Neuve,Verger,4/E2/1941,Cambie,26/06/1966
+447,0,"St Nicolas, Nantes",Commerce,179,Orléans,,Verger,4/E2/1941,Cambie,26/06/1966
+448,0,"St Nicolas, Nantes",Finance ,180,"St Nicolas, Nantes",Paimbeuf,Verger,4/E2/1944,Cambie,27/10/1967
+449,0,"St Nicolas, Nantes",Commerce,179,Orléans,,Verger,4/E2/1944,Cambie,27/10/1967
+450,0,"St Nicolas, Nantes",Finance ,180,"St Nicolas, Nantes",,Verger,4/E2/1944,Cambie,27/10/1967
+451,0,"St Nicolas, Nantes",Commerce,179,Orléans,,Verger,4/E2/1944,Cambie,27/10/1967
+452,0,"St Nicolas, Nantes",Finance ,180,"St Nicolas, Nantes",,Verger,4/E2/1944,Cambie,31/10/1967
+453,0,"St Nicolas, Nantes",Commerce,179,Orléans,,Verger,4/E2/1944,Cambie,31/10/1967
+454,0,"St Nicolas, Nantes",Finance ,180,"St Nicolas, Nantes",,Verger,4/E2/1944,Cambie,01/11/1967
+455,0,"St Nicolas, Nantes",Commerce,179,Orléans,,Verger,4/E2/1944,Cambie,01/11/1967
+456,0,"St Nicolas, Nantes",Finance ,180,"St Nicolas, Nantes",,Verger,4/E2/1944,Cambie,27/10/1967
+457,0,"St Nicolas, Nantes",Commerce,69,Orléans,,Verger,4/E2/1944,Cambie,27/10/1967
+458,0,"St Nicolas, Nantes",Finance ,180,"St Nicolas, Nantes",,Verger,4/E2/1944,Cambie,27/10/1967
+459,0,"St Nicolas, Nantes",Commerce,69,Orléans,,Verger,4/E2/1944,Cambie,27/10/1967
+460,0,"St Nicolas, Nantes",Finance ,180,"St Nicolas, Nantes",,Verger,4/E2/1945,Cambie,13/01/1968
+461,0,"St Nicolas, Nantes",Commerce,179,Orléans,,Verger,4/E2/1945,Cambie,13/01/1968
+462,0,"St Nicolas, Nantes",Finance ,181,Penerf,"Le Croisic, Terre-Neuve",Verger,4/E2/1946,Cambie,11/07/1968
+463,0,"St Nicolas, Nantes",Finance ,182,Penerf,,Verger,4/E2/1946,Cambie,11/07/1968
+464,0,"St Nicolas, Nantes",Commerce,183,Orléans,,Verger,4/E2/1946,Cambie,11/07/1968
+465,0,"St Nicolas, Nantes",Finance ,184,,"Le Croisic, Terre-Neuve, Paimbeuf",Verger,4/E2/1949,Cambie,19/02/1970
+466,184,,Famille,185,,,Verger,4/E2/1949,Cambie,19/02/1970
+467,184,,Famille,186,,,Verger,4/E2/1949,Cambie,19/02/1970
+468,0,"St Nicolas, Nantes",Finance ,186,,,Verger,4/E2/1949,Cambie,19/02/1970
+469,143,"St Nicolas, Nantes",Finance ,187,Le Croisic,"Terre-Neuve, Paimbeuf",Verger,4/E2/1953,Cambie,12/01/1972
+470,143,"St Nicolas, Nantes",Finance ,188,Le Croisic,,Verger,4/E2/1953,Cambie,12/01/1972
+471,187,Le Croisic,Finance ,188,Le Croisic,,Verger,4/E2/1953,Cambie,12/01/1972
+472,143,"St Nicolas, Nantes",Commerce,113,Orléans,,Verger,4/E2/1953,Cambie,12/01/1972
+473,143,"St Nicolas, Nantes",Commerce,142,Orléans,,Verger,4/E2/1953,Cambie,12/01/1972
+474,113,Orléans,Commerce,142,Orléans,,Verger,4/E2/1953,Cambie,12/01/1972
+475,143,"St Nicolas, Nantes",Finance ,187,Le Croisic,"Terre-Neuve, Paimbeuf",Verger,4/E2/1953,Cambie,02/01/1973
+476,143,"St Nicolas, Nantes",Finance ,188,Le Croisic,,Verger,4/E2/1953,Cambie,02/01/1973
+477,187,Le Croisic,Finance ,188,Le Croisic,,Verger,4/E2/1953,Cambie,02/01/1973
+478,143,"St Nicolas, Nantes",Commerce,113,Orléans,,Verger,4/E2/1953,Cambie,02/01/1973
+479,143,"St Nicolas, Nantes",Commerce,142,Orléans,,Verger,4/E2/1953,Cambie,02/01/1973
+480,113,Orléans,Finance ,142,Orléans,,Verger,4/E2/1953,Cambie,02/01/1973
+481,143,"St Nicolas, Nantes",Finance ,189,Orléans,"Le Croisic, Paimbeuf, Antilles, La Rochelle, Bordeaux",Verger,4/E2/1954,Cambie,25/08/1972
+482,143,"St Nicolas, Nantes",Commerce,183,Orléans,,Verger,4/E2/1954,Cambie,25/08/1972
+483,143,"St Nicolas, Nantes",Finance ,189,Orléans,"Le Croisic, Paimbeuf, Antilles, La Rochelle, Bordeaux",Verger,4/E2/1954,Cambie,25/08/1972
+484,143,"St Nicolas, Nantes",Commerce,113,Orléans,,Verger,4/E2/1954,Cambie,25/08/1972
+485,143,"St Nicolas, Nantes",Commerce,142,Orléans,,Verger,4/E2/1954,Cambie,25/08/1972
+486,143,"St Nicolas, Nantes",Finance ,189,Orléans,"Le Croisic, Paimbeuf, Antilles, La Rochelle, Bordeaux",Verger,4/E2/1954,Cambie,23/09/1972
+487,143,"St Nicolas, Nantes",Commerce,183,Orléans,,Verger,4/E2/1954,Cambie,23/09/1972

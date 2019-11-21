@@ -2,13 +2,15 @@ import * as DataHandler from './dataHandler.js'
 import * as Timeline from './timelineView.js'
 import * as Kde from './kdeView.js'
 import * as Calculator from './measureCalculator.js'
+import * as Constant from './constant.js'
 
 let CANVAS_HEIGHT, CANVAS_WIDTH, SVGHEIGHT, SVGWIDTH, SVGheight, SVGwidth, ZOOM_SLIDER_HEIGHT, STATIC_SLIDER_HEIGHT, svgHeight
 export let WIDTH_RIGHT, WIDTH_MIDDLE, WIDTH_LEFT
+let ACTIVE_MEASURE_INDEX = 0
 let CANVAS, VIEW
 let TIPS_CONFIG = { month: 'short', day: 'numeric' }
 let data
-let dg
+let dg, timeslider
 let measureName = ['nodeNumber', 'linkNumber', 'linkPairNumber', 'density', 'activation', 'redundancy', 'volatility', 'component']
 export let BANDWIDTH = 0.5
 const RATIO_LEFT = 0.13, RATIO_MIDDLE = 0.83, RATIO_RIGHT = 0.04
@@ -17,19 +19,55 @@ const GRANULARITY_name = ['milisecond', 'second', 'minute', 'hour', 'day', 'week
 const GRANULARITY_names = ['miliseconds', 'seconds', 'minutes', 'hours', 'days', 'weeks', 'months', 'years', 'decades', 'centuries', 'millenniums']
 const GRANULARITY_CONFIG = ['numeric', 'numeric', 'numeric', 'numeric', '2-digit', 'short', 'short', 'numeric', 'numeric', 'numeric', 'numeric']
 const timeList = [1, 1000, 1000*60, 1000*60*60, 1000*60*60*24, 1000*60*60*24*7, 1000*60*60*24*30, 1000*60*60*24*365, 1000*60*60*24*30*12*10, 1000*60*60*24*30*12*100, 1000*60*60*24*30*12*1000]
-let timeLineColor = new Array(12).fill('gray')
+let timeLineColor = new Array(20).fill('gray')
 let timeLineColor2 = ['orange','darkgreen', 'teal', 'blue','purple', 'red', 'crimson', 'coral', 'fuchisia']
-let xScale, kdeScale, timeStamp, mainScale, mainKDEscale, brush, tooltipTitle, MINI_YMAX = 0
+let xScale, kdeScale, timeStamp, mainScale, mainKDEscale, brush, tooltipTitle, zoom, MINI_YMAX = 0
 let MEASURE_DIV_ID
-let CANVAS_INFO = []
+let CANVAS_INFO = [], FRAME_INFO = []
 const ELEMENTS = 8
 const MARGIN = {
-  'top': 3,
+  'top': 10,
   'left': 5,
   'right': 5,
   'bottom': 10
 }
 const rectPadding = 0.5, scatterRadius = 2
+
+let globalZoom = function () {
+  xScale = d3.event.transform.rescaleX(mainScale)
+  kdeScale = d3.event.transform.rescaleX(mainKDEscale)
+  if (d3.event.transform.k === 1) {
+    xScale = mainScale.copy()
+    kdeScale = mainKDEscale.copy()
+  }
+  let outer = d3.select('#outer-measureFrame')
+  let div = d3.selectAll(`.frame`)
+  div.selectAll('.x-axis').call(d3.axisBottom(xScale).ticks(4)).selectAll('.tick text').remove()//.style('fill', 'gray')
+  div.selectAll('.bars').attr('x', d => xScale(d.timeStart)).attr('width', d => {
+    let value = (xScale(d.timeEnd) - xScale(d.timeStart)) - rectPadding
+    return Math.max(value, 1)
+  })
+  d3.selectAll('.interval-bars')
+    .attr('x', d => xScale(d.x1))
+  // CANVAS_INFO.forEach(vis => {
+  //   vis.g.selectAll('.kdeLine').selectAll('path').attr('d', d => vis.lineGenerator.x(d => kdeScale(d.x))(d))
+  // })
+  FRAME_INFO.forEach(frame => {
+    frame.canvas.selectAll('.kdeLine').each(function(d, i) {
+      d3.select(this).select('path').attr('d', d => frame.lineGenerator[i].x(d => kdeScale(d.x))(d))
+    })
+  })
+  outer.select('.zoom-timeline').call(d3.axisBottom(xScale).ticks(6))
+  let currentRange = xScale.domain()
+  window.activeTime.start = xScale.domain()[0]
+  window.activeTime.end = xScale.domain() [1]
+  let xRange = xScale.range()
+  let tmpRange = [xRange[0], xRange[0]]
+  outer.select('.brush-g').call(brush.move, tmpRange) // hidden
+  outer.select('#currentPeriod').attr('x', mainScale(tmpRange[0])).attr('width', mainScale(tmpRange[1]) - mainScale(tmpRange[0]))
+  outer.select('#startTimeCurve').datum([[mainScale(currentRange[0]), 0], [mainScale(currentRange[0]), STATIC_SLIDER_HEIGHT / 6], [0, STATIC_SLIDER_HEIGHT / 6 + ZOOM_SLIDER_HEIGHT / 3]]).attr('d', periodLineGenerator)
+  outer.select('#endTimeCurve').datum([[mainScale(currentRange[1]), 0], [mainScale(currentRange[1]), STATIC_SLIDER_HEIGHT / 6], [WIDTH_MIDDLE, STATIC_SLIDER_HEIGHT / 6 + ZOOM_SLIDER_HEIGHT / 3]]).attr('d', periodLineGenerator)
+}
 
 let setCanvasParameters = function (divId, dgraph) {
   MEASURE_DIV_ID = divId
@@ -38,7 +76,7 @@ let setCanvasParameters = function (divId, dgraph) {
 //  CANVAS_WIDTH = $(`#${divId}`).innerWidth()
   CANVAS_WIDTH = window.innerWidth * 0.63
   d3.select(`#${divId}`).select('svg').remove()
-  CANVAS = d3.select(`#${divId}`)
+  CANVAS = d3.select(`#${divId}-haha`)
     .classed('measure-line-div', true)
     .append('svg')
     .attr('height', CANVAS_HEIGHT)
@@ -68,6 +106,11 @@ let setCanvasParameters = function (divId, dgraph) {
       .range([0, WIDTH_MIDDLE])
       .domain([dgraph.roundedStart, dgraph.roundedEnd])
   mainScale = xScale.copy()
+  zoom = d3.zoom()
+  .scaleExtent([1, 50])
+  .translateExtent([[10,0], [WIDTH_MIDDLE, CANVAS_HEIGHT]])
+  .extent([[0, 0], [WIDTH_MIDDLE, CANVAS_HEIGHT]])
+  .on('zoom', globalZoom)
   if (dgraph.gran_min < 3) {
     TIPS_CONFIG['hour'] = 'numeric'
   }
@@ -75,11 +118,8 @@ let setCanvasParameters = function (divId, dgraph) {
     TIPS_CONFIG['year'] = 'numeric'
   }
   dg = dgraph
-}
+  tooltipTitle = d3.select('body').append('div').classed('tooltip', true).style('opacity', 0).style('width', '18vh').style('text-align', 'left')
 
-export let drawMeasureList = function (divId, subGraph = networkcube.getDynamicGraph()) {
-  let dgraph = subGraph
-  setCanvasParameters(divId, dgraph)
   data = Timeline.getData(dgraph)
   timeStamp = DataHandler.getTimeStamp(dgraph)
   let startTime = dgraph.timeArrays.momentTime[0]._i
@@ -87,9 +127,15 @@ export let drawMeasureList = function (divId, subGraph = networkcube.getDynamicG
   let scaleEnd = (dgraph.roundedEnd - startTime) / dgraph.timeDelta
   mainKDEscale = d3.scaleLinear().range([0, WIDTH_MIDDLE]).domain([scaleStart, scaleEnd])
   kdeScale = mainKDEscale.copy()
+}
+
+export let drawMeasureList = function (divId, subGraph = networkcube.getDynamicGraph()) {
+  let dgraph = subGraph
+  setCanvasParameters(divId, dgraph)
+
   addGlobalInteraction()
   addMeasureWindow(dgraph)
-  tooltipTitle = d3.select('body').append('div').classed('tooltip', true).style('opacity', 0).style('width', '18vh').style('text-align', 'left')
+
   networkcube.addEventListener('bandwidth', function (m) {
     BANDWIDTH = m.body
     drawKDEsummary()
@@ -131,7 +177,39 @@ let addMeasureWindow = function (dgraph) {
   drawMeasure(VIEW, 'Connected Component', data.component, 'component', 7, 'The number of connected components.')
 
 }
-
+let changeKDE = function (m) {
+    BANDWIDTH = m.body
+    drawKDEsummary()
+    FRAME_INFO.forEach(frame => {
+      frame.canvas.selectAll('.zoom-layer').each(function(d, i) {
+        let g = d3.select(this)
+        let color = dg.selection.length < 2 ? 'gray' : dg.selection[i].color
+        let lineGenerator = drawKdeLine(g, color, frame.data[i][0].dots.map(v => v.y))
+        frame.lineGenerator[i] = lineGenerator
+      })
+    })
+  //   if (dg.selection.length > 0) {
+  //     CANVAS_INFO.forEach((vis) => {
+  //        let g =  vis.g
+  //        let id = vis.item
+  //        let color = dg.selection[id].color
+  //        if(dg.selection.length === 1) color = 'gray'
+  //        let index = vis.index
+  //        let summary = vis.dots.map(v => v.y)
+  //     //   let summary = dg.selection[id].dotList[index][0]['dots'].map(v => v.y)
+  //        let lineGenerator = drawKdeLine(g, color, summary)
+  //        vis.lineGenerator = lineGenerator
+  //     })
+  //     return
+  //   }
+  //   CANVAS_INFO.forEach((vis) => {
+  //       let summary = vis.dots.map(v => v.y)
+  //       let g = vis.g
+  //       let lineGenerator = drawKdeLine(g, 'gray', summary)
+  //       vis.lineGenerator = lineGenerator
+  //     })
+  // })
+}
 let addTimeline = function () {
   let g = CANVAS.append('g')
     .attr('id', 'strokeTimeline')
@@ -187,43 +265,16 @@ let addTimeline = function () {
    })
 }
 
-let globalZoom = function () {
-  xScale = d3.event.transform.rescaleX(mainScale)
-  kdeScale = d3.event.transform.rescaleX(mainKDEscale)
-  if (d3.event.transform.k === 1) {
-    xScale = mainScale.copy()
-    kdeScale = mainKDEscale.copy()
-  }
-  let div = d3.selectAll(`.measure-line-div`)
-  div.selectAll('.x-axis').call(d3.axisBottom(xScale).ticks(4)).selectAll('.tick text').remove()//.style('fill', 'gray')
-  div.selectAll('.bars').attr('x', d => xScale(d.timeStart)).attr('width', d => {
-    let value = (xScale(d.timeEnd) - xScale(d.timeStart)) - rectPadding
-    return Math.max(value, 1)
-  })
-  CANVAS_INFO.forEach(vis => {
-    vis.g.selectAll('.kdeLine').selectAll('path').attr('d', d => vis.lineGenerator.x(d => kdeScale(d.x))(d))
-  })
-  div.select('.zoom-timeline').call(d3.axisBottom(xScale).ticks(6))
-  let currentRange = xScale.domain()
-  window.activeTime.start = xScale.domain()[0]
-  window.activeTime.end = xScale.domain() [1]
-  let xRange = xScale.range()
-  let tmpRange = [xRange[0], xRange[0]]
-  div.select('.brush-g').call(brush.move, tmpRange) // hidden
-  div.select('#currentPeriod').attr('x', mainScale(tmpRange[0])).attr('width', mainScale(tmpRange[1]) - mainScale(tmpRange[0]))
-  div.select('#startTimeCurve').datum([[mainScale(currentRange[0]), 0], [mainScale(currentRange[0]), STATIC_SLIDER_HEIGHT / 6], [0, STATIC_SLIDER_HEIGHT / 6 + ZOOM_SLIDER_HEIGHT / 3]]).attr('d', periodLineGenerator)
-  div.select('#endTimeCurve').datum([[mainScale(currentRange[1]), 0], [mainScale(currentRange[1]), STATIC_SLIDER_HEIGHT / 6], [WIDTH_MIDDLE, STATIC_SLIDER_HEIGHT / 6 + ZOOM_SLIDER_HEIGHT / 3]]).attr('d', periodLineGenerator)
-}
+
 
 let brushendCallback = function (d) {
     let selection = d3.event.selection || [0,0]
     let brushStart = xScale.invert(selection[0])
     let brushEnd = xScale.invert(selection[1])
     let interval = window.activeTime.endId - window.activeTime.startId
-    if (interval < 0) {
-      CANVAS_INFO.forEach(vis => {
-        let g = vis.g.select('.brush-result')
-        g.style('visibility', 'hidden')
+    if (interval < 1) {
+      FRAME_INFO.forEach(frame => {
+        let res = frame.canvas.selectAll('.brush-result').style('visibility', 'hidden')
       })
       return
     }
@@ -237,21 +288,37 @@ let brushendCallback = function (d) {
         periodData[v.id] = data
       })
     }
-    CANVAS_INFO.forEach(vis => {
-      let content = vis.index
-      let item  = vis.item
-      let g = vis.g.select('.brush-result')
-      g.style('visibility', 'visible')
-      g.select('rect')
-        .attr('x', xScale(brushStart))
-        .attr('y', vis.yScale(periodData[item][content]))
-        .attr('height', vis.yScale(0) - vis.yScale(periodData[item][content]))
-        .attr('width', xScale(brushEnd) - xScale(brushStart))
-      g.select('text')
-        .attr('x', (xScale(brushStart) + xScale(brushEnd))/2)
-        .attr('y', vis.yScale(periodData[item][content]))
-        .text(`${Number(periodData[item][content]).toFixed(2)}`)
+    FRAME_INFO.forEach(frame => {
+      let label = frame.dataLabel
+      let res = frame.canvas.selectAll('.brush-result').style('visibility', 'visible')
+      res.each(function (d, i) {
+        let canvas = d3.select(this)
+        canvas.select('rect')
+          .attr('x', xScale(brushStart))
+          .attr('y', frame.yScale[i](periodData[i][label]))
+          .attr('height', frame.yScale[i](0) - frame.yScale[i](periodData[i][label]))
+          .attr('width', xScale(brushEnd) - xScale(brushStart))
+        canvas.select('text')
+          .attr('x', (xScale(brushStart) + xScale(brushEnd))/2)
+          .attr('y', frame.yScale[i](periodData[i][label]))
+          .text(`${Number(periodData[i][label]).toFixed(2)}`)
+      })
     })
+    // CANVAS_INFO.forEach(vis => {
+    //   let content = vis.index
+    //   let item  = vis.item
+    //   let g = vis.g.select('.brush-result')
+    //   g.style('visibility', 'visible')
+    //   g.select('rect')
+    //     .attr('x', xScale(brushStart))
+    //     .attr('y', vis.yScale(periodData[item][content]))
+    //     .attr('height', vis.yScale(0) - vis.yScale(periodData[item][content]))
+    //     .attr('width', xScale(brushEnd) - xScale(brushStart))
+    //   g.select('text')
+    //     .attr('x', (xScale(brushStart) + xScale(brushEnd))/2)
+    //     .attr('y', vis.yScale(periodData[item][content]))
+    //     .text(`${Number(periodData[item][content]).toFixed(2)}`)
+    // })
 
   }
 
@@ -313,9 +380,9 @@ let drawKDEsummary = function () {
       .y(d => kdeYScale(d.y))
   staticG
     .append('path')
-    .classed('kdeLine', true)
     .datum(density)
     .style('fill', 'none')
+    .classed('kdeLine', true)
     .style('stroke', 'gray')
     .style('stroke-opacity' , 0.7)
     .style('stroke-width', 1.5)
@@ -338,7 +405,7 @@ let addTimeSlider = function () {
      .enter()
      .append('line')
      .style('stroke', '#E2E6EA')
-     .classed('snapshot', true)
+     .attr('class', (d, i) => `snapshot snapshot_${i}`)
      .attr('x1', d => mainScale(d._d))
      .attr('x2', d => mainScale(d._d))
      .attr('y1', 0)
@@ -653,9 +720,9 @@ let drawMeasureOvertime = function (svg, dotList, idx, id, item = 0, color = 'gr
     .style('stroke', 'white')
     .style('stroke-width', 0.08)
     .text('')
-  let visItem = new MeasureVis(zoomLayer, lineGenerator, yScale, id, item, dotList[0].dots)
-  CANVAS_INFO.push(visItem)
-  return visItem
+  // let visItem = new MeasureVis(zoomLayer, lineGenerator, yScale, id, item, dotList[0].dots)
+  // CANVAS_INFO.push(visItem)
+  // return visItem
 }
 
 class MeasureVis {
@@ -676,7 +743,7 @@ let drawKdeLine = function (g, color, summary) {
   g.select(`.kdeLine`).remove()
   let kdeYScale = d3.scaleLinear()
     .domain([0, d3.max(density.map(v => v.y))])
-    .range([SVGheight / 6, -SVGheight / 6])
+    .range([svgHeight / 6, -svgHeight / 6 + 2])
   let line = d3.line()
       .curve(d3.curveCardinal)
       .x(d => kdeScale(d.x))
@@ -695,7 +762,7 @@ let drawKdeLine = function (g, color, summary) {
 let initExternalSvg = function(canvas) {
   let selection = dgraph.selection
   let length = selection.length === 0?1:selection.length
-  let svg = canvas.select('#detailTimeline')
+  let svg = canvas.select('#detailTimeline').attr('width', '140vh').attr('height', '50vh')
   let paddingRate = 0.06
   let svgheight = parseFloat(svg.attr('height'))*(1-2*paddingRate)/length - 8
   let svgwidth = parseFloat(svg.attr('width'))*(1-2*paddingRate)
@@ -890,6 +957,7 @@ let drawExternalDiv = function (visItems, canvas, xScale) {
 
 let tackleFFTresult = function (visItems, canvas) {
   let intervalList = []
+  canvas = d3.select('#detailedTimeline')
   let xScale = initExternalSvg(canvas)
   drawExternalDiv(visItems, canvas, xScale)
 }
@@ -1078,4 +1146,801 @@ function getTimeString (timeStart, timeEnd) {
   let options = {}
   options[GRANULARITY_NAME[granularity]] = GRANULARITY_CONFIG[granularity]
   return GRANULARITY_name[granularity].capitalize() + ': ' + timeStart.toLocaleDateString('en-US', options) + ' ~ ' + timeEnd.toLocaleDateString('en-US', options)
+}
+
+class CanvasOption {
+  constructor (divId) {
+  }
+  setSortable () {
+     $("#measureFrame").sortable({placeholder: "ui-state-highlight",helper:'clone'})
+     $( "div" ).disableSelection()
+   }
+   setConfig (dgraph) {
+     setCanvasParameters('measureFrame', dgrpah)
+   }
+}
+
+class TimeSlider {
+  constructor (divId = "timeSliderFrame" ) {
+    this.div = d3.select(`#${divId}`)
+    this.div.select('svg').remove()
+    this.svg = this.div.append('svg').attr('width', SVGWIDTH).attr('height', STATIC_SLIDER_HEIGHT + ZOOM_SLIDER_HEIGHT)
+    .append('g').attr('transform', `translate(${WIDTH_LEFT + MARGIN.left}, 0)`)
+    this.staticHeight = STATIC_SLIDER_HEIGHT
+    this.sliderHeight = ZOOM_SLIDER_HEIGHT
+    this.staticTimeline = this.svg.append('g').attr('transform', `translate(0, ${2/3*STATIC_SLIDER_HEIGHT})`)
+    this.playerTimeline = this.svg.append('g').attr('transform', `translate(0, ${STATIC_SLIDER_HEIGHT + 1/5*ZOOM_SLIDER_HEIGHT})`)
+    this.sliderTimeline = this.svg.append('g').attr('transform', `translate(0, ${STATIC_SLIDER_HEIGHT + 1/5*ZOOM_SLIDER_HEIGHT})`)
+    this.hintCanvas = this.svg.append('g').attr('transform', `translate(0, ${STATIC_SLIDER_HEIGHT})`)
+    this.kde = this.svg.append('g').attr('id', 'KDEsummary')
+    this.intervalIndex = 0
+    this.interval = []
+  }
+}
+TimeSlider.prototype.init = function () {
+  let self = this
+   drawKDEsummary()
+   this.playerTimeline.append('defs')
+     .append('SVG:clipPath')
+     .attr('id', `clip_intervals`)
+     .append('SVG:rect')
+     .attr('width', WIDTH_MIDDLE)
+     .attr('height', 6)
+     .attr('x', 0)
+     .attr('y', 0)
+    this.playerTimeline.append('defs')
+       .html(`	<pattern id='pattern_interval' patternUnits='userSpaceOnUse' width='5' height='5' patternTransform='rotate(45)'> 	<line x1='0' y='0' x2='0' y2='5' stroke='lightskyblue' stroke-width='6' />	</pattern>`)
+   let iconG = this.svg.append('g').attr('transform', `translate(${MARGIN.left}, ${STATIC_SLIDER_HEIGHT + 5})`)
+   iconG.append('text')
+     .text('\uf144')
+     .attr('class', 'fas icon')
+     .attr('x', '-2.4rem')
+     .attr('y', 0)
+     .style('font-family', 'Font Awesome 5 Free')
+     .style('font-weight', 900)
+     .style('font-size', '1.5rem')
+     .style('fill', 'gray')
+     .style('opacity', 0.5)
+     .style('cursor', 'pointer')
+     .on('click', function(){
+       if (!window.playerMode) return
+       self.play()
+     })
+   iconG
+     .append('text')
+     .text('\uf144')
+      .attr('transform', 'rotate(180)')
+     .attr('class', 'fas icon')
+     .attr('x', '4rem')
+     .attr('y', '1.13rem')
+     .style('text-anchor', 'end')
+     .style('font-family', 'Font Awesome 5 Free')
+     .style('font-weight', 900)
+     .style('font-size', '1.5rem')
+     .style('fill', 'gray')
+     .style('opacity', 0.5)
+     .style('cursor', 'pointer')
+     .on('click', function(){
+       if (!window.playerMode) return
+       self.replay()
+     })
+
+   this.staticTimeline.append('g')
+     .selectAll('.snapshot')
+     .data(window.dgraph.timeArrays.momentTime)
+     .enter()
+     .append('line')
+     .style('stroke', '#E2E6EA')
+     .classed('snapshot', true)
+     .attr('x1', d => mainScale(d._d))
+     .attr('x2', d => mainScale(d._d))
+     .attr('y1', 0)
+     .attr('y2', - self.staticHeight  / 3)
+  this.staticTimeline.append('g')
+    .classed('static-timeline', true)
+    .classed('timeslider', true).call(d3.axisTop(mainScale).ticks(6))
+  let staticRangeG = this.staticTimeline.append('g')
+  staticRangeG.append('rect')
+    .style('fill', 'lightgray')
+    .style('opacity', 0.3)
+    .attr('id', 'currentPeriod')
+    .attr('x', 0)
+    .attr('y', 0)
+    .attr('height', self.staticHeight / 6)
+    .attr('width', WIDTH_MIDDLE)
+  staticRangeG.append('rect')
+    .style('fill', '#D6D6D6')
+    .style('opacity', 1)
+    .attr('id', 'brushPeriod')
+    .attr('x', 0)
+    .attr('y', 1)
+    .attr('height', self.staticHeight / 6)
+    .attr('width', WIDTH_MIDDLE)
+  staticRangeG.append('path')
+    .datum([[0, 0], [0,self.staticHeight / 6], [0, self.staticHeight / 6 + self.sliderHeight / 3]])
+    .attr('id', 'startTimeCurve')
+    .style('fill', 'none')
+    .style('stroke', 'lightgray')
+    .style('stroke-width', 4)
+    .style('storke-linecap', 'round')
+    .style('stroke-opacity', 0.3)
+    .attr('d', periodLineGenerator)
+
+  staticRangeG.append('path')
+    .attr('id', 'endTimeCurve')
+    .datum([[WIDTH_MIDDLE, 0], [WIDTH_MIDDLE, self.staticHeight / 6], [WIDTH_MIDDLE, self.staticHeight / 6 + self.staticHeight / 3]])
+    .style('fill', 'none')
+    .style('stroke', 'lightgray')
+    .style('stroke-width', 4)
+    .style('stroke-opacity', 0.3)
+    .style('stroke-linecap', 'round')
+    .attr('d', periodLineGenerator)
+
+  this.sliderTimeline.append('g')
+    .append('line')
+    .attr('id', 'hintLine')
+    .attr('x1', 0)
+    .attr('y1', 0)
+    .attr('x2', 0)
+    .attr('y2', 0)
+    .style('stroke-linecap', 'round')
+
+  this.sliderTimeline.append('g')
+     .classed('zoom-timeline', true)
+     .classed('timeslider', true)
+     .call(d3.axisBottom(xScale).ticks(6))
+
+ let brushG = this.sliderTimeline
+   .append('g')
+   .attr('transform', `translate(0,${- this.sliderHeight / 5 - 2})`)
+   .classed('brush-g', true)
+   .call(brush)
+   .call(brush.move, xScale.range())
+
+ let textLayer = this.sliderTimeline.append('g')
+   .attr('transform', `translate(0, ${- 5})`)
+   .style('font-family', 'cursive')
+ textLayer.append('text')
+    .attr('id', 'timeEndText')
+    .style('fill', 'gray')
+    .style('text-anchor', 'start')
+ textLayer.append('text')
+    .attr('id', 'timeStartText')
+    .style('fill', 'gray')
+    .style('text-anchor', 'end')
+
+this.hintCanvas.append('line')
+  .classed('hint', true)
+  .attr('x2', 0)
+  .attr('x1', 0)
+  .attr('y2', this.sliderHeight)
+  .attr('y1', 3/5 * this.sliderHeight)
+  .style('stroke-linecap', 'round')
+  .style('stroke-dasharray', '5,5')
+  .style('stroke-width', 1)
+  .style('stroke', 'gray')
+  .style('opacity', 0.5)
+
+this.hintCanvas.append('rect')
+   .style('fill', 'white')
+   .attr('x', '-3rem')
+   .attr('y',1 / 5 * this.sliderHeight + 6)
+   .attr('height', '1rem')
+   .attr('width', '6rem')
+   .attr('rx', '0.3rem')
+   .attr('ry', '0.3rem')
+this.hintCanvas.append('text')
+   .text('')
+   .style('font-size', '0.85rem')
+   .style('fill', 'gray')
+   .style('font-family', 'cursive')
+   .style('text-anchor', 'middle')
+   .attr('y',  2 / 5 * this.sliderHeight + 10)
+}
+
+TimeSlider.prototype.zoomed = function () {
+
+}
+
+TimeSlider.prototype.updateHint = function (x, date) {
+  let content = date.toLocaleDateString('en-US', TIPS_CONFIG)
+  let boss = this.hintCanvas
+  boss.select('line')
+    .attr('x1', x)
+    .attr('x2', x)
+  boss.select('rect')
+    .attr('x', x - 45)
+  boss.select('text')
+    .attr('x', x+5)
+    .text(content)
+}
+
+TimeSlider.prototype.updateInterval = function (interval) {
+  this.intervalIndex = -1
+  this.interval = interval.period
+  console.log('interval', interval)
+  let g = this.playerTimeline.append('g')
+    .attr('clip-path', `url(#clip_intervals)`)
+  g.selectAll('rect')
+    .data(interval.period)
+    .enter()
+    .append('rect')
+    .classed('interval-bars', true)
+    .attr('x', d => xScale(d.x1))
+    .attr('width', d => 2)
+    .attr('y', 0)
+    .attr('height', 6)
+    .style('fill', 'lightcyan')
+    .style('stroke', 'white')
+    .style('stroke-width', '0.5px')
+    .style('opacity', 1)
+ g.append('rect')
+   .attr('x', 0).attr('y', 0).attr('width', 0).attr('height', 6)
+   .classed('interval-bars', true)
+   .style('fill', `url(#pattern_interval)`)
+   .style('opacity', 0.75)
+   .classed('highlight-interval', true)
+}
+
+TimeSlider.prototype.play = function () {
+  if(!window.playerMode) return
+  this.intervalIndex ++
+  if (this.intervalIndex === this.interval.length) {
+    this.intervalIndex = -1
+  }
+  this.highlight()
+}
+TimeSlider.prototype.replay = function () {
+  if(!window.playerMode) return
+  this.intervalIndex  --
+  if(this.intervalIndex < 0) {
+    this.intervalIndex = -1
+    return
+  }
+  this.highlight()
+
+}
+TimeSlider.prototype.highlight = function () {
+  this.staticTimeline.selectAll('.snapshot').style('stroke',  '#E2E6EA')
+  if(this.intervalIndex === -1) {
+    this.playerTimeline.select('.highlight-interval')
+      .attr('width', 0)
+    return
+  }
+  let d = this.interval[this.intervalIndex]
+  // for (let i = d.interval[0]; i <= d.interval[1]; i ++) {
+  //   this.staticTimeline.select(`.snapshot_${i}`).style('stroke', 'orange')
+  // }
+  // console.log(xScale(d.x0),  xScale(d.x1) - xScale(d.x0), this.playerTimeline.select('.highlight-interval'))
+  // this.playerTimeline.select('.highlight-interval')
+  //   .datum(d)
+  //   .enter()
+  //   .attr('x', xScale(d.x0))
+  //   .attr('width',  xScale(d.x1) - xScale(d.x0))
+  d3.select('.brush-g').call(brush.move, [xScale(d.x0), xScale(d.x1)])
+}
+class Frame {
+  static FATHER = 'measureFrame'
+  constructor (dataLabel, title, description, idx) {
+    /*Initiate the container */
+    this.div = d3.select('#'+Frame.FATHER).append('div').classed('frame', true).attr('height', SVGHEIGHT).classed('sortable', true).style('position', 'relative')
+    this.svg = this.div.append('svg').classed('frame-svg', true)
+    .attr('height', SVGHEIGHT).attr('width', SVGWIDTH)
+    this.container = this.svg.append('g')
+    this.hciZoom =  this.container.append('g').attr('transform', `translate(${WIDTH_LEFT+MARGIN.left}, ${0})`)
+    this.canvas = this.container.append('g').attr('transform', `translate(${WIDTH_LEFT+MARGIN.left}, ${0})`).classed('measureView', true)
+    this.canvas.append('g').classed('fft-result', true)
+    this.dataLabel = dataLabel
+    this.title = title
+    this.description = description
+    this.data = []
+    this.yMax = []
+    this.yScale = []
+    this.lineGenerator = []
+    this.fftData = []
+    this.fftYscale = []
+    this.index = idx
+    return this
+  }
+}
+Frame.prototype.init = function () {
+    let g = this.canvas.append('g')
+      .classed('strokeTimeline', true)
+      .attr('transform', `translate(${0}, ${0})`)
+      .style('visibility', 'hidden')
+    g.append('line')
+      .attr('x0', -5)
+      .attr('y0', 0)
+      .attr('x1', -5)
+      .attr('y1', SVGHEIGHT)
+      .classed('dash-timeline', true)
+      .style('stroke-linecap', 'round')
+      .style('stroke-dasharray', '5,5')
+      .style('stroke-width', 1)
+      .style('stroke', 'gray')
+      .style('opacity', 0.5)
+   this.hciZoom.append('rect')
+       .attr('x', -5)
+       .attr('y', 0)
+       .attr('height', SVGHEIGHT)
+       .attr('width', WIDTH_MIDDLE + 10)
+      .style('opacity', 0)
+      .style('pointer-events', 'all')
+      .on('mousemove', function() {
+        let x = d3.mouse(this)[0]
+        if (x < 0 || x > WIDTH_MIDDLE) {
+         d3.selectAll('.strokeTimeline').style('visibility', 'hidden')
+          return
+        }
+        d3.selectAll('.strokeTimeline').style('visibility', 'visible')
+        let date = xScale.invert(x)
+        d3.select('#'+Frame.FATHER)
+        .selectAll('.dash-timeline')
+        .attr('x2', x)
+        .attr('x1', x)
+        timeslider.updateHint(x, date)
+      })
+      .call(zoom)
+}
+Frame.prototype.addData = function (data) {
+  if(dg.selection.length === 1) {
+    this.data[0] = data
+    this.yMax[0] = (d3.max(data.map(d => d3.max(d.dots.map(v => v.y)))))
+    this.fftData[0] = DataHandler.FourierTransform(data[0].dots, dgraph.timeArrays.intervals[0].period)
+    return this
+  }
+  this.data.push(data)
+  let yMax = d3.max(data.map(d => d3.max(d.dots.map(v => v.y))))
+  this.yMax.push(yMax)
+  this.fftData.push(DataHandler.FourierTransform(data[0].dots, dgraph.timeArrays.intervals[0].period))
+  return this
+}
+Frame.prototype.drawTitle = function () {
+  let description = this.description
+  let x = 0
+  let y = 0
+  let g =  this.container.append('g').attr('transform', `translate(${MARGIN.left}, ${0})`)
+  let width = WIDTH_LEFT * 0.5
+  let dy = 0.5
+  let fontsize = 0.9 * parseFloat(getComputedStyle(document.documentElement).fontSize)
+  let text = g.append('text')
+   .classed('measureTitle', true)
+   .attr('x', x)
+   .attr('y', y)
+   .style('font-size', fontsize)
+   .attr('dy', `${dy}em,`)
+   .text('hello')
+
+ let words = this.title.split(' ').reverse(),
+   word,
+   line = [],
+   lineNumber = 0,
+   lineHeight = 1.1,
+   tspan = text.text(null).append('tspan').attr('x', 0).attr('y', y).attr('dy', `${dy}em`)
+  while (word = words.pop()) {
+   line.push(word)
+   let currentLine = line.join(' ')
+   tspan.text(currentLine)
+   if (currentLine.length * fontsize > width) {
+     line.pop()
+     tspan.text(line.join(' '))
+     line = [word]
+     tspan = text.append('tspan').attr('x', 0).attr('y', y).attr('dy', (++lineNumber) * lineHeight + dy + 'em').text(word)
+   }
+  }
+  text.append('tspan')
+   .attr('x', function () {
+     return tspan.node().getComputedTextLength() + 2
+   } )
+   .attr('y', y)
+   .attr('dy', (lineNumber) * lineHeight + dy + 'em')
+   .classed('icon', true)
+   .classed('fas', true)
+   .style('font-family', 'Font Awesome 5 Free')
+   .style('font-weight', 900)
+   .style('font-size', '0.8rem')
+   .style('fill', 'gray')
+   .style('cursor', 'pointer')
+  .text('\uf059')
+  .on('mouseover', function () {
+    tooltipTitle.transition()
+      .duration(200)
+      .style('opacity', 1)
+    tooltipTitle.html(description)
+      .style('left', (d3.event.pageX + 20) + 'px')
+      .style('top', (d3.event.pageY - 28) + 'px')
+  })
+  .on('mouseout', function () {
+    tooltipTitle.transition()
+      .duration(500)
+      .style('opacity', 0)
+  })
+}
+Frame.prototype.drawIcon = function () {
+  let self = this
+  let idx = this.index
+  let g = this.container.append('g')
+    .attr('transform', `translate(${WIDTH_LEFT + WIDTH_MIDDLE}, 0)`)
+  let fftRes = this.fftData
+  let data = [{
+    text: '\uf2ed',
+    class: '',
+    callback: function() {
+      self.div.style('display', 'none')
+    }
+
+  }, {
+    text: '\uf362',
+    class: 'handle',
+    callback: function () {
+    }
+  } ,  {
+    text: '\uf06e',
+    toggle: 1,
+    class: '',
+    callback: function (element) {
+      let ele = d3.select(element)
+      let toggle = Number(ele.attr('toggle'))
+      if (toggle) {
+        ele.text('\uf070')
+        ele.attr('toggle', 0)
+        self.svg.selectAll('.kdeLine').style('display', 'none')
+        return
+      }
+      ele.text('\uf06e')
+      ele.attr('toggle', 1)
+      self.svg.selectAll('.kdeLine').style('display', '')
+    }
+  }, {
+    text: '\uf0eb',
+    class: '',
+    toggle: 0,
+    callback: function(element) {
+      let ele = d3.select(element)
+      let toggle = 1 - parseInt(ele.attr('toggle'))
+      ele.attr('toggle', toggle)
+      if (toggle) {
+        ele.style('fill', 'orange')
+        self.canvas.selectAll('.zoom-layer').style('display', 'none')
+        self.canvas.selectAll('.fft-result').style('display', '')
+        let msg = {
+          canvas: self.canvas,
+          label: self.dataLabel,
+          index: self.index,
+          fft: self.fftData,
+          flag: true
+        }
+        networkcube.sendMessage('fft', msg)
+        window.activeMeasure = self
+        ACTIVE_MEASURE_INDEX = self.index
+        return
+      }
+      ele.style('fill', 'gray')
+      self.canvas.selectAll('.zoom-layer').style('display', '')
+      self.canvas.selectAll('.fft-result').style('display', 'none').html('')
+      self.canvas.selectAll('.y-axis').each(function(d, i){
+        let e = d3.select(this)
+        e.call(d3.axisLeft(self.yScale[i]).ticks(5))
+      })
+      networkcube.sendMessage('fft', {flag: false})
+    }
+  }]
+  g.selectAll('text')
+   .data(data)
+   .enter()
+   .append('text')
+   .attr('class', d => `icon fas ${d.class}`)
+   .attr('x', (d, i) => {
+  //   if (i!=3)
+     return MARGIN.left
+  //   else return MARGIN.left + 8
+   })
+   .attr('y', (d, i) => {
+    // if (i!=3)
+     return 15 * i + 15
+    // return 15
+   })
+   .attr('toggle', d => d.toggle)
+   .style('font-family', 'Font Awesome 5 Free')
+   .style('font-weight', 900)
+   .style('font-size', '0.8rem')
+   .style('fill', timeLineColor[idx])
+   .style('opacity', 0.5)
+   .style('cursor', 'pointer')
+   .text( d => d.text)
+   .on('click', function(d) {
+     let self = this
+     d.callback(self)
+   })
+   .on('mouseover', function() {
+     d3.select(this).style('fill', `orange`)
+   })
+   .on('mouseout', function(d,i) {
+     if(i==4&&Number(d3.select(this).attr('toggle'))==1) return
+     d3.select(this).style('fill', timeLineColor[idx])
+   })
+}
+
+Frame.prototype.drawIndividualMeasures = function (idx) {
+  let g = this.canvas
+    .append('g')
+    .classed(`vis_${this.index}`,true)
+    .classed('mini_vis', true)
+    .attr('transform', `translate(0,${idx * svgHeight + MARGIN.top})`)
+  g.append('defs')
+    .append('SVG:clipPath')
+    .attr('id', `clip_${idx}_${this.index}`)
+    .append('SVG:rect')
+    .attr('width', WIDTH_MIDDLE)
+    .attr('height',svgHeight + svgHeight / 6 + 5)
+    .attr('x', 0)
+    .attr('y', -svgHeight / 6 - 5)
+  let yMax = this.yMax[idx]
+  let yScale = d3.scaleLinear()
+      .range([svgHeight, svgHeight / 6])
+      .domain([0, this.yMax[idx]])
+      .nice()
+  g.append('g')
+    .classed('x-axis', true)
+    .attr('transform', `translate(0, ${svgHeight})`)
+    .call(d3.axisBottom(xScale))
+    .selectAll('.tick text')
+    .remove()
+  g.append('g')
+   .classed('y-axis', true)
+   .call(d3.axisLeft(yScale).ticks(2))
+ let tooltip = g.append('text')
+   .attr('class', 'tooltip')
+   .style('opacity', 0)
+   .style('text-anchor', 'middle')
+   .style('font-size', '0.9rem')
+ let timeTooltip = g.append('text')
+   .attr('class', 'timeTooltip')
+   .style('opacity', 0)
+   .style('text-anchor', 'middle')
+ let zoomLayer = g.append('g').attr('clip-path', `url(#clip_${idx}_${this.index})`).classed('zoom-layer', true)
+ let summary = this.data[idx][0].dots.map(v => v.y)
+ let color = dg.selection.length < 2 ? 'gray' : dg.selection[idx].color
+ let lineGenerator = drawKdeLine(zoomLayer, color , summary)
+ this.data[idx].reverse().forEach((res, i) => {
+   let data = res.dots
+   zoomLayer.append('g')
+     .classed(`level_${i}`, true)
+     .selectAll('.bars')
+     .data(data)
+     .enter()
+     .append('rect')
+     .attr('class', (d, no) => `rank_${no} bars`)
+     .attr('x', d => xScale(d.timeStart))
+     .attr('y', d => yScale(d.y))
+     .attr('width', d => {
+       let value = (xScale(d.timeEnd) - xScale(d.timeStart))
+       if (i === 0) value -= rectPadding * 2
+       if (i === 1) value -= rectPadding
+       if (i > 1) value *= 1.5
+       return Math.max(value, 1)
+     })
+     .attr('data', d => d.y)
+     .attr('height', d => yScale(0) - yScale(d.y))
+     .style('fill', color)
+     .style('opacity', i / this.data[idx].length + 1 / this.data[idx].length)
+     .style('stroke-width', Math.log(i*10))
+     .on('mouseover', function (d, no) {
+       let self = d3.select(this)
+       d3.select(this).style('stroke', 'yellow').style('stroke-width', 3)
+       let newX =  parseFloat(self.attr('x')) + parseFloat(self.attr('width')) / 2
+       let newY =  parseFloat(self.attr('y')) - 20
+       let value = d.y.toFixed(2)
+       timeTooltip
+         .attr('x', newX)
+         .attr('y', newY - 13)
+         .attr('dy', '1rem')
+         .text(getTimeString(d.timeStart, d.timeEnd))
+         .style('fill', 'black')
+         .style('opacity', 1)
+        if((yMax-d.y)/yMax < 0.1) timeTooltip.attr('y', newY + 13)
+       d3.selectAll(`.mini_vis`)
+         .each(function(d) {
+           let ele = d3.select(this).select(`.level_${i}`).select(`.rank_${no}`)
+           let y =  parseFloat(ele.attr('y')) - 5
+           let data = ele.datum()
+           d3.select(this)
+            .select('.tooltip')
+            .text(d => data.y.toFixed(2))
+            .attr('x', newX)
+            .attr('y', y)
+            .style('fill', 'black')
+            .style('opacity', 1)
+         })
+     })
+     .on('mouseout', function (d, no) {
+       let tooltips = d3.selectAll(`.tooltip`)
+      tooltips.style('opacity', 0)
+      tooltips.text('')
+      timeTooltip.style('opacity', 0)
+      timeTooltip.selectAll('tspan').remove()
+       d3.select(this).style('stroke', '')
+     })
+     .on('click', function (d) {
+       networkcube.sendMessage('focusPeriod', d)
+     })
+ })
+ this.data[idx].reverse()
+ let instantG = zoomLayer.append('g')
+   .classed('brush-result', true)
+ instantG.append('defs')
+   .html(`	<pattern id='pattern_${idx}_${this.index}' patternUnits='userSpaceOnUse' width='5' height='5' patternTransform='rotate(45)'> 	<line x1='0' y='0' x2='0' y2='5' stroke='${color}' stroke-width='6' />	</pattern>`)
+ instantG.append('rect')
+   .attr('x', 0)
+   .attr('y', 0)
+   .attr('height', 0)
+   .attr('width', 0)
+   .style('fill', `url(#pattern_${idx}_${this.index})`)
+   .style('opacity', 0.8)
+ instantG.append('text')
+   .style('fill', 'black')
+   .style('text-anchor', 'middle')
+   .style('font-size', '0.9rem')
+   .style('stroke', 'white')
+   .style('stroke-width', 0.08)
+   .text('')
+  this.yScale[idx] = yScale
+  this.lineGenerator[idx] = lineGenerator
+}
+Frame.prototype.drawMeasureOvertime = function () {
+  this.canvas.html('')
+  let self = this
+  this.data.forEach(function(d, idx) {
+    self.drawIndividualMeasures(idx)
+  })
+}
+Frame.prototype.drawExternalSvg = function (data) {
+  let self = this
+  let g = this.select('.fft-result')
+  data.forEach((datum, idx) => {
+    let bg = g.append('g')
+     .attr('transform', `translate(0,${idx * svgHeight + MARGIN.top})`)
+     .attr('clip-path', `url(#clip_${idx}_${self.index})`)
+    let maxY = d3.max(datum.map(v => d3.max(v.dots, d => d.y)))
+    if(this.fftYscale[idx]) {
+      maxY = Math.max(this.fftYscale[idx].domain()[1], maxY)
+    }
+    let ySclae = d3.scaleLinear().domain([0, maxY]).range([svgHeight, 0])
+    this.fftYscale[idx] = yScale
+    bg.selectAll('rect')
+     .data(datum)
+     .enter()
+     .append('rect')
+     .attr('x', d => xScale(d.timeStart))
+     .attr('y', d => yScale(d.y))
+     .attr('height', d => yScale(0) - yScale(d.y))
+     .attr('width', d => {
+       let value = (xScale(d.timeEnd) - xScale(d.timeStart))
+       return Math.max(value, 1)
+     })
+     .style('fill', color)
+     .style('opacity', 0.5)
+
+   g.select('.y-axis').html('')
+   g.select('.y-axis')
+     .call(d3.axisLeft(yScale))
+
+  })
+}
+
+Frame.prototype.build = function (data) {
+  this.addData(data)
+  this.drawTitle()
+  this.drawIcon()
+  this.drawMeasureOvertime()
+  this.init()
+  return this
+}
+let initInterval = function (msg) {
+
+  let m = msg.body
+   if (!m.flag) {
+     timeslider.playerTimeline.selectAll('g').remove()
+     timeslider.interval = []
+     timeslider.intervalIndex = -1
+     return
+   }
+   let granId = m.granId
+   let value = m.val
+   let shift = m.shift
+   let timeSlot = DataHandler.getSingleBins(granId, value, dg.timeArrays.momentTime, shift)
+   timeslider.updateInterval(timeSlot)
+}
+let addBars = function (msg) {
+  let m = msg.body
+  let frame = FRAME_INFO[m.index]
+  if(!m.flag) {
+    frame.selectAll('.fft-result').selectAll('g').remove()
+    return
+  }
+  let data = m.data
+  frame.drawExternalSvg(data)
+}
+export let subgraphUpdateMeasure = function (dgraph, count) {
+  SVGheight = SVGHEIGHT - MARGIN.bottom - MARGIN.bottom
+  svgHeight = SVGheight / dgraph.selection.length
+  for (let i = dgraph.selection.length - count; i <= dgraph.selection.length - 1; i ++) {
+    let subgraph = dgraph.selection[i]
+    FRAME_INFO.forEach(frame => {
+      let id = frame.dataLabel
+      frame.addData(subgraph.dotList[id])
+    })
+  }
+  FRAME_INFO.forEach(frame => {
+    frame.drawMeasureOvertime()
+    frame.init()
+  })
+}
+
+export let createNormalMeasures = function (dgraph) {
+    FRAME_INFO = []
+    if(dgraph.selection.length === 0) {
+        let data = Timeline.getData(dgraph)
+        let linkData = Timeline.getLinkStat(dgraph, dgraph.timeArrays.intervals, dgraph.linkTypeArrays.name)
+        dgraph.linkTypeArrays.name.forEach(name => {
+          data[`linkType_${name}`] = linkData[name]
+        })
+        let nodeData = Timeline.getNodeStat(dgraph, dgraph.timeArrays.intervals, dgraph.nodeTypeArrays.name)
+        dgraph.nodeTypeArrays.name.forEach(name => {
+          data[`NodeType_${name}`] = nodeData[name]
+        })
+        Object.keys(data).forEach((k, idx) => {
+          if(k.substring(0, 9) === 'linkType_') {
+            let frame = new Frame(k, 'Link: ' + k.substring(9), `The total number of links categorized as ${k.substring(9)}`, idx).build(data[k])
+            FRAME_INFO.push(frame)
+          }
+          else if(k.substring(0, 9) === 'nodeType_') {
+            let frame = new Frame(k, 'Node: ' + k.substring(9), `The total number of nodes categorized as ${k.substring(9)}`, idx).build(data[k])
+            FRAME_INFO.push(frame)
+          }
+          else {
+            let frame = new Frame(k, Constant.title[k], Constant.description[k], idx).build(data[k])
+          FRAME_INFO.push(frame)
+          }
+        })
+    } else {
+      Object.keys(dgraph.selection[0].dotList).forEach(function(k, idx) {
+        let frame
+        if(k.substring(0, 9) === 'linkType_') {
+          frame = new Frame(k, 'Link: ' + k.substring(9), `The total number of links categorized as ${k.substring(9)}`, idx)
+          dgraph.selection.forEach(subgraph => {
+            frame.addData(subgraph.dotList[k])
+          })
+        }
+        else if(k.substring(0, 9) === 'nodeType_') {
+          frame = new Frame(k, 'Node: ' + k.substring(9), `The total number of nodes categorized as ${k.substring(9)}`, idx)
+          dgraph.selection.forEach(subgraph => {
+            frame.addData(subgraph.dotList[k])
+          })
+        }
+        else {
+          frame = new Frame(k, Constant.title[k], Constant.description[k], idx)
+          dgraph.selection.forEach(subgraph => {
+            frame.addData(subgraph.dotList[k])
+          })
+        }
+        frame.drawTitle()
+        frame.drawIcon()
+        frame.drawMeasureOvertime()
+        frame.init()
+        FRAME_INFO.push(frame)
+      })
+    }
+
+}
+export function measureFrameInit (dgraph, divId = 'measureFrame') {
+  d3.select(`#${divId}`).html('')
+  setCanvasParameters('measureFrame', window.dgraph)
+  timeslider =  new TimeSlider()
+  timeslider.init()
+  createNormalMeasures(dgraph)
+  networkcube.addEventListener('focusPeriod', moveHandle)
+  networkcube.addEventListener('bandwidth', changeKDE)
+  networkcube.addEventListener('initGran', initInterval)
+  networkcube.addEventListener('slotData', addBars)
 }

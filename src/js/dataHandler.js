@@ -120,7 +120,7 @@ export let getRoundEnd = function (start, end) {
   return round.getTime()
 }
 
-export let getSingleBins = function (granId, delta = 1, timeArray = window.dgraph.timeArrays.momentTime) {
+export let getSingleBins = function (granId, delta = 1, timeArray = window.dgraph.timeArrays.momentTime, shift=0) {
   let para
   if(granId > 7) {
     delta = Math.pow(10, granId - 7)
@@ -173,7 +173,7 @@ let getBins = function (timeArray, minGran, maxGran) {
   return results
 }
 
-export let FourierTransform = function (dots, time) {
+export let FourierTransform = function (dots, time, total = 31) {
   let FFT = window.FFT
   let len = time[time.length - 1].index + 1
   let index = Math.ceil(Math.log2(len))
@@ -187,12 +187,16 @@ export let FourierTransform = function (dots, time) {
   let magnitudes = FFT.util.fftMag(phasors)
   // .slice(0, 30).filter(v => v[1]>0)
   let res  = frequencies.map((f, ix) => {
-    return {frequency: f, magnitude: magnitudes[ix]}
+    let t = newlen / f
+    return {frequency: f, magnitude: magnitudes[ix], index:ix, T: t}
 })
 res.sort((a,b) => b.magnitude - a.magnitude)
-res = res.slice(1, 31)
+res.shift()
+res.forEach(r => {
+  r.phase = phasors[r.index]
+})
+res = res.slice(1, total)
 //res.sort((a, b) => a.frequency - b.frequency)
-console.log(res, 'phasors')
 return res
 }
 

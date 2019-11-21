@@ -1,9 +1,9 @@
 const DATA_TABLE_MAX_LENGTH = 100
-const NODE_SCHEMA_LIST = ['(None)', 'ID', 'Node', 'Node Type', 'Group']
+const NODE_SCHEMA_LIST = ['(None)', 'ID', 'Label', 'Node Type', 'Group']
 const LINK_SCHEMA_LIST = ['(None)', 'ID', 'Time', 'Source Node', 'Target Node', 'Weight', 'Link Type']
 const SCHEMA_DICT = {
   'ID': 'id',
-  'Node': 'label',
+  'Label': 'label',
   'Node Type': 'nodeType',
   '(None)': 'nonsense',
   'Time': 'time',
@@ -71,13 +71,13 @@ let dealGroupInNodeTable = function (dgraph) {
   let id_index = context.nodeSchema.id
   let group_index = context.nodeSchema.group
   dgraph.nodeArrays.group = new Array(context.nodeTable.length)
-  context.nodeTable.forEach(row, i => {
+  context.nodeTable.forEach((row, i) => {
     dgraph.nodeArrays.group[i] = row[group_index]
   })
   let groups = Array.from(new Set(dgraph.nodeArrays.group))
   groups.forEach(function(name, name_idx) {
     let subgraph = new Set()
-    context.nodeTable.forEach(row, i => {
+    context.nodeTable.forEach((row, i) => {
      if (row[group_index] === name) {
        subgraph.add(i)
      }
@@ -87,13 +87,9 @@ let dealGroupInNodeTable = function (dgraph) {
      'flag': false
     })
   })
+  window.resetInterval()
 }
-
-function updateNetwork () {
-  if (!context.linkTable) {
-    alert('There is no valid link table, please upload one.')
-    return
-  }
+let updateSchema = function () {
   context.linkSchema = getSchema('linkTableDiv', 'link')
   let timeFormat = d3.select('#timeFormatInput').property('value')
   context['timeFormat'] = timeFormat
@@ -101,7 +97,13 @@ function updateNetwork () {
     context.nodeSchema = getSchema('nodeTableDiv', 'node')
   }
   else  dealSingleLinkTable()
-
+}
+function updateNetwork () {
+  if (!context.linkTable) {
+    alert('There is no valid link table, please upload one.')
+    return
+  }
+  updateSchema()
   let dataset = new networkcube.DataSet(context)
   dataset.nodeSchema = context.nodeSchema
   dataset.timeFormat = context.timeFormat
@@ -187,8 +189,9 @@ thead.append('tr')
 function uploadLink() {
   let file = $('#linkTableUpload').prop('files')[0]
   if(!file) return
-  d3.select('#linkTableName').text(file.name)
-  context.name = new String(file.name).slice(0, -4) // drop '.csv'
+  let filename = file.name
+  d3.select('#linkTableName').text(filename)
+  context.name = new String(filename).slice(0, -4) // drop '.csv'
   d3.select('#linkTableDiv').html('')
   let r = new FileReader()
   r.onload = function (e) {
@@ -200,16 +203,43 @@ function uploadLink() {
   }
   r.readAsText(file)
 }
-function uploadNode() {
+function uploadNode () {
   let file = $('#nodeTableUpload').prop('files')[0]
   if(!file) return
-  d3.select('#nodeTableName').text(file.name)
+
+  let filename = file.name
+  d3.select('#nodeTableName').text(filename)
   d3.select('#nodeTableDiv').html('')
   let r = new FileReader()
   r.onload = function (e) {
     let text = e.target.result
-    let data = Papa.parse(text, {}).data
+    let data = Papa.parse(text, {skipEmptyLines: true}).data
     setTable(data, 'nodeTableDiv', 'node')
   }
   r.readAsText(file)
+}
+
+let testNodeLink =async function () {
+  // NOT WORKING QWQ
+  let linkFile = new File('Marie Boucher LinkTable.csv');
+  console.log(linkFile)
+  uploadLink(linkFile, function() {
+    context.linkSchema = {
+      'id': 0,
+      'source': 1,
+      'target': 5,
+      'linkType': 3,
+      'time': 10
+    }
+    context.timeFormat = 'DD/MM/YYYY'
+  })
+  let nodeFile = new File('Marie Boucher NodeTable.csv');
+  uploadNode(nodeFile, function() {
+    context.nodeSchema = {
+      'id': 0,
+      'label': 1,
+      'group': 2
+    }
+    updateNetwork()
+  })
 }
