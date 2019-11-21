@@ -1429,7 +1429,7 @@ class Frame {
     this.container = this.svg.append('g')
     this.hciZoom =  this.container.append('g').attr('transform', `translate(${WIDTH_LEFT+MARGIN.left}, ${0})`)
     this.canvas = this.container.append('g').attr('transform', `translate(${WIDTH_LEFT+MARGIN.left}, ${0})`).classed('measureView', true)
-    this.canvas.append('g').classed('fft-result', true)
+    this.fftCanvas = this.svg.append('g').classed('fft-result', true).attr('transform', `translate(${WIDTH_LEFT+MARGIN.left}, ${0})`)
     this.dataLabel = dataLabel
     this.title = title
     this.description = description
@@ -1796,7 +1796,9 @@ Frame.prototype.drawMeasureOvertime = function () {
 }
 Frame.prototype.drawExternalSvg = function (data) {
   let self = this
-  let g = this.canvas.select('.fft-result')
+  let g = this.fftCanvas
+  console.log('where', g)
+
   data.forEach(function(datum, idx){
     let bg = g.append('g')
      .attr('transform', `translate(0,${idx * svgHeight + MARGIN.top})`)
