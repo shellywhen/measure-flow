@@ -129,20 +129,55 @@ export let getSingleBins = function (granId, delta = 1, timeArray = window.dgrap
   else {
     para = timePara[granId]
   }
+
   let idx = 0
   let counter = 0
   let box = []
   let roundedStart = window.dgraph.roundedStart
   let roundedEnd = window.dgraph.roundedEnd
-  for (let timeStamp = roundedStart; timeStamp <= roundedEnd;) {
+  let wholePeriod = new Date(moment(0).add(delta, para)._d).getTime()
+  let shiftMilisecond = shift > 0 ? (1 - shift)*wholePeriod : shift * wholePeriod
+  let shiftedStart = new Date(moment(roundedStart).add(shiftMilisecond, 'miliseconds')._d)
+
+  if(shift != 0) {
+    while(timeArray[idx]._i < shiftedStart ) {
+      idx ++
+    }
+    box.push({
+      interval: [0, idx],
+      index: 1,
+      x0: new Date(roundedStart),
+      x1: new Date(shiftedStart)
+    })
+    counter = 1
+  }
+
+  let empty = {}
+  let flag = false
+  let recorded_x0 = new Date(shiftedStart)
+
+  for (let timeStamp = shiftedStart; timeStamp <= roundedEnd;) {
     let v = {}
-    v.interval = [-1, -1]
+    v.interval = [-1, -1]  // open section
     v.x0 = new Date(timeStamp)
     v.x1 = moment(v.x0).add(delta, para)._d
-    timeStamp = new Date(v.x1)
+    timeStamp = new Date(v.x1) // timeStamp += one interval
+
     if(v.x0 > timeArray[timeArray.length - 1]._i) break
     if(v.x1 > timeArray[timeArray.length - 1]._i) v.x1 = timeArray[timeArray.length - 1]._d
-    if (timeArray[idx]._i >= v.x0 && timeArray[idx]._i <= v.x1) {
+
+    if (timeArray[idx]._i >= v.x0 && timeArray[idx]._i <= v.x1) { // there is sth going on in this period
+
+      if (flag) {    // record the empty phase before
+        box.push({
+          interval: [idx, idx],
+          x0: recorded_x0,
+          x1: v.x0,
+          index: counter - 1
+        })
+        flag = false
+      }
+
       v.interval[0] = idx
       while (timeArray[idx]._i >= v.x0 && timeArray[idx]._i <= v.x1) {
         v.interval[1] = idx
@@ -150,7 +185,14 @@ export let getSingleBins = function (granId, delta = 1, timeArray = window.dgrap
         else break
       }
     }
+    else {
+      if(!flag) {
+        flag = true
+        recorded_x0 = v.x0
+      }
+    }
     if(v.interval[0]!== -1) {
+      v.interval[1]+=1
       v.index = counter
       box.push(v)
     }

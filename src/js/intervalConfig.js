@@ -17,8 +17,12 @@ const paddingRate = 0.1
 let GLOBAL_ACTIVE_FRAME = null
 let GLOBAL_ACTIVE_LABEL = null
 let shiftSliderCallback = function () {
-
-  $('#shift-slider-value').val(str);
+  if (!window.playerMode) return
+  let shift = $('#config-shift').val();
+  current[timeslotId].shift = shift
+  console.log('change shift', shift)
+  current[timeslotId].flag = true
+  networkcube.sendMessage('initGran', current[timeslotId])
 }
 
 let getDatum = function (val, granId, shift = 0) {
@@ -27,10 +31,11 @@ let getDatum = function (val, granId, shift = 0) {
   let milisecond = moment(0).add(value, para)._d
   let label = GRANULARITY_name_normal[granId]
   let datum = {val, granId, value, para, milisecond, label, shift}
+  console.log('add datum', datum)
   return datum
 }
 
-let drawSpan = function (datum) {
+let drawSpan = function (datum, shift=0) {
   let div = d3.select('#interval-selection-display')
   let span = div
     .append('span')
@@ -67,12 +72,16 @@ let drawSpan = function (datum) {
         window.focusGranularity = d
         window.shiftMode = true
         d.flag = true
-        console.log('send', d)
+        let id = current.indexOf(datum)
+         $('#config-shift').val(d.shift)
+        console.log(d.shift, $('config-shift').val())
+        window.timeslotId = id
         networkcube.sendMessage('initGran', d)
         return
       }
       ele.style('border', '0.5px gray solid')
       window.playerMode = false
+       $('#config-shift').val(0);
       d.flag = false
       networkcube.sendMessage('initGran', d)
     })
@@ -94,10 +103,9 @@ let addMoreIntervals = function (shift = 0) {
   let granId = Number($(`#granularity-selection`).val())
   let datum = getDatum(val, granId, shift)
   current.push(datum)
-  drawSpan(datum)
-  console.log('glbalactive', GLOBAL_ACTIVE_FRAME)
+  drawSpan(datum, shift)
   if(GLOBAL_ACTIVE_FRAME!=null) {
-    let intervals = DataHandler.getSingleBins(granId, val)
+    let intervals = DataHandler.getSingleBins(granId, val, dg.timeArrays.momentTime, shift)
     let data = dg.selection.length > 0 ? dg.selection.map(v => Calculator.getSingleData(v.dgraph, intervals, GLOBAL_ACTIVE_LABEL)) : [Calculator.getSingleData(dg, intervals, GLOBAL_ACTIVE_LABEL)]
     console.log('data success line 100', data)
     networkcube.sendMessage('slotData', {
@@ -273,7 +281,7 @@ let drawFFT = function (dataList) {
           .attr('y2', h)
           .style('stroke', 'gray')
           .classed('userInputLine', true)
-        let datum = getDatum(value, granularity)
+        let datum = getDatum(value, granularity, 0)
         current.push(datum)
         drawSpan(datum)
       })
@@ -316,9 +324,8 @@ let handleFFT = function (m) {
   GLOBAL_ACTIVE_FRAME = idx
   GLOBAL_ACTIVE_LABEL = label
   fft.forEach(res => {
-    console.log('check', res)
     res.forEach(d => {
-      d.shift =  Math.atan2(d.phase[1], d.phase[0]) / Math.PI
+      d.shift =  - Math.atan2(d.phase[1], d.phase[0]) / Math.PI
       let milisecond = d.T * timeList[min_gran]
       for (let it = min_gran; it <= max_gran; it ++) {
         if (milisecond > timeList[max_gran]) {
@@ -336,11 +343,6 @@ let handleFFT = function (m) {
   drawFFT(fft)
 }
 
-let sliderChanged = function () {
-  let val = Math.PI * Number($('#config-shift').val()) / 2 * dg.gran_min
-  console.log(val)
-}
-
 export function drawIntervalConfig(divId = 'config-interval', dgraph) {
   dg = dgraph
   let div = d3.select(`#${divId}`)
@@ -351,6 +353,6 @@ export function drawIntervalConfig(divId = 'config-interval', dgraph) {
   $(`#addInputInterval`).click(addMoreIntervals)
   $(`#resetInterval`).click(resetGlobalInterval)
   $(`#restoreInterval`).click(restoreGlobalInterval)
-  $(`#config-shift`).on('change', sliderChanged)
+  $(`#config-shift`).on('change', shiftSliderCallback)
   networkcube.addEventListener('fft', handleFFT)
 }

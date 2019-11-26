@@ -1,6 +1,6 @@
 let getNodeDuringInterval = function (dgraph, interval) {
   let nodes = new Set()
-  for (let t = interval[0]; t <= interval[1]; t ++) {
+  for (let t = interval[0]; t < interval[1]; t ++) {
     dgraph.timeArrays.links[t].forEach(l => {
       nodes.add(dgraph.linkArrays.source[l])
       nodes.add(dgraph.linkArrays.target[l])
@@ -12,7 +12,7 @@ let getNodeDuringInterval = function (dgraph, interval) {
 let getNeighborDuringInterval = function (dgraph, interval, node) {
   let nodes = []
   let neighbors = dgraph.nodeArrays.neighbors[node].serie
-  for(let t = interval[0]; t <= interval[1]; t ++) {
+  for(let t = interval[0]; t < interval[1]; t ++) {
     if (t in neighbors) {
       neighbors[t].forEach(v => {
         nodes.push(v)
@@ -72,7 +72,7 @@ let getNumberOfLinkPairs = function (dgraph, interval) {
   let dots = []
   for (let itv of interval) {
     let linkPairs = new Set()
-    for (let t = itv[0]; t <= itv[1]; t ++) { // aggregation
+    for (let t = itv[0]; t < itv[1]; t ++) { // aggregation
       dgraph.timeArrays.links[t].forEach(l => {
         linkPairs.add(dgraph.linkArrays.nodePair[l])
       })
@@ -86,7 +86,7 @@ let getNumberOfLinks = function (dgraph, interval) {
   let dots = []
   for (let itv of interval) {
     let sum = 0
-    for (let t = itv[0]; t <= itv[1]; t ++) { // aggregation
+    for (let t = itv[0]; t < itv[1]; t ++) { // aggregation
       sum += dgraph.timeArrays.links[t].length
     }
     dots.push(dataWrapper(dgraph, itv, sum))
@@ -155,7 +155,7 @@ let getVolatility = function (dgraph, interval) {
   for (let i = 1; i < interval.length; i ++) {
     let current = new Set()
     let itv = interval[i]
-    for (let t = itv[0]; t <= itv[1]; t ++) { // aggregation
+    for (let t = itv[0]; t < itv[1]; t ++) { // aggregation
       linkList[t].forEach(l => {
         current.add(dgraph.linkArrays.nodePair[l])
       })
@@ -185,7 +185,7 @@ let getSingleLinkStat = function (dgraph, interval, name) {
   let result = []
   for (let itv of interval) {
     let sum = 0
-    for (let t = itv[0]; t <= itv[1]; t ++) { // aggregation
+    for (let t = itv[0]; t < itv[1]; t ++) { // aggregation
       dgraph.timeArrays.links[t].forEach(lid => {
         let linkType = dgraph.linkArrays.linkType[lid]
         if (linkType === name)
@@ -205,7 +205,7 @@ let getSingleNodeStat = function (dgraph, interval, name) {
   let result = []
   for (let itv of interval) {
     let nodes = new Set()
-    for (let t = itv[0]; t <= itv[1]; t ++) { // aggregation
+    for (let t = itv[0]; t < itv[1]; t ++) { // aggregation
       let links = dgraph.timeArrays.links[t]
       for(let lid of links) {
         let src = dgraph.linkArrays.source[lid]
@@ -227,7 +227,11 @@ export let getSingleData = function (dg, interval, content) {
     case 'nodeNumber': return getProcessedData(dg, [interval], getNumberOfNodes)[0]
     case 'linkPairNumber': return getProcessedData(dg, [interval], getNumberOfLinkPairs)[0]
     case 'linkNumber': return getProcessedData(dg, [interval], getNumberOfLinks)[0]
-    case 'density': return  getProcessedData(dg, [interval], getDensity)[0]
+    case 'density': {
+      let value = getProcessedData(dg, [interval], getDensity)[0]
+      console.log('what the hell', value)
+      return  value
+    }
     case 'activation': return getProcessedData(dg, [interval], getActivation)[0]
     case 'redundancy': return getProcessedData(dg, [interval], getRedundancy)[0]
     case 'volatility': return getProcessedData(dg, [interval], getVolatility)[0]

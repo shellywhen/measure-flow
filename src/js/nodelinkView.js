@@ -8,6 +8,7 @@ const nodelinkWidth = $('#' + nodelinkDivId).width()
 const nodelinkheight = nodelinkHeight * 0.93
 const nodeHighLightColor = 'orange'
 const MaxRadius = 10
+let xScale
 let LINK_GAP = 2
 let linkLayer
 let nodeLayer
@@ -95,6 +96,10 @@ let lasso_end = function () {
 }
 
 let drawNodeLinkInPeriod = function (startId, endId) {
+  if(startId > endId) {
+    linkLayer.style('display', 'none')
+    return
+  }
   linkLayer.style('display', d => {
     if(d.presentIn(times[startId], times[endId])) {
       return ''
@@ -167,6 +172,17 @@ let expandSelection = function () {
   d3.select(`#hull_${window.selectionId}`).datum(hull).enter().attr('d', d => `M ${d.join("L")} Z`)
   networkcube.sendMessage('subgraph', newSet)
   lasso.items().classed('possible',false)
+}
+
+let drawTimeline = function (svg) {
+  let timelineWidth = (nodelinkWidth * 0.9)
+  let h = 5
+  let canvas = svg.append('g').classed('timelinehint', true)
+    .attr('transform', `translate(${nodelinkWidth*0.05}, ${nodelinkHeight * 0.05 + h})`)
+  canvas.append('line').attr('x1', 0).attr('x2', timelineWidth).attr('y1', 0).attr('y2', 0).style('stroke', 'gray').style('opacity', 0.5)
+  xScale = d3.scaleTime().range([0, timelineWidth]).domain([dg.roundedStart, dg.roundedEnd])
+  canvas.append('rect').classed('nodelink_timerange', true).attr('x', 0).attr('y', -h / 2).attr('width', timelineWidth).attr('height', h).style('opacity', 0.5).style('fill', 'gray')
+  canvas.append('circle').classed('nodelink_timepoint', true).attr('cx', 0).attr('cy', 0).attr('r', 0.8 * h).style('opacity', 1).style('fill', 'orange')
 }
 let drawLassoConfig = function (svg) {
   let buttonWidth = (nodelinkWidth * 0.9 ) / 3
@@ -356,23 +372,42 @@ let drawNodeLink = function () {
   let svg = d3.select('#' + nodelinkSvgId)
     .attr('height', nodelinkHeight)
     .attr('width', nodelinkWidth)
+  dg = window.dgraph
+  drawTimeline(svg)
   drawLassoConfig(svg)
   drawLayout(svg)
-  networkcube.addEventListener('timeRange', m => {
-    let dg = window.dgraph
-    let start = m.startUnix
-    let end = m.endUnix
-    let startId = binarySearch(dg.timeArrays.unixTime, d => d >= start)
-    let endId = binarySearch(dg.timeArrays.unixTime, d => d >= end)
-    drawNodeLinkInPeriod(startId, endId)
-  })
+  // networkcube.addEventListener('timeRange', m => {
+  //   let dg = window.dgraph
+  //   let start = m.startUnix
+  //   let end = m.endUnix
+  //   let startId = binarySearch(dg.timeArrays.unixTime, d => d >= start)
+  //   let endId = binarySearch(dg.timeArrays.unixTime, d => d >= end)
+  //   drawNodeLinkInPeriod(startId, endId)
+  // })
   networkcube.addEventListener('timerange', m => {
     let dg = window.dgraph
     let start = m.body.startUnix
     let end = m.body.endUnix
-    let startId = binarySearch(dg.timeArrays.unixTime, d => d >= start)
-    let endId = binarySearch(dg.timeArrays.unixTime, d => d >= end)
-    endId = Math.min(endId, dg.timeArrays.unixTime.length - 1)
+    let startText = m.body.textStart
+    let endText = m.body.textEnd
+    d3.select('.nodelink_timerange').attr('x', xScale(start)).attr('width', xScale(end) - xScale(start))
+    d3.select('.nodelink_timepoint').attr('cx', (xScale(start) + xScale(end)) / 2)
+    let startId = 0
+    let endId = dg.timeArrays.unixTime.length - 1
+    dg.timeArrays.unixTime.forEach((d, i) => {
+        if(i!=0 && dg.timeArrays.unixTime[i-1] < start&&d>=start)
+        startId = i
+        if(i!=dg.timeArrays.unixTime.legth - 1&&dg.timeArrays.unixTime[i+1] > end && d <= end)
+        endId = i
+      })
+    // let startId = binarySearch(dg.timeArrays.unixTime, d => d >= start)
+// let startId = binarySearch(dg.timeArrays.unixTime, d => d >= start)
+    //let endId =    binarySearch(dg.timeArrays.unixTime, d => d >= end)
+  //  endId = Math.min(endId, dg.timeArrays.unixTime.length - 1)
+    // if(endId != dg.timeArrays.unixTime.length - 1) {
+    //   endId -= 1
+    // }
+    // console.log('calculated: ', startId, endId)
     drawNodeLinkInPeriod(startId, endId)
     window.activeTime = {startId: startId, endId: endId, start: start, end: end}
   })

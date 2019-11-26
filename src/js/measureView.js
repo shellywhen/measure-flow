@@ -120,7 +120,7 @@ let setCanvasParameters = function (divId, dgraph) {
   dg = dgraph
   tooltipTitle = d3.select('body').append('div').classed('tooltip', true).style('opacity', 0).style('width', '18vh').style('text-align', 'left')
 
-  data = Timeline.getData(dgraph)
+  // data = Timeline.getData(dgraph)
   timeStamp = DataHandler.getTimeStamp(dgraph)
   let startTime = dgraph.timeArrays.momentTime[0]._i
   let scaleStart =  (dgraph.roundedStart - startTime) / dgraph.timeDelta
@@ -272,7 +272,7 @@ let brushendCallback = function (d) {
     let brushStart = xScale.invert(selection[0])
     let brushEnd = xScale.invert(selection[1])
     let interval = window.activeTime.endId - window.activeTime.startId
-    if (interval < 1) {
+    if (interval < 0) {
       FRAME_INFO.forEach(frame => {
         let res = frame.canvas.selectAll('.brush-result').style('visibility', 'hidden')
       })
@@ -293,15 +293,30 @@ let brushendCallback = function (d) {
       let res = frame.canvas.selectAll('.brush-result').style('visibility', 'visible')
       res.each(function (d, i) {
         let canvas = d3.select(this)
-        canvas.select('rect')
+        let y = frame.yScale[i](periodData[i][label])
+        let maxY = frame.yScale[i].range()[1]
+        let text = Number(periodData[i][label])
+        if ((maxY - y) / maxY > 0.1) {
+          y = maxY * 0.95
+          canvas.select('.overflow_rect')
+            .attr('x', xScale(brushStart))
+            .attr('y', 0)
+            .attr('height', y)
+            .attr('width', xScale(brushEnd) - xScale(brushStart))
+        }
+        else {
+          canvas.select('.overflow_rect')
+            .attr('height', 0)
+        }
+        canvas.select('.instance_rect')
           .attr('x', xScale(brushStart))
-          .attr('y', frame.yScale[i](periodData[i][label]))
-          .attr('height', frame.yScale[i](0) - frame.yScale[i](periodData[i][label]))
+          .attr('y', y)
+          .attr('height', frame.yScale[i](0) - y)
           .attr('width', xScale(brushEnd) - xScale(brushStart))
         canvas.select('text')
           .attr('x', (xScale(brushStart) + xScale(brushEnd))/2)
-          .attr('y', frame.yScale[i](periodData[i][label]))
-          .text(`${Number(periodData[i][label]).toFixed(2)}`)
+          .attr('y', y)
+          .text(`${text % 1 == 0 ? text : text.toFixed(4)}`)
       })
     })
     // CANVAS_INFO.forEach(vis => {
@@ -329,26 +344,40 @@ let brushed = function () {
     let dg = networkcube.getDynamicGraph()
     let start = brushStart.getTime()
     let end = brushEnd.getTime()
-    let startId = binarySearch(dg.timeArrays.unixTime, d => d >= start)
-    let endId = Math.max(0, binarySearch(dg.timeArrays.unixTime, d => d >= end)-1)
-    endId = Math.min(endId, dg.timeArrays.unixTime.length - 1)
+    // let startId = binarySearch(dg.timeArrays.unixTime, d => d >= start)
+    // let endId = Math.max(0, binarySearch(dg.timeArrays.unixTime, d => d >= end)-1)
+    // endId = Math.min(endId, dg.timeArrays.unixTime.length - 1)
+    let startId = 0
+    let endId = dg.timeArrays.unixTime.length - 1
+    dg.timeArrays.unixTime.forEach((d, i) => {
+        if(i!=0 && dg.timeArrays.unixTime[i-1] < start&&d>=start)
+        startId = i
+        if(i!=dg.timeArrays.unixTime.legth - 1&&dg.timeArrays.unixTime[i+1] > end && d <= end)
+        endId = i
+      })
     window.activeTime = {startId: startId, endId: endId, startUnix: start, endUnix: end, start: brushStart, end: brushEnd}
+    d3.selectAll('.snapshot').style('stroke',  '#E2E6EA')
+    for (let tid = startId; tid <= endId; tid++) {
+      d3.select(`.snapshot_${tid}`).style('stroke', 'orange')
+    }
+    let textStart = brushStart.toLocaleDateString('en-US', TIPS_CONFIG)
+    let textEnd = brushEnd.toLocaleDateString('en-US', TIPS_CONFIG)
     d3.select('#timeStartText')
       .classed('annotation', true)
-      .text(brushStart.toLocaleDateString('en-US', TIPS_CONFIG))
+      .text(textStart)
       .attr('transform', 'translate('+ selection[0] + ', 0)')
 
     d3.select('#timeEndText')
       .classed('annotation', true)
-      .text(brushEnd.toLocaleDateString('en-US', TIPS_CONFIG))
+      .text(textEnd)
       .attr('transform', 'translate('+ selection[1] + ', 0)')
 
     d3.select('#brushPeriod')
       .attr('x', mainScale(brushStart))
       .attr('width', mainScale(brushEnd) - mainScale(brushStart))
 
-    networkcube.timeRange(brushStart.getTime(), brushEnd.getTime(), true)
-    networkcube.sendMessage('timerange', {startUnix: brushStart.getTime(), endUnix: brushEnd.getTime() })
+    // networkcube.timeRange(brushStart.getTime(), brushEnd.getTime(), true)
+    networkcube.sendMessage('timerange', {startUnix: brushStart.getTime(), endUnix: brushEnd.getTime(), textStart, textEnd })
 
   }
 
@@ -358,7 +387,7 @@ let moveHandle = function (m) {
   let end = new Date(msg.timeEnd)
   let dg = networkcube.getDynamicGraph()
   let startId = binarySearch(dg.timeArrays.unixTime, d => d >= msg.timeStart)
-  let endId = binarySearch(dg.timeArrays.unixTime, d => d >= msg.timeEnd)
+  let endId = binarySearch(dg.timeArrays.unixTime, d => d >= msg.timeEnd) - 1
   endId = Math.min(endId, dg.timeArrays.unixTime.length - 1)
   window.activeTime = {startId: startId, endId: endId, startUnix: msg.timeEnd, endUnix: msg.timeStart, start: start, end: end}
   d3.select('.brush-g').call(brush.move, [xScale(start), xScale(end)])
@@ -1185,9 +1214,9 @@ TimeSlider.prototype.init = function () {
      .attr('id', `clip_intervals`)
      .append('SVG:rect')
      .attr('width', WIDTH_MIDDLE)
-     .attr('height', 6)
+     .attr('height', 9)
      .attr('x', 0)
-     .attr('y', 0)
+     .attr('y', -3)
     this.playerTimeline.append('defs')
        .html(`	<pattern id='pattern_interval' patternUnits='userSpaceOnUse' width='5' height='5' patternTransform='rotate(45)'> 	<line x1='0' y='0' x2='0' y2='5' stroke='lightskyblue' stroke-width='6' />	</pattern>`)
    let iconG = this.svg.append('g').attr('transform', `translate(${MARGIN.left}, ${STATIC_SLIDER_HEIGHT + 5})`)
@@ -1231,7 +1260,7 @@ TimeSlider.prototype.init = function () {
      .enter()
      .append('line')
      .style('stroke', '#E2E6EA')
-     .classed('snapshot', true)
+     .attr('class', (d, i)=>`snapshot snapshot_${i}`)
      .attr('x1', d => mainScale(d._d))
      .attr('x2', d => mainScale(d._d))
      .attr('y1', 0)
@@ -1288,7 +1317,7 @@ TimeSlider.prototype.init = function () {
   this.sliderTimeline.append('g')
      .classed('zoom-timeline', true)
      .classed('timeslider', true)
-     .call(d3.axisBottom(xScale).ticks(6))
+     .call(d3.axisBottom(xScale).ticks(6)).selectAll('.tick line').remove()
 
  let brushG = this.sliderTimeline
    .append('g')
@@ -1368,13 +1397,17 @@ TimeSlider.prototype.updateInterval = function (interval) {
     .classed('interval-bars', true)
     .attr('x', d => xScale(d.x1))
     .attr('width', d => 2)
-    .attr('y', 0)
-    .attr('height', 6)
-    .style('fill', 'blue')
+    .attr('y', -3)
+    .attr('height', 12)
+    .style('fill', 'lightslategray')
     .style('stroke', 'white')
     .style('stroke-width', '0.5px')
     .style('opacity', 1)
  g.append('rect')
+   .datum({
+     x1: dg.roundedStart,
+     x2: dg.roundedStart
+   })
    .attr('x', 0).attr('y', 0).attr('width', 0).attr('height', 6)
    .classed('interval-bars', true)
    .style('fill', `url(#pattern_interval)`)
@@ -1401,22 +1434,13 @@ TimeSlider.prototype.replay = function () {
 
 }
 TimeSlider.prototype.highlight = function () {
-  this.staticTimeline.selectAll('.snapshot').style('stroke',  '#E2E6EA')
+
   if(this.intervalIndex === -1) {
     this.playerTimeline.select('.highlight-interval')
       .attr('width', 0)
     return
   }
   let d = this.interval[this.intervalIndex]
-  // for (let i = d.interval[0]; i <= d.interval[1]; i ++) {
-  //   this.staticTimeline.select(`.snapshot_${i}`).style('stroke', 'orange')
-  // }
-  // console.log(xScale(d.x0),  xScale(d.x1) - xScale(d.x0), this.playerTimeline.select('.highlight-interval'))
-  // this.playerTimeline.select('.highlight-interval')
-  //   .datum(d)
-  //   .enter()
-  //   .attr('x', xScale(d.x0))
-  //   .attr('width',  xScale(d.x1) - xScale(d.x0))
   d3.select('.brush-g').call(brush.move, [xScale(d.x0), xScale(d.x1)])
 }
 class Frame {
@@ -1769,20 +1793,29 @@ Frame.prototype.drawIndividualMeasures = function (idx) {
  let instantG = zoomLayer.append('g')
    .classed('brush-result', true)
  instantG.append('defs')
-   .html(`	<pattern id='pattern_${idx}_${this.index}' patternUnits='userSpaceOnUse' width='5' height='5' patternTransform='rotate(45)'> 	<line x1='0' y='0' x2='0' y2='5' stroke='${color}' stroke-width='6' />	</pattern>`)
+   .html(`	<pattern id='pattern_${idx}_${this.index}' patternUnits='userSpaceOnUse' width='5' height='5' patternTransform='rotate(45)'> 	<line x1='0' y='0' x2='0' y2='5' stroke='${tinycolor(color).darken(15)}' stroke-width='6' />	</pattern>`)
+ instantG.append('defs')
+   .html(`	<pattern id='pattern2_${idx}_${this.index}' patternUnits='userSpaceOnUse' width='5' height='5' patternTransform='rotate(45)'> 	<line x1='0' y='0' x2='0' y2='5' stroke='${tinycolor(color).lighten(15)}' stroke-width='6' />	</pattern>`)
  instantG.append('rect')
+   .classed('instance_rect', true)
    .attr('x', 0)
    .attr('y', 0)
    .attr('height', 0)
    .attr('width', 0)
    .style('fill', `url(#pattern_${idx}_${this.index})`)
    .style('opacity', 0.8)
+ instantG.append('rect')
+   .classed('overflow_rect', true)
+   .attr('x', 0)
+   .attr('y', 0)
+   .attr('height', 0)
+   .attr('width', 0)
+   .style('fill', `url(#pattern2_${idx}_${this.index})`)
+   .style('opacity', 0.8)
  instantG.append('text')
    .style('fill', 'black')
    .style('text-anchor', 'middle')
-   .style('font-size', '0.9rem')
-   .style('stroke', 'white')
-   .style('stroke-width', 0.08)
+   .style('font-size', '1.5rem')
    .text('')
   this.yScale[idx] = yScale
   this.lineGenerator[idx] = lineGenerator
@@ -1839,10 +1872,10 @@ Frame.prototype.build = function (data) {
   return this
 }
 let initInterval = function (msg) {
-
   let m = msg.body
    if (!m.flag) {
      timeslider.playerTimeline.selectAll('g').remove()
+     timeslider.staticTimeline.selectAll('.snapshot').style('stroke', '#E2E6EA')
      timeslider.interval = []
      timeslider.intervalIndex = -1
      return
