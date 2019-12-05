@@ -198,6 +198,7 @@ export let getSingleBins = function (granId, delta = 1, timeArray = window.dgrap
     }
     counter++
   }
+  box[box.length - 1].x1 = new Date(roundedEnd)
   return {
     'period': box,
     'granularity': granId,
@@ -215,7 +216,7 @@ let getBins = function (timeArray, minGran, maxGran) {
   return results
 }
 
-export let FourierTransform = function (dots, time, total = 31) {
+export let FourierTransform = function (dots, time, total = 8) {
   let FFT = window.FFT
   let len = time[time.length - 1].index + 1
   let index = Math.ceil(Math.log2(len))
@@ -268,6 +269,7 @@ export let addGlobalProperty = function (dgraph) {
   let intervals = getBins(dgraph.timeArrays.momentTime, dgraph.getMinGranularity(), dgraph.getMaxGranularity())
   dgraph.timeArrays.intervals = intervals
   dgraph.timeArrays.defalutIntervals = intervals
+  dgraph.nodeArrays.activeNodes = dgraph.nodeArrays.id
 }
 
 export let getTimeStamp = function (dgraph = window.dgraph) {
@@ -302,6 +304,7 @@ export let getSubgraphDgraph = function (dgraph, nodeSet) {
       weights: dgraph.linkArrays.weights
     },
     nodeArrays: {
+      activeNodes: Array.from(nodeSet),
       nodeType: dgraph.nodeArrays.nodeType,
       neighbors: dgraph.nodeArrays.neighbors.map(function(v) {
         return {  serie: {} }

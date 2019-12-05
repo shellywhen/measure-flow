@@ -19,7 +19,12 @@ let nodes
 let links
 let lasso
 let dg
-
+let playerNodelink = function (m) {
+  let data = m.body
+  let interval = data.interval
+  drawNodeLinkInPeriod(interval[0], interval[1]-1)
+  updateTimeline(data.x0, data.x1, data.textStart, data.textEnd)
+}
 let getNodeRadius = function(d) {
     return Math.sqrt(d.links().length) * 0.5 + 1;
   // return 3
@@ -183,7 +188,12 @@ let drawTimeline = function (svg) {
   xScale = d3.scaleTime().range([0, timelineWidth]).domain([dg.roundedStart, dg.roundedEnd])
   canvas.append('rect').classed('nodelink_timerange', true).attr('x', 0).attr('y', -h / 2).attr('width', timelineWidth).attr('height', h).style('opacity', 0.5).style('fill', 'gray')
   canvas.append('circle').classed('nodelink_timepoint', true).attr('cx', 0).attr('cy', 0).attr('r', 0.8 * h).style('opacity', 1).style('fill', 'orange')
+  canvas.append('text').attr('id', 'nodelink_textStart').text('').style('text-anchor', 'start')
+    .attr('x', 0).attr('y', -2).style('font-size', 'small')
+  canvas.append('text').attr('id', 'nodelink_textEnd').text('').style('text-anchor', 'end')
+    .attr('x', timelineWidth).attr('y', -2).style('font-size', 'small')
 }
+
 let drawLassoConfig = function (svg) {
   let buttonWidth = (nodelinkWidth * 0.9 ) / 3
   let configCell = svg.append('g')
@@ -366,6 +376,13 @@ let drawLayout = function (svg) {
     // })
 }
 
+let updateTimeline = function (start, end, startText='', endText='') {
+  d3.select('.nodelink_timerange').attr('x', xScale(start)).attr('width', xScale(end) - xScale(start))
+  d3.select('.nodelink_timepoint').attr('cx', (xScale(start) + xScale(end)) / 2)
+  d3.select('#nodelink_textStart').text(startText)
+  d3.select('#nodelink_textEnd').text(endText)
+}
+
 let drawNodeLink = function () {
   // create canvas
   d3.select('#' + nodelinkSvgId).html('')
@@ -376,22 +393,14 @@ let drawNodeLink = function () {
   drawTimeline(svg)
   drawLassoConfig(svg)
   drawLayout(svg)
-  // networkcube.addEventListener('timeRange', m => {
-  //   let dg = window.dgraph
-  //   let start = m.startUnix
-  //   let end = m.endUnix
-  //   let startId = binarySearch(dg.timeArrays.unixTime, d => d >= start)
-  //   let endId = binarySearch(dg.timeArrays.unixTime, d => d >= end)
-  //   drawNodeLinkInPeriod(startId, endId)
-  // })
+  networkcube.addEventListener('player', playerNodelink)
   networkcube.addEventListener('timerange', m => {
     let dg = window.dgraph
     let start = m.body.startUnix
     let end = m.body.endUnix
     let startText = m.body.textStart
     let endText = m.body.textEnd
-    d3.select('.nodelink_timerange').attr('x', xScale(start)).attr('width', xScale(end) - xScale(start))
-    d3.select('.nodelink_timepoint').attr('cx', (xScale(start) + xScale(end)) / 2)
+    updateTimeline(start, end, startText, endText)
     let startId = 0
     let endId = dg.timeArrays.unixTime.length - 1
     dg.timeArrays.unixTime.forEach((d, i) => {
@@ -412,7 +421,6 @@ let drawNodeLink = function () {
     window.activeTime = {startId: startId, endId: endId, start: start, end: end}
   })
   networkcube.addEventListener('hint', m => {
-    console.log('hint message', m)
     switch(m.body.action) {
       case 'add':
         dg.highlightArrays.nodeIds.push(...m.body.nodes)

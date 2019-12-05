@@ -154,6 +154,7 @@ window.afterData = function () {
 
 window.resetInterval = function () {
   Measure.measureFrameInit(window.dgraph, 'measureFrame')
+  console.log('reset Interval')
   Config.drawConfigs()
   Bookmark.drawBookmark('selection-config')
 }

@@ -31,11 +31,10 @@ let getDatum = function (val, granId, shift = 0) {
   let milisecond = moment(0).add(value, para)._d
   let label = GRANULARITY_name_normal[granId]
   let datum = {val, granId, value, para, milisecond, label, shift}
-  console.log('add datum', datum)
   return datum
 }
 
-let drawSpan = function (datum, shift=0) {
+let drawSpan = function (datum, shift=0, border='gray') {
   let div = d3.select('#interval-selection-display')
   let span = div
     .append('span')
@@ -43,7 +42,7 @@ let drawSpan = function (datum, shift=0) {
     .attr('toggle', 0)
     .style('width', 'fit-content')
     .style('border-radius', '5px')
-    .style('border', '0.5px gray solid')
+    .style('border', `0.5px ${border} solid`)
     .style('font-size', '0.8rem')
     .style('line-height', 2)
     .style('cursor', 'pointer')
@@ -79,39 +78,48 @@ let drawSpan = function (datum, shift=0) {
         networkcube.sendMessage('initGran', d)
         return
       }
-      ele.style('border', '0.5px gray solid')
+      ele.style('border', `0.5px ${border} solid`)
       window.playerMode = false
        $('#config-shift').val(0);
       d.flag = false
       networkcube.sendMessage('initGran', d)
     })
-  span.append('i')
-    .classed('close', true)
-    .classed('fas', true)
-    .classed('fa-times', true)
-    .style('font-size', 'small')
-    .style('float', 'none')
-    .on('click', function() {
-      span.remove()
+    .on('dblclick', function(d){
+      let intervalSize = dg.timeArrays.intervals.length
+      let opacity =  (d.level + 1) / intervalSize
+      d3.selectAll(`.level_${d.level}`).selectAll('.bars').style('opacity', opacity)
       let id = current.indexOf(datum)
       current.splice(id, 1)
+      d3.select(this).remove()
     })
+  // span.append('i')
+  //   .classed('close', true)
+  //   .classed('fas', true)
+  //   .classed('fa-times', true)
+  //   .style('font-size', 'small')
+  //   .style('float', 'none')
+  //   .on('click', function() {
+  //     span.remove()
+  //     let id = current.indexOf(datum)
+  //     current.splice(id, 1)
+  //   })
 }
 
-let addMoreIntervals = function (shift = 0) {
-  let val = parseFloat($(`#interval-value-input`).val())
-  let granId = Number($(`#granularity-selection`).val())
+let addMoreIntervals = function (shift = 0, value, granularity) {
+  let val = value || parseFloat($(`#interval-value-input`).val())
+  let granId = granularity || Number($(`#granularity-selection`).val())
   let datum = getDatum(val, granId, shift)
   current.push(datum)
   drawSpan(datum, shift)
   if(GLOBAL_ACTIVE_FRAME!=null) {
     let intervals = DataHandler.getSingleBins(granId, val, dg.timeArrays.momentTime, shift)
-    let data = dg.selection.length > 0 ? dg.selection.map(v => Calculator.getSingleData(v.dgraph, intervals, GLOBAL_ACTIVE_LABEL)) : [Calculator.getSingleData(dg, intervals, GLOBAL_ACTIVE_LABEL)]
-    console.log('data success line 100', data)
-    networkcube.sendMessage('slotData', {
-      data: data,
-      flag: true,
-      index: GLOBAL_ACTIVE_FRAME
+    window.measureIds.forEach((label, idx) => {
+      let data = dg.selection.length > 0 ? dg.selection.map(v => Calculator.getSingleData(v.dgraph, intervals, label)) : [Calculator.getSingleData(dg, intervals, label)]
+      networkcube.sendMessage('slotData', {
+        data: data,
+        flag: true,
+        label: label
+      })
     })
   }
 }
@@ -147,7 +155,7 @@ let initDropdown = function () {
       let datum = getDatum(1, gran)
       datum.level = len - i - 1
       data.push(datum)
-      drawSpan(datum)
+      drawSpan(datum, 0, 'lightblue')
       i ++
     }
     current = data
@@ -179,8 +187,8 @@ let makeLines = function (g, data, xScale, yScale, labelData) {
     .style('stroke-dasharray', '3,1')
     .style('cursor', 'pointer')
     .on('click', function (d) {
-      $(`#interval-value-input`).val(value)
-      $(`#granularity-selection`).val(granularity)
+      $(`#interval-value-input`).val(1)
+      $(`#granularity-selection`).val(d.granularity)
       $('#addInputInterval').trigger('click')
     })
   layer.append('g').classed('labelText',true).selectAll('text')
@@ -251,7 +259,7 @@ let drawFFT = function (dataList) {
     let yDomain = d3.extent(datum, d => d.magnitude)
     let xDomain = d3.extent(datum, d => d.T)
     let yScale = d3.scaleLinear().domain([0, yDomain[1]]).range([h, 0])
-    let xScale = d3.scaleLog().domain(xDomain).range([0, w])
+    let xScale = d3.scaleLog().domain([1,xDomain[1]+1000]).range([0, w])
     g.append('rect')
       .attr('x', 0)
       .attr('y', 0)
@@ -281,9 +289,11 @@ let drawFFT = function (dataList) {
           .attr('y2', h)
           .style('stroke', 'gray')
           .classed('userInputLine', true)
-        let datum = getDatum(value, granularity, 0)
-        current.push(datum)
-        drawSpan(datum)
+        addMoreIntervals(0, value, granularity)
+        // let datum = getDatum(value, granularity, 0)
+        // current.push(datum)
+        // drawSpan(datum)
+        //!!!!!!!!!!!!!!
       })
       .on('mousemove', function () {
         let x = d3.mouse(this)[0]
@@ -301,7 +311,7 @@ let drawFFT = function (dataList) {
             granularity = it
           }
         }
-        $(`#interval-value-input`).val(value)
+        $(`#interval-value-input`).val(value.toFixed(3))
         $(`#granularity-selection`).val(granularity)
     })
     makeLines(canvas, datum, xScale, yScale, labelData)

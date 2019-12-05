@@ -97,6 +97,7 @@ let getNumberOfLinks = function (dgraph, interval) {
 let getDensity = function (dg, interval) {
   let nodeNumber = getProcessedData(dg, [interval], getNumberOfNodes)[0]
   let linkPairNumber = getProcessedData(dg, [interval], getNumberOfLinkPairs)[0]
+  let dots = []
   let densityDots = nodeNumber.dots.map((nodenumber, nodeidx) => {
     let linkpair = linkPairNumber.dots[nodeidx]
     let currentPossible =  nodenumber.y * (nodenumber.y - 1) / 2
@@ -110,6 +111,9 @@ let getDensity = function (dg, interval) {
       'y': value
     }
   })
+  return {
+    dots: densityDots
+  }
 }
 
 let getActivation = function (dgraph, interval) {
@@ -117,6 +121,10 @@ let getActivation = function (dgraph, interval) {
   let linkList = dgraph.timeArrays.links
   let current = new Set ()
   interval.forEach(itv => {
+    if(itv[1]<=itv[0]) {
+        dots.push(dataWrapper(dgraph, itv, 0))
+        return
+    }
     let nodes = getNodeDuringInterval(dgraph, itv)
     nodes.forEach(n => {current.add(n)})
     dots.push(dataWrapper(dgraph, itv, current.size))
@@ -193,10 +201,6 @@ let getSingleLinkStat = function (dgraph, interval, name) {
       })
     }
       result.push(dataWrapper(dgraph, itv, sum))
-      result.forEach((m, j) => {
-        m.timeStart = v.period[j].x0
-        m.timeEnd = v.period[j].x1
-      })
   }
   return result
 }
@@ -216,10 +220,6 @@ let getSingleNodeStat = function (dgraph, interval, name) {
     }
     result.push(dataWrapper(dgraph, itv, nodes.size))
   }
-  result.forEach((m, j) => {
-    m.timeStart = v.period[j].x0
-    m.timeEnd = v.period[j].x1
-  })
   return result
 }
 export let getSingleData = function (dg, interval, content) {
@@ -228,9 +228,8 @@ export let getSingleData = function (dg, interval, content) {
     case 'linkPairNumber': return getProcessedData(dg, [interval], getNumberOfLinkPairs)[0]
     case 'linkNumber': return getProcessedData(dg, [interval], getNumberOfLinks)[0]
     case 'density': {
-      let value = getProcessedData(dg, [interval], getDensity)[0]
-      console.log('what the hell', value)
-      return  value
+      let value = getDensity(dg, interval)
+      return value
     }
     case 'activation': return getProcessedData(dg, [interval], getActivation)[0]
     case 'redundancy': return getProcessedData(dg, [interval], getRedundancy)[0]

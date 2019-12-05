@@ -513,10 +513,10 @@ let getData = function (dgraph, intervals = [], measureList =  ['nodeNumber', 'l
     return {
       'granularity': v.granularity,
       'dots': linkPairNumber[i].dots.map(function (linkpair, idx) {
-        let nodenumber = nodeNumber[i].dots[idx]
-        let totalNode = dg.nodeArrays.length
+        // let nodenumber = nodeNumber[i].dots[idx]
+        let totalNode = dg.nodeArrays.activeNodes.length
         let totalPossible = totalNode * (totalNode - 1) /2
-        let currentPossible =  nodenumber.y * (nodenumber.y - 1) / 2
+        // let currentPossible =  nodenumber.y * (nodenumber.y - 1) / 2
         let dense = linkpair.y / totalPossible
         if (Number.isNaN(dense)) dense = 0
         return {
