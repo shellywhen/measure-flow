@@ -42,8 +42,8 @@ let drawSpan = function (datum, shift=0, border='gray') {
     .attr('toggle', 0)
     .style('width', 'fit-content')
     .style('border-radius', '5px')
-    .style('border', `0.5px ${border} solid`)
-    .style('font-size', '0.8rem')
+    .style('border', `0.8px ${border} solid`)
+    .style('font-size', '0.95rem')
     .style('line-height', 2)
     .style('cursor', 'pointer')
     .classed('chip', true)
@@ -66,7 +66,7 @@ let drawSpan = function (datum, shift=0, border='gray') {
       let toggle = 1 - Number(ele.attr('toggle'))
       ele.attr('toggle', toggle)
       if (toggle) {
-        ele.style('border', '0.5px orange solid')
+        ele.style('border', '0.8px orange solid')
         window.playerMode = true
         window.focusGranularity = d
         window.shiftMode = true
@@ -78,7 +78,7 @@ let drawSpan = function (datum, shift=0, border='gray') {
         networkcube.sendMessage('initGran', d)
         return
       }
-      ele.style('border', `0.5px ${border} solid`)
+      ele.style('border', `0.8px ${border} solid`)
       window.playerMode = false
        $('#config-shift').val(0);
       d.flag = false

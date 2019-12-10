@@ -50,7 +50,9 @@ let zoomed = function (xScale, kdeScale) {
       d3.select(this).select('path').attr('d', d => frame.lineGenerator[i].x(d => kdeScale(d.x))(d))
     })
   })
-  outer.select('.zoom-timeline').transition().duration(1000).call(d3.axisBottom(xScale).ticks(6)).selectAll('.tick line').remove()
+  let zoomTimeline = outer.select('.zoom-timeline').transition().duration(1000).call(d3.axisBottom(xScale).ticks(6))
+  // zoomTimeline.selectAll('.tick line').remove()
+  zoomTimeline.selectAll('.tick text').attr('dy', '1.5em')
   let currentRange = xScale.domain()
   window.activeTime.start = xScale.domain()[0]
   window.activeTime.end = xScale.domain() [1]
@@ -68,6 +70,8 @@ let globalZoom = function () {
     xScale = mainScale.copy()
     kdeScale = mainKDEscale.copy()
   }
+  let domain = xScale.domain()
+  d3.select('.brush-zoom').call(brush.move, [mainScale(domain[0]), mainScale(domain[1])])
   zoomed(xScale, kdeScale)
 }
 
@@ -203,6 +207,7 @@ let addTimeline = function () {
 
 let brushZoom = function () {
   let extent = d3.event.selection
+  console.log(extent, 'brushZoom')
   if (!extent) {
     if(!idleTimeout) {
       idleTimeout = setTimeout(idled, 1000)
@@ -212,18 +217,15 @@ let brushZoom = function () {
     kdeScale = mainKDEscale.copy()
   }
   else {
-    xScale.domain([xScale.invert(extent[0]), xScale.invert(extent[1])])
+    xScale.domain([mainScale.invert(extent[0]), mainScale.invert(extent[1])])
     kdeScale.domain([kdeScale.invert(extent[0]), kdeScale.invert(extent[1])])
-    zoomed(xScale, kdeScale)
-    d3.select('.zoom-brush').call(brush.move, null)
   }
   zoomed(xScale, kdeScale)
-
-  console.log('brush zoom')
+  d3.select('.brush-g').call(brushTime.move, null)
 }
 
 let brushendCallback = function (d) {
-    console.log('brush end callback')
+    console.log('brush end callback', d)
     let selection = d3.event.selection || [0,0]
     let brushStart = xScale.invert(selection[0])
     let brushEnd = xScale.invert(selection[1])
@@ -341,7 +343,7 @@ let moveHandle = function (m) {
   let endId = binarySearch(dg.timeArrays.unixTime, d => d >= msg.timeEnd) - 1
   endId = Math.min(endId, dg.timeArrays.unixTime.length - 1)
   window.activeTime = {startId: startId, endId: endId, startUnix: msg.timeEnd, endUnix: msg.timeStart, start: start, end: end}
-  d3.select('.brush-g').call(brushTime.move, [mainScale(start), mainScale(end)])
+  d3.select('.brush-g').call(brushTime.move, [xScale(start), xScale(end)])
 }
 
 let periodLineGenerator =  d3.line().x(d => d[0]).y(d => d[1]).curve(d3.curveCatmullRom)
@@ -369,106 +371,6 @@ let drawKDEsummary = function () {
     .style('stroke-linejoin', 'round')
     .attr('d', line)
 }
-
-let addTimeSlider = function () {
-  let staticG = CANVAS.append('g')
-    .classed('timeslider', true)
-    .attr('id', 'KDEsummary')
-    .attr('transform', `translate(${MARGIN.left + WIDTH_LEFT}, 0)`)
-  drawKDEsummary(staticG)
-  let staticTimelineG = staticG.append('g')
-    .attr('transform', `translate(0, ${ 2*STATIC_SLIDER_HEIGHT / 3})`)
-
-  staticTimelineG.append('g')
-    .selectAll('.snapshot')
-     .data(window.dgraph.timeArrays.momentTime)
-     .enter()
-     .append('line')
-     .style('stroke', '#E2E6EA')
-     .attr('class', (d, i) => `snapshot snapshot_${i}`)
-     .attr('x1', d => mainScale(d._d))
-     .attr('x2', d => mainScale(d._d))
-     .attr('y1', 0)
-     .attr('y2', -STATIC_SLIDER_HEIGHT / 3)
-
-  staticTimelineG.call(d3.axisTop(mainScale).ticks(6))
-
-  let rangeG = staticTimelineG.append('g')
-  rangeG.append('rect')
-    .style('fill', 'lightgray')
-    .style('opacity', 0.3)
-    .attr('id', 'currentPeriod')
-    .attr('x', 0)
-    .attr('y', 0)
-    .attr('height', STATIC_SLIDER_HEIGHT / 6)
-    .attr('width', WIDTH_MIDDLE)
-
-  rangeG.append('rect')
-    .style('fill', '#D6D6D6')
-    .style('opacity', 1)
-    .attr('id', 'brushPeriod')
-    .attr('x', 0)
-    .attr('y', 1)
-    .attr('height', STATIC_SLIDER_HEIGHT / 6)
-    .attr('width', WIDTH_MIDDLE)
-
-  rangeG.append('path')
-    .datum([[0, 0], [0, STATIC_SLIDER_HEIGHT / 6], [0, STATIC_SLIDER_HEIGHT / 6 + ZOOM_SLIDER_HEIGHT / 3]])
-    .attr('id', 'startTimeCurve')
-    .style('fill', 'none')
-    .style('stroke', 'lightgray')
-    .style('stroke-width', 4)
-    .style('storke-linecap', 'round')
-    .style('stroke-opacity', 0.3)
-    .attr('d', periodLineGenerator)
-
-  rangeG.append('path')
-    .attr('id', 'endTimeCurve')
-    .datum([[WIDTH_MIDDLE, 0], [WIDTH_MIDDLE, STATIC_SLIDER_HEIGHT / 6], [WIDTH_MIDDLE, STATIC_SLIDER_HEIGHT / 6 + ZOOM_SLIDER_HEIGHT / 3]])
-    .style('fill', 'none')
-    .style('stroke', 'lightgray')
-    .style('stroke-width', 4)
-    .style('stroke-opacity', 0.3)
-    .style('stroke-linecap', 'round')
-    .attr('d', periodLineGenerator)
-
-  let sliderG = CANVAS.append('g')
-    .attr('transform', `translate(${MARGIN.left + WIDTH_LEFT}, ${STATIC_SLIDER_HEIGHT + ZOOM_SLIDER_HEIGHT / 5})`)
-  sliderG.append('g')
-    .append('line')
-    .attr('id', 'hintLine')
-    .attr('x1', 0)
-    .attr('y1', 0)
-    .attr('x2', 0)
-    .attr('y2', 0)
-    .style('stroke-linecap', 'round')
-
-  sliderG.append('g')
-     .classed('zoom-timeline', true)
-     .classed('timeslider', true)
-     .call(d3.axisBottom(xScale).ticks(6))
-
-  let brushG = sliderG
-    .append('g')
-    .attr('transform', `translate(0,${- ZOOM_SLIDER_HEIGHT / 5 - 2})`)
-    .classed('brush-zoom', true)
-    .call(brush)
-    .call(brush.move, xScale.range())
-
-  let textLayer = sliderG.append('g')
-    .attr('transform', `translate(0, ${- 5})`)
-    .style('font-family', 'cursive')
-  textLayer.append('text')
-     .attr('id', 'timeEndText')
-     .style('fill', 'gray')
-     .style('text-anchor', 'start')
-
-  textLayer.append('text')
-     .attr('id', 'timeStartText')
-     .style('fill', 'gray')
-     .style('text-anchor', 'end')
-}
-
 
 class MeasureVis {
   constructor (g, lineGenerator, yScale, index, item, dots) {
@@ -503,44 +405,6 @@ let drawKdeLine = function (g, color, summary) {
     .style('stroke-linejoin', 'round')
     .attr('d', line)
   return line
-}
-let initExternalSvg = function(canvas) {
-  let selection = dgraph.selection
-  let length = selection.length === 0?1:selection.length
-  let svg = canvas.select('#detailTimeline').attr('width', '140vh').attr('height', '50vh')
-  let paddingRate = 0.06
-  let svgheight = parseFloat(svg.attr('height'))*(1-2*paddingRate)/length - 8
-  let svgwidth = parseFloat(svg.attr('width'))*(1-2*paddingRate)
-  let xScale = d3.scaleTime()
-      .range([0, svgwidth])
-      .domain([dgraph.roundedStart, dgraph.roundedEnd])
-  svg.selectAll('g').remove()
-  svg = svg.append('g').attr('transform', `translate(${ parseFloat(svg.attr('width'))*paddingRate*1.4}, ${ parseFloat(svg.attr('height'))*paddingRate})`)
-  if (selection.length > 0) {
-    let g =  svg.selectAll('.detailedTimelineG').data(selection.map(v => v.color)).enter()
-      .append('g').attr('transform',(d,i)=> `translate(0,${i*svgheight})`).classed('detailedTimelineG', true)
-    g.append('g')
-      .classed('x-axis', true)
-      .attr('transform', `translate(0, ${svgheight})`)
-      .call(d3.axisBottom(xScale))
-  }
-  else {
-    let g = svg.selectAll('.detailedTimelineG').data(['gray']).enter().append('g').classed('detailedTimelineG', true)
-    g.append('g')
-      .classed('x-axis', true)
-      .attr('transform', `translate(0, ${svgheight})`)
-      .call(d3.axisBottom(xScale))
-    g.append('g')
-      .classed('y-axis', true)
-  }
-  return xScale
-}
-
-let tackleFFTresult = function (visItems, canvas) {
-  let intervalList = []
-  canvas = d3.select('#detailedTimeline')
-  let xScale = initExternalSvg(canvas)
-  drawExternalDiv(visItems, canvas, xScale)
 }
 
 function binarySearch(array, pred) {
@@ -606,7 +470,7 @@ TimeSlider.prototype.init = function () {
      .attr('id', `clip_intervals`)
      .append('SVG:rect')
      .attr('width', WIDTH_MIDDLE)
-     .attr('height', 12)
+     .attr('height', 20)
      .attr('x', 0)
      .attr('y', -6)
     this.playerTimeline.append('defs')
@@ -614,7 +478,7 @@ TimeSlider.prototype.init = function () {
    let iconG = this.svg.append('g').attr('transform', `translate(${MARGIN.left}, ${STATIC_SLIDER_HEIGHT + 5})`)
    iconG.append('text')
      .text('\uf144')
-     .attr('class', 'fas icon')
+     .attr('class', 'fas icon playerBtn')
      .attr('x', '-2.4rem')
      .attr('y', 0)
      .style('font-family', 'Font Awesome 5 Free')
@@ -631,7 +495,7 @@ TimeSlider.prototype.init = function () {
      .append('text')
      .text('\uf144')
       .attr('transform', 'rotate(180)')
-     .attr('class', 'fas icon')
+     .attr('class', 'fas icon playerBtn')
      .attr('x', '4rem')
      .attr('y', '1.13rem')
      .style('text-anchor', 'end')
@@ -672,7 +536,7 @@ TimeSlider.prototype.init = function () {
   staticRangeG.append('g')
     .attr('transform', `translate(0,2)`)
     .attr('id', 'brushPeriod')
-    .classed('brush-g', true)
+    .classed('brush-zoom', true)
     .call(brush)
     .call(brush.move, null)
   staticRangeG.append('path')
@@ -708,7 +572,7 @@ TimeSlider.prototype.init = function () {
   this.sliderTimeline.append('g')
      .classed('zoom-timeline', true)
      .classed('timeslider', true)
-     .call(d3.axisBottom(xScale).ticks(6)).selectAll('.tick line').remove()
+     .call(d3.axisBottom(xScale).ticks(6)).selectAll('.tick text').attr('dy', '1.5em')
 
   this.sliderTimeline.append('g')
     .append('rect')
@@ -723,7 +587,7 @@ TimeSlider.prototype.init = function () {
  let brushG = this.sliderTimeline
    .append('g')
    .attr('transform', `translate(0,${- this.sliderHeight / 5})`)
-   .classed('zoom-brush', true)
+   .classed('brush-g', true)
    .call(brushTime)
    .call(brushTime.move, null)
 
@@ -744,7 +608,7 @@ this.hintCanvas.append('line')
   .attr('x2', 0)
   .attr('x1', 0)
   .attr('y2', this.sliderHeight)
-  .attr('y1', 3/5 * this.sliderHeight)
+  .attr('y1', 1/5 * this.sliderHeight)
   .style('stroke-linecap', 'round')
   .style('stroke-dasharray', '5,5')
   .style('stroke-width', 1)
@@ -755,7 +619,7 @@ this.hintCanvas.append('line')
 this.hintCanvas.append('rect')
    .style('fill', 'white')
    .attr('x', '-3rem')
-   .attr('y',1 / 5 * this.sliderHeight + 6)
+   .attr('y',3 / 5 * this.sliderHeight - 2)
    .attr('height', '1rem')
    .attr('width', '6rem')
    .attr('rx', '0.3rem')
@@ -766,7 +630,7 @@ this.hintCanvas.append('text')
    .style('fill', 'gray')
    .style('font-family', 'cursive')
    .style('text-anchor', 'middle')
-   .attr('y',  2 / 5 * this.sliderHeight + 10)
+   .attr('y',  3 / 5 * this.sliderHeight + 10)
 }
 
 TimeSlider.prototype.zoomed = function () {
@@ -790,6 +654,7 @@ TimeSlider.prototype.updateInterval = function (interval) {
   this.intervalIndex = -1
   this.interval = interval.period
   this.playerTimeline.selectAll('g').remove()
+  let self = this
   let g = this.playerTimeline.append('g')
     .attr('clip-path', `url(#clip_intervals)`)
   g.selectAll('rect')
@@ -809,21 +674,30 @@ TimeSlider.prototype.updateInterval = function (interval) {
     .style('stroke-width', '1px')
     .style('opacity', 0.5)
     .style('cursor', 'pointer')
-    .on('click', function (d) {
+    .on('click', function (d, i) {
+      self.intervalIndex = i
       d.textStart = d.x0.toLocaleDateString('en-US', TIPS_CONFIG)
       d.textEnd = d.x1.toLocaleDateString('en-US', TIPS_CONFIG)
       d3.selectAll('.snapshot').style('stroke',  '#E2E6EA')
       for (let tid = d.interval[0]; tid <d.interval[1]; tid++) {
         d3.select(`.snapshot_${tid}`).style('stroke', 'orange')
       }
-      d3.select('.brush-g').call(brushTime.move, [mainScale(d.x0), mainScale(d.x1)])
+      d3.select('.brush-g').call(brushTime.move, [xScale(d.x0), xScale(d.x1)])
       networkcube.sendMessage('player', d)
     })
     .on('mouseover', function (d) {
-      d3.select(this).attr('y', -6).attr('height', 12)
+      d3.select(this).attr('y', -3).attr('height', 15)
+      d.textStart = d.x0.toLocaleDateString('en-US', TIPS_CONFIG)
+      d.textEnd = d.x1.toLocaleDateString('en-US', TIPS_CONFIG)
+      d3.selectAll('.snapshot').style('stroke',  '#E2E6EA')
+      for (let tid = d.interval[0]; tid <d.interval[1]; tid++) {
+        d3.select(`.snapshot_${tid}`).style('stroke', 'orange')
+      }
+      networkcube.sendMessage('player', d)
     })
     .on('mouseout', function(d) {
       d3.select(this).attr('height', 6).attr('y', 0)
+      d3.selectAll('.snapshot').style('stroke',  '#E2E6EA')
     })
  g.append('rect')
    .datum({
@@ -862,6 +736,12 @@ TimeSlider.prototype.highlight = function () {
     return
   }
   let d = this.interval[this.intervalIndex]
+  if(d.interval[1] <= d.interval[0]) {
+    d3.selectAll('.playerBtn').style('opacity', 0.2)
+  }
+  else{
+      d3.selectAll('.playerBtn').style('opacity', 1)
+  }
   d.textStart = d.x0.toLocaleDateString('en-US', TIPS_CONFIG)
   d.textEnd = d.x1.toLocaleDateString('en-US', TIPS_CONFIG)
   d3.selectAll('.snapshot').style('stroke',  '#E2E6EA')
