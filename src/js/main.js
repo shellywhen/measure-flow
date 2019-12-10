@@ -105,6 +105,7 @@ async function afterLoadedData(dataset) {
 
 window.afterData = function () {
   let dgraph = window.dgraph
+  loadVisualizationList()
    DataHandler.addGlobalProperty(dgraph)
 //  DataHandler.getSubgraphDgraph(window.dgraph, new Set([0,1,2,3,4,5,6,7,8,9]))
   // TimeLine.drawTimeLine()
@@ -157,4 +158,32 @@ window.resetInterval = function () {
   console.log('reset Interval')
   Config.drawConfigs()
   Bookmark.drawBookmark('selection-config')
+}
+
+function loadVisualizationList() {
+  var visualizations = [
+      ['Node Link', 'nodelink'],
+      ['Adjacency Matrix', 'matrix'],
+      ['Time Arcs', 'dynamicego'],
+      ['Map', 'map'],
+  ];
+    visualizations.forEach(function (v) {
+        $('#visualizationList')
+            .append('<li class="visLink" title="Show ' + v[0] + ' visualization.">\
+                        <button onclick="loadVisualization(\'' + v[1] + '\')" class="visbutton hastooltip">\
+                            <img src="asset/figures/' + v[1] + '.png" class="visicon"/>\
+                            <p>' + v[0] + '</p>\
+                        </button>\
+                    </li>');
+    });
+    $('#visualizationList')
+        .append('<li class="visLink" title="Show matrix and node-link split-view.">\
+            <button onclick="loadVisualization(\'mat-nl\')" class="visbutton hastooltip">\
+            <img src="asset/figures/nl+mat.png" class="visicon"/><p>Matrix + Node Link</p>\
+        </button></li>');
+    $('#visualizationList')
+        .append('<li class="visLink" title="Show all visualizations.">\
+        <button onclick="loadVisualization(\'tileview\')" class="visbutton hastooltip">\
+        <img src="asset/figures/all.png" class="visicon"/><p>All</p>\
+        </button></li>');
 }
