@@ -1083,7 +1083,7 @@ Frame.prototype.drawIndividualMeasures = function (idx) {
        d3.select(this).style('stroke', 'yellow').style('stroke-width', 3)
        let newX =  parseFloat(self.attr('x')) + parseFloat(self.attr('width')) / 2
        let newY =  parseFloat(self.attr('y')) - 20
-       let value = d.y.toFixed(2)
+       let value = d.y%1 === 0? d.y: d.y.toFixed(2)
        timeTooltip
          .attr('x', newX)
          .attr('y', newY - 13)
@@ -1099,7 +1099,7 @@ Frame.prototype.drawIndividualMeasures = function (idx) {
            let data = ele.datum()
            d3.select(this)
             .select('.tooltip')
-            .text(d => data.y.toFixed(2))
+            .text(d => data.y%1===0? data.y:data.y.toFixed(2))
             .attr('x', newX)
             .attr('y', y)
             .style('fill', 'black')
@@ -1186,7 +1186,7 @@ Frame.prototype.drawExternalSvg = function (data) {
   }
   data.forEach(function(datum, idx){
     let bg = selfObj.fftG[idx]
-    let currentLen = bg.selectAll('mini_vis_fft')._groups[0].length
+    let currentLen = bg.selectAll('.mini_vis_fft')._groups[0].length
     let g =  bg.select('.fftView').append('g').classed('mini_vis_fft', true)
     let maxY = d3.max(datum.dots.map(v => v.y))
     if(selfObj.fftYscale[idx]) {
@@ -1212,20 +1212,22 @@ Frame.prototype.drawExternalSvg = function (data) {
      .style('fill', function(d) {
        return dg.selection.length < 2 ? 'gray' : dg.selection[idx].color
      })
+     .style('pointer-events', 'all')
      .style('opacity', 0.5)
      .on('mouseover', function (d, no) {
        let self = d3.select(this)
        d3.select(this).style('stroke', 'yellow').style('stroke-width', 3)
        let newX =  parseFloat(self.attr('x')) + parseFloat(self.attr('width')) / 2
        let newY =  parseFloat(self.attr('y')) - 20
-       let value = d.y.toFixed(2)
+       let value = d.y%1===0?d.y:d.y.toFixed(2)
        FRAME_INFO.forEach(frame => {
          frame.fftG.forEach(g => {
            let ele = g.select(`.rank_${no}.level_${currentLen}`)
+           console.log(ele, ele.datum(), currentLen)
            let y =  parseFloat(ele.attr('y')) - 5
            let data = ele.datum()
            g.select('.fft_tooltip')
-            .text(d => data.y.toFixed(2))
+            .text(d => data.y%1==0?data.y:data.y.toFixed(3))
             .attr('x', newX)
             .attr('y', y)
             .style('fill', 'black')
