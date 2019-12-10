@@ -224,6 +224,7 @@ let makeLines = function (g, data, xScale, yScale, labelData) {
         .text(`${Number(d.value).toFixed(2)} ${GRANULARITY_names[d.granularity]}`)
         .attr('x', x)
         .attr('y', 8)
+        .style('text-anchor', 'middle')
     })
     .on('mouseout', function (d) {
       d3.select(this)
@@ -297,6 +298,7 @@ let drawFFT = function (dataList) {
       })
       .on('mousemove', function () {
         let x = d3.mouse(this)[0]
+        let y = d3.mouse(this)[1]
         let milisecond = xScale.invert(x) * timeList[min_gran]
         let value = 0, granularity = 0
         g.select('.userInputLine').attr('x1', x).attr('x2', x)
@@ -313,6 +315,14 @@ let drawFFT = function (dataList) {
         }
         $(`#interval-value-input`).val(value.toFixed(3))
         $(`#granularity-selection`).val(granularity)
+        g.select('.approxTooltip')
+          .text(`${Number(value).toFixed(2)} ${GRANULARITY_names[granularity]}`)
+          .attr('x', x> w/2? x-2 :x+5)
+          .attr('y', y+5)
+          .style('text-anchor', x > w/2? 'end':'start')
+    })
+    .on('mouseout', function(){
+      g.select('.approxTooltip').text('').style('text-anchor', 'middle')
     })
     makeLines(canvas, datum, xScale, yScale, labelData)
   })

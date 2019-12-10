@@ -473,6 +473,17 @@ TimeSlider.prototype.init = function () {
      .attr('height', 50)
      .attr('x', 0)
      .attr('y', -6)
+     this.playerTimeline.append('g')
+       .selectAll('.snapshot')
+       .data(window.dgraph.timeArrays.momentTime)
+       .enter()
+       .append('line')
+       .style('stroke', '#E2E6EA')
+       .attr('class', (d, i)=>`snapshot snapshot_${i}`)
+       .attr('x1', d => xScale(d._d))
+       .attr('x2', d => xScale(d._d))
+       .attr('y1', 0)
+       .attr('y2', ZOOM_SLIDER_HEIGHT  / 3)
     this.playerTimeline.append('defs')
        .html(`	<pattern id='pattern_interval' patternUnits='userSpaceOnUse' width='5' height='5' patternTransform='rotate(45)'> 	<line x1='0' y='0' x2='0' y2='5' stroke='lightskyblue' stroke-width='6' />	</pattern>`)
    let iconG = this.svg.append('g').attr('transform', `translate(${MARGIN.left}, ${STATIC_SLIDER_HEIGHT + 5})`)
@@ -510,17 +521,6 @@ TimeSlider.prototype.init = function () {
        self.replay()
      })
 
-   this.staticTimeline.append('g')
-     .selectAll('.snapshot')
-     .data(window.dgraph.timeArrays.momentTime)
-     .enter()
-     .append('line')
-     .style('stroke', '#E2E6EA')
-     .attr('class', (d, i)=>`snapshot snapshot_${i}`)
-     .attr('x1', d => mainScale(d._d))
-     .attr('x2', d => mainScale(d._d))
-     .attr('y1', 0)
-     .attr('y2', - self.staticHeight  / 3)
   this.staticTimeline.append('g')
     .classed('static-timeline', true)
     .classed('timeslider', true).call(d3.axisTop(mainScale).ticks(6))
@@ -649,13 +649,19 @@ TimeSlider.prototype.updateHint = function (x, date) {
     .attr('x', x+5)
     .text(content)
 }
-
-TimeSlider.prototype.updateInterval = function (interval) {
+TimeSlider.prototype.removeInterval = function  () {
   this.intervalIndex = -1
+  this.interval = null
+  this.playerTimeline.selectAll('.interval-g').remove()
+  this.playerTimeline.selectAll('.snapshot').attr('y1', 0).style('stroke', '#E2E6EA')
+
+}
+TimeSlider.prototype.updateInterval = function (interval) {
+  this.removeInterval()
   this.interval = interval.period
-  this.playerTimeline.selectAll('g').remove()
+  this.playerTimeline.selectAll('.snapshot').attr('y1', 6)
   let self = this
-  let g = this.playerTimeline.append('g')
+  let g = this.playerTimeline.append('g').classed('interval-g', true)
     .attr('clip-path', `url(#clip_intervals)`)
   g.selectAll('rect')
     .data(interval.period)
@@ -1256,10 +1262,7 @@ Frame.prototype.build = function (data) {
 let initInterval = function (msg) {
   let m = msg.body
    if (!m.flag) {
-     timeslider.playerTimeline.selectAll('g').remove()
-     timeslider.staticTimeline.selectAll('.snapshot').style('stroke', '#E2E6EA')
-     timeslider.interval = []
-     timeslider.intervalIndex = -1
+     timeslider.removeInterval()
      return
    }
    let granId = m.granId
