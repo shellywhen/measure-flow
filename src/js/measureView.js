@@ -230,7 +230,7 @@ let brushendCallback = function (d) {
     let brushStart = xScale.invert(selection[0])
     let brushEnd = xScale.invert(selection[1])
     let interval = window.activeTime.endId - window.activeTime.startId
-    if (interval < 0) {
+    if (interval < 0 || selection[1] == 0 ) {
       FRAME_INFO.forEach(frame => {
         let res = frame.canvas.selectAll('.brush-result').style('visibility', 'hidden')
       })
@@ -470,7 +470,7 @@ TimeSlider.prototype.init = function () {
      .attr('id', `clip_intervals`)
      .append('SVG:rect')
      .attr('width', WIDTH_MIDDLE)
-     .attr('height', 20)
+     .attr('height', 50)
      .attr('x', 0)
      .attr('y', -6)
     this.playerTimeline.append('defs')
@@ -777,10 +777,11 @@ class Frame {
   }
 }
 Frame.prototype.init = function () {
-    let g = this.canvas.append('g')
+    let g = this.container.append('g')
       .classed('strokeTimeline', true)
-      .attr('transform', `translate(${0}, ${0})`)
+      .attr('transform', `translate(${WIDTH_LEFT+MARGIN.left}, ${0})`)
       .style('visibility', 'hidden')
+
     g.append('line')
       .attr('x0', -5)
       .attr('y0', 0)
@@ -1033,7 +1034,7 @@ Frame.prototype.drawIndividualMeasures = function (idx) {
   g.append('g')
    .classed('y-axis', true)
    .call(d3.axisLeft(yScale).ticks(2))
- let tooltip = g.append('text')
+ let tooltip = g.append('g').append('text')
    .attr('class', 'tooltip')
    .style('opacity', 0)
    .style('text-anchor', 'middle')
@@ -1159,34 +1160,40 @@ Frame.prototype.initFFTcanvas = function (data) {
         .attr('transform', `translate(0, ${svgHeight})`)
         .call(d3.axisBottom(xScale)).selectAll('.tick text').remove()
     g.append('g').classed('fftView', true).attr('clip-path', `url(#clip_${idx}_${this.index})`)
+     g.append('g').append('text')
+      .attr('class', 'fft_tooltip')
+      .style('opacity', 0)
+      .style('text-anchor', 'middle')
+      .style('font-size', '0.9rem')
    this.fftG[idx]=g
   })
 }
 Frame.prototype.drawExternalSvg = function (data) {
-  let self = this
-  let g = this.fftCanvas
+  let selfObj = this
+  let fftCanvas = this.fftCanvas
   this.canvas.style('display', 'none')
-  g.style('display', '')
+  fftCanvas.style('display', '')
   if(this.fftG.length===0) {
     this.initFFTcanvas(data)
   }
   data.forEach(function(datum, idx){
-    let bg = self.fftG[idx]
-    let g =  bg.select('.fftView').append('g')
+    let bg = selfObj.fftG[idx]
+    let currentLen = bg.selectAll('mini_vis_fft')._groups[0].length
+    let g =  bg.select('.fftView').append('g').classed('mini_vis_fft', true)
     let maxY = d3.max(datum.dots.map(v => v.y))
-    if(self.fftYscale[idx]) {
-      maxY = Math.max(self.fftYscale[idx].domain()[1], maxY)
+    if(selfObj.fftYscale[idx]) {
+      maxY = Math.max(selfObj.fftYscale[idx].domain()[1], maxY)
     }
-    let yScale = self.fftYscale[idx].domain([0, maxY])
-    self.fftYscale[idx] = yScale
-    bg.select('.y-axis').transition().duration(500).call(d3.axisLeft(self.fftYscale[idx]).ticks(2))
+    let yScale = selfObj.fftYscale[idx].domain([0, maxY])
+    selfObj.fftYscale[idx] = yScale
+    bg.select('.y-axis').transition().duration(500).call(d3.axisLeft(selfObj.fftYscale[idx]).ticks(2))
     // update existed rectangle
     bg.selectAll('.bars').transition().duration(800).attr('y', d => yScale(d.y)).attr('height', d => yScale(0) - yScale(d.y))
     g.selectAll('rect')
      .data(datum.dots)
      .enter()
      .append('rect')
-     .classed('bars', true)
+     .attr('class', (d, i) => `bars rank_${i} level_${currentLen}`)
      .attr('x', d => xScale(d.timeStart))
      .attr('y', d => yScale(d.y))
      .attr('height', d => yScale(0) - yScale(d.y))
@@ -1198,6 +1205,35 @@ Frame.prototype.drawExternalSvg = function (data) {
        return dg.selection.length < 2 ? 'gray' : dg.selection[idx].color
      })
      .style('opacity', 0.5)
+     .on('mouseover', function (d, no) {
+       let self = d3.select(this)
+       d3.select(this).style('stroke', 'yellow').style('stroke-width', 3)
+       let newX =  parseFloat(self.attr('x')) + parseFloat(self.attr('width')) / 2
+       let newY =  parseFloat(self.attr('y')) - 20
+       let value = d.y.toFixed(2)
+       FRAME_INFO.forEach(frame => {
+         frame.fftG.forEach(g => {
+           let ele = g.select(`.rank_${no}.level_${currentLen}`)
+           let y =  parseFloat(ele.attr('y')) - 5
+           let data = ele.datum()
+           g.select('.fft_tooltip')
+            .text(d => data.y.toFixed(2))
+            .attr('x', newX)
+            .attr('y', y)
+            .style('fill', 'black')
+            .style('opacity', 1)
+         })
+       })
+     })
+     .on('mouseout', function (d, no) {
+       d3.select(this).style('stroke', '').style('stroke-width', 0)
+       let tooltips = d3.selectAll(`.fft_tooltip`)
+      tooltips.style('opacity', 0)
+      tooltips.text('')
+     })
+     .on('click', function (d) {
+       networkcube.sendMessage('focusPeriod', d)
+     })
   })
 }
 
@@ -1243,6 +1279,7 @@ let addBars = function (msg) {
     return
   }
   let data = m.data
+
   frame.drawExternalSvg(data)
 }
 export let subgraphUpdateMeasure = function (dgraph, count) {
