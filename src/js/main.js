@@ -161,29 +161,26 @@ window.resetInterval = function () {
 }
 
 function loadVisualizationList() {
-  var visualizations = [
+  let dom = `${window.location.origin}${window.location.pathname}`
+  let query = `${window.location.search}`
+  let visualizations = [
       ['Node Link', 'nodelink'],
       ['Adjacency Matrix', 'matrix'],
       ['Time Arcs', 'dynamicego'],
       ['Map', 'map'],
+      ['Tiled View', 'tileview']
   ];
     visualizations.forEach(function (v) {
         $('#visualizationList')
-            .append('<li class="visLink" title="Show ' + v[0] + ' visualization.">\
-                        <button onclick="loadVisualization(\'' + v[1] + '\')" class="visbutton hastooltip">\
-                            <img src="asset/figures/' + v[1] + '.png" class="visicon"/>\
-                            <p>' + v[0] + '</p>\
-                        </button>\
-                    </li>');
+            .append(`<div class="col p-0 m-0" style="text-align: center;" >
+                        <a href=${dom}/web/sites/${v[1]}.html${query} target="_blank">
+                        <div class="view overlay hoverable zoom m-0 p-2">
+                          <img style="width:100%;" src="asset/figures/${v[1]}.png" class="visicon img-fluid " alt="zoom"/>
+                          <div class="rgba-white-strong mask flex-center waves-effect waves-light">
+                            <p class="black-text font-weight-bold">${v[0]}</p>
+                          </div>
+                       </div>
+                        </a>
+                    </div>`);
     });
-    $('#visualizationList')
-        .append('<li class="visLink" title="Show matrix and node-link split-view.">\
-            <button onclick="loadVisualization(\'mat-nl\')" class="visbutton hastooltip">\
-            <img src="asset/figures/nl+mat.png" class="visicon"/><p>Matrix + Node Link</p>\
-        </button></li>');
-    $('#visualizationList')
-        .append('<li class="visLink" title="Show all visualizations.">\
-        <button onclick="loadVisualization(\'tileview\')" class="visbutton hastooltip">\
-        <img src="asset/figures/all.png" class="visicon"/><p>All</p>\
-        </button></li>');
 }

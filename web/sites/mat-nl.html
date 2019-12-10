@@ -8,7 +8,7 @@
 
 	<!-- VS: Call to trace.js -->
 	<script type="text/javascript" src="../traces/trace.js"></script>
-	
+
 <script src="../../core/networkcube.js"></script>
 <script src="../classes/vistorian.js"></script>
 
@@ -19,7 +19,7 @@
 
 	<!-- VS: Call to trace_test_130529 -->
 	<script type="text/javascript" src="../traces/trace_test_130529.js"></script>
-	
+
     <div>
         <table id="layout" style="border:none" width="100%">
             <tr>
@@ -36,14 +36,14 @@
                 <a class="footer" href="mailto:networkcube@microsoft.com" target="_top">Contact Us</a> |
                 <a class="footer" href="https://go.microsoft.com/fwlink/?LinkId=521839" title="privacy">Privacy & Cookies</a>   |
                 <a class="footer" href="https://go.microsoft.com/fwlink/?LinkID=760869" title="terms of use">Terms Of Use</a>   |
-                <a class="footer" href="http://go.microsoft.com/fwlink/?LinkId=506942" title="trademarks">Trademarks</a>   
+                <a class="footer" href="http://go.microsoft.com/fwlink/?LinkId=506942" title="trademarks">Trademarks</a>
                 © 2016 Microsoft <img src="../logos/logo-microsoft.png" height="20px"> © 2016 INRIA <img src="../logos/logo-inria.png" height="20px">
     </div>
     <script>
-        SERVER = location.protocol + '//'+ window.location.hostname +  '' + window.location.pathname + '/';
+        SERVER =  `${window.location.origin}${window.location.pathname}`;
         SERVER = SERVER.split('web/')[0]
-  
-     
+
+
 
         $( document ).ready(function() {
             var width = window.innerWidth -30,
@@ -58,23 +58,23 @@
             console.log(params)
 
             networkcube.createVisualizationIFrame(
-                'bookmarkFrame', 
+                'bookmarkFrame',
                 SERVER + 'visualizations/bookmarkbrowser/index.html',
-                params['session'], params['datasetName'], 
+                params['session'], params['datasetName'],
                 width_col1, height);
-            
+
             networkcube.createVisualizationIFrame(
-                'nodelinkVisFrame', 
+                'nodelinkVisFrame',
                 SERVER + 'visualizations/nodelink/index.html',
-                params['session'], params['datasetName'], 
+                params['session'], params['datasetName'],
                 width_col2, height)
-            
+
             networkcube.createVisualizationIFrame(
-                'matrixVisFrame', 
+                'matrixVisFrame',
                 SERVER + 'visualizations/matrix/index.html',
-                params['session'], params['datasetName'], 
-                width_col2, height);         
-            
+                params['session'], params['datasetName'],
+                width_col2, height);
+
             vistorian.setHeader('logoFrame', params['datasetName']);
 
         });

@@ -258,8 +258,8 @@ let brushendCallback = function (d) {
           textY = maxY - svgHeight / 12 + (svgHeight + maxY) / 2
           canvas.select('.overflow_rect')
             .attr('x', xScale(brushStart))
-            .attr('y',  maxY - svgHeight / 12)
-            .attr('height', svgHeight / 12)
+            .attr('y',  maxY - svgHeight / 12 + 2)
+            .attr('height', svgHeight / 12 + 2)
             .attr('width', xScale(brushEnd) - xScale(brushStart))
           canvas.select('text')
             .attr('x', (xScale(brushStart) + xScale(brushEnd))/2)
@@ -879,9 +879,9 @@ class Frame {
     this.svg = this.div.append('svg').classed('frame-svg', true)
     .attr('height', SVGHEIGHT).attr('width', SVGWIDTH)
     this.container = this.svg.append('g')
+    this.hciZoom =  this.container.append('g').attr('transform', `translate(${WIDTH_LEFT+MARGIN.left}, ${0})`).classed('overlay-eect', true)
     this.canvas = this.container.append('g').attr('transform', `translate(${WIDTH_LEFT+MARGIN.left}, ${0})`).classed('measureView', true)
     this.fftCanvas = this.svg.append('g').classed('fft-result', true).attr('transform', `translate(${WIDTH_LEFT+MARGIN.left}, ${0})`)
-    this.hciZoom =  this.container.append('g').attr('transform', `translate(${WIDTH_LEFT+MARGIN.left}, ${0})`)
     this.dataLabel = dataLabel
     this.title = title
     this.description = description
@@ -918,7 +918,6 @@ Frame.prototype.init = function () {
        .attr('height', SVGHEIGHT)
        .attr('width', WIDTH_MIDDLE + 10)
       .style('opacity', 0)
-      .style('pointer-events', 'all')
       .on('mousemove', function() {
         let x = d3.mouse(this)[0]
         if (x < 5 || x > WIDTH_MIDDLE + 5) {
@@ -933,6 +932,7 @@ Frame.prototype.init = function () {
         .attr('x1', x)
         timeslider.updateHint(x, date)
       })
+      .style('pointer-events', 'all')
 }
 Frame.prototype.addData = function (data) {
   if(dg.selection.length === 1) {
@@ -955,14 +955,14 @@ Frame.prototype.drawTitle = function () {
   let width = WIDTH_LEFT * 0.5
   let dy = 0.5
   let fontsize = 0.9 * parseFloat(getComputedStyle(document.documentElement).fontSize)
-  let zoomzone = g.append('rect')
-    .attr('height', SVGHEIGHT)
-    .attr('width', WIDTH_LEFT+MARGIN.left)
-    .attr('x', -MARGIN.left)
-    .attr('y', 0)
-    .style('pointer-events', 'all')
-    .style('opacity', 0)
-    .call(zoom)
+  // let zoomzone = g.append('rect')
+  //   .attr('height', SVGHEIGHT)
+  //   .attr('width', WIDTH_LEFT+MARGIN.left)
+  //   .attr('x', -MARGIN.left)
+  //   .attr('y', 0)
+  //   .style('pointer-events', 'all')
+  //   .style('opacity', 0)
+  //   .call(zoom)
   let text = g.append('text')
    .classed('measureTitle', true)
    .attr('x', x)
@@ -1138,6 +1138,7 @@ Frame.prototype.drawIndividualMeasures = function (idx) {
     .attr('height',svgHeight + svgHeight / 6 + 5)
     .attr('x', 0)
     .attr('y', -svgHeight / 6 - 5)
+    .style('pointer-events', 'all')
   let yMax = this.yMax[idx]
   let yScale = d3.scaleLinear()
       .range([svgHeight, svgHeight / 6 + svgHeight / 12])
@@ -1376,7 +1377,7 @@ export let subgraphUpdateMeasure = function (dgraph, count) {
   }
   FRAME_INFO.forEach(frame => {
     frame.drawMeasureOvertime()
-    frame.init()
+        frame.init()
   })
 }
 

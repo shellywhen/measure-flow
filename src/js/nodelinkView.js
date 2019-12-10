@@ -103,6 +103,7 @@ let lasso_end = function () {
 let drawNodeLinkInPeriod = function (startId, endId) {
   if(startId > endId) {
     linkLayer.style('display', 'none')
+    nodeLayerG.style('opacity', 0.2)
     return
   }
   linkLayer.style('display', d => {
@@ -113,10 +114,10 @@ let drawNodeLinkInPeriod = function (startId, endId) {
       return 'none'
     }
   })
+  nodeLayerG.style('opacity', 1)
   nodeLayer.attr('r', d => {
     let value = DataHandler.getLocalMeasure(d)
      return Math.sqrt(value) * 0.5 + 1;
-    // return Math.log(value + 1)
   })
 }
 
@@ -371,9 +372,6 @@ let drawLayout = function (svg) {
   })
   forceLayout.force('link')
     .links(links)
-    // networkcube.setDefaultEventListener(function () {
-    //   console.log('default')
-    // })
 }
 
 let updateTimeline = function (start, end, startText='', endText='') {
@@ -409,14 +407,6 @@ let drawNodeLink = function () {
         if(i!=dg.timeArrays.unixTime.legth - 1&&dg.timeArrays.unixTime[i+1] > end && d <= end)
         endId = i
       })
-    // let startId = binarySearch(dg.timeArrays.unixTime, d => d >= start)
-// let startId = binarySearch(dg.timeArrays.unixTime, d => d >= start)
-    //let endId =    binarySearch(dg.timeArrays.unixTime, d => d >= end)
-  //  endId = Math.min(endId, dg.timeArrays.unixTime.length - 1)
-    // if(endId != dg.timeArrays.unixTime.length - 1) {
-    //   endId -= 1
-    // }
-    // console.log('calculated: ', startId, endId)
     drawNodeLinkInPeriod(startId, endId)
     window.activeTime = {startId: startId, endId: endId, start: start, end: end}
   })

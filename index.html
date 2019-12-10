@@ -6,7 +6,7 @@
   <title>Measures Flow</title>
   <meta name="description" content="Dynamic Network Visualization">
   <meta name="author" content="Liwenhan Xie">
-  <link rel="icon" type="image/png" href="./lib/fig/vis-nodelink.png" />
+  <link rel="icon" type="image/png" href="./asset/fig/vis-nodelink.png" />
   <link rel="stylesheet" href="./src/css/main.css">
   <link rel="stylesheet" href="./lib/css/mdb.min.css">
   <link rel="stylesheet" href="./lib/css/bootstrap.min.css">
@@ -70,7 +70,7 @@
         <div id="logo">
           <a href="http://vistorian.net/">
             <figure>
-              <img src="./lib/fig/logo-networkcube.png" alt="logo" width="100%" height="100%">
+              <img src="./asset/fig/logo-networkcube.png" alt="logo" width="100%" height="100%">
             </figure>
           </a>
 
@@ -97,6 +97,8 @@
         <div class="col-2">
         </div>
         <div class="col-9">
+          <div class="row darkdiv" id="visualizationList">
+          </div>
           <div id="linkTableContainer" class="darkdiv">
             <h2 class="title tableMenu">Link Table</h2>
             <p class="m-0">A link table describes the links in a network. That means that each row describes a link with at least a source and target. Optional attributes include time, link type, link weight, and locations of source and target nodes
@@ -129,8 +131,6 @@
           </div>
           <button class="btn peach-gradient ml-4" onclick="updateNetwork()">Update Data</button>
           <button type="button" class="btn aqua-gradient" onclick="$('#dataConfigButton').click()"><i class="fas fa-sign-out-alt"></i></button>
-          <div id="visualizationList">
-          </div>
         </div>
       </div>
     </div>
