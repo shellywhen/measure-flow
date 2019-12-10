@@ -45,6 +45,7 @@ let zoomed = function (xScale, kdeScale) {
   d3.selectAll('.interval-bars')
     .attr('x', d => xScale(d.x0))
     .attr('width', d => Math.max(1, xScale(d.x1) - xScale(d.x0)))
+  d3.selectAll('.snapshot').attr('x1', d => xScale(d._d)).attr('x2', d => xScale(d._d))
   FRAME_INFO.forEach(frame => {
     frame.canvas.selectAll('.kdeLine').each(function(d, i) {
       d3.select(this).select('path').attr('d', d => frame.lineGenerator[i].x(d => kdeScale(d.x))(d))
@@ -474,6 +475,7 @@ TimeSlider.prototype.init = function () {
      .attr('x', 0)
      .attr('y', -6)
      this.playerTimeline.append('g')
+       .attr('clip-path', `url(#clip_intervals)`)
        .selectAll('.snapshot')
        .data(window.dgraph.timeArrays.momentTime)
        .enter()
