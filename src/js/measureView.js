@@ -101,10 +101,10 @@ let setCanvasParameters = function (divId, dgraph) {
   svgHeight = SVGheight
   VIEW = CANVAS.append('g').attr('transform', `translate(0, ${ZOOM_SLIDER_HEIGHT + STATIC_SLIDER_HEIGHT})`)
   brush = d3.brushX()
-  .extent([[0,0], [WIDTH_MIDDLE, Math.floor(ZOOM_SLIDER_HEIGHT / 5)-2]])
+  .extent([[0,0], [WIDTH_MIDDLE, Math.floor(STATIC_SLIDER_HEIGHT / 6)-2]])
   .on('end', brushZoom)
   brushTime = d3.brushX()
-    .extent([[0,0], [WIDTH_MIDDLE, Math.floor(STATIC_SLIDER_HEIGHT / 6)-2]])
+    .extent([[0,0], [WIDTH_MIDDLE, Math.floor(ZOOM_SLIDER_HEIGHT / 5)-2]])
     .on('brush end', brushed)
     .on('end', brushendCallback)
   xScale = d3.scaleTime()
@@ -225,8 +225,8 @@ let brushZoom = function () {
 let brushendCallback = function (d) {
     console.log('brush end callback')
     let selection = d3.event.selection || [0,0]
-    let brushStart = mainScale.invert(selection[0])
-    let brushEnd = mainScale.invert(selection[1])
+    let brushStart = xScale.invert(selection[0])
+    let brushEnd = xScale.invert(selection[1])
     let interval = window.activeTime.endId - window.activeTime.startId
     if (interval < 0) {
       FRAME_INFO.forEach(frame => {
@@ -673,8 +673,8 @@ TimeSlider.prototype.init = function () {
     .attr('transform', `translate(0,2)`)
     .attr('id', 'brushPeriod')
     .classed('brush-g', true)
-    .call(brushTime)
-    .call(brushTime.move, null)
+    .call(brush)
+    .call(brush.move, null)
   staticRangeG.append('path')
     .datum([[0, 0], [0,self.staticHeight / 6], [0, self.staticHeight / 6 + self.sliderHeight / 3]])
     .attr('id', 'startTimeCurve')
@@ -724,8 +724,8 @@ TimeSlider.prototype.init = function () {
    .append('g')
    .attr('transform', `translate(0,${- this.sliderHeight / 5})`)
    .classed('zoom-brush', true)
-   .call(brush)
-   .call(brush.move, null)
+   .call(brushTime)
+   .call(brushTime.move, null)
 
  let textLayer = this.sliderTimeline.append('g')
    .attr('transform', `translate(0, ${- 5})`)
@@ -868,7 +868,7 @@ TimeSlider.prototype.highlight = function () {
   for (let tid = d.interval[0]; tid <d.interval[1]; tid++) {
     d3.select(`.snapshot_${tid}`).style('stroke', 'orange')
   }
-  d3.select('.brush-g').call(brushTime.move, [mainScale(d.x0), mainScale(d.x1)])
+  d3.select('.brush-g').call(brushTime.move, [xScale(d.x0), xScale(d.x1)])
   networkcube.sendMessage('player', d)
 }
 class Frame {
