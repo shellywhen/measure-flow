@@ -206,6 +206,7 @@ function createLinks() {
 function timeRangeHandler(m) {
     startUnix = m.startUnix;
     endUnix = m.endUnix;
+    console.log(m)
     timeSlider.set(startUnix, endUnix);
     timeXFunction
         .domain([startUnix, endUnix]);

@@ -226,7 +226,8 @@ let brushZoom = function () {
 }
 
 let brushendCallback = function (d) {
-    console.log('brush end callback', d)
+    console.log('brush end callback', d, window.activeTime)
+    networkcube.timeRange(window.activeTime.start, window.activeTime.end, 20, true)
     let selection = d3.event.selection || [0,0]
     let brushStart = xScale.invert(selection[0])
     let brushEnd = xScale.invert(selection[1])
@@ -304,7 +305,7 @@ let brushed = function () {
         if(i!=dg.timeArrays.unixTime.legth - 1&&dg.timeArrays.unixTime[i+1] > end && d <= end)
         endId = i
       })
-    window.activeTime = {startId: startId, endId: endId, startUnix: start, endUnix: end, start: brushStart, end: brushEnd}
+    window.activeTime = {startId: startId, endId: endId, 'startUnix': start, 'endUnix': end, start: brushStart, end: brushEnd}
 
     let textStart = brushStart.toLocaleDateString('en-US', TIPS_CONFIG)
     let textEnd = brushEnd.toLocaleDateString('en-US', TIPS_CONFIG)
