@@ -18,7 +18,7 @@ import * as Config from './configureView.js'
 import * as Bookmark from './bookmarkBrowser.js'
 // import * as Stat from './statView.js'
 // import * as Box from './boxView.js'
-import * as Kde from  './kdeView.js'
+// import * as Kde from  './kdeView.js'
 // import * as Heatmap from './heatmapView.js'
 import * as Measure from './measureView.js'
 import * as DataHandler from './dataHandler.js'
@@ -29,7 +29,6 @@ async function loadFFT(){
     })
   return res
 }
-
 String.prototype.capitalize = function() {
     return this.charAt(0).toUpperCase() + this.slice(1);
 }
@@ -89,13 +88,11 @@ let dataFileName = networkcube.getUrlVars()['datasetName'].replace(/___/g, ' ')
 let config = configMap[dataFileName]
 // 'DiplomaticExchange.csv' //  'DD/MM/YYYY'
 let url = `${domain}${dataFolder}/${dataFileName}.csv`
-
-console.log('find data in ', url)
 // load data file with the above link schema
 let dataset = networkcube.loadLinkTable(url, afterLoadedData, config[0], ',', config[1])
 // create a session for this data set.
 async function afterLoadedData(dataset) {
-    await loadFFT()
+   await loadFFT()
     dataset.name = dataFileName
     // import data into browser's localstorage.
     networkcube.importData(session, dataset)
@@ -105,13 +102,13 @@ async function afterLoadedData(dataset) {
 
 window.afterData = function () {
   let dgraph = window.dgraph
+  Bookmark.drawBookmark('selection-config')
   loadVisualizationList()
    DataHandler.addGlobalProperty(dgraph)
 //  DataHandler.getSubgraphDgraph(window.dgraph, new Set([0,1,2,3,4,5,6,7,8,9]))
   // TimeLine.drawTimeLine()
 //  TimeSlider.drawTimeSlider(Measure.WIDTH_LEFT, Measure.WIDTH_MIDDLE)
   //Box.drawBox()
-  // Kde.drawKde('timelineFrame')
 
 //  Heatmap.drawHeatmap('heatmapFrame')
   NodeLink.drawNodeLink()
@@ -120,7 +117,6 @@ window.afterData = function () {
   //
 //  Stat.drawStatView('radarDiv')
   Config.drawConfigs()
-  Bookmark.drawBookmark('selection-config')
   Interval.drawIntervalConfig('config-interval', dgraph)
   networkcube.addEventListener('subgraph', function (m) {
     let dg = window.dgraph
@@ -150,8 +146,8 @@ window.afterData = function () {
       Measure.subgraphUpdateMeasure(dg, 1)
     }
   })
-
 }
+
 
 window.resetInterval = function () {
   Measure.measureFrameInit(window.dgraph, 'measureFrame')

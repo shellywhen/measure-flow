@@ -1,5 +1,5 @@
 import * as NodeLink from './nodelinkView.js'
-import * as Scatter from './scatterView.js'
+// import * as Scatter from './scatterView.js'
 import * as Measure from './measureView.js'
 let addStyleConfig = function (divId, title, callback, min=0, max=3, value=1, step=0.01) {
   let div = d3.select(`#${divId}`)
@@ -186,9 +186,9 @@ let drawConfigs = function () {
 })
   addDatasetOption()
   // scatter config
-  addScatterConfig(networkcube.GRANULARITY.slice(dg.getMinGranularity(), dg.getMaxGranularity() + 1), Scatter.localMeasureList)
-  d3.select('#launchScatter')
-    .on('click', d => Scatter.updateScatter())
+  // addScatterConfig(networkcube.GRANULARITY.slice(dg.getMinGranularity(), dg.getMaxGranularity() + 1), Scatter.localMeasureList)
+  // d3.select('#launchScatter')
+  //   .on('click', d => Scatter.updateScatter())
   // network style
   addStyleConfig('config-style', 'Node Size', changeNodeSize)
   addStyleConfig('config-style', 'Link Width', changeLinkWidth, 0, 5)

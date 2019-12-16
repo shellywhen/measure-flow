@@ -151,60 +151,6 @@ let changeKDE = function (m) {
       })
     })
 }
-let addTimeline = function () {
-  let g = CANVAS.append('g')
-    .attr('id', 'strokeTimeline')
-    .classed('strokeTimeline', true)
-    .attr('transform', `translate(${WIDTH_LEFT+MARGIN.left}, ${ZOOM_SLIDER_HEIGHT+ STATIC_SLIDER_HEIGHT})`)
-    .append('g')
-    .style('visibility', 'hidden')
-  let line = g.append('line')
-    .attr('id', 'hintline')
-    .classed('vertical-hintline', true)
-    .attr('x0', 0)
-    .attr('x1', 0)
-    .attr('y0', - 2 * ZOOM_SLIDER_HEIGHT / 5)
-    .attr('y1', CANVAS_HEIGHT- ZOOM_SLIDER_HEIGHT - STATIC_SLIDER_HEIGHT)
-    .style('stroke-linecap', 'round')
-    .style('stroke-dasharray', '5,5')
-    .style('stroke-width', 1)
-    .style('stroke', 'gray')
-    .style('opacity', 0.5)
-  g.append('rect')
-   .style('fill', 'white')
-   .attr('x', 0)
-   .attr('y', - 3* ZOOM_SLIDER_HEIGHT / 5 - 5)
-   .attr('height', '1.5rem')
-   .attr('width', '6rem')
-   .attr('rx', '0.3rem')
-   .attr('ry', '0.3rem')
-  g.append('text')
-   .text('hint')
-   .style('font-size', '0.85rem')
-   .style('fill', 'gray')
-   .style('font-family', 'cursive')
-   .style('text-anchor', 'middle')
-   .attr('y', - 3*  ZOOM_SLIDER_HEIGHT / 5 + 6)
-  VIEW.select('.hint')
-   .on('mousemove', function () {
-     let x = d3.mouse(this)[0]
-     if (x < 0 || x > WIDTH_MIDDLE) {
-       g.style('visibility', 'hidden')
-       return
-     }
-     g.style('visibility', 'visible')
-     let date = xScale.invert(x)
-     let content = date.toLocaleDateString('en-US', TIPS_CONFIG)
-     d3.select('#mainFrame')
-        .selectAll('.vertical-hintline').attr('x2', x)
-        .attr('x1', x)
-     g.select('rect')
-       .attr('x', x - 45)
-     g.select('text')
-      .attr('x', x+5)
-       .text(content)
-   })
-}
 
 let brushZoom = function () {
   let extent = d3.event.selection
@@ -564,7 +510,6 @@ TimeSlider.prototype.init = function () {
 
   this.sliderTimeline.append('g')
     .append('line')
-    .attr('id', 'hintLine')
     .classed('dash-timeline', true)
     .attr('x1', 0)
     .attr('y1', 0)
@@ -642,7 +587,7 @@ TimeSlider.prototype.zoomed = function () {
 
 TimeSlider.prototype.updateHint = function (x, date) {
   let content = date.toLocaleDateString('en-US', TIPS_CONFIG)
-  let boss = this.hintCanvas
+  let boss = this.hintCanvas.style('visibility', 'visible')
   boss.select('line')
     .attr('x1', x)
     .attr('x2', x)
@@ -651,6 +596,9 @@ TimeSlider.prototype.updateHint = function (x, date) {
   boss.select('text')
     .attr('x', x+5)
     .text(content)
+}
+TimeSlider.prototype.fadeHint = function () {
+  this.hintCanvas.style('visibility', 'hidden')
 }
 TimeSlider.prototype.removeInterval = function  () {
   this.intervalIndex = -1
@@ -662,7 +610,7 @@ TimeSlider.prototype.removeInterval = function  () {
 TimeSlider.prototype.updateInterval = function (interval) {
   this.removeInterval()
   this.interval = interval.period
-  this.playerTimeline.selectAll('.snapshot').attr('y1', 6)
+  this.playerTimeline.selectAll('.snapshot').attr('y1', 8)
   let self = this
   let g = this.playerTimeline.append('g').classed('interval-g', true)
     .attr('clip-path', `url(#clip_intervals)`)
@@ -674,12 +622,18 @@ TimeSlider.prototype.updateInterval = function (interval) {
     .attr('x', d => xScale(d.x0))
     .attr('width', d => Math.max(2, xScale(d.x1) - xScale(d.x0)))
     .attr('y', 0)
-    .attr('height', 6)
+    .attr('height', d => {
+      if (d.interval[1]>d.interval[0]) return 8
+      return 5
+    })
     .style('fill', d => {
       if(d.interval[1]>d.interval[0]) return 'orange'
       return 'lightslategray'
     })
-    .style('stroke', 'white')
+    .style('stroke', d => {
+      // if(d.interval[1]>d.interval[0]) return 'orange'
+      return 'white'
+    })
     .style('stroke-width', '1px')
     .style('opacity', 0.5)
     .style('cursor', 'pointer')
@@ -705,7 +659,11 @@ TimeSlider.prototype.updateInterval = function (interval) {
       networkcube.sendMessage('player', d)
     })
     .on('mouseout', function(d) {
-      d3.select(this).attr('height', 6).attr('y', 0)
+      d3.select(this)
+        .attr('height', v => {
+        return d.interval[1]>d.interval[0]?8:5
+      })
+        .attr('y', 0)
       d3.selectAll('.snapshot').style('stroke',  '#E2E6EA')
     })
  g.append('rect')
@@ -810,8 +768,9 @@ Frame.prototype.init = function () {
       .style('opacity', 0)
       .on('mousemove', function() {
         let x = d3.mouse(this)[0]
-        if (x < 5 || x > WIDTH_MIDDLE + 5) {
+        if (x < 0 || x > WIDTH_MIDDLE) {
          d3.selectAll('.dash-timeline').style('visibility', 'hidden')
+         timeslider.fadeHint()
           return
         }
         d3.selectAll('.dash-timeline').style('visibility', 'visible')
@@ -1268,6 +1227,7 @@ let initInterval = function (msg) {
   let m = msg.body
    if (!m.flag) {
      timeslider.removeInterval()
+     networkcube.sendMessage('nodelinkInterval', {'flag': false})
      return
    }
    let granId = m.granId
@@ -1275,6 +1235,7 @@ let initInterval = function (msg) {
    let shift = m.shift
    let timeSlot = DataHandler.getSingleBins(granId, value, dg.timeArrays.momentTime, shift)
    timeslider.updateInterval(timeSlot)
+   networkcube.sendMessage('nodelinkInterval', {'slot': timeSlot, 'flag': true, 'tip': TIPS_CONFIG})
 }
 let addBars = function (msg) {
   let m = msg.body
@@ -1287,7 +1248,6 @@ let addBars = function (msg) {
     return
   }
   let data = m.data
-
   frame.drawExternalSvg(data)
 }
 export let subgraphUpdateMeasure = function (dgraph, count) {
@@ -1304,6 +1264,11 @@ export let subgraphUpdateMeasure = function (dgraph, count) {
     frame.drawMeasureOvertime()
         frame.init()
   })
+}
+
+let brushMoveMsg = function (m) {
+  let data = m.body
+  d3.select('.brush-g').call(brushTime.move, [xScale(data.x0), xScale(data.x1)])
 }
 
 export let createNormalMeasures = function (dgraph) {
@@ -1373,4 +1338,5 @@ export function measureFrameInit (dgraph, divId = 'measureFrame') {
   networkcube.addEventListener('bandwidth', changeKDE)
   networkcube.addEventListener('initGran', initInterval)
   networkcube.addEventListener('slotData', addBars)
+  networkcube.addEventListener('brushMove', brushMoveMsg)
 }

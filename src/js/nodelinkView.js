@@ -97,7 +97,7 @@ let lasso_end = function () {
     let selectedCircles = lasso.selectedItems()
         .classed('selected', true)
     window.lasso_selection = selectedCircles._groups[0].map(d => d.__data__)
-
+    d3.select('#lassoButton').style('display', '')
 }
 
 let drawNodeLinkInPeriod = function (startId, endId) {
@@ -130,6 +130,7 @@ let cancelLasso = function () {
       d3.select(`#hull_${v.id}`).style('fill-opacity', 0.3)
     }
   })
+  d3.select('#lassoButton').style('display', 'none')
 }
 let lineGenerator = d3.line().x(d => d.x).y(d => d.y)//.curve(d3.curveCardinal)
 let addSelection = function () {
@@ -144,6 +145,7 @@ let addSelection = function () {
   .on('click', function(d) {
     d3.select(this).style('fill-opacity', 0.8)
     window.selectionId = id
+    d3.select('#lassoButton').style('display', '')
   })
   let circleData = d3.select('.nodeLayer').selectAll('.nodes').data()
   let circles = selection.map(v => {
@@ -160,6 +162,7 @@ let addSelection = function () {
     'flag': true
   })
   lasso.items().classed('possible', false)
+  d3.select('#lassoButton').style('display', 'none')
 }
 
 let expandSelection = function () {
@@ -178,6 +181,7 @@ let expandSelection = function () {
   d3.select(`#hull_${window.selectionId}`).datum(hull).enter().attr('d', d => `M ${d.join("L")} Z`)
   networkcube.sendMessage('subgraph', newSet)
   lasso.items().classed('possible',false)
+  d3.select('#lassoButton').style('display', 'none')
 }
 
 let drawTimeline = function (svg) {
@@ -187,12 +191,12 @@ let drawTimeline = function (svg) {
     .attr('transform', `translate(${nodelinkWidth*0.05}, ${nodelinkHeight * 0.05 + h})`)
   canvas.append('line').attr('x1', 0).attr('x2', timelineWidth).attr('y1', 0).attr('y2', 0).style('stroke', 'gray').style('opacity', 0.5)
   xScale = d3.scaleTime().range([0, timelineWidth]).domain([dg.roundedStart, dg.roundedEnd])
-  canvas.append('rect').classed('nodelink_timerange', true).attr('x', 0).attr('y', -h / 2).attr('width', timelineWidth).attr('height', h).style('opacity', 0.5).style('fill', 'gray')
+  canvas.append('rect').classed('nodelink_timerange', true).attr('x', 0).attr('y', -h / 3).attr('width', timelineWidth).attr('height', 2 * h/3).style('opacity', 0.5).style('fill', 'gray').attr('rx', h / 2).attr('ry', h/2)
   canvas.append('circle').classed('nodelink_timepoint', true).attr('cx', 0).attr('cy', 0).attr('r', 0.8 * h).style('opacity', 1).style('fill', 'orange')
   canvas.append('text').attr('id', 'nodelink_textStart').text('').style('text-anchor', 'start')
-    .attr('x', 0).attr('y', -2).style('font-size', 'small')
+    .attr('x', 0).attr('y', -h / 2).style('font-size', 'small')
   canvas.append('text').attr('id', 'nodelink_textEnd').text('').style('text-anchor', 'end')
-    .attr('x', timelineWidth).attr('y', -2).style('font-size', 'small')
+    .attr('x', timelineWidth).attr('y', - h / 2).style('font-size', 'small')
 }
 
 let drawLassoConfig = function (svg) {
@@ -200,6 +204,7 @@ let drawLassoConfig = function (svg) {
   let configCell = svg.append('g')
     .attr('transform', `translate(${0}, ${nodelinkheight})`)
     .attr('id', 'lassoButton')
+    .style('display', 'none')
   let data = [{
     text:'New', class:'success', callback: addSelection
   }, {
@@ -244,10 +249,10 @@ let perfectScale = function() {
     maxy = Math.max(maxy, node.y)
   }
   let ratiox =  2 *  Math.max(maxx, -minx) / nodelinkWidth
-  let ratioy =  2 * Math.max(maxy, -miny) / nodelinkheight
+  let ratioy =  2 *  Math.max(maxy, -miny) / nodelinkheight
   nodes.forEach(d => {
-      d.x = (d.x - nodelinkWidth / 2)  / ratiox + nodelinkWidth / 2
-      d.y = (d.y - nodelinkheight / 2) / ratioy + nodelinkheight / 2
+      d.x =  (d.x - nodelinkWidth / 2)  / ratiox + nodelinkWidth / 2
+      d.y =  (d.y - nodelinkheight / 2) / ratioy + nodelinkheight / 2 + nodelinkHeight / 10
   })
 }
 let initNodeLink = function (svg, dgraph) {
@@ -294,7 +299,7 @@ let initNodeLink = function (svg, dgraph) {
     .style('text-anchor', 'middle')
     .style('font-size', '3rem')
     .attr('x', nodelinkWidth / 2)
-    .attr('y', nodelinkheight / 2)
+    .attr('y', nodelinkheight / 2 + nodelinkHeight / 10)
   return g
 }
 
@@ -321,7 +326,6 @@ let drawLayout = function (svg) {
   forceLayout
     .nodes(nodes)
     .on('end', function() {
-      console.log('end!!!')
       perfectScale(dg)
       calculateCurvedLinks()
       linkLayer
@@ -381,6 +385,69 @@ let updateTimeline = function (start, end, startText='', endText='') {
   d3.select('#nodelink_textEnd').text(endText)
 }
 
+let updateInterval = function (m) {
+  let data = m.body
+  let svg = d3.select('#' + nodelinkSvgId)
+  let canvas = svg.select('.timelinehint')
+  canvas.select('.slotCanvas').remove()
+  if(!data.flag) return
+  let TIPS_CONFIG = data.tip
+  let g = canvas.append('g').classed('slotCanvas', true).attr('transform', `translate(${0}, ${6})`)
+  g.selectAll('.slot')
+    .data(data.slot.period)
+    .enter()
+    .append('rect')
+    .classed('slot', true)
+    .attr('x', d => xScale(d.x0))
+    .attr('width', d => Math.max(2, xScale(d.x1) - xScale(d.x0)))
+    .attr('y', 0)
+    .attr('rx', 1)
+    .attr('ry', 1)
+    .attr('height', d => {
+      if (d.interval[1]>d.interval[0]) return 8
+      return 5
+    })
+    .style('fill', d => {
+      if(d.interval[1]>d.interval[0]) return 'orange'
+      return 'lightslategray'
+    })
+    .style('stroke', d => {
+      // if(d.interval[1]>d.interval[0]) return 'orange'
+      return 'white'
+    })
+    .style('stroke-width', '1px')
+    .style('opacity', 0.5)
+    .style('cursor', 'pointer')
+    .on('click', function (d, i) {
+      d.textStart = d.x0.toLocaleDateString('en-US', TIPS_CONFIG)
+      d.textEnd = d.x1.toLocaleDateString('en-US', TIPS_CONFIG)
+      d3.selectAll('.snapshot').style('stroke',  '#E2E6EA')
+      for (let tid = d.interval[0]; tid <d.interval[1]; tid++) {
+        d3.select(`.snapshot_${tid}`).style('stroke', 'orange')
+      }
+      networkcube.sendMessage('brushMove', {'x0': d.x0, 'x1': d.x1})
+      networkcube.sendMessage('player', d)
+    })
+    .on('mouseover', function (d) {
+      d3.select(this).attr('y', -3).attr('height', 15)
+      d.textStart = d.x0.toLocaleDateString('en-US', TIPS_CONFIG)
+      d.textEnd = d.x1.toLocaleDateString('en-US', TIPS_CONFIG)
+      d3.selectAll('.snapshot').style('stroke',  '#E2E6EA')
+      for (let tid = d.interval[0]; tid <d.interval[1]; tid++) {
+        d3.select(`.snapshot_${tid}`).style('stroke', 'orange')
+      }
+      networkcube.sendMessage('player', d)
+    })
+    .on('mouseout', function(d) {
+      d3.select(this)
+        .attr('height', v => {
+        return d.interval[1]>d.interval[0]?8:5
+      })
+        .attr('y', 0)
+      d3.selectAll('.snapshot').style('stroke',  '#E2E6EA')
+    })
+}
+
 let drawNodeLink = function () {
   // create canvas
   d3.select('#' + nodelinkSvgId).html('')
@@ -427,6 +494,7 @@ let drawNodeLink = function () {
     calculateCurvedLinks()
     linkLayer.attr('d', d => lineGenerator(d.path))
   })
+  networkcube.addEventListener('nodelinkInterval', updateInterval)
 }
 
 
