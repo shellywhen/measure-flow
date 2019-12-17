@@ -608,7 +608,7 @@ TimeSlider.prototype.removeInterval = function  () {
 TimeSlider.prototype.updateInterval = function (interval) {
   this.removeInterval()
   this.interval = interval.period
-  this.playerTimeline.selectAll('.snapshot').attr('y1', 8)
+  this.playerTimeline.selectAll('.snapshot').attr('y1', 10)
   let self = this
   let g = this.playerTimeline.append('g').classed('interval-g', true)
     .attr('clip-path', `url(#clip_intervals)`)
@@ -621,7 +621,7 @@ TimeSlider.prototype.updateInterval = function (interval) {
     .attr('width', d => Math.max(2, xScale(d.x1) - xScale(d.x0)))
     .attr('y', 0)
     .attr('height', d => {
-      if (d.interval[1]>d.interval[0]) return 8
+      if (d.interval[1]>d.interval[0]) return 10
       return 5
     })
     .style('fill', d => {
@@ -647,7 +647,7 @@ TimeSlider.prototype.updateInterval = function (interval) {
       networkcube.sendMessage('player', d)
     })
     .on('mouseover', function (d) {
-      d3.select(this).attr('y', -3).attr('height', 15)
+      d3.select(this).attr('y', -5).attr('height', 15)
       d.textStart = d.x0.toLocaleDateString('en-US', TIPS_CONFIG)
       d.textEnd = d.x1.toLocaleDateString('en-US', TIPS_CONFIG)
       d3.selectAll('.snapshot').style('stroke',  '#E2E6EA')
@@ -659,7 +659,7 @@ TimeSlider.prototype.updateInterval = function (interval) {
     .on('mouseout', function(d) {
       d3.select(this)
         .attr('height', v => {
-        return d.interval[1]>d.interval[0]?8:5
+        return d.interval[1]>d.interval[0]?10:5
       })
         .attr('y', 0)
       d3.selectAll('.snapshot').style('stroke',  '#E2E6EA')

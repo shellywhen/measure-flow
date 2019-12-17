@@ -404,7 +404,7 @@ let updateInterval = function (m) {
     .attr('rx', 1)
     .attr('ry', 1)
     .attr('height', d => {
-      if (d.interval[1]>d.interval[0]) return 8
+      if (d.interval[1]>d.interval[0]) return 10
       return 5
     })
     .style('fill', d => {
@@ -429,7 +429,7 @@ let updateInterval = function (m) {
       networkcube.sendMessage('player', d)
     })
     .on('mouseover', function (d) {
-      d3.select(this).attr('y', -3).attr('height', 15)
+      d3.select(this).attr('y', -5).attr('height', 20)
       d.textStart = d.x0.toLocaleDateString('en-US', TIPS_CONFIG)
       d.textEnd = d.x1.toLocaleDateString('en-US', TIPS_CONFIG)
       d3.selectAll('.snapshot').style('stroke',  '#E2E6EA')
@@ -441,7 +441,7 @@ let updateInterval = function (m) {
     .on('mouseout', function(d) {
       d3.select(this)
         .attr('height', v => {
-        return d.interval[1]>d.interval[0]?8:5
+        return d.interval[1]>d.interval[0]?10:5
       })
         .attr('y', 0)
       d3.selectAll('.snapshot').style('stroke',  '#E2E6EA')
