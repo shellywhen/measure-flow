@@ -257,13 +257,11 @@ let brushed = function () {
     let textEnd = brushEnd.toLocaleDateString('en-US', TIPS_CONFIG)
     d3.select('#timeStartText')
       .classed('annotation', true)
-      .style('display', 'none')
       .text(textStart)
       .attr('transform', 'translate('+ selection[0] + ', 0)')
 
     d3.select('#timeEndText')
       .classed('annotation', true)
-      .style('display', 'none')
       .text(textEnd)
       .attr('transform', 'translate('+ selection[1] + ', 0)')
 
