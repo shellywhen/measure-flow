@@ -113,12 +113,14 @@ let addMoreIntervals = function (shift = 0, value, granularity) {
   drawSpan(datum, shift)
   if(GLOBAL_ACTIVE_FRAME!=null) {
     let intervals = DataHandler.getSingleBins(granId, val, dg.timeArrays.momentTime, shift)
+    console.log(intervals)
     window.measureIds.forEach((label, idx) => {
       let data = dg.selection.length > 0 ? dg.selection.map(v => Calculator.getSingleData(v.dgraph, intervals, label)) : [Calculator.getSingleData(dg, intervals, label)]
       networkcube.sendMessage('slotData', {
         data: data,
         flag: true,
-        label: label
+        label: label,
+        milisecond: intervals['milisecond']
       })
     })
   }
@@ -209,7 +211,7 @@ let makeLines = function (g, data, xScale, yScale, labelData) {
     .append('line')
     .attr('x1', d => xScale(d.T))
     .attr('x2', d => xScale(d.T))
-    .attr('y1', d => yScale(d.magnitude))
+    .attr('y1', (d, i) => h / (data.length + 1)*i)
     .attr('y2', h)
     .style('stroke', 'black')
     .style('stroke-width', '0.1rem')
@@ -260,6 +262,7 @@ let drawFFT = function (dataList) {
     let yDomain = d3.extent(datum, d => d.magnitude)
     let xDomain = d3.extent(datum, d => d.T)
     let yScale = d3.scaleLinear().domain([0, yDomain[1]]).range([h, 0])
+    // let yScale = d3.scaleOrdinal().domain(datum.map(d => d.magnitude)).range([h,0])
     let xScale = d3.scaleLog().domain([1,xDomain[1]+1000]).range([0, w])
     g.append('rect')
       .attr('x', 0)

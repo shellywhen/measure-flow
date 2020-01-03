@@ -122,12 +122,15 @@ export let getRoundEnd = function (start, end) {
 
 export let getSingleBins = function (granId, delta = 1, timeArray = window.dgraph.timeArrays.momentTime, shift=0) {
   let para
+  let para2
   if(granId > 7) {
     delta = Math.pow(10, granId - 7)
     para = 'years'
+    para2 = 'days'
   }
   else {
     para = timePara[granId]
+    para2 = granId > 3? timePara[granId - 3]:miliseconds
   }
 
   let idx = 0
@@ -173,6 +176,7 @@ export let getSingleBins = function (granId, delta = 1, timeArray = window.dgrap
           interval: [idx, idx],
           x0: recorded_x0,
           x1: v.x0,
+          x2: moment(v.x1).subtract(1, para2)._d,
           index: counter - 1
         })
         flag = false
@@ -194,6 +198,7 @@ export let getSingleBins = function (granId, delta = 1, timeArray = window.dgrap
     if(v.interval[0]!== -1) {
       v.interval[1]+=1
       v.index = counter
+      v.x2 = moment(v.x1).subtract(1, para2)._d
       box.push(v)
     }
     counter++
@@ -216,7 +221,7 @@ let getBins = function (timeArray, minGran, maxGran) {
   return results
 }
 
-export let FourierTransform = function (dots, time, total = 8) {
+export let FourierTransform = function (dots, time, total = 6) {
   let FFT = window.FFT
   let len = time[time.length - 1].index + 1
   let index = Math.ceil(Math.log2(len))

@@ -194,7 +194,8 @@ let brushendCallback = function (d) {
         periodData[v.id] = data
       })
     }
-    FRAME_INFO.forEach(frame => {
+    if(window.playerMode) return
+      FRAME_INFO.forEach(frame => {
       let label = frame.dataLabel
       let res = frame.canvas.selectAll('.brush-result').style('visibility', 'visible')
       res.each(function (d, i) {
@@ -714,7 +715,51 @@ TimeSlider.prototype.highlight = function () {
     d3.select(`.snapshot_${tid}`).style('stroke', 'orange')
   }
   d3.select('.brush-g').call(brushTime.move, [xScale(d.x0), xScale(d.x1)])
+  highlightBars()
   networkcube.sendMessage('player', d)
+}
+function highlightBars() {
+  FRAME_INFO.forEach(frame => {
+    let label = frame.dataLabel
+    let res = frame.canvas.selectAll('.brush-result').style('visibility', 'visible')
+    res.each(function (d, i) {
+      let canvas = d3.select(this)
+      let datum = frame.canvas.select(`.level_${window.focusGranularity.level}`).select(`.rank_${timeslider.intervalIndex}`).datum()
+       ////// SUBGRAPH BUG!!!!!!!!!!!!!!!
+      let brushStart = datum.timeStart
+      let brushEnd = datum.timeEnd
+      let y = frame.yScale[i](datum.y)
+      let textY = y
+      let maxY = frame.yScale[i].range()[1]
+      let text = Number(datum.y)
+      if ((maxY - y) / maxY > 0.1) {
+        y = maxY * 0.95
+        textY = maxY - svgHeight / 12 + (svgHeight + maxY) / 2
+        canvas.select('.overflow_rect')
+          .attr('x', xScale(brushStart))
+          .attr('y',  maxY - svgHeight / 12 + 2)
+          .attr('height', svgHeight / 12 + 2)
+          .attr('width', xScale(brushEnd) - xScale(brushStart))
+        canvas.select('text')
+          .attr('x', (xScale(brushStart) + xScale(brushEnd))/2)
+          .attr('y', textY)
+          .text(`${text % 1 == 0 ? text : text.toFixed(4)}`)
+      }
+      else {
+        canvas.select('.overflow_rect')
+          .attr('height', 0)
+        canvas.select('text')
+          .attr('x', (xScale(brushStart) + xScale(brushEnd))/2)
+          .attr('y', textY)
+          .text(`${text % 1 == 0 ? text : text.toFixed(4)}`)
+      }
+      canvas.select('.instance_rect')
+        .attr('x', xScale(brushStart))
+        .attr('y', y)
+        .attr('height', frame.yScale[i](0) - y)
+        .attr('width', xScale(brushEnd) - xScale(brushStart))
+    })
+  })
 }
 class Frame {
   static FATHER = 'measureFrame'
@@ -737,6 +782,7 @@ class Frame {
     this.fftData = []
     this.fftYscale = []
     this.fftG = []
+    this.fftMilisecond = []
     this.index = idx
     return this
   }
@@ -1134,7 +1180,7 @@ Frame.prototype.initFFTcanvas = function (data) {
    this.fftG[idx]=g
   })
 }
-Frame.prototype.drawExternalSvg = function (data) {
+Frame.prototype.drawExternalSvg = function (data, milisecond) {
   let selfObj = this
   let fftCanvas = this.fftCanvas
   this.canvas.style('display', 'none')
@@ -1145,7 +1191,7 @@ Frame.prototype.drawExternalSvg = function (data) {
   data.forEach(function(datum, idx){
     let bg = selfObj.fftG[idx]
     let currentLen = bg.selectAll('.mini_vis_fft')._groups[0].length
-    let g =  bg.select('.fftView').append('g').classed('mini_vis_fft', true)
+    let g =  bg.select('.fftView').append('g').classed(`mini_vis_fft`, true)
     let maxY = d3.max(datum.dots.map(v => v.y))
     if(selfObj.fftYscale[idx]) {
       maxY = Math.max(selfObj.fftYscale[idx].domain()[1], maxY)
@@ -1203,10 +1249,27 @@ Frame.prototype.drawExternalSvg = function (data) {
        networkcube.sendMessage('focusPeriod', d)
      })
   })
+  this.fftMilisecond.push(milisecond)
+  this.changeLayerOrder()
+}
+
+Frame.prototype.changeLayerOrder = function () {
+  let mili = this.fftMilisecond
+  let order = sortArrayIndex(mili)
+  let total = mili.length
+  for (let i in order) {
+    let o = order[i]
+    let rects = this.fftCanvas.selectAll(`.level_${i}`).style('opacity', (total-o) / total)
+    let rectWrapper = this.fftCanvas.select(`.mini_vis_fft l_${i}`)
+    let group = d3.select(rectWrapper.parentNode)
+    let father = d3.select(group.parentNode)
+        console.log(rectWrapper, group, father, rects,(total-i) / total, 'hey')
+  }
 }
 
 Frame.prototype.clearFFTcanvas = function() {
   this.fftG = []
+  this.fftMilisecond = []
   this.fftCanvas.selectAll('g').remove()
   this.fftYscale = []
   this.fftCanvas.style('display', 'none')
@@ -1246,7 +1309,8 @@ let addBars = function (msg) {
     return
   }
   let data = m.data
-  frame.drawExternalSvg(data)
+  let milisecond = m.milisecond
+  frame.drawExternalSvg(data, milisecond)
 }
 export let subgraphUpdateMeasure = function (dgraph, count) {
   SVGheight = SVGHEIGHT - MARGIN.bottom - MARGIN.bottom
@@ -1337,4 +1401,10 @@ export function measureFrameInit (dgraph, divId = 'measureFrame') {
   networkcube.addEventListener('initGran', initInterval)
   networkcube.addEventListener('slotData', addBars)
   networkcube.addEventListener('brushMove', brushMoveMsg)
+}
+
+function sortArrayIndex(test) {
+  return test.map((val, ind) => {return {ind, val}})
+           .sort((a, b) => {return a.val > b.val ? 1 : a.val == b.val ? 0 : -1 })
+           .map((obj) => obj.ind);
 }
