@@ -421,14 +421,15 @@ let updateInterval = function (m) {
     .on('click', function (d, i) {
       d.textStart = d.x0.toLocaleDateString('en-US', TIPS_CONFIG)
       d.textEnd = d.x1.toLocaleDateString('en-US', TIPS_CONFIG)
+      console.log(d, 'nodelink d')
       d3.selectAll('.snapshot').style('stroke',  '#E2E6EA')
       for (let tid = d.interval[0]; tid <d.interval[1]; tid++) {
         d3.select(`.snapshot_${tid}`).style('stroke', 'orange')
       }
-      networkcube.sendMessage('brushMove', {'x0': d.x0, 'x1': d.x1})
+      networkcube.sendMessage('brushMove', {'x0': d.x0, 'x1': d.x1, 'index': i})
       networkcube.sendMessage('player', d)
     })
-    .on('mouseover', function (d) {
+    .on('mouseover', function (d, i) {
       d3.select(this).attr('y', -5).attr('height', 20)
       d.textStart = d.x0.toLocaleDateString('en-US', TIPS_CONFIG)
       d.textEnd = d.x1.toLocaleDateString('en-US', TIPS_CONFIG)
@@ -437,8 +438,10 @@ let updateInterval = function (m) {
         d3.select(`.snapshot_${tid}`).style('stroke', 'orange')
       }
       networkcube.sendMessage('player', d)
+      d3.select(`.level_${window.focusGranularity.level}`).select(`.rank_${i}`).dispatch('mouseover')
     })
-    .on('mouseout', function(d) {
+    .on('mouseout', function(d, i) {
+      d3.select(`.level_${window.focusGranularity.level}`).select(`.rank_${i}`).dispatch('mouseout')
       d3.select(this)
         .attr('height', v => {
         return d.interval[1]>d.interval[0]?10:5

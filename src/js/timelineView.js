@@ -176,6 +176,54 @@ let dataWrapper = function (dgraph, interval, y) {
   }
 }
 
+let getComingLinks = function (dgraph, interval) {
+  let linkList = dgraph.timeArrays.links
+  let previous = new Set()
+  for (let t = interval[0][0]; t < interval[0][1]; t++) {
+    linkList[t].forEach( l => {
+      previous.add(dgraph.linkArrays.nodePair[l])
+    })
+  }
+  let dots = [dataWrapper(dgraph, interval[0], previous.size)]
+  for (let i = 1; i < interval.length; i ++) {
+    let current = new Set()
+    let itv = interval[i]
+    for (let t = itv[0]; t < itv[1]; t ++) { // aggregation
+      linkList[t].forEach(l => {
+        current.add(dgraph.linkArrays.nodePair[l])
+      })
+    }
+    let intersection = new Set([...current].filter(x => previous.has(x)))
+    dots.push(dataWrapper(dgraph, itv,  current.size - intersection.size))
+    previous = current
+  }
+  return dots
+}
+
+let getLeavingLinks = function (dgraph, interval) {
+  let linkList = dgraph.timeArrays.links
+  let previous = new Set()
+  for (let t = interval[0][0]; t < interval[0][1]; t++) {
+    linkList[t].forEach( l => {
+      previous.add(dgraph.linkArrays.nodePair[l])
+    })
+  }
+  let dots = [dataWrapper(dgraph, interval[0], previous.size)]
+  for (let i = 1; i < interval.length; i ++) {
+    let current = new Set()
+    let itv = interval[i]
+    for (let t = itv[0]; t < itv[1]; t ++) { // aggregation
+      linkList[t].forEach(l => {
+        current.add(dgraph.linkArrays.nodePair[l])
+      })
+    }
+    let intersection = new Set([...current].filter(x => previous.has(x)))
+    dots.push(dataWrapper(dgraph, itv,  previous.size - intersection.size))
+    previous = current
+  }
+  return dots
+}
+
 let getVolatility = function (dgraph, interval) {
   let linkList = dgraph.timeArrays.links
   let previous = new Set()
@@ -194,7 +242,7 @@ let getVolatility = function (dgraph, interval) {
       })
     }
     let intersection = new Set([...current].filter(x => previous.has(x)))
-    dots.push(dataWrapper(dgraph, itv, current.size + previous.size - intersection.size))
+    dots.push(dataWrapper(dgraph, itv, current.size + previous.size - 2 * intersection.size))
     previous = current
   }
   return dots
@@ -393,6 +441,8 @@ let drawTimeLine = function () {
   })
   let activation = getProcessedData(dg, intervals, getActivation)
   let redundancy = getProcessedData(dg, intervals, getRedundancy)
+  let coming = getProcessedData(dg, intervals, getComingLinks)
+  let leaving = getProcessedData(dg, intervals, getLeavingLinks)
   let volatility = getProcessedData(dg, intervals, getVolatility)
   let component = getProcessedData(dg, intervals, getConnectedComponent)
 
@@ -466,7 +516,8 @@ let getSingleLinkStat = function (dgraph, intervals, type) {
         for(let lid of links) {
           let linkType = dgraph.linkArrays.linkType[lid]
           if (linkType === type) {
-            sum += d3.sum(Object.values(dgraph.linkArrays.weights[lid].serie))
+            // sum +=dgraph.linkArrays.weights[lid].serie[t]
+            sum += 1
           }
         }
       }
@@ -502,7 +553,7 @@ export let getNodeStat = function (dgraph, intervals = dgraph.timeArrays.interva
   return res
 }
 
-let getData = function (dgraph, intervals = [], measureList =  ['nodeNumber', 'linkNumber', 'linkPairNumber', 'density', 'activation', 'redundancy', 'volatility', 'component']) {
+let getData = function (dgraph, intervals = [], measureList =  ['nodeNumber', 'linkNumber', 'linkPairNumber', 'density', 'activation', 'redundancy', 'coming', 'leaving', 'volatility', 'component']) {
   let dg = dgraph
   if (intervals.length === 0)  intervals = dg.timeArrays.intervals
   // test part
@@ -529,6 +580,8 @@ let getData = function (dgraph, intervals = [], measureList =  ['nodeNumber', 'l
   })
   let activation = getProcessedData(dg, intervals, getActivation)
   let redundancy = getProcessedData(dg, intervals, getRedundancy)
+  let coming = getProcessedData(dg, intervals, getComingLinks)
+  let leaving = getProcessedData(dg, intervals, getLeavingLinks)
   let volatility = getProcessedData(dg, intervals, getVolatility)
   let component = getProcessedData(dg, intervals, getConnectedComponent)
   return {
@@ -538,6 +591,8 @@ let getData = function (dgraph, intervals = [], measureList =  ['nodeNumber', 'l
     density: density,
     activation: activation,
     redundancy: redundancy,
+    coming: coming,
+    leaving: leaving,
     volatility: volatility,
     component: component
   }
@@ -618,7 +673,8 @@ let getLinkTypesDuring = function (startId, endId, dgraph) {
       dgraph.timeArrays.links[t].forEach(lid => {
         let linkType = dgraph.linkArrays.linkType[lid]
         if (linkType === name)
-         sum += d3.sum(Object.values(dgraph.linkArrays.weights[lid].serie))
+        sum += 1
+         // sum += 1 d3.sum(Object.values(dgraph.linkArrays.weights[lid].serie))
       })
     }
     result[`linkType_${name}`] = sum
@@ -657,16 +713,18 @@ let getIntervalData = function (dgraph, startId, endId) {
   let density = Number.isNaN(tmp)? 0 : tmp
   let redundancy = new Set([...currNodes].filter(x => prevNodes.has(x))).size
   let activation = currNodes.size - redundancy
-  let volatility = prevPairs.size + currPairs.size - intersectPairs.size
-  let component = getComponentDuring (startId, endId, dgraph, currNodes)
+  let coming = currPairs.size - intersectPairs.size
+  let leaving = prevPairs.size - intersectPairs.size
+  let volatility = prevPairs.size + currPairs.size - 2 * intersectPairs.size
+  let component = getComponentDuring (startId, endId+1, dgraph, currNodes)
   let result = {
-    nodeNumber, linkNumber, linkPairNumber, density, redundancy, activation, volatility, component
+    nodeNumber, linkNumber, linkPairNumber, density, redundancy, activation, coming, leaving, volatility, component
   }
-  let linkTypes = getLinkTypesDuring (startId, endId, dgraph)
+  let linkTypes = getLinkTypesDuring (startId, endId+1, dgraph)
   Object.keys(linkTypes).forEach(k => {
     result[k] = linkTypes[k]
   })
-  let nodeTypes = getNodeTypesDuring (startId, endId, dgraph)
+  let nodeTypes = getNodeTypesDuring (startId, endId+1, dgraph)
   Object.keys(nodeTypes).forEach(k => {
     result[k] = linkTypes[k]
   })

@@ -151,6 +151,54 @@ let dataWrapper = function (dgraph, interval, y) {
   }
 }
 
+let getLeavingLinks = function (dgraph, interval) {
+  let linkList = dgraph.timeArrays.links
+  let previous = new Set()
+  for (let t = interval[0][0]; t <= interval[0][1]; t++) {
+    linkList[t].forEach( l => {
+      previous.add(dgraph.linkArrays.nodePair[l])
+    })
+  }
+  let dots = [dataWrapper(dgraph, interval[0], previous.size)]
+  for (let i = 1; i < interval.length; i ++) {
+    let current = new Set()
+    let itv = interval[i]
+    for (let t = itv[0]; t < itv[1]; t ++) { // aggregation
+      linkList[t].forEach(l => {
+        current.add(dgraph.linkArrays.nodePair[l])
+      })
+    }
+    let intersection = new Set([...current].filter(x => previous.has(x)))
+    dots.push(dataWrapper(dgraph, itv, previous.size - intersection.size))
+    previous = current
+  }
+  return dots
+}
+
+let getComingLinks = function (dgraph, interval) {
+  let linkList = dgraph.timeArrays.links
+  let previous = new Set()
+  for (let t = interval[0][0]; t <= interval[0][1]; t++) {
+    linkList[t].forEach( l => {
+      previous.add(dgraph.linkArrays.nodePair[l])
+    })
+  }
+  let dots = [dataWrapper(dgraph, interval[0], previous.size)]
+  for (let i = 1; i < interval.length; i ++) {
+    let current = new Set()
+    let itv = interval[i]
+    for (let t = itv[0]; t < itv[1]; t ++) { // aggregation
+      linkList[t].forEach(l => {
+        current.add(dgraph.linkArrays.nodePair[l])
+      })
+    }
+    let intersection = new Set([...current].filter(x => previous.has(x)))
+    dots.push(dataWrapper(dgraph, itv, current.size - intersection.size))
+    previous = current
+  }
+  return dots
+}
+
 let getVolatility = function (dgraph, interval) {
   let linkList = dgraph.timeArrays.links
   let previous = new Set()
@@ -169,7 +217,7 @@ let getVolatility = function (dgraph, interval) {
       })
     }
     let intersection = new Set([...current].filter(x => previous.has(x)))
-    dots.push(dataWrapper(dgraph, itv, current.size + previous.size - intersection.size))
+    dots.push(dataWrapper(dgraph, itv, current.size + previous.size - 2 * intersection.size))
     previous = current
   }
   return dots
@@ -197,7 +245,8 @@ let getSingleLinkStat = function (dgraph, interval, name) {
       dgraph.timeArrays.links[t].forEach(lid => {
         let linkType = dgraph.linkArrays.linkType[lid]
         if (linkType === name)
-         sum += d3.sum(Object.values(dgraph.linkArrays.weights[lid].serie))
+          sum+=1
+         // sum += dgraph.linkArrays.weights[lid].serie[t]
       })
     }
       result.push(dataWrapper(dgraph, itv, sum))
@@ -235,6 +284,8 @@ export let getSingleData = function (dg, interval, content) {
     case 'redundancy': return getProcessedData(dg, [interval], getRedundancy)[0]
     case 'volatility': return getProcessedData(dg, [interval], getVolatility)[0]
     case 'component': return getProcessedData(dg, [interval], getConnectedComponent)[0]
+    case 'coming': return getProcessedData(dg, [interval], getComingLinks)[0]
+    case 'leaving': return getProcessedData(dg, [interval], getLeavingLinks)[0]
     default:
       console.log('oops')
       break

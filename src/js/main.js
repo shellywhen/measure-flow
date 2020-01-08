@@ -144,6 +144,8 @@ window.afterData = function () {
     dg.selection.push(newSelection)
     if(m.body.flag)  {
       Measure.subgraphUpdateMeasure(dg, 1)
+      $('#modeSwitch').prop('checked', false)
+      d3.select('#measureFrame').selectAll('.kdeLine').style('display', 'none')
     }
   })
 }

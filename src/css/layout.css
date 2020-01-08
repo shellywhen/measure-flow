@@ -1,0 +1,14 @@
+#mainFrame {
+  width:98%;
+  display: flex;
+  justify-content: space-between;
+}
+#mainRightFrame {
+  width: 25%;
+}
+#mainLeftFrame {
+  width: 200px;
+}
+#mainMiddleFrame {
+  width: 59%;
+}
