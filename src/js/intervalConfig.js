@@ -84,7 +84,7 @@ let drawSpan = function(datum, shift = 0, border = 'gray') {
     })
     .on('mouseout', function(d) {
       let intervalSize = dg.timeArrays.intervals.length
-      let opacity = (d.level + 1) / intervalSize
+      let opacity = getOpacity(d.level)
       d3.selectAll(`.level_${d.level}`).selectAll('.bars').style('opacity', opacity)
     })
     .on('click', function(d) {
@@ -414,7 +414,6 @@ let handleIntervalChange = function(m) {
     let active_id = activeInterval.indexOf(datum)
     activeInterval.splice(active_id, 1)
     datum.active = false
-
   })
   config.fade.forEach(function(level) {
     let datum = current[level]
@@ -454,4 +453,17 @@ export function drawIntervalConfig(divId = 'config-interval', dgraph) {
   $(`#config-shift`).on('change', shiftSliderCallback)
   networkcube.addEventListener('fft', handleFFT)
   networkcube.addEventListener('intervalChange', handleIntervalChange)
+}
+function sortArrayIndex(test) {
+  return test.map((val, ind) => {return {ind, val}})
+           .sort((a, b) => {return a.val > b.val ? 1 : a.val == b.val ? 0 : -1 })
+           .map((obj) => obj.ind);
+}
+
+function getOpacity (level) {
+  let currents = current.filter(v => v.active)
+  let mili = currents.map(v => v.milisecond)
+  let order = sortArrayIndex(mili).map(id => currents[id].level).reverse()
+  let index = order.indexOf(level)
+  return 0.2 + 0.6/currents.length * index
 }

@@ -118,6 +118,7 @@ window.afterData = function () {
 //  Stat.drawStatView('radarDiv')
   Config.drawConfigs()
   Interval.drawIntervalConfig('config-interval', dgraph)
+  d3.select('#frame_linkPairNumber').select('.measureTitle').dispatch('click')
   networkcube.addEventListener('subgraph', function (m) {
     let dg = window.dgraph
     let id = dg.selection.length

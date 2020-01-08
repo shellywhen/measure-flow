@@ -163,6 +163,7 @@ let addDivToggle = function(divId = 'config-view', checkboxId, name, linkDiv, fl
   })
   if (flag) {
     label.on('dblclick', function() {
+      let level = parseInt(linkDiv.substring(7))
       d3.selectAll(`${linkDiv}`).remove()
       networkcube.sendMessage('intervalChange', {
         delete: [level],
@@ -269,6 +270,7 @@ let drawConfigs = function() {
   // d3.select('#launchScatter')
   //   .on('click', d => Scatter.updateScatter())
   // network style
+  d3.select('#config-style').append('p').classed('m-0', true).text('Styling')
   addStyleConfig('config-style', 'Node Size', changeNodeSize)
   addStyleConfig('config-style', 'Link Width', changeLinkWidth, 0, 5)
   addStyleConfig('config-style', 'Link Opacity', changeLinkOpacity, 0, 1, 0.5)

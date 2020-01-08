@@ -151,7 +151,6 @@ let changeKDE = function (m) {
         let color = dg.selection.length < 2 ? 'gray' : dg.selection[i].color
         let lineGenerator = drawKdeLine(g, color, frame.data[i][0].dots.map(v => v.y))
         frame.lineGenerator[i] = lineGenerator
-        console.log('shit', g)
       })
     })
 }
@@ -354,6 +353,10 @@ let drawKdeLine = function (g, color, summary) {
     .datum(density)
     .style('fill', color)
     .style('stroke-linejoin', 'round')
+    .style('display', d => {
+      if($('#modeSwitch').val()) return ''
+      return 'none'
+    })
     .attr('d', line)
     // .style('stroke', color)
     // .style('stroke-width', 0.5)
@@ -1081,9 +1084,6 @@ Frame.prototype.createBars = function(g, yScale, dots, i, idx) {
      .attr('y', d => yScale(d.y))
      .attr('width', d => {
        let value = (xScale(d.timeEnd) - xScale(d.timeStart))
-       if (i === 0) value -= rectPadding * 2
-       if (i === 1) value -= rectPadding
-       if (i > 1) value *= 1.5
        return Math.max(value, 1)
      })
      .attr('data', d => d.y)
@@ -1101,7 +1101,6 @@ Frame.prototype.createBars = function(g, yScale, dots, i, idx) {
         .style('fill', (datum, o)=>{
          if(dg.selection.length > 1) {
           let o = miniidx % dg.selection.length
-          console.log(miniidx, o, 'qwq')
           return `url('#pattern_${o}_${obj.index}')`
         }
           return 'fa5050'
@@ -1357,7 +1356,6 @@ Frame.prototype.drawExternalSvg = function (data, milisecond) {
        BARFLAG = false
        let level = parseInt(d3.select(this.parentNode).attr('level'))
        let rank = no
-       console.log('rank', level, rank)
        highlightBars(level, rank)
        networkcube.sendMessage('focusPeriod', d)
      })
@@ -1381,12 +1379,13 @@ Frame.prototype.changeLayerOrder = function () {
   let order = sortArrayIndex(mili).reverse() // index of the large->small order
   let levelOrder = order.map(o => Interval.current[o].level)
   let total = mili.length
+  let label = this.dataLabel
   for (let i in levelOrder) {
     let level = levelOrder[i]
-    this.svg.selectAll(`.level_${level}`).selectAll('.bars').style('opacity', 0.2 + 0.6/total*i)
+    let opacity = getOpacity(level)
+    this.svg.selectAll(`.level_${level}`).selectAll('.bars').style('opacity',  opacity)
     if(i!=0){
       let prev = levelOrder[i-1]
-      let label = this.dataLabel
       this.data.forEach((d, idx) => {
         let prevEle = $(`#frame_${label}`, `#vis_${idx}`, `#level_${prev}`)
         let curEle = $(`#frame_${label}`, `#vis_${idx}`, `#level_${level}`)
@@ -1394,7 +1393,7 @@ Frame.prototype.changeLayerOrder = function () {
       })
     }
   }
-  console.log(mili, order, levelOrder, 'hello')
+  console.log('why insert after does not work?', $(`#frame_${label}`, `#vis_${0}`))
 }
 
 Frame.prototype.clearFFTcanvas = function() {
@@ -1464,7 +1463,7 @@ export let subgraphUpdateMeasure = function (dgraph, count) {
   }
   FRAME_INFO.forEach(frame => {
     frame.drawMeasureOvertime()
-        frame.init()
+    frame.init()
   })
 }
 
@@ -1566,7 +1565,7 @@ function sortArrayIndex(test) {
 function getOpacity (level) {
   let current = Interval.current.filter(v => v.active)
   let mili = current.map(v => v.milisecond)
-  let order = sortArrayIndex(mili)
+  let order = sortArrayIndex(mili).map(id => current[id].level).reverse()
   let index = order.indexOf(level)
   return 0.2 + 0.6/current.length * index
 }

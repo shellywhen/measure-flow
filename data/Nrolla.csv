@@ -1,0 +1,582 @@
+Vertex 1,Vertex 2,n_act_aff1,nlig,date_contrat_tri,code_typ2_chant_num,code_trav2_num,materiau_num,code_typ_chant,materiau,Base,cantiere
+C1711_01_001,i_187,Groppi C. (187),5,17110407,2,6,0,mil_fortifications,si,generale,brunetta e demonte
+C1711_01_001,i_223,Menafoglio A. (223),6,17110407,2,6,0,mil_fortifications,si,generale,brunetta e demonte
+C1711_01_001,i_224,Menafoglio A. (224),7,17110407,2,6,0,mil_fortifications,si,generale,brunetta e demonte
+C1711_01_001,i_243,Origone A.M. (243),4,17110407,2,6,0,mil_fortifications,si,generale,brunetta e demonte
+C1711_01_001,i_275,Pinchetti D. (275),1,17110407,2,6,0,mil_fortifications,si,generale,brunetta e demonte
+C1711_01_001,i_384,Violino P.G. (384),3,17110407,2,6,0,mil_fortifications,si,generale,brunetta e demonte
+C1716_03_104,i_88,Capellaro F. (88),533,17160522,2,2,7,mil_fortifications,pierre,generale,brunetta
+C1716_S100_001,i_583,Sasso A. (583),535,17160507,3,2,0,rel_egl,si,generale,superga basilica
+C1716_S100_001,i_587,Steffenino P. (587),537,17160507,3,2,0,rel_egl,si,generale,superga basilica
+C1716_S100_001,i_588,Sussio A. (588),536,17160507,3,2,0,rel_egl,si,generale,superga basilica
+C1716_S100_001,i_589,Sussio G.B. (589),540,17160507,3,2,0,rel_egl,si,generale,superga basilica
+C1716_S100_001,i_595,Levis F.A. (595),539,17160507,3,2,0,rel_egl,si,generale,superga basilica
+C1716_S100_001,i_596,Levis G. (596),538,17160507,3,2,0,rel_egl,si,generale,superga basilica
+C1716_S100_004,i_401,Basilio P.M. (401),1191,17160508,3,1,5,rel_egl,sable,superga,superga basilica
+C1716_S100_004,i_613,Basilio G. (613),1190,17160508,3,1,5,rel_egl,sable,superga,superga basilica
+C1716_S100_006,i_23,Bello G. (23),1194,17160511,3,1,3,rel_egl,briques,superga,superga basilica
+C1716_S100_006,i_28,Bello P.M. (28),1192,17160511,3,1,3,rel_egl,briques,superga,superga basilica
+C1716_S100_006,i_385,Vitale P. (385),1193,17160511,3,1,3,rel_egl,briques,superga,superga basilica
+C1716_S100_009,i_452,Corino M.A. (452),1195,17160528,3,1,5,rel_egl,sable,superga,superga basilica
+C1716_S100_009,i_615,Andeijs G.A. (615),1196,17160528,3,1,5,rel_egl,sable,superga,superga basilica
+C1716_S100_009,i_620,Bosco G. (620),1197,17160528,3,1,5,rel_egl,sable,superga,superga basilica
+C1716_S100_011,i_599,Bugella G.B. (599),1198,17160713,3,8,0,rel_egl,si,superga,superga basilica
+C1717_05_001,i_564,Allegretto F. (564),541,17170109,1,7,7,civ_residences_royales,pierre,generale,rivoli
+C1717_05_002,i_117,Cribiatello F. (117),547,17170114,2,2,0,mil_fortifications,si,generale,forte brunetta
+C1717_05_002,i_130,Favre F.G. (130),543,17170114,2,2,0,mil_fortifications,si,generale,forte brunetta
+C1717_05_002,i_159,Gallo G.F. (159),546,17170114,2,2,0,mil_fortifications,si,generale,forte brunetta
+C1717_05_002,i_16,Baietto G.F. (16),545,17170114,2,2,0,mil_fortifications,si,generale,forte brunetta
+C1717_05_002,i_568,Bioletto A. (568),548,17170114,2,2,0,mil_fortifications,si,generale,forte brunetta
+C1717_05_002,i_573,De Vallon F.G. (573),544,17170114,2,2,0,mil_fortifications,si,generale,forte brunetta
+C1717_05_002,i_575,Girodo T. (575),542,17170114,2,2,0,mil_fortifications,si,generale,forte brunetta
+C1717_05_007,i_153,Galimberti G.M. (153),550,17170203,2,6,0,mil_fortifications,si,generale,città di nizza
+C1717_05_007,i_187,Groppi C. (187),551,17170203,2,6,0,mil_fortifications,si,generale,città di nizza
+C1717_05_007,i_223,Menafoglio A. (223),553,17170203,2,6,0,mil_fortifications,si,generale,città di nizza
+C1717_05_007,i_227,Menafoglio F.A. (227),552,17170203,2,6,0,mil_fortifications,si,generale,città di nizza
+C1717_05_007,i_266,Pianarosa G. (266),554,17170203,2,6,0,mil_fortifications,si,generale,città di nizza
+C1717_05_007,i_501,Menafoglio G.M. (501),549,17170203,2,6,0,mil_fortifications,si,generale,città di nizza
+C1717_05_007,i_579,Pinchetto B. (579),555,17170203,2,6,0,mil_fortifications,si,generale,città di nizza
+C1717_05_014,i_288,Quadrone B. (288),557,17170208,3,3,7,rel_chapelles,pierre,generale,venaria
+C1717_05_014,i_97,Casella A. (97),556,17170208,3,3,7,rel_chapelles,pierre,generale,venaria
+C1717_05_017,i_248,Parodi G.B. (248),559,17170211,1,3,6,civ_residences_royales,marbre,generale,rivoli castello cave di brusca
+C1717_05_017,i_369,Ugliengo C.M. (369),560,17170211,1,3,6,civ_residences_royales,marbre,generale,rivoli castello cave di brusca
+C1717_05_017,i_592,Giudice F.M. (592),558,17170211,1,3,6,civ_residences_royales,marbre,generale,rivoli castello cave di brusca
+C1717_05_021,i_202,Maciotta G. (202),561,17170220,1,6,0,civ_ponts,si,generale,venaria ponte su fiume ceronda
+C1717_05_021,i_283,Pistone G.A. (283),564,17170220,1,6,0,civ_ponts,si,generale,venaria ponte su fiume ceronda
+C1717_05_021,i_316,Romano T. (316),562,17170220,1,6,0,civ_ponts,si,generale,venaria ponte su fiume ceronda
+C1717_05_021,i_62,Boggio P. (62),563,17170220,1,6,0,civ_ponts,si,generale,venaria ponte su fiume ceronda
+C1717_05_027,i_226,Menafoglio C.A. (226),568,17170220,1,1,7,civ_ponts,pierre,generale,venaria ponte su fiume ceronda
+C1717_05_027,i_227,Menafoglio F.A. (227),567,17170220,1,1,7,civ_ponts,pierre,generale,venaria ponte su fiume ceronda
+C1717_05_027,i_272,Piazzollo F. (272),566,17170220,1,1,7,civ_ponts,pierre,generale,venaria ponte su fiume ceronda
+C1717_05_027,i_275,Pinchetti D. (275),565,17170220,1,1,7,civ_ponts,pierre,generale,venaria ponte su fiume ceronda
+C1717_05_030,i_114,Corte G. (114),569,17170301,1,2,1,civ_routes,terre,generale,venaria reale allea
+C1717_05_030,i_566,Bello G.B. (566),570,17170301,1,2,1,civ_routes,terre,generale,venaria reale allea
+C1717_05_030,i_586,Servo G. (586),572,17170301,1,2,1,civ_routes,terre,generale,venaria reale allea
+C1717_05_030,i_591,Fontana G.D. (591),571,17170301,1,2,1,civ_routes,terre,generale,venaria reale allea
+C1717_05_034,i_227,Menafoglio F.A. (227),574,17170310,2,6,0,mil_citadelles,si,generale,cittadella bastione beato amedeo
+C1717_05_034,i_302,Righino P.A. (302),575,17170310,2,6,0,mil_citadelles,si,generale,cittadella bastione beato amedeo
+C1717_05_034,i_384,Violino P.G. (384),573,17170310,2,6,0,mil_citadelles,si,generale,cittadella bastione beato amedeo
+C1717_05_034,i_580,Richettino B. (580),576,17170310,2,6,0,mil_citadelles,si,generale,cittadella bastione beato amedeo
+C1717_05_039,i_153,Galimberti G.M. (153),580,17170408,2,2,3,mil_forge,briques,generale,fucine di valdocco
+C1717_05_039,i_292,Rechettino A. (292),577,17170408,2,2,3,mil_forge,briques,generale,fucine di valdocco
+C1717_05_039,i_298,Righino F.M. (298),581,17170408,2,2,3,mil_forge,briques,generale,fucine di valdocco
+C1717_05_039,i_50,Bianco A. (50),578,17170408,2,2,3,mil_forge,briques,generale,fucine di valdocco
+C1717_05_039,i_593,Laurenti D. (593),579,17170408,2,2,3,mil_forge,briques,generale,fucine di valdocco
+C1717_05_043,i_129,Faiola A. (129),582,17170408,1,1,11,civ_palais_gouvernement,vitres,generale,uffici delle finanze
+C1717_05_046,i_288,Quadrone B. (288),583,17170423,1,3,7,civ_residences_royales,pierre,generale,regi appartamenti nel castello di rivoli
+C1717_05_046,i_578,Piazzollo C. (578),585,17170423,1,3,7,civ_residences_royales,pierre,generale,regi appartamenti nel castello di rivoli
+C1717_05_046,i_592,Giudice F.M. (592),584,17170423,1,3,7,civ_residences_royales,pierre,generale,regi appartamenti nel castello di rivoli
+C1717_05_048,i_369,Ugliengo C.M. (369),587,17170528,1,1,3,civ_residences_royales,briques,generale,venaria reale
+C1717_05_048,i_389,Zo C.A. (389),588,17170528,1,1,3,civ_residences_royales,briques,generale,venaria reale
+C1717_05_048,i_590,Tempia B. (590),586,17170528,1,1,3,civ_residences_royales,briques,generale,venaria reale
+C1717_05_054,i_576,Muttoni P.G. (576),591,17170602,1,3,8,civ_residences_royales,stuc,generale,castello di rivoli
+C1717_05_054,i_584,Scala F.M. (584),589,17170602,1,3,8,civ_residences_royales,stuc,generale,castello di rivoli
+C1717_05_054,i_585,Scala G.A. (585),590,17170602,1,3,8,civ_residences_royales,stuc,generale,castello di rivoli
+C1717_05_056,i_569,Borrione L. (569),592,17170607,1,2,2,civ_residences_royales,bois,generale,gran galleria alla venaria reale
+C1717_05_058,i_545,Teppa L.G. (545),593,17170621,2,3,9,mil_citadelles,metaux,generale,caserme della cittadella di torino
+C1717_05_058,i_570,Clemente B. (570),594,17170621,2,3,9,mil_citadelles,metaux,generale,caserme della cittadella di torino
+C1717_05_060,i_100,Castelli M.F. (100),597,17170621,1,3,9,civ_residences_royales,metaux,generale,regio palazzo alla venaria reale
+C1717_05_060,i_329,Salié P. (329),596,17170621,1,3,9,civ_residences_royales,metaux,generale,regio palazzo alla venaria reale
+C1717_05_060,i_389,Zo C.A. (389),598,17170621,1,3,9,civ_residences_royales,metaux,generale,regio palazzo alla venaria reale
+C1717_05_060,i_392,Zo G.H. (392),595,17170621,1,3,9,civ_residences_royales,metaux,generale,regio palazzo alla venaria reale
+C1717_05_063,i_546,Tirolo G.B. (546),601,17170628,1,3,0,civ_residences_royales,si,generale,venaria reale
+C1717_05_063,i_567,Beltrandi G. (567),600,17170628,1,3,0,civ_residences_royales,si,generale,venaria reale
+C1717_05_063,i_578,Piazzollo C. (578),599,17170628,1,3,0,civ_residences_royales,si,generale,venaria reale
+C1717_05_066,i_369,Ugliengo C.M. (369),603,17170628,1,1,2,civ_residences_royales,bois,generale,venaria reale
+C1717_05_066,i_572,De Gotte H. (572),604,17170628,1,1,2,civ_residences_royales,bois,generale,venaria reale
+C1717_05_066,i_594,Lemoine F. (594),602,17170628,1,1,2,civ_residences_royales,bois,generale,venaria reale
+C1717_05_070,i_565,Avogadro S. (565),605,17170705,1,3,8,civ_universite,stuc,generale,università degli studi
+C1717_05_072,i_117,Cribiatello F. (117),607,17170705,2,2,0,mil_fortifications,si,generale,forte della brunetta
+C1717_05_072,i_361,Toscanello F. (361),606,17170705,2,2,0,mil_fortifications,si,generale,forte della brunetta
+C1717_05_072,i_399,Baietto F. (399),610,17170705,2,2,0,mil_fortifications,si,generale,forte della brunetta
+C1717_05_072,i_573,De Vallon F.G. (573),609,17170705,2,2,0,mil_fortifications,si,generale,forte della brunetta
+C1717_05_072,i_575,Girodo T. (575),608,17170705,2,2,0,mil_fortifications,si,generale,forte della brunetta
+C1717_05_077,i_223,Menafoglio A. (223),612,17170710,2,6,0,mil_chateaux,si,generale,castello e fiume po
+C1717_05_077,i_226,Menafoglio C.A. (226),617,17170710,2,6,0,mil_chateaux,si,generale,castello e fiume po
+C1717_05_077,i_266,Pianarosa G. (266),613,17170710,2,6,0,mil_chateaux,si,generale,castello e fiume po
+C1717_05_077,i_272,Piazzollo F. (272),611,17170710,2,6,0,mil_chateaux,si,generale,castello e fiume po
+C1717_05_077,i_275,Pinchetti D. (275),614,17170710,2,6,0,mil_chateaux,si,generale,castello e fiume po
+C1717_05_077,i_301,Righino P. (301),616,17170710,2,6,0,mil_chateaux,si,generale,castello e fiume po
+C1717_05_077,i_62,Boggio P. (62),615,17170710,2,6,0,mil_chateaux,si,generale,castello e fiume po
+C1717_05_080,i_117,Cribiatello F. (117),618,17170710,2,6,0,mil_fortifications,si,generale,fortificazioni di valenza
+C1717_05_080,i_253,Peijrone F. (253),621,17170710,2,6,0,mil_fortifications,si,generale,fortificazioni di valenza
+C1717_05_080,i_436,Chianale G. (436),619,17170710,2,6,0,mil_fortifications,si,generale,fortificazioni di valenza
+C1717_05_080,i_573,De Vallon F.G. (573),620,17170710,2,6,0,mil_fortifications,si,generale,fortificazioni di valenza
+C1717_05_085,i_44,Bertoglio G.D. (44),622,17170717,3,1,7,rel_egl,pierre,generale,superga
+C1717_05_086,i_571,Cuglierero G.M. (571),623,17170724,1,1,4,civ_residences_royales,chaux,generale,regio palazzo alla venaria
+C1717_05_087,i_314,Rocco N. (314),624,17170728,1,1,4,civ_residences_royales,chaux,generale,regio palazzo alla venaria
+C1717_05_088,i_577,Papa C. (577),625,17170809,1,3,8,civ_residences_royales,stuc,generale,regi appartamenti castello di rivoli
+C1717_05_092,i_349,Somazzo F. (349),626,17170817,1,3,8,civ_residences_royales,stuc,generale,castello di rivoli
+C1717_05_094,i_133,Ferrari G. (133),631,17170911,1,3,7,civ_residences_royales,pierre,generale,castello di rivoli
+C1717_05_094,i_534,Rosso F. (534),629,17170911,1,3,7,civ_residences_royales,pierre,generale,castello di rivoli
+C1717_05_094,i_537,Rosso S. (537),627,17170911,1,3,7,civ_residences_royales,pierre,generale,castello di rivoli
+C1717_05_094,i_562,Agli C. (562),633,17170911,1,3,7,civ_residences_royales,pierre,generale,castello di rivoli
+C1717_05_094,i_563,Agli F. (563),630,17170911,1,3,7,civ_residences_royales,pierre,generale,castello di rivoli
+C1717_05_094,i_574,Fossato F.A. (574),634,17170911,1,3,7,civ_residences_royales,pierre,generale,castello di rivoli
+C1717_05_094,i_581,Rosso G.B. (581),632,17170911,1,3,7,civ_residences_royales,pierre,generale,castello di rivoli
+C1717_05_094,i_582,Rosso G.M. (582),628,17170911,1,3,7,civ_residences_royales,pierre,generale,castello di rivoli
+C1717_05_097,i_133,Ferrari G. (133),635,17171109,1,3,7,civ_residences_royales,pierre,generale,castello di rivoli
+C1717_05_097,i_534,Rosso F. (534),639,17171109,1,3,7,civ_residences_royales,pierre,generale,castello di rivoli
+C1717_05_097,i_562,Agli C. (562),636,17171109,1,3,7,civ_residences_royales,pierre,generale,castello di rivoli
+C1717_05_097,i_563,Agli F. (563),641,17171109,1,3,7,civ_residences_royales,pierre,generale,castello di rivoli
+C1717_05_097,i_574,Fossato F.A. (574),640,17171109,1,3,7,civ_residences_royales,pierre,generale,castello di rivoli
+C1717_05_097,i_581,Rosso G.B. (581),638,17171109,1,3,7,civ_residences_royales,pierre,generale,castello di rivoli
+C1717_05_097,i_582,Rosso G.M. (582),637,17171109,1,3,7,civ_residences_royales,pierre,generale,castello di rivoli
+C1717_05_100,i_23,Bello G. (23),643,17171211,2,2,1,mil_fortifications,terre,generale,ingrandimento di porta susina
+C1717_05_100,i_28,Bello P.M. (28),642,17171211,2,2,1,mil_fortifications,terre,generale,ingrandimento di porta susina
+C1717_S100_012,i_314,Rocco N. (314),1202,17170216,3,1,4,rel_egl,chaux,superga,superga basilica
+C1717_S100_012,i_364,Trivero G.B. (364),1203,17170216,3,1,4,rel_egl,chaux,superga,superga basilica
+C1717_S100_012,i_365,Trivero V. (365),1201,17170216,3,1,4,rel_egl,chaux,superga,superga basilica
+C1717_S100_012,i_42,Bertinetti P. (42),1200,17170216,3,1,4,rel_egl,chaux,superga,superga basilica
+C1717_S100_012,i_44,Bertoglio G.D. (44),1205,17170216,3,1,4,rel_egl,chaux,superga,superga basilica
+C1717_S100_012,i_604,Fenoglio S. (604),1204,17170216,3,1,4,rel_egl,chaux,superga,superga basilica
+C1717_S100_014,i_42,Bertinetti P. (42),1206,17170225,3,1,4,rel_egl,chaux,superga,superga basilica
+C1717_S100_014,i_608,Pia D. (608),1207,17170225,3,1,4,rel_egl,chaux,superga,superga basilica
+C1717_S100_016,i_430,Calderara G.P. (430),1209,17170306,3,2,0,rel_egl,si,superga,superga basilica
+C1717_S100_016,i_611,Signori S. (611),1210,17170306,3,2,0,rel_egl,si,superga,superga basilica
+C1717_S100_016,i_612,Trogli F. (612),1211,17170306,3,2,0,rel_egl,si,superga,superga basilica
+C1717_S100_016,i_616,Valsecchi G.D. (616),1208,17170306,3,2,0,rel_egl,si,superga,superga basilica
+C1717_S100_019,i_604,Fenoglio S. (604),1212,17171211,3,1,4,rel_egl,chaux,superga,superga basilica
+C1716_03_098,i_319,Rondoletto C.M. (319),527,17160519,1,2,2,civ_residences_royales,bois,generale,rivoli castello
+C1716_03_104,i_203,Maciotta G.M. (203),534,17160522,2,2,7,mil_fortifications,pierre,generale,brunetta
+C1716_03_104,i_281,Pistone G.S. (281),532,17160522,2,2,7,mil_fortifications,pierre,generale,brunetta
+C1716_03_104,i_283,Pistone G.A. (283),531,17160522,2,2,7,mil_fortifications,pierre,generale,brunetta
+C1716_03_104,i_374,Vanera M. (374),529,17160522,2,2,7,mil_fortifications,pierre,generale,brunetta
+C1716_03_095,i_153,Galimberti G.M. (153),522,17160508,1,2,7,civ_fleuves,pierre,generale,casale castello
+C1716_03_095,i_187,Groppi C. (187),523,17160508,1,2,7,civ_fleuves,pierre,generale,casale castello
+C1716_03_095,i_225,Menafoglio C.A. (225),525,17160508,1,2,7,civ_fleuves,pierre,generale,casale castello
+C1716_03_095,i_226,Menafoglio C.A. (226),520,17160508,1,2,7,civ_fleuves,pierre,generale,casale castello
+C1716_03_095,i_229,Menafoglio N. (229),521,17160508,1,2,7,civ_fleuves,pierre,generale,casale castello
+C1716_03_095,i_266,Pianarosa G. (266),524,17160508,1,2,7,civ_fleuves,pierre,generale,casale castello
+C1716_03_090,i_153,Galimberti G.M. (153),516,17160416,2,6,0,mil_citadelles,si,generale,torino cittadella
+C1716_03_090,i_187,Groppi C. (187),518,17160416,2,6,0,mil_citadelles,si,generale,torino cittadella
+C1716_03_090,i_223,Menafoglio A. (223),512,17160416,2,6,0,mil_citadelles,si,generale,torino cittadella
+C1716_03_090,i_226,Menafoglio C.A. (226),517,17160416,2,6,0,mil_citadelles,si,generale,torino cittadella
+C1716_03_090,i_266,Pianarosa G. (266),514,17160416,2,6,0,mil_citadelles,si,generale,torino cittadella
+C1716_03_090,i_275,Pinchetti D. (275),515,17160416,2,6,0,mil_citadelles,si,generale,torino cittadella
+C1716_03_090,i_384,Violino P.G. (384),513,17160416,2,6,0,mil_citadelles,si,generale,torino cittadella
+C1716_03_077,i_237,Mosso G.E. (237),502,17160331,3,2,0,rel_chapelles,si,generale,venaria regia cappella
+C1716_03_077,i_292,Rechettino A. (292),499,17160331,3,2,0,rel_chapelles,si,generale,venaria regia cappella
+C1716_03_077,i_330,Salla G. (330),498,17160331,3,2,0,rel_chapelles,si,generale,venaria regia cappella
+C1716_03_077,i_35,Bellotto G. (35),500,17160331,3,2,0,rel_chapelles,si,generale,venaria regia cappella
+C1716_03_085,i_111,Constanzo B. (111),509,17160402,2,6,0,mil_fortifications,si,generale,valenza e alessandria fortificazioni
+C1716_03_085,i_187,Groppi C. (187),511,17160402,2,6,0,mil_fortifications,si,generale,valenza e alessandria fortificazioni
+C1716_03_085,i_223,Menafoglio A. (223),504,17160402,2,6,0,mil_fortifications,si,generale,valenza e alessandria fortificazioni
+C1716_03_085,i_226,Menafoglio C.A. (226),508,17160402,2,6,0,mil_fortifications,si,generale,valenza e alessandria fortificazioni
+C1716_03_085,i_266,Pianarosa G. (266),506,17160402,2,6,0,mil_fortifications,si,generale,valenza e alessandria fortificazioni
+C1716_03_085,i_272,Piazzollo F. (272),507,17160402,2,6,0,mil_fortifications,si,generale,valenza e alessandria fortificazioni
+C1716_03_085,i_275,Pinchetti D. (275),503,17160402,2,6,0,mil_fortifications,si,generale,valenza e alessandria fortificazioni
+C1716_03_085,i_40,Bertinello P. (40),505,17160402,2,6,0,mil_fortifications,si,generale,valenza e alessandria fortificazioni
+C1716_03_077,i_108,Clerico S. (108),496,17160331,3,2,0,rel_chapelles,si,generale,venaria regia cappella
+C1716_03_077,i_180,Gobbi A. (180),501,17160331,3,2,0,rel_chapelles,si,generale,venaria regia cappella
+C1715_03_075,i_319,Rondoletto C.M. (319),494,17151224,2,2,0,mil_fortifications,si,generale,torino recinto verso porta susina
+C1715_03_063,i_50,Bianco A. (50),489,17150917,2,2,0,mil_forge,si,generale,valdocco fabbrica canne da fucile
+C1715_03_068,i_129,Faiola A. (129),490,17151120,1,1,11,civ_universite,vitres,generale,torino università degli studi
+C1715_03_068,i_172,Gianone P. (172),491,17151120,1,1,11,civ_universite,vitres,generale,torino università degli studi
+C1715_03_068,i_327,Saccarello O. (327),492,17151120,1,1,11,civ_universite,vitres,generale,torino università degli studi
+C1715_03_063,i_153,Galimberti G.M. (153),485,17150917,2,2,0,mil_forge,si,generale,valdocco fabbrica canne da fucile
+C1715_03_063,i_200,Maciotta C. (200),487,17150917,2,2,0,mil_forge,si,generale,valdocco fabbrica canne da fucile
+C1715_03_063,i_226,Menafoglio C.A. (226),488,17150917,2,2,0,mil_forge,si,generale,valdocco fabbrica canne da fucile
+C1715_03_063,i_301,Righino P. (301),484,17150917,2,2,0,mil_forge,si,generale,valdocco fabbrica canne da fucile
+C1715_03_058,i_369,Ugliengo C.M. (369),482,17150807,1,3,9,civ_universite,metaux,generale,torino unversità degli studi
+C1715_03_058,i_389,Zo C.A. (389),480,17150807,1,3,9,civ_universite,metaux,generale,torino unversità degli studi
+C1715_03_058,i_390,Zo G.B. (390),481,17150807,1,3,9,civ_universite,metaux,generale,torino unversità degli studi
+C1715_03_054,i_100,Castelli M.F. (100),479,17150807,1,3,9,civ_universite,metaux,generale,torino unversità degli studi
+C1715_03_054,i_254,Pelloli F.A. (254),478,17150807,1,3,9,civ_universite,metaux,generale,torino unversità degli studi
+C1715_03_054,i_389,Zo C.A. (389),475,17150807,1,3,9,civ_universite,metaux,generale,torino unversità degli studi
+C1715_03_054,i_392,Zo G.H. (392),477,17150807,1,3,9,civ_universite,metaux,generale,torino unversità degli studi
+C1715_03_044,i_57,Biolaro P.A. (57),465,17150803,2,2,7,mil_fortifications,pierre,generale,brunetta
+C1715_03_050,i_160,Gambassone G.M. (160),473,17150805,1,3,7,civ_universite,pierre,generale,torino unversità degli studi
+C1715_03_050,i_232,Morino C.F. (232),472,17150805,1,3,7,civ_universite,pierre,generale,torino unversità degli studi
+C1715_03_050,i_353,Tepati B. (353),471,17150805,1,3,7,civ_universite,pierre,generale,torino unversità degli studi
+C1715_03_044,i_117,Cribiatello F. (117),467,17150803,2,2,7,mil_fortifications,pierre,generale,brunetta
+C1715_03_044,i_130,Favre F.G. (130),468,17150803,2,2,7,mil_fortifications,pierre,generale,brunetta
+C1715_03_044,i_22,Bellico G.F. (22),469,17150803,2,2,7,mil_fortifications,pierre,generale,brunetta
+C1715_03_044,i_361,Toscanello F. (361),470,17150803,2,2,7,mil_fortifications,pierre,generale,brunetta
+C1715_03_041,i_110,Compassi C.S. (110),461,17150613,1,3,0,civ_residences_royales,si,generale,rivoli castello
+C1715_03_041,i_139,Fontana D. (139),464,17150613,1,3,0,civ_residences_royales,si,generale,rivoli castello
+C1715_03_041,i_179,Giudici F.M. (179),463,17150613,1,3,0,civ_residences_royales,si,generale,rivoli castello
+C1715_03_041,i_219,Mazzoni C.G. (219),462,17150613,1,3,0,civ_residences_royales,si,generale,rivoli castello
+C1715_03_024,i_226,Menafoglio C.A. (226),450,17150507,2,6,0,mil_chateaux,si,generale,saluzzo castello
+C1715_03_024,i_227,Menafoglio F.A. (227),453,17150507,2,6,0,mil_chateaux,si,generale,saluzzo castello
+C1715_03_024,i_316,Romano T. (316),452,17150507,2,6,0,mil_chateaux,si,generale,saluzzo castello
+C1715_03_024,i_390,Zo G.B. (390),451,17150507,2,6,0,mil_chateaux,si,generale,saluzzo castello
+C1715_03_033,i_113,Corte A. (113),455,17150510,2,2,0,mil_fortifications,si,generale,torino ingrandimento porta susa
+C1715_03_033,i_14,Astrano G.A. (14),457,17150510,2,2,0,mil_fortifications,si,generale,torino ingrandimento porta susa
+C1715_03_033,i_23,Bello G. (23),458,17150510,2,2,0,mil_fortifications,si,generale,torino ingrandimento porta susa
+C1715_03_033,i_29,Bello P.M. (29),454,17150510,2,2,0,mil_fortifications,si,generale,torino ingrandimento porta susa
+C1715_03_033,i_35,Bellotto G. (35),456,17150510,2,2,0,mil_fortifications,si,generale,torino ingrandimento porta susa
+C1715_03_014,i_89,Capellaro G.F. (89),444,17150330,2,6,0,mil_citadelles,si,generale,torino cittadella
+C1715_03_019,i_117,Cribiatello F. (117),445,17150406,2,2,1,mil_fortifications,terre,generale,fenestrelle
+C1715_03_019,i_332,Sardi P. (332),448,17150406,2,2,1,mil_fortifications,terre,generale,fenestrelle
+C1715_03_019,i_378,Vanotti P. (378),449,17150406,2,2,1,mil_fortifications,terre,generale,fenestrelle
+C1715_03_019,i_387,Zanetti B. (387),447,17150406,2,2,1,mil_fortifications,terre,generale,fenestrelle
+C1715_03_006,i_78,Caligaris A. (78),437,17150309,2,2,0,mil_fortifications,si,generale,valenza fortificazioni
+C1715_03_014,i_153,Galimberti G.M. (153),442,17150330,2,6,0,mil_citadelles,si,generale,torino cittadella
+C1715_03_014,i_202,Maciotta G. (202),441,17150330,2,6,0,mil_citadelles,si,generale,torino cittadella
+C1715_03_014,i_226,Menafoglio C.A. (226),438,17150330,2,6,0,mil_citadelles,si,generale,torino cittadella
+C1715_03_014,i_275,Pinchetti D. (275),440,17150330,2,6,0,mil_citadelles,si,generale,torino cittadella
+C1715_03_014,i_282,Pistone G. (282),443,17150330,2,6,0,mil_citadelles,si,generale,torino cittadella
+C1715_03_006,i_202,Maciotta G. (202),435,17150309,2,2,0,mil_fortifications,si,generale,valenza fortificazioni
+C1715_03_006,i_226,Menafoglio C.A. (226),433,17150309,2,2,0,mil_fortifications,si,generale,valenza fortificazioni
+C1715_03_006,i_275,Pinchetti D. (275),432,17150309,2,2,0,mil_fortifications,si,generale,valenza fortificazioni
+C1715_03_006,i_303,Righino P.G. (303),436,17150309,2,2,0,mil_fortifications,si,generale,valenza fortificazioni
+C1714_02_096,i_334,Sartoris G. (334),421,17140829,1,3,9,civ_divers,metaux,generale,torino università degli studi e susa castello
+C1714_02_096,i_84,Candellero G. (84),422,17140829,1,3,9,civ_divers,metaux,generale,torino università degli studi e susa castello
+C1714_02_096,i_95,Casasopra G.B. (95),423,17140829,1,3,9,civ_divers,metaux,generale,torino università degli studi e susa castello
+C1715_03_001,i_119,Crosa T.A. (119),425,17150123,1,1,11,civ_residences_royales,vitres,generale,rivoli castello
+C1715_03_003,i_223,Menafoglio A. (223),431,17150129,1,2,7,civ_fleuves,pierre,generale,casale fiume po
+C1715_03_003,i_226,Menafoglio C.A. (226),430,17150129,1,2,7,civ_fleuves,pierre,generale,casale fiume po
+C1715_03_003,i_275,Pinchetti D. (275),427,17150129,1,2,7,civ_fleuves,pierre,generale,casale fiume po
+C1715_03_003,i_302,Righino P.A. (302),426,17150129,1,2,7,civ_fleuves,pierre,generale,casale fiume po
+C1715_03_003,i_316,Romano T. (316),429,17150129,1,2,7,civ_fleuves,pierre,generale,casale fiume po
+C1714_02_092,i_88,Capellaro F. (88),418,17140807,2,2,0,mil_fortifications,si,generale,brunetta
+C1714_02_088,i_10,Aprile F. (10),405,17140714,1,3,6,civ_universite,marbre,generale,torino università degli studi
+C1714_02_088,i_288,Quadrone B. (288),404,17140714,1,3,6,civ_universite,marbre,generale,torino università degli studi
+C1714_02_088,i_97,Casella A. (97),406,17140714,1,3,6,civ_universite,marbre,generale,torino università degli studi
+C1714_02_090,i_10,Aprile F. (10),407,17140802,1,3,0,civ_universite,si,generale,torino università degli studi
+C1714_02_090,i_219,Mazzoni C.G. (219),411,17140802,1,3,0,civ_universite,si,generale,torino università degli studi
+C1714_02_090,i_345,Solari C. (345),409,17140802,1,3,0,civ_universite,si,generale,torino università degli studi
+C1714_02_090,i_346,Solari G. (346),410,17140802,1,3,0,civ_universite,si,generale,torino università degli studi
+C1714_02_090,i_347,Solari G.B. (347),408,17140802,1,3,0,civ_universite,si,generale,torino università degli studi
+C1714_02_090,i_348,Solari M. (348),413,17140802,1,3,0,civ_universite,si,generale,torino università degli studi
+C1714_02_090,i_351,Succi G.B. (351),412,17140802,1,3,0,civ_universite,si,generale,torino università degli studi
+C1714_02_092,i_258,Peraldo P. (258),419,17140807,2,2,0,mil_fortifications,si,generale,brunetta
+C1714_02_092,i_281,Pistone G.S. (281),414,17140807,2,2,0,mil_fortifications,si,generale,brunetta
+C1714_02_092,i_283,Pistone G.A. (283),420,17140807,2,2,0,mil_fortifications,si,generale,brunetta
+C1714_02_092,i_341,Sereno G. (341),416,17140807,2,2,0,mil_fortifications,si,generale,brunetta
+C1714_02_092,i_374,Vanera M. (374),417,17140807,2,2,0,mil_fortifications,si,generale,brunetta
+C1714_02_073,i_62,Boggio P. (62),381,17140515,2,2,1,mil_fortifications,terre,generale,chivasso e verrua fortificazioni
+C1714_02_073,i_78,Caligaris A. (78),386,17140515,2,2,1,mil_fortifications,terre,generale,chivasso e verrua fortificazioni
+C1714_02_079,i_109,Coda G. (109),392,17140528,1,2,7,civ_universite,pierre,generale,torino univeristà degli studi
+C1714_02_079,i_177,Gillonio P. (177),391,17140528,1,2,7,civ_universite,pierre,generale,torino univeristà degli studi
+C1714_02_079,i_4,Abbondiolo P. (4),393,17140528,1,2,7,civ_universite,pierre,generale,torino univeristà degli studi
+C1714_02_081,i_392,Zo G.H. (392),394,17140601,1,3,9,civ_divers,metaux,generale,rivoli castello e torino università degli studi
+C1714_02_083,i_258,Peraldo P. (258),398,17140706,2,2,0,mil_fortifications,si,generale,fenestrelle
+C1714_02_083,i_278,Pistone C. (278),400,17140706,2,2,0,mil_fortifications,si,generale,fenestrelle
+C1714_02_083,i_281,Pistone G.S. (281),397,17140706,2,2,0,mil_fortifications,si,generale,fenestrelle
+C1714_02_083,i_283,Pistone G.A. (283),396,17140706,2,2,0,mil_fortifications,si,generale,fenestrelle
+C1714_02_083,i_342,Sereno M. (342),399,17140706,2,2,0,mil_fortifications,si,generale,fenestrelle
+C1714_02_083,i_373,Vanera G. (373),401,17140706,2,2,0,mil_fortifications,si,generale,fenestrelle
+C1714_02_083,i_374,Vanera M. (374),395,17140706,2,2,0,mil_fortifications,si,generale,fenestrelle
+C1714_02_083,i_392,Zo G.H. (392),403,17140706,2,2,0,mil_fortifications,si,generale,fenestrelle
+C1714_02_059,i_345,Solari C. (345),374,17140508,1,3,0,civ_universite,si,generale,torino fabrica dell'università
+C1714_02_059,i_346,Solari G. (346),379,17140508,1,3,0,civ_universite,si,generale,torino fabrica dell'università
+C1714_02_059,i_347,Solari G.B. (347),376,17140508,1,3,0,civ_universite,si,generale,torino fabrica dell'università
+C1714_02_059,i_351,Succi G.B. (351),380,17140508,1,3,0,civ_universite,si,generale,torino fabrica dell'università
+C1714_02_073,i_153,Galimberti G.M. (153),382,17140515,2,2,1,mil_fortifications,terre,generale,chivasso e verrua fortificazioni
+C1714_02_073,i_187,Groppi C. (187),384,17140515,2,2,1,mil_fortifications,terre,generale,chivasso e verrua fortificazioni
+C1714_02_073,i_202,Maciotta G. (202),383,17140515,2,2,1,mil_fortifications,terre,generale,chivasso e verrua fortificazioni
+C1714_02_073,i_223,Menafoglio A. (223),387,17140515,2,2,1,mil_fortifications,terre,generale,chivasso e verrua fortificazioni
+C1714_02_073,i_226,Menafoglio C.A. (226),389,17140515,2,2,1,mil_fortifications,terre,generale,chivasso e verrua fortificazioni
+C1714_02_073,i_275,Pinchetti D. (275),385,17140515,2,2,1,mil_fortifications,terre,generale,chivasso e verrua fortificazioni
+C1714_02_073,i_316,Romano T. (316),388,17140515,2,2,1,mil_fortifications,terre,generale,chivasso e verrua fortificazioni
+C1714_02_057,i_236,Mosso C.G. (236),373,17140424,2,2,2,mil_fortifications,bois,generale,valenza fortificazioni
+C1714_02_059,i_179,Giudici F.M. (179),378,17140508,1,3,0,civ_universite,si,generale,torino fabrica dell'università
+C1714_02_059,i_219,Mazzoni C.G. (219),375,17140508,1,3,0,civ_universite,si,generale,torino fabrica dell'università
+C1714_02_053,i_109,Coda G. (109),370,17140414,2,2,0,mil_fortifications,si,generale,alessandria fortificazioni
+C1714_02_053,i_175,Gillonio G.P. (175),368,17140414,2,2,0,mil_fortifications,si,generale,alessandria fortificazioni
+C1714_02_053,i_26,Bello L. (26),372,17140414,2,2,0,mil_fortifications,si,generale,alessandria fortificazioni
+C1714_02_053,i_272,Piazzollo F. (272),369,17140414,2,2,0,mil_fortifications,si,generale,alessandria fortificazioni
+C1714_02_053,i_4,Abbondiolo P. (4),367,17140414,2,2,0,mil_fortifications,si,generale,alessandria fortificazioni
+C1714_02_048,i_111,Constanzo B. (111),364,17140414,2,2,2,mil_fortifications,bois,generale,alessandria fortificazioni
+C1714_02_048,i_153,Galimberti G.M. (153),366,17140414,2,2,2,mil_fortifications,bois,generale,alessandria fortificazioni
+C1714_02_048,i_223,Menafoglio A. (223),363,17140414,2,2,2,mil_fortifications,bois,generale,alessandria fortificazioni
+C1714_02_048,i_377,Vanone A.M. (377),365,17140414,2,2,2,mil_fortifications,bois,generale,alessandria fortificazioni
+C1714_02_042,i_49,Bianchi G. (49),354,17140423,1,3,8,civ_residences_royales,stuc,generale,rivoli castello
+C1714_02_046,i_108,Clerico S. (108),358,17140414,2,2,2,mil_fortifications,bois,generale,casale fortificazioni
+C1714_02_046,i_238,Mosso G. (238),361,17140414,2,2,2,mil_fortifications,bois,generale,casale fortificazioni
+C1714_02_046,i_319,Rondoletto C.M. (319),359,17140414,2,2,2,mil_fortifications,bois,generale,casale fortificazioni
+C1714_02_042,i_158,Gallo G.G. (158),356,17140423,1,3,8,civ_residences_royales,stuc,generale,rivoli castello
+C1714_02_042,i_349,Somazzo F. (349),355,17140423,1,3,8,civ_residences_royales,stuc,generale,rivoli castello
+C1714_02_039,i_106,Clerico G.P. (106),353,17140412,2,2,2,mil_fortifications,bois,generale,chivasso fortificazioni
+C1714_02_039,i_108,Clerico S. (108),351,17140412,2,2,2,mil_fortifications,bois,generale,chivasso fortificazioni
+C1714_02_039,i_238,Mosso G. (238),352,17140412,2,2,2,mil_fortifications,bois,generale,chivasso fortificazioni
+C1714_02_039,i_318,Rondoletto C.M. (318),350,17140412,2,2,2,mil_fortifications,bois,generale,chivasso fortificazioni
+C1714_02_037,i_153,Galimberti G.M. (153),346,17140409,2,2,0,mil_fortifications,si,generale,mortara fortificazioni
+C1714_02_037,i_223,Menafoglio A. (223),344,17140409,2,2,0,mil_fortifications,si,generale,mortara fortificazioni
+C1714_02_037,i_227,Menafoglio F.A. (227),347,17140409,2,2,0,mil_fortifications,si,generale,mortara fortificazioni
+C1714_02_037,i_377,Vanone A.M. (377),345,17140409,2,2,0,mil_fortifications,si,generale,mortara fortificazioni
+C1714_02_031,i_175,Gillonio G.P. (175),342,17140313,2,2,0,mil_fortifications,si,generale,mortara fortificazioni
+C1714_02_031,i_27,Bello P. (27),343,17140313,2,2,0,mil_fortifications,si,generale,mortara fortificazioni
+C1714_02_031,i_272,Piazzollo F. (272),339,17140313,2,2,0,mil_fortifications,si,generale,mortara fortificazioni
+C1714_02_031,i_4,Abbondiolo P. (4),341,17140313,2,2,0,mil_fortifications,si,generale,mortara fortificazioni
+C1714_02_027,i_114,Corte G. (114),331,17140312,2,2,7,mil_fortifications,pierre,generale,brunetta
+C1714_02_027,i_12,Arduino G. (12),337,17140312,2,2,7,mil_fortifications,pierre,generale,brunetta
+C1714_02_027,i_186,Griva G.A. (186),333,17140312,2,2,7,mil_fortifications,pierre,generale,brunetta
+C1714_02_027,i_210,Magnano G.B. (210),334,17140312,2,2,7,mil_fortifications,pierre,generale,brunetta
+C1714_02_027,i_320,Rondoletto G.M. (320),338,17140312,2,2,7,mil_fortifications,pierre,generale,brunetta
+C1714_02_027,i_361,Toscanello F. (361),332,17140312,2,2,7,mil_fortifications,pierre,generale,brunetta
+C1714_02_027,i_375,Vani A. (375),335,17140312,2,2,7,mil_fortifications,pierre,generale,brunetta
+C1714_02_019,i_111,Constanzo B. (111),330,17140311,2,2,0,mil_fortifications,si,generale,mortara fortificazioni
+C1714_02_019,i_187,Groppi C. (187),327,17140311,2,2,0,mil_fortifications,si,generale,mortara fortificazioni
+C1714_02_019,i_223,Menafoglio A. (223),328,17140311,2,2,0,mil_fortifications,si,generale,mortara fortificazioni
+C1714_02_019,i_226,Menafoglio C.A. (226),324,17140311,2,2,0,mil_fortifications,si,generale,mortara fortificazioni
+C1714_02_019,i_266,Pianarosa G. (266),329,17140311,2,2,0,mil_fortifications,si,generale,mortara fortificazioni
+C1714_02_019,i_275,Pinchetti D. (275),321,17140311,2,2,0,mil_fortifications,si,generale,mortara fortificazioni
+C1714_02_019,i_299,Righino G. (299),323,17140311,2,2,0,mil_fortifications,si,generale,mortara fortificazioni
+C1714_02_019,i_302,Righino P.A. (302),326,17140311,2,2,0,mil_fortifications,si,generale,mortara fortificazioni
+C1714_02_019,i_377,Vanone A.M. (377),322,17140311,2,2,0,mil_fortifications,si,generale,mortara fortificazioni
+C1714_02_013,i_198,Machiolo G. (198),315,17140226,2,2,7,mil_fortifications,pierre,generale,brunetta
+C1714_02_013,i_199,Machiolo G.G. (199),317,17140226,2,2,7,mil_fortifications,pierre,generale,brunetta
+C1714_02_013,i_341,Sereno G. (341),319,17140226,2,2,7,mil_fortifications,pierre,generale,brunetta
+C1714_02_013,i_342,Sereno M. (342),314,17140226,2,2,7,mil_fortifications,pierre,generale,brunetta
+C1714_02_013,i_372,Vanera G. (372),316,17140226,2,2,7,mil_fortifications,pierre,generale,brunetta
+C1714_02_013,i_373,Vanera G. (373),320,17140226,2,2,7,mil_fortifications,pierre,generale,brunetta
+C1714_02_013,i_374,Vanera M. (374),313,17140226,2,2,7,mil_fortifications,pierre,generale,brunetta
+C1714_02_007,i_223,Menafoglio A. (223),308,17140131,2,2,0,mil_fortifications,si,generale,brunetta
+C1714_02_007,i_226,Menafoglio C.A. (226),310,17140131,2,2,0,mil_fortifications,si,generale,brunetta
+C1714_02_007,i_266,Pianarosa G. (266),311,17140131,2,2,0,mil_fortifications,si,generale,brunetta
+C1714_02_007,i_275,Pinchetti D. (275),307,17140131,2,2,0,mil_fortifications,si,generale,brunetta
+C1714_02_007,i_283,Pistone G.A. (283),312,17140131,2,2,0,mil_fortifications,si,generale,brunetta
+C1714_02_007,i_302,Righino P.A. (302),306,17140131,2,2,0,mil_fortifications,si,generale,brunetta
+C1713_01_277,i_7,Andicola G. (7),300,17131223,1,3,0,civ_residences_royales,si,generale,torino castello di rivoli
+C1714_02_001,i_100,Castelli M.F. (100),304,17140104,1,3,9,civ_residences_royales,metaux,generale,torino castello di rivoli
+C1714_02_001,i_329,Salié P. (329),303,17140104,1,3,9,civ_residences_royales,metaux,generale,torino castello di rivoli
+C1714_02_001,i_390,Zo G.B. (390),305,17140104,1,3,9,civ_residences_royales,metaux,generale,torino castello di rivoli
+C1714_02_001,i_392,Zo G.H. (392),301,17140104,1,3,9,civ_residences_royales,metaux,generale,torino castello di rivoli
+C1713_01_271,i_94,Casanova A. (94),293,17131211,1,3,2,civ_residences_royales,bois,generale,torino castello di rivoli
+C1713_01_277,i_161,Gambone P.G. (161),296,17131223,1,3,0,civ_residences_royales,si,generale,torino castello di rivoli
+C1713_01_277,i_169,Giani G. (169),299,17131223,1,3,0,civ_residences_royales,si,generale,torino castello di rivoli
+C1713_01_277,i_272,Piazzollo F. (272),298,17131223,1,3,0,civ_residences_royales,si,generale,torino castello di rivoli
+C1713_01_264,i_325,Rossi G.B. (325),289,17131205,1,2,2,civ_universite,bois,generale,torino università degli studi
+C1713_01_264,i_86,Cantone D. (86),290,17131205,1,2,2,civ_universite,bois,generale,torino università degli studi
+C1713_01_271,i_369,Ugliengo C.M. (369),295,17131211,1,3,2,civ_residences_royales,bois,generale,torino castello di rivoli
+C1713_01_271,i_389,Zo C.A. (389),292,17131211,1,3,2,civ_residences_royales,bois,generale,torino castello di rivoli
+C1713_01_264,i_192,Langier G.V. (192),287,17131205,1,2,2,civ_universite,bois,generale,torino università degli studi
+C1713_01_264,i_193,Langier S. (193),288,17131205,1,2,2,civ_universite,bois,generale,torino università degli studi
+C1713_01_256,i_153,Galimberti G.M. (153),286,17131117,2,2,7,mil_fortifications,pierre,generale,brunetta
+C1713_01_256,i_200,Maciotta C. (200),283,17131117,2,2,7,mil_fortifications,pierre,generale,brunetta
+C1713_01_256,i_202,Maciotta G. (202),285,17131117,2,2,7,mil_fortifications,pierre,generale,brunetta
+C1713_01_256,i_223,Menafoglio A. (223),281,17131117,2,2,7,mil_fortifications,pierre,generale,brunetta
+C1713_01_256,i_315,Romano G.B. (315),282,17131117,2,2,7,mil_fortifications,pierre,generale,brunetta
+C1713_01_252,i_294,Remo M. (294),274,17131111,2,7,1,mil_fortifications,terre,generale,brunetta
+C1713_01_252,i_304,Rippelli F. (304),277,17131111,2,7,1,mil_fortifications,terre,generale,brunetta
+C1713_01_252,i_341,Sereno G. (341),275,17131111,2,7,1,mil_fortifications,terre,generale,brunetta
+C1713_01_252,i_342,Sereno M. (342),280,17131111,2,7,1,mil_fortifications,terre,generale,brunetta
+C1713_01_252,i_36,Bellotto L. (36),279,17131111,2,7,1,mil_fortifications,terre,generale,brunetta
+C1713_01_252,i_374,Vanera M. (374),276,17131111,2,7,1,mil_fortifications,terre,generale,brunetta
+C1713_01_248,i_223,Menafoglio A. (223),272,17131002,2,2,1,mil_chateaux,terre,generale,casale castello
+C1713_01_248,i_266,Pianarosa G. (266),268,17131002,2,2,1,mil_chateaux,terre,generale,casale castello
+C1713_01_248,i_276,Pinchetti P. (276),267,17131002,2,2,1,mil_chateaux,terre,generale,casale castello
+C1713_01_248,i_292,Rechettino A. (292),270,17131002,2,2,1,mil_chateaux,terre,generale,casale castello
+C1713_01_248,i_302,Righino P.A. (302),269,17131002,2,2,1,mil_chateaux,terre,generale,casale castello
+C1713_01_248,i_357,Tognasco C. (357),273,17131002,2,2,1,mil_chateaux,terre,generale,casale castello
+C1713_01_235,i_27,Bello P. (27),254,17130909,1,3,7,civ_universite,pierre,generale,torino unversità degli studi
+C1713_01_235,i_288,Quadrone B. (288),256,17130909,1,3,7,civ_universite,pierre,generale,torino unversità degli studi
+C1713_01_235,i_38,Berta G. (38),258,17130909,1,3,7,civ_universite,pierre,generale,torino unversità degli studi
+C1713_01_235,i_97,Casella A. (97),257,17130909,1,3,7,civ_universite,pierre,generale,torino unversità degli studi
+C1713_01_241,i_111,Constanzo B. (111),262,17130920,2,2,1,mil_fortifications,terre,generale,valenza fortificazioni
+C1713_01_241,i_153,Galimberti G.M. (153),263,17130920,2,2,1,mil_fortifications,terre,generale,valenza fortificazioni
+C1713_01_241,i_223,Menafoglio A. (223),265,17130920,2,2,1,mil_fortifications,terre,generale,valenza fortificazioni
+C1713_01_241,i_227,Menafoglio F.A. (227),266,17130920,2,2,1,mil_fortifications,terre,generale,valenza fortificazioni
+C1713_01_241,i_266,Pianarosa G. (266),259,17130920,2,2,1,mil_fortifications,terre,generale,valenza fortificazioni
+C1713_01_241,i_275,Pinchetti D. (275),264,17130920,2,2,1,mil_fortifications,terre,generale,valenza fortificazioni
+C1713_01_241,i_302,Righino P.A. (302),260,17130920,2,2,1,mil_fortifications,terre,generale,valenza fortificazioni
+C1713_01_228,i_194,Lanzavecchia G. (194),251,17130904,2,6,0,mil_casernes,si,generale,mondovì caserma
+C1713_01_228,i_266,Pianarosa G. (266),250,17130904,2,6,0,mil_casernes,si,generale,mondovì caserma
+C1713_01_235,i_10,Aprile F. (10),255,17130909,1,3,7,civ_universite,pierre,generale,torino unversità degli studi
+C1713_01_220,i_205,Maffei C. (205),249,17130802,2,2,0,mil_arsenal,si,generale,pinerolo arsenale
+C1713_01_220,i_228,Menafoglio G. (228),243,17130802,2,2,0,mil_arsenal,si,generale,pinerolo arsenale
+C1713_01_220,i_308,Rizzo F.A. (308),244,17130802,2,2,0,mil_arsenal,si,generale,pinerolo arsenale
+C1713_01_220,i_386,Vittino G.F. (386),248,17130802,2,2,0,mil_arsenal,si,generale,pinerolo arsenale
+C1713_01_220,i_58,Blenio P. (58),245,17130802,2,2,0,mil_arsenal,si,generale,pinerolo arsenale
+C1713_01_220,i_96,Casasopra L. (96),247,17130802,2,2,0,mil_arsenal,si,generale,pinerolo arsenale
+C1713_01_216,i_254,Pelloli F.A. (254),242,17130729,2,3,9,mil_citadelles,metaux,generale,torino cittadella
+C1713_01_216,i_389,Zo C.A. (389),240,17130729,2,3,9,mil_citadelles,metaux,generale,torino cittadella
+C1713_01_216,i_392,Zo G.H. (392),239,17130729,2,3,9,mil_citadelles,metaux,generale,torino cittadella
+C1713_01_204,i_297,Richiardo G.F. (297),228,17130603,1,3,9,civ_residences_royales,metaux,generale,venaria
+C1713_01_204,i_84,Candellero G. (84),229,17130603,1,3,9,civ_residences_royales,metaux,generale,venaria
+C1713_01_204,i_96,Casasopra L. (96),230,17130603,1,3,9,civ_residences_royales,metaux,generale,venaria
+C1713_01_208,i_100,Castelli M.F. (100),232,17130603,3,3,9,rel_chapelles,metaux,generale,torino cappella del santissimo sudario
+C1713_01_208,i_389,Zo C.A. (389),231,17130603,3,3,9,rel_chapelles,metaux,generale,torino cappella del santissimo sudario
+C1713_01_208,i_392,Zo G.H. (392),233,17130603,3,3,9,rel_chapelles,metaux,generale,torino cappella del santissimo sudario
+C1713_01_210,i_1,[Morinache] C.G. (1),238,17130617,2,1,7,mil_citadelles,pierre,generale,torino cittadella
+C1713_01_210,i_18,Darbesio G.B. (18),237,17130617,2,1,7,mil_citadelles,pierre,generale,torino cittadella
+C1713_01_210,i_242,Oreglia C.G. (242),236,17130617,2,1,7,mil_citadelles,pierre,generale,torino cittadella
+C1713_01_210,i_363,Tovazzo C. (363),234,17130617,2,1,7,mil_citadelles,pierre,generale,torino cittadella
+C1713_01_202,i_119,Crosa T.A. (119),226,17130531,1,1,11,civ_residences_royales,vitres,generale,torino palazzo reale
+C1713_01_187,i_2,[Seitto] G. (2),213,17130429,1,3,7,civ_residences_royales,pierre,generale,venaria
+C1713_01_187,i_231,Miretto V. (231),214,17130429,1,3,7,civ_residences_royales,pierre,generale,venaria
+C1713_01_187,i_371,Valzo G.L. (371),210,17130429,1,3,7,civ_residences_royales,pierre,generale,venaria
+C1713_01_187,i_380,Vercelli G.D. (380),216,17130429,1,3,7,civ_residences_royales,pierre,generale,venaria
+C1713_01_187,i_381,Vercelli G.B.C. (381),211,17130429,1,3,7,civ_residences_royales,pierre,generale,venaria
+C1713_01_194,i_220,Meietto V.(. (220),218,17130516,1,3,7,civ_residences_royales,pierre,generale,venaria
+C1713_01_194,i_371,Valzo G.L. (371),219,17130516,1,3,7,civ_residences_royales,pierre,generale,venaria
+C1713_01_194,i_380,Vercelli G.D. (380),217,17130516,1,3,7,civ_residences_royales,pierre,generale,venaria
+C1713_01_194,i_381,Vercelli G.B.C. (381),220,17130516,1,3,7,civ_residences_royales,pierre,generale,venaria
+C1713_01_198,i_149,Gaja P. (149),222,17130531,2,2,1,mil_fortifications,terre,generale,torino porta susina
+C1713_01_198,i_218,Mastalone P.F. (218),223,17130531,2,2,1,mil_fortifications,terre,generale,torino porta susina
+C1713_01_198,i_321,Rondoletto M. (321),224,17130531,2,2,1,mil_fortifications,terre,generale,torino porta susina
+C1713_01_198,i_374,Vanera M. (374),225,17130531,2,2,1,mil_fortifications,terre,generale,torino porta susina
+C1713_01_181,i_100,Castelli M.F. (100),208,17130408,1,3,9,civ_divers,metaux,generale,torino università e rivoli castello
+C1713_01_181,i_389,Zo C.A. (389),206,17130408,1,3,9,civ_divers,metaux,generale,torino università e rivoli castello
+C1713_01_181,i_392,Zo G.H. (392),207,17130408,1,3,9,civ_divers,metaux,generale,torino università e rivoli castello
+C1713_01_187,i_149,Gaja P. (149),215,17130429,1,3,7,civ_residences_royales,pierre,generale,venaria
+C1713_01_174,i_62,Boggio P. (62),200,17130317,2,6,0,mil_citadelles,si,generale,torino cittadella
+C1713_01_178,i_106,Clerico G.P. (106),203,17130321,2,3,2,mil_citadelles,bois,generale,torino caserma della cittadella
+C1713_01_178,i_108,Clerico S. (108),201,17130321,2,3,2,mil_citadelles,bois,generale,torino caserma della cittadella
+C1713_01_178,i_319,Rondoletto C.M. (319),205,17130321,2,3,2,mil_citadelles,bois,generale,torino caserma della cittadella
+C1713_01_178,i_326,Rosso F.P. (326),202,17130321,2,3,2,mil_citadelles,bois,generale,torino caserma della cittadella
+C1713_01_174,i_200,Maciotta C. (200),199,17130317,2,6,0,mil_citadelles,si,generale,torino cittadella
+C1713_01_174,i_279,Pistone G.G. (279),197,17130317,2,6,0,mil_citadelles,si,generale,torino cittadella
+C1713_01_158,i_291,Raschioni B. (291),189,17130228,1,9,0,civ_universite,si,generale,torino università degli studi
+C1713_01_158,i_331,Sardi G. (331),187,17130228,1,9,0,civ_universite,si,generale,torino università degli studi
+C1713_01_158,i_332,Sardi P. (332),185,17130228,1,9,0,civ_universite,si,generale,torino università degli studi
+C1713_01_166,i_390,Zo G.B. (390),190,17130314,1,4,0,civ_routes,si,generale,mortara sterniti
+C1713_01_166,i_69,Borrione C. (69),192,17130314,1,4,0,civ_routes,si,generale,mortara sterniti
+C1713_01_166,i_70,Borrione D. (70),191,17130314,1,4,0,civ_routes,si,generale,mortara sterniti
+C1713_01_168,i_356,Tognasco C. (356),195,17130316,2,6,0,mil_fortifications,si,generale,alessandria bastione
+C1713_01_168,i_375,Vani A. (375),194,17130316,2,6,0,mil_fortifications,si,generale,alessandria bastione
+C1713_01_168,i_39,Berti G.B. (39),196,17130316,2,6,0,mil_fortifications,si,generale,alessandria bastione
+C1713_01_151,i_51,Biglia G.B. (51),177,17130218,2,2,7,mil_fortifications,pierre,generale,brunetta
+C1713_01_158,i_123,De Mora A. (123),186,17130228,1,9,0,civ_universite,si,generale,torino università degli studi
+C1713_01_142,i_223,Menafoglio A. (223),167,17130213,1,2,0,civ_residences_royales,si,generale,rivoli castello
+C1713_01_142,i_226,Menafoglio C.A. (226),171,17130213,1,2,0,civ_residences_royales,si,generale,rivoli castello
+C1713_01_142,i_266,Pianarosa G. (266),170,17130213,1,2,0,civ_residences_royales,si,generale,rivoli castello
+C1713_01_142,i_272,Piazzollo F. (272),175,17130213,1,2,0,civ_residences_royales,si,generale,rivoli castello
+C1713_01_142,i_275,Pinchetti D. (275),173,17130213,1,2,0,civ_residences_royales,si,generale,rivoli castello
+C1713_01_142,i_80,Camerata A. (80),176,17130213,1,2,0,civ_residences_royales,si,generale,rivoli castello
+C1713_01_142,i_81,Camerata C. (81),172,17130213,1,2,0,civ_residences_royales,si,generale,rivoli castello
+C1713_01_151,i_200,Maciotta C. (200),183,17130218,2,2,7,mil_fortifications,pierre,generale,brunetta
+C1713_01_151,i_202,Maciotta G. (202),182,17130218,2,2,7,mil_fortifications,pierre,generale,brunetta
+C1713_01_151,i_279,Pistone G.G. (279),179,17130218,2,2,7,mil_fortifications,pierre,generale,brunetta
+C1713_01_151,i_281,Pistone G.S. (281),181,17130218,2,2,7,mil_fortifications,pierre,generale,brunetta
+C1713_01_151,i_315,Romano G.B. (315),184,17130218,2,2,7,mil_fortifications,pierre,generale,brunetta
+C1713_01_151,i_316,Romano T. (316),178,17130218,2,2,7,mil_fortifications,pierre,generale,brunetta
+C1713_01_138,i_27,Bello P. (27),165,17130206,2,1,4,mil_chateaux,chaux,generale,casale castello
+C1713_01_138,i_331,Sardi G. (331),166,17130206,2,1,4,mil_chateaux,chaux,generale,casale castello
+C1713_01_138,i_332,Sardi P. (332),164,17130206,2,1,4,mil_chateaux,chaux,generale,casale castello
+C1713_01_142,i_139,Fontana D. (139),168,17130213,1,2,0,civ_residences_royales,si,generale,rivoli castello
+C1713_01_142,i_153,Galimberti G.M. (153),174,17130213,1,2,0,civ_residences_royales,si,generale,rivoli castello
+C1712_01_125,i_288,Quadrone B. (288),150,17120510,1,3,7,civ_residences_royales,pierre,generale,venaria reale gran padiglio
+C1712_01_125,i_34,Belloto C.F. (34),149,17120510,1,3,7,civ_residences_royales,pierre,generale,venaria reale gran padiglio
+C1712_01_125,i_97,Casella A. (97),152,17120510,1,3,7,civ_residences_royales,pierre,generale,venaria reale gran padiglio
+C1712_01_125,i_99,Casella S. (99),148,17120510,1,3,7,civ_residences_royales,pierre,generale,venaria reale gran padiglio
+C1712_01_128,i_101,Ceresio F. (101),157,17120521,2,5,2,mil_ponts_de_bateaux,bois,generale,saluggia collegno ponti
+C1712_01_128,i_102,Ceresio G.A. (102),156,17120521,2,5,2,mil_ponts_de_bateaux,bois,generale,saluggia collegno ponti
+C1712_01_128,i_103,Ceresio P.A. (103),155,17120521,2,5,2,mil_ponts_de_bateaux,bois,generale,saluggia collegno ponti
+C1712_01_128,i_125,Desio N. (125),154,17120521,2,5,2,mil_ponts_de_bateaux,bois,generale,saluggia collegno ponti
+C1712_01_128,i_150,Gaido G. (150),159,17120521,2,5,2,mil_ponts_de_bateaux,bois,generale,saluggia collegno ponti
+C1712_01_128,i_65,Bonacosa A. (65),158,17120521,2,5,2,mil_ponts_de_bateaux,bois,generale,saluggia collegno ponti
+C1712_01_132,i_212,Marcandi G. (212),163,17120909,2,2,0,mil_fortifications,si,generale,casale fortificazioni
+C1712_01_132,i_331,Sardi G. (331),161,17120909,2,2,0,mil_fortifications,si,generale,casale fortificazioni
+C1712_01_132,i_332,Sardi P. (332),160,17120909,2,2,0,mil_fortifications,si,generale,casale fortificazioni
+C1712_01_125,i_10,Aprile F. (10),151,17120510,1,3,7,civ_residences_royales,pierre,generale,venaria reale gran padiglio
+C1712_01_115,i_24,Bello G. (24),141,17120414,1,6,0,civ_residences_royales,si,generale,rivoli castello
+C1712_01_115,i_33,Bellotto A. (33),138,17120414,1,6,0,civ_residences_royales,si,generale,rivoli castello
+C1712_01_115,i_393,Zo G. (393),140,17120414,1,6,0,civ_residences_royales,si,generale,rivoli castello
+C1712_01_115,i_83,Candellero G.B. (83),142,17120414,1,6,0,civ_residences_royales,si,generale,rivoli castello
+C1712_01_119,i_106,Clerico G.P. (106),145,17120429,2,2,2,mil_citadelles,bois,generale,torino cittadella
+C1712_01_119,i_108,Clerico S. (108),146,17120429,2,2,2,mil_citadelles,bois,generale,torino cittadella
+C1712_01_119,i_236,Mosso C.G. (236),147,17120429,2,2,2,mil_citadelles,bois,generale,torino cittadella
+C1712_01_112,i_62,Boggio P. (62),134,17120407,2,6,0,mil_fortifications,si,generale,verrua e asti forte
+C1712_01_115,i_136,Fiorina G.P. (136),143,17120414,1,6,0,civ_residences_royales,si,generale,rivoli castello
+C1712_01_107,i_106,Clerico G.P. (106),133,17120407,2,2,0,mil_fortifications,si,generale,torino porta susina
+C1712_01_107,i_109,Coda G. (109),128,17120407,2,2,0,mil_fortifications,si,generale,torino porta susina
+C1712_01_107,i_175,Gillonio G.P. (175),131,17120407,2,2,0,mil_fortifications,si,generale,torino porta susina
+C1712_01_107,i_176,Gillonio G. (176),129,17120407,2,2,0,mil_fortifications,si,generale,torino porta susina
+C1712_01_107,i_27,Bello P. (27),127,17120407,2,2,0,mil_fortifications,si,generale,torino porta susina
+C1712_01_107,i_319,Rondoletto C.M. (319),132,17120407,2,2,0,mil_fortifications,si,generale,torino porta susina
+C1712_01_112,i_200,Maciotta C. (200),137,17120407,2,6,0,mil_fortifications,si,generale,verrua e asti forte
+C1712_01_112,i_226,Menafoglio C.A. (226),135,17120407,2,6,0,mil_fortifications,si,generale,verrua e asti forte
+C1712_01_103,i_140,Fontana F. (140),126,17120326,2,6,0,mil_citadelles,si,generale,torino cittadella
+C1712_01_103,i_141,Fornione Q. (141),123,17120326,2,6,0,mil_citadelles,si,generale,torino cittadella
+C1712_01_103,i_211,Manfreddo G. (211),122,17120326,2,6,0,mil_citadelles,si,generale,torino cittadella
+C1712_01_103,i_25,Bello G. (25),121,17120326,2,6,0,mil_citadelles,si,generale,torino cittadella
+C1712_01_103,i_320,Rondoletto G.M. (320),125,17120326,2,6,0,mil_citadelles,si,generale,torino cittadella
+C1712_01_095,i_561,Boggio P. (561),107,17120318,2,9,0,mil_fortifications,si,generale,ivrea forte e castello
+C1712_01_099,i_202,Maciotta G. (202),117,17120321,2,6,0,mil_fortifications,si,generale,mortara fortificazioni
+C1712_01_099,i_226,Menafoglio C.A. (226),118,17120321,2,6,0,mil_fortifications,si,generale,mortara fortificazioni
+C1712_01_099,i_275,Pinchetti D. (275),119,17120321,2,6,0,mil_fortifications,si,generale,mortara fortificazioni
+C1712_01_099,i_302,Righino P.A. (302),120,17120321,2,6,0,mil_fortifications,si,generale,mortara fortificazioni
+C1712_01_099,i_313,Rochettino A. (313),115,17120321,2,6,0,mil_fortifications,si,generale,mortara fortificazioni
+C1712_01_099,i_315,Romano G.B. (315),116,17120321,2,6,0,mil_fortifications,si,generale,mortara fortificazioni
+C1712_01_095,i_226,Menafoglio C.A. (226),109,17120318,2,9,0,mil_fortifications,si,generale,ivrea forte e castello
+C1712_01_095,i_275,Pinchetti D. (275),113,17120318,2,9,0,mil_fortifications,si,generale,ivrea forte e castello
+C1712_01_095,i_279,Pistone G.G. (279),111,17120318,2,9,0,mil_fortifications,si,generale,ivrea forte e castello
+C1712_01_095,i_302,Righino P.A. (302),108,17120318,2,9,0,mil_fortifications,si,generale,ivrea forte e castello
+C1712_01_095,i_316,Romano T. (316),112,17120318,2,9,0,mil_fortifications,si,generale,ivrea forte e castello
+C1712_01_091,i_200,Maciotta C. (200),102,17120318,1,2,0,civ_fleuves,si,generale,casale fiume po
+C1712_01_091,i_201,Maciotta G. (201),99,17120318,1,2,0,civ_fleuves,si,generale,casale fiume po
+C1712_01_091,i_223,Menafoglio A. (223),105,17120318,1,2,0,civ_fleuves,si,generale,casale fiume po
+C1712_01_091,i_226,Menafoglio C.A. (226),103,17120318,1,2,0,civ_fleuves,si,generale,casale fiume po
+C1712_01_091,i_275,Pinchetti D. (275),106,17120318,1,2,0,civ_fleuves,si,generale,casale fiume po
+C1712_01_091,i_278,Pistone C. (278),104,17120318,1,2,0,civ_fleuves,si,generale,casale fiume po
+C1712_01_091,i_282,Pistone G. (282),98,17120318,1,2,0,civ_fleuves,si,generale,casale fiume po
+C1712_01_091,i_292,Rechettino A. (292),101,17120318,1,2,0,civ_fleuves,si,generale,casale fiume po
+C1712_01_082,i_369,Ugliengo C.M. (369),90,17120311,1,3,9,civ_residences_royales,metaux,generale,torino palazzo reale
+C1712_01_082,i_389,Zo C.A. (389),91,17120311,1,3,9,civ_residences_royales,metaux,generale,torino palazzo reale
+C1712_01_082,i_80,Camerata A. (80),92,17120311,1,3,9,civ_residences_royales,metaux,generale,torino palazzo reale
+C1712_01_085,i_134,Ferraris B. (134),97,17120312,2,9,0,mil_citadelles,si,generale,torino cittadella
+C1712_01_085,i_331,Sardi G. (331),95,17120312,2,9,0,mil_citadelles,si,generale,torino cittadella
+C1712_01_085,i_332,Sardi P. (332),93,17120312,2,9,0,mil_citadelles,si,generale,torino cittadella
+C1712_01_085,i_385,Vitale P. (385),96,17120312,2,9,0,mil_citadelles,si,generale,torino cittadella
+C1712_01_073,i_51,Biglia G.B. (51),77,17120227,2,2,7,mil_fortifications,pierre,generale,demonte
+C1712_01_073,i_59,Bodoira G.D. (59),78,17120227,2,2,7,mil_fortifications,pierre,generale,demonte
+C1712_01_076,i_115,Costanzo B. (115),83,17120309,2,6,0,mil_fortifications,si,generale,alessandria fortificazioni
+C1712_01_076,i_159,Gallo G.F. (159),87,17120309,2,6,0,mil_fortifications,si,generale,alessandria fortificazioni
+C1712_01_076,i_358,Tognasco G. (358),86,17120309,2,6,0,mil_fortifications,si,generale,alessandria fortificazioni
+C1712_01_076,i_39,Berti G.B. (39),88,17120309,2,6,0,mil_fortifications,si,generale,alessandria fortificazioni
+C1712_01_076,i_40,Bertinello P. (40),85,17120309,2,6,0,mil_fortifications,si,generale,alessandria fortificazioni
+C1712_01_071,i_223,Menafoglio A. (223),76,17120129,2,9,0,mil_fortifications,si,generale,exilles
+C1712_01_071,i_226,Menafoglio C.A. (226),73,17120129,2,9,0,mil_fortifications,si,generale,exilles
+C1712_01_071,i_279,Pistone G.G. (279),75,17120129,2,9,0,mil_fortifications,si,generale,exilles
+C1712_01_071,i_281,Pistone G.S. (281),74,17120129,2,9,0,mil_fortifications,si,generale,exilles
+C1712_01_073,i_159,Gallo G.F. (159),80,17120227,2,2,7,mil_fortifications,pierre,generale,demonte
+C1712_01_073,i_375,Vani A. (375),81,17120227,2,2,7,mil_fortifications,pierre,generale,demonte
+C1712_01_073,i_39,Berti G.B. (39),79,17120227,2,2,7,mil_fortifications,pierre,generale,demonte
+C1712_01_061,i_51,Biglia G.B. (51),66,17120109,2,2,7,mil_fortifications,pierre,generale,brunetta
+C1712_01_067,i_267,Pianarosa G. (267),71,17120125,2,2,2,mil_fortifications,bois,generale,sargio [saorge] forte
+C1712_01_067,i_272,Piazzollo F. (272),70,17120125,2,2,2,mil_fortifications,bois,generale,sargio [saorge] forte
+C1711_01_065,i_108,Clerico S. (108),56,17111006,1,2,0,civ_ponts,si,generale,dora ponte
+C1711_01_065,i_238,Mosso G. (238),55,17111006,1,2,0,civ_ponts,si,generale,dora ponte
+C1711_01_065,i_328,Salazza B. (328),57,17111006,1,2,0,civ_ponts,si,generale,dora ponte
+C1711_01_066,i_247,Paneaglio S.G. (247),59,17110729,2,7,2,mil_citadelles,bois,generale,torino cittadella
+C1711_01_066,i_305,Riva M.A. (305),58,17110729,2,7,2,mil_citadelles,bois,generale,torino cittadella
+C1712_01_061,i_120,Cucco P. (120),63,17120109,2,2,7,mil_fortifications,pierre,generale,brunetta
+C1712_01_061,i_159,Gallo G.F. (159),65,17120109,2,2,7,mil_fortifications,pierre,generale,brunetta
+C1712_01_061,i_16,Baietto G.F. (16),62,17120109,2,2,7,mil_fortifications,pierre,generale,brunetta
+C1712_01_061,i_3,[Vassi] A. (3),61,17120109,2,2,7,mil_fortifications,pierre,generale,brunetta
+C1712_01_061,i_362,Toscasco C. (362),68,17120109,2,2,7,mil_fortifications,pierre,generale,brunetta
+C1712_01_061,i_373,Vanera G. (373),67,17120109,2,2,7,mil_fortifications,pierre,generale,brunetta
+C1712_01_061,i_374,Vanera M. (374),64,17120109,2,2,7,mil_fortifications,pierre,generale,brunetta
+C1712_01_061,i_39,Berti G.B. (39),60,17120109,2,2,7,mil_fortifications,pierre,generale,brunetta
+C1711_01_057,i_185,Grecca G.A. (185),54,17111229,2,2,7,mil_fortifications,pierre,generale,brunetta
+C1711_01_057,i_331,Sardi G. (331),53,17111229,2,2,7,mil_fortifications,pierre,generale,brunetta
+C1711_01_057,i_332,Sardi P. (332),51,17111229,2,2,7,mil_fortifications,pierre,generale,brunetta
+C1711_01_054,i_21,Beletto L. (21),48,17111223,2,2,7,mil_fortifications,pierre,generale,brunetta
+C1711_01_054,i_341,Sereno G. (341),49,17111223,2,2,7,mil_fortifications,pierre,generale,brunetta
+C1711_01_038,i_85,Canova A. (85),42,17110602,2,9,0,mil_chateaux,si,generale,casale citta e castello
+C1711_01_047,i_224,Menafoglio A. (224),46,17110723,1,2,2,civ_divers,bois,generale,torino città e cittadella
+C1711_01_047,i_293,Reghino P.M. (293),45,17110723,1,2,2,civ_divers,bois,generale,torino città e cittadella
+C1711_01_047,i_296,Riccio F.A. (296),44,17110723,1,2,2,civ_divers,bois,generale,torino città e cittadella
+C1711_01_047,i_369,Ugliengo C.M. (369),43,17110723,1,2,2,civ_divers,bois,generale,torino città e cittadella
+C1711_01_033,i_361,Toscanello F. (361),36,17110528,2,2,0,mil_arsenal,si,generale,torino arsenale
+C1711_01_033,i_62,Boggio P. (62),33,17110528,2,2,0,mil_arsenal,si,generale,torino arsenale
+C1711_01_038,i_146,Gaffino M. (146),37,17110602,2,9,0,mil_chateaux,si,generale,casale citta e castello
+C1711_01_038,i_171,Gianone G.B. (171),41,17110602,2,9,0,mil_chateaux,si,generale,casale citta e castello
+C1711_01_038,i_239,Negro B. (239),40,17110602,2,9,0,mil_chateaux,si,generale,casale citta e castello
+C1711_01_038,i_368,Tua G.B. (368),39,17110602,2,9,0,mil_chateaux,si,generale,casale citta e castello
+C1711_01_029,i_244,Pagano C. (244),28,17110527,1,2,0,civ_residences_royales,si,generale,moncaglieri castello
+C1711_01_029,i_260,Persivale G.M. (260),29,17110527,1,2,0,civ_residences_royales,si,generale,moncaglieri castello
+C1711_01_029,i_64,Bollino G. (64),31,17110527,1,2,0,civ_residences_royales,si,generale,moncaglieri castello
+C1711_01_033,i_149,Gaja P. (149),34,17110528,2,2,0,mil_arsenal,si,generale,torino arsenale
+C1711_01_018,i_175,Gillonio G.P. (175),22,17110521,1,6,0,civ_residences_royales,si,generale,torino palazzi reali
+C1711_01_018,i_26,Bello L. (26),25,17110521,1,6,0,civ_residences_royales,si,generale,torino palazzi reali
+C1711_01_018,i_27,Bello P. (27),23,17110521,1,6,0,civ_residences_royales,si,generale,torino palazzi reali
+C1711_01_018,i_374,Vanera M. (374),26,17110521,1,6,0,civ_residences_royales,si,generale,torino palazzi reali
+C1711_01_018,i_80,Camerata A. (80),27,17110521,1,6,0,civ_residences_royales,si,generale,torino palazzi reali
+C1711_01_029,i_145,Furno G.D. (145),30,17110527,1,2,0,civ_residences_royales,si,generale,moncaglieri castello
+C1711_01_014,i_80,Camerata A. (80),18,17110521,2,6,0,mil_citadelles,si,generale,torino cittadella
+C1711_01_012,i_249,Paron F. (249),15,17110516,2,5,2,mil_ponts_de_bateaux,bois,generale,piemonte ponti
+C1711_01_012,i_250,Parone C. (250),13,17110516,2,5,2,mil_ponts_de_bateaux,bois,generale,piemonte ponti
+C1711_01_012,i_383,Vietto A. (383),14,17110516,2,5,2,mil_ponts_de_bateaux,bois,generale,piemonte ponti
+C1711_01_014,i_175,Gillonio G.P. (175),19,17110521,2,6,0,mil_citadelles,si,generale,torino cittadella
+C1711_01_014,i_26,Bello L. (26),17,17110521,2,6,0,mil_citadelles,si,generale,torino cittadella
+C1711_01_014,i_27,Bello P. (27),21,17110521,2,6,0,mil_citadelles,si,generale,torino cittadella
+C1711_01_014,i_374,Vanera M. (374),20,17110521,2,6,0,mil_citadelles,si,generale,torino cittadella
+C1711_01_008,i_159,Gallo G.F. (159),10,17110507,5,4,0,np,si,generale,valenza e alessandria
+C1711_01_008,i_20,Baietto D. (20),9,17110507,5,4,0,np,si,generale,valenza e alessandria
+C1711_01_008,i_39,Berti G.B. (39),8,17110507,5,4,0,np,si,generale,valenza e alessandria
+C1711_01_008,i_40,Bertinello P. (40),11,17110507,5,4,0,np,si,generale,valenza e alessandria

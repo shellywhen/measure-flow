@@ -4,7 +4,7 @@ let getNodeDuringInterval = function (dgraph, interval) {
     dgraph.timeArrays.links[t].forEach(l => {
       nodes.add(dgraph.linkArrays.source[l])
       nodes.add(dgraph.linkArrays.target[l])
-    })
+      })
   }
   return nodes
 }
