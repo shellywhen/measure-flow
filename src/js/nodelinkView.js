@@ -124,7 +124,7 @@ let drawNodeLinkInPeriod = function (startId, endId) {
   })
   .style('opacity', d => {
     if(curNodes.has(d.index)) return 1
-    return 0.5
+    return 0.3
   })
 }
 
