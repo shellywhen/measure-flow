@@ -75,14 +75,21 @@ let linkSchema7 = {
   target: 2,
   time: 5
 }
+let linkSchema8 = {
+  source: 0,
+  target: 1,
+  time: 4,
+  linkType: 10
+}
 const configMap = {
   'scientists': [linkSchema1, 'DD/MM/YYYY'],
-  'DiplomaticExchange': [linkSchema2 ,'YYYY'],
-  'marieboucher': [linkSchema3, 'DD/MM/YYYY'],
-  'marie-colombu': [linkSchema4, 'DD/MM/YYYY'],
-  'RollaCristofoli': [linkSchema5, 'DDMMYY'],
+  'Diplomatic Exchange': [linkSchema2 ,'YYYY'],
+  'Marie Boucher': [linkSchema3, 'DD/MM/YYYY'],
+  'Marie-Colombu': [linkSchema4, 'DD/MM/YYYY'],
+  'Rolla Cristofoli': [linkSchema5, 'DDMMYY'],
   'Marguerite': [linkSchema6, 'DD-MM-YYYY'],
-  'highschool': [linkSchema7, 'MM/DD/YYYY HH:mm:ss']
+  'Highschool': [linkSchema7, 'MM/DD/YYYY HH:mm:ss'],
+  'Contract': [linkSchema8, 'YYYYMMDD']
 }
 let dataFileName = networkcube.getUrlVars()['datasetName'].replace(/___/g, ' ')
 let config = configMap[dataFileName]
@@ -169,6 +176,7 @@ function loadVisualizationList() {
       ['Map', 'map'],
       ['Tiled View', 'tileview']
   ];
+  $('#visualizationList').html('')
     visualizations.forEach(function (v) {
         $('#visualizationList')
             .append(`<div class="col p-0 m-0" style="text-align: center;" >

@@ -3,11 +3,11 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Measures Flow</title>
+  <title>MeasuresFlow</title>
   <meta name="description" content="Dynamic Network Visualization">
   <meta name="author" content="Liwenhan Xie, Benjamin Bach">
   <link rel="icon" type="image/png" href="./asset/fig/vis-nodelink.png" />
-    <link rel="stylesheet" href="./src/css/layout.css">
+  <link rel="stylesheet" href="./src/css/layout.css">
   <link rel="stylesheet" href="./src/css/main.css">
   <link rel="stylesheet" href="./lib/css/mdb.min.css">
   <link rel="stylesheet" href="./lib/css/bootstrap.min.css">
@@ -38,6 +38,7 @@
   <!-- <script src="./lib/js/d3-legend.js"></script> -->
   <script src="./lib/js/require.js"></script>
   <script src="./lib/js/bundle.js"></script>
+  <script src="./lib/js/xlsx.full.min.js"></script>
   <script src="./src/js/dataConfigure.js"></script>
 
 
@@ -117,7 +118,7 @@
       <!-- <div class="col-2">
 
       </div> -->
-      <div class="wrapper" id = "mainLeftFrame">
+      <div class="wrapper" id="mainLeftFrame">
         <div id="styleConfigDiv">
           <div id="data_selection" class="m-2">
             <div class="row wrapper">
@@ -134,33 +135,31 @@
               </div>
             </div>
           </div>
-            <div style="width:92%; border-bottom:lightgray solid 1px;"></div>
+          <div style="width:92%; border-bottom:lightgray solid 1px;"></div>
           <div id="config-style" class="ml-4 mr-3" style="line-height:initial;">
           </div>
 
           <div style="width:92%; border-bottom:lightgray solid 1px;margin-bottom:1px;margin-top:1px;"></div>
           <div class="ml-4 mr-2">
-            <p class="m-0">Add-ons</p>
+            <p class="m-0 config-title">Add-ons</p>
           </div>
           <div id="config-view" class="ml-4 mr-2 scrollbar scrollbar-sunny-morning thin" style="line-height: initial;">
           </div>
-              <div style="width:92%; border-bottom:lightgray solid 1px;margin-top:2px;margin-bottom:1px;"></div>
+          <div style="width:92%; border-bottom:lightgray solid 1px;margin-top:2px;margin-bottom:1px;"></div>
           <div id="config-mode" class="ml-4 mr-2">
           </div>
-              <div style="width:92%; border-bottom:lightgray solid 1px; margin-bottom:1px;margin-top:4px;"></div>
-          <!-- <div id="config-localMeasure" class="ml-4 mr-2">
-          </div> -->
+          <div style="width:92%; border-bottom:lightgray solid 1px; margin-bottom:1px;margin-top:4px;"></div>
           <div class="ml-4 mr-2">
-            <p class="m-0">Measure Visibility</p>
+            <p class="m-0 config-title">Measure Visibility</p>
           </div>
-          <div id="config-measure" class="ml-4 mr-2 scrollbar scrollbar-sunny-morning thin" style="line-height: initial; height:15vh; overflow-y: scroll">
+          <div id="config-measure" class="ml-4 mr-2 scrollbar scrollbar-sunny-morning thin" style="line-height: initial; height:20vh; overflow-y: scroll">
           </div>
 
-              <div style="width:92%; border-bottom:lightgray solid 1px;margin-bottom:1px;margin-top:1px;"></div>
-              <div class="ml-4 mr-2">
-                <p class="m-0">Interval Visibility</p>
-              </div>
-          <div id="config-bar" class="ml-4 mr-2 scrollbar scrollbar-sunny-morning thin" style="line-height: initial; height:15vh; overflow-y:scroll">
+          <div style="width:92%; border-bottom:lightgray solid 1px;margin-bottom:1px;margin-top:1px;"></div>
+          <div class="ml-4 mr-2">
+            <p class="m-0 config-title">Interval Visibility</p>
+          </div>
+          <div id="config-bar" class="ml-4 mr-2 scrollbar scrollbar-sunny-morning thin" style="line-height: initial; height:20vh; overflow-y:scroll">
           </div>
         </div>
       </div>
@@ -228,7 +227,7 @@
                   <div>
                     <div class="row p-0 m-0">
                       <div class="col-7 p-0 m-0">
-                          <p class="mt-2 mb-1" style="font-size: 1rem">Interval Selection:</p>
+                        <p class="mt-2 mb-1" style="font-size: 1rem">Interval Selection:</p>
                       </div>
                       <div class="col-3 p-0 mt-1">
                         <input type="range" step="0.01" min="-0.5" max="0.5" value="0" class="slider" id="config-shift">
@@ -243,11 +242,12 @@
                 <div id="fft-result-div" style="width:100%; min-height: 10vh;">
 
                 </div>
-                <!-- <div style="text-align: center;  position: absolute; bottom: 10px; width:100%;" class="row">
-                  <div class="col-4"><button type="button" class="btn btn-outline-info btn-sm z-depth-0 p-1 m-0" id="testInterval"><i class="fas fa-vial"></i>Test</button></div>
+                <div style="text-align: center;  position: absolute; bottom: 10px; width:100%;">
+                  <div ><button type="button" class="btn btn-outline-info btn-sm z-depth-0 p-1 m-0" id="exportMeasure"><i class="fas fa-file-export"></i>Export</button> </div>
+                  <!-- <div class="col-4"><button type="button" class="btn btn-outline-info btn-sm z-depth-0 p-1 m-0" id="testInterval"><i class="fas fa-vial"></i>Test</button></div>
                     <div class="col-4"><button type="button" class="btn btn-outline-info btn-sm z-depth-0 p-1 m-0" id="resetInterval"><i class="fas fa-check-square"></i>Apply</button></div>
-                  <div class="col-4"><button type="button" class="btn btn-outline-info btn-sm z-depth-0 p-1 m-0" id="restoreInterval"><i class="fas fa-undo"></i>Reset</button></div>
-                </div> -->
+                  <div class="col-4"><button type="button" class="btn btn-outline-info btn-sm z-depth-0 p-1 m-0" id="restoreInterval"><i class="fas fa-undo"></i>Reset</button></div> -->
+                </div>
               </div>
 
             </div>
@@ -410,9 +410,9 @@
         }
       }
     })
-   $("#measureFrame").sortable({
-     handle: '.handle'
-   })
+    $("#measureFrame").sortable({
+      handle: '.handle'
+    })
   })
 </script>
 

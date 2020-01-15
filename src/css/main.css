@@ -315,3 +315,7 @@ padding-top: 10px;
 .fade .show {
   display: block;
 }
+
+.config-title {
+  font-weight: bold;
+}

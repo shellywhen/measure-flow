@@ -21,9 +21,7 @@ let GLOBAL_ACTIVE_LABEL = null
 let shiftSliderCallback = function() {
   if (!window.playerMode) return
   let shift = $('#config-shift').val();
-  console.log('shit shit', shift)
   current[timeslotId].shift = shift
-  console.log('change shift', shift)
   current[timeslotId].flag = true
   networkcube.sendMessage('initGran', current[timeslotId])
 }
@@ -85,6 +83,7 @@ let drawSpan = function(datum, shift = 0, border = 'gray') {
     .on('mouseout', function(d) {
       let intervalSize = dg.timeArrays.intervals.length
       let opacity = getOpacity(d.level)
+      console.log('mouseout', d.level, getOpacity(d.level), d.timeLabel)
       d3.selectAll(`.level_${d.level}`).selectAll('.bars').style('opacity', opacity)
     })
     .on('click', function(d) {
@@ -187,7 +186,7 @@ let initDropdown = function() {
   let i = 0
   for (let gran = dgraph.gran_min; gran <= dgraph.gran_max; gran++) {
     let datum = getDatum(1, gran)
-    datum.level = len - i - 1
+    datum.level = len - 1 - i
     data.push(datum)
     activeInterval.push(datum)
     drawSpan(datum, 0, 'lightblue')

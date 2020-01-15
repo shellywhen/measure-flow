@@ -130,7 +130,7 @@ export let getSingleBins = function (granId, delta = 1, timeArray = window.dgrap
   }
   else {
     para = timePara[granId]
-    para2 = granId > 3? timePara[granId - 3]:miliseconds
+    para2 = granId > 3? timePara[granId - 3]:'miliseconds'
   }
 
   let idx = 0

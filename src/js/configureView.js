@@ -199,7 +199,7 @@ let addLocalMeasureDropdown = function(divId) {
 let addDatasetOption = function() {
   d3.select('#dataset-selection')
     .selectAll('a')
-    .data(['Marguerite', 'marieboucher', 'marie-colombu', 'highschool', 'DiplomaticExchange'])
+    .data(['Contract', 'Marguerite', 'Merchant', 'Marie-Colombu', 'Highschool', 'Diplomatic Exchange'])
     .enter()
     .append('a')
     .classed('dropdown-item', true)
@@ -222,6 +222,7 @@ let add_config_mode = function() {
   $('#modeSwitch').change(function() {
     if (this.checked) {
       // KDE MODE
+      console.log('hello????????')
       d3.select('#measureFrame').selectAll('.kdeLine').style('display', '')
       d3.selectAll('.bars').style('display', 'none')
       d3.selectAll('.y-axis').style('display', 'none')
@@ -270,7 +271,7 @@ let drawConfigs = function() {
   // d3.select('#launchScatter')
   //   .on('click', d => Scatter.updateScatter())
   // network style
-  d3.select('#config-style').append('p').classed('m-0', true).text('Styling')
+  d3.select('#config-style').append('p').classed('m-0', true).classed('config-title', true).text('Styling')
   addStyleConfig('config-style', 'Node Size', changeNodeSize)
   addStyleConfig('config-style', 'Link Width', changeLinkWidth, 0, 5)
   addStyleConfig('config-style', 'Link Opacity', changeLinkOpacity, 0, 1, 0.5)

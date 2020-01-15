@@ -349,14 +349,14 @@ let drawKdeLine = function (g, color, summary) {
       .y(d => kdeYScale(d.y))
   let kdeline = g.append('g')
     .classed('kdeLine', true)
+    .style('display', d => {
+      if($('#modeSwitch').prop('checked')) return ''
+      return 'none'
+    })
     .append('path')
     .datum(density)
     .style('fill', color)
     .style('stroke-linejoin', 'round')
-    .style('display', d => {
-      if($('#modeSwitch').val()) return ''
-      return 'none'
-    })
     .attr('d', line)
     // .style('stroke', color)
     // .style('stroke-width', 0.5)
@@ -661,11 +661,13 @@ TimeSlider.prototype.updateInterval = function (interval) {
       for (let tid = d.interval[0]; tid <d.interval[1]; tid++) {
         d3.select(`.snapshot_${tid}`).style('stroke', 'orange')
       }
-      d3.select(`.level_${window.focusGranularity.level}`).select(`.rank_${i}`).dispatch('mouseover')
+      let level = window.focusGranularity.level
+      d3.select(`.level_${level}`).select(`.rank_${i}`).dispatch('mouseover')
       networkcube.sendMessage('player', d)
     })
     .on('mouseout', function(d, i) {
-      d3.select(`.level_${window.focusGranularity.level}`).select(`.rank_${i}`).dispatch('mouseout')
+      let level = window.focusGranularity.level
+      d3.select(`.level_${level}`).select(`.rank_${i}`).dispatch('mouseout')
       d3.select(this)
         .attr('height', v => {
         return d.interval[1]>d.interval[0]?10:5
@@ -928,7 +930,6 @@ Frame.prototype.drawTitle = function () {
       fft: self.fftData,
       flag: true
     }
-    console.log('sent', msg)
     networkcube.sendMessage('fft', msg)
     window.activeMeasure = self
     ACTIVE_MEASURE_INDEX = self.index
@@ -1059,6 +1060,7 @@ Frame.prototype.updateIndividualMeasures = function (idx, data, level) {
       .domain([0, yMax])
       .range([svgHeight, svgHeight / 12])
       .nice()
+  this.yScale[idx] = yScale
   g.select('.y-axis').transition().duration(500).call(d3.axisLeft(yScale).ticks(2))
   let activeLevelCount = 0
   current.forEach(v => {
@@ -1068,7 +1070,7 @@ Frame.prototype.updateIndividualMeasures = function (idx, data, level) {
   let rectCanvas = zoomLayer.append('g')
     .attr('level', level)
     .classed(`level_${level}`, true)
-  this.createBars(rectCanvas, yScale, data.dots, 5, idx)
+  this.createBars(rectCanvas, yScale, data.dots, level, idx)
 }
 Frame.prototype.createBars = function(g, yScale, dots, i, idx) {
   let yMax = yScale.domain()[1]
@@ -1109,7 +1111,7 @@ Frame.prototype.createBars = function(g, yScale, dots, i, idx) {
         .style('opacity', 0.7)
        let newX =  parseFloat(self.attr('x')) + parseFloat(self.attr('width')) / 2
        let newY =  parseFloat(self.attr('y'))
-       let value = d.y%1 === 0? d.y: d.y.toFixed(2)
+       let value = d.y%1 === 0? d.y: d.y.toFixed(4)
        timeTooltip
          .attr('x', newX)
          .attr('y', newY - 25)
@@ -1125,7 +1127,7 @@ Frame.prototype.createBars = function(g, yScale, dots, i, idx) {
            let data = ele.datum()
            d3.select(this)
             .select('.tooltip')
-            .text(d => data.y%1===0? data.y:data.y.toFixed(2))
+            .text(d => data.y%1===0? data.y:data.y.toFixed(4))
             .attr('x', newX)
             .attr('y', y)
             .style('fill', 'black')
@@ -1140,19 +1142,18 @@ Frame.prototype.createBars = function(g, yScale, dots, i, idx) {
       timeTooltip.selectAll('tspan').remove()
        d3.select(this).style('stroke', '')
        let level = parseInt(d3.select(this.parentNode).attr('level'))
+       let opacity = getOpacity(level)
        let rank = no
       if (dg.selection.length < 1) {
         d3.selectAll(`.level_${level}`).selectAll(`.rank_${rank}`)
-        .style('opacity', function() {
-          return getOpacity(level)
-        })
+        .style('opacity', opacity)
         .style('fill', 'gray')
         return
       }
        d3.selectAll(`.mini_vis`).each( function (mini, miniidx) {
          let coloridx = miniidx % dg.selection.length
          d3.select(this).selectAll(`.rank_${rank}`)
-          .style('opacity', getOpacity(level))
+          .style('opacity', opacity)
           .style('fill', (p, o) => dg.selection[coloridx].color)
        })
      })
@@ -1330,14 +1331,14 @@ Frame.prototype.drawExternalSvg = function (data, milisecond) {
        d3.select(this).style('stroke', 'yellow').style('stroke-width', 3)
        let newX =  parseFloat(self.attr('x')) + parseFloat(self.attr('width')) / 2
        let newY =  parseFloat(self.attr('y')) - 20
-       let value = d.y%1===0?d.y:d.y.toFixed(2)
+       let value = d.y%1===0?d.y:d.y.toFixed(4)
        FRAME_INFO.forEach(frame => {
          frame.fftG.forEach(g => {
            let ele = g.select(`.level_${level}`).selectAll(`.rank_${no}`)
            let y =  parseFloat(ele.attr('y')) - 5
            let data = ele.datum()
            g.select('.fft_tooltip')
-            .text(d => data.y%1==0?data.y:data.y.toFixed(3))
+            .text(d => data.y%1==0?data.y:data.y.toFixed(4))
             .attr('x', newX)
             .attr('y', y)
             .style('fill', 'black')
@@ -1372,6 +1373,7 @@ Frame.prototype.adjustBars = function (g, idx, yScale=null) {
       .range([svgHeight, svgHeight / 12])
       .nice()
     }
+    this.yScale[idx] = yScale
   g.selectAll('.bars').attr('y', d=>yScale(d.y)).attr('height', d => yScale(0) - yScale(d.y))
 }
 Frame.prototype.changeLayerOrder = function () {
@@ -1383,17 +1385,16 @@ Frame.prototype.changeLayerOrder = function () {
   for (let i in levelOrder) {
     let level = levelOrder[i]
     let opacity = getOpacity(level)
-    this.svg.selectAll(`.level_${level}`).selectAll('.bars').style('opacity',  opacity)
+    this.svg.selectAll(`.level_${level}`).selectAll('.bars').style('opacity', opacity)
     if(i!=0){
       let prev = levelOrder[i-1]
       this.data.forEach((d, idx) => {
-        let prevEle = $(`#frame_${label}`, `#vis_${idx}`, `#level_${prev}`)
-        let curEle = $(`#frame_${label}`, `#vis_${idx}`, `#level_${level}`)
+        let prevEle = $(`#frame_${label}`, `.vis_${idx}`, `.level_${prev}`)
+        let curEle = $(`#frame_${label}`, `.vis_${idx}`, `.level_${level}`)
         curEle.insertAfter(prevEle)
       })
     }
   }
-  console.log('why insert after does not work?', $(`#frame_${label}`, `#vis_${0}`))
 }
 
 Frame.prototype.clearFFTcanvas = function() {
