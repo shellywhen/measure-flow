@@ -1101,7 +1101,7 @@ Frame.prototype.createBars = function(g, yScale, dots, i, idx) {
        d3.selectAll(`.mini_vis`).each(function(mini, miniidx){
          d3.select(this).selectAll(`.level_${level}`).selectAll(`.rank_${rank}`)
         .style('fill', (datum, o)=>{
-         if(dg.selection.length > 1) {
+         if(dg.selection.length < -1) {
           let o = miniidx % dg.selection.length
           return `url('#pattern_${o}_${obj.index}')`
         }
@@ -1230,7 +1230,7 @@ Frame.prototype.drawIndividualMeasures = function (idx) {
    .attr('height', 0)
    .attr('width', 0)
    .style('fill', d => {
-     if(dg.selection.length>1) return `url(#pattern_${idx}_${this.index})`
+     if(dg.selection.length<-1) return `url(#pattern_${idx}_${this.index})`
      return 'fa5050'
    })
    .style('opacity', 0.7)
@@ -1244,7 +1244,7 @@ Frame.prototype.drawIndividualMeasures = function (idx) {
    .attr('width', 0)
    .style('opacity', 0.9)
    .style('fill', d => {
-     if(dg.selection.length > 1) return  `url('#pattern2_${idx}_${this.index}')`
+     if(dg.selection.length < -1) return  `url('#pattern2_${idx}_${this.index}')`
      return `url('#pattern3_${this.index}')`
    })
  instantG.append('text')
