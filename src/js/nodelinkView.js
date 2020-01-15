@@ -1,5 +1,6 @@
 import * as DataHandler from './dataHandler.js'
 import * as Timeline from './timelineView.js'
+import * as Calculator from './measureCalculator.js'
 
 const nodelinkDivId = 'nodelinkFrame'
 const nodelinkSvgId = 'nodelink'
@@ -106,6 +107,8 @@ let drawNodeLinkInPeriod = function (startId, endId) {
     nodeLayerG.style('opacity', 0.2)
     return
   }
+  let endIdFake = endId === dg.timeArrays.length? endId: endId+1
+  let curNodes = Calculator.getNodeDuringInterval(dg, [startId, endIdFake])
   linkLayer.style('display', d => {
     if(d.presentIn(times[startId], times[endId])) {
       return ''
@@ -118,6 +121,10 @@ let drawNodeLinkInPeriod = function (startId, endId) {
   nodeLayer.attr('r', d => {
     let value = DataHandler.getLocalMeasure(d)
      return Math.sqrt(value) * 0.5 + 1;
+  })
+  .style('opacity', d => {
+    if(curNodes.has(d.index)) return 1
+    return 0.5
   })
 }
 
@@ -335,6 +342,7 @@ let drawLayout = function (svg) {
      nodeBackLayer.attr('r', d =>Math.sqrt(DataHandler.getLocalMeasure(d, true)) * 0.5 + 1 )
         .attr('transform', function(d) { return 'translate(' + d.x + ',' + d.y + ')' })
         .style('fill', '#b9b9b9')
+        .style('opacity', 0.3)
 
      nodeLayer.attr('r', d => Math.sqrt(DataHandler.getLocalMeasure(d, true)) * 0.5 + 1)
        .attr('cx', 0)

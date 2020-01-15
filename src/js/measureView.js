@@ -1391,6 +1391,7 @@ Frame.prototype.changeLayerOrder = function () {
       this.data.forEach((d, idx) => {
         let prevEle = $(`#frame_${label}`, `.vis_${idx}`, `.level_${prev}`)
         let curEle = $(`#frame_${label}`, `.vis_${idx}`, `.level_${level}`)
+        console.log(prevEle, curEle, prev, level)
         curEle.insertAfter(prevEle)
       })
     }

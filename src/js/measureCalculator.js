@@ -1,4 +1,4 @@
-let getNodeDuringInterval = function (dgraph, interval) {
+export let getNodeDuringInterval = function (dgraph, interval) {
   let nodes = new Set()
   for (let t = interval[0]; t < interval[1]; t ++) {
     dgraph.timeArrays.links[t].forEach(l => {
