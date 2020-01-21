@@ -2,6 +2,9 @@ import * as DataHandler from './dataHandler.js'
 import * as Calculator from './measureCalculator.js'
 const GRANULARITY_name_normal = ['milisecond', 'second', 'minute', 'hour', 'day', 'week', 'month', 'year', 'decade', 'century', 'millennium']
 let GRANULARITY_names = ['miliseconds', 'seconds', 'minutes', 'hours', 'days', 'weeks', 'months', 'years', 'decades', 'centuries', 'millenniums']
+const GRANULARITY_NAME = ['milisecond', 'second', 'minute', 'hour', 'day', 'weekday', 'month', 'year', 'year', 'year', 'year']
+const GRANULARITY_name = ['milisecond', 'second', 'minute', 'hour', 'day', 'weekday', 'month', 'year', 'decade', 'century', 'millennium']
+const GRANULARITY_CONFIG = ['numeric', 'numeric', 'numeric', 'numeric', '2-digit', 'short', 'short', 'numeric', 'numeric', 'numeric', 'numeric']
 const timeList = [1, 1000, 1000 * 60, 1000 * 60 * 60, 1000 * 60 * 60 * 24, 1000 * 60 * 60 * 24 * 7, 1000 * 60 * 60 * 24 * 30, 1000 * 60 * 60 * 24 * 365, 1000 * 60 * 60 * 24 * 30 * 12 * 10, 1000 * 60 * 60 * 24 * 30 * 12 * 100, 1000 * 60 * 60 * 24 * 30 * 12 * 1000]
 const minHeight = window.innerHeight / 15
 const paraList = ['milliseconds', 'seconds', 'minutes', 'hours', 'days', 'weeks', 'months', 'years']
@@ -83,7 +86,7 @@ let drawSpan = function(datum, shift = 0, border = 'gray') {
     .on('mouseout', function(d) {
       let intervalSize = dg.timeArrays.intervals.length
       let opacity = getOpacity(d.level)
-      console.log('mouseout', d.level, getOpacity(d.level), d.timeLabel)
+      // console.log('mouseout', d.level, getOpacity(d.level), d.timeLabel)
       d3.selectAll(`.level_${d.level}`).selectAll('.bars').style('opacity', opacity)
     })
     .on('click', function(d) {
@@ -106,6 +109,7 @@ let drawSpan = function(datum, shift = 0, border = 'gray') {
       }
       ele.style('border', `0.8px ${border} solid`)
       window.playerMode = false
+      window.focusGranularity = null
       $('#config-shift').val(0);
       d.flag = false
       networkcube.sendMessage('initGran', d)
@@ -409,21 +413,33 @@ let handleIntervalChange = function(m) {
     d3.select(`.line_level_${level}`).remove()
     d3.select(`.span_level_${level}`).remove()
     d3.selectAll(`.level_${level}`).remove()
-    let datum = current[level]
-    let active_id = activeInterval.indexOf(datum)
-    activeInterval.splice(active_id, 1)
-    datum.active = false
+    for(let datum of current) {
+      if(datum.level === level) {
+        let active_id = activeInterval.indexOf(datum)
+        activeInterval.splice(active_id, 1)
+        datum.active = false
+        break
+      }
+    }
   })
   config.fade.forEach(function(level) {
-    let datum = current[level]
-    datum.active = false
+    for(let datum of current) {
+      if(datum.level === level) {
+        datum.active = false
+        break
+      }
+    }
   })
   config.insert.forEach(function(level) {
 
   })
   config.return.forEach(function(level) {
-    let datum = current[level]
-    datum.active = true
+    for(let datum of current) {
+      if(datum.level === level) {
+        datum.active = true
+        break
+      }
+    }
   })
   networkcube.sendMessage('updateLayers', null)
 }
@@ -439,6 +455,46 @@ let handleAddInputInterval = function(k) {
   span.dispatch('click')
 }
 
+function getTimeString (time, granularity) {
+  let options = {}
+  options[GRANULARITY_NAME[granularity]] = GRANULARITY_CONFIG[granularity]
+  return GRANULARITY_name[granularity].capitalize() + ': ' + timeStart.toLocaleDateString('en-US', options) + ' ~ ' + timeEnd.toLocaleDateString('en-US', options)
+}
+
+function getMeasureList (level) {
+  let options = {}
+  let idx = current.map(v => v.level).indexOf(level)
+  let final = []
+  let initRow = ['id', 'timeStart', 'timeEnd', ...window.measureIds]
+  final.push(initRow)
+  let format = window.dgraph.currentData[window.measureIds[0]][idx]
+  let granularity = format.granularity
+  options[GRANULARITY_NAME[granularity]] = GRANULARITY_CONFIG[granularity]
+  format.dots.forEach((row, i) => {
+    let newRow = window.measureIds.map(id => window.dgraph.currentData[id][idx].dots[i].y)
+    final.push([i, row.timeStart.toLocaleDateString('en-US', options), row.timeEnd.toLocaleDateString('en-US', options), ...newRow])
+  })
+  return final
+}
+
+function exportMeasure () {
+  if(window.focusGranularity==null) {
+    alert('Please select one interval.')
+    return
+  }
+  let level = window.focusGranularity.level
+  let list = getMeasureList(level)
+  let csv = Papa.unparse(list)
+  let csvContent = "data:text/csv;charset=utf-8," + csv
+  let encodedUri = encodeURI(csvContent)
+  let link = document.createElement('a')
+  link.setAttribute('href', encodedUri);
+  link.setAttribute('download', 'export.csv')
+  document.body.appendChild(link) // Required for FF
+  link.click()
+  link.parentNode.removeChild(link)
+}
+
 export function drawIntervalConfig(divId = 'config-interval', dgraph) {
   dg = dgraph
   let div = d3.select(`#${divId}`)
@@ -450,6 +506,7 @@ export function drawIntervalConfig(divId = 'config-interval', dgraph) {
   $(`#resetInterval`).click(resetGlobalInterval)
   $(`#restoreInterval`).click(restoreGlobalInterval)
   $(`#config-shift`).on('change', shiftSliderCallback)
+  $(`#exportMeasure`).click(exportMeasure)
   networkcube.addEventListener('fft', handleFFT)
   networkcube.addEventListener('intervalChange', handleIntervalChange)
 }
@@ -463,6 +520,6 @@ function getOpacity (level) {
   let currents = current.filter(v => v.active)
   let mili = currents.map(v => v.milisecond)
   let order = sortArrayIndex(mili).map(id => currents[id].level).reverse()
-  let index = order.indexOf(level)
+  let index = order.indexOf(level) + 1
   return 0.2 + 0.6/currents.length * index
 }

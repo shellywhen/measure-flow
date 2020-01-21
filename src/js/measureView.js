@@ -789,6 +789,7 @@ class Frame {
     this.description = description
     this.data = []
     this.yMax = []
+    this.levelList = []
     this.yScale = []
     this.lineGenerator = []
     this.fftData = []
@@ -1215,10 +1216,12 @@ Frame.prototype.drawIndividualMeasures = function (idx) {
      .attr('level', i)
      .classed(`level_${i}`, true)
   this.createBars(rectCanvas, yScale, data, i, idx)
+  this.levelList.push(this.data[idx].length - i - 1)
  })
  this.data[idx].reverse()
  let instantG = zoomLayer.append('g')
    .classed('brush-result', true)
+   .datum('fake')
  instantG.append('defs')
    .html(`	<pattern id='pattern_${idx}_${this.index}' patternUnits='userSpaceOnUse' width='5' height='5' patternTransform='rotate(45)'> 	<line x1='0' y='0' x2='0' y2='5' stroke='${tinycolor(color).lighten(20)}' stroke-width='6' />	</pattern>`)
  instantG.append('defs')
@@ -1367,13 +1370,15 @@ Frame.prototype.drawExternalSvg = function (data, milisecond) {
 Frame.prototype.adjustBars = function (g, idx, yScale=null) {
   if(!yScale) {
     let current = Interval.current
-    let yMax = d3.max(this.yMax[idx].filter((y, yi)=> current[yi].active))
+    let activeLevel = current.filter(v=>v.active).map((v, i)=> v.level)
+    let yMax = d3.max(this.yMax[idx].filter((y, yi)=> current[this.levelList[yi]].active))
     yScale = d3.scaleLinear()
       .domain([0, yMax])
       .range([svgHeight, svgHeight / 12])
       .nice()
     }
-    this.yScale[idx] = yScale
+  this.yScale[idx] = yScale
+  g.select('.y-axis').transition().duration(500).call(d3.axisLeft(yScale).ticks(2))
   g.selectAll('.bars').attr('y', d=>yScale(d.y)).attr('height', d => yScale(0) - yScale(d.y))
 }
 Frame.prototype.changeLayerOrder = function () {
@@ -1389,9 +1394,8 @@ Frame.prototype.changeLayerOrder = function () {
     if(i!=0){
       let prev = levelOrder[i-1]
       this.data.forEach((d, idx) => {
-        let prevEle = $(`#frame_${label}`, `.vis_${idx}`, `.level_${prev}`)
-        let curEle = $(`#frame_${label}`, `.vis_${idx}`, `.level_${level}`)
-        console.log(prevEle, curEle, prev, level)
+        let prevEle = $(`#frame_${label} .vis_${idx} .level_${prev}`)
+        let curEle = $(`#frame_${label} .vis_${idx} .level_${level}`)
         curEle.insertAfter(prevEle)
       })
     }
@@ -1444,6 +1448,7 @@ let addBars = function (msg) {
   let milisecond = m.milisecond
   data.forEach((v, idx)=> {
     frame.updateIndividualMeasures(idx, v, m.level)
+    frame.levelList.push(m.level)
   })
   networkcube.sendMessage('intervalChange', {
     delete: [],
@@ -1472,7 +1477,6 @@ export let subgraphUpdateMeasure = function (dgraph, count) {
 let brushMoveMsg = function (m) {
   let data = m.body
   timeslider.intervalIndex = data.index
-  console.log(timeslider)
   d3.select('.brush-g').call(brushTime.move, [xScale(data.x0), xScale(data.x1)])
   highlightBars()
 }
@@ -1489,6 +1493,7 @@ export let createNormalMeasures = function (dgraph) {
         dgraph.nodeTypeArrays.name.forEach(name => {
           data[`NodeType_${name}`] = nodeData[name]
         })
+        dgraph.currentData = data
         window.measureIds = Object.keys(data)
         Object.keys(data).forEach((k, idx) => {
           if(k.substring(0, 9) === 'linkType_') {
@@ -1537,9 +1542,16 @@ window.FRAME_INFO = FRAME_INFO
 
 let handleUpdateLayers = function (m) {
   let message = m.body
+  let current = Interval.current
+  let activeLevel = current.filter(v=>v.active).map((v, i)=> v.level)
   FRAME_INFO.forEach(frame => {
     frame.data.forEach((v, idx)=>{
-      frame.adjustBars(frame.canvas.select(`.vis_${idx}`), idx )
+      let yMax = d3.max(frame.yMax[idx].filter((y, yi)=> current[yi].active))
+      let yScale = d3.scaleLinear()
+        .domain([0, yMax])
+        .range([svgHeight, svgHeight / 12])
+        .nice()
+      frame.adjustBars(frame.canvas.select(`.vis_${idx}`), idx, yScale)
       frame.changeLayerOrder()
     })
   })
@@ -1568,6 +1580,6 @@ function getOpacity (level) {
   let current = Interval.current.filter(v => v.active)
   let mili = current.map(v => v.milisecond)
   let order = sortArrayIndex(mili).map(id => current[id].level).reverse()
-  let index = order.indexOf(level)
+  let index = order.indexOf(level) + 1
   return 0.2 + 0.6/current.length * index
 }
