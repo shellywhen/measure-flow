@@ -199,7 +199,7 @@ let addLocalMeasureDropdown = function(divId) {
 let addDatasetOption = function() {
   d3.select('#dataset-selection')
     .selectAll('a')
-    .data(['Contract', 'Marguerite', 'Merchant', 'Marie-Colombu', 'Highschool', 'Diplomatic Exchange'])
+    .data(['Contract', 'Marguerite', 'Merchant', 'Marie-Colombu', 'Highschool', 'Diplomatic Exchange', 'sampled_twitter'])
     .enter()
     .append('a')
     .classed('dropdown-item', true)
