@@ -279,7 +279,7 @@ let initNodeLink = function (svg, dgraph) {
       .style('stroke-width', getLineStroke)
       .style('fill-opacity', 0.2)
       .style('stroke-opacity', 0.5)
-      .style('fill', '#d9d3d3')
+      .style('fill', '#7c7878')
       .attr('d', 'M0 0 L2 0 Z')
   nodeLayerG = g.append('g')
     .classed('nodeLayer', true)

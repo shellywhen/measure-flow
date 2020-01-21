@@ -1,0 +1,1188 @@
+Sdoc_date_YYYYMMJJ,lien_type,I1_Id,I2_Id,I1_nom,I2_nom,Sdoc_Description_synthese,Sdoc_date_YYYYMM,Sdoc_date_YYYY,Sdoc_code_lieu_chantier,Sdoc_code_type_chantier_2
+17110407,S---S,223,224,Menafoglio A. (223),Menafoglio A. (224),"17110407 - C1711_01_001 - (Cags-Cs): REP, Brunetta & Demonte - Forterresse - ",171104,1711,BR_DE,mil
+17110407,S---S,223,275,Menafoglio A. (223),Pinchetti D. (275),"17110407 - C1711_01_001 - (Cags-Cs): REP, Brunetta & Demonte - Forterresse - ",171104,1711,BR_DE,mil
+17110407,S---S,223,187,Menafoglio A. (223),Groppi C. (187),"17110407 - C1711_01_001 - (Cags-Cs): REP, Brunetta & Demonte - Forterresse - ",171104,1711,BR_DE,mil
+17110407,S---S,224,275,Menafoglio A. (224),Pinchetti D. (275),"17110407 - C1711_01_001 - (Cags-Cs): REP, Brunetta & Demonte - Forterresse - ",171104,1711,BR_DE,mil
+17110407,S---S,224,187,Menafoglio A. (224),Groppi C. (187),"17110407 - C1711_01_001 - (Cags-Cs): REP, Brunetta & Demonte - Forterresse - ",171104,1711,BR_DE,mil
+17110407,S---S,275,187,Pinchetti D. (275),Groppi C. (187),"17110407 - C1711_01_001 - (Cags-Cs): REP, Brunetta & Demonte - Forterresse - ",171104,1711,BR_DE,mil
+17110407,G-->S,243,223,Origone A.M. (243),Menafoglio A. (223),"17110407 - C1711_01_001 - (Cags-Cs): REP, Brunetta & Demonte - Forterresse - ",171104,1711,BR_DE,mil
+17110407,G-->S,243,224,Origone A.M. (243),Menafoglio A. (224),"17110407 - C1711_01_001 - (Cags-Cs): REP, Brunetta & Demonte - Forterresse - ",171104,1711,BR_DE,mil
+17110407,G-->S,243,275,Origone A.M. (243),Pinchetti D. (275),"17110407 - C1711_01_001 - (Cags-Cs): REP, Brunetta & Demonte - Forterresse - ",171104,1711,BR_DE,mil
+17110407,G-->S,243,187,Origone A.M. (243),Groppi C. (187),"17110407 - C1711_01_001 - (Cags-Cs): REP, Brunetta & Demonte - Forterresse - ",171104,1711,BR_DE,mil
+17110407,G-->S,384,223,Violino P.G. (384),Menafoglio A. (223),"17110407 - C1711_01_001 - (Cags-Cs): REP, Brunetta & Demonte - Forterresse - ",171104,1711,BR_DE,mil
+17110407,G-->S,384,224,Violino P.G. (384),Menafoglio A. (224),"17110407 - C1711_01_001 - (Cags-Cs): REP, Brunetta & Demonte - Forterresse - ",171104,1711,BR_DE,mil
+17110407,G-->S,384,275,Violino P.G. (384),Pinchetti D. (275),"17110407 - C1711_01_001 - (Cags-Cs): REP, Brunetta & Demonte - Forterresse - ",171104,1711,BR_DE,mil
+17110407,G-->S,384,187,Violino P.G. (384),Groppi C. (187),"17110407 - C1711_01_001 - (Cags-Cs): REP, Brunetta & Demonte - Forterresse - ",171104,1711,BR_DE,mil
+17110407,G---G,243,384,Origone A.M. (243),Violino P.G. (384),"17110407 - C1711_01_001 - (Cags-Cs): REP, Brunetta & Demonte - Forterresse - ",171104,1711,BR_DE,mil
+17110507,S---S,40,159,Bertinello P. (40),Gallo G.F. (159),"17110507 - C1711_01_008 - (Dags-Ds): DIV, Valenza & Alessandria - ",171105,1711,VAL_AL,np
+17110507,S---S,40,20,Bertinello P. (40),Baietto D. (20),"17110507 - C1711_01_008 - (Dags-Ds): DIV, Valenza & Alessandria - ",171105,1711,VAL_AL,np
+17110507,S---S,40,39,Bertinello P. (40),Berti G.B. (39),"17110507 - C1711_01_008 - (Dags-Ds): DIV, Valenza & Alessandria - ",171105,1711,VAL_AL,np
+17110507,S---S,159,20,Gallo G.F. (159),Baietto D. (20),"17110507 - C1711_01_008 - (Dags-Ds): DIV, Valenza & Alessandria - ",171105,1711,VAL_AL,np
+17110507,S---S,159,39,Gallo G.F. (159),Berti G.B. (39),"17110507 - C1711_01_008 - (Dags-Ds): DIV, Valenza & Alessandria - ",171105,1711,VAL_AL,np
+17110507,S---S,20,39,Baietto D. (20),Berti G.B. (39),"17110507 - C1711_01_008 - (Dags-Ds): DIV, Valenza & Alessandria - ",171105,1711,VAL_AL,np
+17110516,G-->S,249,250,Paron F. (249),Parone C. (250),"17110516 - C1711_01_012 - (Cags-Cs): DIV, ponts_de_bateaux - ",171105,1711,np,mil
+17110516,G-->S,383,250,Vietto A. (383),Parone C. (250),"17110516 - C1711_01_012 - (Cags-Cs): DIV, ponts_de_bateaux - ",171105,1711,np,mil
+17110516,G---G,249,383,Paron F. (249),Vietto A. (383),"17110516 - C1711_01_012 - (Cags-Cs): DIV, ponts_de_bateaux - ",171105,1711,np,mil
+17110521,S---S,26,80,Bello L. (26),Camerata A. (80),"17110521 - C1711_01_014 - (Dags-Ds): REP, Turin - Citadelle - ",171105,1711,TO,mil
+17110521,S---S,26,374,Bello L. (26),Vanera M. (374),"17110521 - C1711_01_014 - (Dags-Ds): REP, Turin - Citadelle - ",171105,1711,TO,mil
+17110521,S---S,80,374,Camerata A. (80),Vanera M. (374),"17110521 - C1711_01_014 - (Dags-Ds): REP, Turin - Citadelle - ",171105,1711,TO,mil
+17110521,G-->S,27,26,Bello P. (27),Bello L. (26),"17110521 - C1711_01_014 - (Dags-Ds): REP, Turin - Citadelle - ",171105,1711,TO,mil
+17110521,G-->S,27,80,Bello P. (27),Camerata A. (80),"17110521 - C1711_01_014 - (Dags-Ds): REP, Turin - Citadelle - ",171105,1711,TO,mil
+17110521,G-->S,27,374,Bello P. (27),Vanera M. (374),"17110521 - C1711_01_014 - (Dags-Ds): REP, Turin - Citadelle - ",171105,1711,TO,mil
+17110521,G-->S,175,26,Gillonio G.P. (175),Bello L. (26),"17110521 - C1711_01_014 - (Dags-Ds): REP, Turin - Citadelle - ",171105,1711,TO,mil
+17110521,G-->S,175,80,Gillonio G.P. (175),Camerata A. (80),"17110521 - C1711_01_014 - (Dags-Ds): REP, Turin - Citadelle - ",171105,1711,TO,mil
+17110521,G-->S,175,374,Gillonio G.P. (175),Vanera M. (374),"17110521 - C1711_01_014 - (Dags-Ds): REP, Turin - Citadelle - ",171105,1711,TO,mil
+17110521,G---G,27,175,Bello P. (27),Gillonio G.P. (175),"17110521 - C1711_01_014 - (Dags-Ds): REP, Turin - Citadelle - ",171105,1711,TO,mil
+17110521,S---S,26,80,Bello L. (26),Camerata A. (80),"17110521 - C1711_01_018 - (Dags-Ds): REP, Turin - Palais Royal - ",171105,1711,TO,civ
+17110521,S---S,26,374,Bello L. (26),Vanera M. (374),"17110521 - C1711_01_018 - (Dags-Ds): REP, Turin - Palais Royal - ",171105,1711,TO,civ
+17110521,S---S,80,374,Camerata A. (80),Vanera M. (374),"17110521 - C1711_01_018 - (Dags-Ds): REP, Turin - Palais Royal - ",171105,1711,TO,civ
+17110521,G-->S,27,26,Bello P. (27),Bello L. (26),"17110521 - C1711_01_018 - (Dags-Ds): REP, Turin - Palais Royal - ",171105,1711,TO,civ
+17110521,G-->S,27,80,Bello P. (27),Camerata A. (80),"17110521 - C1711_01_018 - (Dags-Ds): REP, Turin - Palais Royal - ",171105,1711,TO,civ
+17110521,G-->S,27,374,Bello P. (27),Vanera M. (374),"17110521 - C1711_01_018 - (Dags-Ds): REP, Turin - Palais Royal - ",171105,1711,TO,civ
+17110521,G-->S,175,26,Gillonio G.P. (175),Bello L. (26),"17110521 - C1711_01_018 - (Dags-Ds): REP, Turin - Palais Royal - ",171105,1711,TO,civ
+17110521,G-->S,175,80,Gillonio G.P. (175),Camerata A. (80),"17110521 - C1711_01_018 - (Dags-Ds): REP, Turin - Palais Royal - ",171105,1711,TO,civ
+17110521,G-->S,175,374,Gillonio G.P. (175),Vanera M. (374),"17110521 - C1711_01_018 - (Dags-Ds): REP, Turin - Palais Royal - ",171105,1711,TO,civ
+17110521,G---G,27,175,Bello P. (27),Gillonio G.P. (175),"17110521 - C1711_01_018 - (Dags-Ds): REP, Turin - Palais Royal - ",171105,1711,TO,civ
+17110527,S---S,64,244,Bollino G. (64),Pagano C. (244),"17110527 - C1711_01_029 - (Dags-Cs): GO, Montcagieri - Chateau - ",171105,1711,MO,civ
+17110527,G-->S,260,64,Persivale G.M. (260),Bollino G. (64),"17110527 - C1711_01_029 - (Dags-Cs): GO, Montcagieri - Chateau - ",171105,1711,MO,civ
+17110527,G-->S,260,244,Persivale G.M. (260),Pagano C. (244),"17110527 - C1711_01_029 - (Dags-Cs): GO, Montcagieri - Chateau - ",171105,1711,MO,civ
+17110527,G-->S,145,64,Furno G.D. (145),Bollino G. (64),"17110527 - C1711_01_029 - (Dags-Cs): GO, Montcagieri - Chateau - ",171105,1711,MO,civ
+17110527,G-->S,145,244,Furno G.D. (145),Pagano C. (244),"17110527 - C1711_01_029 - (Dags-Cs): GO, Montcagieri - Chateau - ",171105,1711,MO,civ
+17110527,G---G,260,145,Persivale G.M. (260),Furno G.D. (145),"17110527 - C1711_01_029 - (Dags-Cs): GO, Montcagieri - Chateau - ",171105,1711,MO,civ
+17110528,S---S,361,149,Toscanello F. (361),Gaja P. (149),"17110528 - C1711_01_033 - (Dags-Ds): GO, Turin - Arsenal - ",171105,1711,TO,mil
+17110528,S---S,361,62,Toscanello F. (361),Boggio P. (62),"17110528 - C1711_01_033 - (Dags-Ds): GO, Turin - Arsenal - ",171105,1711,TO,mil
+17110528,S---S,149,62,Gaja P. (149),Boggio P. (62),"17110528 - C1711_01_033 - (Dags-Ds): GO, Turin - Arsenal - ",171105,1711,TO,mil
+17110602,S---S,368,239,Tua G.B. (368),Negro B. (239),"17110602 - C1711_01_038 - (Cags-Cs): DIV, Casale - Chateau - ",171106,1711,CA,mil
+17110602,S---S,368,85,Tua G.B. (368),Canova A. (85),"17110602 - C1711_01_038 - (Cags-Cs): DIV, Casale - Chateau - ",171106,1711,CA,mil
+17110602,S---S,239,85,Negro B. (239),Canova A. (85),"17110602 - C1711_01_038 - (Cags-Cs): DIV, Casale - Chateau - ",171106,1711,CA,mil
+17110602,G-->S,146,368,Gaffino M. (146),Tua G.B. (368),"17110602 - C1711_01_038 - (Cags-Cs): DIV, Casale - Chateau - ",171106,1711,CA,mil
+17110602,G-->S,146,239,Gaffino M. (146),Negro B. (239),"17110602 - C1711_01_038 - (Cags-Cs): DIV, Casale - Chateau - ",171106,1711,CA,mil
+17110602,G-->S,146,85,Gaffino M. (146),Canova A. (85),"17110602 - C1711_01_038 - (Cags-Cs): DIV, Casale - Chateau - ",171106,1711,CA,mil
+17110602,G-->S,171,368,Gianone G.B. (171),Tua G.B. (368),"17110602 - C1711_01_038 - (Cags-Cs): DIV, Casale - Chateau - ",171106,1711,CA,mil
+17110602,G-->S,171,239,Gianone G.B. (171),Negro B. (239),"17110602 - C1711_01_038 - (Cags-Cs): DIV, Casale - Chateau - ",171106,1711,CA,mil
+17110602,G-->S,171,85,Gianone G.B. (171),Canova A. (85),"17110602 - C1711_01_038 - (Cags-Cs): DIV, Casale - Chateau - ",171106,1711,CA,mil
+17110602,G---G,146,171,Gaffino M. (146),Gianone G.B. (171),"17110602 - C1711_01_038 - (Cags-Cs): DIV, Casale - Chateau - ",171106,1711,CA,mil
+17110723,S---S,224,296,Menafoglio A. (224),Riccio F.A. (296),"17110723 - C1711_01_047 - (Dags-Ds): GO, Turin - Citadelle et ville - ",171107,1711,TO,civ
+17110723,G-->S,293,224,Reghino P.M. (293),Menafoglio A. (224),"17110723 - C1711_01_047 - (Dags-Ds): GO, Turin - Citadelle et ville - ",171107,1711,TO,civ
+17110723,G-->S,293,296,Reghino P.M. (293),Riccio F.A. (296),"17110723 - C1711_01_047 - (Dags-Ds): GO, Turin - Citadelle et ville - ",171107,1711,TO,civ
+17110723,G-->S,369,224,Ugliengo C.M. (369),Menafoglio A. (224),"17110723 - C1711_01_047 - (Dags-Ds): GO, Turin - Citadelle et ville - ",171107,1711,TO,civ
+17110723,G-->S,369,296,Ugliengo C.M. (369),Riccio F.A. (296),"17110723 - C1711_01_047 - (Dags-Ds): GO, Turin - Citadelle et ville - ",171107,1711,TO,civ
+17110723,G---G,293,369,Reghino P.M. (293),Ugliengo C.M. (369),"17110723 - C1711_01_047 - (Dags-Ds): GO, Turin - Citadelle et ville - ",171107,1711,TO,civ
+17111223,S---S,341,21,Sereno G. (341),Beletto L. (21),"17111223 - C1711_01_054 - (Cags-Cs): GO, Brunetta - Forterresse - ",171112,1711,BR,mil
+17111229,G-->S,332,331,Sardi P. (332),Sardi G. (331),"17111229 - C1711_01_057 - (Cags-Cs): GO, Brunetta - Forterresse - ",171112,1711,BR,mil
+17111229,G-->S,185,331,Grecca G.A. (185),Sardi G. (331),"17111229 - C1711_01_057 - (Cags-Cs): GO, Brunetta - Forterresse - ",171112,1711,BR,mil
+17111229,G---G,332,185,Sardi P. (332),Grecca G.A. (185),"17111229 - C1711_01_057 - (Cags-Cs): GO, Brunetta - Forterresse - ",171112,1711,BR,mil
+17111006,S---S,108,238,Clerico S. (108),Mosso G. (238),"17111006 - C1711_01_065 - (Cags-Cs): GO, Fleuve Dora - ",171110,1711,DORA,civ
+17111006,G-->S,328,108,Salazza B. (328),Clerico S. (108),"17111006 - C1711_01_065 - (Cags-Cs): GO, Fleuve Dora - ",171110,1711,DORA,civ
+17111006,G-->S,328,238,Salazza B. (328),Mosso G. (238),"17111006 - C1711_01_065 - (Cags-Cs): GO, Fleuve Dora - ",171110,1711,DORA,civ
+17110729,S---S,247,305,Paneaglio S.G. (247),Riva M.A. (305),"17110729 - C1711_01_066 - (Dags-Ds): DIV, Turin - Citadelle - ",171107,1711,TO,mil
+17120109,S---S,39,16,Berti G.B. (39),Baietto G.F. (16),"17120109 - C1712_01_061 - (Dags-Ds): GO, Brunetta - Forterresse - ",171201,1712,BR,mil
+17120109,S---S,39,374,Berti G.B. (39),Vanera M. (374),"17120109 - C1712_01_061 - (Dags-Ds): GO, Brunetta - Forterresse - ",171201,1712,BR,mil
+17120109,S---S,39,373,Berti G.B. (39),Vanera G. (373),"17120109 - C1712_01_061 - (Dags-Ds): GO, Brunetta - Forterresse - ",171201,1712,BR,mil
+17120109,S---S,39,51,Berti G.B. (39),Biglia G.B. (51),"17120109 - C1712_01_061 - (Dags-Ds): GO, Brunetta - Forterresse - ",171201,1712,BR,mil
+17120109,S---S,39,159,Berti G.B. (39),Gallo G.F. (159),"17120109 - C1712_01_061 - (Dags-Ds): GO, Brunetta - Forterresse - ",171201,1712,BR,mil
+17120109,S---S,39,3,Berti G.B. (39),[Vassi] A. (3),"17120109 - C1712_01_061 - (Dags-Ds): GO, Brunetta - Forterresse - ",171201,1712,BR,mil
+17120109,S---S,16,374,Baietto G.F. (16),Vanera M. (374),"17120109 - C1712_01_061 - (Dags-Ds): GO, Brunetta - Forterresse - ",171201,1712,BR,mil
+17120109,S---S,16,373,Baietto G.F. (16),Vanera G. (373),"17120109 - C1712_01_061 - (Dags-Ds): GO, Brunetta - Forterresse - ",171201,1712,BR,mil
+17120109,S---S,16,51,Baietto G.F. (16),Biglia G.B. (51),"17120109 - C1712_01_061 - (Dags-Ds): GO, Brunetta - Forterresse - ",171201,1712,BR,mil
+17120109,S---S,16,159,Baietto G.F. (16),Gallo G.F. (159),"17120109 - C1712_01_061 - (Dags-Ds): GO, Brunetta - Forterresse - ",171201,1712,BR,mil
+17120109,S---S,16,3,Baietto G.F. (16),[Vassi] A. (3),"17120109 - C1712_01_061 - (Dags-Ds): GO, Brunetta - Forterresse - ",171201,1712,BR,mil
+17120109,S---S,374,373,Vanera M. (374),Vanera G. (373),"17120109 - C1712_01_061 - (Dags-Ds): GO, Brunetta - Forterresse - ",171201,1712,BR,mil
+17120109,S---S,374,51,Vanera M. (374),Biglia G.B. (51),"17120109 - C1712_01_061 - (Dags-Ds): GO, Brunetta - Forterresse - ",171201,1712,BR,mil
+17120109,S---S,374,159,Vanera M. (374),Gallo G.F. (159),"17120109 - C1712_01_061 - (Dags-Ds): GO, Brunetta - Forterresse - ",171201,1712,BR,mil
+17120109,S---S,374,3,Vanera M. (374),[Vassi] A. (3),"17120109 - C1712_01_061 - (Dags-Ds): GO, Brunetta - Forterresse - ",171201,1712,BR,mil
+17120109,S---S,373,51,Vanera G. (373),Biglia G.B. (51),"17120109 - C1712_01_061 - (Dags-Ds): GO, Brunetta - Forterresse - ",171201,1712,BR,mil
+17120109,S---S,373,159,Vanera G. (373),Gallo G.F. (159),"17120109 - C1712_01_061 - (Dags-Ds): GO, Brunetta - Forterresse - ",171201,1712,BR,mil
+17120109,S---S,373,3,Vanera G. (373),[Vassi] A. (3),"17120109 - C1712_01_061 - (Dags-Ds): GO, Brunetta - Forterresse - ",171201,1712,BR,mil
+17120109,S---S,51,159,Biglia G.B. (51),Gallo G.F. (159),"17120109 - C1712_01_061 - (Dags-Ds): GO, Brunetta - Forterresse - ",171201,1712,BR,mil
+17120109,S---S,51,3,Biglia G.B. (51),[Vassi] A. (3),"17120109 - C1712_01_061 - (Dags-Ds): GO, Brunetta - Forterresse - ",171201,1712,BR,mil
+17120109,S---S,159,3,Gallo G.F. (159),[Vassi] A. (3),"17120109 - C1712_01_061 - (Dags-Ds): GO, Brunetta - Forterresse - ",171201,1712,BR,mil
+17120109,G-->S,362,39,Toscasco C. (362),Berti G.B. (39),"17120109 - C1712_01_061 - (Dags-Ds): GO, Brunetta - Forterresse - ",171201,1712,BR,mil
+17120109,G-->S,362,16,Toscasco C. (362),Baietto G.F. (16),"17120109 - C1712_01_061 - (Dags-Ds): GO, Brunetta - Forterresse - ",171201,1712,BR,mil
+17120109,G-->S,362,374,Toscasco C. (362),Vanera M. (374),"17120109 - C1712_01_061 - (Dags-Ds): GO, Brunetta - Forterresse - ",171201,1712,BR,mil
+17120109,G-->S,362,373,Toscasco C. (362),Vanera G. (373),"17120109 - C1712_01_061 - (Dags-Ds): GO, Brunetta - Forterresse - ",171201,1712,BR,mil
+17120109,G-->S,362,51,Toscasco C. (362),Biglia G.B. (51),"17120109 - C1712_01_061 - (Dags-Ds): GO, Brunetta - Forterresse - ",171201,1712,BR,mil
+17120109,G-->S,362,159,Toscasco C. (362),Gallo G.F. (159),"17120109 - C1712_01_061 - (Dags-Ds): GO, Brunetta - Forterresse - ",171201,1712,BR,mil
+17120109,G-->S,362,3,Toscasco C. (362),[Vassi] A. (3),"17120109 - C1712_01_061 - (Dags-Ds): GO, Brunetta - Forterresse - ",171201,1712,BR,mil
+17120109,G-->S,120,39,Cucco P. (120),Berti G.B. (39),"17120109 - C1712_01_061 - (Dags-Ds): GO, Brunetta - Forterresse - ",171201,1712,BR,mil
+17120109,G-->S,120,16,Cucco P. (120),Baietto G.F. (16),"17120109 - C1712_01_061 - (Dags-Ds): GO, Brunetta - Forterresse - ",171201,1712,BR,mil
+17120109,G-->S,120,374,Cucco P. (120),Vanera M. (374),"17120109 - C1712_01_061 - (Dags-Ds): GO, Brunetta - Forterresse - ",171201,1712,BR,mil
+17120109,G-->S,120,373,Cucco P. (120),Vanera G. (373),"17120109 - C1712_01_061 - (Dags-Ds): GO, Brunetta - Forterresse - ",171201,1712,BR,mil
+17120109,G-->S,120,51,Cucco P. (120),Biglia G.B. (51),"17120109 - C1712_01_061 - (Dags-Ds): GO, Brunetta - Forterresse - ",171201,1712,BR,mil
+17120109,G-->S,120,159,Cucco P. (120),Gallo G.F. (159),"17120109 - C1712_01_061 - (Dags-Ds): GO, Brunetta - Forterresse - ",171201,1712,BR,mil
+17120109,G-->S,120,3,Cucco P. (120),[Vassi] A. (3),"17120109 - C1712_01_061 - (Dags-Ds): GO, Brunetta - Forterresse - ",171201,1712,BR,mil
+17120109,G---G,362,120,Toscasco C. (362),Cucco P. (120),"17120109 - C1712_01_061 - (Dags-Ds): GO, Brunetta - Forterresse - ",171201,1712,BR,mil
+17120125,G-->S,272,267,Piazzollo F. (272),Pianarosa G. (267),"17120125 - C1712_01_067 - (Cags-Cs): GO, Saorge - Forteresse - ",171201,1712,SAO,mil
+17120129,S---S,226,281,Menafoglio C.A. (226),Pistone G.S. (281),"17120129 - C1712_01_071 - (Dags-Ds): DIV, Exilles - Forterresse - ",171201,1712,EX,mil
+17120129,G-->S,223,226,Menafoglio A. (223),Menafoglio C.A. (226),"17120129 - C1712_01_071 - (Dags-Ds): DIV, Exilles - Forterresse - ",171201,1712,EX,mil
+17120129,G-->S,223,281,Menafoglio A. (223),Pistone G.S. (281),"17120129 - C1712_01_071 - (Dags-Ds): DIV, Exilles - Forterresse - ",171201,1712,EX,mil
+17120129,G-->S,279,226,Pistone G.G. (279),Menafoglio C.A. (226),"17120129 - C1712_01_071 - (Dags-Ds): DIV, Exilles - Forterresse - ",171201,1712,EX,mil
+17120129,G-->S,279,281,Pistone G.G. (279),Pistone G.S. (281),"17120129 - C1712_01_071 - (Dags-Ds): DIV, Exilles - Forterresse - ",171201,1712,EX,mil
+17120129,G---G,223,279,Menafoglio A. (223),Pistone G.G. (279),"17120129 - C1712_01_071 - (Dags-Ds): DIV, Exilles - Forterresse - ",171201,1712,EX,mil
+17120227,S---S,159,375,Gallo G.F. (159),Vani A. (375),"17120227 - C1712_01_073 - (Dags-Ds): GO, Demonte - Forterresse - ",171202,1712,DE,mil
+17120227,S---S,159,51,Gallo G.F. (159),Biglia G.B. (51),"17120227 - C1712_01_073 - (Dags-Ds): GO, Demonte - Forterresse - ",171202,1712,DE,mil
+17120227,S---S,375,51,Vani A. (375),Biglia G.B. (51),"17120227 - C1712_01_073 - (Dags-Ds): GO, Demonte - Forterresse - ",171202,1712,DE,mil
+17120227,G-->S,59,159,Bodoira G.D. (59),Gallo G.F. (159),"17120227 - C1712_01_073 - (Dags-Ds): GO, Demonte - Forterresse - ",171202,1712,DE,mil
+17120227,G-->S,59,375,Bodoira G.D. (59),Vani A. (375),"17120227 - C1712_01_073 - (Dags-Ds): GO, Demonte - Forterresse - ",171202,1712,DE,mil
+17120227,G-->S,59,51,Bodoira G.D. (59),Biglia G.B. (51),"17120227 - C1712_01_073 - (Dags-Ds): GO, Demonte - Forterresse - ",171202,1712,DE,mil
+17120227,G-->S,39,159,Berti G.B. (39),Gallo G.F. (159),"17120227 - C1712_01_073 - (Dags-Ds): GO, Demonte - Forterresse - ",171202,1712,DE,mil
+17120227,G-->S,39,375,Berti G.B. (39),Vani A. (375),"17120227 - C1712_01_073 - (Dags-Ds): GO, Demonte - Forterresse - ",171202,1712,DE,mil
+17120227,G-->S,39,51,Berti G.B. (39),Biglia G.B. (51),"17120227 - C1712_01_073 - (Dags-Ds): GO, Demonte - Forterresse - ",171202,1712,DE,mil
+17120227,G---G,59,39,Bodoira G.D. (59),Berti G.B. (39),"17120227 - C1712_01_073 - (Dags-Ds): GO, Demonte - Forterresse - ",171202,1712,DE,mil
+17120309,S---S,39,40,Berti G.B. (39),Bertinello P. (40),"17120309 - C1712_01_076 - (Dags-Cs): REP, Alessandria - Fortifications - ",171203,1712,AL,mil
+17120309,S---S,39,115,Berti G.B. (39),Costanzo B. (115),"17120309 - C1712_01_076 - (Dags-Cs): REP, Alessandria - Fortifications - ",171203,1712,AL,mil
+17120309,S---S,40,115,Bertinello P. (40),Costanzo B. (115),"17120309 - C1712_01_076 - (Dags-Cs): REP, Alessandria - Fortifications - ",171203,1712,AL,mil
+17120309,G-->S,358,39,Tognasco G. (358),Berti G.B. (39),"17120309 - C1712_01_076 - (Dags-Cs): REP, Alessandria - Fortifications - ",171203,1712,AL,mil
+17120309,G-->S,358,40,Tognasco G. (358),Bertinello P. (40),"17120309 - C1712_01_076 - (Dags-Cs): REP, Alessandria - Fortifications - ",171203,1712,AL,mil
+17120309,G-->S,358,115,Tognasco G. (358),Costanzo B. (115),"17120309 - C1712_01_076 - (Dags-Cs): REP, Alessandria - Fortifications - ",171203,1712,AL,mil
+17120309,G-->S,159,39,Gallo G.F. (159),Berti G.B. (39),"17120309 - C1712_01_076 - (Dags-Cs): REP, Alessandria - Fortifications - ",171203,1712,AL,mil
+17120309,G-->S,159,40,Gallo G.F. (159),Bertinello P. (40),"17120309 - C1712_01_076 - (Dags-Cs): REP, Alessandria - Fortifications - ",171203,1712,AL,mil
+17120309,G-->S,159,115,Gallo G.F. (159),Costanzo B. (115),"17120309 - C1712_01_076 - (Dags-Cs): REP, Alessandria - Fortifications - ",171203,1712,AL,mil
+17120309,G---G,358,159,Tognasco G. (358),Gallo G.F. (159),"17120309 - C1712_01_076 - (Dags-Cs): REP, Alessandria - Fortifications - ",171203,1712,AL,mil
+17120311,G-->S,80,369,Camerata A. (80),Ugliengo C.M. (369),"17120311 - C1712_01_082 - (Dags-Cs): MO, Turin - Palais Royal - ",171203,1712,TO,civ
+17120311,G-->S,389,369,Zo C.A. (389),Ugliengo C.M. (369),"17120311 - C1712_01_082 - (Dags-Cs): MO, Turin - Palais Royal - ",171203,1712,TO,civ
+17120311,G---G,80,389,Camerata A. (80),Zo C.A. (389),"17120311 - C1712_01_082 - (Dags-Cs): MO, Turin - Palais Royal - ",171203,1712,TO,civ
+17120312,S---S,331,332,Sardi G. (331),Sardi P. (332),"17120312 - C1712_01_085 - (Dags-Cs): DIV, Turin - Citadelle - ",171203,1712,TO,mil
+17120312,G-->S,385,331,Vitale P. (385),Sardi G. (331),"17120312 - C1712_01_085 - (Dags-Cs): DIV, Turin - Citadelle - ",171203,1712,TO,mil
+17120312,G-->S,385,332,Vitale P. (385),Sardi P. (332),"17120312 - C1712_01_085 - (Dags-Cs): DIV, Turin - Citadelle - ",171203,1712,TO,mil
+17120312,G-->S,134,331,Ferraris B. (134),Sardi G. (331),"17120312 - C1712_01_085 - (Dags-Cs): DIV, Turin - Citadelle - ",171203,1712,TO,mil
+17120312,G-->S,134,332,Ferraris B. (134),Sardi P. (332),"17120312 - C1712_01_085 - (Dags-Cs): DIV, Turin - Citadelle - ",171203,1712,TO,mil
+17120312,G---G,385,134,Vitale P. (385),Ferraris B. (134),"17120312 - C1712_01_085 - (Dags-Cs): DIV, Turin - Citadelle - ",171203,1712,TO,mil
+17120318,S---S,226,275,Menafoglio C.A. (226),Pinchetti D. (275),"17120318 - C1712_01_091 - (Dags-Ds): GO, Fleuve Po - ",171203,1712,CA,civ
+17120318,S---S,226,292,Menafoglio C.A. (226),Rechettino A. (292),"17120318 - C1712_01_091 - (Dags-Ds): GO, Fleuve Po - ",171203,1712,CA,civ
+17120318,S---S,226,201,Menafoglio C.A. (226),Maciotta G. (201),"17120318 - C1712_01_091 - (Dags-Ds): GO, Fleuve Po - ",171203,1712,CA,civ
+17120318,S---S,226,278,Menafoglio C.A. (226),Pistone C. (278),"17120318 - C1712_01_091 - (Dags-Ds): GO, Fleuve Po - ",171203,1712,CA,civ
+17120318,S---S,226,200,Menafoglio C.A. (226),Maciotta C. (200),"17120318 - C1712_01_091 - (Dags-Ds): GO, Fleuve Po - ",171203,1712,CA,civ
+17120318,S---S,275,292,Pinchetti D. (275),Rechettino A. (292),"17120318 - C1712_01_091 - (Dags-Ds): GO, Fleuve Po - ",171203,1712,CA,civ
+17120318,S---S,275,201,Pinchetti D. (275),Maciotta G. (201),"17120318 - C1712_01_091 - (Dags-Ds): GO, Fleuve Po - ",171203,1712,CA,civ
+17120318,S---S,275,278,Pinchetti D. (275),Pistone C. (278),"17120318 - C1712_01_091 - (Dags-Ds): GO, Fleuve Po - ",171203,1712,CA,civ
+17120318,S---S,275,200,Pinchetti D. (275),Maciotta C. (200),"17120318 - C1712_01_091 - (Dags-Ds): GO, Fleuve Po - ",171203,1712,CA,civ
+17120318,S---S,292,201,Rechettino A. (292),Maciotta G. (201),"17120318 - C1712_01_091 - (Dags-Ds): GO, Fleuve Po - ",171203,1712,CA,civ
+17120318,S---S,292,278,Rechettino A. (292),Pistone C. (278),"17120318 - C1712_01_091 - (Dags-Ds): GO, Fleuve Po - ",171203,1712,CA,civ
+17120318,S---S,292,200,Rechettino A. (292),Maciotta C. (200),"17120318 - C1712_01_091 - (Dags-Ds): GO, Fleuve Po - ",171203,1712,CA,civ
+17120318,S---S,201,278,Maciotta G. (201),Pistone C. (278),"17120318 - C1712_01_091 - (Dags-Ds): GO, Fleuve Po - ",171203,1712,CA,civ
+17120318,S---S,201,200,Maciotta G. (201),Maciotta C. (200),"17120318 - C1712_01_091 - (Dags-Ds): GO, Fleuve Po - ",171203,1712,CA,civ
+17120318,S---S,278,200,Pistone C. (278),Maciotta C. (200),"17120318 - C1712_01_091 - (Dags-Ds): GO, Fleuve Po - ",171203,1712,CA,civ
+17120318,G-->S,223,226,Menafoglio A. (223),Menafoglio C.A. (226),"17120318 - C1712_01_091 - (Dags-Ds): GO, Fleuve Po - ",171203,1712,CA,civ
+17120318,G-->S,223,275,Menafoglio A. (223),Pinchetti D. (275),"17120318 - C1712_01_091 - (Dags-Ds): GO, Fleuve Po - ",171203,1712,CA,civ
+17120318,G-->S,223,292,Menafoglio A. (223),Rechettino A. (292),"17120318 - C1712_01_091 - (Dags-Ds): GO, Fleuve Po - ",171203,1712,CA,civ
+17120318,G-->S,223,201,Menafoglio A. (223),Maciotta G. (201),"17120318 - C1712_01_091 - (Dags-Ds): GO, Fleuve Po - ",171203,1712,CA,civ
+17120318,G-->S,223,278,Menafoglio A. (223),Pistone C. (278),"17120318 - C1712_01_091 - (Dags-Ds): GO, Fleuve Po - ",171203,1712,CA,civ
+17120318,G-->S,223,200,Menafoglio A. (223),Maciotta C. (200),"17120318 - C1712_01_091 - (Dags-Ds): GO, Fleuve Po - ",171203,1712,CA,civ
+17120318,G-->S,282,226,Pistone G. (282),Menafoglio C.A. (226),"17120318 - C1712_01_091 - (Dags-Ds): GO, Fleuve Po - ",171203,1712,CA,civ
+17120318,G-->S,282,275,Pistone G. (282),Pinchetti D. (275),"17120318 - C1712_01_091 - (Dags-Ds): GO, Fleuve Po - ",171203,1712,CA,civ
+17120318,G-->S,282,292,Pistone G. (282),Rechettino A. (292),"17120318 - C1712_01_091 - (Dags-Ds): GO, Fleuve Po - ",171203,1712,CA,civ
+17120318,G-->S,282,201,Pistone G. (282),Maciotta G. (201),"17120318 - C1712_01_091 - (Dags-Ds): GO, Fleuve Po - ",171203,1712,CA,civ
+17120318,G-->S,282,278,Pistone G. (282),Pistone C. (278),"17120318 - C1712_01_091 - (Dags-Ds): GO, Fleuve Po - ",171203,1712,CA,civ
+17120318,G-->S,282,200,Pistone G. (282),Maciotta C. (200),"17120318 - C1712_01_091 - (Dags-Ds): GO, Fleuve Po - ",171203,1712,CA,civ
+17120318,G---G,223,282,Menafoglio A. (223),Pistone G. (282),"17120318 - C1712_01_091 - (Dags-Ds): GO, Fleuve Po - ",171203,1712,CA,civ
+17120318,S---S,226,279,Menafoglio C.A. (226),Pistone G.G. (279),"17120318 - C1712_01_095 - (Dags-Cs): DIV, Ivrea - Forterresse - ",171203,1712,IV,mil
+17120318,S---S,226,561,Menafoglio C.A. (226),Boggio P. (561),"17120318 - C1712_01_095 - (Dags-Cs): DIV, Ivrea - Forterresse - ",171203,1712,IV,mil
+17120318,S---S,226,302,Menafoglio C.A. (226),Righino P.A. (302),"17120318 - C1712_01_095 - (Dags-Cs): DIV, Ivrea - Forterresse - ",171203,1712,IV,mil
+17120318,S---S,279,561,Pistone G.G. (279),Boggio P. (561),"17120318 - C1712_01_095 - (Dags-Cs): DIV, Ivrea - Forterresse - ",171203,1712,IV,mil
+17120318,S---S,279,302,Pistone G.G. (279),Righino P.A. (302),"17120318 - C1712_01_095 - (Dags-Cs): DIV, Ivrea - Forterresse - ",171203,1712,IV,mil
+17120318,S---S,561,302,Boggio P. (561),Righino P.A. (302),"17120318 - C1712_01_095 - (Dags-Cs): DIV, Ivrea - Forterresse - ",171203,1712,IV,mil
+17120318,G-->S,316,226,Romano T. (316),Menafoglio C.A. (226),"17120318 - C1712_01_095 - (Dags-Cs): DIV, Ivrea - Forterresse - ",171203,1712,IV,mil
+17120318,G-->S,316,279,Romano T. (316),Pistone G.G. (279),"17120318 - C1712_01_095 - (Dags-Cs): DIV, Ivrea - Forterresse - ",171203,1712,IV,mil
+17120318,G-->S,316,561,Romano T. (316),Boggio P. (561),"17120318 - C1712_01_095 - (Dags-Cs): DIV, Ivrea - Forterresse - ",171203,1712,IV,mil
+17120318,G-->S,316,302,Romano T. (316),Righino P.A. (302),"17120318 - C1712_01_095 - (Dags-Cs): DIV, Ivrea - Forterresse - ",171203,1712,IV,mil
+17120318,G-->S,275,226,Pinchetti D. (275),Menafoglio C.A. (226),"17120318 - C1712_01_095 - (Dags-Cs): DIV, Ivrea - Forterresse - ",171203,1712,IV,mil
+17120318,G-->S,275,279,Pinchetti D. (275),Pistone G.G. (279),"17120318 - C1712_01_095 - (Dags-Cs): DIV, Ivrea - Forterresse - ",171203,1712,IV,mil
+17120318,G-->S,275,561,Pinchetti D. (275),Boggio P. (561),"17120318 - C1712_01_095 - (Dags-Cs): DIV, Ivrea - Forterresse - ",171203,1712,IV,mil
+17120318,G-->S,275,302,Pinchetti D. (275),Righino P.A. (302),"17120318 - C1712_01_095 - (Dags-Cs): DIV, Ivrea - Forterresse - ",171203,1712,IV,mil
+17120318,G---G,316,275,Romano T. (316),Pinchetti D. (275),"17120318 - C1712_01_095 - (Dags-Cs): DIV, Ivrea - Forterresse - ",171203,1712,IV,mil
+17120321,S---S,226,302,Menafoglio C.A. (226),Righino P.A. (302),"17120321 - C1712_01_099 - (Dags-Cs): REP, Mortara - Fortifications - ",171203,1712,MOR,mil
+17120321,S---S,226,313,Menafoglio C.A. (226),Rochettino A. (313),"17120321 - C1712_01_099 - (Dags-Cs): REP, Mortara - Fortifications - ",171203,1712,MOR,mil
+17120321,S---S,226,275,Menafoglio C.A. (226),Pinchetti D. (275),"17120321 - C1712_01_099 - (Dags-Cs): REP, Mortara - Fortifications - ",171203,1712,MOR,mil
+17120321,S---S,302,313,Righino P.A. (302),Rochettino A. (313),"17120321 - C1712_01_099 - (Dags-Cs): REP, Mortara - Fortifications - ",171203,1712,MOR,mil
+17120321,S---S,302,275,Righino P.A. (302),Pinchetti D. (275),"17120321 - C1712_01_099 - (Dags-Cs): REP, Mortara - Fortifications - ",171203,1712,MOR,mil
+17120321,S---S,313,275,Rochettino A. (313),Pinchetti D. (275),"17120321 - C1712_01_099 - (Dags-Cs): REP, Mortara - Fortifications - ",171203,1712,MOR,mil
+17120321,G-->S,202,226,Maciotta G. (202),Menafoglio C.A. (226),"17120321 - C1712_01_099 - (Dags-Cs): REP, Mortara - Fortifications - ",171203,1712,MOR,mil
+17120321,G-->S,202,302,Maciotta G. (202),Righino P.A. (302),"17120321 - C1712_01_099 - (Dags-Cs): REP, Mortara - Fortifications - ",171203,1712,MOR,mil
+17120321,G-->S,202,313,Maciotta G. (202),Rochettino A. (313),"17120321 - C1712_01_099 - (Dags-Cs): REP, Mortara - Fortifications - ",171203,1712,MOR,mil
+17120321,G-->S,202,275,Maciotta G. (202),Pinchetti D. (275),"17120321 - C1712_01_099 - (Dags-Cs): REP, Mortara - Fortifications - ",171203,1712,MOR,mil
+17120321,G-->S,315,226,Romano G.B. (315),Menafoglio C.A. (226),"17120321 - C1712_01_099 - (Dags-Cs): REP, Mortara - Fortifications - ",171203,1712,MOR,mil
+17120321,G-->S,315,302,Romano G.B. (315),Righino P.A. (302),"17120321 - C1712_01_099 - (Dags-Cs): REP, Mortara - Fortifications - ",171203,1712,MOR,mil
+17120321,G-->S,315,313,Romano G.B. (315),Rochettino A. (313),"17120321 - C1712_01_099 - (Dags-Cs): REP, Mortara - Fortifications - ",171203,1712,MOR,mil
+17120321,G-->S,315,275,Romano G.B. (315),Pinchetti D. (275),"17120321 - C1712_01_099 - (Dags-Cs): REP, Mortara - Fortifications - ",171203,1712,MOR,mil
+17120321,G---G,202,315,Maciotta G. (202),Romano G.B. (315),"17120321 - C1712_01_099 - (Dags-Cs): REP, Mortara - Fortifications - ",171203,1712,MOR,mil
+17120326,S---S,140,320,Fontana F. (140),Rondoletto G.M. (320),"17120326 - C1712_01_103 - (Cags-Ds): REP, Turin - Citadelle - ",171203,1712,TO,mil
+17120326,S---S,140,211,Fontana F. (140),Manfreddo G. (211),"17120326 - C1712_01_103 - (Cags-Ds): REP, Turin - Citadelle - ",171203,1712,TO,mil
+17120326,S---S,320,211,Rondoletto G.M. (320),Manfreddo G. (211),"17120326 - C1712_01_103 - (Cags-Ds): REP, Turin - Citadelle - ",171203,1712,TO,mil
+17120326,G-->S,25,140,Bello G. (25),Fontana F. (140),"17120326 - C1712_01_103 - (Cags-Ds): REP, Turin - Citadelle - ",171203,1712,TO,mil
+17120326,G-->S,25,320,Bello G. (25),Rondoletto G.M. (320),"17120326 - C1712_01_103 - (Cags-Ds): REP, Turin - Citadelle - ",171203,1712,TO,mil
+17120326,G-->S,25,211,Bello G. (25),Manfreddo G. (211),"17120326 - C1712_01_103 - (Cags-Ds): REP, Turin - Citadelle - ",171203,1712,TO,mil
+17120326,G-->S,141,140,Fornione Q. (141),Fontana F. (140),"17120326 - C1712_01_103 - (Cags-Ds): REP, Turin - Citadelle - ",171203,1712,TO,mil
+17120326,G-->S,141,320,Fornione Q. (141),Rondoletto G.M. (320),"17120326 - C1712_01_103 - (Cags-Ds): REP, Turin - Citadelle - ",171203,1712,TO,mil
+17120326,G-->S,141,211,Fornione Q. (141),Manfreddo G. (211),"17120326 - C1712_01_103 - (Cags-Ds): REP, Turin - Citadelle - ",171203,1712,TO,mil
+17120326,G---G,25,141,Bello G. (25),Fornione Q. (141),"17120326 - C1712_01_103 - (Cags-Ds): REP, Turin - Citadelle - ",171203,1712,TO,mil
+17120407,S---S,175,106,Gillonio G.P. (175),Clerico G.P. (106),"17120407 - C1712_01_107 - (Cags-Cs): GO, Turin - Porta Susina - Fortification  - ",171204,1712,TO,mil
+17120407,S---S,175,319,Gillonio G.P. (175),Rondoletto C.M. (319),"17120407 - C1712_01_107 - (Cags-Cs): GO, Turin - Porta Susina - Fortification  - ",171204,1712,TO,mil
+17120407,S---S,175,176,Gillonio G.P. (175),Gillonio G. (176),"17120407 - C1712_01_107 - (Cags-Cs): GO, Turin - Porta Susina - Fortification  - ",171204,1712,TO,mil
+17120407,S---S,106,319,Clerico G.P. (106),Rondoletto C.M. (319),"17120407 - C1712_01_107 - (Cags-Cs): GO, Turin - Porta Susina - Fortification  - ",171204,1712,TO,mil
+17120407,S---S,106,176,Clerico G.P. (106),Gillonio G. (176),"17120407 - C1712_01_107 - (Cags-Cs): GO, Turin - Porta Susina - Fortification  - ",171204,1712,TO,mil
+17120407,S---S,319,176,Rondoletto C.M. (319),Gillonio G. (176),"17120407 - C1712_01_107 - (Cags-Cs): GO, Turin - Porta Susina - Fortification  - ",171204,1712,TO,mil
+17120407,G-->S,27,175,Bello P. (27),Gillonio G.P. (175),"17120407 - C1712_01_107 - (Cags-Cs): GO, Turin - Porta Susina - Fortification  - ",171204,1712,TO,mil
+17120407,G-->S,27,106,Bello P. (27),Clerico G.P. (106),"17120407 - C1712_01_107 - (Cags-Cs): GO, Turin - Porta Susina - Fortification  - ",171204,1712,TO,mil
+17120407,G-->S,27,319,Bello P. (27),Rondoletto C.M. (319),"17120407 - C1712_01_107 - (Cags-Cs): GO, Turin - Porta Susina - Fortification  - ",171204,1712,TO,mil
+17120407,G-->S,27,176,Bello P. (27),Gillonio G. (176),"17120407 - C1712_01_107 - (Cags-Cs): GO, Turin - Porta Susina - Fortification  - ",171204,1712,TO,mil
+17120407,G-->S,109,175,Coda G. (109),Gillonio G.P. (175),"17120407 - C1712_01_107 - (Cags-Cs): GO, Turin - Porta Susina - Fortification  - ",171204,1712,TO,mil
+17120407,G-->S,109,106,Coda G. (109),Clerico G.P. (106),"17120407 - C1712_01_107 - (Cags-Cs): GO, Turin - Porta Susina - Fortification  - ",171204,1712,TO,mil
+17120407,G-->S,109,319,Coda G. (109),Rondoletto C.M. (319),"17120407 - C1712_01_107 - (Cags-Cs): GO, Turin - Porta Susina - Fortification  - ",171204,1712,TO,mil
+17120407,G-->S,109,176,Coda G. (109),Gillonio G. (176),"17120407 - C1712_01_107 - (Cags-Cs): GO, Turin - Porta Susina - Fortification  - ",171204,1712,TO,mil
+17120407,G---G,27,109,Bello P. (27),Coda G. (109),"17120407 - C1712_01_107 - (Cags-Cs): GO, Turin - Porta Susina - Fortification  - ",171204,1712,TO,mil
+17120407,G-->S,62,226,Boggio P. (62),Menafoglio C.A. (226),"17120407 - C1712_01_112 - (Dags-Cs): REP, Verrua & Asti - Forterresse - ",171204,1712,VER_AST,mil
+17120407,G-->S,200,226,Maciotta C. (200),Menafoglio C.A. (226),"17120407 - C1712_01_112 - (Dags-Cs): REP, Verrua & Asti - Forterresse - ",171204,1712,VER_AST,mil
+17120407,G---G,62,200,Boggio P. (62),Maciotta C. (200),"17120407 - C1712_01_112 - (Dags-Cs): REP, Verrua & Asti - Forterresse - ",171204,1712,VER_AST,mil
+17120414,S---S,393,136,Zo G. (393),Fiorina G.P. (136),"17120414 - C1712_01_115 - (Dags-Ds): REP, Rivolli - Chateau - ",171204,1712,RI,civ
+17120414,S---S,393,24,Zo G. (393),Bello G. (24),"17120414 - C1712_01_115 - (Dags-Ds): REP, Rivolli - Chateau - ",171204,1712,RI,civ
+17120414,S---S,136,24,Fiorina G.P. (136),Bello G. (24),"17120414 - C1712_01_115 - (Dags-Ds): REP, Rivolli - Chateau - ",171204,1712,RI,civ
+17120414,G-->S,83,393,Candellero G.B. (83),Zo G. (393),"17120414 - C1712_01_115 - (Dags-Ds): REP, Rivolli - Chateau - ",171204,1712,RI,civ
+17120414,G-->S,83,136,Candellero G.B. (83),Fiorina G.P. (136),"17120414 - C1712_01_115 - (Dags-Ds): REP, Rivolli - Chateau - ",171204,1712,RI,civ
+17120414,G-->S,83,24,Candellero G.B. (83),Bello G. (24),"17120414 - C1712_01_115 - (Dags-Ds): REP, Rivolli - Chateau - ",171204,1712,RI,civ
+17120414,G-->S,33,393,Bellotto A. (33),Zo G. (393),"17120414 - C1712_01_115 - (Dags-Ds): REP, Rivolli - Chateau - ",171204,1712,RI,civ
+17120414,G-->S,33,136,Bellotto A. (33),Fiorina G.P. (136),"17120414 - C1712_01_115 - (Dags-Ds): REP, Rivolli - Chateau - ",171204,1712,RI,civ
+17120414,G-->S,33,24,Bellotto A. (33),Bello G. (24),"17120414 - C1712_01_115 - (Dags-Ds): REP, Rivolli - Chateau - ",171204,1712,RI,civ
+17120414,G---G,83,33,Candellero G.B. (83),Bellotto A. (33),"17120414 - C1712_01_115 - (Dags-Ds): REP, Rivolli - Chateau - ",171204,1712,RI,civ
+17120429,G-->S,106,108,Clerico G.P. (106),Clerico S. (108),"17120429 - C1712_01_119 - (Cags-Cs): GO, Turin - Citadelle - ",171204,1712,TO,mil
+17120429,G-->S,236,108,Mosso C.G. (236),Clerico S. (108),"17120429 - C1712_01_119 - (Cags-Cs): GO, Turin - Citadelle - ",171204,1712,TO,mil
+17120429,G---G,106,236,Clerico G.P. (106),Mosso C.G. (236),"17120429 - C1712_01_119 - (Cags-Cs): GO, Turin - Citadelle - ",171204,1712,TO,mil
+17120510,S---S,288,97,Quadrone B. (288),Casella A. (97),"17120510 - C1712_01_125 - (Dags-Ds): MO, Venaria reale - ",171205,1712,VEN,civ
+17120510,S---S,288,10,Quadrone B. (288),Aprile F. (10),"17120510 - C1712_01_125 - (Dags-Ds): MO, Venaria reale - ",171205,1712,VEN,civ
+17120510,S---S,97,10,Casella A. (97),Aprile F. (10),"17120510 - C1712_01_125 - (Dags-Ds): MO, Venaria reale - ",171205,1712,VEN,civ
+17120510,G-->S,34,288,Belloto C.F. (34),Quadrone B. (288),"17120510 - C1712_01_125 - (Dags-Ds): MO, Venaria reale - ",171205,1712,VEN,civ
+17120510,G-->S,34,97,Belloto C.F. (34),Casella A. (97),"17120510 - C1712_01_125 - (Dags-Ds): MO, Venaria reale - ",171205,1712,VEN,civ
+17120510,G-->S,34,10,Belloto C.F. (34),Aprile F. (10),"17120510 - C1712_01_125 - (Dags-Ds): MO, Venaria reale - ",171205,1712,VEN,civ
+17120510,G-->S,99,288,Casella S. (99),Quadrone B. (288),"17120510 - C1712_01_125 - (Dags-Ds): MO, Venaria reale - ",171205,1712,VEN,civ
+17120510,G-->S,99,97,Casella S. (99),Casella A. (97),"17120510 - C1712_01_125 - (Dags-Ds): MO, Venaria reale - ",171205,1712,VEN,civ
+17120510,G-->S,99,10,Casella S. (99),Aprile F. (10),"17120510 - C1712_01_125 - (Dags-Ds): MO, Venaria reale - ",171205,1712,VEN,civ
+17120510,G---G,34,99,Belloto C.F. (34),Casella S. (99),"17120510 - C1712_01_125 - (Dags-Ds): MO, Venaria reale - ",171205,1712,VEN,civ
+17120521,S---S,65,102,Bonacosa A. (65),Ceresio G.A. (102),"17120521 - C1712_01_128 - (Cags-Cs): DIV, ponts_de_bateaux - ",171205,1712,np,mil
+17120521,S---S,65,150,Bonacosa A. (65),Gaido G. (150),"17120521 - C1712_01_128 - (Cags-Cs): DIV, ponts_de_bateaux - ",171205,1712,np,mil
+17120521,S---S,65,125,Bonacosa A. (65),Desio N. (125),"17120521 - C1712_01_128 - (Cags-Cs): DIV, ponts_de_bateaux - ",171205,1712,np,mil
+17120521,S---S,102,150,Ceresio G.A. (102),Gaido G. (150),"17120521 - C1712_01_128 - (Cags-Cs): DIV, ponts_de_bateaux - ",171205,1712,np,mil
+17120521,S---S,102,125,Ceresio G.A. (102),Desio N. (125),"17120521 - C1712_01_128 - (Cags-Cs): DIV, ponts_de_bateaux - ",171205,1712,np,mil
+17120521,S---S,150,125,Gaido G. (150),Desio N. (125),"17120521 - C1712_01_128 - (Cags-Cs): DIV, ponts_de_bateaux - ",171205,1712,np,mil
+17120521,G-->S,103,65,Ceresio P.A. (103),Bonacosa A. (65),"17120521 - C1712_01_128 - (Cags-Cs): DIV, ponts_de_bateaux - ",171205,1712,np,mil
+17120521,G-->S,103,102,Ceresio P.A. (103),Ceresio G.A. (102),"17120521 - C1712_01_128 - (Cags-Cs): DIV, ponts_de_bateaux - ",171205,1712,np,mil
+17120521,G-->S,103,150,Ceresio P.A. (103),Gaido G. (150),"17120521 - C1712_01_128 - (Cags-Cs): DIV, ponts_de_bateaux - ",171205,1712,np,mil
+17120521,G-->S,103,125,Ceresio P.A. (103),Desio N. (125),"17120521 - C1712_01_128 - (Cags-Cs): DIV, ponts_de_bateaux - ",171205,1712,np,mil
+17120521,G-->S,101,65,Ceresio F. (101),Bonacosa A. (65),"17120521 - C1712_01_128 - (Cags-Cs): DIV, ponts_de_bateaux - ",171205,1712,np,mil
+17120521,G-->S,101,102,Ceresio F. (101),Ceresio G.A. (102),"17120521 - C1712_01_128 - (Cags-Cs): DIV, ponts_de_bateaux - ",171205,1712,np,mil
+17120521,G-->S,101,150,Ceresio F. (101),Gaido G. (150),"17120521 - C1712_01_128 - (Cags-Cs): DIV, ponts_de_bateaux - ",171205,1712,np,mil
+17120521,G-->S,101,125,Ceresio F. (101),Desio N. (125),"17120521 - C1712_01_128 - (Cags-Cs): DIV, ponts_de_bateaux - ",171205,1712,np,mil
+17120521,G---G,103,101,Ceresio P.A. (103),Ceresio F. (101),"17120521 - C1712_01_128 - (Cags-Cs): DIV, ponts_de_bateaux - ",171205,1712,np,mil
+17120909,G-->S,332,331,Sardi P. (332),Sardi G. (331),"17120909 - C1712_01_132 - (Dags-Cs): GO, Casale - Fortifications - ",171209,1712,CA,mil
+17120909,G-->S,212,331,Marcandi G. (212),Sardi G. (331),"17120909 - C1712_01_132 - (Dags-Cs): GO, Casale - Fortifications - ",171209,1712,CA,mil
+17120909,G---G,332,212,Sardi P. (332),Marcandi G. (212),"17120909 - C1712_01_132 - (Dags-Cs): GO, Casale - Fortifications - ",171209,1712,CA,mil
+17130206,G-->S,332,331,Sardi P. (332),Sardi G. (331),"17130206 - C1713_01_138 - (Dags-Cs): DIV, Casale - Chateau - Rsx1713_CC3",171302,1713,CA,mil
+17130206,G-->S,27,331,Bello P. (27),Sardi G. (331),"17130206 - C1713_01_138 - (Dags-Cs): DIV, Casale - Chateau - Rsx1713_CC3",171302,1713,CA,mil
+17130206,G---G,332,27,Sardi P. (332),Bello P. (27),"17130206 - C1713_01_138 - (Dags-Cs): DIV, Casale - Chateau - Rsx1713_CC3",171302,1713,CA,mil
+17130213,S---S,223,226,Menafoglio A. (223),Menafoglio C.A. (226),"17130213 - C1713_01_142 - (Cags-Cs): GO, Rivolli - Chateau - Rsx1713_CC1",171302,1713,RI,civ
+17130213,S---S,223,139,Menafoglio A. (223),Fontana D. (139),"17130213 - C1713_01_142 - (Cags-Cs): GO, Rivolli - Chateau - Rsx1713_CC1",171302,1713,RI,civ
+17130213,S---S,223,80,Menafoglio A. (223),Camerata A. (80),"17130213 - C1713_01_142 - (Cags-Cs): GO, Rivolli - Chateau - Rsx1713_CC1",171302,1713,RI,civ
+17130213,S---S,223,81,Menafoglio A. (223),Camerata C. (81),"17130213 - C1713_01_142 - (Cags-Cs): GO, Rivolli - Chateau - Rsx1713_CC1",171302,1713,RI,civ
+17130213,S---S,223,275,Menafoglio A. (223),Pinchetti D. (275),"17130213 - C1713_01_142 - (Cags-Cs): GO, Rivolli - Chateau - Rsx1713_CC1",171302,1713,RI,civ
+17130213,S---S,223,266,Menafoglio A. (223),Pianarosa G. (266),"17130213 - C1713_01_142 - (Cags-Cs): GO, Rivolli - Chateau - Rsx1713_CC1",171302,1713,RI,civ
+17130213,S---S,226,139,Menafoglio C.A. (226),Fontana D. (139),"17130213 - C1713_01_142 - (Cags-Cs): GO, Rivolli - Chateau - Rsx1713_CC1",171302,1713,RI,civ
+17130213,S---S,226,80,Menafoglio C.A. (226),Camerata A. (80),"17130213 - C1713_01_142 - (Cags-Cs): GO, Rivolli - Chateau - Rsx1713_CC1",171302,1713,RI,civ
+17130213,S---S,226,81,Menafoglio C.A. (226),Camerata C. (81),"17130213 - C1713_01_142 - (Cags-Cs): GO, Rivolli - Chateau - Rsx1713_CC1",171302,1713,RI,civ
+17130213,S---S,226,275,Menafoglio C.A. (226),Pinchetti D. (275),"17130213 - C1713_01_142 - (Cags-Cs): GO, Rivolli - Chateau - Rsx1713_CC1",171302,1713,RI,civ
+17130213,S---S,226,266,Menafoglio C.A. (226),Pianarosa G. (266),"17130213 - C1713_01_142 - (Cags-Cs): GO, Rivolli - Chateau - Rsx1713_CC1",171302,1713,RI,civ
+17130213,S---S,139,80,Fontana D. (139),Camerata A. (80),"17130213 - C1713_01_142 - (Cags-Cs): GO, Rivolli - Chateau - Rsx1713_CC1",171302,1713,RI,civ
+17130213,S---S,139,81,Fontana D. (139),Camerata C. (81),"17130213 - C1713_01_142 - (Cags-Cs): GO, Rivolli - Chateau - Rsx1713_CC1",171302,1713,RI,civ
+17130213,S---S,139,275,Fontana D. (139),Pinchetti D. (275),"17130213 - C1713_01_142 - (Cags-Cs): GO, Rivolli - Chateau - Rsx1713_CC1",171302,1713,RI,civ
+17130213,S---S,139,266,Fontana D. (139),Pianarosa G. (266),"17130213 - C1713_01_142 - (Cags-Cs): GO, Rivolli - Chateau - Rsx1713_CC1",171302,1713,RI,civ
+17130213,S---S,80,81,Camerata A. (80),Camerata C. (81),"17130213 - C1713_01_142 - (Cags-Cs): GO, Rivolli - Chateau - Rsx1713_CC1",171302,1713,RI,civ
+17130213,S---S,80,275,Camerata A. (80),Pinchetti D. (275),"17130213 - C1713_01_142 - (Cags-Cs): GO, Rivolli - Chateau - Rsx1713_CC1",171302,1713,RI,civ
+17130213,S---S,80,266,Camerata A. (80),Pianarosa G. (266),"17130213 - C1713_01_142 - (Cags-Cs): GO, Rivolli - Chateau - Rsx1713_CC1",171302,1713,RI,civ
+17130213,S---S,81,275,Camerata C. (81),Pinchetti D. (275),"17130213 - C1713_01_142 - (Cags-Cs): GO, Rivolli - Chateau - Rsx1713_CC1",171302,1713,RI,civ
+17130213,S---S,81,266,Camerata C. (81),Pianarosa G. (266),"17130213 - C1713_01_142 - (Cags-Cs): GO, Rivolli - Chateau - Rsx1713_CC1",171302,1713,RI,civ
+17130213,S---S,275,266,Pinchetti D. (275),Pianarosa G. (266),"17130213 - C1713_01_142 - (Cags-Cs): GO, Rivolli - Chateau - Rsx1713_CC1",171302,1713,RI,civ
+17130213,G-->S,153,223,Galimberti G.M. (153),Menafoglio A. (223),"17130213 - C1713_01_142 - (Cags-Cs): GO, Rivolli - Chateau - Rsx1713_CC1",171302,1713,RI,civ
+17130213,G-->S,153,226,Galimberti G.M. (153),Menafoglio C.A. (226),"17130213 - C1713_01_142 - (Cags-Cs): GO, Rivolli - Chateau - Rsx1713_CC1",171302,1713,RI,civ
+17130213,G-->S,153,139,Galimberti G.M. (153),Fontana D. (139),"17130213 - C1713_01_142 - (Cags-Cs): GO, Rivolli - Chateau - Rsx1713_CC1",171302,1713,RI,civ
+17130213,G-->S,153,80,Galimberti G.M. (153),Camerata A. (80),"17130213 - C1713_01_142 - (Cags-Cs): GO, Rivolli - Chateau - Rsx1713_CC1",171302,1713,RI,civ
+17130213,G-->S,153,81,Galimberti G.M. (153),Camerata C. (81),"17130213 - C1713_01_142 - (Cags-Cs): GO, Rivolli - Chateau - Rsx1713_CC1",171302,1713,RI,civ
+17130213,G-->S,153,275,Galimberti G.M. (153),Pinchetti D. (275),"17130213 - C1713_01_142 - (Cags-Cs): GO, Rivolli - Chateau - Rsx1713_CC1",171302,1713,RI,civ
+17130213,G-->S,153,266,Galimberti G.M. (153),Pianarosa G. (266),"17130213 - C1713_01_142 - (Cags-Cs): GO, Rivolli - Chateau - Rsx1713_CC1",171302,1713,RI,civ
+17130213,G-->S,272,223,Piazzollo F. (272),Menafoglio A. (223),"17130213 - C1713_01_142 - (Cags-Cs): GO, Rivolli - Chateau - Rsx1713_CC1",171302,1713,RI,civ
+17130213,G-->S,272,226,Piazzollo F. (272),Menafoglio C.A. (226),"17130213 - C1713_01_142 - (Cags-Cs): GO, Rivolli - Chateau - Rsx1713_CC1",171302,1713,RI,civ
+17130213,G-->S,272,139,Piazzollo F. (272),Fontana D. (139),"17130213 - C1713_01_142 - (Cags-Cs): GO, Rivolli - Chateau - Rsx1713_CC1",171302,1713,RI,civ
+17130213,G-->S,272,80,Piazzollo F. (272),Camerata A. (80),"17130213 - C1713_01_142 - (Cags-Cs): GO, Rivolli - Chateau - Rsx1713_CC1",171302,1713,RI,civ
+17130213,G-->S,272,81,Piazzollo F. (272),Camerata C. (81),"17130213 - C1713_01_142 - (Cags-Cs): GO, Rivolli - Chateau - Rsx1713_CC1",171302,1713,RI,civ
+17130213,G-->S,272,275,Piazzollo F. (272),Pinchetti D. (275),"17130213 - C1713_01_142 - (Cags-Cs): GO, Rivolli - Chateau - Rsx1713_CC1",171302,1713,RI,civ
+17130213,G-->S,272,266,Piazzollo F. (272),Pianarosa G. (266),"17130213 - C1713_01_142 - (Cags-Cs): GO, Rivolli - Chateau - Rsx1713_CC1",171302,1713,RI,civ
+17130213,G---G,153,272,Galimberti G.M. (153),Piazzollo F. (272),"17130213 - C1713_01_142 - (Cags-Cs): GO, Rivolli - Chateau - Rsx1713_CC1",171302,1713,RI,civ
+17130218,S---S,281,202,Pistone G.S. (281),Maciotta G. (202),"17130218 - C1713_01_151 - (Cags-Cs): GO, Brunetta - Forterresse - Rsx1713_CC1",171302,1713,BR,mil
+17130218,S---S,281,315,Pistone G.S. (281),Romano G.B. (315),"17130218 - C1713_01_151 - (Cags-Cs): GO, Brunetta - Forterresse - Rsx1713_CC1",171302,1713,BR,mil
+17130218,S---S,281,316,Pistone G.S. (281),Romano T. (316),"17130218 - C1713_01_151 - (Cags-Cs): GO, Brunetta - Forterresse - Rsx1713_CC1",171302,1713,BR,mil
+17130218,S---S,281,51,Pistone G.S. (281),Biglia G.B. (51),"17130218 - C1713_01_151 - (Cags-Cs): GO, Brunetta - Forterresse - Rsx1713_CC1",171302,1713,BR,mil
+17130218,S---S,202,315,Maciotta G. (202),Romano G.B. (315),"17130218 - C1713_01_151 - (Cags-Cs): GO, Brunetta - Forterresse - Rsx1713_CC1",171302,1713,BR,mil
+17130218,S---S,202,316,Maciotta G. (202),Romano T. (316),"17130218 - C1713_01_151 - (Cags-Cs): GO, Brunetta - Forterresse - Rsx1713_CC1",171302,1713,BR,mil
+17130218,S---S,202,51,Maciotta G. (202),Biglia G.B. (51),"17130218 - C1713_01_151 - (Cags-Cs): GO, Brunetta - Forterresse - Rsx1713_CC1",171302,1713,BR,mil
+17130218,S---S,315,316,Romano G.B. (315),Romano T. (316),"17130218 - C1713_01_151 - (Cags-Cs): GO, Brunetta - Forterresse - Rsx1713_CC1",171302,1713,BR,mil
+17130218,S---S,315,51,Romano G.B. (315),Biglia G.B. (51),"17130218 - C1713_01_151 - (Cags-Cs): GO, Brunetta - Forterresse - Rsx1713_CC1",171302,1713,BR,mil
+17130218,S---S,316,51,Romano T. (316),Biglia G.B. (51),"17130218 - C1713_01_151 - (Cags-Cs): GO, Brunetta - Forterresse - Rsx1713_CC1",171302,1713,BR,mil
+17130218,G-->S,279,281,Pistone G.G. (279),Pistone G.S. (281),"17130218 - C1713_01_151 - (Cags-Cs): GO, Brunetta - Forterresse - Rsx1713_CC1",171302,1713,BR,mil
+17130218,G-->S,279,202,Pistone G.G. (279),Maciotta G. (202),"17130218 - C1713_01_151 - (Cags-Cs): GO, Brunetta - Forterresse - Rsx1713_CC1",171302,1713,BR,mil
+17130218,G-->S,279,315,Pistone G.G. (279),Romano G.B. (315),"17130218 - C1713_01_151 - (Cags-Cs): GO, Brunetta - Forterresse - Rsx1713_CC1",171302,1713,BR,mil
+17130218,G-->S,279,316,Pistone G.G. (279),Romano T. (316),"17130218 - C1713_01_151 - (Cags-Cs): GO, Brunetta - Forterresse - Rsx1713_CC1",171302,1713,BR,mil
+17130218,G-->S,279,51,Pistone G.G. (279),Biglia G.B. (51),"17130218 - C1713_01_151 - (Cags-Cs): GO, Brunetta - Forterresse - Rsx1713_CC1",171302,1713,BR,mil
+17130218,G-->S,200,281,Maciotta C. (200),Pistone G.S. (281),"17130218 - C1713_01_151 - (Cags-Cs): GO, Brunetta - Forterresse - Rsx1713_CC1",171302,1713,BR,mil
+17130218,G-->S,200,202,Maciotta C. (200),Maciotta G. (202),"17130218 - C1713_01_151 - (Cags-Cs): GO, Brunetta - Forterresse - Rsx1713_CC1",171302,1713,BR,mil
+17130218,G-->S,200,315,Maciotta C. (200),Romano G.B. (315),"17130218 - C1713_01_151 - (Cags-Cs): GO, Brunetta - Forterresse - Rsx1713_CC1",171302,1713,BR,mil
+17130218,G-->S,200,316,Maciotta C. (200),Romano T. (316),"17130218 - C1713_01_151 - (Cags-Cs): GO, Brunetta - Forterresse - Rsx1713_CC1",171302,1713,BR,mil
+17130218,G-->S,200,51,Maciotta C. (200),Biglia G.B. (51),"17130218 - C1713_01_151 - (Cags-Cs): GO, Brunetta - Forterresse - Rsx1713_CC1",171302,1713,BR,mil
+17130218,G---G,279,200,Pistone G.G. (279),Maciotta C. (200),"17130218 - C1713_01_151 - (Cags-Cs): GO, Brunetta - Forterresse - Rsx1713_CC1",171302,1713,BR,mil
+17130228,S---S,332,331,Sardi P. (332),Sardi G. (331),"17130228 - C1713_01_158 - (Dags-Cs): DIV, Turin - Universit?- Rsx1713_CC3",171302,1713,TO,civ
+17130228,G-->S,291,332,Raschioni B. (291),Sardi P. (332),"17130228 - C1713_01_158 - (Dags-Cs): DIV, Turin - Universit?- Rsx1713_CC3",171302,1713,TO,civ
+17130228,G-->S,291,331,Raschioni B. (291),Sardi G. (331),"17130228 - C1713_01_158 - (Dags-Cs): DIV, Turin - Universit?- Rsx1713_CC3",171302,1713,TO,civ
+17130228,G-->S,123,332,De Mora A. (123),Sardi P. (332),"17130228 - C1713_01_158 - (Dags-Cs): DIV, Turin - Universit?- Rsx1713_CC3",171302,1713,TO,civ
+17130228,G-->S,123,331,De Mora A. (123),Sardi G. (331),"17130228 - C1713_01_158 - (Dags-Cs): DIV, Turin - Universit?- Rsx1713_CC3",171302,1713,TO,civ
+17130228,G---G,291,123,Raschioni B. (291),De Mora A. (123),"17130228 - C1713_01_158 - (Dags-Cs): DIV, Turin - Universit?- Rsx1713_CC3",171302,1713,TO,civ
+17130314,G-->S,390,69,Zo G.B. (390),Borrione C. (69),"17130314 - C1713_01_166 - (Cags-Cs): DIV, Mortara - route - Rsx1713_CC9",171303,1713,MOR,civ
+17130314,G-->S,70,69,Borrione D. (70),Borrione C. (69),"17130314 - C1713_01_166 - (Cags-Cs): DIV, Mortara - route - Rsx1713_CC9",171303,1713,MOR,civ
+17130314,G---G,390,70,Zo G.B. (390),Borrione D. (70),"17130314 - C1713_01_166 - (Cags-Cs): DIV, Mortara - route - Rsx1713_CC9",171303,1713,MOR,civ
+17130316,G-->S,356,39,Tognasco C. (356),Berti G.B. (39),"17130316 - C1713_01_168 - (Dags-Cs): REP, Alessandria - Fortifications - Rsx1713_CC10",171303,1713,AL,mil
+17130316,G-->S,375,39,Vani A. (375),Berti G.B. (39),"17130316 - C1713_01_168 - (Dags-Cs): REP, Alessandria - Fortifications - Rsx1713_CC10",171303,1713,AL,mil
+17130316,G---G,356,375,Tognasco C. (356),Vani A. (375),"17130316 - C1713_01_168 - (Dags-Cs): REP, Alessandria - Fortifications - Rsx1713_CC10",171303,1713,AL,mil
+17130317,G-->S,62,200,Boggio P. (62),Maciotta C. (200),"17130317 - C1713_01_174 - (Cags-Cs): REP, Turin - Citadelle - Rsx1713_CC1",171303,1713,TO,mil
+17130317,G-->S,279,200,Pistone G.G. (279),Maciotta C. (200),"17130317 - C1713_01_174 - (Cags-Cs): REP, Turin - Citadelle - Rsx1713_CC1",171303,1713,TO,mil
+17130317,G---G,62,279,Boggio P. (62),Pistone G.G. (279),"17130317 - C1713_01_174 - (Cags-Cs): REP, Turin - Citadelle - Rsx1713_CC1",171303,1713,TO,mil
+17130321,S---S,108,319,Clerico S. (108),Rondoletto C.M. (319),"17130321 - C1713_01_178 - (Cags-Cs): MO, Turin - Caserne Citadelle - Rsx1713_CC8",171303,1713,TO,mil
+17130321,G-->S,106,108,Clerico G.P. (106),Clerico S. (108),"17130321 - C1713_01_178 - (Cags-Cs): MO, Turin - Caserne Citadelle - Rsx1713_CC8",171303,1713,TO,mil
+17130321,G-->S,106,319,Clerico G.P. (106),Rondoletto C.M. (319),"17130321 - C1713_01_178 - (Cags-Cs): MO, Turin - Caserne Citadelle - Rsx1713_CC8",171303,1713,TO,mil
+17130321,G-->S,326,108,Rosso F.P. (326),Clerico S. (108),"17130321 - C1713_01_178 - (Cags-Cs): MO, Turin - Caserne Citadelle - Rsx1713_CC8",171303,1713,TO,mil
+17130321,G-->S,326,319,Rosso F.P. (326),Rondoletto C.M. (319),"17130321 - C1713_01_178 - (Cags-Cs): MO, Turin - Caserne Citadelle - Rsx1713_CC8",171303,1713,TO,mil
+17130321,G---G,106,326,Clerico G.P. (106),Rosso F.P. (326),"17130321 - C1713_01_178 - (Cags-Cs): MO, Turin - Caserne Citadelle - Rsx1713_CC8",171303,1713,TO,mil
+17130408,G-->S,100,392,Castelli M.F. (100),Zo G.H. (392),"17130408 - C1713_01_181 - (Dags-Cs): MO, Turin - Universit?& Rivolli - Chateau - Rsx1713_CC4",171304,1713,TO_RI,civ
+17130408,G-->S,389,392,Zo C.A. (389),Zo G.H. (392),"17130408 - C1713_01_181 - (Dags-Cs): MO, Turin - Universit?& Rivolli - Chateau - Rsx1713_CC4",171304,1713,TO_RI,civ
+17130408,G---G,100,389,Castelli M.F. (100),Zo C.A. (389),"17130408 - C1713_01_181 - (Dags-Cs): MO, Turin - Universit?& Rivolli - Chateau - Rsx1713_CC4",171304,1713,TO_RI,civ
+17130429,S---S,380,381,Vercelli G.D. (380),Vercelli G.B.C. (381),"17130429 - C1713_01_187 - (Dags-Cs): MO, Venaria reale - Rsx1713_CC2",171304,1713,VEN,civ
+17130429,S---S,380,231,Vercelli G.D. (380),Miretto V. (231),"17130429 - C1713_01_187 - (Dags-Cs): MO, Venaria reale - Rsx1713_CC2",171304,1713,VEN,civ
+17130429,S---S,380,371,Vercelli G.D. (380),Valzo G.L. (371),"17130429 - C1713_01_187 - (Dags-Cs): MO, Venaria reale - Rsx1713_CC2",171304,1713,VEN,civ
+17130429,S---S,381,231,Vercelli G.B.C. (381),Miretto V. (231),"17130429 - C1713_01_187 - (Dags-Cs): MO, Venaria reale - Rsx1713_CC2",171304,1713,VEN,civ
+17130429,S---S,381,371,Vercelli G.B.C. (381),Valzo G.L. (371),"17130429 - C1713_01_187 - (Dags-Cs): MO, Venaria reale - Rsx1713_CC2",171304,1713,VEN,civ
+17130429,S---S,231,371,Miretto V. (231),Valzo G.L. (371),"17130429 - C1713_01_187 - (Dags-Cs): MO, Venaria reale - Rsx1713_CC2",171304,1713,VEN,civ
+17130429,G-->S,149,380,Gaja P. (149),Vercelli G.D. (380),"17130429 - C1713_01_187 - (Dags-Cs): MO, Venaria reale - Rsx1713_CC2",171304,1713,VEN,civ
+17130429,G-->S,149,381,Gaja P. (149),Vercelli G.B.C. (381),"17130429 - C1713_01_187 - (Dags-Cs): MO, Venaria reale - Rsx1713_CC2",171304,1713,VEN,civ
+17130429,G-->S,149,231,Gaja P. (149),Miretto V. (231),"17130429 - C1713_01_187 - (Dags-Cs): MO, Venaria reale - Rsx1713_CC2",171304,1713,VEN,civ
+17130429,G-->S,149,371,Gaja P. (149),Valzo G.L. (371),"17130429 - C1713_01_187 - (Dags-Cs): MO, Venaria reale - Rsx1713_CC2",171304,1713,VEN,civ
+17130429,G-->S,2,380,[Seitto] G. (2),Vercelli G.D. (380),"17130429 - C1713_01_187 - (Dags-Cs): MO, Venaria reale - Rsx1713_CC2",171304,1713,VEN,civ
+17130429,G-->S,2,381,[Seitto] G. (2),Vercelli G.B.C. (381),"17130429 - C1713_01_187 - (Dags-Cs): MO, Venaria reale - Rsx1713_CC2",171304,1713,VEN,civ
+17130429,G-->S,2,231,[Seitto] G. (2),Miretto V. (231),"17130429 - C1713_01_187 - (Dags-Cs): MO, Venaria reale - Rsx1713_CC2",171304,1713,VEN,civ
+17130429,G-->S,2,371,[Seitto] G. (2),Valzo G.L. (371),"17130429 - C1713_01_187 - (Dags-Cs): MO, Venaria reale - Rsx1713_CC2",171304,1713,VEN,civ
+17130429,G---G,149,2,Gaja P. (149),[Seitto] G. (2),"17130429 - C1713_01_187 - (Dags-Cs): MO, Venaria reale - Rsx1713_CC2",171304,1713,VEN,civ
+17130516,S---S,380,381,Vercelli G.D. (380),Vercelli G.B.C. (381),"17130516 - C1713_01_194 - (Dags-Ds): MO, Venaria reale - Rsx1713_CC2",171305,1713,VEN,civ
+17130516,S---S,380,371,Vercelli G.D. (380),Valzo G.L. (371),"17130516 - C1713_01_194 - (Dags-Ds): MO, Venaria reale - Rsx1713_CC2",171305,1713,VEN,civ
+17130516,S---S,380,220,Vercelli G.D. (380),Meietto V.(. (220),"17130516 - C1713_01_194 - (Dags-Ds): MO, Venaria reale - Rsx1713_CC2",171305,1713,VEN,civ
+17130516,S---S,381,371,Vercelli G.B.C. (381),Valzo G.L. (371),"17130516 - C1713_01_194 - (Dags-Ds): MO, Venaria reale - Rsx1713_CC2",171305,1713,VEN,civ
+17130516,S---S,381,220,Vercelli G.B.C. (381),Meietto V.(. (220),"17130516 - C1713_01_194 - (Dags-Ds): MO, Venaria reale - Rsx1713_CC2",171305,1713,VEN,civ
+17130516,S---S,371,220,Valzo G.L. (371),Meietto V.(. (220),"17130516 - C1713_01_194 - (Dags-Ds): MO, Venaria reale - Rsx1713_CC2",171305,1713,VEN,civ
+17130531,S---S,374,218,Vanera M. (374),Mastalone P.F. (218),"17130531 - C1713_01_198 - (Dags-Ds): GO, Turin - Porta Susina - Fortification  - Rsx1713_CC2",171305,1713,TO,mil
+17130531,G-->S,321,374,Rondoletto M. (321),Vanera M. (374),"17130531 - C1713_01_198 - (Dags-Ds): GO, Turin - Porta Susina - Fortification  - Rsx1713_CC2",171305,1713,TO,mil
+17130531,G-->S,321,218,Rondoletto M. (321),Mastalone P.F. (218),"17130531 - C1713_01_198 - (Dags-Ds): GO, Turin - Porta Susina - Fortification  - Rsx1713_CC2",171305,1713,TO,mil
+17130531,G-->S,149,374,Gaja P. (149),Vanera M. (374),"17130531 - C1713_01_198 - (Dags-Ds): GO, Turin - Porta Susina - Fortification  - Rsx1713_CC2",171305,1713,TO,mil
+17130531,G-->S,149,218,Gaja P. (149),Mastalone P.F. (218),"17130531 - C1713_01_198 - (Dags-Ds): GO, Turin - Porta Susina - Fortification  - Rsx1713_CC2",171305,1713,TO,mil
+17130531,G---G,321,149,Rondoletto M. (321),Gaja P. (149),"17130531 - C1713_01_198 - (Dags-Ds): GO, Turin - Porta Susina - Fortification  - Rsx1713_CC2",171305,1713,TO,mil
+17130603,G-->S,96,84,Casasopra L. (96),Candellero G. (84),"17130603 - C1713_01_204 - (Dags-Cs): MO, Venaria reale - Rsx1713_CC5",171306,1713,VEN,civ
+17130603,G-->S,297,84,Richiardo G.F. (297),Candellero G. (84),"17130603 - C1713_01_204 - (Dags-Cs): MO, Venaria reale - Rsx1713_CC5",171306,1713,VEN,civ
+17130603,G---G,96,297,Casasopra L. (96),Richiardo G.F. (297),"17130603 - C1713_01_204 - (Dags-Cs): MO, Venaria reale - Rsx1713_CC5",171306,1713,VEN,civ
+17130603,G-->S,392,389,Zo G.H. (392),Zo C.A. (389),"17130603 - C1713_01_208 - (Dags-Cs): MO, Turin - Chapelle du Saint Linceul - Rsx1713_CC4",171306,1713,TO,rel
+17130603,G-->S,100,389,Castelli M.F. (100),Zo C.A. (389),"17130603 - C1713_01_208 - (Dags-Cs): MO, Turin - Chapelle du Saint Linceul - Rsx1713_CC4",171306,1713,TO,rel
+17130603,G---G,392,100,Zo G.H. (392),Castelli M.F. (100),"17130603 - C1713_01_208 - (Dags-Cs): MO, Turin - Chapelle du Saint Linceul - Rsx1713_CC4",171306,1713,TO,rel
+17130617,S---S,18,242,Darbesio G.B. (18),Oreglia C.G. (242),"17130617 - C1713_01_210 - (Dags-Ds): DIV, Turin - Citadelle - Rsx1713_CC7",171306,1713,TO,mil
+17130617,G-->S,363,18,Tovazzo C. (363),Darbesio G.B. (18),"17130617 - C1713_01_210 - (Dags-Ds): DIV, Turin - Citadelle - Rsx1713_CC7",171306,1713,TO,mil
+17130617,G-->S,363,242,Tovazzo C. (363),Oreglia C.G. (242),"17130617 - C1713_01_210 - (Dags-Ds): DIV, Turin - Citadelle - Rsx1713_CC7",171306,1713,TO,mil
+17130617,G-->S,1,18,[Morinache] C.G. (1),Darbesio G.B. (18),"17130617 - C1713_01_210 - (Dags-Ds): DIV, Turin - Citadelle - Rsx1713_CC7",171306,1713,TO,mil
+17130617,G-->S,1,242,[Morinache] C.G. (1),Oreglia C.G. (242),"17130617 - C1713_01_210 - (Dags-Ds): DIV, Turin - Citadelle - Rsx1713_CC7",171306,1713,TO,mil
+17130617,G---G,363,1,Tovazzo C. (363),[Morinache] C.G. (1),"17130617 - C1713_01_210 - (Dags-Ds): DIV, Turin - Citadelle - Rsx1713_CC7",171306,1713,TO,mil
+17130729,G-->S,392,389,Zo G.H. (392),Zo C.A. (389),"17130729 - C1713_01_216 - (Dags-Cs): MO, Turin - Citadelle - Rsx1713_CC4",171307,1713,TO,mil
+17130729,G-->S,254,389,Pelloli F.A. (254),Zo C.A. (389),"17130729 - C1713_01_216 - (Dags-Cs): MO, Turin - Citadelle - Rsx1713_CC4",171307,1713,TO,mil
+17130729,G---G,392,254,Zo G.H. (392),Pelloli F.A. (254),"17130729 - C1713_01_216 - (Dags-Cs): MO, Turin - Citadelle - Rsx1713_CC4",171307,1713,TO,mil
+17130802,S---S,386,228,Vittino G.F. (386),Menafoglio G. (228),"17130802 - C1713_01_220 - (Dags-Ds): GO, Pinerolo - Arsenal - Rsx1713_CC5",171308,1713,PIN,mil
+17130802,S---S,386,205,Vittino G.F. (386),Maffei C. (205),"17130802 - C1713_01_220 - (Dags-Ds): GO, Pinerolo - Arsenal - Rsx1713_CC5",171308,1713,PIN,mil
+17130802,S---S,386,58,Vittino G.F. (386),Blenio P. (58),"17130802 - C1713_01_220 - (Dags-Ds): GO, Pinerolo - Arsenal - Rsx1713_CC5",171308,1713,PIN,mil
+17130802,S---S,228,205,Menafoglio G. (228),Maffei C. (205),"17130802 - C1713_01_220 - (Dags-Ds): GO, Pinerolo - Arsenal - Rsx1713_CC5",171308,1713,PIN,mil
+17130802,S---S,228,58,Menafoglio G. (228),Blenio P. (58),"17130802 - C1713_01_220 - (Dags-Ds): GO, Pinerolo - Arsenal - Rsx1713_CC5",171308,1713,PIN,mil
+17130802,S---S,205,58,Maffei C. (205),Blenio P. (58),"17130802 - C1713_01_220 - (Dags-Ds): GO, Pinerolo - Arsenal - Rsx1713_CC5",171308,1713,PIN,mil
+17130802,G-->S,96,386,Casasopra L. (96),Vittino G.F. (386),"17130802 - C1713_01_220 - (Dags-Ds): GO, Pinerolo - Arsenal - Rsx1713_CC5",171308,1713,PIN,mil
+17130802,G-->S,96,228,Casasopra L. (96),Menafoglio G. (228),"17130802 - C1713_01_220 - (Dags-Ds): GO, Pinerolo - Arsenal - Rsx1713_CC5",171308,1713,PIN,mil
+17130802,G-->S,96,205,Casasopra L. (96),Maffei C. (205),"17130802 - C1713_01_220 - (Dags-Ds): GO, Pinerolo - Arsenal - Rsx1713_CC5",171308,1713,PIN,mil
+17130802,G-->S,96,58,Casasopra L. (96),Blenio P. (58),"17130802 - C1713_01_220 - (Dags-Ds): GO, Pinerolo - Arsenal - Rsx1713_CC5",171308,1713,PIN,mil
+17130802,G-->S,308,386,Rizzo F.A. (308),Vittino G.F. (386),"17130802 - C1713_01_220 - (Dags-Ds): GO, Pinerolo - Arsenal - Rsx1713_CC5",171308,1713,PIN,mil
+17130802,G-->S,308,228,Rizzo F.A. (308),Menafoglio G. (228),"17130802 - C1713_01_220 - (Dags-Ds): GO, Pinerolo - Arsenal - Rsx1713_CC5",171308,1713,PIN,mil
+17130802,G-->S,308,205,Rizzo F.A. (308),Maffei C. (205),"17130802 - C1713_01_220 - (Dags-Ds): GO, Pinerolo - Arsenal - Rsx1713_CC5",171308,1713,PIN,mil
+17130802,G-->S,308,58,Rizzo F.A. (308),Blenio P. (58),"17130802 - C1713_01_220 - (Dags-Ds): GO, Pinerolo - Arsenal - Rsx1713_CC5",171308,1713,PIN,mil
+17130802,G---G,96,308,Casasopra L. (96),Rizzo F.A. (308),"17130802 - C1713_01_220 - (Dags-Ds): GO, Pinerolo - Arsenal - Rsx1713_CC5",171308,1713,PIN,mil
+17130904,G-->S,194,266,Lanzavecchia G. (194),Pianarosa G. (266),"17130904 - C1713_01_228 - (Dags-Cs): REP, Mondov?- Caserne - Rsx1713_CC1",171309,1713,MON,mil
+17130909,S---S,288,97,Quadrone B. (288),Casella A. (97),"17130909 - C1713_01_235 - (Dags-Ds): MO, Turin - Universit?- Rsx1713_CC3",171309,1713,TO,civ
+17130909,S---S,288,10,Quadrone B. (288),Aprile F. (10),"17130909 - C1713_01_235 - (Dags-Ds): MO, Turin - Universit?- Rsx1713_CC3",171309,1713,TO,civ
+17130909,S---S,97,10,Casella A. (97),Aprile F. (10),"17130909 - C1713_01_235 - (Dags-Ds): MO, Turin - Universit?- Rsx1713_CC3",171309,1713,TO,civ
+17130909,G-->S,38,288,Berta G. (38),Quadrone B. (288),"17130909 - C1713_01_235 - (Dags-Ds): MO, Turin - Universit?- Rsx1713_CC3",171309,1713,TO,civ
+17130909,G-->S,38,97,Berta G. (38),Casella A. (97),"17130909 - C1713_01_235 - (Dags-Ds): MO, Turin - Universit?- Rsx1713_CC3",171309,1713,TO,civ
+17130909,G-->S,38,10,Berta G. (38),Aprile F. (10),"17130909 - C1713_01_235 - (Dags-Ds): MO, Turin - Universit?- Rsx1713_CC3",171309,1713,TO,civ
+17130909,G-->S,27,288,Bello P. (27),Quadrone B. (288),"17130909 - C1713_01_235 - (Dags-Ds): MO, Turin - Universit?- Rsx1713_CC3",171309,1713,TO,civ
+17130909,G-->S,27,97,Bello P. (27),Casella A. (97),"17130909 - C1713_01_235 - (Dags-Ds): MO, Turin - Universit?- Rsx1713_CC3",171309,1713,TO,civ
+17130909,G-->S,27,10,Bello P. (27),Aprile F. (10),"17130909 - C1713_01_235 - (Dags-Ds): MO, Turin - Universit?- Rsx1713_CC3",171309,1713,TO,civ
+17130909,G---G,38,27,Berta G. (38),Bello P. (27),"17130909 - C1713_01_235 - (Dags-Ds): MO, Turin - Universit?- Rsx1713_CC3",171309,1713,TO,civ
+17130920,S---S,223,266,Menafoglio A. (223),Pianarosa G. (266),"17130920 - C1713_01_241 - (Cags-Cs): GO, Valenza - Fortifications - Rsx1713_CC1",171309,1713,VAL,mil
+17130920,S---S,223,275,Menafoglio A. (223),Pinchetti D. (275),"17130920 - C1713_01_241 - (Cags-Cs): GO, Valenza - Fortifications - Rsx1713_CC1",171309,1713,VAL,mil
+17130920,S---S,223,302,Menafoglio A. (223),Righino P.A. (302),"17130920 - C1713_01_241 - (Cags-Cs): GO, Valenza - Fortifications - Rsx1713_CC1",171309,1713,VAL,mil
+17130920,S---S,223,111,Menafoglio A. (223),Constanzo B. (111),"17130920 - C1713_01_241 - (Cags-Cs): GO, Valenza - Fortifications - Rsx1713_CC1",171309,1713,VAL,mil
+17130920,S---S,266,275,Pianarosa G. (266),Pinchetti D. (275),"17130920 - C1713_01_241 - (Cags-Cs): GO, Valenza - Fortifications - Rsx1713_CC1",171309,1713,VAL,mil
+17130920,S---S,266,302,Pianarosa G. (266),Righino P.A. (302),"17130920 - C1713_01_241 - (Cags-Cs): GO, Valenza - Fortifications - Rsx1713_CC1",171309,1713,VAL,mil
+17130920,S---S,266,111,Pianarosa G. (266),Constanzo B. (111),"17130920 - C1713_01_241 - (Cags-Cs): GO, Valenza - Fortifications - Rsx1713_CC1",171309,1713,VAL,mil
+17130920,S---S,275,302,Pinchetti D. (275),Righino P.A. (302),"17130920 - C1713_01_241 - (Cags-Cs): GO, Valenza - Fortifications - Rsx1713_CC1",171309,1713,VAL,mil
+17130920,S---S,275,111,Pinchetti D. (275),Constanzo B. (111),"17130920 - C1713_01_241 - (Cags-Cs): GO, Valenza - Fortifications - Rsx1713_CC1",171309,1713,VAL,mil
+17130920,S---S,302,111,Righino P.A. (302),Constanzo B. (111),"17130920 - C1713_01_241 - (Cags-Cs): GO, Valenza - Fortifications - Rsx1713_CC1",171309,1713,VAL,mil
+17130920,G-->S,153,223,Galimberti G.M. (153),Menafoglio A. (223),"17130920 - C1713_01_241 - (Cags-Cs): GO, Valenza - Fortifications - Rsx1713_CC1",171309,1713,VAL,mil
+17130920,G-->S,153,266,Galimberti G.M. (153),Pianarosa G. (266),"17130920 - C1713_01_241 - (Cags-Cs): GO, Valenza - Fortifications - Rsx1713_CC1",171309,1713,VAL,mil
+17130920,G-->S,153,275,Galimberti G.M. (153),Pinchetti D. (275),"17130920 - C1713_01_241 - (Cags-Cs): GO, Valenza - Fortifications - Rsx1713_CC1",171309,1713,VAL,mil
+17130920,G-->S,153,302,Galimberti G.M. (153),Righino P.A. (302),"17130920 - C1713_01_241 - (Cags-Cs): GO, Valenza - Fortifications - Rsx1713_CC1",171309,1713,VAL,mil
+17130920,G-->S,153,111,Galimberti G.M. (153),Constanzo B. (111),"17130920 - C1713_01_241 - (Cags-Cs): GO, Valenza - Fortifications - Rsx1713_CC1",171309,1713,VAL,mil
+17130920,G-->S,227,223,Menafoglio F.A. (227),Menafoglio A. (223),"17130920 - C1713_01_241 - (Cags-Cs): GO, Valenza - Fortifications - Rsx1713_CC1",171309,1713,VAL,mil
+17130920,G-->S,227,266,Menafoglio F.A. (227),Pianarosa G. (266),"17130920 - C1713_01_241 - (Cags-Cs): GO, Valenza - Fortifications - Rsx1713_CC1",171309,1713,VAL,mil
+17130920,G-->S,227,275,Menafoglio F.A. (227),Pinchetti D. (275),"17130920 - C1713_01_241 - (Cags-Cs): GO, Valenza - Fortifications - Rsx1713_CC1",171309,1713,VAL,mil
+17130920,G-->S,227,302,Menafoglio F.A. (227),Righino P.A. (302),"17130920 - C1713_01_241 - (Cags-Cs): GO, Valenza - Fortifications - Rsx1713_CC1",171309,1713,VAL,mil
+17130920,G-->S,227,111,Menafoglio F.A. (227),Constanzo B. (111),"17130920 - C1713_01_241 - (Cags-Cs): GO, Valenza - Fortifications - Rsx1713_CC1",171309,1713,VAL,mil
+17130920,G---G,153,227,Galimberti G.M. (153),Menafoglio F.A. (227),"17130920 - C1713_01_241 - (Cags-Cs): GO, Valenza - Fortifications - Rsx1713_CC1",171309,1713,VAL,mil
+17131002,S---S,223,276,Menafoglio A. (223),Pinchetti P. (276),"17131002 - C1713_01_248 - (Cags-Cs): GO, Casale - Chateau - Rsx1713_CC1",171310,1713,CA,mil
+17131002,S---S,223,302,Menafoglio A. (223),Righino P.A. (302),"17131002 - C1713_01_248 - (Cags-Cs): GO, Casale - Chateau - Rsx1713_CC1",171310,1713,CA,mil
+17131002,S---S,223,266,Menafoglio A. (223),Pianarosa G. (266),"17131002 - C1713_01_248 - (Cags-Cs): GO, Casale - Chateau - Rsx1713_CC1",171310,1713,CA,mil
+17131002,S---S,276,302,Pinchetti P. (276),Righino P.A. (302),"17131002 - C1713_01_248 - (Cags-Cs): GO, Casale - Chateau - Rsx1713_CC1",171310,1713,CA,mil
+17131002,S---S,276,266,Pinchetti P. (276),Pianarosa G. (266),"17131002 - C1713_01_248 - (Cags-Cs): GO, Casale - Chateau - Rsx1713_CC1",171310,1713,CA,mil
+17131002,S---S,302,266,Righino P.A. (302),Pianarosa G. (266),"17131002 - C1713_01_248 - (Cags-Cs): GO, Casale - Chateau - Rsx1713_CC1",171310,1713,CA,mil
+17131002,G-->S,357,223,Tognasco C. (357),Menafoglio A. (223),"17131002 - C1713_01_248 - (Cags-Cs): GO, Casale - Chateau - Rsx1713_CC1",171310,1713,CA,mil
+17131002,G-->S,357,276,Tognasco C. (357),Pinchetti P. (276),"17131002 - C1713_01_248 - (Cags-Cs): GO, Casale - Chateau - Rsx1713_CC1",171310,1713,CA,mil
+17131002,G-->S,357,302,Tognasco C. (357),Righino P.A. (302),"17131002 - C1713_01_248 - (Cags-Cs): GO, Casale - Chateau - Rsx1713_CC1",171310,1713,CA,mil
+17131002,G-->S,357,266,Tognasco C. (357),Pianarosa G. (266),"17131002 - C1713_01_248 - (Cags-Cs): GO, Casale - Chateau - Rsx1713_CC1",171310,1713,CA,mil
+17131002,G-->S,292,223,Rechettino A. (292),Menafoglio A. (223),"17131002 - C1713_01_248 - (Cags-Cs): GO, Casale - Chateau - Rsx1713_CC1",171310,1713,CA,mil
+17131002,G-->S,292,276,Rechettino A. (292),Pinchetti P. (276),"17131002 - C1713_01_248 - (Cags-Cs): GO, Casale - Chateau - Rsx1713_CC1",171310,1713,CA,mil
+17131002,G-->S,292,302,Rechettino A. (292),Righino P.A. (302),"17131002 - C1713_01_248 - (Cags-Cs): GO, Casale - Chateau - Rsx1713_CC1",171310,1713,CA,mil
+17131002,G-->S,292,266,Rechettino A. (292),Pianarosa G. (266),"17131002 - C1713_01_248 - (Cags-Cs): GO, Casale - Chateau - Rsx1713_CC1",171310,1713,CA,mil
+17131002,G---G,357,292,Tognasco C. (357),Rechettino A. (292),"17131002 - C1713_01_248 - (Cags-Cs): GO, Casale - Chateau - Rsx1713_CC1",171310,1713,CA,mil
+17131111,S---S,374,341,Vanera M. (374),Sereno G. (341),"17131111 - C1713_01_252 - (Dags-Cs): DIV, Brunetta - Forterresse - Rsx1713_CC2",171311,1713,BR,mil
+17131111,S---S,374,36,Vanera M. (374),Bellotto L. (36),"17131111 - C1713_01_252 - (Dags-Cs): DIV, Brunetta - Forterresse - Rsx1713_CC2",171311,1713,BR,mil
+17131111,S---S,374,294,Vanera M. (374),Remo M. (294),"17131111 - C1713_01_252 - (Dags-Cs): DIV, Brunetta - Forterresse - Rsx1713_CC2",171311,1713,BR,mil
+17131111,S---S,341,36,Sereno G. (341),Bellotto L. (36),"17131111 - C1713_01_252 - (Dags-Cs): DIV, Brunetta - Forterresse - Rsx1713_CC2",171311,1713,BR,mil
+17131111,S---S,341,294,Sereno G. (341),Remo M. (294),"17131111 - C1713_01_252 - (Dags-Cs): DIV, Brunetta - Forterresse - Rsx1713_CC2",171311,1713,BR,mil
+17131111,S---S,36,294,Bellotto L. (36),Remo M. (294),"17131111 - C1713_01_252 - (Dags-Cs): DIV, Brunetta - Forterresse - Rsx1713_CC2",171311,1713,BR,mil
+17131111,G-->S,304,374,Rippelli F. (304),Vanera M. (374),"17131111 - C1713_01_252 - (Dags-Cs): DIV, Brunetta - Forterresse - Rsx1713_CC2",171311,1713,BR,mil
+17131111,G-->S,304,341,Rippelli F. (304),Sereno G. (341),"17131111 - C1713_01_252 - (Dags-Cs): DIV, Brunetta - Forterresse - Rsx1713_CC2",171311,1713,BR,mil
+17131111,G-->S,304,36,Rippelli F. (304),Bellotto L. (36),"17131111 - C1713_01_252 - (Dags-Cs): DIV, Brunetta - Forterresse - Rsx1713_CC2",171311,1713,BR,mil
+17131111,G-->S,304,294,Rippelli F. (304),Remo M. (294),"17131111 - C1713_01_252 - (Dags-Cs): DIV, Brunetta - Forterresse - Rsx1713_CC2",171311,1713,BR,mil
+17131111,G-->S,342,374,Sereno M. (342),Vanera M. (374),"17131111 - C1713_01_252 - (Dags-Cs): DIV, Brunetta - Forterresse - Rsx1713_CC2",171311,1713,BR,mil
+17131111,G-->S,342,341,Sereno M. (342),Sereno G. (341),"17131111 - C1713_01_252 - (Dags-Cs): DIV, Brunetta - Forterresse - Rsx1713_CC2",171311,1713,BR,mil
+17131111,G-->S,342,36,Sereno M. (342),Bellotto L. (36),"17131111 - C1713_01_252 - (Dags-Cs): DIV, Brunetta - Forterresse - Rsx1713_CC2",171311,1713,BR,mil
+17131111,G-->S,342,294,Sereno M. (342),Remo M. (294),"17131111 - C1713_01_252 - (Dags-Cs): DIV, Brunetta - Forterresse - Rsx1713_CC2",171311,1713,BR,mil
+17131111,G---G,304,342,Rippelli F. (304),Sereno M. (342),"17131111 - C1713_01_252 - (Dags-Cs): DIV, Brunetta - Forterresse - Rsx1713_CC2",171311,1713,BR,mil
+17131117,S---S,202,315,Maciotta G. (202),Romano G.B. (315),"17131117 - C1713_01_256 - (Dags-Cs): GO, Brunetta - Forterresse - Rsx1713_CC1",171311,1713,BR,mil
+17131117,S---S,202,200,Maciotta G. (202),Maciotta C. (200),"17131117 - C1713_01_256 - (Dags-Cs): GO, Brunetta - Forterresse - Rsx1713_CC1",171311,1713,BR,mil
+17131117,S---S,315,200,Romano G.B. (315),Maciotta C. (200),"17131117 - C1713_01_256 - (Dags-Cs): GO, Brunetta - Forterresse - Rsx1713_CC1",171311,1713,BR,mil
+17131117,G-->S,153,202,Galimberti G.M. (153),Maciotta G. (202),"17131117 - C1713_01_256 - (Dags-Cs): GO, Brunetta - Forterresse - Rsx1713_CC1",171311,1713,BR,mil
+17131117,G-->S,153,315,Galimberti G.M. (153),Romano G.B. (315),"17131117 - C1713_01_256 - (Dags-Cs): GO, Brunetta - Forterresse - Rsx1713_CC1",171311,1713,BR,mil
+17131117,G-->S,153,200,Galimberti G.M. (153),Maciotta C. (200),"17131117 - C1713_01_256 - (Dags-Cs): GO, Brunetta - Forterresse - Rsx1713_CC1",171311,1713,BR,mil
+17131117,G-->S,223,202,Menafoglio A. (223),Maciotta G. (202),"17131117 - C1713_01_256 - (Dags-Cs): GO, Brunetta - Forterresse - Rsx1713_CC1",171311,1713,BR,mil
+17131117,G-->S,223,315,Menafoglio A. (223),Romano G.B. (315),"17131117 - C1713_01_256 - (Dags-Cs): GO, Brunetta - Forterresse - Rsx1713_CC1",171311,1713,BR,mil
+17131117,G-->S,223,200,Menafoglio A. (223),Maciotta C. (200),"17131117 - C1713_01_256 - (Dags-Cs): GO, Brunetta - Forterresse - Rsx1713_CC1",171311,1713,BR,mil
+17131117,G---G,153,223,Galimberti G.M. (153),Menafoglio A. (223),"17131117 - C1713_01_256 - (Dags-Cs): GO, Brunetta - Forterresse - Rsx1713_CC1",171311,1713,BR,mil
+17131205,S---S,193,192,Langier S. (193),Langier G.V. (192),"17131205 - C1713_01_264 - (Cags-Cs): GO, Turin - Universit?- Rsx1713_CC6",171312,1713,TO,civ
+17131205,G-->S,325,193,Rossi G.B. (325),Langier S. (193),"17131205 - C1713_01_264 - (Cags-Cs): GO, Turin - Universit?- Rsx1713_CC6",171312,1713,TO,civ
+17131205,G-->S,325,192,Rossi G.B. (325),Langier G.V. (192),"17131205 - C1713_01_264 - (Cags-Cs): GO, Turin - Universit?- Rsx1713_CC6",171312,1713,TO,civ
+17131205,G-->S,86,193,Cantone D. (86),Langier S. (193),"17131205 - C1713_01_264 - (Cags-Cs): GO, Turin - Universit?- Rsx1713_CC6",171312,1713,TO,civ
+17131205,G-->S,86,192,Cantone D. (86),Langier G.V. (192),"17131205 - C1713_01_264 - (Cags-Cs): GO, Turin - Universit?- Rsx1713_CC6",171312,1713,TO,civ
+17131205,G---G,325,86,Rossi G.B. (325),Cantone D. (86),"17131205 - C1713_01_264 - (Cags-Cs): GO, Turin - Universit?- Rsx1713_CC6",171312,1713,TO,civ
+17131211,G-->S,94,369,Casanova A. (94),Ugliengo C.M. (369),"17131211 - C1713_01_271 - (Dags-Cs): MO, Rivolli - Chateau - Rsx1713_CC4",171312,1713,RI,civ
+17131211,G-->S,389,369,Zo C.A. (389),Ugliengo C.M. (369),"17131211 - C1713_01_271 - (Dags-Cs): MO, Rivolli - Chateau - Rsx1713_CC4",171312,1713,RI,civ
+17131211,G---G,94,389,Casanova A. (94),Zo C.A. (389),"17131211 - C1713_01_271 - (Dags-Cs): MO, Rivolli - Chateau - Rsx1713_CC4",171312,1713,RI,civ
+17131223,S---S,169,7,Giani G. (169),Andicola G. (7),"17131223 - C1713_01_277 - (Dags-Ds): MO, Rivolli - Chateau - Rsx1713_CC1",171312,1713,RI,civ
+17131223,G-->S,272,169,Piazzollo F. (272),Giani G. (169),"17131223 - C1713_01_277 - (Dags-Ds): MO, Rivolli - Chateau - Rsx1713_CC1",171312,1713,RI,civ
+17131223,G-->S,272,7,Piazzollo F. (272),Andicola G. (7),"17131223 - C1713_01_277 - (Dags-Ds): MO, Rivolli - Chateau - Rsx1713_CC1",171312,1713,RI,civ
+17131223,G-->S,161,169,Gambone P.G. (161),Giani G. (169),"17131223 - C1713_01_277 - (Dags-Ds): MO, Rivolli - Chateau - Rsx1713_CC1",171312,1713,RI,civ
+17131223,G-->S,161,7,Gambone P.G. (161),Andicola G. (7),"17131223 - C1713_01_277 - (Dags-Ds): MO, Rivolli - Chateau - Rsx1713_CC1",171312,1713,RI,civ
+17131223,G---G,272,161,Piazzollo F. (272),Gambone P.G. (161),"17131223 - C1713_01_277 - (Dags-Ds): MO, Rivolli - Chateau - Rsx1713_CC1",171312,1713,RI,civ
+17140104,S---S,392,100,Zo G.H. (392),Castelli M.F. (100),"17140104 - C1714_02_001 - (Dags-Ds): MO, Rivolli - Chateau - ",171401,1714,RI,civ
+17140104,G-->S,390,392,Zo G.B. (390),Zo G.H. (392),"17140104 - C1714_02_001 - (Dags-Ds): MO, Rivolli - Chateau - ",171401,1714,RI,civ
+17140104,G-->S,390,100,Zo G.B. (390),Castelli M.F. (100),"17140104 - C1714_02_001 - (Dags-Ds): MO, Rivolli - Chateau - ",171401,1714,RI,civ
+17140104,A-->S,329,392,Sali?P. (329),Zo G.H. (392),"17140104 - C1714_02_001 - (Dags-Ds): MO, Rivolli - Chateau - ",171401,1714,RI,civ
+17140104,A-->S,329,100,Sali?P. (329),Castelli M.F. (100),"17140104 - C1714_02_001 - (Dags-Ds): MO, Rivolli - Chateau - ",171401,1714,RI,civ
+17140104,A-->G,329,390,Sali?P. (329),Zo G.B. (390),"17140104 - C1714_02_001 - (Dags-Ds): MO, Rivolli - Chateau - ",171401,1714,RI,civ
+17140131,S---S,223,302,Menafoglio A. (223),Righino P.A. (302),"17140131 - C1714_02_007 - (Cags-Cs): GO, Brunetta - Forterresse - ",171401,1714,BR,mil
+17140131,S---S,223,275,Menafoglio A. (223),Pinchetti D. (275),"17140131 - C1714_02_007 - (Cags-Cs): GO, Brunetta - Forterresse - ",171401,1714,BR,mil
+17140131,S---S,223,283,Menafoglio A. (223),Pistone G.A. (283),"17140131 - C1714_02_007 - (Cags-Cs): GO, Brunetta - Forterresse - ",171401,1714,BR,mil
+17140131,S---S,302,275,Righino P.A. (302),Pinchetti D. (275),"17140131 - C1714_02_007 - (Cags-Cs): GO, Brunetta - Forterresse - ",171401,1714,BR,mil
+17140131,S---S,302,283,Righino P.A. (302),Pistone G.A. (283),"17140131 - C1714_02_007 - (Cags-Cs): GO, Brunetta - Forterresse - ",171401,1714,BR,mil
+17140131,S---S,275,283,Pinchetti D. (275),Pistone G.A. (283),"17140131 - C1714_02_007 - (Cags-Cs): GO, Brunetta - Forterresse - ",171401,1714,BR,mil
+17140131,G-->S,226,223,Menafoglio C.A. (226),Menafoglio A. (223),"17140131 - C1714_02_007 - (Cags-Cs): GO, Brunetta - Forterresse - ",171401,1714,BR,mil
+17140131,G-->S,226,302,Menafoglio C.A. (226),Righino P.A. (302),"17140131 - C1714_02_007 - (Cags-Cs): GO, Brunetta - Forterresse - ",171401,1714,BR,mil
+17140131,G-->S,226,275,Menafoglio C.A. (226),Pinchetti D. (275),"17140131 - C1714_02_007 - (Cags-Cs): GO, Brunetta - Forterresse - ",171401,1714,BR,mil
+17140131,G-->S,226,283,Menafoglio C.A. (226),Pistone G.A. (283),"17140131 - C1714_02_007 - (Cags-Cs): GO, Brunetta - Forterresse - ",171401,1714,BR,mil
+17140131,A-->S,266,223,Pianarosa G. (266),Menafoglio A. (223),"17140131 - C1714_02_007 - (Cags-Cs): GO, Brunetta - Forterresse - ",171401,1714,BR,mil
+17140131,A-->S,266,302,Pianarosa G. (266),Righino P.A. (302),"17140131 - C1714_02_007 - (Cags-Cs): GO, Brunetta - Forterresse - ",171401,1714,BR,mil
+17140131,A-->S,266,275,Pianarosa G. (266),Pinchetti D. (275),"17140131 - C1714_02_007 - (Cags-Cs): GO, Brunetta - Forterresse - ",171401,1714,BR,mil
+17140131,A-->S,266,283,Pianarosa G. (266),Pistone G.A. (283),"17140131 - C1714_02_007 - (Cags-Cs): GO, Brunetta - Forterresse - ",171401,1714,BR,mil
+17140131,A-->G,266,226,Pianarosa G. (266),Menafoglio C.A. (226),"17140131 - C1714_02_007 - (Cags-Cs): GO, Brunetta - Forterresse - ",171401,1714,BR,mil
+17140226,S---S,374,341,Vanera M. (374),Sereno G. (341),"17140226 - C1714_02_013 - (Dags-Ds): GO, Brunetta - Forterresse - ",171402,1714,BR,mil
+17140226,S---S,374,342,Vanera M. (374),Sereno M. (342),"17140226 - C1714_02_013 - (Dags-Ds): GO, Brunetta - Forterresse - ",171402,1714,BR,mil
+17140226,S---S,374,372,Vanera M. (374),Vanera G. (372),"17140226 - C1714_02_013 - (Dags-Ds): GO, Brunetta - Forterresse - ",171402,1714,BR,mil
+17140226,S---S,374,373,Vanera M. (374),Vanera G. (373),"17140226 - C1714_02_013 - (Dags-Ds): GO, Brunetta - Forterresse - ",171402,1714,BR,mil
+17140226,S---S,341,342,Sereno G. (341),Sereno M. (342),"17140226 - C1714_02_013 - (Dags-Ds): GO, Brunetta - Forterresse - ",171402,1714,BR,mil
+17140226,S---S,341,372,Sereno G. (341),Vanera G. (372),"17140226 - C1714_02_013 - (Dags-Ds): GO, Brunetta - Forterresse - ",171402,1714,BR,mil
+17140226,S---S,341,373,Sereno G. (341),Vanera G. (373),"17140226 - C1714_02_013 - (Dags-Ds): GO, Brunetta - Forterresse - ",171402,1714,BR,mil
+17140226,S---S,342,372,Sereno M. (342),Vanera G. (372),"17140226 - C1714_02_013 - (Dags-Ds): GO, Brunetta - Forterresse - ",171402,1714,BR,mil
+17140226,S---S,342,373,Sereno M. (342),Vanera G. (373),"17140226 - C1714_02_013 - (Dags-Ds): GO, Brunetta - Forterresse - ",171402,1714,BR,mil
+17140226,S---S,372,373,Vanera G. (372),Vanera G. (373),"17140226 - C1714_02_013 - (Dags-Ds): GO, Brunetta - Forterresse - ",171402,1714,BR,mil
+17140226,G-->S,199,374,Machiolo G.G. (199),Vanera M. (374),"17140226 - C1714_02_013 - (Dags-Ds): GO, Brunetta - Forterresse - ",171402,1714,BR,mil
+17140226,G-->S,199,341,Machiolo G.G. (199),Sereno G. (341),"17140226 - C1714_02_013 - (Dags-Ds): GO, Brunetta - Forterresse - ",171402,1714,BR,mil
+17140226,G-->S,199,342,Machiolo G.G. (199),Sereno M. (342),"17140226 - C1714_02_013 - (Dags-Ds): GO, Brunetta - Forterresse - ",171402,1714,BR,mil
+17140226,G-->S,199,372,Machiolo G.G. (199),Vanera G. (372),"17140226 - C1714_02_013 - (Dags-Ds): GO, Brunetta - Forterresse - ",171402,1714,BR,mil
+17140226,G-->S,199,373,Machiolo G.G. (199),Vanera G. (373),"17140226 - C1714_02_013 - (Dags-Ds): GO, Brunetta - Forterresse - ",171402,1714,BR,mil
+17140226,A-->S,198,374,Machiolo G. (198),Vanera M. (374),"17140226 - C1714_02_013 - (Dags-Ds): GO, Brunetta - Forterresse - ",171402,1714,BR,mil
+17140226,A-->S,198,341,Machiolo G. (198),Sereno G. (341),"17140226 - C1714_02_013 - (Dags-Ds): GO, Brunetta - Forterresse - ",171402,1714,BR,mil
+17140226,A-->S,198,342,Machiolo G. (198),Sereno M. (342),"17140226 - C1714_02_013 - (Dags-Ds): GO, Brunetta - Forterresse - ",171402,1714,BR,mil
+17140226,A-->S,198,372,Machiolo G. (198),Vanera G. (372),"17140226 - C1714_02_013 - (Dags-Ds): GO, Brunetta - Forterresse - ",171402,1714,BR,mil
+17140226,A-->S,198,373,Machiolo G. (198),Vanera G. (373),"17140226 - C1714_02_013 - (Dags-Ds): GO, Brunetta - Forterresse - ",171402,1714,BR,mil
+17140226,A-->G,198,199,Machiolo G. (198),Machiolo G.G. (199),"17140226 - C1714_02_013 - (Dags-Ds): GO, Brunetta - Forterresse - ",171402,1714,BR,mil
+17140311,S---S,226,223,Menafoglio C.A. (226),Menafoglio A. (223),"17140311 - C1714_02_019 - (Cags-Cs): GO, Mortara - Fortifications - ",171403,1714,MOR,mil
+17140311,S---S,226,275,Menafoglio C.A. (226),Pinchetti D. (275),"17140311 - C1714_02_019 - (Cags-Cs): GO, Mortara - Fortifications - ",171403,1714,MOR,mil
+17140311,S---S,226,266,Menafoglio C.A. (226),Pianarosa G. (266),"17140311 - C1714_02_019 - (Cags-Cs): GO, Mortara - Fortifications - ",171403,1714,MOR,mil
+17140311,S---S,226,302,Menafoglio C.A. (226),Righino P.A. (302),"17140311 - C1714_02_019 - (Cags-Cs): GO, Mortara - Fortifications - ",171403,1714,MOR,mil
+17140311,S---S,226,187,Menafoglio C.A. (226),Groppi C. (187),"17140311 - C1714_02_019 - (Cags-Cs): GO, Mortara - Fortifications - ",171403,1714,MOR,mil
+17140311,S---S,226,111,Menafoglio C.A. (226),Constanzo B. (111),"17140311 - C1714_02_019 - (Cags-Cs): GO, Mortara - Fortifications - ",171403,1714,MOR,mil
+17140311,S---S,223,275,Menafoglio A. (223),Pinchetti D. (275),"17140311 - C1714_02_019 - (Cags-Cs): GO, Mortara - Fortifications - ",171403,1714,MOR,mil
+17140311,S---S,223,266,Menafoglio A. (223),Pianarosa G. (266),"17140311 - C1714_02_019 - (Cags-Cs): GO, Mortara - Fortifications - ",171403,1714,MOR,mil
+17140311,S---S,223,302,Menafoglio A. (223),Righino P.A. (302),"17140311 - C1714_02_019 - (Cags-Cs): GO, Mortara - Fortifications - ",171403,1714,MOR,mil
+17140311,S---S,223,187,Menafoglio A. (223),Groppi C. (187),"17140311 - C1714_02_019 - (Cags-Cs): GO, Mortara - Fortifications - ",171403,1714,MOR,mil
+17140311,S---S,223,111,Menafoglio A. (223),Constanzo B. (111),"17140311 - C1714_02_019 - (Cags-Cs): GO, Mortara - Fortifications - ",171403,1714,MOR,mil
+17140311,S---S,275,266,Pinchetti D. (275),Pianarosa G. (266),"17140311 - C1714_02_019 - (Cags-Cs): GO, Mortara - Fortifications - ",171403,1714,MOR,mil
+17140311,S---S,275,302,Pinchetti D. (275),Righino P.A. (302),"17140311 - C1714_02_019 - (Cags-Cs): GO, Mortara - Fortifications - ",171403,1714,MOR,mil
+17140311,S---S,275,187,Pinchetti D. (275),Groppi C. (187),"17140311 - C1714_02_019 - (Cags-Cs): GO, Mortara - Fortifications - ",171403,1714,MOR,mil
+17140311,S---S,275,111,Pinchetti D. (275),Constanzo B. (111),"17140311 - C1714_02_019 - (Cags-Cs): GO, Mortara - Fortifications - ",171403,1714,MOR,mil
+17140311,S---S,266,302,Pianarosa G. (266),Righino P.A. (302),"17140311 - C1714_02_019 - (Cags-Cs): GO, Mortara - Fortifications - ",171403,1714,MOR,mil
+17140311,S---S,266,187,Pianarosa G. (266),Groppi C. (187),"17140311 - C1714_02_019 - (Cags-Cs): GO, Mortara - Fortifications - ",171403,1714,MOR,mil
+17140311,S---S,266,111,Pianarosa G. (266),Constanzo B. (111),"17140311 - C1714_02_019 - (Cags-Cs): GO, Mortara - Fortifications - ",171403,1714,MOR,mil
+17140311,S---S,302,187,Righino P.A. (302),Groppi C. (187),"17140311 - C1714_02_019 - (Cags-Cs): GO, Mortara - Fortifications - ",171403,1714,MOR,mil
+17140311,S---S,302,111,Righino P.A. (302),Constanzo B. (111),"17140311 - C1714_02_019 - (Cags-Cs): GO, Mortara - Fortifications - ",171403,1714,MOR,mil
+17140311,S---S,187,111,Groppi C. (187),Constanzo B. (111),"17140311 - C1714_02_019 - (Cags-Cs): GO, Mortara - Fortifications - ",171403,1714,MOR,mil
+17140311,G-->S,299,226,Righino G. (299),Menafoglio C.A. (226),"17140311 - C1714_02_019 - (Cags-Cs): GO, Mortara - Fortifications - ",171403,1714,MOR,mil
+17140311,G-->S,299,223,Righino G. (299),Menafoglio A. (223),"17140311 - C1714_02_019 - (Cags-Cs): GO, Mortara - Fortifications - ",171403,1714,MOR,mil
+17140311,G-->S,299,275,Righino G. (299),Pinchetti D. (275),"17140311 - C1714_02_019 - (Cags-Cs): GO, Mortara - Fortifications - ",171403,1714,MOR,mil
+17140311,G-->S,299,266,Righino G. (299),Pianarosa G. (266),"17140311 - C1714_02_019 - (Cags-Cs): GO, Mortara - Fortifications - ",171403,1714,MOR,mil
+17140311,G-->S,299,302,Righino G. (299),Righino P.A. (302),"17140311 - C1714_02_019 - (Cags-Cs): GO, Mortara - Fortifications - ",171403,1714,MOR,mil
+17140311,G-->S,299,187,Righino G. (299),Groppi C. (187),"17140311 - C1714_02_019 - (Cags-Cs): GO, Mortara - Fortifications - ",171403,1714,MOR,mil
+17140311,G-->S,299,111,Righino G. (299),Constanzo B. (111),"17140311 - C1714_02_019 - (Cags-Cs): GO, Mortara - Fortifications - ",171403,1714,MOR,mil
+17140311,A-->S,377,226,Vanone A.M. (377),Menafoglio C.A. (226),"17140311 - C1714_02_019 - (Cags-Cs): GO, Mortara - Fortifications - ",171403,1714,MOR,mil
+17140311,A-->S,377,223,Vanone A.M. (377),Menafoglio A. (223),"17140311 - C1714_02_019 - (Cags-Cs): GO, Mortara - Fortifications - ",171403,1714,MOR,mil
+17140311,A-->S,377,275,Vanone A.M. (377),Pinchetti D. (275),"17140311 - C1714_02_019 - (Cags-Cs): GO, Mortara - Fortifications - ",171403,1714,MOR,mil
+17140311,A-->S,377,266,Vanone A.M. (377),Pianarosa G. (266),"17140311 - C1714_02_019 - (Cags-Cs): GO, Mortara - Fortifications - ",171403,1714,MOR,mil
+17140311,A-->S,377,302,Vanone A.M. (377),Righino P.A. (302),"17140311 - C1714_02_019 - (Cags-Cs): GO, Mortara - Fortifications - ",171403,1714,MOR,mil
+17140311,A-->S,377,187,Vanone A.M. (377),Groppi C. (187),"17140311 - C1714_02_019 - (Cags-Cs): GO, Mortara - Fortifications - ",171403,1714,MOR,mil
+17140311,A-->S,377,111,Vanone A.M. (377),Constanzo B. (111),"17140311 - C1714_02_019 - (Cags-Cs): GO, Mortara - Fortifications - ",171403,1714,MOR,mil
+17140311,A-->G,377,299,Vanone A.M. (377),Righino G. (299),"17140311 - C1714_02_019 - (Cags-Cs): GO, Mortara - Fortifications - ",171403,1714,MOR,mil
+17140312,S---S,375,210,Vani A. (375),Magnano G.B. (210),"17140312 - C1714_02_027 - (Dags-Cs): GO, Brunetta - Forterresse - ",171403,1714,BR,mil
+17140312,S---S,375,320,Vani A. (375),Rondoletto G.M. (320),"17140312 - C1714_02_027 - (Dags-Cs): GO, Brunetta - Forterresse - ",171403,1714,BR,mil
+17140312,S---S,375,12,Vani A. (375),Arduino G. (12),"17140312 - C1714_02_027 - (Dags-Cs): GO, Brunetta - Forterresse - ",171403,1714,BR,mil
+17140312,S---S,375,361,Vani A. (375),Toscanello F. (361),"17140312 - C1714_02_027 - (Dags-Cs): GO, Brunetta - Forterresse - ",171403,1714,BR,mil
+17140312,S---S,210,320,Magnano G.B. (210),Rondoletto G.M. (320),"17140312 - C1714_02_027 - (Dags-Cs): GO, Brunetta - Forterresse - ",171403,1714,BR,mil
+17140312,S---S,210,12,Magnano G.B. (210),Arduino G. (12),"17140312 - C1714_02_027 - (Dags-Cs): GO, Brunetta - Forterresse - ",171403,1714,BR,mil
+17140312,S---S,210,361,Magnano G.B. (210),Toscanello F. (361),"17140312 - C1714_02_027 - (Dags-Cs): GO, Brunetta - Forterresse - ",171403,1714,BR,mil
+17140312,S---S,320,12,Rondoletto G.M. (320),Arduino G. (12),"17140312 - C1714_02_027 - (Dags-Cs): GO, Brunetta - Forterresse - ",171403,1714,BR,mil
+17140312,S---S,320,361,Rondoletto G.M. (320),Toscanello F. (361),"17140312 - C1714_02_027 - (Dags-Cs): GO, Brunetta - Forterresse - ",171403,1714,BR,mil
+17140312,S---S,12,361,Arduino G. (12),Toscanello F. (361),"17140312 - C1714_02_027 - (Dags-Cs): GO, Brunetta - Forterresse - ",171403,1714,BR,mil
+17140312,G-->S,186,375,Griva G.A. (186),Vani A. (375),"17140312 - C1714_02_027 - (Dags-Cs): GO, Brunetta - Forterresse - ",171403,1714,BR,mil
+17140312,G-->S,186,210,Griva G.A. (186),Magnano G.B. (210),"17140312 - C1714_02_027 - (Dags-Cs): GO, Brunetta - Forterresse - ",171403,1714,BR,mil
+17140312,G-->S,186,320,Griva G.A. (186),Rondoletto G.M. (320),"17140312 - C1714_02_027 - (Dags-Cs): GO, Brunetta - Forterresse - ",171403,1714,BR,mil
+17140312,G-->S,186,12,Griva G.A. (186),Arduino G. (12),"17140312 - C1714_02_027 - (Dags-Cs): GO, Brunetta - Forterresse - ",171403,1714,BR,mil
+17140312,G-->S,186,361,Griva G.A. (186),Toscanello F. (361),"17140312 - C1714_02_027 - (Dags-Cs): GO, Brunetta - Forterresse - ",171403,1714,BR,mil
+17140312,A-->S,114,375,Corte G. (114),Vani A. (375),"17140312 - C1714_02_027 - (Dags-Cs): GO, Brunetta - Forterresse - ",171403,1714,BR,mil
+17140312,A-->S,114,210,Corte G. (114),Magnano G.B. (210),"17140312 - C1714_02_027 - (Dags-Cs): GO, Brunetta - Forterresse - ",171403,1714,BR,mil
+17140312,A-->S,114,320,Corte G. (114),Rondoletto G.M. (320),"17140312 - C1714_02_027 - (Dags-Cs): GO, Brunetta - Forterresse - ",171403,1714,BR,mil
+17140312,A-->S,114,12,Corte G. (114),Arduino G. (12),"17140312 - C1714_02_027 - (Dags-Cs): GO, Brunetta - Forterresse - ",171403,1714,BR,mil
+17140312,A-->S,114,361,Corte G. (114),Toscanello F. (361),"17140312 - C1714_02_027 - (Dags-Cs): GO, Brunetta - Forterresse - ",171403,1714,BR,mil
+17140312,A-->G,114,186,Corte G. (114),Griva G.A. (186),"17140312 - C1714_02_027 - (Dags-Cs): GO, Brunetta - Forterresse - ",171403,1714,BR,mil
+17140313,S---S,4,175,Abbondiolo P. (4),Gillonio G.P. (175),"17140313 - C1714_02_031 - (Dags-Ds): GO, Mortara - Fortifications - ",171403,1714,MOR,mil
+17140313,G-->S,272,4,Piazzollo F. (272),Abbondiolo P. (4),"17140313 - C1714_02_031 - (Dags-Ds): GO, Mortara - Fortifications - ",171403,1714,MOR,mil
+17140313,G-->S,272,175,Piazzollo F. (272),Gillonio G.P. (175),"17140313 - C1714_02_031 - (Dags-Ds): GO, Mortara - Fortifications - ",171403,1714,MOR,mil
+17140313,A-->S,27,4,Bello P. (27),Abbondiolo P. (4),"17140313 - C1714_02_031 - (Dags-Ds): GO, Mortara - Fortifications - ",171403,1714,MOR,mil
+17140313,A-->S,27,175,Bello P. (27),Gillonio G.P. (175),"17140313 - C1714_02_031 - (Dags-Ds): GO, Mortara - Fortifications - ",171403,1714,MOR,mil
+17140313,A-->G,27,272,Bello P. (27),Piazzollo F. (272),"17140313 - C1714_02_031 - (Dags-Ds): GO, Mortara - Fortifications - ",171403,1714,MOR,mil
+17140409,S---S,153,223,Galimberti G.M. (153),Menafoglio A. (223),"17140409 - C1714_02_037 - (Cags-Cs): GO, Mortara - Fortifications - ",171404,1714,MOR,mil
+17140409,G-->S,227,153,Menafoglio F.A. (227),Galimberti G.M. (153),"17140409 - C1714_02_037 - (Cags-Cs): GO, Mortara - Fortifications - ",171404,1714,MOR,mil
+17140409,G-->S,227,223,Menafoglio F.A. (227),Menafoglio A. (223),"17140409 - C1714_02_037 - (Cags-Cs): GO, Mortara - Fortifications - ",171404,1714,MOR,mil
+17140409,A-->S,377,153,Vanone A.M. (377),Galimberti G.M. (153),"17140409 - C1714_02_037 - (Cags-Cs): GO, Mortara - Fortifications - ",171404,1714,MOR,mil
+17140409,A-->S,377,223,Vanone A.M. (377),Menafoglio A. (223),"17140409 - C1714_02_037 - (Cags-Cs): GO, Mortara - Fortifications - ",171404,1714,MOR,mil
+17140409,A-->G,377,227,Vanone A.M. (377),Menafoglio F.A. (227),"17140409 - C1714_02_037 - (Cags-Cs): GO, Mortara - Fortifications - ",171404,1714,MOR,mil
+17140412,S---S,318,108,Rondoletto C.M. (318),Clerico S. (108),"17140412 - C1714_02_039 - (Cags-Cs): GO, Chivasso - Fortifications - ",171404,1714,CH,mil
+17140412,G-->S,106,318,Clerico G.P. (106),Rondoletto C.M. (318),"17140412 - C1714_02_039 - (Cags-Cs): GO, Chivasso - Fortifications - ",171404,1714,CH,mil
+17140412,G-->S,106,108,Clerico G.P. (106),Clerico S. (108),"17140412 - C1714_02_039 - (Cags-Cs): GO, Chivasso - Fortifications - ",171404,1714,CH,mil
+17140412,A-->S,238,318,Mosso G. (238),Rondoletto C.M. (318),"17140412 - C1714_02_039 - (Cags-Cs): GO, Chivasso - Fortifications - ",171404,1714,CH,mil
+17140412,A-->S,238,108,Mosso G. (238),Clerico S. (108),"17140412 - C1714_02_039 - (Cags-Cs): GO, Chivasso - Fortifications - ",171404,1714,CH,mil
+17140412,A-->G,238,106,Mosso G. (238),Clerico G.P. (106),"17140412 - C1714_02_039 - (Cags-Cs): GO, Chivasso - Fortifications - ",171404,1714,CH,mil
+17140423,S---S,349,158,Somazzo F. (349),Gallo G.G. (158),"17140423 - C1714_02_042 - (Dags-Ds): MO, Rivolli - Chateau - ",171404,1714,RI,civ
+17140423,S---S,349,49,Somazzo F. (349),Bianchi G. (49),"17140423 - C1714_02_042 - (Dags-Ds): MO, Rivolli - Chateau - ",171404,1714,RI,civ
+17140423,S---S,158,49,Gallo G.G. (158),Bianchi G. (49),"17140423 - C1714_02_042 - (Dags-Ds): MO, Rivolli - Chateau - ",171404,1714,RI,civ
+17140414,G-->S,319,108,Rondoletto C.M. (319),Clerico S. (108),"17140414 - C1714_02_046 - (Cags-Cs): GO, Casale - Fortifications - ",171404,1714,CA,mil
+17140414,A-->S,238,108,Mosso G. (238),Clerico S. (108),"17140414 - C1714_02_046 - (Cags-Cs): GO, Casale - Fortifications - ",171404,1714,CA,mil
+17140414,A-->G,238,319,Mosso G. (238),Rondoletto C.M. (319),"17140414 - C1714_02_046 - (Cags-Cs): GO, Casale - Fortifications - ",171404,1714,CA,mil
+17140414,S---S,223,111,Menafoglio A. (223),Constanzo B. (111),"17140414 - C1714_02_048 - (Cags-Ds): GO, Alessandria - Fortifications - ",171404,1714,AL,mil
+17140414,G-->S,153,223,Galimberti G.M. (153),Menafoglio A. (223),"17140414 - C1714_02_048 - (Cags-Ds): GO, Alessandria - Fortifications - ",171404,1714,AL,mil
+17140414,G-->S,153,111,Galimberti G.M. (153),Constanzo B. (111),"17140414 - C1714_02_048 - (Cags-Ds): GO, Alessandria - Fortifications - ",171404,1714,AL,mil
+17140414,A-->S,377,223,Vanone A.M. (377),Menafoglio A. (223),"17140414 - C1714_02_048 - (Cags-Ds): GO, Alessandria - Fortifications - ",171404,1714,AL,mil
+17140414,A-->S,377,111,Vanone A.M. (377),Constanzo B. (111),"17140414 - C1714_02_048 - (Cags-Ds): GO, Alessandria - Fortifications - ",171404,1714,AL,mil
+17140414,A-->G,377,153,Vanone A.M. (377),Galimberti G.M. (153),"17140414 - C1714_02_048 - (Cags-Ds): GO, Alessandria - Fortifications - ",171404,1714,AL,mil
+17140414,S---S,175,4,Gillonio G.P. (175),Abbondiolo P. (4),"17140414 - C1714_02_053 - (Dags-Ds): GO, Alessandria - Fortifications - ",171404,1714,AL,mil
+17140414,S---S,175,26,Gillonio G.P. (175),Bello L. (26),"17140414 - C1714_02_053 - (Dags-Ds): GO, Alessandria - Fortifications - ",171404,1714,AL,mil
+17140414,S---S,4,26,Abbondiolo P. (4),Bello L. (26),"17140414 - C1714_02_053 - (Dags-Ds): GO, Alessandria - Fortifications - ",171404,1714,AL,mil
+17140414,G-->S,272,175,Piazzollo F. (272),Gillonio G.P. (175),"17140414 - C1714_02_053 - (Dags-Ds): GO, Alessandria - Fortifications - ",171404,1714,AL,mil
+17140414,G-->S,272,4,Piazzollo F. (272),Abbondiolo P. (4),"17140414 - C1714_02_053 - (Dags-Ds): GO, Alessandria - Fortifications - ",171404,1714,AL,mil
+17140414,G-->S,272,26,Piazzollo F. (272),Bello L. (26),"17140414 - C1714_02_053 - (Dags-Ds): GO, Alessandria - Fortifications - ",171404,1714,AL,mil
+17140414,A-->S,109,175,Coda G. (109),Gillonio G.P. (175),"17140414 - C1714_02_053 - (Dags-Ds): GO, Alessandria - Fortifications - ",171404,1714,AL,mil
+17140414,A-->S,109,4,Coda G. (109),Abbondiolo P. (4),"17140414 - C1714_02_053 - (Dags-Ds): GO, Alessandria - Fortifications - ",171404,1714,AL,mil
+17140414,A-->S,109,26,Coda G. (109),Bello L. (26),"17140414 - C1714_02_053 - (Dags-Ds): GO, Alessandria - Fortifications - ",171404,1714,AL,mil
+17140414,A-->G,109,272,Coda G. (109),Piazzollo F. (272),"17140414 - C1714_02_053 - (Dags-Ds): GO, Alessandria - Fortifications - ",171404,1714,AL,mil
+17140508,S---S,347,345,Solari G.B. (347),Solari C. (345),"17140508 - C1714_02_059 - (Dags-Cs): MO, Turin - Universit?- ",171405,1714,TO,civ
+17140508,S---S,347,346,Solari G.B. (347),Solari G. (346),"17140508 - C1714_02_059 - (Dags-Cs): MO, Turin - Universit?- ",171405,1714,TO,civ
+17140508,S---S,347,219,Solari G.B. (347),Mazzoni C.G. (219),"17140508 - C1714_02_059 - (Dags-Cs): MO, Turin - Universit?- ",171405,1714,TO,civ
+17140508,S---S,345,346,Solari C. (345),Solari G. (346),"17140508 - C1714_02_059 - (Dags-Cs): MO, Turin - Universit?- ",171405,1714,TO,civ
+17140508,S---S,345,219,Solari C. (345),Mazzoni C.G. (219),"17140508 - C1714_02_059 - (Dags-Cs): MO, Turin - Universit?- ",171405,1714,TO,civ
+17140508,S---S,346,219,Solari G. (346),Mazzoni C.G. (219),"17140508 - C1714_02_059 - (Dags-Cs): MO, Turin - Universit?- ",171405,1714,TO,civ
+17140508,G-->S,351,347,Succi G.B. (351),Solari G.B. (347),"17140508 - C1714_02_059 - (Dags-Cs): MO, Turin - Universit?- ",171405,1714,TO,civ
+17140508,G-->S,351,345,Succi G.B. (351),Solari C. (345),"17140508 - C1714_02_059 - (Dags-Cs): MO, Turin - Universit?- ",171405,1714,TO,civ
+17140508,G-->S,351,346,Succi G.B. (351),Solari G. (346),"17140508 - C1714_02_059 - (Dags-Cs): MO, Turin - Universit?- ",171405,1714,TO,civ
+17140508,G-->S,351,219,Succi G.B. (351),Mazzoni C.G. (219),"17140508 - C1714_02_059 - (Dags-Cs): MO, Turin - Universit?- ",171405,1714,TO,civ
+17140508,A-->S,179,347,Giudici F.M. (179),Solari G.B. (347),"17140508 - C1714_02_059 - (Dags-Cs): MO, Turin - Universit?- ",171405,1714,TO,civ
+17140508,A-->S,179,345,Giudici F.M. (179),Solari C. (345),"17140508 - C1714_02_059 - (Dags-Cs): MO, Turin - Universit?- ",171405,1714,TO,civ
+17140508,A-->S,179,346,Giudici F.M. (179),Solari G. (346),"17140508 - C1714_02_059 - (Dags-Cs): MO, Turin - Universit?- ",171405,1714,TO,civ
+17140508,A-->S,179,219,Giudici F.M. (179),Mazzoni C.G. (219),"17140508 - C1714_02_059 - (Dags-Cs): MO, Turin - Universit?- ",171405,1714,TO,civ
+17140508,A-->G,179,351,Giudici F.M. (179),Succi G.B. (351),"17140508 - C1714_02_059 - (Dags-Cs): MO, Turin - Universit?- ",171405,1714,TO,civ
+17140515,S---S,223,226,Menafoglio A. (223),Menafoglio C.A. (226),"17140515 - C1714_02_073 - (Dags-Ds): GO, Verrua & Chivasso - Fortifications - ",171405,1714,VER_CH,mil
+17140515,S---S,223,275,Menafoglio A. (223),Pinchetti D. (275),"17140515 - C1714_02_073 - (Dags-Ds): GO, Verrua & Chivasso - Fortifications - ",171405,1714,VER_CH,mil
+17140515,S---S,223,187,Menafoglio A. (223),Groppi C. (187),"17140515 - C1714_02_073 - (Dags-Ds): GO, Verrua & Chivasso - Fortifications - ",171405,1714,VER_CH,mil
+17140515,S---S,223,202,Menafoglio A. (223),Maciotta G. (202),"17140515 - C1714_02_073 - (Dags-Ds): GO, Verrua & Chivasso - Fortifications - ",171405,1714,VER_CH,mil
+17140515,S---S,223,62,Menafoglio A. (223),Boggio P. (62),"17140515 - C1714_02_073 - (Dags-Ds): GO, Verrua & Chivasso - Fortifications - ",171405,1714,VER_CH,mil
+17140515,S---S,223,316,Menafoglio A. (223),Romano T. (316),"17140515 - C1714_02_073 - (Dags-Ds): GO, Verrua & Chivasso - Fortifications - ",171405,1714,VER_CH,mil
+17140515,S---S,226,275,Menafoglio C.A. (226),Pinchetti D. (275),"17140515 - C1714_02_073 - (Dags-Ds): GO, Verrua & Chivasso - Fortifications - ",171405,1714,VER_CH,mil
+17140515,S---S,226,187,Menafoglio C.A. (226),Groppi C. (187),"17140515 - C1714_02_073 - (Dags-Ds): GO, Verrua & Chivasso - Fortifications - ",171405,1714,VER_CH,mil
+17140515,S---S,226,202,Menafoglio C.A. (226),Maciotta G. (202),"17140515 - C1714_02_073 - (Dags-Ds): GO, Verrua & Chivasso - Fortifications - ",171405,1714,VER_CH,mil
+17140515,S---S,226,62,Menafoglio C.A. (226),Boggio P. (62),"17140515 - C1714_02_073 - (Dags-Ds): GO, Verrua & Chivasso - Fortifications - ",171405,1714,VER_CH,mil
+17140515,S---S,226,316,Menafoglio C.A. (226),Romano T. (316),"17140515 - C1714_02_073 - (Dags-Ds): GO, Verrua & Chivasso - Fortifications - ",171405,1714,VER_CH,mil
+17140515,S---S,275,187,Pinchetti D. (275),Groppi C. (187),"17140515 - C1714_02_073 - (Dags-Ds): GO, Verrua & Chivasso - Fortifications - ",171405,1714,VER_CH,mil
+17140515,S---S,275,202,Pinchetti D. (275),Maciotta G. (202),"17140515 - C1714_02_073 - (Dags-Ds): GO, Verrua & Chivasso - Fortifications - ",171405,1714,VER_CH,mil
+17140515,S---S,275,62,Pinchetti D. (275),Boggio P. (62),"17140515 - C1714_02_073 - (Dags-Ds): GO, Verrua & Chivasso - Fortifications - ",171405,1714,VER_CH,mil
+17140515,S---S,275,316,Pinchetti D. (275),Romano T. (316),"17140515 - C1714_02_073 - (Dags-Ds): GO, Verrua & Chivasso - Fortifications - ",171405,1714,VER_CH,mil
+17140515,S---S,187,202,Groppi C. (187),Maciotta G. (202),"17140515 - C1714_02_073 - (Dags-Ds): GO, Verrua & Chivasso - Fortifications - ",171405,1714,VER_CH,mil
+17140515,S---S,187,62,Groppi C. (187),Boggio P. (62),"17140515 - C1714_02_073 - (Dags-Ds): GO, Verrua & Chivasso - Fortifications - ",171405,1714,VER_CH,mil
+17140515,S---S,187,316,Groppi C. (187),Romano T. (316),"17140515 - C1714_02_073 - (Dags-Ds): GO, Verrua & Chivasso - Fortifications - ",171405,1714,VER_CH,mil
+17140515,S---S,202,62,Maciotta G. (202),Boggio P. (62),"17140515 - C1714_02_073 - (Dags-Ds): GO, Verrua & Chivasso - Fortifications - ",171405,1714,VER_CH,mil
+17140515,S---S,202,316,Maciotta G. (202),Romano T. (316),"17140515 - C1714_02_073 - (Dags-Ds): GO, Verrua & Chivasso - Fortifications - ",171405,1714,VER_CH,mil
+17140515,S---S,62,316,Boggio P. (62),Romano T. (316),"17140515 - C1714_02_073 - (Dags-Ds): GO, Verrua & Chivasso - Fortifications - ",171405,1714,VER_CH,mil
+17140515,G-->S,153,223,Galimberti G.M. (153),Menafoglio A. (223),"17140515 - C1714_02_073 - (Dags-Ds): GO, Verrua & Chivasso - Fortifications - ",171405,1714,VER_CH,mil
+17140515,G-->S,153,226,Galimberti G.M. (153),Menafoglio C.A. (226),"17140515 - C1714_02_073 - (Dags-Ds): GO, Verrua & Chivasso - Fortifications - ",171405,1714,VER_CH,mil
+17140515,G-->S,153,275,Galimberti G.M. (153),Pinchetti D. (275),"17140515 - C1714_02_073 - (Dags-Ds): GO, Verrua & Chivasso - Fortifications - ",171405,1714,VER_CH,mil
+17140515,G-->S,153,187,Galimberti G.M. (153),Groppi C. (187),"17140515 - C1714_02_073 - (Dags-Ds): GO, Verrua & Chivasso - Fortifications - ",171405,1714,VER_CH,mil
+17140515,G-->S,153,202,Galimberti G.M. (153),Maciotta G. (202),"17140515 - C1714_02_073 - (Dags-Ds): GO, Verrua & Chivasso - Fortifications - ",171405,1714,VER_CH,mil
+17140515,G-->S,153,62,Galimberti G.M. (153),Boggio P. (62),"17140515 - C1714_02_073 - (Dags-Ds): GO, Verrua & Chivasso - Fortifications - ",171405,1714,VER_CH,mil
+17140515,G-->S,153,316,Galimberti G.M. (153),Romano T. (316),"17140515 - C1714_02_073 - (Dags-Ds): GO, Verrua & Chivasso - Fortifications - ",171405,1714,VER_CH,mil
+17140515,A-->S,78,223,Caligaris A. (78),Menafoglio A. (223),"17140515 - C1714_02_073 - (Dags-Ds): GO, Verrua & Chivasso - Fortifications - ",171405,1714,VER_CH,mil
+17140515,A-->S,78,226,Caligaris A. (78),Menafoglio C.A. (226),"17140515 - C1714_02_073 - (Dags-Ds): GO, Verrua & Chivasso - Fortifications - ",171405,1714,VER_CH,mil
+17140515,A-->S,78,275,Caligaris A. (78),Pinchetti D. (275),"17140515 - C1714_02_073 - (Dags-Ds): GO, Verrua & Chivasso - Fortifications - ",171405,1714,VER_CH,mil
+17140515,A-->S,78,187,Caligaris A. (78),Groppi C. (187),"17140515 - C1714_02_073 - (Dags-Ds): GO, Verrua & Chivasso - Fortifications - ",171405,1714,VER_CH,mil
+17140515,A-->S,78,202,Caligaris A. (78),Maciotta G. (202),"17140515 - C1714_02_073 - (Dags-Ds): GO, Verrua & Chivasso - Fortifications - ",171405,1714,VER_CH,mil
+17140515,A-->S,78,62,Caligaris A. (78),Boggio P. (62),"17140515 - C1714_02_073 - (Dags-Ds): GO, Verrua & Chivasso - Fortifications - ",171405,1714,VER_CH,mil
+17140515,A-->S,78,316,Caligaris A. (78),Romano T. (316),"17140515 - C1714_02_073 - (Dags-Ds): GO, Verrua & Chivasso - Fortifications - ",171405,1714,VER_CH,mil
+17140515,A-->G,78,153,Caligaris A. (78),Galimberti G.M. (153),"17140515 - C1714_02_073 - (Dags-Ds): GO, Verrua & Chivasso - Fortifications - ",171405,1714,VER_CH,mil
+17140528,G-->S,4,177,Abbondiolo P. (4),Gillonio P. (177),"17140528 - C1714_02_079 - (Dags-Cs): GO, Turin - Universit?- ",171405,1714,TO,civ
+17140528,A-->S,109,177,Coda G. (109),Gillonio P. (177),"17140528 - C1714_02_079 - (Dags-Cs): GO, Turin - Universit?- ",171405,1714,TO,civ
+17140528,A-->G,109,4,Coda G. (109),Abbondiolo P. (4),"17140528 - C1714_02_079 - (Dags-Cs): GO, Turin - Universit?- ",171405,1714,TO,civ
+17140706,S---S,281,374,Pistone G.S. (281),Vanera M. (374),"17140706 - C1714_02_083 - (Dags-Ds): GO, Fenestrelle - Forterresse - ",171407,1714,FE,mil
+17140706,S---S,281,373,Pistone G.S. (281),Vanera G. (373),"17140706 - C1714_02_083 - (Dags-Ds): GO, Fenestrelle - Forterresse - ",171407,1714,FE,mil
+17140706,S---S,281,283,Pistone G.S. (281),Pistone G.A. (283),"17140706 - C1714_02_083 - (Dags-Ds): GO, Fenestrelle - Forterresse - ",171407,1714,FE,mil
+17140706,S---S,281,342,Pistone G.S. (281),Sereno M. (342),"17140706 - C1714_02_083 - (Dags-Ds): GO, Fenestrelle - Forterresse - ",171407,1714,FE,mil
+17140706,S---S,281,258,Pistone G.S. (281),Peraldo P. (258),"17140706 - C1714_02_083 - (Dags-Ds): GO, Fenestrelle - Forterresse - ",171407,1714,FE,mil
+17140706,S---S,374,373,Vanera M. (374),Vanera G. (373),"17140706 - C1714_02_083 - (Dags-Ds): GO, Fenestrelle - Forterresse - ",171407,1714,FE,mil
+17140706,S---S,374,283,Vanera M. (374),Pistone G.A. (283),"17140706 - C1714_02_083 - (Dags-Ds): GO, Fenestrelle - Forterresse - ",171407,1714,FE,mil
+17140706,S---S,374,342,Vanera M. (374),Sereno M. (342),"17140706 - C1714_02_083 - (Dags-Ds): GO, Fenestrelle - Forterresse - ",171407,1714,FE,mil
+17140706,S---S,374,258,Vanera M. (374),Peraldo P. (258),"17140706 - C1714_02_083 - (Dags-Ds): GO, Fenestrelle - Forterresse - ",171407,1714,FE,mil
+17140706,S---S,373,283,Vanera G. (373),Pistone G.A. (283),"17140706 - C1714_02_083 - (Dags-Ds): GO, Fenestrelle - Forterresse - ",171407,1714,FE,mil
+17140706,S---S,373,342,Vanera G. (373),Sereno M. (342),"17140706 - C1714_02_083 - (Dags-Ds): GO, Fenestrelle - Forterresse - ",171407,1714,FE,mil
+17140706,S---S,373,258,Vanera G. (373),Peraldo P. (258),"17140706 - C1714_02_083 - (Dags-Ds): GO, Fenestrelle - Forterresse - ",171407,1714,FE,mil
+17140706,S---S,283,342,Pistone G.A. (283),Sereno M. (342),"17140706 - C1714_02_083 - (Dags-Ds): GO, Fenestrelle - Forterresse - ",171407,1714,FE,mil
+17140706,S---S,283,258,Pistone G.A. (283),Peraldo P. (258),"17140706 - C1714_02_083 - (Dags-Ds): GO, Fenestrelle - Forterresse - ",171407,1714,FE,mil
+17140706,S---S,342,258,Sereno M. (342),Peraldo P. (258),"17140706 - C1714_02_083 - (Dags-Ds): GO, Fenestrelle - Forterresse - ",171407,1714,FE,mil
+17140706,G-->S,278,281,Pistone C. (278),Pistone G.S. (281),"17140706 - C1714_02_083 - (Dags-Ds): GO, Fenestrelle - Forterresse - ",171407,1714,FE,mil
+17140706,G-->S,278,374,Pistone C. (278),Vanera M. (374),"17140706 - C1714_02_083 - (Dags-Ds): GO, Fenestrelle - Forterresse - ",171407,1714,FE,mil
+17140706,G-->S,278,373,Pistone C. (278),Vanera G. (373),"17140706 - C1714_02_083 - (Dags-Ds): GO, Fenestrelle - Forterresse - ",171407,1714,FE,mil
+17140706,G-->S,278,283,Pistone C. (278),Pistone G.A. (283),"17140706 - C1714_02_083 - (Dags-Ds): GO, Fenestrelle - Forterresse - ",171407,1714,FE,mil
+17140706,G-->S,278,342,Pistone C. (278),Sereno M. (342),"17140706 - C1714_02_083 - (Dags-Ds): GO, Fenestrelle - Forterresse - ",171407,1714,FE,mil
+17140706,G-->S,278,258,Pistone C. (278),Peraldo P. (258),"17140706 - C1714_02_083 - (Dags-Ds): GO, Fenestrelle - Forterresse - ",171407,1714,FE,mil
+17140706,A-->S,392,281,Zo G.H. (392),Pistone G.S. (281),"17140706 - C1714_02_083 - (Dags-Ds): GO, Fenestrelle - Forterresse - ",171407,1714,FE,mil
+17140706,A-->S,392,374,Zo G.H. (392),Vanera M. (374),"17140706 - C1714_02_083 - (Dags-Ds): GO, Fenestrelle - Forterresse - ",171407,1714,FE,mil
+17140706,A-->S,392,373,Zo G.H. (392),Vanera G. (373),"17140706 - C1714_02_083 - (Dags-Ds): GO, Fenestrelle - Forterresse - ",171407,1714,FE,mil
+17140706,A-->S,392,283,Zo G.H. (392),Pistone G.A. (283),"17140706 - C1714_02_083 - (Dags-Ds): GO, Fenestrelle - Forterresse - ",171407,1714,FE,mil
+17140706,A-->S,392,342,Zo G.H. (392),Sereno M. (342),"17140706 - C1714_02_083 - (Dags-Ds): GO, Fenestrelle - Forterresse - ",171407,1714,FE,mil
+17140706,A-->S,392,258,Zo G.H. (392),Peraldo P. (258),"17140706 - C1714_02_083 - (Dags-Ds): GO, Fenestrelle - Forterresse - ",171407,1714,FE,mil
+17140706,A-->G,392,278,Zo G.H. (392),Pistone C. (278),"17140706 - C1714_02_083 - (Dags-Ds): GO, Fenestrelle - Forterresse - ",171407,1714,FE,mil
+17140714,S---S,288,10,Quadrone B. (288),Aprile F. (10),"17140714 - C1714_02_088 - (Dags-Ds): MO, Turin - Universit?- ",171407,1714,TO,civ
+17140714,S---S,288,97,Quadrone B. (288),Casella A. (97),"17140714 - C1714_02_088 - (Dags-Ds): MO, Turin - Universit?- ",171407,1714,TO,civ
+17140714,S---S,10,97,Aprile F. (10),Casella A. (97),"17140714 - C1714_02_088 - (Dags-Ds): MO, Turin - Universit?- ",171407,1714,TO,civ
+17140802,S---S,347,348,Solari G.B. (347),Solari M. (348),"17140802 - C1714_02_090 - (Dags-Cs): MO, Turin - Universit?- ",171408,1714,TO,civ
+17140802,S---S,347,345,Solari G.B. (347),Solari C. (345),"17140802 - C1714_02_090 - (Dags-Cs): MO, Turin - Universit?- ",171408,1714,TO,civ
+17140802,S---S,347,346,Solari G.B. (347),Solari G. (346),"17140802 - C1714_02_090 - (Dags-Cs): MO, Turin - Universit?- ",171408,1714,TO,civ
+17140802,S---S,347,219,Solari G.B. (347),Mazzoni C.G. (219),"17140802 - C1714_02_090 - (Dags-Cs): MO, Turin - Universit?- ",171408,1714,TO,civ
+17140802,S---S,348,345,Solari M. (348),Solari C. (345),"17140802 - C1714_02_090 - (Dags-Cs): MO, Turin - Universit?- ",171408,1714,TO,civ
+17140802,S---S,348,346,Solari M. (348),Solari G. (346),"17140802 - C1714_02_090 - (Dags-Cs): MO, Turin - Universit?- ",171408,1714,TO,civ
+17140802,S---S,348,219,Solari M. (348),Mazzoni C.G. (219),"17140802 - C1714_02_090 - (Dags-Cs): MO, Turin - Universit?- ",171408,1714,TO,civ
+17140802,S---S,345,346,Solari C. (345),Solari G. (346),"17140802 - C1714_02_090 - (Dags-Cs): MO, Turin - Universit?- ",171408,1714,TO,civ
+17140802,S---S,345,219,Solari C. (345),Mazzoni C.G. (219),"17140802 - C1714_02_090 - (Dags-Cs): MO, Turin - Universit?- ",171408,1714,TO,civ
+17140802,S---S,346,219,Solari G. (346),Mazzoni C.G. (219),"17140802 - C1714_02_090 - (Dags-Cs): MO, Turin - Universit?- ",171408,1714,TO,civ
+17140802,G-->S,351,347,Succi G.B. (351),Solari G.B. (347),"17140802 - C1714_02_090 - (Dags-Cs): MO, Turin - Universit?- ",171408,1714,TO,civ
+17140802,G-->S,351,348,Succi G.B. (351),Solari M. (348),"17140802 - C1714_02_090 - (Dags-Cs): MO, Turin - Universit?- ",171408,1714,TO,civ
+17140802,G-->S,351,345,Succi G.B. (351),Solari C. (345),"17140802 - C1714_02_090 - (Dags-Cs): MO, Turin - Universit?- ",171408,1714,TO,civ
+17140802,G-->S,351,346,Succi G.B. (351),Solari G. (346),"17140802 - C1714_02_090 - (Dags-Cs): MO, Turin - Universit?- ",171408,1714,TO,civ
+17140802,G-->S,351,219,Succi G.B. (351),Mazzoni C.G. (219),"17140802 - C1714_02_090 - (Dags-Cs): MO, Turin - Universit?- ",171408,1714,TO,civ
+17140802,A-->S,10,347,Aprile F. (10),Solari G.B. (347),"17140802 - C1714_02_090 - (Dags-Cs): MO, Turin - Universit?- ",171408,1714,TO,civ
+17140802,A-->S,10,348,Aprile F. (10),Solari M. (348),"17140802 - C1714_02_090 - (Dags-Cs): MO, Turin - Universit?- ",171408,1714,TO,civ
+17140802,A-->S,10,345,Aprile F. (10),Solari C. (345),"17140802 - C1714_02_090 - (Dags-Cs): MO, Turin - Universit?- ",171408,1714,TO,civ
+17140802,A-->S,10,346,Aprile F. (10),Solari G. (346),"17140802 - C1714_02_090 - (Dags-Cs): MO, Turin - Universit?- ",171408,1714,TO,civ
+17140802,A-->S,10,219,Aprile F. (10),Mazzoni C.G. (219),"17140802 - C1714_02_090 - (Dags-Cs): MO, Turin - Universit?- ",171408,1714,TO,civ
+17140802,A-->G,10,351,Aprile F. (10),Succi G.B. (351),"17140802 - C1714_02_090 - (Dags-Cs): MO, Turin - Universit?- ",171408,1714,TO,civ
+17140807,S---S,281,374,Pistone G.S. (281),Vanera M. (374),"17140807 - C1714_02_092 - (Dags-Ds): GO, Brunetta - Forterresse - ",171408,1714,BR,mil
+17140807,S---S,281,341,Pistone G.S. (281),Sereno G. (341),"17140807 - C1714_02_092 - (Dags-Ds): GO, Brunetta - Forterresse - ",171408,1714,BR,mil
+17140807,S---S,281,258,Pistone G.S. (281),Peraldo P. (258),"17140807 - C1714_02_092 - (Dags-Ds): GO, Brunetta - Forterresse - ",171408,1714,BR,mil
+17140807,S---S,281,283,Pistone G.S. (281),Pistone G.A. (283),"17140807 - C1714_02_092 - (Dags-Ds): GO, Brunetta - Forterresse - ",171408,1714,BR,mil
+17140807,S---S,281,88,Pistone G.S. (281),Capellaro F. (88),"17140807 - C1714_02_092 - (Dags-Ds): GO, Brunetta - Forterresse - ",171408,1714,BR,mil
+17140807,S---S,374,341,Vanera M. (374),Sereno G. (341),"17140807 - C1714_02_092 - (Dags-Ds): GO, Brunetta - Forterresse - ",171408,1714,BR,mil
+17140807,S---S,374,258,Vanera M. (374),Peraldo P. (258),"17140807 - C1714_02_092 - (Dags-Ds): GO, Brunetta - Forterresse - ",171408,1714,BR,mil
+17140807,S---S,374,283,Vanera M. (374),Pistone G.A. (283),"17140807 - C1714_02_092 - (Dags-Ds): GO, Brunetta - Forterresse - ",171408,1714,BR,mil
+17140807,S---S,374,88,Vanera M. (374),Capellaro F. (88),"17140807 - C1714_02_092 - (Dags-Ds): GO, Brunetta - Forterresse - ",171408,1714,BR,mil
+17140807,S---S,341,258,Sereno G. (341),Peraldo P. (258),"17140807 - C1714_02_092 - (Dags-Ds): GO, Brunetta - Forterresse - ",171408,1714,BR,mil
+17140807,S---S,341,283,Sereno G. (341),Pistone G.A. (283),"17140807 - C1714_02_092 - (Dags-Ds): GO, Brunetta - Forterresse - ",171408,1714,BR,mil
+17140807,S---S,341,88,Sereno G. (341),Capellaro F. (88),"17140807 - C1714_02_092 - (Dags-Ds): GO, Brunetta - Forterresse - ",171408,1714,BR,mil
+17140807,S---S,258,283,Peraldo P. (258),Pistone G.A. (283),"17140807 - C1714_02_092 - (Dags-Ds): GO, Brunetta - Forterresse - ",171408,1714,BR,mil
+17140807,S---S,258,88,Peraldo P. (258),Capellaro F. (88),"17140807 - C1714_02_092 - (Dags-Ds): GO, Brunetta - Forterresse - ",171408,1714,BR,mil
+17140807,S---S,283,88,Pistone G.A. (283),Capellaro F. (88),"17140807 - C1714_02_092 - (Dags-Ds): GO, Brunetta - Forterresse - ",171408,1714,BR,mil
+17140829,G-->S,95,84,Casasopra G.B. (95),Candellero G. (84),"17140829 - C1714_02_096 - (Dags-Cs): MO, Turin - Universit?& Susa - Castello - ",171408,1714,TO_SUSA,civ
+17140829,A-->S,334,84,Sartoris G. (334),Candellero G. (84),"17140829 - C1714_02_096 - (Dags-Cs): MO, Turin - Universit?& Susa - Castello - ",171408,1714,TO_SUSA,civ
+17140829,A-->G,334,95,Sartoris G. (334),Casasopra G.B. (95),"17140829 - C1714_02_096 - (Dags-Cs): MO, Turin - Universit?& Susa - Castello - ",171408,1714,TO_SUSA,civ
+17150129,S---S,302,275,Righino P.A. (302),Pinchetti D. (275),"17150129 - C1715_03_003 - (Cags-Cs): GO, Fleuve Po - ",171501,1715,CA,civ
+17150129,S---S,302,226,Righino P.A. (302),Menafoglio C.A. (226),"17150129 - C1715_03_003 - (Cags-Cs): GO, Fleuve Po - ",171501,1715,CA,civ
+17150129,S---S,275,226,Pinchetti D. (275),Menafoglio C.A. (226),"17150129 - C1715_03_003 - (Cags-Cs): GO, Fleuve Po - ",171501,1715,CA,civ
+17150129,G-->S,223,302,Menafoglio A. (223),Righino P.A. (302),"17150129 - C1715_03_003 - (Cags-Cs): GO, Fleuve Po - ",171501,1715,CA,civ
+17150129,G-->S,223,275,Menafoglio A. (223),Pinchetti D. (275),"17150129 - C1715_03_003 - (Cags-Cs): GO, Fleuve Po - ",171501,1715,CA,civ
+17150129,G-->S,223,226,Menafoglio A. (223),Menafoglio C.A. (226),"17150129 - C1715_03_003 - (Cags-Cs): GO, Fleuve Po - ",171501,1715,CA,civ
+17150129,A-->S,316,302,Romano T. (316),Righino P.A. (302),"17150129 - C1715_03_003 - (Cags-Cs): GO, Fleuve Po - ",171501,1715,CA,civ
+17150129,A-->S,316,275,Romano T. (316),Pinchetti D. (275),"17150129 - C1715_03_003 - (Cags-Cs): GO, Fleuve Po - ",171501,1715,CA,civ
+17150129,A-->S,316,226,Romano T. (316),Menafoglio C.A. (226),"17150129 - C1715_03_003 - (Cags-Cs): GO, Fleuve Po - ",171501,1715,CA,civ
+17150129,A-->G,316,223,Romano T. (316),Menafoglio A. (223),"17150129 - C1715_03_003 - (Cags-Cs): GO, Fleuve Po - ",171501,1715,CA,civ
+17150309,S---S,275,226,Pinchetti D. (275),Menafoglio C.A. (226),"17150309 - C1715_03_006 - (Dags-Ds): GO, Valenza - Fortifications - ",171503,1715,VAL,mil
+17150309,S---S,275,202,Pinchetti D. (275),Maciotta G. (202),"17150309 - C1715_03_006 - (Dags-Ds): GO, Valenza - Fortifications - ",171503,1715,VAL,mil
+17150309,S---S,226,202,Menafoglio C.A. (226),Maciotta G. (202),"17150309 - C1715_03_006 - (Dags-Ds): GO, Valenza - Fortifications - ",171503,1715,VAL,mil
+17150309,G-->S,303,275,Righino P.G. (303),Pinchetti D. (275),"17150309 - C1715_03_006 - (Dags-Ds): GO, Valenza - Fortifications - ",171503,1715,VAL,mil
+17150309,G-->S,303,226,Righino P.G. (303),Menafoglio C.A. (226),"17150309 - C1715_03_006 - (Dags-Ds): GO, Valenza - Fortifications - ",171503,1715,VAL,mil
+17150309,G-->S,303,202,Righino P.G. (303),Maciotta G. (202),"17150309 - C1715_03_006 - (Dags-Ds): GO, Valenza - Fortifications - ",171503,1715,VAL,mil
+17150309,A-->S,78,275,Caligaris A. (78),Pinchetti D. (275),"17150309 - C1715_03_006 - (Dags-Ds): GO, Valenza - Fortifications - ",171503,1715,VAL,mil
+17150309,A-->S,78,226,Caligaris A. (78),Menafoglio C.A. (226),"17150309 - C1715_03_006 - (Dags-Ds): GO, Valenza - Fortifications - ",171503,1715,VAL,mil
+17150309,A-->S,78,202,Caligaris A. (78),Maciotta G. (202),"17150309 - C1715_03_006 - (Dags-Ds): GO, Valenza - Fortifications - ",171503,1715,VAL,mil
+17150309,A-->G,78,303,Caligaris A. (78),Righino P.G. (303),"17150309 - C1715_03_006 - (Dags-Ds): GO, Valenza - Fortifications - ",171503,1715,VAL,mil
+17150330,S---S,275,226,Pinchetti D. (275),Menafoglio C.A. (226),"17150330 - C1715_03_014 - (Dags-Ds): REP, Turin - Citadelle - ",171503,1715,TO,mil
+17150330,S---S,275,202,Pinchetti D. (275),Maciotta G. (202),"17150330 - C1715_03_014 - (Dags-Ds): REP, Turin - Citadelle - ",171503,1715,TO,mil
+17150330,S---S,275,89,Pinchetti D. (275),Capellaro G.F. (89),"17150330 - C1715_03_014 - (Dags-Ds): REP, Turin - Citadelle - ",171503,1715,TO,mil
+17150330,S---S,226,202,Menafoglio C.A. (226),Maciotta G. (202),"17150330 - C1715_03_014 - (Dags-Ds): REP, Turin - Citadelle - ",171503,1715,TO,mil
+17150330,S---S,226,89,Menafoglio C.A. (226),Capellaro G.F. (89),"17150330 - C1715_03_014 - (Dags-Ds): REP, Turin - Citadelle - ",171503,1715,TO,mil
+17150330,S---S,202,89,Maciotta G. (202),Capellaro G.F. (89),"17150330 - C1715_03_014 - (Dags-Ds): REP, Turin - Citadelle - ",171503,1715,TO,mil
+17150330,G-->S,153,275,Galimberti G.M. (153),Pinchetti D. (275),"17150330 - C1715_03_014 - (Dags-Ds): REP, Turin - Citadelle - ",171503,1715,TO,mil
+17150330,G-->S,153,226,Galimberti G.M. (153),Menafoglio C.A. (226),"17150330 - C1715_03_014 - (Dags-Ds): REP, Turin - Citadelle - ",171503,1715,TO,mil
+17150330,G-->S,153,202,Galimberti G.M. (153),Maciotta G. (202),"17150330 - C1715_03_014 - (Dags-Ds): REP, Turin - Citadelle - ",171503,1715,TO,mil
+17150330,G-->S,153,89,Galimberti G.M. (153),Capellaro G.F. (89),"17150330 - C1715_03_014 - (Dags-Ds): REP, Turin - Citadelle - ",171503,1715,TO,mil
+17150330,A-->S,282,275,Pistone G. (282),Pinchetti D. (275),"17150330 - C1715_03_014 - (Dags-Ds): REP, Turin - Citadelle - ",171503,1715,TO,mil
+17150330,A-->S,282,226,Pistone G. (282),Menafoglio C.A. (226),"17150330 - C1715_03_014 - (Dags-Ds): REP, Turin - Citadelle - ",171503,1715,TO,mil
+17150330,A-->S,282,202,Pistone G. (282),Maciotta G. (202),"17150330 - C1715_03_014 - (Dags-Ds): REP, Turin - Citadelle - ",171503,1715,TO,mil
+17150330,A-->S,282,89,Pistone G. (282),Capellaro G.F. (89),"17150330 - C1715_03_014 - (Dags-Ds): REP, Turin - Citadelle - ",171503,1715,TO,mil
+17150330,A-->G,282,153,Pistone G. (282),Galimberti G.M. (153),"17150330 - C1715_03_014 - (Dags-Ds): REP, Turin - Citadelle - ",171503,1715,TO,mil
+17150406,S---S,117,332,Cribiatello F. (117),Sardi P. (332),"17150406 - C1715_03_019 - (Dags-Ds): GO, Fenestrelle - Forterresse - ",171504,1715,FE,mil
+17150406,G-->S,387,117,Zanetti B. (387),Cribiatello F. (117),"17150406 - C1715_03_019 - (Dags-Ds): GO, Fenestrelle - Forterresse - ",171504,1715,FE,mil
+17150406,G-->S,387,332,Zanetti B. (387),Sardi P. (332),"17150406 - C1715_03_019 - (Dags-Ds): GO, Fenestrelle - Forterresse - ",171504,1715,FE,mil
+17150406,A-->S,378,117,Vanotti P. (378),Cribiatello F. (117),"17150406 - C1715_03_019 - (Dags-Ds): GO, Fenestrelle - Forterresse - ",171504,1715,FE,mil
+17150406,A-->S,378,332,Vanotti P. (378),Sardi P. (332),"17150406 - C1715_03_019 - (Dags-Ds): GO, Fenestrelle - Forterresse - ",171504,1715,FE,mil
+17150406,A-->G,378,387,Vanotti P. (378),Zanetti B. (387),"17150406 - C1715_03_019 - (Dags-Ds): GO, Fenestrelle - Forterresse - ",171504,1715,FE,mil
+17150507,S---S,226,316,Menafoglio C.A. (226),Romano T. (316),"17150507 - C1715_03_024 - (Dags-Ds): REP, Saluzzo - Chateau - ",171505,1715,SAL,mil
+17150507,G-->S,227,226,Menafoglio F.A. (227),Menafoglio C.A. (226),"17150507 - C1715_03_024 - (Dags-Ds): REP, Saluzzo - Chateau - ",171505,1715,SAL,mil
+17150507,G-->S,227,316,Menafoglio F.A. (227),Romano T. (316),"17150507 - C1715_03_024 - (Dags-Ds): REP, Saluzzo - Chateau - ",171505,1715,SAL,mil
+17150507,A-->S,390,226,Zo G.B. (390),Menafoglio C.A. (226),"17150507 - C1715_03_024 - (Dags-Ds): REP, Saluzzo - Chateau - ",171505,1715,SAL,mil
+17150507,A-->S,390,316,Zo G.B. (390),Romano T. (316),"17150507 - C1715_03_024 - (Dags-Ds): REP, Saluzzo - Chateau - ",171505,1715,SAL,mil
+17150507,A-->G,390,227,Zo G.B. (390),Menafoglio F.A. (227),"17150507 - C1715_03_024 - (Dags-Ds): REP, Saluzzo - Chateau - ",171505,1715,SAL,mil
+17150510,S---S,23,29,Bello G. (23),Bello P.M. (29),"17150510 - C1715_03_033 - (Dags-Ds): GO, Turin - Porta Susina - Fortification  - ",171505,1715,TO,mil
+17150510,S---S,23,35,Bello G. (23),Bellotto G. (35),"17150510 - C1715_03_033 - (Dags-Ds): GO, Turin - Porta Susina - Fortification  - ",171505,1715,TO,mil
+17150510,S---S,29,35,Bello P.M. (29),Bellotto G. (35),"17150510 - C1715_03_033 - (Dags-Ds): GO, Turin - Porta Susina - Fortification  - ",171505,1715,TO,mil
+17150510,G-->S,14,23,Astrano G.A. (14),Bello G. (23),"17150510 - C1715_03_033 - (Dags-Ds): GO, Turin - Porta Susina - Fortification  - ",171505,1715,TO,mil
+17150510,G-->S,14,29,Astrano G.A. (14),Bello P.M. (29),"17150510 - C1715_03_033 - (Dags-Ds): GO, Turin - Porta Susina - Fortification  - ",171505,1715,TO,mil
+17150510,G-->S,14,35,Astrano G.A. (14),Bellotto G. (35),"17150510 - C1715_03_033 - (Dags-Ds): GO, Turin - Porta Susina - Fortification  - ",171505,1715,TO,mil
+17150510,A-->S,113,23,Corte A. (113),Bello G. (23),"17150510 - C1715_03_033 - (Dags-Ds): GO, Turin - Porta Susina - Fortification  - ",171505,1715,TO,mil
+17150510,A-->S,113,29,Corte A. (113),Bello P.M. (29),"17150510 - C1715_03_033 - (Dags-Ds): GO, Turin - Porta Susina - Fortification  - ",171505,1715,TO,mil
+17150510,A-->S,113,35,Corte A. (113),Bellotto G. (35),"17150510 - C1715_03_033 - (Dags-Ds): GO, Turin - Porta Susina - Fortification  - ",171505,1715,TO,mil
+17150510,A-->G,113,14,Corte A. (113),Astrano G.A. (14),"17150510 - C1715_03_033 - (Dags-Ds): GO, Turin - Porta Susina - Fortification  - ",171505,1715,TO,mil
+17150613,S---S,219,110,Mazzoni C.G. (219),Compassi C.S. (110),"17150613 - C1715_03_041 - (Cags-Cs): MO, Rivolli - Chateau - ",171506,1715,RI,civ
+17150613,G-->S,139,219,Fontana D. (139),Mazzoni C.G. (219),"17150613 - C1715_03_041 - (Cags-Cs): MO, Rivolli - Chateau - ",171506,1715,RI,civ
+17150613,G-->S,139,110,Fontana D. (139),Compassi C.S. (110),"17150613 - C1715_03_041 - (Cags-Cs): MO, Rivolli - Chateau - ",171506,1715,RI,civ
+17150613,A-->S,179,219,Giudici F.M. (179),Mazzoni C.G. (219),"17150613 - C1715_03_041 - (Cags-Cs): MO, Rivolli - Chateau - ",171506,1715,RI,civ
+17150613,A-->S,179,110,Giudici F.M. (179),Compassi C.S. (110),"17150613 - C1715_03_041 - (Cags-Cs): MO, Rivolli - Chateau - ",171506,1715,RI,civ
+17150613,A-->G,179,139,Giudici F.M. (179),Fontana D. (139),"17150613 - C1715_03_041 - (Cags-Cs): MO, Rivolli - Chateau - ",171506,1715,RI,civ
+17150803,S---S,361,130,Toscanello F. (361),Favre F.G. (130),"17150803 - C1715_03_044 - (Dags-Ds): GO, Brunetta - Forterresse - ",171508,1715,BR,mil
+17150803,S---S,361,117,Toscanello F. (361),Cribiatello F. (117),"17150803 - C1715_03_044 - (Dags-Ds): GO, Brunetta - Forterresse - ",171508,1715,BR,mil
+17150803,S---S,130,117,Favre F.G. (130),Cribiatello F. (117),"17150803 - C1715_03_044 - (Dags-Ds): GO, Brunetta - Forterresse - ",171508,1715,BR,mil
+17150803,G-->S,22,361,Bellico G.F. (22),Toscanello F. (361),"17150803 - C1715_03_044 - (Dags-Ds): GO, Brunetta - Forterresse - ",171508,1715,BR,mil
+17150803,G-->S,22,130,Bellico G.F. (22),Favre F.G. (130),"17150803 - C1715_03_044 - (Dags-Ds): GO, Brunetta - Forterresse - ",171508,1715,BR,mil
+17150803,G-->S,22,117,Bellico G.F. (22),Cribiatello F. (117),"17150803 - C1715_03_044 - (Dags-Ds): GO, Brunetta - Forterresse - ",171508,1715,BR,mil
+17150803,A-->S,57,361,Biolaro P.A. (57),Toscanello F. (361),"17150803 - C1715_03_044 - (Dags-Ds): GO, Brunetta - Forterresse - ",171508,1715,BR,mil
+17150803,A-->S,57,130,Biolaro P.A. (57),Favre F.G. (130),"17150803 - C1715_03_044 - (Dags-Ds): GO, Brunetta - Forterresse - ",171508,1715,BR,mil
+17150803,A-->S,57,117,Biolaro P.A. (57),Cribiatello F. (117),"17150803 - C1715_03_044 - (Dags-Ds): GO, Brunetta - Forterresse - ",171508,1715,BR,mil
+17150803,A-->G,57,22,Biolaro P.A. (57),Bellico G.F. (22),"17150803 - C1715_03_044 - (Dags-Ds): GO, Brunetta - Forterresse - ",171508,1715,BR,mil
+17150805,G-->S,232,353,Morino C.F. (232),Tepati B. (353),"17150805 - C1715_03_050 - (Cags-Cs): MO, Turin - Universit?- ",171508,1715,TO,civ
+17150805,A-->S,160,353,Gambassone G.M. (160),Tepati B. (353),"17150805 - C1715_03_050 - (Cags-Cs): MO, Turin - Universit?- ",171508,1715,TO,civ
+17150805,A-->G,160,232,Gambassone G.M. (160),Morino C.F. (232),"17150805 - C1715_03_050 - (Cags-Cs): MO, Turin - Universit?- ",171508,1715,TO,civ
+17150807,S---S,392,100,Zo G.H. (392),Castelli M.F. (100),"17150807 - C1715_03_054 - (Dags-Ds): MO, Turin - Universit?- ",171508,1715,TO,civ
+17150807,G-->S,389,392,Zo C.A. (389),Zo G.H. (392),"17150807 - C1715_03_054 - (Cags-Cs): MO, Turin - Universit?- ",171508,1715,TO,civ
+17150807,G-->S,389,100,Zo C.A. (389),Castelli M.F. (100),"17150807 - C1715_03_054 - (Cags-Cs): MO, Turin - Universit?- ",171508,1715,TO,civ
+17150807,A-->S,254,392,Pelloli F.A. (254),Zo G.H. (392),"17150807 - C1715_03_054 - (Dags-Ds): MO, Turin - Universit?- ",171508,1715,TO,civ
+17150807,A-->S,254,100,Pelloli F.A. (254),Castelli M.F. (100),"17150807 - C1715_03_054 - (Dags-Ds): MO, Turin - Universit?- ",171508,1715,TO,civ
+17150807,A-->G,254,389,Pelloli F.A. (254),Zo C.A. (389),"17150807 - C1715_03_054 - (Dags-Ds): MO, Turin - Universit?- ",171508,1715,TO,civ
+17150807,G-->S,390,369,Zo G.B. (390),Ugliengo C.M. (369),"17150807 - C1715_03_058 - (Cags-Cs): MO, Turin - Universit?- ",171508,1715,TO,civ
+17150807,A-->S,389,369,Zo C.A. (389),Ugliengo C.M. (369),"17150807 - C1715_03_058 - (Dags-Ds): MO, Turin - Universit?- ",171508,1715,TO,civ
+17150807,A-->G,389,390,Zo C.A. (389),Zo G.B. (390),"17150807 - C1715_03_058 - (Dags-Ds): MO, Turin - Universit?- ",171508,1715,TO,civ
+17150917,S---S,226,200,Menafoglio C.A. (226),Maciotta C. (200),"17150917 - C1715_03_063 - (Cags-Ds): GO, Valdocco - Forge - ",171509,1715,VALD,mil
+17150917,S---S,226,50,Menafoglio C.A. (226),Bianco A. (50),"17150917 - C1715_03_063 - (Cags-Ds): GO, Valdocco - Forge - ",171509,1715,VALD,mil
+17150917,S---S,200,50,Maciotta C. (200),Bianco A. (50),"17150917 - C1715_03_063 - (Cags-Ds): GO, Valdocco - Forge - ",171509,1715,VALD,mil
+17150917,G-->S,153,226,Galimberti G.M. (153),Menafoglio C.A. (226),"17150917 - C1715_03_063 - (Cags-Ds): GO, Valdocco - Forge - ",171509,1715,VALD,mil
+17150917,G-->S,153,200,Galimberti G.M. (153),Maciotta C. (200),"17150917 - C1715_03_063 - (Cags-Ds): GO, Valdocco - Forge - ",171509,1715,VALD,mil
+17150917,G-->S,153,50,Galimberti G.M. (153),Bianco A. (50),"17150917 - C1715_03_063 - (Cags-Ds): GO, Valdocco - Forge - ",171509,1715,VALD,mil
+17150917,A-->S,301,226,Righino P. (301),Menafoglio C.A. (226),"17150917 - C1715_03_063 - (Cags-Ds): GO, Valdocco - Forge - ",171509,1715,VALD,mil
+17150917,A-->S,301,200,Righino P. (301),Maciotta C. (200),"17150917 - C1715_03_063 - (Cags-Ds): GO, Valdocco - Forge - ",171509,1715,VALD,mil
+17150917,A-->S,301,50,Righino P. (301),Bianco A. (50),"17150917 - C1715_03_063 - (Cags-Ds): GO, Valdocco - Forge - ",171509,1715,VALD,mil
+17150917,A-->G,301,153,Righino P. (301),Galimberti G.M. (153),"17150917 - C1715_03_063 - (Cags-Ds): GO, Valdocco - Forge - ",171509,1715,VALD,mil
+17151120,G-->S,327,172,Saccarello O. (327),Gianone P. (172),"17151120 - C1715_03_068 - (Cags-Cs): DIV, Turin - Universit?- ",171511,1715,TO,civ
+17151120,A-->S,129,172,Faiola A. (129),Gianone P. (172),"17151120 - C1715_03_068 - (Cags-Cs): DIV, Turin - Universit?- ",171511,1715,TO,civ
+17151120,A-->G,129,327,Faiola A. (129),Saccarello O. (327),"17151120 - C1715_03_068 - (Cags-Cs): DIV, Turin - Universit?- ",171511,1715,TO,civ
+17160331,S---S,180,292,Gobbi A. (180),Rechettino A. (292),"17160331 - C1716_03_077 - (Dags-Cs): GO, Venaria - Chapelle royale - ",171603,1716,VEN,rel
+17160331,S---S,180,35,Gobbi A. (180),Bellotto G. (35),"17160331 - C1716_03_077 - (Dags-Cs): GO, Venaria - Chapelle royale - ",171603,1716,VEN,rel
+17160331,S---S,180,330,Gobbi A. (180),Salla G. (330),"17160331 - C1716_03_077 - (Dags-Cs): GO, Venaria - Chapelle royale - ",171603,1716,VEN,rel
+17160331,S---S,292,35,Rechettino A. (292),Bellotto G. (35),"17160331 - C1716_03_077 - (Dags-Cs): GO, Venaria - Chapelle royale - ",171603,1716,VEN,rel
+17160331,S---S,292,330,Rechettino A. (292),Salla G. (330),"17160331 - C1716_03_077 - (Dags-Cs): GO, Venaria - Chapelle royale - ",171603,1716,VEN,rel
+17160331,S---S,35,330,Bellotto G. (35),Salla G. (330),"17160331 - C1716_03_077 - (Dags-Cs): GO, Venaria - Chapelle royale - ",171603,1716,VEN,rel
+17160331,G-->S,237,180,Mosso G.E. (237),Gobbi A. (180),"17160331 - C1716_03_077 - (Dags-Cs): GO, Venaria - Chapelle royale - ",171603,1716,VEN,rel
+17160331,G-->S,237,292,Mosso G.E. (237),Rechettino A. (292),"17160331 - C1716_03_077 - (Dags-Cs): GO, Venaria - Chapelle royale - ",171603,1716,VEN,rel
+17160331,G-->S,237,35,Mosso G.E. (237),Bellotto G. (35),"17160331 - C1716_03_077 - (Dags-Cs): GO, Venaria - Chapelle royale - ",171603,1716,VEN,rel
+17160331,G-->S,237,330,Mosso G.E. (237),Salla G. (330),"17160331 - C1716_03_077 - (Dags-Cs): GO, Venaria - Chapelle royale - ",171603,1716,VEN,rel
+17160331,A-->S,108,180,Clerico S. (108),Gobbi A. (180),"17160331 - C1716_03_077 - (Dags-Cs): GO, Venaria - Chapelle royale - ",171603,1716,VEN,rel
+17160331,A-->S,108,292,Clerico S. (108),Rechettino A. (292),"17160331 - C1716_03_077 - (Dags-Cs): GO, Venaria - Chapelle royale - ",171603,1716,VEN,rel
+17160331,A-->S,108,35,Clerico S. (108),Bellotto G. (35),"17160331 - C1716_03_077 - (Dags-Cs): GO, Venaria - Chapelle royale - ",171603,1716,VEN,rel
+17160331,A-->S,108,330,Clerico S. (108),Salla G. (330),"17160331 - C1716_03_077 - (Dags-Cs): GO, Venaria - Chapelle royale - ",171603,1716,VEN,rel
+17160331,A-->G,108,237,Clerico S. (108),Mosso G.E. (237),"17160331 - C1716_03_077 - (Dags-Cs): GO, Venaria - Chapelle royale - ",171603,1716,VEN,rel
+17160402,S---S,223,275,Menafoglio A. (223),Pinchetti D. (275),"17160402 - C1716_03_085 - (Cags-Cs): REP, Valenza  & Alessandria - Fortifications - ",171604,1716,VAL_AL,mil
+17160402,S---S,223,187,Menafoglio A. (223),Groppi C. (187),"17160402 - C1716_03_085 - (Cags-Cs): REP, Valenza  & Alessandria - Fortifications - ",171604,1716,VAL_AL,mil
+17160402,S---S,223,111,Menafoglio A. (223),Constanzo B. (111),"17160402 - C1716_03_085 - (Cags-Cs): REP, Valenza  & Alessandria - Fortifications - ",171604,1716,VAL_AL,mil
+17160402,S---S,223,226,Menafoglio A. (223),Menafoglio C.A. (226),"17160402 - C1716_03_085 - (Cags-Cs): REP, Valenza  & Alessandria - Fortifications - ",171604,1716,VAL_AL,mil
+17160402,S---S,223,266,Menafoglio A. (223),Pianarosa G. (266),"17160402 - C1716_03_085 - (Cags-Cs): REP, Valenza  & Alessandria - Fortifications - ",171604,1716,VAL_AL,mil
+17160402,S---S,275,187,Pinchetti D. (275),Groppi C. (187),"17160402 - C1716_03_085 - (Cags-Cs): REP, Valenza  & Alessandria - Fortifications - ",171604,1716,VAL_AL,mil
+17160402,S---S,275,111,Pinchetti D. (275),Constanzo B. (111),"17160402 - C1716_03_085 - (Cags-Cs): REP, Valenza  & Alessandria - Fortifications - ",171604,1716,VAL_AL,mil
+17160402,S---S,275,226,Pinchetti D. (275),Menafoglio C.A. (226),"17160402 - C1716_03_085 - (Cags-Cs): REP, Valenza  & Alessandria - Fortifications - ",171604,1716,VAL_AL,mil
+17160402,S---S,275,266,Pinchetti D. (275),Pianarosa G. (266),"17160402 - C1716_03_085 - (Cags-Cs): REP, Valenza  & Alessandria - Fortifications - ",171604,1716,VAL_AL,mil
+17160402,S---S,187,111,Groppi C. (187),Constanzo B. (111),"17160402 - C1716_03_085 - (Cags-Cs): REP, Valenza  & Alessandria - Fortifications - ",171604,1716,VAL_AL,mil
+17160402,S---S,187,226,Groppi C. (187),Menafoglio C.A. (226),"17160402 - C1716_03_085 - (Cags-Cs): REP, Valenza  & Alessandria - Fortifications - ",171604,1716,VAL_AL,mil
+17160402,S---S,187,266,Groppi C. (187),Pianarosa G. (266),"17160402 - C1716_03_085 - (Cags-Cs): REP, Valenza  & Alessandria - Fortifications - ",171604,1716,VAL_AL,mil
+17160402,S---S,111,226,Constanzo B. (111),Menafoglio C.A. (226),"17160402 - C1716_03_085 - (Cags-Cs): REP, Valenza  & Alessandria - Fortifications - ",171604,1716,VAL_AL,mil
+17160402,S---S,111,266,Constanzo B. (111),Pianarosa G. (266),"17160402 - C1716_03_085 - (Cags-Cs): REP, Valenza  & Alessandria - Fortifications - ",171604,1716,VAL_AL,mil
+17160402,S---S,226,266,Menafoglio C.A. (226),Pianarosa G. (266),"17160402 - C1716_03_085 - (Cags-Cs): REP, Valenza  & Alessandria - Fortifications - ",171604,1716,VAL_AL,mil
+17160402,G-->S,272,223,Piazzollo F. (272),Menafoglio A. (223),"17160402 - C1716_03_085 - (Cags-Cs): REP, Valenza  & Alessandria - Fortifications - ",171604,1716,VAL_AL,mil
+17160402,G-->S,272,275,Piazzollo F. (272),Pinchetti D. (275),"17160402 - C1716_03_085 - (Cags-Cs): REP, Valenza  & Alessandria - Fortifications - ",171604,1716,VAL_AL,mil
+17160402,G-->S,272,187,Piazzollo F. (272),Groppi C. (187),"17160402 - C1716_03_085 - (Cags-Cs): REP, Valenza  & Alessandria - Fortifications - ",171604,1716,VAL_AL,mil
+17160402,G-->S,272,111,Piazzollo F. (272),Constanzo B. (111),"17160402 - C1716_03_085 - (Cags-Cs): REP, Valenza  & Alessandria - Fortifications - ",171604,1716,VAL_AL,mil
+17160402,G-->S,272,226,Piazzollo F. (272),Menafoglio C.A. (226),"17160402 - C1716_03_085 - (Cags-Cs): REP, Valenza  & Alessandria - Fortifications - ",171604,1716,VAL_AL,mil
+17160402,G-->S,272,266,Piazzollo F. (272),Pianarosa G. (266),"17160402 - C1716_03_085 - (Cags-Cs): REP, Valenza  & Alessandria - Fortifications - ",171604,1716,VAL_AL,mil
+17160402,A-->S,40,223,Bertinello P. (40),Menafoglio A. (223),"17160402 - C1716_03_085 - (Cags-Cs): REP, Valenza  & Alessandria - Fortifications - ",171604,1716,VAL_AL,mil
+17160402,A-->S,40,275,Bertinello P. (40),Pinchetti D. (275),"17160402 - C1716_03_085 - (Cags-Cs): REP, Valenza  & Alessandria - Fortifications - ",171604,1716,VAL_AL,mil
+17160402,A-->S,40,187,Bertinello P. (40),Groppi C. (187),"17160402 - C1716_03_085 - (Cags-Cs): REP, Valenza  & Alessandria - Fortifications - ",171604,1716,VAL_AL,mil
+17160402,A-->S,40,111,Bertinello P. (40),Constanzo B. (111),"17160402 - C1716_03_085 - (Cags-Cs): REP, Valenza  & Alessandria - Fortifications - ",171604,1716,VAL_AL,mil
+17160402,A-->S,40,226,Bertinello P. (40),Menafoglio C.A. (226),"17160402 - C1716_03_085 - (Cags-Cs): REP, Valenza  & Alessandria - Fortifications - ",171604,1716,VAL_AL,mil
+17160402,A-->S,40,266,Bertinello P. (40),Pianarosa G. (266),"17160402 - C1716_03_085 - (Cags-Cs): REP, Valenza  & Alessandria - Fortifications - ",171604,1716,VAL_AL,mil
+17160402,A-->G,40,272,Bertinello P. (40),Piazzollo F. (272),"17160402 - C1716_03_085 - (Cags-Cs): REP, Valenza  & Alessandria - Fortifications - ",171604,1716,VAL_AL,mil
+17160416,S---S,226,266,Menafoglio C.A. (226),Pianarosa G. (266),"17160416 - C1716_03_090 - (Cags-Cs): REP, Turin - Citadelle - ",171604,1716,TO,mil
+17160416,S---S,226,187,Menafoglio C.A. (226),Groppi C. (187),"17160416 - C1716_03_090 - (Cags-Cs): REP, Turin - Citadelle - ",171604,1716,TO,mil
+17160416,S---S,226,223,Menafoglio C.A. (226),Menafoglio A. (223),"17160416 - C1716_03_090 - (Cags-Cs): REP, Turin - Citadelle - ",171604,1716,TO,mil
+17160416,S---S,226,275,Menafoglio C.A. (226),Pinchetti D. (275),"17160416 - C1716_03_090 - (Cags-Cs): REP, Turin - Citadelle - ",171604,1716,TO,mil
+17160416,S---S,266,187,Pianarosa G. (266),Groppi C. (187),"17160416 - C1716_03_090 - (Cags-Cs): REP, Turin - Citadelle - ",171604,1716,TO,mil
+17160416,S---S,266,223,Pianarosa G. (266),Menafoglio A. (223),"17160416 - C1716_03_090 - (Cags-Cs): REP, Turin - Citadelle - ",171604,1716,TO,mil
+17160416,S---S,266,275,Pianarosa G. (266),Pinchetti D. (275),"17160416 - C1716_03_090 - (Cags-Cs): REP, Turin - Citadelle - ",171604,1716,TO,mil
+17160416,S---S,187,223,Groppi C. (187),Menafoglio A. (223),"17160416 - C1716_03_090 - (Cags-Cs): REP, Turin - Citadelle - ",171604,1716,TO,mil
+17160416,S---S,187,275,Groppi C. (187),Pinchetti D. (275),"17160416 - C1716_03_090 - (Cags-Cs): REP, Turin - Citadelle - ",171604,1716,TO,mil
+17160416,S---S,223,275,Menafoglio A. (223),Pinchetti D. (275),"17160416 - C1716_03_090 - (Cags-Cs): REP, Turin - Citadelle - ",171604,1716,TO,mil
+17160416,G-->S,153,226,Galimberti G.M. (153),Menafoglio C.A. (226),"17160416 - C1716_03_090 - (Cags-Cs): REP, Turin - Citadelle - ",171604,1716,TO,mil
+17160416,G-->S,153,266,Galimberti G.M. (153),Pianarosa G. (266),"17160416 - C1716_03_090 - (Cags-Cs): REP, Turin - Citadelle - ",171604,1716,TO,mil
+17160416,G-->S,153,187,Galimberti G.M. (153),Groppi C. (187),"17160416 - C1716_03_090 - (Cags-Cs): REP, Turin - Citadelle - ",171604,1716,TO,mil
+17160416,G-->S,153,223,Galimberti G.M. (153),Menafoglio A. (223),"17160416 - C1716_03_090 - (Cags-Cs): REP, Turin - Citadelle - ",171604,1716,TO,mil
+17160416,G-->S,153,275,Galimberti G.M. (153),Pinchetti D. (275),"17160416 - C1716_03_090 - (Cags-Cs): REP, Turin - Citadelle - ",171604,1716,TO,mil
+17160416,A-->S,384,226,Violino P.G. (384),Menafoglio C.A. (226),"17160416 - C1716_03_090 - (Cags-Cs): REP, Turin - Citadelle - ",171604,1716,TO,mil
+17160416,A-->S,384,266,Violino P.G. (384),Pianarosa G. (266),"17160416 - C1716_03_090 - (Cags-Cs): REP, Turin - Citadelle - ",171604,1716,TO,mil
+17160416,A-->S,384,187,Violino P.G. (384),Groppi C. (187),"17160416 - C1716_03_090 - (Cags-Cs): REP, Turin - Citadelle - ",171604,1716,TO,mil
+17160416,A-->S,384,223,Violino P.G. (384),Menafoglio A. (223),"17160416 - C1716_03_090 - (Cags-Cs): REP, Turin - Citadelle - ",171604,1716,TO,mil
+17160416,A-->S,384,275,Violino P.G. (384),Pinchetti D. (275),"17160416 - C1716_03_090 - (Cags-Cs): REP, Turin - Citadelle - ",171604,1716,TO,mil
+17160416,A-->G,384,153,Violino P.G. (384),Galimberti G.M. (153),"17160416 - C1716_03_090 - (Cags-Cs): REP, Turin - Citadelle - ",171604,1716,TO,mil
+17160508,S---S,266,226,Pianarosa G. (266),Menafoglio C.A. (226),"17160508 - C1716_03_095 - (Cags-Cs): GO, Fleuve Po - ",171605,1716,CA,civ
+17160508,S---S,266,229,Pianarosa G. (266),Menafoglio N. (229),"17160508 - C1716_03_095 - (Cags-Cs): GO, Fleuve Po - ",171605,1716,CA,civ
+17160508,S---S,266,187,Pianarosa G. (266),Groppi C. (187),"17160508 - C1716_03_095 - (Cags-Cs): GO, Fleuve Po - ",171605,1716,CA,civ
+17160508,S---S,226,229,Menafoglio C.A. (226),Menafoglio N. (229),"17160508 - C1716_03_095 - (Cags-Cs): GO, Fleuve Po - ",171605,1716,CA,civ
+17160508,S---S,226,187,Menafoglio C.A. (226),Groppi C. (187),"17160508 - C1716_03_095 - (Cags-Cs): GO, Fleuve Po - ",171605,1716,CA,civ
+17160508,S---S,229,187,Menafoglio N. (229),Groppi C. (187),"17160508 - C1716_03_095 - (Cags-Cs): GO, Fleuve Po - ",171605,1716,CA,civ
+17160508,G-->S,153,266,Galimberti G.M. (153),Pianarosa G. (266),"17160508 - C1716_03_095 - (Cags-Cs): GO, Fleuve Po - ",171605,1716,CA,civ
+17160508,G-->S,153,226,Galimberti G.M. (153),Menafoglio C.A. (226),"17160508 - C1716_03_095 - (Cags-Cs): GO, Fleuve Po - ",171605,1716,CA,civ
+17160508,G-->S,153,229,Galimberti G.M. (153),Menafoglio N. (229),"17160508 - C1716_03_095 - (Cags-Cs): GO, Fleuve Po - ",171605,1716,CA,civ
+17160508,G-->S,153,187,Galimberti G.M. (153),Groppi C. (187),"17160508 - C1716_03_095 - (Cags-Cs): GO, Fleuve Po - ",171605,1716,CA,civ
+17160508,A-->S,225,266,Menafoglio C.A. (225),Pianarosa G. (266),"17160508 - C1716_03_095 - (Cags-Cs): GO, Fleuve Po - ",171605,1716,CA,civ
+17160508,A-->S,225,226,Menafoglio C.A. (225),Menafoglio C.A. (226),"17160508 - C1716_03_095 - (Cags-Cs): GO, Fleuve Po - ",171605,1716,CA,civ
+17160508,A-->S,225,229,Menafoglio C.A. (225),Menafoglio N. (229),"17160508 - C1716_03_095 - (Cags-Cs): GO, Fleuve Po - ",171605,1716,CA,civ
+17160508,A-->S,225,187,Menafoglio C.A. (225),Groppi C. (187),"17160508 - C1716_03_095 - (Cags-Cs): GO, Fleuve Po - ",171605,1716,CA,civ
+17160508,A-->G,225,153,Menafoglio C.A. (225),Galimberti G.M. (153),"17160508 - C1716_03_095 - (Cags-Cs): GO, Fleuve Po - ",171605,1716,CA,civ
+17160522,S---S,281,283,Pistone G.S. (281),Pistone G.A. (283),"17160522 - C1716_03_104 - (Cags-Cs): GO, Brunetta - Forterresse - ",171605,1716,BR,mil
+17160522,S---S,281,88,Pistone G.S. (281),Capellaro F. (88),"17160522 - C1716_03_104 - (Cags-Cs): GO, Brunetta - Forterresse - ",171605,1716,BR,mil
+17160522,S---S,283,88,Pistone G.A. (283),Capellaro F. (88),"17160522 - C1716_03_104 - (Cags-Cs): GO, Brunetta - Forterresse - ",171605,1716,BR,mil
+17160522,G-->S,374,281,Vanera M. (374),Pistone G.S. (281),"17160522 - C1716_03_104 - (Cags-Cs): GO, Brunetta - Forterresse - ",171605,1716,BR,mil
+17160522,G-->S,374,283,Vanera M. (374),Pistone G.A. (283),"17160522 - C1716_03_104 - (Cags-Cs): GO, Brunetta - Forterresse - ",171605,1716,BR,mil
+17160522,G-->S,374,88,Vanera M. (374),Capellaro F. (88),"17160522 - C1716_03_104 - (Cags-Cs): GO, Brunetta - Forterresse - ",171605,1716,BR,mil
+17160522,A-->S,203,281,Maciotta G.M. (203),Pistone G.S. (281),"17160522 - C1716_03_104 - (Cags-Cs): GO, Brunetta - Forterresse - ",171605,1716,BR,mil
+17160522,A-->S,203,283,Maciotta G.M. (203),Pistone G.A. (283),"17160522 - C1716_03_104 - (Cags-Cs): GO, Brunetta - Forterresse - ",171605,1716,BR,mil
+17160522,A-->S,203,88,Maciotta G.M. (203),Capellaro F. (88),"17160522 - C1716_03_104 - (Cags-Cs): GO, Brunetta - Forterresse - ",171605,1716,BR,mil
+17160522,A-->G,203,374,Maciotta G.M. (203),Vanera M. (374),"17160522 - C1716_03_104 - (Cags-Cs): GO, Brunetta - Forterresse - ",171605,1716,BR,mil
+17160507,S---S,583,588,Sasso A. (583),Sussio A. (588),"17160507 - C1716_S100_001 - (Dags-Cs): GO, Superga - Basilique - ",171605,1716,SUP,rel
+17160507,S---S,583,587,Sasso A. (583),Steffenino P. (587),"17160507 - C1716_S100_001 - (Dags-Cs): GO, Superga - Basilique - ",171605,1716,SUP,rel
+17160507,S---S,583,596,Sasso A. (583),Levis G. (596),"17160507 - C1716_S100_001 - (Dags-Cs): GO, Superga - Basilique - ",171605,1716,SUP,rel
+17160507,S---S,588,587,Sussio A. (588),Steffenino P. (587),"17160507 - C1716_S100_001 - (Dags-Cs): GO, Superga - Basilique - ",171605,1716,SUP,rel
+17160507,S---S,588,596,Sussio A. (588),Levis G. (596),"17160507 - C1716_S100_001 - (Dags-Cs): GO, Superga - Basilique - ",171605,1716,SUP,rel
+17160507,S---S,587,596,Steffenino P. (587),Levis G. (596),"17160507 - C1716_S100_001 - (Dags-Cs): GO, Superga - Basilique - ",171605,1716,SUP,rel
+17160507,G-->S,595,583,Levis F.A. (595),Sasso A. (583),"17160507 - C1716_S100_001 - (Dags-Cs): GO, Superga - Basilique - ",171605,1716,SUP,rel
+17160507,G-->S,595,588,Levis F.A. (595),Sussio A. (588),"17160507 - C1716_S100_001 - (Dags-Cs): GO, Superga - Basilique - ",171605,1716,SUP,rel
+17160507,G-->S,595,587,Levis F.A. (595),Steffenino P. (587),"17160507 - C1716_S100_001 - (Dags-Cs): GO, Superga - Basilique - ",171605,1716,SUP,rel
+17160507,G-->S,595,596,Levis F.A. (595),Levis G. (596),"17160507 - C1716_S100_001 - (Dags-Cs): GO, Superga - Basilique - ",171605,1716,SUP,rel
+17160507,A-->S,589,583,Sussio G.B. (589),Sasso A. (583),"17160507 - C1716_S100_001 - (Dags-Cs): GO, Superga - Basilique - ",171605,1716,SUP,rel
+17160507,A-->S,589,588,Sussio G.B. (589),Sussio A. (588),"17160507 - C1716_S100_001 - (Dags-Cs): GO, Superga - Basilique - ",171605,1716,SUP,rel
+17160507,A-->S,589,587,Sussio G.B. (589),Steffenino P. (587),"17160507 - C1716_S100_001 - (Dags-Cs): GO, Superga - Basilique - ",171605,1716,SUP,rel
+17160507,A-->S,589,596,Sussio G.B. (589),Levis G. (596),"17160507 - C1716_S100_001 - (Dags-Cs): GO, Superga - Basilique - ",171605,1716,SUP,rel
+17160507,A-->G,589,595,Sussio G.B. (589),Levis F.A. (595),"17160507 - C1716_S100_001 - (Dags-Cs): GO, Superga - Basilique - ",171605,1716,SUP,rel
+17160508,G-->S,613,401,Basilio G. (613),Basilio P.M. (401),"17160508 - C1716_S100_004 - (Cags-Cs): DIV, Superga - Basilique - ",171605,1716,SUP,rel
+17160511,G-->S,385,23,Vitale P. (385),Bello G. (23),"17160511 - C1716_S100_006 - (Dags-Cs): DIV, Superga - Basilique - ",171605,1716,SUP,rel
+17160511,A-->S,28,23,Bello P.M. (28),Bello G. (23),"17160511 - C1716_S100_006 - (Dags-Cs): DIV, Superga - Basilique - ",171605,1716,SUP,rel
+17160511,A-->G,28,385,Bello P.M. (28),Vitale P. (385),"17160511 - C1716_S100_006 - (Dags-Cs): DIV, Superga - Basilique - ",171605,1716,SUP,rel
+17160528,G-->S,615,452,Andeijs G.A. (615),Corino M.A. (452),"17160528 - C1716_S100_009 - (Dags-Cs): DIV, Superga - Basilique - ",171605,1716,SUP,rel
+17160528,A-->S,620,452,Bosco G. (620),Corino M.A. (452),"17160528 - C1716_S100_009 - (Dags-Cs): DIV, Superga - Basilique - ",171605,1716,SUP,rel
+17160528,A-->G,620,615,Bosco G. (620),Andeijs G.A. (615),"17160528 - C1716_S100_009 - (Dags-Cs): DIV, Superga - Basilique - ",171605,1716,SUP,rel
+17170114,S---S,117,159,Cribiatello F. (117),Gallo G.F. (159),"17170114 - C1717_05_002 - (Dags-Ds): GO, Brunetta - Forterresse - ",171701,1717,BR,mil
+17170114,S---S,117,16,Cribiatello F. (117),Baietto G.F. (16),"17170114 - C1717_05_002 - (Dags-Ds): GO, Brunetta - Forterresse - ",171701,1717,BR,mil
+17170114,S---S,117,573,Cribiatello F. (117),De Vallon F.G. (573),"17170114 - C1717_05_002 - (Dags-Ds): GO, Brunetta - Forterresse - ",171701,1717,BR,mil
+17170114,S---S,117,130,Cribiatello F. (117),Favre F.G. (130),"17170114 - C1717_05_002 - (Dags-Ds): GO, Brunetta - Forterresse - ",171701,1717,BR,mil
+17170114,S---S,159,16,Gallo G.F. (159),Baietto G.F. (16),"17170114 - C1717_05_002 - (Dags-Ds): GO, Brunetta - Forterresse - ",171701,1717,BR,mil
+17170114,S---S,159,573,Gallo G.F. (159),De Vallon F.G. (573),"17170114 - C1717_05_002 - (Dags-Ds): GO, Brunetta - Forterresse - ",171701,1717,BR,mil
+17170114,S---S,159,130,Gallo G.F. (159),Favre F.G. (130),"17170114 - C1717_05_002 - (Dags-Ds): GO, Brunetta - Forterresse - ",171701,1717,BR,mil
+17170114,S---S,16,573,Baietto G.F. (16),De Vallon F.G. (573),"17170114 - C1717_05_002 - (Dags-Ds): GO, Brunetta - Forterresse - ",171701,1717,BR,mil
+17170114,S---S,16,130,Baietto G.F. (16),Favre F.G. (130),"17170114 - C1717_05_002 - (Dags-Ds): GO, Brunetta - Forterresse - ",171701,1717,BR,mil
+17170114,S---S,573,130,De Vallon F.G. (573),Favre F.G. (130),"17170114 - C1717_05_002 - (Dags-Ds): GO, Brunetta - Forterresse - ",171701,1717,BR,mil
+17170114,G-->S,575,117,Girodo T. (575),Cribiatello F. (117),"17170114 - C1717_05_002 - (Dags-Ds): GO, Brunetta - Forterresse - ",171701,1717,BR,mil
+17170114,G-->S,575,159,Girodo T. (575),Gallo G.F. (159),"17170114 - C1717_05_002 - (Dags-Ds): GO, Brunetta - Forterresse - ",171701,1717,BR,mil
+17170114,G-->S,575,16,Girodo T. (575),Baietto G.F. (16),"17170114 - C1717_05_002 - (Dags-Ds): GO, Brunetta - Forterresse - ",171701,1717,BR,mil
+17170114,G-->S,575,573,Girodo T. (575),De Vallon F.G. (573),"17170114 - C1717_05_002 - (Dags-Ds): GO, Brunetta - Forterresse - ",171701,1717,BR,mil
+17170114,G-->S,575,130,Girodo T. (575),Favre F.G. (130),"17170114 - C1717_05_002 - (Dags-Ds): GO, Brunetta - Forterresse - ",171701,1717,BR,mil
+17170114,A-->S,568,117,Bioletto A. (568),Cribiatello F. (117),"17170114 - C1717_05_002 - (Dags-Ds): GO, Brunetta - Forterresse - ",171701,1717,BR,mil
+17170114,A-->S,568,159,Bioletto A. (568),Gallo G.F. (159),"17170114 - C1717_05_002 - (Dags-Ds): GO, Brunetta - Forterresse - ",171701,1717,BR,mil
+17170114,A-->S,568,16,Bioletto A. (568),Baietto G.F. (16),"17170114 - C1717_05_002 - (Dags-Ds): GO, Brunetta - Forterresse - ",171701,1717,BR,mil
+17170114,A-->S,568,573,Bioletto A. (568),De Vallon F.G. (573),"17170114 - C1717_05_002 - (Dags-Ds): GO, Brunetta - Forterresse - ",171701,1717,BR,mil
+17170114,A-->S,568,130,Bioletto A. (568),Favre F.G. (130),"17170114 - C1717_05_002 - (Dags-Ds): GO, Brunetta - Forterresse - ",171701,1717,BR,mil
+17170114,A-->G,568,575,Bioletto A. (568),Girodo T. (575),"17170114 - C1717_05_002 - (Dags-Ds): GO, Brunetta - Forterresse - ",171701,1717,BR,mil
+17170203,S---S,266,579,Pianarosa G. (266),Pinchetto B. (579),"17170203 - C1717_05_007 - (Cags-Cs): REP, Nizza - Fortifications - ",171702,1717,NIZ,mil
+17170203,S---S,266,501,Pianarosa G. (266),Menafoglio G.M. (501),"17170203 - C1717_05_007 - (Cags-Cs): REP, Nizza - Fortifications - ",171702,1717,NIZ,mil
+17170203,S---S,266,187,Pianarosa G. (266),Groppi C. (187),"17170203 - C1717_05_007 - (Cags-Cs): REP, Nizza - Fortifications - ",171702,1717,NIZ,mil
+17170203,S---S,266,223,Pianarosa G. (266),Menafoglio A. (223),"17170203 - C1717_05_007 - (Cags-Cs): REP, Nizza - Fortifications - ",171702,1717,NIZ,mil
+17170203,S---S,579,501,Pinchetto B. (579),Menafoglio G.M. (501),"17170203 - C1717_05_007 - (Cags-Cs): REP, Nizza - Fortifications - ",171702,1717,NIZ,mil
+17170203,S---S,579,187,Pinchetto B. (579),Groppi C. (187),"17170203 - C1717_05_007 - (Cags-Cs): REP, Nizza - Fortifications - ",171702,1717,NIZ,mil
+17170203,S---S,579,223,Pinchetto B. (579),Menafoglio A. (223),"17170203 - C1717_05_007 - (Cags-Cs): REP, Nizza - Fortifications - ",171702,1717,NIZ,mil
+17170203,S---S,501,187,Menafoglio G.M. (501),Groppi C. (187),"17170203 - C1717_05_007 - (Cags-Cs): REP, Nizza - Fortifications - ",171702,1717,NIZ,mil
+17170203,S---S,501,223,Menafoglio G.M. (501),Menafoglio A. (223),"17170203 - C1717_05_007 - (Cags-Cs): REP, Nizza - Fortifications - ",171702,1717,NIZ,mil
+17170203,S---S,187,223,Groppi C. (187),Menafoglio A. (223),"17170203 - C1717_05_007 - (Cags-Cs): REP, Nizza - Fortifications - ",171702,1717,NIZ,mil
+17170203,G-->S,153,266,Galimberti G.M. (153),Pianarosa G. (266),"17170203 - C1717_05_007 - (Cags-Cs): REP, Nizza - Fortifications - ",171702,1717,NIZ,mil
+17170203,G-->S,153,579,Galimberti G.M. (153),Pinchetto B. (579),"17170203 - C1717_05_007 - (Cags-Cs): REP, Nizza - Fortifications - ",171702,1717,NIZ,mil
+17170203,G-->S,153,501,Galimberti G.M. (153),Menafoglio G.M. (501),"17170203 - C1717_05_007 - (Cags-Cs): REP, Nizza - Fortifications - ",171702,1717,NIZ,mil
+17170203,G-->S,153,187,Galimberti G.M. (153),Groppi C. (187),"17170203 - C1717_05_007 - (Cags-Cs): REP, Nizza - Fortifications - ",171702,1717,NIZ,mil
+17170203,G-->S,153,223,Galimberti G.M. (153),Menafoglio A. (223),"17170203 - C1717_05_007 - (Cags-Cs): REP, Nizza - Fortifications - ",171702,1717,NIZ,mil
+17170203,A-->S,227,266,Menafoglio F.A. (227),Pianarosa G. (266),"17170203 - C1717_05_007 - (Cags-Cs): REP, Nizza - Fortifications - ",171702,1717,NIZ,mil
+17170203,A-->S,227,579,Menafoglio F.A. (227),Pinchetto B. (579),"17170203 - C1717_05_007 - (Cags-Cs): REP, Nizza - Fortifications - ",171702,1717,NIZ,mil
+17170203,A-->S,227,501,Menafoglio F.A. (227),Menafoglio G.M. (501),"17170203 - C1717_05_007 - (Cags-Cs): REP, Nizza - Fortifications - ",171702,1717,NIZ,mil
+17170203,A-->S,227,187,Menafoglio F.A. (227),Groppi C. (187),"17170203 - C1717_05_007 - (Cags-Cs): REP, Nizza - Fortifications - ",171702,1717,NIZ,mil
+17170203,A-->S,227,223,Menafoglio F.A. (227),Menafoglio A. (223),"17170203 - C1717_05_007 - (Cags-Cs): REP, Nizza - Fortifications - ",171702,1717,NIZ,mil
+17170203,A-->G,227,153,Menafoglio F.A. (227),Galimberti G.M. (153),"17170203 - C1717_05_007 - (Cags-Cs): REP, Nizza - Fortifications - ",171702,1717,NIZ,mil
+17170208,S---S,288,97,Quadrone B. (288),Casella A. (97),"17170208 - C1717_05_014 - (Dags-Ds): MO, Venaria - Chapelle royale - ",171702,1717,VEN,rel
+17170211,G-->S,369,592,Ugliengo C.M. (369),Giudice F.M. (592),"17170211 - C1717_05_017 - (Dags-Cs): MO, Rivolli - Chateau - ",171702,1717,RI,civ
+17170211,A-->S,248,592,Parodi G.B. (248),Giudice F.M. (592),"17170211 - C1717_05_017 - (Dags-Cs): MO, Rivolli - Chateau - ",171702,1717,RI,civ
+17170211,A-->G,248,369,Parodi G.B. (248),Ugliengo C.M. (369),"17170211 - C1717_05_017 - (Dags-Cs): MO, Rivolli - Chateau - ",171702,1717,RI,civ
+17170220,S---S,202,316,Maciotta G. (202),Romano T. (316),"17170220 - C1717_05_021 - (Cags-Cs): REP, Fleuve Ceronda - ",171702,1717,VEN,civ
+17170220,S---S,202,62,Maciotta G. (202),Boggio P. (62),"17170220 - C1717_05_021 - (Cags-Cs): REP, Fleuve Ceronda - ",171702,1717,VEN,civ
+17170220,S---S,202,283,Maciotta G. (202),Pistone G.A. (283),"17170220 - C1717_05_021 - (Cags-Cs): REP, Fleuve Ceronda - ",171702,1717,VEN,civ
+17170220,S---S,316,62,Romano T. (316),Boggio P. (62),"17170220 - C1717_05_021 - (Cags-Cs): REP, Fleuve Ceronda - ",171702,1717,VEN,civ
+17170220,S---S,316,283,Romano T. (316),Pistone G.A. (283),"17170220 - C1717_05_021 - (Cags-Cs): REP, Fleuve Ceronda - ",171702,1717,VEN,civ
+17170220,S---S,62,283,Boggio P. (62),Pistone G.A. (283),"17170220 - C1717_05_021 - (Cags-Cs): REP, Fleuve Ceronda - ",171702,1717,VEN,civ
+17170220,S---S,275,226,Pinchetti D. (275),Menafoglio C.A. (226),"17170220 - C1717_05_027 - (Cags-Cs): DIV, Fleuve Ceronda - ",171702,1717,VEN,civ
+17170220,G-->S,227,275,Menafoglio F.A. (227),Pinchetti D. (275),"17170220 - C1717_05_027 - (Cags-Cs): DIV, Fleuve Ceronda - ",171702,1717,VEN,civ
+17170220,G-->S,227,226,Menafoglio F.A. (227),Menafoglio C.A. (226),"17170220 - C1717_05_027 - (Cags-Cs): DIV, Fleuve Ceronda - ",171702,1717,VEN,civ
+17170220,A-->S,272,275,Piazzollo F. (272),Pinchetti D. (275),"17170220 - C1717_05_027 - (Cags-Cs): DIV, Fleuve Ceronda - ",171702,1717,VEN,civ
+17170220,A-->S,272,226,Piazzollo F. (272),Menafoglio C.A. (226),"17170220 - C1717_05_027 - (Cags-Cs): DIV, Fleuve Ceronda - ",171702,1717,VEN,civ
+17170220,A-->G,272,227,Piazzollo F. (272),Menafoglio F.A. (227),"17170220 - C1717_05_027 - (Cags-Cs): DIV, Fleuve Ceronda - ",171702,1717,VEN,civ
+17170301,S---S,586,591,Servo G. (586),Fontana G.D. (591),"17170301 - C1717_05_030 - (Cags-Cs): GO, Venaria reale - route - ",171703,1717,VEN,civ
+17170301,G-->S,114,586,Corte G. (114),Servo G. (586),"17170301 - C1717_05_030 - (Cags-Cs): GO, Venaria reale - route - ",171703,1717,VEN,civ
+17170301,G-->S,114,591,Corte G. (114),Fontana G.D. (591),"17170301 - C1717_05_030 - (Cags-Cs): GO, Venaria reale - route - ",171703,1717,VEN,civ
+17170301,A-->S,566,586,Bello G.B. (566),Servo G. (586),"17170301 - C1717_05_030 - (Cags-Cs): GO, Venaria reale - route - ",171703,1717,VEN,civ
+17170301,A-->S,566,591,Bello G.B. (566),Fontana G.D. (591),"17170301 - C1717_05_030 - (Cags-Cs): GO, Venaria reale - route - ",171703,1717,VEN,civ
+17170301,A-->G,566,114,Bello G.B. (566),Corte G. (114),"17170301 - C1717_05_030 - (Cags-Cs): GO, Venaria reale - route - ",171703,1717,VEN,civ
+17170310,S---S,302,580,Righino P.A. (302),Richettino B. (580),"17170310 - C1717_05_034 - (Cags-Cs): REP, Turin - Citadelle - ",171703,1717,TO,mil
+17170310,G-->S,227,302,Menafoglio F.A. (227),Righino P.A. (302),"17170310 - C1717_05_034 - (Cags-Cs): REP, Turin - Citadelle - ",171703,1717,TO,mil
+17170310,G-->S,227,580,Menafoglio F.A. (227),Richettino B. (580),"17170310 - C1717_05_034 - (Cags-Cs): REP, Turin - Citadelle - ",171703,1717,TO,mil
+17170310,A-->S,384,302,Violino P.G. (384),Righino P.A. (302),"17170310 - C1717_05_034 - (Cags-Cs): REP, Turin - Citadelle - ",171703,1717,TO,mil
+17170310,A-->S,384,580,Violino P.G. (384),Richettino B. (580),"17170310 - C1717_05_034 - (Cags-Cs): REP, Turin - Citadelle - ",171703,1717,TO,mil
+17170310,A-->G,384,227,Violino P.G. (384),Menafoglio F.A. (227),"17170310 - C1717_05_034 - (Cags-Cs): REP, Turin - Citadelle - ",171703,1717,TO,mil
+17170408,S---S,292,50,Rechettino A. (292),Bianco A. (50),"17170408 - C1717_05_039 - (Cags-Cs): GO, Valdocco - Forge - ",171704,1717,VALD,mil
+17170408,S---S,292,298,Rechettino A. (292),Righino F.M. (298),"17170408 - C1717_05_039 - (Cags-Cs): GO, Valdocco - Forge - ",171704,1717,VALD,mil
+17170408,S---S,50,298,Bianco A. (50),Righino F.M. (298),"17170408 - C1717_05_039 - (Cags-Cs): GO, Valdocco - Forge - ",171704,1717,VALD,mil
+17170408,G-->S,153,292,Galimberti G.M. (153),Rechettino A. (292),"17170408 - C1717_05_039 - (Cags-Cs): GO, Valdocco - Forge - ",171704,1717,VALD,mil
+17170408,G-->S,153,50,Galimberti G.M. (153),Bianco A. (50),"17170408 - C1717_05_039 - (Cags-Cs): GO, Valdocco - Forge - ",171704,1717,VALD,mil
+17170408,G-->S,153,298,Galimberti G.M. (153),Righino F.M. (298),"17170408 - C1717_05_039 - (Cags-Cs): GO, Valdocco - Forge - ",171704,1717,VALD,mil
+17170408,A-->S,593,292,Laurenti D. (593),Rechettino A. (292),"17170408 - C1717_05_039 - (Cags-Cs): GO, Valdocco - Forge - ",171704,1717,VALD,mil
+17170408,A-->S,593,50,Laurenti D. (593),Bianco A. (50),"17170408 - C1717_05_039 - (Cags-Cs): GO, Valdocco - Forge - ",171704,1717,VALD,mil
+17170408,A-->S,593,298,Laurenti D. (593),Righino F.M. (298),"17170408 - C1717_05_039 - (Cags-Cs): GO, Valdocco - Forge - ",171704,1717,VALD,mil
+17170408,A-->G,593,153,Laurenti D. (593),Galimberti G.M. (153),"17170408 - C1717_05_039 - (Cags-Cs): GO, Valdocco - Forge - ",171704,1717,VALD,mil
+17170423,S---S,288,592,Quadrone B. (288),Giudice F.M. (592),"17170423 - C1717_05_046 - (Cags-Cs): MO, Rivolli - Chateau - ",171704,1717,RI,civ
+17170423,S---S,288,578,Quadrone B. (288),Piazzollo C. (578),"17170423 - C1717_05_046 - (Cags-Cs): MO, Rivolli - Chateau - ",171704,1717,RI,civ
+17170423,S---S,592,578,Giudice F.M. (592),Piazzollo C. (578),"17170423 - C1717_05_046 - (Cags-Cs): MO, Rivolli - Chateau - ",171704,1717,RI,civ
+17170528,G-->S,389,369,Zo C.A. (389),Ugliengo C.M. (369),"17170528 - C1717_05_048 - (Dags-Cs): DIV, Venaria reale - ",171705,1717,VEN,civ
+17170528,A-->S,590,369,Tempia B. (590),Ugliengo C.M. (369),"17170528 - C1717_05_048 - (Dags-Cs): DIV, Venaria reale - ",171705,1717,VEN,civ
+17170528,A-->G,590,389,Tempia B. (590),Zo C.A. (389),"17170528 - C1717_05_048 - (Dags-Cs): DIV, Venaria reale - ",171705,1717,VEN,civ
+17170602,S---S,584,585,Scala F.M. (584),Scala G.A. (585),"17170602 - C1717_05_054 - (Cags-Cs): MO, Rivolli - Chateau - ",171706,1717,RI,civ
+17170602,S---S,584,576,Scala F.M. (584),Muttoni P.G. (576),"17170602 - C1717_05_054 - (Cags-Cs): MO, Rivolli - Chateau - ",171706,1717,RI,civ
+17170602,S---S,585,576,Scala G.A. (585),Muttoni P.G. (576),"17170602 - C1717_05_054 - (Cags-Cs): MO, Rivolli - Chateau - ",171706,1717,RI,civ
+17170621,S---S,570,545,Clemente B. (570),Teppa L.G. (545),"17170621 - C1717_05_058 - (Cags-Cs): MO, Turin - Caserne Citadelle - ",171706,1717,TO,mil
+17170621,S---S,392,100,Zo G.H. (392),Castelli M.F. (100),"17170621 - C1717_05_060 - (Dags-Ds): MO, Venaria reale - ",171706,1717,VEN,civ
+17170621,G-->S,389,392,Zo C.A. (389),Zo G.H. (392),"17170621 - C1717_05_060 - (Dags-Ds): MO, Venaria reale - ",171706,1717,VEN,civ
+17170621,G-->S,389,100,Zo C.A. (389),Castelli M.F. (100),"17170621 - C1717_05_060 - (Dags-Ds): MO, Venaria reale - ",171706,1717,VEN,civ
+17170621,A-->S,329,392,Sali?P. (329),Zo G.H. (392),"17170621 - C1717_05_060 - (Dags-Ds): MO, Venaria reale - ",171706,1717,VEN,civ
+17170621,A-->S,329,100,Sali?P. (329),Castelli M.F. (100),"17170621 - C1717_05_060 - (Dags-Ds): MO, Venaria reale - ",171706,1717,VEN,civ
+17170621,A-->G,329,389,Sali?P. (329),Zo C.A. (389),"17170621 - C1717_05_060 - (Dags-Ds): MO, Venaria reale - ",171706,1717,VEN,civ
+17170628,G-->S,567,546,Beltrandi G. (567),Tirolo G.B. (546),"17170628 - C1717_05_063 - (Dags-Cs): MO, Venaria reale - ",171706,1717,VEN,civ
+17170628,A-->S,578,546,Piazzollo C. (578),Tirolo G.B. (546),"17170628 - C1717_05_063 - (Dags-Cs): MO, Venaria reale - ",171706,1717,VEN,civ
+17170628,A-->G,578,567,Piazzollo C. (578),Beltrandi G. (567),"17170628 - C1717_05_063 - (Dags-Cs): MO, Venaria reale - ",171706,1717,VEN,civ
+17170628,G-->S,594,369,Lemoine F. (594),Ugliengo C.M. (369),"17170628 - C1717_05_066 - (Dags-Cs): DIV, Venaria reale - ",171706,1717,VEN,civ
+17170628,A-->S,572,369,De Gotte H. (572),Ugliengo C.M. (369),"17170628 - C1717_05_066 - (Dags-Cs): DIV, Venaria reale - ",171706,1717,VEN,civ
+17170628,A-->G,572,594,De Gotte H. (572),Lemoine F. (594),"17170628 - C1717_05_066 - (Dags-Cs): DIV, Venaria reale - ",171706,1717,VEN,civ
+17170705,S---S,117,573,Cribiatello F. (117),De Vallon F.G. (573),"17170705 - C1717_05_072 - (Dags-Ds): GO, Brunetta - Forterresse - ",171707,1717,BR,mil
+17170705,S---S,117,361,Cribiatello F. (117),Toscanello F. (361),"17170705 - C1717_05_072 - (Dags-Ds): GO, Brunetta - Forterresse - ",171707,1717,BR,mil
+17170705,S---S,573,361,De Vallon F.G. (573),Toscanello F. (361),"17170705 - C1717_05_072 - (Dags-Ds): GO, Brunetta - Forterresse - ",171707,1717,BR,mil
+17170705,G-->S,575,117,Girodo T. (575),Cribiatello F. (117),"17170705 - C1717_05_072 - (Dags-Ds): GO, Brunetta - Forterresse - ",171707,1717,BR,mil
+17170705,G-->S,575,573,Girodo T. (575),De Vallon F.G. (573),"17170705 - C1717_05_072 - (Dags-Ds): GO, Brunetta - Forterresse - ",171707,1717,BR,mil
+17170705,G-->S,575,361,Girodo T. (575),Toscanello F. (361),"17170705 - C1717_05_072 - (Dags-Ds): GO, Brunetta - Forterresse - ",171707,1717,BR,mil
+17170705,A-->S,399,117,Baietto F. (399),Cribiatello F. (117),"17170705 - C1717_05_072 - (Dags-Ds): GO, Brunetta - Forterresse - ",171707,1717,BR,mil
+17170705,A-->S,399,573,Baietto F. (399),De Vallon F.G. (573),"17170705 - C1717_05_072 - (Dags-Ds): GO, Brunetta - Forterresse - ",171707,1717,BR,mil
+17170705,A-->S,399,361,Baietto F. (399),Toscanello F. (361),"17170705 - C1717_05_072 - (Dags-Ds): GO, Brunetta - Forterresse - ",171707,1717,BR,mil
+17170705,A-->G,399,575,Baietto F. (399),Girodo T. (575),"17170705 - C1717_05_072 - (Dags-Ds): GO, Brunetta - Forterresse - ",171707,1717,BR,mil
+17170710,S---S,223,275,Menafoglio A. (223),Pinchetti D. (275),"17170710 - C1717_05_077 - (Cags-Cs): REP, Casale - Chateau - ",171707,1717,CA,mil
+17170710,S---S,223,266,Menafoglio A. (223),Pianarosa G. (266),"17170710 - C1717_05_077 - (Cags-Cs): REP, Casale - Chateau - ",171707,1717,CA,mil
+17170710,S---S,223,226,Menafoglio A. (223),Menafoglio C.A. (226),"17170710 - C1717_05_077 - (Cags-Cs): REP, Casale - Chateau - ",171707,1717,CA,mil
+17170710,S---S,223,301,Menafoglio A. (223),Righino P. (301),"17170710 - C1717_05_077 - (Cags-Cs): REP, Casale - Chateau - ",171707,1717,CA,mil
+17170710,S---S,275,266,Pinchetti D. (275),Pianarosa G. (266),"17170710 - C1717_05_077 - (Cags-Cs): REP, Casale - Chateau - ",171707,1717,CA,mil
+17170710,S---S,275,226,Pinchetti D. (275),Menafoglio C.A. (226),"17170710 - C1717_05_077 - (Cags-Cs): REP, Casale - Chateau - ",171707,1717,CA,mil
+17170710,S---S,275,301,Pinchetti D. (275),Righino P. (301),"17170710 - C1717_05_077 - (Cags-Cs): REP, Casale - Chateau - ",171707,1717,CA,mil
+17170710,S---S,266,226,Pianarosa G. (266),Menafoglio C.A. (226),"17170710 - C1717_05_077 - (Cags-Cs): REP, Casale - Chateau - ",171707,1717,CA,mil
+17170710,S---S,266,301,Pianarosa G. (266),Righino P. (301),"17170710 - C1717_05_077 - (Cags-Cs): REP, Casale - Chateau - ",171707,1717,CA,mil
+17170710,S---S,226,301,Menafoglio C.A. (226),Righino P. (301),"17170710 - C1717_05_077 - (Cags-Cs): REP, Casale - Chateau - ",171707,1717,CA,mil
+17170710,G-->S,272,223,Piazzollo F. (272),Menafoglio A. (223),"17170710 - C1717_05_077 - (Cags-Cs): REP, Casale - Chateau - ",171707,1717,CA,mil
+17170710,G-->S,272,275,Piazzollo F. (272),Pinchetti D. (275),"17170710 - C1717_05_077 - (Cags-Cs): REP, Casale - Chateau - ",171707,1717,CA,mil
+17170710,G-->S,272,266,Piazzollo F. (272),Pianarosa G. (266),"17170710 - C1717_05_077 - (Cags-Cs): REP, Casale - Chateau - ",171707,1717,CA,mil
+17170710,G-->S,272,226,Piazzollo F. (272),Menafoglio C.A. (226),"17170710 - C1717_05_077 - (Cags-Cs): REP, Casale - Chateau - ",171707,1717,CA,mil
+17170710,G-->S,272,301,Piazzollo F. (272),Righino P. (301),"17170710 - C1717_05_077 - (Cags-Cs): REP, Casale - Chateau - ",171707,1717,CA,mil
+17170710,A-->S,62,223,Boggio P. (62),Menafoglio A. (223),"17170710 - C1717_05_077 - (Cags-Cs): REP, Casale - Chateau - ",171707,1717,CA,mil
+17170710,A-->S,62,275,Boggio P. (62),Pinchetti D. (275),"17170710 - C1717_05_077 - (Cags-Cs): REP, Casale - Chateau - ",171707,1717,CA,mil
+17170710,A-->S,62,266,Boggio P. (62),Pianarosa G. (266),"17170710 - C1717_05_077 - (Cags-Cs): REP, Casale - Chateau - ",171707,1717,CA,mil
+17170710,A-->S,62,226,Boggio P. (62),Menafoglio C.A. (226),"17170710 - C1717_05_077 - (Cags-Cs): REP, Casale - Chateau - ",171707,1717,CA,mil
+17170710,A-->S,62,301,Boggio P. (62),Righino P. (301),"17170710 - C1717_05_077 - (Cags-Cs): REP, Casale - Chateau - ",171707,1717,CA,mil
+17170710,A-->G,62,272,Boggio P. (62),Piazzollo F. (272),"17170710 - C1717_05_077 - (Cags-Cs): REP, Casale - Chateau - ",171707,1717,CA,mil
+17170710,S---S,117,573,Cribiatello F. (117),De Vallon F.G. (573),"17170710 - C1717_05_080 - (Dags-Ds): REP, Valenza - Fortifications - ",171707,1717,VAL,mil
+17170710,G-->S,253,117,Peijrone F. (253),Cribiatello F. (117),"17170710 - C1717_05_080 - (Dags-Ds): REP, Valenza - Fortifications - ",171707,1717,VAL,mil
+17170710,G-->S,253,573,Peijrone F. (253),De Vallon F.G. (573),"17170710 - C1717_05_080 - (Dags-Ds): REP, Valenza - Fortifications - ",171707,1717,VAL,mil
+17170710,A-->S,436,117,Chianale G. (436),Cribiatello F. (117),"17170710 - C1717_05_080 - (Dags-Ds): REP, Valenza - Fortifications - ",171707,1717,VAL,mil
+17170710,A-->S,436,573,Chianale G. (436),De Vallon F.G. (573),"17170710 - C1717_05_080 - (Dags-Ds): REP, Valenza - Fortifications - ",171707,1717,VAL,mil
+17170710,A-->G,436,253,Chianale G. (436),Peijrone F. (253),"17170710 - C1717_05_080 - (Dags-Ds): REP, Valenza - Fortifications - ",171707,1717,VAL,mil
+17170911,S---S,582,562,Rosso G.M. (582),Agli C. (562),"17170911 - C1717_05_094 - (Cags-Cs): MO, Rivolli - Chateau - ",171709,1717,RI,civ
+17170911,S---S,582,563,Rosso G.M. (582),Agli F. (563),"17170911 - C1717_05_094 - (Cags-Cs): MO, Rivolli - Chateau - ",171709,1717,RI,civ
+17170911,S---S,582,537,Rosso G.M. (582),Rosso S. (537),"17170911 - C1717_05_094 - (Cags-Cs): MO, Rivolli - Chateau - ",171709,1717,RI,civ
+17170911,S---S,582,534,Rosso G.M. (582),Rosso F. (534),"17170911 - C1717_05_094 - (Cags-Cs): MO, Rivolli - Chateau - ",171709,1717,RI,civ
+17170911,S---S,582,133,Rosso G.M. (582),Ferrari G. (133),"17170911 - C1717_05_094 - (Cags-Cs): MO, Rivolli - Chateau - ",171709,1717,RI,civ
+17170911,S---S,582,581,Rosso G.M. (582),Rosso G.B. (581),"17170911 - C1717_05_094 - (Cags-Cs): MO, Rivolli - Chateau - ",171709,1717,RI,civ
+17170911,S---S,582,574,Rosso G.M. (582),Fossato F.A. (574),"17170911 - C1717_05_094 - (Cags-Cs): MO, Rivolli - Chateau - ",171709,1717,RI,civ
+17170911,S---S,562,563,Agli C. (562),Agli F. (563),"17170911 - C1717_05_094 - (Cags-Cs): MO, Rivolli - Chateau - ",171709,1717,RI,civ
+17170911,S---S,562,537,Agli C. (562),Rosso S. (537),"17170911 - C1717_05_094 - (Cags-Cs): MO, Rivolli - Chateau - ",171709,1717,RI,civ
+17170911,S---S,562,534,Agli C. (562),Rosso F. (534),"17170911 - C1717_05_094 - (Cags-Cs): MO, Rivolli - Chateau - ",171709,1717,RI,civ
+17170911,S---S,562,133,Agli C. (562),Ferrari G. (133),"17170911 - C1717_05_094 - (Cags-Cs): MO, Rivolli - Chateau - ",171709,1717,RI,civ
+17170911,S---S,562,581,Agli C. (562),Rosso G.B. (581),"17170911 - C1717_05_094 - (Cags-Cs): MO, Rivolli - Chateau - ",171709,1717,RI,civ
+17170911,S---S,562,574,Agli C. (562),Fossato F.A. (574),"17170911 - C1717_05_094 - (Cags-Cs): MO, Rivolli - Chateau - ",171709,1717,RI,civ
+17170911,S---S,563,537,Agli F. (563),Rosso S. (537),"17170911 - C1717_05_094 - (Cags-Cs): MO, Rivolli - Chateau - ",171709,1717,RI,civ
+17170911,S---S,563,534,Agli F. (563),Rosso F. (534),"17170911 - C1717_05_094 - (Cags-Cs): MO, Rivolli - Chateau - ",171709,1717,RI,civ
+17170911,S---S,563,133,Agli F. (563),Ferrari G. (133),"17170911 - C1717_05_094 - (Cags-Cs): MO, Rivolli - Chateau - ",171709,1717,RI,civ
+17170911,S---S,563,581,Agli F. (563),Rosso G.B. (581),"17170911 - C1717_05_094 - (Cags-Cs): MO, Rivolli - Chateau - ",171709,1717,RI,civ
+17170911,S---S,563,574,Agli F. (563),Fossato F.A. (574),"17170911 - C1717_05_094 - (Cags-Cs): MO, Rivolli - Chateau - ",171709,1717,RI,civ
+17170911,S---S,537,534,Rosso S. (537),Rosso F. (534),"17170911 - C1717_05_094 - (Cags-Cs): MO, Rivolli - Chateau - ",171709,1717,RI,civ
+17170911,S---S,537,133,Rosso S. (537),Ferrari G. (133),"17170911 - C1717_05_094 - (Cags-Cs): MO, Rivolli - Chateau - ",171709,1717,RI,civ
+17170911,S---S,537,581,Rosso S. (537),Rosso G.B. (581),"17170911 - C1717_05_094 - (Cags-Cs): MO, Rivolli - Chateau - ",171709,1717,RI,civ
+17170911,S---S,537,574,Rosso S. (537),Fossato F.A. (574),"17170911 - C1717_05_094 - (Cags-Cs): MO, Rivolli - Chateau - ",171709,1717,RI,civ
+17170911,S---S,534,133,Rosso F. (534),Ferrari G. (133),"17170911 - C1717_05_094 - (Cags-Cs): MO, Rivolli - Chateau - ",171709,1717,RI,civ
+17170911,S---S,534,581,Rosso F. (534),Rosso G.B. (581),"17170911 - C1717_05_094 - (Cags-Cs): MO, Rivolli - Chateau - ",171709,1717,RI,civ
+17170911,S---S,534,574,Rosso F. (534),Fossato F.A. (574),"17170911 - C1717_05_094 - (Cags-Cs): MO, Rivolli - Chateau - ",171709,1717,RI,civ
+17170911,S---S,133,581,Ferrari G. (133),Rosso G.B. (581),"17170911 - C1717_05_094 - (Cags-Cs): MO, Rivolli - Chateau - ",171709,1717,RI,civ
+17170911,S---S,133,574,Ferrari G. (133),Fossato F.A. (574),"17170911 - C1717_05_094 - (Cags-Cs): MO, Rivolli - Chateau - ",171709,1717,RI,civ
+17170911,S---S,581,574,Rosso G.B. (581),Fossato F.A. (574),"17170911 - C1717_05_094 - (Cags-Cs): MO, Rivolli - Chateau - ",171709,1717,RI,civ
+17171109,S---S,582,581,Rosso G.M. (582),Rosso G.B. (581),"17171109 - C1717_05_097 - (Cags-Cs): MO, Rivolli - Chateau - ",171711,1717,RI,civ
+17171109,S---S,582,534,Rosso G.M. (582),Rosso F. (534),"17171109 - C1717_05_097 - (Cags-Cs): MO, Rivolli - Chateau - ",171711,1717,RI,civ
+17171109,S---S,582,574,Rosso G.M. (582),Fossato F.A. (574),"17171109 - C1717_05_097 - (Cags-Cs): MO, Rivolli - Chateau - ",171711,1717,RI,civ
+17171109,S---S,582,133,Rosso G.M. (582),Ferrari G. (133),"17171109 - C1717_05_097 - (Cags-Cs): MO, Rivolli - Chateau - ",171711,1717,RI,civ
+17171109,S---S,582,562,Rosso G.M. (582),Agli C. (562),"17171109 - C1717_05_097 - (Cags-Cs): MO, Rivolli - Chateau - ",171711,1717,RI,civ
+17171109,S---S,582,563,Rosso G.M. (582),Agli F. (563),"17171109 - C1717_05_097 - (Cags-Cs): MO, Rivolli - Chateau - ",171711,1717,RI,civ
+17171109,S---S,581,534,Rosso G.B. (581),Rosso F. (534),"17171109 - C1717_05_097 - (Cags-Cs): MO, Rivolli - Chateau - ",171711,1717,RI,civ
+17171109,S---S,581,574,Rosso G.B. (581),Fossato F.A. (574),"17171109 - C1717_05_097 - (Cags-Cs): MO, Rivolli - Chateau - ",171711,1717,RI,civ
+17171109,S---S,581,133,Rosso G.B. (581),Ferrari G. (133),"17171109 - C1717_05_097 - (Cags-Cs): MO, Rivolli - Chateau - ",171711,1717,RI,civ
+17171109,S---S,581,562,Rosso G.B. (581),Agli C. (562),"17171109 - C1717_05_097 - (Cags-Cs): MO, Rivolli - Chateau - ",171711,1717,RI,civ
+17171109,S---S,581,563,Rosso G.B. (581),Agli F. (563),"17171109 - C1717_05_097 - (Cags-Cs): MO, Rivolli - Chateau - ",171711,1717,RI,civ
+17171109,S---S,534,574,Rosso F. (534),Fossato F.A. (574),"17171109 - C1717_05_097 - (Cags-Cs): MO, Rivolli - Chateau - ",171711,1717,RI,civ
+17171109,S---S,534,133,Rosso F. (534),Ferrari G. (133),"17171109 - C1717_05_097 - (Cags-Cs): MO, Rivolli - Chateau - ",171711,1717,RI,civ
+17171109,S---S,534,562,Rosso F. (534),Agli C. (562),"17171109 - C1717_05_097 - (Cags-Cs): MO, Rivolli - Chateau - ",171711,1717,RI,civ
+17171109,S---S,534,563,Rosso F. (534),Agli F. (563),"17171109 - C1717_05_097 - (Cags-Cs): MO, Rivolli - Chateau - ",171711,1717,RI,civ
+17171109,S---S,574,133,Fossato F.A. (574),Ferrari G. (133),"17171109 - C1717_05_097 - (Cags-Cs): MO, Rivolli - Chateau - ",171711,1717,RI,civ
+17171109,S---S,574,562,Fossato F.A. (574),Agli C. (562),"17171109 - C1717_05_097 - (Cags-Cs): MO, Rivolli - Chateau - ",171711,1717,RI,civ
+17171109,S---S,574,563,Fossato F.A. (574),Agli F. (563),"17171109 - C1717_05_097 - (Cags-Cs): MO, Rivolli - Chateau - ",171711,1717,RI,civ
+17171109,S---S,133,562,Ferrari G. (133),Agli C. (562),"17171109 - C1717_05_097 - (Cags-Cs): MO, Rivolli - Chateau - ",171711,1717,RI,civ
+17171109,S---S,133,563,Ferrari G. (133),Agli F. (563),"17171109 - C1717_05_097 - (Cags-Cs): MO, Rivolli - Chateau - ",171711,1717,RI,civ
+17171109,S---S,562,563,Agli C. (562),Agli F. (563),"17171109 - C1717_05_097 - (Cags-Cs): MO, Rivolli - Chateau - ",171711,1717,RI,civ
+17171211,S---S,23,28,Bello G. (23),Bello P.M. (28),"17171211 - C1717_05_100 - (Cags-Cs): GO, Turin - Porta Susina - Fortification  - ",171712,1717,TO,mil
+17170216,S---S,44,314,Bertoglio G.D. (44),Rocco N. (314),"17170216 - C1717_S100_012 - (Cags-Cs): DIV, Superga - Basilique - ",171702,1717,SUP,rel
+17170216,S---S,44,364,Bertoglio G.D. (44),Trivero G.B. (364),"17170216 - C1717_S100_012 - (Cags-Cs): DIV, Superga - Basilique - ",171702,1717,SUP,rel
+17170216,S---S,44,604,Bertoglio G.D. (44),Fenoglio S. (604),"17170216 - C1717_S100_012 - (Cags-Cs): DIV, Superga - Basilique - ",171702,1717,SUP,rel
+17170216,S---S,314,364,Rocco N. (314),Trivero G.B. (364),"17170216 - C1717_S100_012 - (Cags-Cs): DIV, Superga - Basilique - ",171702,1717,SUP,rel
+17170216,S---S,314,604,Rocco N. (314),Fenoglio S. (604),"17170216 - C1717_S100_012 - (Cags-Cs): DIV, Superga - Basilique - ",171702,1717,SUP,rel
+17170216,S---S,364,604,Trivero G.B. (364),Fenoglio S. (604),"17170216 - C1717_S100_012 - (Cags-Cs): DIV, Superga - Basilique - ",171702,1717,SUP,rel
+17170216,G-->S,365,44,Trivero V. (365),Bertoglio G.D. (44),"17170216 - C1717_S100_012 - (Cags-Cs): DIV, Superga - Basilique - ",171702,1717,SUP,rel
+17170216,G-->S,365,314,Trivero V. (365),Rocco N. (314),"17170216 - C1717_S100_012 - (Cags-Cs): DIV, Superga - Basilique - ",171702,1717,SUP,rel
+17170216,G-->S,365,364,Trivero V. (365),Trivero G.B. (364),"17170216 - C1717_S100_012 - (Cags-Cs): DIV, Superga - Basilique - ",171702,1717,SUP,rel
+17170216,G-->S,365,604,Trivero V. (365),Fenoglio S. (604),"17170216 - C1717_S100_012 - (Cags-Cs): DIV, Superga - Basilique - ",171702,1717,SUP,rel
+17170216,A-->S,42,44,Bertinetti P. (42),Bertoglio G.D. (44),"17170216 - C1717_S100_012 - (Cags-Cs): DIV, Superga - Basilique - ",171702,1717,SUP,rel
+17170216,A-->S,42,314,Bertinetti P. (42),Rocco N. (314),"17170216 - C1717_S100_012 - (Cags-Cs): DIV, Superga - Basilique - ",171702,1717,SUP,rel
+17170216,A-->S,42,364,Bertinetti P. (42),Trivero G.B. (364),"17170216 - C1717_S100_012 - (Cags-Cs): DIV, Superga - Basilique - ",171702,1717,SUP,rel
+17170216,A-->S,42,604,Bertinetti P. (42),Fenoglio S. (604),"17170216 - C1717_S100_012 - (Cags-Cs): DIV, Superga - Basilique - ",171702,1717,SUP,rel
+17170216,A-->G,42,365,Bertinetti P. (42),Trivero V. (365),"17170216 - C1717_S100_012 - (Cags-Cs): DIV, Superga - Basilique - ",171702,1717,SUP,rel
+17170225,G-->S,42,608,Bertinetti P. (42),Pia D. (608),"17170225 - C1717_S100_014 - (Cags-Cs): DIV, Superga - Basilique - ",171702,1717,SUP,rel
+17170306,S---S,611,612,Signori S. (611),Trogli F. (612),"17170306 - C1717_S100_016 - (Cags-Cs): GO, Superga - Basilique - ",171703,1717,SUP,rel
+17170306,G-->S,616,611,Valsecchi G.D. (616),Signori S. (611),"17170306 - C1717_S100_016 - (Cags-Cs): GO, Superga - Basilique - ",171703,1717,SUP,rel
+17170306,G-->S,616,612,Valsecchi G.D. (616),Trogli F. (612),"17170306 - C1717_S100_016 - (Cags-Cs): GO, Superga - Basilique - ",171703,1717,SUP,rel
+17170306,A-->S,430,611,Calderara G.P. (430),Signori S. (611),"17170306 - C1717_S100_016 - (Cags-Cs): GO, Superga - Basilique - ",171703,1717,SUP,rel
+17170306,A-->S,430,612,Calderara G.P. (430),Trogli F. (612),"17170306 - C1717_S100_016 - (Cags-Cs): GO, Superga - Basilique - ",171703,1717,SUP,rel
+17170306,A-->G,430,616,Calderara G.P. (430),Valsecchi G.D. (616),"17170306 - C1717_S100_016 - (Cags-Cs): GO, Superga - Basilique - ",171703,1717,SUP,rel

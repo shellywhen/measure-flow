@@ -65,10 +65,10 @@ let linkSchema6 = {
   target: 8
 }
 let linkSchema5 = {
-  time: 14,
-  source: 10,
-  target: 11,
-  linkType: 21
+  time: 0,
+  source: 4,
+  target: 5,
+  linkType: 1
 }
 let linkSchema7 = {
   source: 1,
@@ -89,16 +89,17 @@ let linkSchema9 = {
 const configMap = {
   'scientists': [linkSchema1, 'DD/MM/YYYY'],
   'Diplomatic Exchange': [linkSchema2 ,'YYYY'],
-  'Marie Boucher': [linkSchema3, 'DD/MM/YYYY'],
+  'Merchant': [linkSchema3, 'DD/MM/YYYY'],
   'Marie-Colombu': [linkSchema4, 'DD/MM/YYYY'],
-  'Rolla Cristofoli': [linkSchema5, 'DDMMYY'],
+  'Rolla-Cristofoli': [linkSchema5, 'YYYYMMDD'],
   'Marguerite': [linkSchema6, 'DD-MM-YYYY'],
   'Highschool': [linkSchema7, 'MM/DD/YYYY HH:mm:ss'],
   'Contract': [linkSchema8, 'YYYYMMDD'],
-  'sampled_twitter': [linkSchema9, 'YYYY-MM-DD HH:mm:ss']
+  'sampled_twitter': [linkSchema9, 'YYYY-MM-DD HH:mm:ss'],
 }
 let dataFileName = networkcube.getUrlVars()['datasetName'].replace(/___/g, ' ')
 let config = configMap[dataFileName]
+console.log(dataFileName)
 // 'DiplomaticExchange.csv' //  'DD/MM/YYYY'
 let url = `${domain}${dataFolder}/${dataFileName}.csv`
 // load data file with the above link schema
