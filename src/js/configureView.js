@@ -27,6 +27,8 @@ let addStyleConfig = function(divId, title, callback, min = 0, max = 3, value = 
 let changeNodeSize = function(x) {
   d3.selectAll('.nodes')
     .attr('r', d => x * NodeLink.getNodeRadius(d))
+  d3.selectAll('.back-nodes')
+    .attr('r', d => x * 1)
 }
 
 let changeLinkWidth = function(x) {
@@ -199,7 +201,7 @@ let addLocalMeasureDropdown = function(divId) {
 let addDatasetOption = function() {
   d3.select('#dataset-selection')
     .selectAll('a')
-    .data(['Rolla-Cristofoli', 'Marguerite', 'Merchant', 'Marie-Colombu', 'Highschool', 'Diplomatic Exchange', 'sampled_twitter'])
+    .data(['Rolla-Cristofoli', 'Marguerite', 'Merchant', 'Marie-Colombu', 'Highschool', 'Diplomatic Exchange', 'twitter', 'embryo'])
     .enter()
     .append('a')
     .classed('dropdown-item', true)

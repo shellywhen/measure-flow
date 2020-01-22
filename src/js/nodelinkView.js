@@ -338,7 +338,10 @@ let drawLayout = function (svg) {
       linkLayer
         .attr('d', d => lineGenerator(d.path))
         .attr('id', d => `link_${d.index}`)
-        .style('stroke', d => networkcube.getPriorityColor(d))
+        .style('stroke', d => {
+          if (dg.linkTypeArrays.length == 0) return 'gray'
+          return networkcube.getPriorityColor(d)
+        })
      nodeBackLayer.attr('r', d =>Math.sqrt(DataHandler.getLocalMeasure(d, true)) * 0.5 + 1 )
         .attr('transform', function(d) { return 'translate(' + d.x + ',' + d.y + ')' })
         .style('fill', '#b9b9b9')

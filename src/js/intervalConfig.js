@@ -520,6 +520,6 @@ function getOpacity (level) {
   let currents = current.filter(v => v.active)
   let mili = currents.map(v => v.milisecond)
   let order = sortArrayIndex(mili).map(id => currents[id].level).reverse()
-  let index = order.indexOf(level) 
+  let index = order.indexOf(level) +1
   return 0.2 + 0.6/currents.length * index
 }

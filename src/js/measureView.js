@@ -1092,7 +1092,7 @@ Frame.prototype.createBars = function(g, yScale, dots, i, idx) {
      .attr('data', d => d.y)
      .attr('height', d => yScale(0) - yScale(d.y))
      .style('fill', color)
-     .style('opacity', i / this.data[idx].length + 1 / this.data[idx].length)
+     .style('opacity', (i+1)/this.data[idx].length)
      .style('stroke-width', Math.log(i*10))
      .on('mouseover', function (d, no) {
        let self = d3.select(this)
@@ -1580,6 +1580,6 @@ function getOpacity (level) {
   let current = Interval.current.filter(v => v.active)
   let mili = current.map(v => v.milisecond)
   let order = sortArrayIndex(mili).map(id => current[id].level).reverse()
-  let index = order.indexOf(level) 
+  let index = order.indexOf(level) +1
   return 0.2 + 0.6/current.length * index
 }

@@ -81,6 +81,7 @@ let updateSelectionList = function () {
 }
 
 export let getRoundStart = function (start, end) {
+  return start
   let round = new Date(start)
   round.setHours(0)
   round.setMinutes(0)
@@ -99,6 +100,7 @@ export let getRoundStart = function (start, end) {
 }
 
 export let getRoundEnd = function (start, end) {
+  return end
   let round = new Date(end)
   if (start.getFullYear() === end.getFullYear()) {
     if (start.getMonth() === end.getMonth()) {
