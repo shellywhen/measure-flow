@@ -355,11 +355,12 @@ let drawKdeLine = function (g, color, summary) {
     })
     .append('path')
     .datum(density)
-    .style('fill', color)
     .style('stroke-linejoin', 'round')
     .attr('d', line)
-    // .style('stroke', color)
-    // .style('stroke-width', 0.5)
+    .style('stroke', color)
+    .style('stroke-width', 1)
+    .style('fill', 'none')
+        // .style('fill', color)
   return line
 }
 

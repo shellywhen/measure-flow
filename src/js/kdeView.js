@@ -193,7 +193,7 @@ let drawCollapseTimeLine = function(idx, id, title, summary, thresholds, timeVal
     .attr('transform', `translate(${margin.left},0)`)
     .append('path')
     .datum(density)
-    .style('fill', kdeColor[idx])
+    // .style('fill', kdeColor[idx])
     .style('opacity', 0.7)
     .style('stroke', kdeColor[idx])
     .style('stroke-width', 1.5)
