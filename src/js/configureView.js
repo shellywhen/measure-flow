@@ -52,8 +52,9 @@ let changeEdgeBackground = function(x) {
 
 let changeBandWidth = function(x) {
   let timeDelta = networkcube.getDynamicGraph().timeDelta
-  let day = x * timeDelta / (1000 * 24 * 60 * 60)
-  let minute = x * timeDelta / (1000 * 60 * 60)
+  console.log(x, timeDelta, 2 * x * timeDelta / 1000 / 60 / 60)
+  let day = 2 * x * timeDelta / (1000 * 24 * 60 * 60)
+  let minute = 2 * x * timeDelta / (1000 * 60 * 60)
   d3.select('#bandwidthHint').text(function() {
     if (day > 1) return day.toFixed(0)
     else return minute.toFixed(1)

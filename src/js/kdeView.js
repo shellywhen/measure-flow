@@ -21,7 +21,7 @@ const margin = {
   'bottom': 20
 }
 let dgraph
-let BANDWITH = 0.5
+let BANDWIDTH = 0.5
 
 /*
 Linear transformation of the timescale
@@ -64,7 +64,7 @@ export let drawKde = function (divId) {
   drawCollapseTimeLine(2, 'linkCount', 'Link Number', linkStat, thresholds, timeValue)
   drawCollapseTimeLine(3, 'linkPairCount', 'Link Pair Number', linkPairStat, thresholds, timeValue)
   networkcube.addEventListener('bandwidth', m => {
-    BANDWITH = m.body
+    BANDWIDTH = m.body
     redrawCollapseTimeLine(1, 'nodeCount', 'Node Number', nodeStat, thresholds, timeValue)
     redrawCollapseTimeLine(2, 'linkCount', 'Link Number', linkStat, thresholds, timeValue)
     redrawCollapseTimeLine(3, 'linkPairCount', 'Link Pair Number', linkPairStat, thresholds, timeValue)
@@ -118,7 +118,7 @@ let getNodeStat = function () {
   return summary
 }
 let redrawCollapseTimeLine = function (idx, id, title, summary, thresholds, timeValue) {
-    let density = kde(epanechinikov(BANDWITH), thresholds, summary, timeValue)
+    let density = kde(epanechinikov(BANDWIDTH), thresholds, summary, timeValue)
     let thumbYScale = d3.scaleLinear()
       .range([$(`#${id}OuterDiv`).innerHeight(), 5])
       .domain([0, d3.max(density.map(v => v.y))])

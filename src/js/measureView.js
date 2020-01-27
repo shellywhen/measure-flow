@@ -131,7 +131,7 @@ let setCanvasParameters = function (divId, dgraph) {
     TIPS_CONFIG['year'] = 'numeric'
   }
   dg = dgraph
-  tooltipTitle = d3.select('body').append('div').classed('tooltip', true).style('opacity', 0).style('width', '18vh').style('text-align', 'left')
+  tooltipTitle = d3.select('body').append('div').classed('tooltip', true).style('opacity', 0).style('width', '25vh').style('text-align', 'left')
 
   // data = Timeline.getData(dgraph)
   timeStamp = DataHandler.getTimeStamp(dgraph)
@@ -1093,7 +1093,10 @@ Frame.prototype.createBars = function(g, yScale, dots, i, idx) {
      .attr('data', d => d.y)
      .attr('height', d => yScale(0) - yScale(d.y))
      .style('fill', color)
-     .style('opacity', (i+1)/this.data[idx].length)
+     .style('opacity', function(){
+       if(obj.data[idx].length === 1) return 0.8
+       return 0.2 + 0.6/(obj.data[idx].length - 1) * i
+     })
      .style('stroke-width', Math.log(i*10))
      .on('mouseover', function (d, no) {
        let self = d3.select(this)
@@ -1579,8 +1582,9 @@ function sortArrayIndex(test) {
 
 function getOpacity (level) {
   let current = Interval.current.filter(v => v.active)
+  if (current.length === 1) return 0.8
   let mili = current.map(v => v.milisecond)
   let order = sortArrayIndex(mili).map(id => current[id].level).reverse()
-  let index = order.indexOf(level) +1
-  return 0.2 + 0.6/current.length * index
+  let index = order.indexOf(level)
+  return 0.2 + 0.6/(current.length - 1) * index
 }

@@ -462,6 +462,45 @@ let updateInterval = function (m) {
     })
 }
 
+let updateStyle = function (m) {
+  let config = m.body
+  if ('stroke' in config) {
+    linkLayer.style('stroke', d => {
+      if (dg.linkTypeArrays.length == 0) return 'gray'
+      return networkcube.getPriorityColor(d)
+    })
+    return
+  }
+  if ('visible' in config) {
+    linkLayer.style('visibility', d => {
+      let selections = d.getSelections()
+      let flag = 'visible'
+      for (let s of selections) {
+        if (s.filter) {
+          flag = 'hidden'
+        }
+      }
+      return flag
+    })
+    return
+  }
+  if ('showColor' in config) {
+    if (dg.linkTypeArrays.length < 2) return
+    linkLayer.style('stroke', d => {
+      let color = networkcube.getPriorityColor(d)
+      let selections = d.getSelections()
+      for (let s of selections) {
+        if (!s.showColor) {
+          color = '#b6b6b6'
+        }
+      }
+      return color
+    })
+    return
+  }
+
+}
+
 let drawNodeLink = function () {
   // create canvas
   d3.select('#' + nodelinkSvgId).html('')
@@ -509,6 +548,7 @@ let drawNodeLink = function () {
     linkLayer.attr('d', d => lineGenerator(d.path))
   })
   networkcube.addEventListener('nodelinkInterval', updateInterval)
+  networkcube.addEventListener('nodelinkStyle', updateStyle)
 }
 
 
@@ -519,26 +559,41 @@ function calculateCurvedLinks() {
     for (var i = 0; i < dgraph.nodePairs().length; i++) {
         multiLink = dgraph.nodePair(i);
         if (multiLink.links().length < 2) {
+          if (multiLink.source == multiLink.target) {
+            console.log('source == target')
+            var minGap = 5;
+            multiLink.links().toArray()[0]['path'] = [
+              { x: multiLink.source.x, y: multiLink.source.y },
+              { x: multiLink.source.x, y: multiLink.source.y - minGap},
+              { x: multiLink.source.x + minGap, y: multiLink.source.y - minGap },
+              { x: multiLink.source.x + minGap, y: multiLink.source.y },
+              { x: multiLink.source.x, y: multiLink.source.y },
+            ];
+          }
+          else {
             multiLink.links().toArray()[0]['path'] = [
                 { x: multiLink.source.x, y: multiLink.source.y },
                 { x: multiLink.source.x, y: multiLink.source.y },
                 { x: multiLink.target.x, y: multiLink.target.y },
                 { x: multiLink.target.x, y: multiLink.target.y }
             ];
+          }
         }
         else {
             _links = multiLink.links().toArray();
             if (multiLink.source == multiLink.target) {
-                var minGap = getNodeRadius(multiLink.source) / 2 + 4;
+                // var minGap = getNodeRadius(multiLink.source) / 2 + 4;
+                var minGap = 5
                 for (var j = 0; j < _links.length; j++) {
                     _links[j]['path'] = [
                         { x: multiLink.source.x, y: multiLink.source.y },
                         { x: multiLink.source.x, y: multiLink.source.y - minGap - (i * LINK_GAP) },
                         { x: multiLink.source.x + minGap + (i * LINK_GAP), y: multiLink.source.y - minGap - (i * LINK_GAP) },
-                        { x: multiLink.source.x + minGap + (i * LINK_GAP), y: multiLink.source.y },
-                        { x: multiLink.source.x, y: -multiLink.source.y },
+                        { x: multiLink.target.x + minGap + (i * LINK_GAP), y: multiLink.target.y },
+                        { x: multiLink.target.x, y: multiLink.target.y },
                     ];
                 }
+                console.log('multi-source', _links)
             }
             else {
                 dir = {

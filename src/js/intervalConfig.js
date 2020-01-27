@@ -518,8 +518,9 @@ function sortArrayIndex(test) {
 
 function getOpacity (level) {
   let currents = current.filter(v => v.active)
+  if (currents.length === 1) return 0.8
   let mili = currents.map(v => v.milisecond)
   let order = sortArrayIndex(mili).map(id => currents[id].level).reverse()
-  let index = order.indexOf(level) +1
-  return 0.2 + 0.6/currents.length * index
+  let index = order.indexOf(level)
+  return 0.2 + 0.6/(currents.length -1) * index
 }

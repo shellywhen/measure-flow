@@ -91,6 +91,7 @@ function updateList(type, name) {
         .style('fill', function (d) { return d.color })
         .on('click', function (d) {
         networkcube.setSelectionColor(d, '#' + Math.floor(Math.random() * 16777215).toString(16))
+        networkcube.sendMessage('nodelinkStyle', {'stroke': null})
     })
     nodeGs.append('text')
         .attr('class', 'selectionLabel')
@@ -111,6 +112,7 @@ function updateList(type, name) {
         .attr('x', OFFSET + (RECT_SIZE + GAP_ICONS) * i++)
         .on('click', function (d, i) {
         networkcube.showSelectionColor(d, !d.showColor)
+        networkcube.sendMessage('nodelinkStyle', {'showColor': d})
     })
     nodeGs.append('svg:image')
         .attr('id', 'eye_' + name)
@@ -119,6 +121,7 @@ function updateList(type, name) {
         .attr('x', OFFSET + (RECT_SIZE + GAP_ICONS) * i++)
         .on('click', function (d, i) {
         networkcube.filterSelection(d, !d.filter)
+        networkcube.sendMessage('nodelinkStyle', {'visible': d})
     })
     nodeGs.append('svg:image')
         .filter(function (d) {

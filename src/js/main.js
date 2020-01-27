@@ -105,9 +105,10 @@ const configMap = {
 }
 let dataFileName = networkcube.getUrlVars()['datasetName'].replace(/___/g, ' ')
 let config = configMap[dataFileName]
-console.log(dataFileName)
-// 'DiplomaticExchange.csv' //  'DD/MM/YYYY'
 let url = `${domain}${dataFolder}/${dataFileName}.csv`
+let name = dataFileName
+if(dataFileName.length > 9) name = dataFileName.substring(0, 7) + '..'
+d3.select('#dropdownMenuButton').text(name)
 // load data file with the above link schema
 let dataset = networkcube.loadLinkTable(url, afterLoadedData, config[0], ',', config[1])
 // create a session for this data set.
