@@ -91,8 +91,8 @@ export let kde = function (kernel, thresholds, oldSummary, timeValue) {
     let y = total / datasize || 0   // NOtice that datasize might be 0
     return {x: t, y: y}
   })
-  // ans[0]['y'] = 0
-  // ans[ans.length - 1]['y'] = 0
+  ans[0]['y'] = 0
+  ans[ans.length - 1]['y'] = 0
   return ans
 
 }

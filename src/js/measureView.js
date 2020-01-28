@@ -361,9 +361,9 @@ let drawKdeLine = function (g, color, summary) {
     .style('stroke-linejoin', 'round')
     .attr('d', line)
     .style('stroke', color)
-    .style('stroke-width', 1)
-    .style('fill', 'none')
-        // .style('fill', color)
+    .style('stroke-width', 0)
+    .style('fill', color)
+    // .style('fill', 'none')
   return line
 }
 
