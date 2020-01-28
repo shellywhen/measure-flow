@@ -71,7 +71,17 @@ export let drawKde = function (divId) {
   })
 }
 
-export let kde = function (kernel, thresholds, summary, timeValue) {
+let preprocess = function (summary) {
+    let interval = window.dgraph.timeArrays.intervals[0].period
+    let value = summary.filter((v, i) => {
+      if (interval[i].interval[0]>=interval[i].interval[1]) return false
+      return true
+    })
+    return value
+}
+export let kde = function (kernel, thresholds, oldSummary, timeValue) {
+
+  let summary = preprocess(oldSummary)
   let datasize = summary.reduce((a, b) => a + b, 0)
   let ans = thresholds.map(t => {
     let total = 0
@@ -81,6 +91,8 @@ export let kde = function (kernel, thresholds, summary, timeValue) {
     let y = total / datasize || 0   // NOtice that datasize might be 0
     return {x: t, y: y}
   })
+  // ans[0]['y'] = 0
+  // ans[ans.length - 1]['y'] = 0
   return ans
 
 }

@@ -303,8 +303,11 @@ let periodLineGenerator =  d3.line().x(d => d[0]).y(d => d[1]).curve(d3.curveCat
 let drawKDEsummary = function () {
   let staticG = d3.select('#KDEsummary')
   staticG.select('.kdeLine').remove()
-  let summary = timeStamp.map(v => 1)
-  let density = Kde.kde(Kde.epanechinikov(BANDWIDTH), kdeScale.ticks(200), summary , timeStamp)
+  let summary = window.dgraph.timeArrays.intervals[0].period.map(v => {
+    if (v.interval[0] < v.interval[1]) return 1
+    return 0
+  })
+  let density = Kde.kde(Kde.epanechinikov(BANDWIDTH), kdeScale.ticks(400), summary , timeStamp)
   let kdeYScale = d3.scaleLinear()
     .domain([0, d3.max(density.map(v => v.y))])
     .range([ STATIC_SLIDER_HEIGHT / 3 - 4, 0])

@@ -52,15 +52,17 @@ let changeEdgeBackground = function(x) {
 
 let changeBandWidth = function(x) {
   let timeDelta = networkcube.getDynamicGraph().timeDelta
-  console.log(x, timeDelta, 2 * x * timeDelta / 1000 / 60 / 60)
   let day = 2 * x * timeDelta / (1000 * 24 * 60 * 60)
-  let minute = 2 * x * timeDelta / (1000 * 60 * 60)
+  let hour = 2 * x * timeDelta / (1000*60*60)
+  let minute = 2 * x * timeDelta / (1000 * 60)
   d3.select('#bandwidthHint').text(function() {
     if (day > 1) return day.toFixed(0)
+    else if(hour > 1) return hour.toFixed(1)
     else return minute.toFixed(1)
   })
   d3.select('#bandwidthUnit').text(function() {
     if (day > 1) return ' days'
+    else if (hour > 1) return ' hours'
     else return ' minutes'
   })
   networkcube.sendMessage('bandwidth', x)
@@ -101,23 +103,26 @@ let addScatterConfig = function(granList, localMeasureList) {
     .text(d => d)
 }
 let addBandwidthConfig = function(timeDelta) {
-  let div = addStyleConfig('config-style', 'Bandwidth', changeBandWidth, 0, 3, 0.5, 0.0005)
+  let div = addStyleConfig('config-style', 'Bandwidth', changeBandWidth, 0, 3, 1, 0.005)
   let bandwidth = Measure.BANDWIDTH
   let day = timeDelta * bandwidth / (1000 * 60 * 60 * 24)
-  let minute = timeDelta * bandwidth / (1000 * 60 * 60)
+  let hour = timeDelta * bandwidth / (1000 * 60 * 60)
+  let minute = timeDelta * bandwidth / (1000 * 60)
   let text = div.append('p')
     .classed('m-0', true)
     .text('≈ ')
   text.append('span')
     .attr('id', 'bandwidthHint')
     .text(function() {
-      if (day < 1) return minute.toFixed(1)
+      if (hour < 1) return minute.toFixed(1)
+      else if (day < 1) return hour.toFixed(1)
       else return day.toFixed(0)
     })
   text.append('span')
     .attr('id', 'bandwidthUnit')
     .text(function() {
-      if (day < 1) return ' minutes'
+      if (hour < 1) return ' minutes'
+      else if (day < 1) return ' hours'
       else return ' days'
     })
 }
@@ -225,7 +230,6 @@ let add_config_mode = function() {
   $('#modeSwitch').change(function() {
     if (this.checked) {
       // KDE MODE
-      console.log('hello????????')
       d3.select('#measureFrame').selectAll('.kdeLine').style('display', '')
       d3.selectAll('.bars').style('display', 'none')
       d3.selectAll('.y-axis').style('display', 'none')

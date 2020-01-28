@@ -286,6 +286,7 @@ export let getTimeStamp = function (dgraph = window.dgraph) {
     if (i === 0) return 0
     return (v - timeArray[i-1])
   })
+  timeStamp.shift()
   let timeDelta = d3.mean(timeStamp)
   dgraph.timeDelta = timeDelta
   let timeValue = timeArray.map((v, i) => {
