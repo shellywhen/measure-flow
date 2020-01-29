@@ -54,8 +54,8 @@ export let SCHEMA = {
 'Rolla-Cristofoli': {
     time: 0,
     linkType: 1,
-    source: 4,
-    target: 5
+    source: 2,
+    target: 3
   },
 'Marguerite': {
     time: 0,
