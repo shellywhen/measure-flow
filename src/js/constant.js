@@ -52,10 +52,10 @@ export let SCHEMA = {
     linkType: 5
   },
 'Rolla-Cristofoli': {
-    time: 2,
-    linkType: 10,
-    source: 6,
-    target: 8
+    time: 0,
+    linkType: 1,
+    source: 4,
+    target: 5
   },
 'Marguerite': {
     time: 0,
