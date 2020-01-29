@@ -5,7 +5,8 @@ import * as Calculator from './measureCalculator.js'
 import * as Constant from './constant.js'
 import * as Interval from './intervalConfig.js'
 
-let CANVAS_HEIGHT, CANVAS_WIDTH, SVGHEIGHT, SVGWIDTH, SVGheight, SVGwidth, ZOOM_SLIDER_HEIGHT, STATIC_SLIDER_HEIGHT, svgHeight
+let CANVAS_HEIGHT, CANVAS_WIDTH, SVGWIDTH, SVGheight, SVGwidth, ZOOM_SLIDER_HEIGHT, STATIC_SLIDER_HEIGHT
+export let SVGHEIGHT, svgHeight
 export let WIDTH_RIGHT, WIDTH_MIDDLE, WIDTH_LEFT
 let BARFLAG = false
 let ACTIVE_MEASURE_INDEX = 0
@@ -67,6 +68,10 @@ let zoomed = function (xScale, kdeScale) {
   outer.select('#endTimeCurve').datum([[mainScale(currentRange[1]), 0], [mainScale(currentRange[1]), STATIC_SLIDER_HEIGHT / 6], [WIDTH_MIDDLE, STATIC_SLIDER_HEIGHT / 6 + ZOOM_SLIDER_HEIGHT / 3]]).attr('d', periodLineGenerator)
 }
 
+export let changeSVGHEIGHT = function () {
+  if(window.dgraph.selection.length > 2) SVGHEIGHT = dgraph.selection.length * 28
+  else SVGHEIGHT = Math.max((CANVAS_HEIGHT - ZOOM_SLIDER_HEIGHT - STATIC_SLIDER_HEIGHT) / ELEMENTS, 40)
+}
 let globalZoom = function () {
   xScale = d3.event.transform.rescaleX(mainScale)
   kdeScale = d3.event.transform.rescaleX(mainKDEscale)
@@ -79,7 +84,7 @@ let globalZoom = function () {
   zoomed(xScale, kdeScale)
 }
 
-let setCanvasParameters = function (divId, dgraph) {
+export let setCanvasParameters = function (divId, dgraph) {
   MEASURE_DIV_ID = divId
   CANVAS_INFO = []
   CANVAS_HEIGHT = $(`#${divId}`).innerHeight()
@@ -401,7 +406,7 @@ class CanvasOption {
      $( "div" ).disableSelection()
    }
    setConfig (dgraph) {
-     setCanvasParameters('measureFrame', dgrpah)
+     setCanvasParameters('measureFrame', dgraph)
    }
 }
 
@@ -416,7 +421,7 @@ class TimeSlider {
     this.staticTimeline = this.svg.append('g').attr('transform', `translate(0, ${2/3*STATIC_SLIDER_HEIGHT})`)
     this.playerTimeline = this.svg.append('g').attr('transform', `translate(0, ${STATIC_SLIDER_HEIGHT + 1/5*ZOOM_SLIDER_HEIGHT})`)
     this.sliderTimeline = this.svg.append('g').attr('transform', `translate(0, ${STATIC_SLIDER_HEIGHT + 1/5*ZOOM_SLIDER_HEIGHT})`)
-    this.hintCanvas = this.svg.append('g').attr('transform', `translate(0, ${STATIC_SLIDER_HEIGHT})`)
+    this.hintCanvas = this.svg.append('g').attr('transform', `translate(0, ${STATIC_SLIDER_HEIGHT})`).classed('strokeTimeline', true)
     this.kde = this.svg.append('g').attr('id', 'KDEsummary')
     this.intervalIndex = 0
     this.interval = []
@@ -804,6 +809,29 @@ class Frame {
     return this
   }
 }
+Frame.prototype.updateCanvas = function () {
+  this.svg.attr('height', SVGHEIGHT)
+  this.yScale.forEach((v,i) => {
+    // v.range([svgHeight, svgHeight / 12])
+    let g = this.canvas.select(`.vis_${i}`)
+    g.attr('transform', `translate(0,${i * svgHeight + MARGIN.top})`)
+    g.select('.clip_overlay')
+    .attr('height', svgHeight + svgHeight / 12 + 5)
+    .attr('y', -svgHeight / 12 - 5)
+    // g.select('.y-axis').transition().duration(500).call(d3.axisLeft(yScale).ticks(2))
+    // g.select('.x-axis').attr('transform', `translate(0, ${svgHeight})`)
+    // let density = g.select('.kdeLine').datum()
+    // let kdeYScale = d3.scaleLinear()
+    //   .domain([0, d3.max(density.map(v => v.y))])
+    //   .range([svgHeight, svgHeight / 6 ])
+    // this.lineGenerator[i] = d3.line()
+    //     .curve(d3.curveCardinal)
+    //     .x(d => kdeScale(d.x))
+    //     .y(d => kdeYScale(d.y))
+    // g.select('.kdeLine').attr('d', d => frame.lineGenerator[i].x(d => kdeScale(d.x))(d))
+    // g.selectAll('.bars').attr('y', d => v(d.y))
+  })
+}
 Frame.prototype.init = function () {
     let g = this.container.append('g')
       .classed('strokeTimeline', true)
@@ -866,14 +894,6 @@ Frame.prototype.drawTitle = function () {
   let width = WIDTH_LEFT * 0.5
   let dy = 0.5
   let fontsize = 0.9 * parseFloat(getComputedStyle(document.documentElement).fontSize)
-  // let zoomzone = g.append('rect')
-  //   .attr('height', SVGHEIGHT)
-  //   .attr('width', WIDTH_LEFT+MARGIN.left)
-  //   .attr('x', -MARGIN.left)
-  //   .attr('y', 0)
-  //   .style('pointer-events', 'all')
-  //   .style('opacity', 0)
-  //   .call(zoom)
   let text = g.append('text')
    .classed('measureTitle', true)
    .attr('x', x)
@@ -946,72 +966,6 @@ Frame.prototype.drawIcon = function () {
   let g = this.container.append('g')
     .attr('transform', `translate(${WIDTH_LEFT + WIDTH_MIDDLE}, 0)`)
   let fftRes = this.fftData
-  // let data = [{
-  //   text: '\uf2ed',
-  //   class: '',
-  //   callback: function() {
-  //     self.div.style('display', 'none')
-  //   }
-  //
-  // }, {
-  //   text: '\uf362',
-  //   class: 'handle',
-  //   callback: function () {
-  //   }
-  // } ,  {
-  //   text: '\uf06e',
-  //   toggle: 1,
-  //   class: '',
-  //   callback: function (element) {
-  //     let ele = d3.select(element)
-  //     let toggle = Number(ele.attr('toggle'))
-  //     if (toggle) {
-  //       ele.text('\uf070')
-  //       ele.attr('toggle', 0)
-  //       self.svg.selectAll('.kdeLine').style('display', 'none')
-  //       return
-  //     }
-  //     ele.text('\uf06e')
-  //     ele.attr('toggle', 1)
-  //     self.svg.selectAll('.kdeLine').style('display', '')
-  //   }
-  // }, {
-  //   text: '\uf0eb',
-  //   class: 'icon-fft',
-  //   toggle: 0,
-  //   callback: function(element) {
-  //     let ele = d3.select(element)
-  //     let toggle = 1 - parseInt(ele.attr('toggle'))
-  //     ele.attr('toggle', toggle)
-  //     if (toggle) {
-  //       d3.selectAll('.icon-fft').style('fill', 'gray')
-  //       ele.style('fill', 'orange')
-  //       // self.canvas.selectAll('.measureView').style('display', 'none')
-  //       // self.canvas.selectAll('.fft-result').style('display', '')
-  //       let msg = {
-  //         canvas: self.canvas,
-  //         label: self.dataLabel,
-  //         index: self.index,
-  //         fft: self.fftData,
-  //         flag: true
-  //       }
-  //       networkcube.sendMessage('fft', msg)
-  //       window.activeMeasure = self
-  //       ACTIVE_MEASURE_INDEX = self.index
-  //       return
-  //     }
-  //     ele.style('fill', 'gray')
-  //     d3.selectAll('.measureView').style('display', '')
-  //     d3.selectAll('.fft-result').style('display', 'none')
-  //     // self.canvas.selectAll('.zoom-layer').style('display', '')
-  //     // self.canvas.selectAll('.fft-result').style('display', 'none').html('')
-  //     // self.canvas.selectAll('.y-axis').each(function(d, i){
-  //     //   let e = d3.select(this)
-  //     //   e.call(d3.axisLeft(self.yScale[i]).ticks(5))
-  //     // })
-  //     networkcube.sendMessage('fft', {flag: false})
-  //   }
-  // }]
   g.selectAll('text')
    .data([{
      text: '\uf362',
@@ -1127,6 +1081,7 @@ Frame.prototype.createBars = function(g, yScale, dots, i, idx) {
          .text(getTimeString(d.timeStart, d.timeEnd))
          .style('fill', 'black')
          .style('opacity', 1)
+         .style('display', '')
         if((yMax-d.y)/yMax < 0.3) timeTooltip.attr('y', newY)
        d3.selectAll(`.mini_vis`)
          .each(function(d) {
@@ -1146,7 +1101,7 @@ Frame.prototype.createBars = function(g, yScale, dots, i, idx) {
        let tooltips = d3.selectAll(`.tooltip`)
       tooltips.style('opacity', 0)
       tooltips.text('')
-      timeTooltip.style('opacity', 0)
+      timeTooltip.style('opacity', 0).style('display', 'none')
       timeTooltip.selectAll('tspan').remove()
        d3.select(this).style('stroke', '')
        let level = parseInt(d3.select(this.parentNode).attr('level'))
@@ -1182,6 +1137,7 @@ Frame.prototype.drawIndividualMeasures = function (idx) {
   g.append('defs')
     .append('SVG:clipPath')
     .attr('id', `clip_${idx}_${this.index}`)
+    .classed('clip_overlay', true)
     .append('SVG:rect')
     .attr('width', WIDTH_MIDDLE)
     .attr('height', svgHeight + svgHeight / 12 + 5)
@@ -1211,6 +1167,7 @@ Frame.prototype.drawIndividualMeasures = function (idx) {
  let timeTooltip = tooltipG.append('text')
    .attr('class', `timeTooltip timeTooltip_${this.index}_${idx}`)
    .style('opacity', 0)
+   .style('display', 'none')
    .style('text-anchor', 'middle')
  let zoomLayer = g.append('g').attr('clip-path', `url(#clip_${idx}_${this.index})`).classed('zoom-layer', true)
  let summary = this.data[idx][0].dots.map(v => v.y)
@@ -1271,10 +1228,6 @@ Frame.prototype.drawMeasureOvertime = function () {
   this.data.forEach(function(d, idx) {
     self.drawIndividualMeasures(idx)
   })
-}
-
-Frame.prototype.addMeasureBars = function () {
-
 }
 Frame.prototype.initFFTcanvas = function (data) {
   data.forEach((datum, idx) => {
@@ -1466,6 +1419,8 @@ let addBars = function (msg) {
   // frame.drawExternalSvg(data, milisecond)
 }
 export let subgraphUpdateMeasure = function (dgraph, count) {
+  changeSVGHEIGHT()
+  FRAME_INFO.forEach(f => f.updateCanvas())
   SVGheight = SVGHEIGHT - MARGIN.bottom - MARGIN.bottom
   svgHeight = SVGheight / dgraph.selection.length
   for (let i = dgraph.selection.length - count; i <= dgraph.selection.length - 1; i ++) {

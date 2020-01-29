@@ -141,7 +141,7 @@ let cancelLasso = function () {
 }
 let lineGenerator = d3.line().x(d => d.x).y(d => d.y)//.curve(d3.curveCardinal)
 let addSelection = function () {
-  let id = dg.selection.length
+  let id = dg.selectionIdCount
   let color = dg.colorScheme[id]
   let selection = window.lasso_selection
   let convexHull = d3.select('.hullLayer').append("path")
@@ -149,11 +149,6 @@ let addSelection = function () {
   .attr("id", `hull_${id}`)
   .style('fill', color)
   .style('stroke', color)
-  .on('click', function(d) {
-    d3.select(this).style('fill-opacity', 0.8)
-    window.selectionId = id
-    d3.select('#lassoButton').style('display', '')
-  })
   let circleData = d3.select('.nodeLayer').selectAll('.nodes').data()
   let circles = selection.map(v => {
     let circle = circleData[v.index]
@@ -161,15 +156,36 @@ let addSelection = function () {
   })
   let hull = d3.polygonHull(circles)
   convexHull
-    .datum({'hull':hull, 'selection': selection.map(v => v.index), 'toggle': false})
+    .datum({'id': dg.selectionIdCount, 'hull':hull, 'selection': selection.map(v => v.index), 'toggle': false})
     .attr('d', d => `M ${d.hull.join("L")} Z`)
+    .on('click', function(d) {
+      d.toggle = !d.toggle
+      if (d.toggle) {
+      d3.select(this).style('fill-opacity', 0.8)
+      window.selectionId = d.id
+      d3.select('#lassoButton').style('display', '')
+    } else {
+      d3.select(this).style('fill-opacity', 0.3)
+      d3.select('#lassoButton').style('display', 'none')
+    }
+    })
   let subgraph = new Set(selection.map(v => v.index))
   networkcube.sendMessage('subgraph', {
     'selection': subgraph,
-    'flag': true
+    'flag': true,
+    'remove': false
   })
   lasso.items().classed('possible', false)
   d3.select('#lassoButton').style('display', 'none')
+}
+let removeSelection = function () {
+  networkcube.sendMessage('subgraph', {
+    'deleteId': window.selectionId,
+    'remove': true,
+    'flag': true
+  })
+  d3.select(`#hull_${window.selectionId}`).remove()
+  return
 }
 
 let expandSelection = function () {
@@ -190,6 +206,7 @@ let expandSelection = function () {
   lasso.items().classed('possible',false)
   d3.select('#lassoButton').style('display', 'none')
 }
+
 
 let drawTimeline = function (svg) {
   let timelineWidth = (nodelinkWidth * 0.9)
@@ -213,9 +230,9 @@ let drawLassoConfig = function (svg) {
     .attr('id', 'lassoButton')
     .style('display', 'none')
   let data = [{
-    text:'New', class:'success', callback: addSelection
+    text:'Create', class:'success', callback: addSelection
   }, {
-    text:'Expand', class:'success', callback: expandSelection
+    text:'Delete', class:'success', callback: removeSelection
   }, {
     text:'Cancel', class:'info', callback: cancelLasso
   }]

@@ -272,6 +272,7 @@ export let addGlobalProperty = function (dgraph) {
   '#a6cee3',
   '#b2df8a']
   dgraph.selection = []
+  dgraph.selectionIdCount = 0
   dgraph.timeArrays.FFTintervals = []
   let intervals = getBins(dgraph.timeArrays.momentTime, dgraph.getMinGranularity(), dgraph.getMaxGranularity())
   dgraph.timeArrays.intervals = intervals
