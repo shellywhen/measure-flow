@@ -23,7 +23,6 @@ let dg
 let playerNodelink = function (m) {
   let data = m.body
   let interval = data.interval
-  console.log(window.fixed, m.body.fixed)
   if (m.body.fixed||!window.fixed){
     drawNodeLinkInPeriod(interval[0], interval[1]-1)
     updateTimeline(data.x0, data.x1, data.textStart, data.textEnd)
@@ -614,7 +613,6 @@ function calculateCurvedLinks() {
         multiLink = dgraph.nodePair(i);
         if (multiLink.links().length < 2) {
           if (multiLink.source == multiLink.target) {
-            console.log('source == target')
             var minGap = 5;
             multiLink.links().toArray()[0]['path'] = [
               { x: multiLink.source.x, y: multiLink.source.y },
