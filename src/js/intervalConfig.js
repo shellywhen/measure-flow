@@ -148,6 +148,7 @@ let drawSpan = function(datum, shift = 0, border = 'gray', defaultDiv='interval-
 let addMoreIntervals = function(shift = 0, value, granularity, highlight = false, div='interval-selection-display') {
   let val = value || parseFloat($(`#interval-value-input`).val())
   let granId = granularity || Number($(`#granularity-selection`).val())
+  if (granularity==0) granId = 0
   let datum = getDatum(val, granId, shift)
   current.push(datum)
   activeInterval.push(datum)
@@ -281,7 +282,8 @@ let makeLines = function(g, data, xScale, yScale, labelData) {
     .on('click', function(d) {
       $(`#interval-value-input`).val(d.value)
       $(`#granularity-selection`).val(d.granularity)
-      addMoreIntervals(d.shift, d.value, d.granularity, true, 'fft-interval-selection-display')
+      //addMoreIntervals(d.shift, d.value, d.granularity, true, 'fft-interval-selection-display')
+      addMoreIntervals(d.shift, d.milisecond, 0, true, 'fft-interval-selection-display')
     })
   layer.append('g').attr('transform', `translate(0,${h})`).classed('axis', true).call(d3.axisBottom(xScale)).selectAll('.tick').remove()
   // let yAxis = layer.append('g').classed('axis', true).call(d3.axisLeft(yScale).ticks(1)).selectAll('text').style('font-size', 'xx-small').attr('x', -3)
@@ -297,6 +299,7 @@ let drawFFT = function(dataList) {
   let min_gran = dg.gran_min
   let max_gran = dg.gran_max
   let labelData = DataHandler.generateDateLabel(min_gran, max_gran)
+  console.log(dataList)
   dataList.forEach(function(datum, idx) {
     let g = svg.append('g').attr('transform', `translate(${ PADDING.left},${minHeight*idx+PADDING.top})`)
     let linesG = g.append('g')
@@ -397,6 +400,7 @@ let handleFFT = function(m) {
     res.forEach(d => {
       d.shift = -Math.atan2(d.phase[1], d.phase[0]) / Math.PI
       let milisecond = d.T * timeList[min_gran]
+      d.milisecond = milisecond
       for (let it = min_gran; it <= max_gran; it++) {
         if (milisecond > timeList[max_gran]) {
           d.value = milisecond / timeList[max_gran]
