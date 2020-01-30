@@ -107,17 +107,19 @@ let lasso_end = function () {
     d3.select('#lassoButton').style('display', '')
 }
 let suggestNodeLink = function (startId, endId) {
-  console.log('suggest', startId, endId)
     let old = window.fixInterval
-    console.log(old, 'old')
-    linkLayer.style('display', d => {
-      if(d.presentIn(times[startId], times[endId]) || d.presentIn(times[old[0]], times[old[1]-1]))
+    linkLayer.style('display', function(d) {
+      let a = d.presentIn(times[startId], times[endId])
+      let b = d.presentIn(times[old[0]], times[old[1]-1])
+      if(a) {
+        d3.select(this).style('stroke-dasharray', 2)
         return ''
-      else
+      }
+      else if (b) {
+        d3.select(this).style('stroke-dasharray', 0)
+        return ''
+      }
         return 'none'
-    }).style('stroke-dasharray', d => {
-      if(d.presentIn(times[startId], times[endId])) return 2
-      return 0
     })
 }
 let drawNodeLinkInPeriod = function (startId, endId, line=true) {
@@ -442,6 +444,8 @@ let updateInterval = function (m) {
   let svg = d3.select('#' + nodelinkSvgId)
   let canvas = svg.select('.timelinehint')
   canvas.select('.slotCanvas').remove()
+  linkLayer.style('display', '').style('stroke-dasharray', 0)
+  nodeLayer.style('opacity', 1)
   if(!data.flag) return
   let TIPS_CONFIG = data.tip
   let g = canvas.append('g').classed('slotCanvas', true).attr('transform', `translate(${0}, ${6})`)

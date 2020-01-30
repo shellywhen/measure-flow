@@ -616,6 +616,7 @@ TimeSlider.prototype.fadeHint = function () {
 TimeSlider.prototype.removeInterval = function  () {
   this.intervalIndex = -1
   this.interval = null
+  this.hintCanvas.style('visibility', 'hidden')
   this.playerTimeline.selectAll('.interval-g').remove()
   this.playerTimeline.selectAll('.snapshot').attr('y1', 0).style('stroke', '#E2E6EA')
 
@@ -678,7 +679,6 @@ TimeSlider.prototype.updateInterval = function (interval) {
       d.textStart = d.x0.toLocaleDateString('en-US', TIPS_CONFIG)
       d.textEnd = d.x1.toLocaleDateString('en-US', TIPS_CONFIG)
       d.fixed = false
-      window.fixInterval = d.interval
       d3.selectAll('.snapshot').style('stroke',  '#E2E6EA')
       for (let tid = d.interval[0]; tid <d.interval[1]; tid++) {
         d3.select(`.snapshot_${tid}`).style('stroke', 'orange')
