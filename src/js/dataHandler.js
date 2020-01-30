@@ -143,7 +143,6 @@ export let getSingleBins = function (granId, delta = 1, timeArray = window.dgrap
   let wholePeriod = new Date(moment(0).add(delta, para)._d).getTime()
   let shiftMilisecond = shift > 0 ? (1 - shift)*wholePeriod : shift * wholePeriod
   let shiftedStart = roundedStart + shiftMilisecond//new Date(moment(roundedStart).add(shiftMilisecond, 'miliseconds')._i)
-  console.log(moment(shiftedStart)._i, 'shiftStart', shift, shiftMilisecond, moment(shiftedStart))
   if(shift != 0) {
     while(timeArray[idx]._i < shiftedStart ) {
       idx ++
