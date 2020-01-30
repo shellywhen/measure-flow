@@ -142,8 +142,8 @@ export let getSingleBins = function (granId, delta = 1, timeArray = window.dgrap
   let roundedEnd = window.dgraph.roundedEnd
   let wholePeriod = new Date(moment(0).add(delta, para)._d).getTime()
   let shiftMilisecond = shift > 0 ? (1 - shift)*wholePeriod : shift * wholePeriod
-  let shiftedStart = new Date(moment(roundedStart).add(shiftMilisecond, 'miliseconds')._d)
-
+  let shiftedStart = roundedStart + shiftMilisecond//new Date(moment(roundedStart).add(shiftMilisecond, 'miliseconds')._i)
+  console.log(moment(shiftedStart)._i, 'shiftStart', shift, shiftMilisecond, moment(shiftedStart))
   if(shift != 0) {
     while(timeArray[idx]._i < shiftedStart ) {
       idx ++
@@ -278,6 +278,7 @@ export let addGlobalProperty = function (dgraph) {
   dgraph.timeArrays.intervals = intervals
   dgraph.timeArrays.defalutIntervals = intervals
   dgraph.nodeArrays.activeNodes = dgraph.nodeArrays.id
+  window.fixed = false
 }
 
 export let getTimeStamp = function (dgraph = window.dgraph) {

@@ -182,6 +182,7 @@ let addDivToggle = function(divId = 'config-view', checkboxId, name, linkDiv, fl
       div.remove()
     })
   }
+  return div
 }
 
 let addLocalMeasureDropdown = function(divId) {
@@ -205,14 +206,17 @@ let addLocalMeasureDropdown = function(divId) {
     .change();
 }
 let addDatasetOption = function() {
-  d3.select('#dataset-selection')
-    .selectAll('a')
-    .data(['Rolla-Cristofoli', 'Marguerite', 'Merchant', 'Marie-Colombu', 'Highschool', 'Diplomatic Exchange', 'twitter', 'embryo'])
+  let container = d3.select('#dataset-selection')
+  container.selectAll('a')
+    .data(['Embryo', 'Diplomatic Exchange', 'Highschool', 'Marie-Colombu', 'Rolla-Cristofoli', 'Scientists', 'Twitter'])
     .enter()
     .append('a')
     .classed('dropdown-item', true)
     .attr('href', d => `${window.location.origin}${window.location.pathname}?session=demo&datasetName=${d}`)
+    .style('padding', '0 1.5rem')
     .text(d => d)
+  container.append('div').classed('dropdown-divider', true).style('padding', 0).style('margin', 0)
+  container.append('a').classed('dropdown-item disabled', true).text('Dataset Selection').style('padding', '0 1.5rem').style('font-weight','bold')
 }
 let add_config_mode = function() {
   d3.select('#config-mode')
@@ -244,8 +248,18 @@ let add_config_mode = function() {
 let add_config_measure = function() {
   let frames = Measure.FRAME_INFO
   for (let f of frames) {
-    addDivToggle('config-measure', `toggle_${f.dataLabel}`, `${f.title}`, `#frame_${f.dataLabel}`)
+    let div = addDivToggle('config-measure', `toggle_${f.dataLabel}`, `${f.title}`, `#frame_${f.dataLabel}`)
   }
+  $('#config-measure').sortable({
+    update: function(e, ui) {
+      let sortedIds = $('#config-measure').sortable("toArray", {attribute: "id"}).map(name => name.substring(12))
+      for(let i = 1; i< sortedIds.length; i++) {
+        let dataLabel = sortedIds[i]
+        let prev = sortedIds[i-1]
+        $(`#frame_${dataLabel}`).insertAfter($(`#frame_${prev}`))
+      }
+    }
+    })
 }
 
 let handleIntervalSpan = function(m) {

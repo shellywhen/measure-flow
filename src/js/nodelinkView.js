@@ -23,8 +23,14 @@ let dg
 let playerNodelink = function (m) {
   let data = m.body
   let interval = data.interval
-  drawNodeLinkInPeriod(interval[0], interval[1]-1)
-  updateTimeline(data.x0, data.x1, data.textStart, data.textEnd)
+  console.log(window.fixed, m.body.fixed)
+  if (m.body.fixed||!window.fixed){
+    drawNodeLinkInPeriod(interval[0], interval[1]-1)
+    updateTimeline(data.x0, data.x1, data.textStart, data.textEnd)
+  }
+  else {
+    drawNodeLinkInPeriod(interval[0], interval[1]-1, false)
+  }
 }
 let getNodeRadius = function(d) {
     return Math.sqrt(d.links().length) * 0.5 + 1;
@@ -100,8 +106,25 @@ let lasso_end = function () {
     window.lasso_selection = selectedCircles._groups[0].map(d => d.__data__)
     d3.select('#lassoButton').style('display', '')
 }
-
-let drawNodeLinkInPeriod = function (startId, endId) {
+let suggestNodeLink = function (startId, endId) {
+  console.log('suggest', startId, endId)
+    let old = window.fixInterval
+    console.log(old, 'old')
+    linkLayer.style('display', d => {
+      if(d.presentIn(times[startId], times[endId]) || d.presentIn(times[old[0]], times[old[1]-1]))
+        return ''
+      else
+        return 'none'
+    }).style('stroke-dasharray', d => {
+      if(d.presentIn(times[startId], times[endId])) return 2
+      return 0
+    })
+}
+let drawNodeLinkInPeriod = function (startId, endId, line=true) {
+  if(!line) {
+    suggestNodeLink(startId, endId)
+    return
+  }
   if(startId > endId) {
     linkLayer.style('display', 'none')
     nodeLayerG.style('opacity', 0.2)
@@ -116,7 +139,7 @@ let drawNodeLinkInPeriod = function (startId, endId) {
     else{
       return 'none'
     }
-  })
+  }).style('stroke-dasharray', 0)
   nodeLayerG.style('opacity', 1)
   nodeLayer.attr('r', d => {
     let value = DataHandler.getLocalMeasure(d)
@@ -124,7 +147,7 @@ let drawNodeLinkInPeriod = function (startId, endId) {
   })
   .style('opacity', d => {
     if(curNodes.has(d.index)) return 1
-    return 0.3
+    return 0.2
   })
 }
 
@@ -305,6 +328,7 @@ let initNodeLink = function (svg, dgraph) {
       .enter()
       .append('circle')
       .classed('back-nodes', true)
+      .style('display', 'none')
       .attr('r', 1)
       .attr('cx', 0)
       .attr('cy', 0)
@@ -431,6 +455,7 @@ let updateInterval = function (m) {
     .attr('y', 0)
     .attr('rx', 1)
     .attr('ry', 1)
+    .attr('toggle', 0)
     .attr('height', d => {
       if (d.interval[1]>d.interval[0]) return 10
       return 5
@@ -447,8 +472,16 @@ let updateInterval = function (m) {
     .style('opacity', 0.5)
     .style('cursor', 'pointer')
     .on('click', function (d, i) {
+      if(!toggle) {
+        window.fixed = false
+        d3.selectAll('.links').style('stroke-dasharray', 0)
+        return
+      }
       d.textStart = d.x0.toLocaleDateString('en-US', TIPS_CONFIG)
       d.textEnd = d.x1.toLocaleDateString('en-US', TIPS_CONFIG)
+      d.fixed = true
+      window.fixed = true
+      window.fixInterval = d.interval
       console.log(d, 'nodelink d')
       d3.selectAll('.snapshot').style('stroke',  '#E2E6EA')
       for (let tid = d.interval[0]; tid <d.interval[1]; tid++) {

@@ -37,8 +37,12 @@ let dataFileName = networkcube.getUrlVars()['datasetName'].replace(/___/g, ' ')
 let config = [Constant.SCHEMA[dataFileName], Constant.TIME_FORMAT[dataFileName]]
 let url = `${domain}${dataFolder}/${dataFileName}.csv`
 let name = dataFileName
-if (dataFileName.length > 9) name = dataFileName.substring(0, 7) + '..'
-d3.select('#dropdownMenuButton').text(name)
+if (dataFileName.length >20) name = dataFileName.substring(0, 21) + '..'
+else {
+  let space = '&nbsp;'.repeat(Math.trunc(20-dataFileName.length))
+  name = space + name + space
+}
+d3.select('#dropdownMenuButton').html(name)
 // load data file with the above link schema
 let dataset = networkcube.loadLinkTable(url, afterLoadedData, config[0], ',', config[1])
 // create a session for this data set.

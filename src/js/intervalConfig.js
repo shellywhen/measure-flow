@@ -22,11 +22,12 @@ const paddingRate = 0.1
 let GLOBAL_ACTIVE_FRAME = null
 let GLOBAL_ACTIVE_LABEL = null
 let shiftSliderCallback = function() {
-  if (!window.playerMode) return
-  let shift = $('#config-shift').val();
-  current[timeslotId].shift = shift
-  current[timeslotId].flag = true
-  networkcube.sendMessage('initGran', current[timeslotId])
+  let shift = $('#config-shift').val()
+  let tid = window.timeslotIdx
+  current[tid].shift = shift
+  current[tid].flag = true
+  current[tid].update = true
+  networkcube.sendMessage('initGran', current[tid])
 }
 
 let getDatum = function(val, granId, shift = 0) {
@@ -53,10 +54,10 @@ let getDatum = function(val, granId, shift = 0) {
   return datum
 }
 
-let drawSpan = function(datum, shift = 0, border = 'gray') {
+let drawSpan = function(datum, shift = 0, border = 'gray', defaultDiv='interval-selection-display') {
   networkcube.sendMessage('intervalSpan', datum)
   levelCount++
-  let div = d3.select('#interval-selection-display')
+  let div = d3.select(`#${defaultDiv}`)
   let identifier = 'userSpan'
   if (border != 'gray') {
     identifier = 'calendarSpan'
@@ -86,7 +87,6 @@ let drawSpan = function(datum, shift = 0, border = 'gray') {
     .on('mouseout', function(d) {
       let intervalSize = dg.timeArrays.intervals.length
       let opacity = getOpacity(d.level)
-      // console.log('mouseout', d.level, getOpacity(d.level), d.timeLabel)
       d3.selectAll(`.level_${d.level}`).selectAll('.bars').style('opacity', opacity)
     })
     .on('click', function(d) {
@@ -103,8 +103,14 @@ let drawSpan = function(datum, shift = 0, border = 'gray') {
         d.flag = true
         let id = current.indexOf(datum)
         $('#config-shift').val(d.shift)
-        window.timeslotId = id
+        window.timeslotIdx = id
         networkcube.sendMessage('initGran', d)
+        if (ele.classed('userSpan')) {
+          d3.select('#shift-slider-value').style('display', '')
+        }
+        else {
+          d3.select('#shift-slider-value').style('display', 'none')
+        }
         return
       }
       ele.style('border', `0.8px ${border} solid`)
@@ -112,6 +118,7 @@ let drawSpan = function(datum, shift = 0, border = 'gray') {
       window.focusGranularity = null
       $('#config-shift').val(0);
       d.flag = false
+      d3.select('#shift-slider-value').style('display', 'none')
       networkcube.sendMessage('initGran', d)
     })
     .on('dblclick', function(d) {
@@ -138,13 +145,13 @@ let drawSpan = function(datum, shift = 0, border = 'gray') {
   return span
 }
 
-let addMoreIntervals = function(shift = 0, value, granularity, highlight = false) {
+let addMoreIntervals = function(shift = 0, value, granularity, highlight = false, div='interval-selection-display') {
   let val = value || parseFloat($(`#interval-value-input`).val())
   let granId = granularity || Number($(`#granularity-selection`).val())
   let datum = getDatum(val, granId, shift)
   current.push(datum)
   activeInterval.push(datum)
-  let span = drawSpan(datum, shift)
+  let span = drawSpan(datum, shift, 'gray', div)
   let intervals = DataHandler.getSingleBins(granId, val, dg.timeArrays.momentTime, shift)
   window.measureIds.forEach((label, idx) => {
     let data = dg.selection.length > 0 ? dg.selection.map(v => Calculator.getSingleData(v.dgraph, intervals, label)) : [Calculator.getSingleData(dg, intervals, label)]
@@ -193,7 +200,7 @@ let initDropdown = function() {
     datum.level = len - 1 - i
     data.push(datum)
     activeInterval.push(datum)
-    drawSpan(datum, 0, 'lightblue')
+    drawSpan(datum, 0, 'lightblue', 'calendar-interval-selection-display')
     i++
   }
   current = data
@@ -274,10 +281,10 @@ let makeLines = function(g, data, xScale, yScale, labelData) {
     .on('click', function(d) {
       $(`#interval-value-input`).val(d.value)
       $(`#granularity-selection`).val(d.granularity)
-      addMoreIntervals(d.shift)
+      addMoreIntervals(d.shift, d.value, d.granularity, true, 'fft-interval-selection-display')
     })
   layer.append('g').attr('transform', `translate(0,${h})`).classed('axis', true).call(d3.axisBottom(xScale)).selectAll('.tick').remove()
-  let yAxis = layer.append('g').classed('axis', true).call(d3.axisLeft(yScale).ticks(1)).selectAll('text').style('font-size', 'xx-small').attr('x', -3)
+  // let yAxis = layer.append('g').classed('axis', true).call(d3.axisLeft(yScale).ticks(1)).selectAll('text').style('font-size', 'xx-small').attr('x', -3)
 
 }
 
@@ -302,9 +309,9 @@ let drawFFT = function(dataList) {
     let xScale = d3.scaleLog().domain([1, xDomain[1] + 1000]).range([0, w])
     g.append('rect')
       .attr('x', 0)
-      .attr('y', 0)
+      .attr('y', 2* h / 3)
       .attr('width', w)
-      .attr('height', h / 2)
+      .attr('height', h / 3)
       .style('pointer-events', 'all')
       .style('opacity', 0)
       .on('click', function() {
@@ -331,7 +338,7 @@ let drawFFT = function(dataList) {
           .style('stroke', 'gray')
           .classed('userInputLine', true)
           .classed(`line_rank_${levelCount}`, true)
-        let span = addMoreIntervals(0, value, granularity)
+        let span = addMoreIntervals(0, value, granularity, true, 'fft-interval-selection-display')
         // let datum = getDatum(value, granularity, 0)
         // current.push(datum)
         // drawSpan(datum)
@@ -494,7 +501,11 @@ function exportMeasure () {
   link.click()
   link.parentNode.removeChild(link)
 }
-
+let shiftInputCallback = function (e) {
+  let shift = $('#config-shift').val()
+  console.log(shift)
+  d3.select('#shift-hint').text(shift)
+}
 export function drawIntervalConfig(divId = 'config-interval', dgraph) {
   dg = dgraph
   let div = d3.select(`#${divId}`)
@@ -505,7 +516,9 @@ export function drawIntervalConfig(divId = 'config-interval', dgraph) {
   $(`#addInputInterval`).click(handleAddInputInterval)
   $(`#resetInterval`).click(resetGlobalInterval)
   $(`#restoreInterval`).click(restoreGlobalInterval)
-  $(`#config-shift`).on('change', shiftSliderCallback)
+  $(`#config-shift`)
+    .on('change', shiftSliderCallback)
+    .on('input', shiftInputCallback)
   $(`#exportMeasure`).click(exportMeasure)
   networkcube.addEventListener('fft', handleFFT)
   networkcube.addEventListener('intervalChange', handleIntervalChange)

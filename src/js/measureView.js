@@ -225,7 +225,7 @@ let brushendCallback = function (d) {
           canvas.select('text')
             .attr('x', (xScale(brushStart) + xScale(brushEnd))/2)
             .attr('y', textY)
-            .text(`${text % 1 == 0 ? text : text.toFixed(4)}`)
+            .text(`${text % 1 == 0 ? text : (text > 0.01 ? text.toFixed(2): text.toFixed(4))}`)
         }
         else {
           canvas.select('.overflow_rect')
@@ -233,7 +233,7 @@ let brushendCallback = function (d) {
           canvas.select('text')
             .attr('x', (xScale(brushStart) + xScale(brushEnd))/2)
             .attr('y', textY)
-            .text(`${text % 1 == 0 ? text : text.toFixed(4)}`)
+            .text(`${text % 1 == 0 ? text : (text > 0.01 ? text.toFixed(2): text.toFixed(4))}`)
         }
         canvas.select('.instance_rect')
           .attr('x', xScale(brushStart))
@@ -635,6 +635,7 @@ TimeSlider.prototype.updateInterval = function (interval) {
     .attr('x', d => xScale(d.x0))
     .attr('width', d => Math.max(2, xScale(d.x1) - xScale(d.x0)))
     .attr('y', 0)
+    .attr('toggle', 1)
     .attr('height', d => {
       if (d.interval[1]>d.interval[0]) return 10
       return 5
@@ -651,9 +652,19 @@ TimeSlider.prototype.updateInterval = function (interval) {
     .style('opacity', 0.5)
     .style('cursor', 'pointer')
     .on('click', function (d, i) {
+      let toggle = Number(d3.select(this).attr('toggle'))
+      d3.select(this).attr('toggle', 1-toggle)
+      if(!toggle) {
+        window.fixed = false
+        d3.selectAll('.links').style('stroke-dasharray', 0)
+        return
+      }
       self.intervalIndex = i
       d.textStart = d.x0.toLocaleDateString('en-US', TIPS_CONFIG)
       d.textEnd = d.x1.toLocaleDateString('en-US', TIPS_CONFIG)
+      d.fixed = true
+      window.fixInterval = d.interval
+      window.fixed = true
       d3.selectAll('.snapshot').style('stroke',  '#E2E6EA')
       for (let tid = d.interval[0]; tid <d.interval[1]; tid++) {
         d3.select(`.snapshot_${tid}`).style('stroke', 'orange')
@@ -666,6 +677,8 @@ TimeSlider.prototype.updateInterval = function (interval) {
       d3.select(this).attr('y', -5).attr('height', 15)
       d.textStart = d.x0.toLocaleDateString('en-US', TIPS_CONFIG)
       d.textEnd = d.x1.toLocaleDateString('en-US', TIPS_CONFIG)
+      d.fixed = false
+      window.fixInterval = d.interval
       d3.selectAll('.snapshot').style('stroke',  '#E2E6EA')
       for (let tid = d.interval[0]; tid <d.interval[1]; tid++) {
         d3.select(`.snapshot_${tid}`).style('stroke', 'orange')
@@ -748,7 +761,7 @@ export function highlightBars(level=window.focusGranularity.level, rank=timeslid
       let datum = frame.svg.select(`.vis_${subgraph}`).select(`.level_${level}`).select(`.rank_${rank}`).datum()
       let brushStart = datum.timeStart
       let brushEnd = datum.timeEnd
-      let y = frame.yScale[i](datum.y)
+      let y = subgraph > 1? 0: frame.yScale[i](datum.y)
       let textY = y
       let maxY = frame.yScale[i].range()[1]
       let text = Number(datum.y)
@@ -763,7 +776,7 @@ export function highlightBars(level=window.focusGranularity.level, rank=timeslid
         canvas.select('text')
           .attr('x', (xScale(brushStart) + xScale(brushEnd))/2)
           .attr('y', textY)
-          .text(`${text % 1 == 0 ? text : text.toFixed(4)}`)
+          .text(`${text % 1 == 0 ? text : (text > 0.01 ? text.toFixed(2): text.toFixed(4))}`)
       }
       else {
         canvas.select('.overflow_rect')
@@ -771,7 +784,7 @@ export function highlightBars(level=window.focusGranularity.level, rank=timeslid
         canvas.select('text')
           .attr('x', (xScale(brushStart) + xScale(brushEnd))/2)
           .attr('y', textY)
-          .text(`${text % 1 == 0 ? text : text.toFixed(4)}`)
+          .text(`${text % 1 == 0 ? text : (text > 0.01 ? text.toFixed(2): text.toFixed(4))}`)
       }
       canvas.select('.instance_rect')
         .attr('x', xScale(brushStart))
@@ -833,6 +846,7 @@ Frame.prototype.updateCanvas = function () {
   })
 }
 Frame.prototype.init = function () {
+    this.container.select('.strokeTimeline').remove()
     let g = this.container.append('g')
       .classed('strokeTimeline', true)
       .attr('transform', `translate(${WIDTH_LEFT+MARGIN.left}, ${0})`)
@@ -1033,7 +1047,7 @@ Frame.prototype.updateIndividualMeasures = function (idx, data, level) {
 }
 Frame.prototype.createBars = function(g, yScale, dots, i, idx) {
   let yMax = yScale.domain()[1]
-  let color = dg.selection.length < 2 ? 'gray' : dg.selection[idx].color
+  let color = dg.selection.length < 1 ? 'gray' : dg.selection[idx].color
   let timeTooltip = this.svg.select(`.timeTooltip_${this.index}_${idx}`)
   let obj = this
   g.selectAll('.bars')
@@ -1073,7 +1087,7 @@ Frame.prototype.createBars = function(g, yScale, dots, i, idx) {
         .style('opacity', 0.7)
        let newX =  parseFloat(self.attr('x')) + parseFloat(self.attr('width')) / 2
        let newY =  parseFloat(self.attr('y'))
-       let value = d.y%1 === 0? d.y: d.y.toFixed(4)
+       let value = d.y%1 === 0? d.y: (d.y < 0.01?d.y.toFixed(4):d.y.toFixed(2))
        timeTooltip
          .attr('x', newX)
          .attr('y', newY - 25)
@@ -1090,7 +1104,10 @@ Frame.prototype.createBars = function(g, yScale, dots, i, idx) {
            let data = ele.datum()
            d3.select(this)
             .select('.tooltip')
-            .text(d => data.y%1===0? data.y:data.y.toFixed(4))
+            .text(d => {
+              let value = data.y%1 === 0? data.y: (data.y < 0.01?data.y.toFixed(4):data.y.toFixed(2))
+              return value
+            })
             .attr('x', newX)
             .attr('y', y)
             .style('fill', 'black')
@@ -1124,6 +1141,10 @@ Frame.prototype.createBars = function(g, yScale, dots, i, idx) {
        let level = parseInt(d3.select(this.parentNode).attr('level'))
        let rank = no
        highlightBars(level, rank)
+       window.fixedBar = {
+         level: level,
+         rank: rank
+       }
        BARFLAG = true
        networkcube.sendMessage('focusPeriod', d)
      })
@@ -1171,7 +1192,7 @@ Frame.prototype.drawIndividualMeasures = function (idx) {
    .style('text-anchor', 'middle')
  let zoomLayer = g.append('g').attr('clip-path', `url(#clip_${idx}_${this.index})`).classed('zoom-layer', true)
  let summary = this.data[idx][0].dots.map(v => v.y)
- let color = dg.selection.length < 2 ? 'gray' : dg.selection[idx].color
+ let color = dg.selection.length < 1 ? 'gray' : dg.selection[idx].color
  let lineGenerator = drawKdeLine(zoomLayer, color , summary)
  let obj = this
  this.data[idx].reverse().forEach((res, i) => {
@@ -1285,7 +1306,7 @@ Frame.prototype.drawExternalSvg = function (data, milisecond) {
        return Math.max(value, 1)
      })
      .style('fill', function(d) {
-       return dg.selection.length < 2 ? 'gray' : dg.selection[idx].color
+       return dg.selection.length < 1 ? 'gray' : dg.selection[idx].color
      })
      .style('pointer-events', 'all')
      .style('opacity', 0.5)
@@ -1294,14 +1315,14 @@ Frame.prototype.drawExternalSvg = function (data, milisecond) {
        d3.select(this).style('stroke', 'yellow').style('stroke-width', 3)
        let newX =  parseFloat(self.attr('x')) + parseFloat(self.attr('width')) / 2
        let newY =  parseFloat(self.attr('y')) - 20
-       let value = d.y%1===0?d.y:d.y.toFixed(4)
+       let value = d.y%1 === 0? d.y: (d.y < 0.01?d.y.toFixed(4):d.y.toFixed(2))
        FRAME_INFO.forEach(frame => {
          frame.fftG.forEach(g => {
            let ele = g.select(`.level_${level}`).selectAll(`.rank_${no}`)
            let y =  parseFloat(ele.attr('y')) - 5
            let data = ele.datum()
            g.select('.fft_tooltip')
-            .text(d => data.y%1==0?data.y:data.y.toFixed(4))
+            .text(d => data.y%1 === 0? data.y: (data.y < 0.01?data.y.toFixed(4):data.y.toFixed(2)))
             .attr('x', newX)
             .attr('y', y)
             .style('fill', 'black')
@@ -1380,6 +1401,17 @@ Frame.prototype.build = function (data) {
   return this
 }
 
+Frame.prototype.offsetUpdate = function (data, tid, level) {
+  data.forEach((datum, idx) => {
+    let g = this.canvas.select(`.vis_${idx}`)
+    let rectCanvas = g.select(`.level_${level}`)
+    rectCanvas.selectAll('.bars').remove()
+    this.yMax[idx][tid] = d3.max(datum.dots.map(v => v.y))
+    this.data[idx][tid] = datum.dots
+    this.createBars(rectCanvas, this.yScale[idx], datum.dots, level, idx)
+    this.adjustBars(g, idx)
+  })
+}
 let initInterval = function (msg) {
   let m = msg.body
    if (!m.flag) {
@@ -1389,8 +1421,18 @@ let initInterval = function (msg) {
    }
    let granId = m.granId
    let value = m.val
-   let shift = m.shift
+   let shift = -m.shift
+   let level = m.level
    let timeSlot = DataHandler.getSingleBins(granId, value, dg.timeArrays.momentTime, shift)
+   if (m.update) {
+     m.update = false
+     FRAME_INFO.forEach(frame => {
+         let label = frame.dataLabel
+         let data = dg.selection.length > 0 ? dg.selection.map(v => Calculator.getSingleData(v.dgraph, timeSlot, label)) : [Calculator.getSingleData(dg, timeSlot, label)]
+         let tid = frame.levelList.indexOf(level)
+         frame.offsetUpdate(data, tid, m.level)
+     })
+   }
    timeslider.updateInterval(timeSlot)
    networkcube.sendMessage('nodelinkInterval', {'slot': timeSlot, 'flag': true, 'tip': TIPS_CONFIG})
 }

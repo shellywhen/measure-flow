@@ -25,7 +25,7 @@ export let title = {
 }
 
 export let SCHEMA = {
-  'scientists':{
+  'Scientists':{
     source: 0,
     target: 3,
     weight: 6,
@@ -74,12 +74,12 @@ export let SCHEMA = {
     time: 4,
     linkType: 10
   },
-'twitter': {
+'Twitter': {
     source: 0,
     target: 1,
     time: 6
   },
-'embryo': {
+'Embryo': {
     source: 0,
     target: 1,
     time: 3
@@ -87,8 +87,7 @@ export let SCHEMA = {
 }
 
 export let TIME_FORMAT = {
-  'scientists': 'DD/MM/YYYY',
-  'scientists':'DD/MM/YYYY',
+  'Scientists': 'DD/MM/YYYY',
   'Diplomatic Exchange': 'YYYY',
   'Merchant': 'DD/MM/YYYY',
   'Marie-Colombu':'DD/MM/YYYY',
@@ -96,6 +95,6 @@ export let TIME_FORMAT = {
   'Marguerite': 'DD-MM-YYYY',
   'Highschool': 'MM/DD/YYYY HH:mm:ss',
   'Contract': 'YYYYMMDD',
-  'twitter': 'YYYY-MM-DD HH:mm',
-  'embryo': 'YYYY-MM-DD HH'
+  'Twitter': 'YYYY-MM-DD HH:mm',
+  'Embryo': 'YYYY-MM-DD HH'
 }
