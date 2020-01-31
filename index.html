@@ -148,10 +148,32 @@
           </div>
           <div style="width:92%; border-bottom:lightgray solid 1px;margin-top:2px;margin-bottom:1px;"></div>
           <div id="config-mode" class="ml-4 mr-2">
+            <div class="row ml-1 mr-1">
+              <div class="col-3 p-0">Bar</div>
+              <div class="col-3 p-0">
+                <div class="custom-control custom-switch">
+                  <input type="checkbox" class="custom-control-input" id="modeSwitch">
+                  <label class="custom-control-label" for="modeSwitch"></label>
+                </div>
+              </div>
+              <div class="col p-0">Density</div>
+            </div>
+          </div>
+          <div id="config-pack" class="ml-4 mr-2">
+            <div class="row ml-1 mr-1">
+          <div class="col-3 p-0">Time</div>
+          <div class="col-3 p-0">
+            <div class="custom-control custom-switch">
+              <input type="checkbox" class="custom-control-input" id="packSwitch">
+              <label class="custom-control-label" for="packSwitch"></label>
+            </div>
+          </div>
+          <div class="col p-0">Pack</div>
+        </div>
           </div>
           <div style="width:92%; border-bottom:lightgray solid 1px; margin-bottom:1px;margin-top:4px;"></div>
           <div class="ml-4 mr-2">
-            <p class="m-0 config-title">Measure Visibility</p>
+            <p class="m-0 config-title" style="cursor:pointer;" onclick=" $('#config-measure .form-check-input').click()">Measure Visibility</p>
           </div>
           <div id="config-measure" class="ml-4 mr-2 scrollbar scrollbar-sunny-morning thin sortable" style="line-height: initial; height:20vh; overflow-y: scroll">
           </div>
@@ -172,13 +194,18 @@
           <div id="timeSliderFrame"></div>
           <div id="measureFrame" class="sortable">
           </div>
+
           <div id="linkTypeFrame">
           </div>
           <div id="nodeTypeFrame">
           </div>
         </div>
-        <!-- <div id="boxFrame">
-        </div> -->
+
+        <div id="boxFrame">
+        </div>
+        <div id="heatmapFrame">
+        </div>
+
 
         <!-- <div class="scrollbar scrollbar-sunny-morning thin" id="timelineFrame"> -->
         <!-- <div id="kdeFrame"></div> -->
@@ -223,30 +250,30 @@
                       <div class="col-6 p-0 m-0" id="shift-slider-value" style="display:none">
                         <div class="row m-0 p-0">
                           <div class="col-9 p-0 m-0">
-                        <input type="range" step="0.01" min="-0.5" max="0.5" value="0" class="slider" id="config-shift">
-                      </div>
-                    <div class="col-2 m-0 p-0">
-                        <span id="shift-hint" style="right:0"></span>
-                      </div>
-                      </div>
+                            <input type="range" step="0.01" min="-0.5" max="0.5" value="0" class="slider" id="config-shift">
+                          </div>
+                          <div class="col-2 m-0 p-0">
+                            <span id="shift-hint" style="right:0"></span>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                        <div id="interval-selection-display"></div>
-                      <div class="row p-0">
-                        <div class="col-6 m-0  md-form">
-                          <input type="text" id="interval-value-input" class="form-control pt-0" style="font-size:large; text-align:center;padding:0;margin: 0.3rem 0 0 0">
-                          <label for="interval-value-input" class="pl-3"></label>
-                        </div>
-                        <div class="col-4 mt-1 ml-0 mb-0 mr-0 p-0">
-                          <select class="form-control form-control-sm" id="granularity-selection">
-                          </select>
-                        </div>
-                        <div class="col-1 m-1 p-0">
-                          <button type="button" class="btn btn-outline-info btn-sm z-depth-0 p-1 m-0" id="addInputInterval"><i class="fas fa-plus-square"></i></button>
-                        </div>
+                    <div id="interval-selection-display"></div>
+                    <div class="row p-0">
+                      <div class="col-6 m-0  md-form">
+                        <input type="text" id="interval-value-input" class="form-control pt-0" style="font-size:large; text-align:center;padding:0;margin: 0.3rem 0 0 0">
+                        <label for="interval-value-input" class="pl-3"></label>
+                      </div>
+                      <div class="col-4 mt-1 ml-0 mb-0 mr-0 p-0">
+                        <select class="form-control form-control-sm" id="granularity-selection">
+                        </select>
+                      </div>
+                      <div class="col-1 m-1 p-0">
+                        <button type="button" class="btn btn-outline-info btn-sm z-depth-0 p-1 m-0" id="addInputInterval"><i class="fas fa-plus-square"></i></button>
                       </div>
                     </div>
                   </div>
+                </div>
                 <div class="p-0 m-0">
                   <p class="mt-0 mb-1 config-title" style="font-size: 1rem">Intervals from Fourier Transform:</p>
                 </div>
@@ -357,8 +384,7 @@
     </div>
   </div>
 
-  <!-- <div id="heatmapFrame">
-  </div> -->
+
 </body>
 <script>
   function showDataConfig() {

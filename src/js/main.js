@@ -18,9 +18,9 @@ import * as Config from './configureView.js'
 import * as Bookmark from './bookmarkBrowser.js'
 import * as Constant from './constant.js'
 // import * as Stat from './statView.js'
-// import * as Box from './boxView.js'
+import * as Box from './boxView.js'
 // import * as Kde from  './kdeView.js'
-// import * as Heatmap from './heatmapView.js'
+import * as Heatmap from './heatmapView.js'
 import * as Measure from './measureView.js'
 import * as DataHandler from './dataHandler.js'
 import * as Interval from './intervalConfig.js'
@@ -126,9 +126,9 @@ window.afterData = function() {
   //  DataHandler.getSubgraphDgraph(window.dgraph, new Set([0,1,2,3,4,5,6,7,8,9]))
   // TimeLine.drawTimeLine()
   //  TimeSlider.drawTimeSlider(Measure.WIDTH_LEFT, Measure.WIDTH_MIDDLE)
-  //Box.drawBox()
+  Box.drawBox()
 
-  //  Heatmap.drawHeatmap('heatmapFrame')
+   Heatmap.drawHeatmap('heatmapFrame')
   NodeLink.drawNodeLink()
   //  Measure.drawMeasureList('measureFrame')
   Measure.measureFrameInit(dgraph)

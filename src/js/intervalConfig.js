@@ -314,7 +314,7 @@ let drawFFT = function(dataList) {
       .attr('x', 0)
       .attr('y', 2* h / 3)
       .attr('width', w)
-      .attr('height', h / 3)
+      .attr('height', 0)
       .style('pointer-events', 'all')
       .style('opacity', 0)
       .on('click', function() {

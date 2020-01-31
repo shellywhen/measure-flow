@@ -75,8 +75,8 @@ export let SCHEMA = {
     linkType: 10
   },
 'Twitter': {
-    source: 0,
-    target: 1,
+    source: 2,
+    target: 3,
     time: 6
   },
 'Embryo': {

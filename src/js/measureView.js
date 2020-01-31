@@ -87,7 +87,8 @@ let globalZoom = function () {
 export let setCanvasParameters = function (divId, dgraph) {
   MEASURE_DIV_ID = divId
   CANVAS_INFO = []
-  CANVAS_HEIGHT = $(`#${divId}`).innerHeight()
+  // CANVAS_HEIGHT = $(`#${divId}`).innerHeight()
+  CANVAS_HEIGHT = document.body.clientWidth * 0.63
   CANVAS_WIDTH = $(`#${divId}`).innerWidth()
   // CANVAS_WIDTH = window.innerWidth * 0.63
   d3.select(`#${divId}`).select('svg').remove()
@@ -761,11 +762,11 @@ export function highlightBars(level=window.focusGranularity.level, rank=timeslid
       let datum = frame.svg.select(`.vis_${subgraph}`).select(`.level_${level}`).select(`.rank_${rank}`).datum()
       let brushStart = datum.timeStart
       let brushEnd = datum.timeEnd
-      let y = subgraph > 1? 0: frame.yScale[i](datum.y)
+      let y = subgraph > 1? svgHeight: frame.yScale[i](datum.y)
       let textY = y
       let maxY = frame.yScale[i].range()[1]
       let text = Number(datum.y)
-      if ((maxY - y) / maxY > 0.1) {
+      if (dg.selection.length <1 && (maxY - y) / maxY > 0.1) {
         y = maxY * 0.95
         textY = maxY + (svgHeight + maxY) / 2
         canvas.select('.overflow_rect')
@@ -1087,20 +1088,22 @@ Frame.prototype.createBars = function(g, yScale, dots, i, idx) {
         .style('opacity', 0.7)
        let newX =  parseFloat(self.attr('x')) + parseFloat(self.attr('width')) / 2
        let newY =  parseFloat(self.attr('y'))
+       if(dg.selection.length > 2) newY = svgHeight
        let value = d.y%1 === 0? d.y: (d.y < 0.01?d.y.toFixed(4):d.y.toFixed(2))
        timeTooltip
          .attr('x', newX)
-         .attr('y', newY - 25)
+         .attr('y', newY - 35)
          .attr('dy', '1.2rem')
          .text(getTimeString(d.timeStart, d.timeEnd))
          .style('fill', 'black')
          .style('opacity', 1)
          .style('display', '')
-        if((yMax-d.y)/yMax < 0.3) timeTooltip.attr('y', newY)
+        if((yMax-d.y)/yMax < 0.3) timeTooltip.attr('y', newY+5)
        d3.selectAll(`.mini_vis`)
          .each(function(d) {
            let ele = d3.select(this).select(`.level_${i}`).select(`.rank_${no}`)
            let y =  parseFloat(ele.attr('y'))
+           if(dg.selection.length > 1) y = svgHeight
            let data = ele.datum()
            d3.select(this)
             .select('.tooltip')
@@ -1179,18 +1182,19 @@ Frame.prototype.drawIndividualMeasures = function (idx) {
   g.append('g')
    .classed('y-axis', true)
    .call(d3.axisLeft(yScale).ticks(2))
- let tooltipG = this.canvas.append('g')
- let tooltip = g.append('g').append('text')
+ let zoomLayer = g.append('g').attr('clip-path', `url(#clip_${idx}_${this.index})`).classed('zoom-layer', true)
+ // let tooltipG = this.canvas.append('g')
+ let tooltipG = g.append('g')
+ tooltipG.append('text')
    .attr('class', 'tooltip')
    .style('opacity', 0)
    .style('text-anchor', 'middle')
    .style('font-size', '1.2rem')
- let timeTooltip = tooltipG.append('text')
+ tooltipG.append('text')
    .attr('class', `timeTooltip timeTooltip_${this.index}_${idx}`)
    .style('opacity', 0)
    .style('display', 'none')
    .style('text-anchor', 'middle')
- let zoomLayer = g.append('g').attr('clip-path', `url(#clip_${idx}_${this.index})`).classed('zoom-layer', true)
  let summary = this.data[idx][0].dots.map(v => v.y)
  let color = dg.selection.length < 1 ? 'gray' : dg.selection[idx].color
  let lineGenerator = drawKdeLine(zoomLayer, color , summary)

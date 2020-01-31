@@ -219,17 +219,6 @@ let addDatasetOption = function() {
   container.append('a').classed('dropdown-item disabled', true).text('Dataset Selection').style('padding', '0 1.5rem').style('font-weight','bold')
 }
 let add_config_mode = function() {
-  d3.select('#config-mode')
-    .html(`<div class="row ml-1 mr-1">
-  <div class="col-3 p-0">Bar</div>
-  <div class="col-3 p-0">
-    <div class="custom-control custom-switch">
-      <input type="checkbox" class="custom-control-input" id="modeSwitch">
-      <label class="custom-control-label" for="modeSwitch"></label>
-    </div>
-  </div>
-  <div class="col p-0">Density</div>
-</div>`)
   d3.select('#measureFrame').selectAll('.kdeLine').style('display', 'none')
   $('#modeSwitch').change(function() {
     if (this.checked) {
@@ -243,6 +232,9 @@ let add_config_mode = function() {
       d3.selectAll('.y-axis').style('display', '')
     }
   })
+}
+let add_config_pack = function () {
+
 }
 
 let add_config_measure = function() {
@@ -273,7 +265,6 @@ let clearConfigs = function() {
   d3.select('#config-localMeasure').html('')
   d3.select('#config-measure').html('')
   d3.select('#config-bar').html('')
-  d3.select('#config-mode').html('')
 }
 let drawConfigs = function() {
   clearConfigs()
@@ -306,6 +297,7 @@ let drawConfigs = function() {
   addLocalMeasureDropdown('config-localMeasure')
   add_config_mode()
   add_config_measure()
+  add_config_pack()
   //  addButton('config-view', resetView)
   window.localMeasure = 'degree'
 

@@ -19,7 +19,7 @@ body {
   stroke-width: 0.3vh;
 }
 #measureFrame {
-  height: 95vh;
+  /* height: 95vh; */
   /* overflow-y: scroll; */
   position: relative;
 }
@@ -197,7 +197,7 @@ option {
   width:1.8rem;
   height:1.8rem;
   left:0px;
-  top:5vh;
+  top:3vh;
   z-index:200;
   text-align: center;
   border-radius: 1rem;

@@ -6,8 +6,8 @@ let svg
 const color = d3.interpolateOranges
 const margin = {
   'top': 5,
-  'left': 35,
-  'right': 35,
+  'left': 5,
+  'right': 0,
   'bottom': 4
 }
 let dgraph
@@ -18,11 +18,13 @@ export let drawBox = function (divId = 'boxFrame', svgId = 'boxSvg') {
   d3.select(`#${boxDivId}`).selectAll('svg').remove()
   let boxWidth = $(`#${boxDivId}`).innerWidth()
   let boxHeight = $(`#${boxDivId}`).innerHeight()
-  width = boxWidth - margin.left - margin.right
+  width = 0.83 * boxWidth
   height = boxHeight - margin.top - margin.bottom
   svg = d3.select(`#${boxDivId}`).append('svg')
     .attr('height', boxHeight)
     .attr('width', boxWidth)
+    .append('g')
+    .attr('transform', `translate(${0.13*boxWidth}, 0)`)
     .append('g')
     .attr('transform', 'translate(' + margin.left + ','+ margin.top + ')')
   dgraph = window.dgraph
@@ -77,7 +79,7 @@ let getQuartile = function (raw_data, k = 4, interval) {
       percentage: [],
       size: data.length,
       k: k,
-      time: dgraph.timeArrays.momentTime[interval[tid][0]]._d
+      time: dgraph.timeArrays.momentTime[interval[tid].interval[0]]._d
     }
     for (let i = 0; data[i] < lb; i++) {
       result.outlier.push({'data': data[i], 'node': data_pkg[i].node})
@@ -89,7 +91,7 @@ let getQuartile = function (raw_data, k = 4, interval) {
       result.percentage.push(data[Math.floor(p * n / k)])
     }
     return result
-  })
+  }).filter((v, i) => raw_data[i].length > 0)
   return dots
 }
 let getBoxData = function (measure, interval) {
@@ -97,11 +99,12 @@ let getBoxData = function (measure, interval) {
 }
 export let getDegreeDistribution = function (interval) {
   let data = []
-  interval.forEach(itv => {
+  interval.forEach(itvl => {
+    let itv = itvl.interval
     let list = []
     dgraph.nodeArrays.neighbors.forEach((node, nid) => {
       let neighbor = []
-      for(let t = itv[0]; t <= itv[1]; t++) {
+      for(let t = itv[0]; t < itv[1]; t++) {
         if(t in node.serie) {
           neighbor.push(...node.serie[t])
         }
@@ -119,7 +122,7 @@ let plotBox = function (data, outlier) {
   let maxY = d3.max(outlier.map(v => v.maximum))
   const xScale = d3.scaleTime()
     .range([0, width])
-    .domain([dgraph.timeArrays.momentTime[0]._d, dgraph.timeArrays.momentTime[dgraph.timeArrays.momentTime.length - 1]._d])
+    .domain([dgraph.roundedStart, dgraph.roundedEnd])
   const yScale = d3.scaleLinear()
     .range([height, 0])
     .domain([0, maxY])
@@ -149,10 +152,12 @@ let totalPath = data.length
      .style('stroke', '#ff8c00')
      .style('stroke-width', 0.5)
      .attr('d', d3.area()
-     .curve(d3.curveCardinal)
-     .x(d => xScale(d.x))
+     .x(d => {
+       return xScale(d.x)
+     })
      .y0(d => yScale(d.y0))
      .y1(d => yScale(d.y1))
+        //  .curve(d3.curveCardinal)
    )
  })
 let g = svg.append('g')

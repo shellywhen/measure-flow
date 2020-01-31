@@ -10,9 +10,9 @@ return 0
 }
 const margin = {
   'top': 5,
-  'left': 35,
-  'right': 25,
-  'bottom': 20
+  'left': 5,
+  'right': 0,
+  'bottom': 8
 }
 
 let getDegreeDistribution = function (interval) {
@@ -64,7 +64,7 @@ let plotHeatmap = function (data, interval, maximum, minimum) {
     .attr('height', heatmapHeight)
     .attr('width', heatmapWidth)
     .append('g')
-    .attr('transform', `translate(${margin.left}, ${margin.top})`)
+    .attr('transform', `translate(${heatmapWidth*0.13+margin.left}, ${margin.top})`)
   let groups = new Array(interval.length).fill(0)
   for (let group in groups) groups[group] = group
   let bins = new Array(maximum - minimum + 1).fill(0)
@@ -109,7 +109,7 @@ export let drawHeatmap = function (divId = 'heatmapFrame') {
   heatmapDivId = divId
   heatmapHeight = $(`#${divId}`).innerHeight()
   heatmapWidth = $(`#${divId}`).innerWidth()
-  heatmapSvgWidth = heatmapWidth - margin.left - margin.right
+  heatmapSvgWidth = heatmapWidth*0.83 - margin.left - margin.right
   heatmapSvgHeight = heatmapHeight - margin.top - margin.bottom
   dgraph = window.dgraph
   let interval = dgraph.timeArrays.intervals[0].period.map(v => v.interval)
