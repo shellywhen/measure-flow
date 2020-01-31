@@ -88,7 +88,7 @@ export let setCanvasParameters = function (divId, dgraph) {
   MEASURE_DIV_ID = divId
   CANVAS_INFO = []
   // CANVAS_HEIGHT = $(`#${divId}`).innerHeight()
-  CANVAS_HEIGHT = document.body.clientWidth * 0.63
+  CANVAS_HEIGHT = document.body.clientWidth * 0.48
   CANVAS_WIDTH = $(`#${divId}`).innerWidth()
   // CANVAS_WIDTH = window.innerWidth * 0.63
   d3.select(`#${divId}`).select('svg').remove()
