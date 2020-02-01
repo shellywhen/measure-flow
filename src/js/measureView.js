@@ -4,6 +4,7 @@ import * as Kde from './kdeView.js'
 import * as Calculator from './measureCalculator.js'
 import * as Constant from './constant.js'
 import * as Interval from './intervalConfig.js'
+import * as Nodelink from './nodelinkView.js'
 
 let CANVAS_HEIGHT, CANVAS_WIDTH, SVGWIDTH, SVGheight, SVGwidth, ZOOM_SLIDER_HEIGHT, STATIC_SLIDER_HEIGHT
 export let SVGHEIGHT, svgHeight
@@ -470,6 +471,20 @@ TimeSlider.prototype.init = function () {
        if (!window.playerMode) return
        self.play()
      })
+     .on('dblclick', function() {
+       if(!window.playerMode) return
+       let intervalIndex = self.intervalIndex
+       let level = window.focusGranularity.level
+       self.intervalIndex = 0
+         let total = self.interval.length
+         let milisecond = Math.min(200, 10000 /(total+1))
+         for(let rank = 0; rank < total; rank++) {
+           setTimeout(function(){
+             self.play()
+             Nodelink.generateScreenshot(rank, level)
+           }, milisecond*rank)
+         }
+     })
    iconG
      .append('text')
      .text('\uf144')
@@ -760,23 +775,24 @@ export function highlightBars(level=window.focusGranularity.level, rank=timeslid
       let canvas = d3.select(this)
       let subgraph = i % dg.selection.length
       if (isNaN(subgraph)) subgraph = 0
-      let datum = frame.svg.select(`.vis_${subgraph}`).select(`.level_${level}`).select(`.rank_${rank}`).datum()
-      let brushStart = datum.timeStart
-      let brushEnd = datum.timeEnd
-      let y = subgraph > 1? svgHeight: frame.yScale[i](datum.y)
-      let textY = y
+      let datumEle = frame.svg.select(`.vis_${subgraph}`).select(`.level_${level}`).select(`.rank_${rank}`)
+      let y = Number(datumEle.attr('y'))
+      let height = Number(datumEle.attr('height'))
+      let x = Number(datumEle.attr('x'))
+      let width = Number(datumEle.attr('width'))
+      let textY = subgraph > 1? svgHeight: y
       let maxY = frame.yScale[i].range()[1]
-      let text = Number(datum.y)
+      let text = Number(datumEle.datum().y)
       if (dg.selection.length <1 && (maxY - y) / maxY > 0.1) {
         y = maxY * 0.95
         textY = maxY + (svgHeight + maxY) / 2
         canvas.select('.overflow_rect')
-          .attr('x', xScale(brushStart))
+          .attr('x', x)
           .attr('y',  maxY - svgHeight / 12)
           .attr('height', svgHeight / 12)
-          .attr('width', xScale(brushEnd) - xScale(brushStart))
+          .attr('width', width)
         canvas.select('text')
-          .attr('x', (xScale(brushStart) + xScale(brushEnd))/2)
+          .attr('x', x + width / 2)
           .attr('y', textY)
           .text(`${text % 1 == 0 ? text : (text > 0.01 ? text.toFixed(2): text.toFixed(4))}`)
       }
@@ -784,15 +800,15 @@ export function highlightBars(level=window.focusGranularity.level, rank=timeslid
         canvas.select('.overflow_rect')
           .attr('height', 0)
         canvas.select('text')
-          .attr('x', (xScale(brushStart) + xScale(brushEnd))/2)
+          .attr('x', x + width / 2)
           .attr('y', textY)
           .text(`${text % 1 == 0 ? text : (text > 0.01 ? text.toFixed(2): text.toFixed(4))}`)
       }
       canvas.select('.instance_rect')
-        .attr('x', xScale(brushStart))
+        .attr('x', x)
         .attr('y', y)
-        .attr('height', frame.yScale[i](0) - y)
-        .attr('width', xScale(brushEnd) - xScale(brushStart))
+        .attr('height', height)
+        .attr('width', width)
     })
   })
 }
@@ -887,6 +903,57 @@ Frame.prototype.init = function () {
         timeslider.updateHint(x, date)
       })
       .style('pointer-events', 'all')
+}
+
+Frame.prototype.rectPack = function (level=window.focusGranularity.level) {
+  let levelidx = Interval.current.map(v => v.level).indexOf(level)
+  let emptySpace = 10
+  this.canvas.selectAll('.layer-container').style('display', 'none')
+  let period = dg.timeArrays.intervals[levelidx].period
+  let xRange = xScale.range()
+  let xLength = xRange[1] - xRange[0] - emptySpace
+  let list = period.map(v => v.interval[0] != v.interval[1])
+  let valid = []
+  let total = list.filter(v => v).length
+  list.forEach((v, i) => {
+    valid.push({
+      'flag': v,
+      'acc': i==0?0:(v?valid[i-1].acc+1:valid[i-1].acc)
+    })
+  })
+  let gap = emptySpace / Math.max(1,(total-1))
+  let width = xLength / total
+  this.data.forEach((datum, idx) => {
+    let g = this.canvas.select(`.vis_${idx}`)
+    let yScale = this.yScale[idx].copy().domain([0, this.yMax[idx][levelidx]])
+    g.select('.y-axis').transition().duration(500).call(d3.axisLeft(yScale).ticks(2))
+    g.select(`.level_${level}`)
+      .style('display', '')
+      .style('opacity', 0.8)
+      .selectAll('.bars')
+      .attr('x', (d,i) => valid[i].flag? valid[i].acc * (width + gap):0)
+      .attr('width', (d, i) => valid[i].flag? width:0)
+      .attr('y', (d,i) => yScale(d.y))
+      .attr('height', (d, i) => yScale(0)-yScale(d.y))
+  })
+}
+
+Frame.prototype.rectNormal = function () {
+  this.data.forEach((datum, idx) => {
+    let g = this.canvas.select(`.vis_${idx}`)
+    let yScale = this.yScale[idx]
+    g.select('.y-axis').transition().duration(500).call(d3.axisLeft(yScale).ticks(2))
+    Interval.current.forEach((v, idx) => {
+      if(!v.active) return
+      g.select(`.level_${v.level}`).style('display', '')
+      g.selectAll('.bars')
+        .attr('x', d=> xScale(d.timeStart))
+        .attr('width', d => xScale(d.timeEnd) - xScale(d.timeStart))
+        .attr('y', d => yScale(d.y))
+        .attr('height', d => yScale(0) - yScale(d.y))
+    })
+    this.adjustBars(g, idx, yScale)
+  })
 }
 Frame.prototype.addData = function (data) {
   if(dg.selection.length === 1) {
@@ -1045,6 +1112,7 @@ Frame.prototype.updateIndividualMeasures = function (idx, data, level) {
   let rectCanvas = zoomLayer.append('g')
     .attr('level', level)
     .classed(`level_${level}`, true)
+    .classed(`layer-container`, true)
   this.createBars(rectCanvas, yScale, data.dots, level, idx)
 }
 Frame.prototype.reScale = function () {
@@ -1060,6 +1128,10 @@ Frame.prototype.reScale = function () {
         .range([svgHeight, svgHeight / 12])
         .nice()
     this.yScale[idx] = yScale
+    let summary = datum[0].dots.map(v => v.y)
+    let color = dg.selection.length < 1 ? 'gray' : dg.selection[idx].color
+    let lineGenerator = drawKdeLine(zoomLayer, color , summary)
+    this.lineGenerator[idx] = lineGenerator
     g.select('.y-axis').transition().duration(500).call(d3.axisLeft(yScale).ticks(2))
     g.select('.zoom-layer').attr('clip-path', `url(#clip_${idx}_${this.index})`)
     g.selectAll('.bars')
@@ -1164,6 +1236,9 @@ Frame.prototype.createBars = function(g, yScale, dots, i, idx) {
      .on('click', function (d, no) {
        let level = parseInt(d3.select(this.parentNode).attr('level'))
        let rank = no
+       let myself = d3.select(this)
+       let x = Number(myself.attr('x'))
+       let width = Number(myself.attr('width'))
        highlightBars(level, rank)
        window.fixedBar = {
          level: level,
@@ -1225,6 +1300,7 @@ Frame.prototype.drawIndividualMeasures = function (idx) {
    let rectCanvas = zoomLayer.append('g')
      .attr('level', i)
      .classed(`level_${i}`, true)
+     .classed('layer-container', true)
   this.createBars(rectCanvas, yScale, data, i, idx)
   this.levelList.push(this.data[idx].length - i - 1)
  })
@@ -1438,9 +1514,11 @@ Frame.prototype.offsetUpdate = function (data, tid, level) {
   })
 }
 let initInterval = function (msg) {
+  if($('#packSwitch').prop('checked')) $('#packSwitch').click()
   let m = msg.body
    if (!m.flag) {
      timeslider.removeInterval()
+     d3.select('#screenshotFrame').selectAll('div').remove()
      networkcube.sendMessage('nodelinkInterval', {'flag': false})
      return
    }
@@ -1469,6 +1547,7 @@ let addBars = function (msg) {
     FRAME_INFO.forEach(frame => {
       frame.clearFFTcanvas()
     })
+    if($('#packSwitch').prop('checked'))$('#packSwitch').click()
     return
   }
   let data = m.data
@@ -1477,6 +1556,7 @@ let addBars = function (msg) {
     frame.updateIndividualMeasures(idx, v, m.level)
     frame.levelList.push(m.level)
   })
+  if ($('#packSwitch').prop('checked')) frame.rectPack()
   networkcube.sendMessage('intervalChange', {
     delete: [],
     insert: [m.level],

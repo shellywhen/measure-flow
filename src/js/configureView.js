@@ -241,7 +241,23 @@ let add_config_mode = function() {
   })
 }
 let add_config_pack = function () {
-
+  $('#packSwitch').change(function() {
+    if (this.checked) {
+      if (!window.playerMode) {
+        alert('Please specify an interval.')
+        this.checked = false
+        return
+      }
+      // Pack Things up
+      let level = window.focusGranularity.level
+      Measure.FRAME_INFO.forEach(frame => {
+        frame.rectPack(level)
+      })
+    } else {
+      Measure.FRAME_INFO.forEach(frame => frame.rectNormal())
+    }
+  })
+  if (!window.playerMode) return
 }
 
 let add_config_measure = function() {

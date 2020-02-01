@@ -27,6 +27,7 @@ let shiftSliderCallback = function() {
   current[tid].shift = shift
   current[tid].flag = true
   current[tid].update = true
+  current[tid].takescreenshot = false
   networkcube.sendMessage('initGran', current[tid])
 }
 
@@ -102,6 +103,7 @@ let drawSpan = function(datum, shift = 0, border = 'gray', defaultDiv='interval-
         window.focusGranularity = d
         window.shiftMode = true
         d.flag = true
+        d.takescreenshot = true
         let id = current.indexOf(datum)
         $('#config-shift').val(d.shift)
         window.timeslotIdx = id
@@ -300,7 +302,6 @@ let drawFFT = function(dataList) {
   let min_gran = dg.gran_min
   let max_gran = dg.gran_max
   let labelData = DataHandler.generateDateLabel(min_gran, max_gran)
-  console.log(dataList)
   dataList.forEach(function(datum, idx) {
     let g = svg.append('g').attr('transform', `translate(${ PADDING.left},${minHeight*idx+PADDING.top})`)
     let linesG = g.append('g')

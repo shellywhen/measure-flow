@@ -20,7 +20,7 @@ let nodes
 let links
 let lasso
 let dg
-let generateScreenshot = function (rank='unknown', level='unknown') {
+export let generateScreenshot = function (rank='unknown', level='unknown') {
   if(!$('#checkbox_screenshot').prop('checked'))return
   let screenshot = $('#nodelink')
     .clone()
@@ -55,9 +55,6 @@ let playerNodelink = function (m) {
   let data = m.body
   let interval = data.interval
   if (m.body.fixed||!window.fixed){
-    if(!m.body.fixed&&!window.fixed){
-      generateScreenshot()
-    }
     drawNodeLinkInPeriod(interval[0], interval[1]-1, true)
     updateTimeline(data.x0, data.x1, data.textStart, data.textEnd)
   }
@@ -509,6 +506,9 @@ let updateInterval = function (m) {
     .style('opacity', 0.5)
     .style('cursor', 'pointer')
     .on('click', function (d, i) {
+      let ele = d3.select(this)
+      let toggle = Number(ele.attr('toggle'))
+      ele.attr('toggle', 1 - toggle)
       if(!toggle) {
         window.fixed = false
         d3.selectAll('.links').style('stroke-dasharray', 0)
