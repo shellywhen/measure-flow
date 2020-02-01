@@ -101,6 +101,7 @@ export let getRoundStart = function (start, end) {
 
 export let getRoundEnd = function (start, end) {
   // return end
+  if(end>new Date("2020-01-15 00:00:00").getTime()) return end
   let round = new Date(end)
   if (start.getFullYear() === end.getFullYear()) {
     if (start.getMonth() === end.getMonth()) {

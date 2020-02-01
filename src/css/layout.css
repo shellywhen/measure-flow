@@ -13,7 +13,12 @@
   width: 59%;
 }
 #screenshotFrame {
+  display:flow-root;
 }
 .screenshot-div {
   display: inline;
+}
+.round-div{
+  border-radius: 1rem;
+  border:gray solid 1px;
 }

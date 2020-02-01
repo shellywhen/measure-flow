@@ -1130,10 +1130,10 @@ Frame.prototype.reScale = function () {
     this.yScale[idx] = yScale
     let summary = datum[0].dots.map(v => v.y)
     let color = dg.selection.length < 1 ? 'gray' : dg.selection[idx].color
+    let zoomLayer = g.select('.zoom-layer').attr('clip-path', `url(#clip_${idx}_${this.index})`)
     let lineGenerator = drawKdeLine(zoomLayer, color , summary)
     this.lineGenerator[idx] = lineGenerator
     g.select('.y-axis').transition().duration(500).call(d3.axisLeft(yScale).ticks(2))
-    g.select('.zoom-layer').attr('clip-path', `url(#clip_${idx}_${this.index})`)
     g.selectAll('.bars')
         .attr('height', d => yScale(0) - yScale(d.y))
         .attr('y', d => yScale(d.y))
@@ -1371,84 +1371,7 @@ Frame.prototype.initFFTcanvas = function (data) {
    this.fftG[idx]=g
   })
 }
-Frame.prototype.drawExternalSvg = function (data, milisecond) {
-  let selfObj = this
-  let fftCanvas = this.fftCanvas
-  this.canvas.style('display', 'none')
-  fftCanvas.style('display', '')
-  if(this.fftG.length===0) {
-    this.initFFTcanvas(data)
-  }
-  data.forEach(function(datum, idx){
-    let bg = selfObj.fftG[idx]
-    let level = Interval.levelCount - 1
-    let currentLen = bg.selectAll('.mini_vis_fft')._groups[0].length
-    //MODIFY
-    let g =  bg.select('.fftView').append('g').classed(`mini_vis_fft`, true).classed(`level_${level}`, true).attr('level', level)
-    let maxY = d3.max(datum.dots.map(v => v.y))
-    if(selfObj.fftYscale[idx]) {
-      maxY = Math.max(selfObj.fftYscale[idx].domain()[1], maxY)
-    }
-    let yScale = selfObj.fftYscale[idx].domain([0, maxY])
-    selfObj.fftYscale[idx] = yScale
-    bg.select('.y-axis').transition().duration(500).call(d3.axisLeft(selfObj.fftYscale[idx]).ticks(2))
-    // update existed rectangle
-    bg.selectAll('.bars').transition().duration(800).attr('y', d => yScale(d.y)).attr('height', d => yScale(0) - yScale(d.y))
-    g.selectAll('rect')
-     .data(datum.dots)
-     .enter()
-     .append('rect')
-     .attr('class', (d, i) => `bars rank_${i}`)
-     .attr('x', d => xScale(d.timeStart))
-     .attr('y', d => yScale(d.y))
-     .attr('height', d => yScale(0) - yScale(d.y))
-     .attr('width', d => {
-       let value = (xScale(d.timeEnd) - xScale(d.timeStart))
-       return Math.max(value, 1)
-     })
-     .style('fill', function(d) {
-       return dg.selection.length < 1 ? 'gray' : dg.selection[idx].color
-     })
-     .style('pointer-events', 'all')
-     .style('opacity', 0.5)
-     .on('mouseover', function (d, no) {
-       let self = d3.select(this)
-       d3.select(this).style('stroke', 'yellow').style('stroke-width', 3)
-       let newX =  parseFloat(self.attr('x')) + parseFloat(self.attr('width')) / 2
-       let newY =  parseFloat(self.attr('y')) - 20
-       let value = d.y%1 === 0? d.y: (d.y < 0.01?d.y.toFixed(4):d.y.toFixed(2))
-       FRAME_INFO.forEach(frame => {
-         frame.fftG.forEach(g => {
-           let ele = g.select(`.level_${level}`).selectAll(`.rank_${no}`)
-           let y =  parseFloat(ele.attr('y')) - 5
-           let data = ele.datum()
-           g.select('.fft_tooltip')
-            .text(d => data.y%1 === 0? data.y: (data.y < 0.01?data.y.toFixed(4):data.y.toFixed(2)))
-            .attr('x', newX)
-            .attr('y', y)
-            .style('fill', 'black')
-            .style('opacity', 1)
-         })
-       })
-     })
-     .on('mouseout', function (d, no) {
-       d3.selectAll(`.level_${level}`).style('opacity', 0.5)
-       d3.select(this).style('stroke', '').style('stroke-width', 0)
-       let tooltips = d3.selectAll(`.fft_tooltip`)
-      tooltips.style('opacity', 0)
-      tooltips.text('')
-     })
-     .on('click', function (d, no) {
-       BARFLAG = false
-       let level = parseInt(d3.select(this.parentNode).attr('level'))
-       let rank = no
-       highlightBars(level, rank)
-       networkcube.sendMessage('focusPeriod', d)
-     })
-  })
-  this.fftMilisecond.push(milisecond)
-  this.changeLayerOrder()
-}
+
 Frame.prototype.adjustBars = function (g, idx, yScale=null) {
   if(!yScale) {
     let current = Interval.current
@@ -1693,3 +1616,82 @@ function getOpacity (level) {
   let index = order.indexOf(level)
   return 0.2 + 0.6/(current.length - 1) * index
 }
+
+// Frame.prototype.drawExternalSvg = function (data, milisecond) {
+//   let selfObj = this
+//   let fftCanvas = this.fftCanvas
+//   this.canvas.style('display', 'none')
+//   fftCanvas.style('display', '')
+//   if(this.fftG.length===0) {
+//     this.initFFTcanvas(data)
+//   }
+//   data.forEach(function(datum, idx){
+//     let bg = selfObj.fftG[idx]
+//     let level = Interval.levelCount - 1
+//     let currentLen = bg.selectAll('.mini_vis_fft')._groups[0].length
+//     //MODIFY
+//     let g =  bg.select('.fftView').append('g').classed(`mini_vis_fft`, true).classed(`level_${level}`, true).attr('level', level)
+//     let maxY = d3.max(datum.dots.map(v => v.y))
+//     if(selfObj.fftYscale[idx]) {
+//       maxY = Math.max(selfObj.fftYscale[idx].domain()[1], maxY)
+//     }
+//     let yScale = selfObj.fftYscale[idx].domain([0, maxY])
+//     selfObj.fftYscale[idx] = yScale
+//     bg.select('.y-axis').transition().duration(500).call(d3.axisLeft(selfObj.fftYscale[idx]).ticks(2))
+//     // update existed rectangle
+//     bg.selectAll('.bars').transition().duration(800).attr('y', d => yScale(d.y)).attr('height', d => yScale(0) - yScale(d.y))
+//     g.selectAll('rect')
+//      .data(datum.dots)
+//      .enter()
+//      .append('rect')
+//      .attr('class', (d, i) => `bars rank_${i}`)
+//      .attr('x', d => xScale(d.timeStart))
+//      .attr('y', d => yScale(d.y))
+//      .attr('height', d => yScale(0) - yScale(d.y))
+//      .attr('width', d => {
+//        let value = (xScale(d.timeEnd) - xScale(d.timeStart))
+//        return Math.max(value, 1)
+//      })
+//      .style('fill', function(d) {
+//        return dg.selection.length < 1 ? 'gray' : dg.selection[idx].color
+//      })
+//      .style('pointer-events', 'all')
+//      .style('opacity', 0.5)
+//      .on('mouseover', function (d, no) {
+//        let self = d3.select(this)
+//        d3.select(this).style('stroke', 'yellow').style('stroke-width', 3)
+//        let newX =  parseFloat(self.attr('x')) + parseFloat(self.attr('width')) / 2
+//        let newY =  parseFloat(self.attr('y')) - 20
+//        let value = d.y%1 === 0? d.y: (d.y < 0.01?d.y.toFixed(4):d.y.toFixed(2))
+//        FRAME_INFO.forEach(frame => {
+//          frame.fftG.forEach(g => {
+//            let ele = g.select(`.level_${level}`).selectAll(`.rank_${no}`)
+//            let y =  parseFloat(ele.attr('y')) - 5
+//            let data = ele.datum()
+//            g.select('.fft_tooltip')
+//             .text(d => data.y%1 === 0? data.y: (data.y < 0.01?data.y.toFixed(4):data.y.toFixed(2)))
+//             .attr('x', newX)
+//             .attr('y', y)
+//             .style('fill', 'black')
+//             .style('opacity', 1)
+//          })
+//        })
+//      })
+//      .on('mouseout', function (d, no) {
+//        d3.selectAll(`.level_${level}`).style('opacity', 0.5)
+//        d3.select(this).style('stroke', '').style('stroke-width', 0)
+//        let tooltips = d3.selectAll(`.fft_tooltip`)
+//       tooltips.style('opacity', 0)
+//       tooltips.text('')
+//      })
+//      .on('click', function (d, no) {
+//        BARFLAG = false
+//        let level = parseInt(d3.select(this.parentNode).attr('level'))
+//        let rank = no
+//        highlightBars(level, rank)
+//        networkcube.sendMessage('focusPeriod', d)
+//      })
+//   })
+//   this.fftMilisecond.push(milisecond)
+//   this.changeLayerOrder()
+// }

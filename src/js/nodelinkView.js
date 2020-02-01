@@ -37,12 +37,23 @@ export let generateScreenshot = function (rank='unknown', level='unknown') {
   screenshot.children('.nodelinktext').remove()
   screenshot.children('.slot').css('cursor', 'auto')
   let div = $(document.createElement('div'))
-   .attr('class', `shot_${rank} screenshot-div`).appendTo($('#screenshotFrame'))
+   .attr('class', `shot_${rank} screenshot-div`)
+   .css('height', height * heightScale+10)
+   .css('width', width * widthScale+10)
+   .css('margin', 0)
+   .css('padding', 0)
+   .on('mouseover', function(){
+     // d3.select(this).classed('round-div', true)
+   })
+   .on('mouseout', function() {
+     d3.select(this).classed('round-div', false)
+   })
   screenshot
     .attr('height', height * heightScale)
     .attr('width', width * widthScale)
     .attr('viewBox', `0 0 ${width} ${height}`)
     .appendTo(div)
+  div.appendTo($('#screenshotFrame'))
     // let svgHtml = document.getElementById('nodelink').innerHTML
 		// console.log(svgHtml)
     // let frame = document.getElementById('screenshotFrame')
