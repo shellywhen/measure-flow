@@ -288,7 +288,7 @@ let brushed = function () {
       networkcube.sendMessage('timerange', {startUnix: brushStart.getTime(), endUnix: brushEnd.getTime(), textStart, textEnd })
       d3.selectAll('.snapshot').style('stroke',  '#E2E6EA')
       for (let tid = startId; tid <= endId; tid++) {
-        d3.select(`.snapshot_${tid}`).style('stroke', 'orange')
+        d3.selectAll(`.snapshot_${tid}`).style('stroke', 'orange')
       }
     }
 
@@ -475,15 +475,16 @@ TimeSlider.prototype.init = function () {
        if(!window.playerMode) return
        let intervalIndex = self.intervalIndex
        let level = window.focusGranularity.level
-       self.intervalIndex = 0
+       self.intervalIndex = -1
          let total = self.interval.length
-         let milisecond = Math.min(200, 10000 /(total+1))
+         let milisecond = Math.min(300, 10000 /(total+1))
          for(let rank = 0; rank < total; rank++) {
            setTimeout(function(){
              self.play()
              Nodelink.generateScreenshot(rank, level)
            }, milisecond*rank)
          }
+        self.play()
      })
    iconG
      .append('text')
@@ -636,7 +637,9 @@ TimeSlider.prototype.removeInterval = function  () {
   this.hintCanvas.style('visibility', 'hidden')
   this.playerTimeline.selectAll('.interval-g').remove()
   this.playerTimeline.selectAll('.snapshot').attr('y1', 0).style('stroke', '#E2E6EA')
-
+  window.fixed = false
+  window.fixInterval = null
+  window.fixId = -1
 }
 TimeSlider.prototype.updateInterval = function (interval) {
   this.removeInterval()
@@ -650,6 +653,7 @@ TimeSlider.prototype.updateInterval = function (interval) {
     .enter()
     .append('rect')
     .classed('interval-bars', true)
+    .attr('class', (d,i)=>`interval-bars slider_${i}`)
     .attr('x', d => xScale(d.x0))
     .attr('width', d => Math.max(2, xScale(d.x1) - xScale(d.x0)))
     .attr('y', 0)
@@ -683,9 +687,10 @@ TimeSlider.prototype.updateInterval = function (interval) {
       d.fixed = true
       window.fixInterval = d.interval
       window.fixed = true
+      window.fixId = i
       d3.selectAll('.snapshot').style('stroke',  '#E2E6EA')
       for (let tid = d.interval[0]; tid <d.interval[1]; tid++) {
-        d3.select(`.snapshot_${tid}`).style('stroke', 'orange')
+        d3.selectAll(`.snapshot_${tid}`).style('stroke', 'orange')
       }
       d3.select('.brush-g').call(brushTime.move, [xScale(d.x0), xScale(d.x1)])
       highlightBars()
@@ -698,7 +703,7 @@ TimeSlider.prototype.updateInterval = function (interval) {
       d.fixed = false
       d3.selectAll('.snapshot').style('stroke',  '#E2E6EA')
       for (let tid = d.interval[0]; tid <d.interval[1]; tid++) {
-        d3.select(`.snapshot_${tid}`).style('stroke', 'orange')
+        d3.selectAll(`.snapshot_${tid}`).style('stroke', 'orange')
       }
       let level = window.focusGranularity.level
       d3.select(`.level_${level}`).select(`.rank_${i}`).dispatch('mouseover')
@@ -748,20 +753,29 @@ TimeSlider.prototype.highlight = function () {
   if(this.intervalIndex === -1) {
     this.playerTimeline.select('.highlight-interval')
       .attr('width', 0)
+    let textStart = new Date(dg.roundedStart).toLocaleDateString('en-US', TIPS_CONFIG)
+    let textEnd = new Date(dg.roundedEnd).toLocaleDateString('en-US', TIPS_CONFIG)
+    networkcube.sendMessage('player', {'interval': [0, dg.timeArrays.length], 'fixed':true, textStart, textEnd})
+    d3.select('.brush-g').call(brushTime.move, xScale.range())
+    d3.selectAll('.snapshot').style('stroke', 'orange')
+    d3.selectAll('.brush-result').style('visibility', 'hidden')
     return
   }
+  d3.selectAll('.brush-result').style('visibility', 'visible')
   let d = this.interval[this.intervalIndex]
   if(d.interval[1] <= d.interval[0]) {
     d3.selectAll('.playerBtn').style('opacity', 0.2)
+    d3.selectAll('.brush-result').style('opacity', 0.5)
   }
   else{
       d3.selectAll('.playerBtn').style('opacity', 1)
+      d3.selectAll('.brush-result').style('opacity', 1)
   }
   d.textStart = d.x0.toLocaleDateString('en-US', TIPS_CONFIG)
   d.textEnd = d.x1.toLocaleDateString('en-US', TIPS_CONFIG)
   d3.selectAll('.snapshot').style('stroke',  '#E2E6EA')
   for (let tid = d.interval[0]; tid <d.interval[1]; tid++) {
-    d3.select(`.snapshot_${tid}`).style('stroke', 'orange')
+    d3.selectAll(`.snapshot_${tid}`).style('stroke', 'orange')
   }
   d3.select('.brush-g').call(brushTime.move, [xScale(d.x0), xScale(d.x1)])
   highlightBars()

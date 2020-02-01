@@ -43,14 +43,28 @@ export let generateScreenshot = function (rank='unknown', level='unknown') {
    .css('margin', 0)
    .css('padding', 0)
    .on('mouseover', function(){
-     // d3.select(this).classed('round-div', true)
+     if(window.fixed && window.fixId == rank) return
+     d3.select(`.slider_${rank}`).dispatch('mouseover')
+     d3.select(this).select('svg').style('border', '#fdeed7 solid')
    })
    .on('mouseout', function() {
-     d3.select(this).classed('round-div', false)
+     if(window.fixed && window.fixId == rank) return
+     d3.select(`.slider_${rank}`).dispatch('mouseout')
+     d3.select(this).select('svg').style('border', '')
+   })
+   .on('click', function() {
+     d3.select(`.slider_${rank}`).dispatch('click')
+     if(window.fixed) {
+       d3.selectAll('.screenshot-svg').style('border', '')
+       d3.select(this).select('svg').style('border', 'orange solid')
+     }
+     else  d3.select(this).select('svg').style('border', '')
    })
   screenshot
     .attr('height', height * heightScale)
     .attr('width', width * widthScale)
+    .css('border-radius', '0.3rem')
+    .css('border', '')
     .attr('viewBox', `0 0 ${width} ${height}`)
     .appendTo(div)
   div.appendTo($('#screenshotFrame'))
@@ -495,6 +509,7 @@ let updateInterval = function (m) {
     .enter()
     .append('rect')
     .classed('slot', true)
+    .attr('class', (d,i)=>`slot slot_${i}`)
     .attr('x', d => xScale(d.x0))
     .attr('width', d => Math.max(2, xScale(d.x1) - xScale(d.x0)))
     .attr('y', 0)
@@ -691,13 +706,12 @@ function calculateCurvedLinks() {
                 for (var j = 0; j < _links.length; j++) {
                     _links[j]['path'] = [
                         { x: multiLink.source.x, y: multiLink.source.y },
-                        { x: multiLink.source.x, y: multiLink.source.y - minGap - (i * LINK_GAP) },
-                        { x: multiLink.source.x + minGap + (i * LINK_GAP), y: multiLink.source.y - minGap - (i * LINK_GAP) },
-                        { x: multiLink.target.x + minGap + (i * LINK_GAP), y: multiLink.target.y },
+                        { x: multiLink.source.x, y: multiLink.source.y - minGap - (j * LINK_GAP) },
+                        { x: multiLink.source.x + minGap + (j * LINK_GAP), y: multiLink.source.y - minGap - (j * LINK_GAP) },
+                        { x: multiLink.target.x + minGap + (j * LINK_GAP), y: multiLink.target.y },
                         { x: multiLink.target.x, y: multiLink.target.y },
                     ];
                 }
-                console.log('multi-source', _links)
             }
             else {
                 dir = {
