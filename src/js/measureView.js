@@ -68,9 +68,10 @@ let zoomed = function (xScale, kdeScale) {
   outer.select('#endTimeCurve').datum([[mainScale(currentRange[1]), 0], [mainScale(currentRange[1]), STATIC_SLIDER_HEIGHT / 6], [WIDTH_MIDDLE, STATIC_SLIDER_HEIGHT / 6 + ZOOM_SLIDER_HEIGHT / 3]]).attr('d', periodLineGenerator)
 }
 
-export let changeSVGHEIGHT = function () {
-  if(window.dgraph.selection.length > 2) SVGHEIGHT = dgraph.selection.length * 28
-  else SVGHEIGHT = Math.max((CANVAS_HEIGHT - ZOOM_SLIDER_HEIGHT - STATIC_SLIDER_HEIGHT) / ELEMENTS, 40)
+export let changeSVGHEIGHT = function (x=1) {
+  if(window.dgraph.selection.length > 2) SVGHEIGHT = dgraph.selection.length * 28 * x
+  else SVGHEIGHT = Math.max((CANVAS_HEIGHT - ZOOM_SLIDER_HEIGHT - STATIC_SLIDER_HEIGHT) / ELEMENTS, 40) * x
+  svgHeight = (SVGHEIGHT - MARGIN.top - MARGIN.bottom) / Math.max(1, dgraph.selection.length)
 }
 let globalZoom = function () {
   xScale = d3.event.transform.rescaleX(mainScale)
@@ -829,7 +830,7 @@ Frame.prototype.updateCanvas = function () {
     // v.range([svgHeight, svgHeight / 12])
     let g = this.canvas.select(`.vis_${i}`)
     g.attr('transform', `translate(0,${i * svgHeight + MARGIN.top})`)
-    g.select('.clip_overlay')
+    g.select('.clip_overlay').select('rect')
     .attr('height', svgHeight + svgHeight / 12 + 5)
     .attr('y', -svgHeight / 12 - 5)
     // g.select('.y-axis').transition().duration(500).call(d3.axisLeft(yScale).ticks(2))
@@ -1045,6 +1046,26 @@ Frame.prototype.updateIndividualMeasures = function (idx, data, level) {
     .attr('level', level)
     .classed(`level_${level}`, true)
   this.createBars(rectCanvas, yScale, data.dots, level, idx)
+}
+Frame.prototype.reScale = function () {
+  this.updateCanvas()
+  let current = Interval.current
+  this.canvas.selectAll('.x-axis').attr('transform', `translate(0, ${svgHeight})`)
+  this.init()
+  this.data.forEach((datum, idx) => {
+    let g = this.canvas.select(`.vis_${idx}`)
+    let yMax = d3.max(this.yMax[idx].filter((y, yi)=> current[yi].active))
+    let yScale = d3.scaleLinear()
+        .domain([0, yMax])
+        .range([svgHeight, svgHeight / 12])
+        .nice()
+    this.yScale[idx] = yScale
+    g.select('.y-axis').transition().duration(500).call(d3.axisLeft(yScale).ticks(2))
+    g.select('.zoom-layer').attr('clip-path', `url(#clip_${idx}_${this.index})`)
+    g.selectAll('.bars')
+        .attr('height', d => yScale(0) - yScale(d.y))
+        .attr('y', d => yScale(d.y))
+  })
 }
 Frame.prototype.createBars = function(g, yScale, dots, i, idx) {
   let yMax = yScale.domain()[1]

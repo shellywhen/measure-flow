@@ -343,10 +343,6 @@ let drawFFT = function(dataList) {
           .classed('userInputLine', true)
           .classed(`line_rank_${levelCount}`, true)
         let span = addMoreIntervals(0, value, granularity, true, 'fft-interval-selection-display')
-        // let datum = getDatum(value, granularity, 0)
-        // current.push(datum)
-        // drawSpan(datum)
-        //!!!!!!!!!!!!!!
         span.dispatch('click')
       })
       .on('mousemove', function() {

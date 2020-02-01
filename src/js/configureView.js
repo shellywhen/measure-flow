@@ -24,6 +24,13 @@ let addStyleConfig = function(divId, title, callback, min = 0, max = 3, value = 
   return div
 }
 
+let changeHeight = function(x) {
+  Measure.changeSVGHEIGHT(x)
+  Measure.FRAME_INFO.forEach(frame => {
+    frame.reScale()
+  })
+}
+
 let changeNodeSize = function(x) {
   d3.selectAll('.nodes')
     .attr('r', d => x * NodeLink.getNodeRadius(d))
@@ -289,6 +296,7 @@ let drawConfigs = function() {
   addStyleConfig('config-style', 'Link Opacity', changeLinkOpacity, 0, 1, 0.5)
   addStyleConfig('config-style', 'Edge Gap', changeEdgeGap, 0, 5, 2)
   addStyleConfig('config-style', 'Edge Background', changeEdgeBackground, 0, 1, 0.2)
+  addStyleConfig('config-style', 'Block Height', changeHeight, 0.5, 2.5, 1, 0.1)
   addBandwidthConfig(dg.timeDelta)
   // addDivToggle('config-view', 'boxframe', 'Local Distribution', '#boxFrame')
   //addDivToggle('config-view', 'timelineframe', 'Multi-layer Line', '#timelineFrame')

@@ -3,6 +3,7 @@ body {
 }
 #nodelinkOuterFrame {
   position:relative;
+    height: 45vh;
 }
 #nodelinkFrame {
   height: 45vh;
