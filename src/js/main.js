@@ -128,7 +128,7 @@ window.afterData = function() {
   //  TimeSlider.drawTimeSlider(Measure.WIDTH_LEFT, Measure.WIDTH_MIDDLE)
   Box.drawBox()
 
-   Heatmap.drawHeatmap('heatmapFrame')
+  Heatmap.drawHeatmap('heatmapFrame')
   NodeLink.drawNodeLink()
   //  Measure.drawMeasureList('measureFrame')
   Measure.measureFrameInit(dgraph)

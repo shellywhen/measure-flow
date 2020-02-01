@@ -20,11 +20,45 @@ let nodes
 let links
 let lasso
 let dg
+let generateScreenshot = function (rank='unknown', level='unknown') {
+  if(!$('#checkbox_screenshot').prop('checked'))return
+  let screenshot = $('#nodelink')
+    .clone()
+    .removeAttr('id')
+    .removeAttr('cursor')
+    .attr('class', 'screenshot-svg')
+    .dblclick(function () {
+     $(this).parent('div').remove()
+   })
+  let height = Number(screenshot.attr('height'))
+  let width = Number(screenshot.attr('width'))
+  let widthScale = 98 / 300
+  let heightScale = 98 / 300
+  screenshot.children('.nodelinktext').remove()
+  screenshot.children('.slot').css('cursor', 'auto')
+  let div = $(document.createElement('div'))
+   .attr('class', `shot_${rank} screenshot-div`).appendTo($('#screenshotFrame'))
+  screenshot
+    .attr('height', height * heightScale)
+    .attr('width', width * widthScale)
+    .attr('viewBox', `0 0 ${width} ${height}`)
+    .appendTo(div)
+    // let svgHtml = document.getElementById('nodelink').innerHTML
+		// console.log(svgHtml)
+    // let frame = document.getElementById('screenshotFrame')
+    // let element = document.createElement('canvas')
+    // frame.appendChild(element)
+		// canvg(element, svgHtml)
+}
+
 let playerNodelink = function (m) {
   let data = m.body
   let interval = data.interval
   if (m.body.fixed||!window.fixed){
-    drawNodeLinkInPeriod(interval[0], interval[1]-1)
+    if(!m.body.fixed&&!window.fixed){
+      generateScreenshot()
+    }
+    drawNodeLinkInPeriod(interval[0], interval[1]-1, true)
     updateTimeline(data.x0, data.x1, data.textStart, data.textEnd)
   }
   else {
@@ -241,9 +275,9 @@ let drawTimeline = function (svg) {
   xScale = d3.scaleTime().range([0, timelineWidth]).domain([dg.roundedStart, dg.roundedEnd])
   canvas.append('rect').classed('nodelink_timerange', true).attr('x', 0).attr('y', -h / 3).attr('width', timelineWidth).attr('height', 2 * h/3).style('opacity', 0.5).style('fill', 'gray').attr('rx', h / 2).attr('ry', h/2)
   canvas.append('circle').classed('nodelink_timepoint', true).attr('cx', 0).attr('cy', 0).attr('r', 0.8 * h).style('opacity', 1).style('fill', 'orange')
-  canvas.append('text').attr('id', 'nodelink_textStart').text('').style('text-anchor', 'start')
+  canvas.append('text').classed('nodelinktext', true).attr('id', 'nodelink_textStart').text('').style('text-anchor', 'start')
     .attr('x', 0).attr('y', -h / 2).style('font-size', 'small')
-  canvas.append('text').attr('id', 'nodelink_textEnd').text('').style('text-anchor', 'end')
+  canvas.append('text').classed('nodelinktext', true).attr('id', 'nodelink_textEnd').text('').style('text-anchor', 'end')
     .attr('x', timelineWidth).attr('y', - h / 2).style('font-size', 'small')
 }
 
@@ -553,7 +587,13 @@ let updateStyle = function (m) {
   }
 
 }
-
+let drawCamera = function (frameId) {
+  d3.select(`#nodelinkCameraButton`)
+    .on('click', function(){
+      console.log('camera go')
+      generateScreenshot()
+    })
+}
 let drawNodeLink = function () {
   // create canvas
   d3.select('#' + nodelinkSvgId).html('')
@@ -564,6 +604,7 @@ let drawNodeLink = function () {
   drawTimeline(svg)
   drawLassoConfig(svg)
   drawLayout(svg)
+  drawCamera('nodelinkFrame')
   networkcube.addEventListener('player', playerNodelink)
   networkcube.addEventListener('timerange', m => {
     let dg = window.dgraph

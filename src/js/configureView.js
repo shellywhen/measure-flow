@@ -292,8 +292,11 @@ let drawConfigs = function() {
   addBandwidthConfig(dg.timeDelta)
   // addDivToggle('config-view', 'boxframe', 'Local Distribution', '#boxFrame')
   //addDivToggle('config-view', 'timelineframe', 'Multi-layer Line', '#timelineFrame')
+  // Add-ons
   addDivToggle('config-view', 'strokeTimeline', 'Vertical line', '.strokeTimeline')
   addDivToggle('config-view', 'brush-result', 'Period Result', '.brush-result')
+  addDivToggle('config-view', 'screenshot', 'Snapshots', '#screenshotFrame')
+
   addLocalMeasureDropdown('config-localMeasure')
   add_config_mode()
   add_config_measure()

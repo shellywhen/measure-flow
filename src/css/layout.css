@@ -12,3 +12,8 @@
 #mainMiddleFrame {
   width: 59%;
 }
+#screenshotFrame {
+}
+.screenshot-div {
+  display: inline;
+}

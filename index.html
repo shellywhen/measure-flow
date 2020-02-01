@@ -5,14 +5,17 @@
   <meta charset="utf-8">
   <title>MeasuresFlow</title>
   <meta name="description" content="Dynamic Network Visualization">
-  <meta name="author" content="Liwenhan Xie, Benjamin Bach">
+  <meta name="author" content="Liwenhan Xie, Benjamin Bach, Jean-Daniel Fekete">
   <link rel="icon" type="image/png" href="./asset/fig/vis-nodelink.png" />
   <link rel="stylesheet" href="./src/css/layout.css">
   <link rel="stylesheet" href="./src/css/main.css">
   <link rel="stylesheet" href="./lib/css/mdb.min.css">
   <link rel="stylesheet" href="./lib/css/bootstrap.min.css">
   <link rel="stylesheet" href="./lib/css/font-awesome.css">
-  <!-- <link rel="stylesheet" href="./lib/css/font-awesome.min.css"> -->
+  <!-- <script src="./lib/js/rgbcolor.min.js"></script>
+  <script src="./lib/js/canvg.min.js"></script>
+  <script src="./lib/js/html2canvas.min.js"></script>
+  <script src="./lib/js/html2canvas.svg.min.js"></script> -->
 </head>
 
 <body>
@@ -39,6 +42,7 @@
   <script src="./lib/js/require.js"></script>
   <script src="./lib/js/bundle.js"></script>
   <script src="./lib/js/xlsx.full.min.js"></script>
+  <!-- <script src="./lib/js/html2canvas.min.js"></script> -->
   <script src="./src/js/dataConfigure.js"></script>
 
 
@@ -71,7 +75,7 @@
       </div>
     </div>
     <!-- <div id="pollSlider-button"><i class="fas fa-sliders-h"></i></div> -->
-    <div id="pollSlider-button-selection"> <i class="fas fa-user-friends"></i></div>
+    <div id="pollSlider-button-selection" class="roundButton"> <i class="fas fa-user-friends"></i></div>
     <div id="dataConfigurationFrame" style="display:none; height: 95vh;" toggle="0">
       <div class="row m-0 p-0">
         <div class="col-2">
@@ -161,15 +165,15 @@
           </div>
           <div id="config-pack" class="ml-4 mr-2">
             <div class="row ml-1 mr-1">
-          <div class="col-3 p-0">Time</div>
-          <div class="col-3 p-0">
-            <div class="custom-control custom-switch">
-              <input type="checkbox" class="custom-control-input" id="packSwitch">
-              <label class="custom-control-label" for="packSwitch"></label>
+              <div class="col-3 p-0">Time</div>
+              <div class="col-3 p-0">
+                <div class="custom-control custom-switch">
+                  <input type="checkbox" class="custom-control-input" id="packSwitch">
+                  <label class="custom-control-label" for="packSwitch"></label>
+                </div>
+              </div>
+              <div class="col p-0">Pack</div>
             </div>
-          </div>
-          <div class="col p-0">Pack</div>
-        </div>
           </div>
           <div style="width:92%; border-bottom:lightgray solid 1px; margin-bottom:1px;margin-top:4px;"></div>
           <div class="ml-4 mr-2">
@@ -213,9 +217,12 @@
       </div>
 
       <div class="wrapper" id="mainRightFrame">
-        <div class="p-0 m-0" id="nodelinkFrame">
-          <svg id="nodelink">
-          </svg>
+        <div class="p-0 m-0" id="nodelinkOuterFrame">
+          <div style="position:relative;top:0;" id="nodelinkFrame"><svg id="nodelink">
+          </svg></div>
+            <div class="roundButton" id="nodelinkCameraButton"> <i class="fas fa-camera"></i></div>
+        </div>
+        <div id="screenshotFrame">
         </div>
 
         <div class="outer mt-2" id="scatterFrame">
@@ -233,6 +240,7 @@
               <a class="nav-link" id="radar-plot-tab" data-toggle="tab" href="#radarPlotDiv" role="tab" aria-controls="radarPlotDiv" aria-selected="false">Subgraph</a>
             </li>
           </ul> -->
+
 
           <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="intervalConfigDiv" role="tabpanel" aria-labelledby="interval-config-tab">

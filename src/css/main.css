@@ -1,9 +1,19 @@
 body {
   height: 100%;
 }
+#nodelinkOuterFrame {
+  position:relative;
+}
 #nodelinkFrame {
   height: 45vh;
   width: 100%;
+}
+#nodelinkCameraButton {
+  position:relative;
+  top: -41vh;
+  left: 85%;
+  width: 1.8rem;
+  height:1.8rem;
 }
 #timesliderFrame {
   height: 10vh;
@@ -198,6 +208,9 @@ option {
   height:1.8rem;
   left:0px;
   top:3vh;
+}
+
+.roundButton {
   z-index:200;
   text-align: center;
   border-radius: 1rem;

@@ -4,6 +4,7 @@
   "dependencies": {
     "clientside-require": "^4.7.2",
     "fft-js": "0.0.12",
+    "html2canvas": "^1.0.0-rc.5",
     "jsfft": {
       "integrity": "sha512-INIqKIPQSwN63QcUNzj8Tkf/Vlzf+GohQXUxt41xNxnQFczPB3gCzfZEg9jzBodRpaaIUpdea2Eu5D3CpsF3FQ==",
       "resolved": "https://registry.npmjs.org/jsfft/-/jsfft-0.0.4.tgz",

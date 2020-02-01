@@ -260,16 +260,13 @@ export let addGlobalProperty = function (dgraph) {
   dgraph.colorScheme = [
   '#1f78b4',
   '#33a02c',
-  '#fb9a99',
   '#e31a1c',
-  '#fdbf6f',
   '#ff7f00',
-  '#cab2d6',
   '#6a3d9a',
-  '#ffff99',
   '#b15928',
   '#a6cee3',
-  '#b2df8a']
+  '#b2df8a',
+]
   dgraph.selection = []
   dgraph.selectionIdCount = 0
   dgraph.timeArrays.FFTintervals = []

@@ -92,6 +92,7 @@ let drawSpan = function(datum, shift = 0, border = 'gray', defaultDiv='interval-
     .on('click', function(d) {
       let ele = d3.select(this)
       let toggle = 1 - Number(ele.attr('toggle'))
+      d3.select('#screenshotFrame').selectAll('div').remove()
       ele.attr('toggle', toggle)
       if (toggle) {
         d3.selectAll('.userSpan').style('border', `0.8px gray solid`)
