@@ -685,6 +685,9 @@ TimeSlider.prototype.updateInterval = function (interval) {
       d.textStart = d.x0.toLocaleDateString('en-US', TIPS_CONFIG)
       d.textEnd = d.x1.toLocaleDateString('en-US', TIPS_CONFIG)
       d.fixed = true
+      // if(window.fixed&&i!=window.fixId) {
+      //   d3.select(`slider_${window.fixId}`).dispatch('click')
+      // }
       window.fixInterval = d.interval
       window.fixed = true
       window.fixId = i

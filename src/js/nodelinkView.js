@@ -48,8 +48,8 @@ export let generateScreenshot = function (rank='unknown', level='unknown') {
      d3.select(this).select('svg').style('border', '#fdeed7 solid')
    })
    .on('mouseout', function() {
-     if(window.fixed && window.fixId == rank) return
      d3.select(`.slider_${rank}`).dispatch('mouseout')
+     if(window.fixed && window.fixId == rank) return
      d3.select(this).select('svg').style('border', '')
    })
    .on('click', function() {
