@@ -745,7 +745,6 @@ TimeSlider.prototype.play = function (flag) {
   this.intervalIndex ++
   if (this.intervalIndex === this.interval.length) {
     this.intervalIndex = -1
-    return
   }
   this.highlight()
 }
