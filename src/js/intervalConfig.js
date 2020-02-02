@@ -157,6 +157,7 @@ let addMoreIntervals = function(shift = 0, value, granularity, highlight = false
   activeInterval.push(datum)
   let span = drawSpan(datum, shift, 'gray', div)
   let intervals = DataHandler.getSingleBins(granId, val, dg.timeArrays.momentTime, shift)
+  dg.timeArrays.intervals.push(intervals)
   window.measureIds.forEach((label, idx) => {
     let data = dg.selection.length > 0 ? dg.selection.map(v => Calculator.getSingleData(v.dgraph, intervals, label)) : [Calculator.getSingleData(dg, intervals, label)]
     networkcube.sendMessage('slotData', {

@@ -8,7 +8,9 @@ export let description = {
   coming: 'The number of new links compared with the previous period.',
   leaving: 'The number of disappeared links compared with the previous period.',
   volatility: 'The number of changing link pairs between the previous period and current period.',
-  component: 'The number of connected components.'
+  component: 'The number of connected components.',
+  coeff: '3 * closed triangle / open triangles ',
+  triangle: 'The number of triangles.'
 }
 
 export let title = {
@@ -21,7 +23,9 @@ export let title = {
   coming: 'New Link Pairs',
   leaving: 'Leaving Link Pairs',
   volatility: 'Moving Link Pairs',
-  component: 'Connected Components'
+  component: 'Connected Components',
+  coeff: 'Clustering Coeffi- cient',
+  triangle: 'Triangles'
 }
 
 export let SCHEMA = {

@@ -223,6 +223,78 @@ let getVolatility = function (dgraph, interval) {
   return dots
 }
 
+let getTriangle = function (dgraph, interval) {
+  let dots = interval.map(itv => {
+    let mapping = {}
+    let nodes = Array.from(getNodeDuringInterval(dgraph, itv))
+    let neighbors = []
+    nodes.forEach((v, i) => {
+      mapping[v]= i
+      neighbors.push(new Set())
+    })
+    let open = 0
+    let close = 0
+    for (let tid = itv[0]; tid < itv[1]; tid++) {
+      let links = dgraph.timeArrays.links[tid]
+      links.forEach(lid => {
+        let src = mapping[dgraph.linkArrays.source[lid]]
+        let dst = mapping[dgraph.linkArrays.target[lid]]
+        neighbors[src].add(dst)
+        neighbors[dst].add(src)
+      })
+    }
+    neighbors.forEach((dict,k) => {
+      let list = Array.from(dict)
+      for( let i = 0; i < list.length; i++) {
+        for (let j = i+1; j < list.length; j++) {
+          if (neighbors[list[i]].has(list[j])) close++
+          open++
+        }
+      }
+    })
+    return {
+      'y': close
+    }
+  })
+  return dots
+}
+
+let getCoeff = function (dgraph, interval) {
+  let dots = interval.map(itv => {
+    let mapping = {}
+    let nodes = Array.from(getNodeDuringInterval(dgraph, itv))
+    let neighbors = []
+    nodes.forEach((v, i) => {
+      mapping[v]= i
+      neighbors.push(new Set())
+    })
+    let open = 0
+    let close = 0
+    for (let tid = itv[0]; tid < itv[1]; tid++) {
+      let links = dgraph.timeArrays.links[tid]
+      links.forEach(lid => {
+        let src = mapping[dgraph.linkArrays.source[lid]]
+        let dst = mapping[dgraph.linkArrays.target[lid]]
+        neighbors[src].add(dst)
+        neighbors[dst].add(src)
+      })
+    }
+    neighbors.forEach((dict,k) => {
+      let list = Array.from(dict)
+      for( let i = 0; i < list.length; i++) {
+        for (let j = i+1; j < list.length; j++) {
+          if (neighbors[list[i]].has(list[j])) close++
+          open++
+        }
+      }
+    })
+    return {
+      'y': open==0?0: close / open,
+    }
+  })
+  return dots
+}
+
 let getProcessedData = function (dg, intervals, action, paras=0) {
   return intervals.map((v, i) => {
     let result = action(dg, v.period.map(m => m.interval), paras)
@@ -276,16 +348,15 @@ export let getSingleData = function (dg, interval, content) {
     case 'nodeNumber': return getProcessedData(dg, [interval], getNumberOfNodes)[0]
     case 'linkPairNumber': return getProcessedData(dg, [interval], getNumberOfLinkPairs)[0]
     case 'linkNumber': return getProcessedData(dg, [interval], getNumberOfLinks)[0]
-    case 'density': {
-      let value = getDensity(dg, interval)
-      return value
-    }
+    case 'density': return getDensity(dg, interval)
     case 'activation': return getProcessedData(dg, [interval], getActivation)[0]
     case 'redundancy': return getProcessedData(dg, [interval], getRedundancy)[0]
     case 'volatility': return getProcessedData(dg, [interval], getVolatility)[0]
     case 'component': return getProcessedData(dg, [interval], getConnectedComponent)[0]
     case 'coming': return getProcessedData(dg, [interval], getComingLinks)[0]
     case 'leaving': return getProcessedData(dg, [interval], getLeavingLinks)[0]
+    case 'coeff': return getProcessedData(dg, [interval], getCoeff)[0]
+    case 'triangle': return getProcessedData(dg, [interval], getTriangle)[0]
     default:
       console.log('oops')
       break

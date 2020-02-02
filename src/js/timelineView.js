@@ -100,6 +100,44 @@ let getConnectedComponent = function (dgraph, interval) {
   return dots
 }
 
+let getTriangle = function (dgraph, interval) {
+  let dots = interval.map(itv => {
+    let mapping = {}
+    let nodes = Array.from(getNodeDuringInterval(dgraph, itv))
+    let neighbors = []
+    nodes.forEach((v, i) => {
+      mapping[v]= i
+      neighbors.push(new Set())
+    })
+    let open = 0
+    let close = 0
+    for (let tid = itv[0]; tid < itv[1]; tid++) {
+      let links = dgraph.timeArrays.links[tid]
+      links.forEach(lid => {
+        let src = mapping[dgraph.linkArrays.source[lid]]
+        let dst = mapping[dgraph.linkArrays.target[lid]]
+        neighbors[src].add(dst)
+        neighbors[dst].add(src)
+      })
+    }
+    neighbors.forEach((dict,k) => {
+      let list = Array.from(dict)
+      for( let i = 0; i < list.length; i++) {
+        for (let j = i+1; j < list.length; j++) {
+          if (neighbors[list[i]].has(list[j])) close++
+          open++
+        }
+      }
+    })
+    return {
+      'coeff': open==0?0: close / open,
+      'triangle': close / 3,
+      'open': open
+    }
+  })
+  return dots
+}
+
 let getNumberOfNodes = function (dgraph, interval) {
    return interval.map(itv => {
     let nodes = getNodeDuringInterval(dgraph, itv)
@@ -462,6 +500,39 @@ let drawTimeLine = function () {
   drawCollapseTimeLine(7, component, 'connectedComponent', 'Connected Components', xScale)
 }
 
+let getClustering = function(dg, intervals) {
+  let coeff = []
+  let tri = []
+  intervals.forEach(interval => {
+    let rawData = getTriangle(dgraph, interval.period.map(v=>v.interval))
+    let clusteringCoefficient = rawData.map((d,i)=>{
+      return {
+        'y': d.coeff,
+        'timeStart': interval.period[i].x0,
+        'timeEnd': interval.period[i].x1
+      }
+    })
+    let triangles =  rawData.map((d,i)=>{
+      return {
+        'y': d.triangle,
+        'timeStart': interval.period[i].x0,
+        'timeEnd': interval.period[i].x1
+      }
+    })
+    coeff.push({
+      'granlarity': interval.granularity,
+      'dots': clusteringCoefficient,
+      'milisecond': interval.milisecond
+    })
+    tri.push({
+      'granlarity': interval.granularity,
+      'dots': triangles,
+      'milisecond': interval.milisecond
+    })
+  })
+  return [coeff, tri]
+}
+
 export let getProcessedData = function (dg, intervals, action) {
   return intervals.map((v, i) => {
     let result = action(dg, v.period.map(m => m.interval))
@@ -557,6 +628,7 @@ let getData = function (dgraph, intervals = [], measureList =  ['nodeNumber', 'l
   let dg = dgraph
   if (intervals.length === 0)  intervals = dg.timeArrays.intervals
   // test part
+
   let nodeNumber = getProcessedData(dg, intervals, getNumberOfNodes)
   let linkPairNumber = getProcessedData(dg, intervals, getNumberOfLinkPairs)
   let linkNumber = getProcessedData(dg, intervals, getNumberOfLinks)
@@ -584,6 +656,10 @@ let getData = function (dgraph, intervals = [], measureList =  ['nodeNumber', 'l
   let leaving = getProcessedData(dg, intervals, getLeavingLinks)
   let volatility = getProcessedData(dg, intervals, getVolatility)
   let component = getProcessedData(dg, intervals, getConnectedComponent)
+  let tmp = getClustering(dg, intervals)
+  console.log(tmp)
+  let coeff = tmp[0]
+  let triangle = tmp[1]
   return {
     nodeNumber: nodeNumber,
     linkPairNumber: linkPairNumber,
@@ -594,7 +670,9 @@ let getData = function (dgraph, intervals = [], measureList =  ['nodeNumber', 'l
     coming: coming,
     leaving: leaving,
     volatility: volatility,
-    component: component
+    component: component,
+    triangle: triangle,
+    coeff: coeff
   }
 }
 

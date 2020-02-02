@@ -53,13 +53,11 @@ export let generateScreenshot = function (rank='unknown', level='unknown') {
      d3.select(this).select('svg').style('border', '')
    })
    .on('click', function() {
+     d3.selectAll('.screenshot-svg').style('border', '')
+     d3.select(`.slider_${rank}`).dispatch('click').dispatch('mouseout')
      if(window.fixed) {
-       d3.selectAll('.screenshot-svg').style('border', '')
        d3.select(this).select('svg').style('border', 'orange solid')
-       d3.select(`.slider_${window.fixId}`).dispatch('mouseout')
      }
-     else  d3.select(this).select('svg').style('border', '')
-     d3.select(`.slider_${rank}`).dispatch('click')
    })
   screenshot
     .attr('height', height * heightScale)

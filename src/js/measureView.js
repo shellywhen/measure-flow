@@ -617,6 +617,11 @@ this.hintCanvas.append('text')
 TimeSlider.prototype.updateHint = function (x, date) {
   let content = date.toLocaleDateString('en-US', TIPS_CONFIG)
   let boss = this.hintCanvas.style('visibility', 'visible')
+  d3.select('#'+Frame.FATHER)
+  .selectAll('.dash-timeline')
+  .attr('x2', x)
+  .attr('x1', x)
+  .style('visibility', 'visible')
   let scalex = xScale(date)
   boss.select('path')
     .datum([[x, this.sliderHeight], [scalex, this.sliderHeight / 5]])
@@ -629,6 +634,9 @@ TimeSlider.prototype.updateHint = function (x, date) {
 }
 TimeSlider.prototype.fadeHint = function () {
   this.hintCanvas.style('visibility', 'hidden')
+  d3.select('#'+Frame.FATHER)
+  .selectAll('.dash-timeline')
+  .style('visibility', 'hidden')
 }
 TimeSlider.prototype.removeInterval = function  () {
   this.intervalIndex = -1
@@ -916,10 +924,6 @@ Frame.prototype.init = function () {
         }
         d3.selectAll('.dash-timeline').style('visibility', 'visible')
         let date = xScale.invert(x)
-        d3.select('#'+Frame.FATHER)
-        .selectAll('.dash-timeline')
-        .attr('x2', x)
-        .attr('x1', x)
         timeslider.updateHint(x, date)
       })
       .style('pointer-events', 'all')
@@ -934,7 +938,7 @@ Frame.prototype.rectPack = function (level=window.focusGranularity.level) {
   let xLength = xRange[1] - xRange[0] - emptySpace
   let list = period.map(v => v.interval[0] != v.interval[1])
   let valid = []
-  let total = list.filter(v => v).length
+  let total = list.filter(v => v).length + 1
   list.forEach((v, i) => {
     valid.push({
       'flag': v,
@@ -951,7 +955,7 @@ Frame.prototype.rectPack = function (level=window.focusGranularity.level) {
       .style('display', '')
       .style('opacity', 0.8)
       .selectAll('.bars')
-      .attr('x', (d,i) => valid[i].flag? valid[i].acc * (width + gap):0)
+      .attr('x', (d,i) =>  valid[i].acc * (width + gap))
       .attr('width', (d, i) => valid[i].flag? width:0)
       .attr('y', (d,i) => yScale(d.y))
       .attr('height', (d, i) => yScale(0)-yScale(d.y))
@@ -1215,7 +1219,7 @@ Frame.prototype.createBars = function(g, yScale, dots, i, idx) {
          .style('fill', 'black')
          .style('opacity', 1)
          .style('display', '')
-        if((yMax-d.y)/yMax < 0.3) timeTooltip.attr('y', newY+5)
+        if((yMax-d.y)/yMax < 0.3) timeTooltip.attr('y', newY)
        d3.selectAll(`.mini_vis`)
          .each(function(d) {
            let ele = d3.select(this).select(`.level_${i}`).select(`.rank_${no}`)
@@ -1479,6 +1483,7 @@ let initInterval = function (msg) {
    let timeSlot = DataHandler.getSingleBins(granId, value, dg.timeArrays.momentTime, shift)
    if (m.update) {
      m.update = false
+     dg.timeArrays.intervals[level] = timeSlot
      FRAME_INFO.forEach(frame => {
          let label = frame.dataLabel
          let data = dg.selection.length > 0 ? dg.selection.map(v => Calculator.getSingleData(v.dgraph, timeSlot, label)) : [Calculator.getSingleData(dg, timeSlot, label)]
