@@ -29,6 +29,7 @@ let changeHeight = function(x) {
   Measure.FRAME_INFO.forEach(frame => {
     frame.reScale()
   })
+  Measure.DEG_FRAME.updateLines()
 }
 
 let changeNodeSize = function(x) {

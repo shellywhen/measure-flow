@@ -121,11 +121,10 @@ window.afterData = function() {
   // TimeLine.drawTimeLine()
   //  TimeSlider.drawTimeSlider(Measure.WIDTH_LEFT, Measure.WIDTH_MIDDLE)
   Box.drawBox()
-
-  Heatmap.drawHeatmap('heatmapFrame')
+  let data = Heatmap.drawHeatmap('heatmapFrame')
   NodeLink.drawNodeLink()
   //  Measure.drawMeasureList('measureFrame')
-  Measure.measureFrameInit(dgraph)
+  Measure.measureFrameInit(dgraph, data)
   //
   //  Stat.drawStatView('radarDiv')
   Config.drawConfigs()

@@ -30,6 +30,7 @@ let xScale, kdeScale, timeStamp, mainScale, mainKDEscale, brush, brushTime, tool
 let MEASURE_DIV_ID
 export let CANVAS_INFO = []
 export let FRAME_INFO = []
+export let DEG_FRAME = []
 const ELEMENTS = 10
 const MARGIN = {
   'top': 10,
@@ -56,6 +57,7 @@ let zoomed = function (xScale, kdeScale) {
       d3.select(this).select('path').attr('d', d => frame.lineGenerator[i].x(d => kdeScale(d.x))(d))
     })
   })
+  DEG_FRAME.updateLines()
   let zoomTimeline = outer.select('.zoom-timeline').transition().duration(1000).call(d3.axisBottom(xScale).ticks(6))
   // zoomTimeline.selectAll('.tick line').remove()
   zoomTimeline.selectAll('.tick text').attr('dy', '1.5em')
@@ -927,6 +929,7 @@ Frame.prototype.init = function () {
         timeslider.updateHint(x, date)
       })
       .style('pointer-events', 'all')
+      return this
 }
 
 Frame.prototype.rectPack = function (level=window.focusGranularity.level) {
@@ -1066,6 +1069,7 @@ Frame.prototype.drawTitle = function () {
     window.activeMeasure = self
     ACTIVE_MEASURE_INDEX = self.index
   })
+  return this
 }
 Frame.prototype.drawIcon = function () {
   let self = this
@@ -1115,6 +1119,7 @@ Frame.prototype.drawIcon = function () {
      if(i==3&&Number(d3.select(this).attr('toggle'))==1) return
      d3.select(this).style('fill', timeLineColor[idx])
    })
+   return this
 }
 Frame.prototype.updateIndividualMeasures = function (idx, data, level) {
   let current = Interval.current
@@ -1545,8 +1550,65 @@ let brushMoveMsg = function (m) {
   highlightBars()
 }
 
-export let createNormalMeasures = function (dgraph) {
+let getLineDatum = function (data) {
+  return data.map((v, i) => {
+    return {
+      x: dg.timeArrays.intervals[0].period[i].x0,
+      y: v
+    }
+  })
+}
+
+Frame.prototype.updateLines = function () {
+  this.svg.attr('height', SVGHEIGHT)
+  let yMax = this.yMax
+  let yScale = d3.scaleLinear()
+    .domain([0, yMax])
+    .range([svgHeight, svgHeight / 12])
+    .nice()
+  this.canvas.select('.y-axis').call(d3.axisLeft(yScale).ticks(2))
+  let degLineGenerator = d3.line().x(d => xScale(d.x)).y(d => yScale(d.y)).curve(d3.curveCatmullRom.alpha(0.5))
+  this.canvas.selectAll('.degCurve').attr('d', d => degLineGenerator(d))
+  this.init()
+}
+
+Frame.prototype.drawLines = function (data) {
+  let yMax = d3.max(data.map(line => d3.max(line)))
+  this.yMax= yMax
+  let yScale = d3.scaleLinear()
+    .domain([0, yMax])
+    .range([svgHeight, svgHeight / 12])
+    .nice()
+  this.yScale = yScale
+  this.canvas.append('g').classed('y-axis', true).call(d3.axisLeft(yScale).ticks(2))
+  let canvasData = data.map(getLineDatum)
+  let degLineGenerator = d3.line().x(d => xScale(d.x)).y(d => yScale(d.y)).curve(d3.curveCatmullRom.alpha(0.5))
+  let ele = this.canvas
+    .append('g')
+    .selectAll('path')
+    .data(canvasData)
+    .enter()
+    .append('path')
+    .classed('degCurve', true)
+    .style('stroke', 'gray')
+    .style('fill', 'none')
+    .style('opacity', 0.35)
+    .attr('d', degLineGenerator)
+    .on('mouseover', function(d, i){
+      console.log(i)
+      d3.select(`#node_${i}`).dispatch('mouseover')
+      d3.select(this).style('stroke', 'orange').style('opacity', 0.8)
+    })
+    .on('mouseout', function(d, i){
+      d3.select(this).style('stroke', 'gray').style('opacity', 0.35)
+      d3.select(`#node_${i}`).dispatch('mouseout')
+    })
+    return this
+}
+
+export let createNormalMeasures = function (dgraph, degree_data) {
     FRAME_INFO = []
+    DEG_FRAME = new Frame('degreeOverview', 'Degree', 'Degree development of individual nodes.', FRAME_INFO.length+1).init().drawTitle().drawIcon().drawLines(degree_data)
     if(dgraph.selection.length === 0) {
         let data = Timeline.getData(dgraph)
         let linkData = Timeline.getLinkStat(dgraph, dgraph.timeArrays.intervals, dgraph.linkTypeArrays.name)
@@ -1601,6 +1663,8 @@ export let createNormalMeasures = function (dgraph) {
         FRAME_INFO.push(frame)
       })
     }
+
+  //  let deg_ind_frame = new Frame('degreeDetail', '', '', FRAME_INFO.length+2).init().drawIcon()
 window.FRAME_INFO = FRAME_INFO
 }
 
@@ -1620,12 +1684,12 @@ let handleUpdateLayers = function (m) {
     })
   })
 }
-export function measureFrameInit (dgraph, divId = 'measureFrame') {
+export function measureFrameInit (dgraph, degree_data, divId = 'measureFrame') {
   d3.select(`#${divId}`).html('')
   setCanvasParameters('measureFrame', window.dgraph)
   timeslider =  new TimeSlider()
   timeslider.init()
-  createNormalMeasures(dgraph)
+  createNormalMeasures(dgraph, degree_data)
   networkcube.addEventListener('focusPeriod', moveHandle)
   networkcube.addEventListener('bandwidth', changeKDE)
   networkcube.addEventListener('initGran', initInterval)

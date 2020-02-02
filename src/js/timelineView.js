@@ -657,7 +657,6 @@ let getData = function (dgraph, intervals = [], measureList =  ['nodeNumber', 'l
   let volatility = getProcessedData(dg, intervals, getVolatility)
   let component = getProcessedData(dg, intervals, getConnectedComponent)
   let tmp = getClustering(dg, intervals)
-  console.log(tmp)
   let coeff = tmp[0]
   let triangle = tmp[1]
   return {

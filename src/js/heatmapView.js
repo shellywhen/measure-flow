@@ -105,6 +105,19 @@ let plotHeatmap = function (data, interval, maximum, minimum) {
       .style('text-anchor', 'middle')
       .style('font-size', '0.8rem')
 }
+
+let nodeDegree = function (dgraph, data, interval) {
+  let total = dgraph.nodeArrays.length
+  let lines = []
+  for(let i = 0; i<total; i++) lines.push(new Array(interval.length).fill(0))
+  data.forEach((datum,i)=>{
+    datum.forEach((d => {
+      lines[d.node][i] = d.size
+    }))
+  })
+  return lines
+}
+
 export let drawHeatmap = function (divId = 'heatmapFrame') {
   heatmapDivId = divId
   heatmapHeight = $(`#${divId}`).innerHeight()
@@ -114,8 +127,10 @@ export let drawHeatmap = function (divId = 'heatmapFrame') {
   dgraph = window.dgraph
   let interval = dgraph.timeArrays.intervals[0].period.map(v => v.interval)
   let data = getDegreeDistribution(interval)
+  let shareData = nodeDegree (dgraph, data, interval)
   let bins = getBins(data)
   let maximum = d3.max(data.map(d => d3.max(d, v => v.size)))
   let minimum = d3.min(data.map(d => d3.min(d, v => v.size)))
   plotHeatmap(bins, interval, maximum, minimum)
+  return shareData
 }
