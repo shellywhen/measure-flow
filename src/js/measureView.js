@@ -588,18 +588,14 @@ TimeSlider.prototype.init = function () {
     .style('fill', 'gray')
     .style('text-anchor', 'end')
 
-this.hintCanvas.append('line')
-  .classed('dash-timeline', true)
-  .attr('x2', 0)
-  .attr('x1', 0)
-  .attr('y2', this.sliderHeight)
-  .attr('y1', 1/5 * this.sliderHeight)
+this.hintCanvas.append('path')
+  .datum([[0, this.sliderHeight], [0,this.sliderHeight / 5]])
   .style('stroke-linecap', 'round')
-  .style('stroke-dasharray', '5,5')
+  .style('stroke-dasharray', '3,3')
   .style('stroke-width', 1)
   .style('stroke', 'gray')
   .style('opacity', 0.5)
-  .style('visibility', 'hidden')
+  .attr('d', periodLineGenerator)
 
 this.hintCanvas.append('rect')
    .style('fill', 'white')
@@ -621,9 +617,10 @@ this.hintCanvas.append('text')
 TimeSlider.prototype.updateHint = function (x, date) {
   let content = date.toLocaleDateString('en-US', TIPS_CONFIG)
   let boss = this.hintCanvas.style('visibility', 'visible')
-  boss.select('line')
-    .attr('x1', x)
-    .attr('x2', x)
+  let scalex = xScale(date)
+  boss.select('path')
+    .datum([[x, this.sliderHeight], [scalex, this.sliderHeight / 5]])
+    .attr('d', periodLineGenerator)
   boss.select('rect')
     .attr('x', x - 45)
   boss.select('text')
@@ -892,7 +889,6 @@ Frame.prototype.init = function () {
       .classed('strokeTimeline', true)
       .attr('transform', `translate(${WIDTH_LEFT+MARGIN.left}, ${0})`)
       .style('visibility', 'hidden')
-
     g.append('line')
       .attr('x0', -5)
       .attr('y0', 0)
@@ -909,6 +905,7 @@ Frame.prototype.init = function () {
        .attr('y', 0)
        .attr('height', SVGHEIGHT)
        .attr('width', WIDTH_MIDDLE + 10)
+       .classed('monitor-rect', true)
       .style('opacity', 0)
       .on('mousemove', function() {
         let x = d3.mouse(this)[0]
@@ -1190,6 +1187,10 @@ Frame.prototype.createBars = function(g, yScale, dots, i, idx) {
        let self = d3.select(this)
        let level = parseInt(d3.select(this.parentNode).attr('level'))
        let rank = no
+       if (window.pack_flag) {
+         let x = Number(self.attr('x'))
+         timeslider.updateHint(x, d.timeStart)
+       }
        // d3.select(this).style('stroke', 'yellow').style('stroke-width', 3)
        d3.selectAll(`.mini_vis`).each(function(mini, miniidx){
          d3.select(this).selectAll(`.level_${level}`).selectAll(`.rank_${rank}`)
@@ -1234,6 +1235,9 @@ Frame.prototype.createBars = function(g, yScale, dots, i, idx) {
          })
      })
      .on('mouseout', function (d, no) {
+       if (window.pack_flag) {
+         timeslider.fadeHint()
+       }
        let tooltips = d3.selectAll(`.tooltip`)
       tooltips.style('opacity', 0)
       tooltips.text('')

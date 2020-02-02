@@ -11,8 +11,6 @@
 // The following code assumes a complex number is
 // an array: [real, imaginary]
 //-------------------------------------------------
-var complex = require('./complex');
-
 
 //-------------------------------------------------
 // By Eulers Formula:
@@ -23,6 +21,8 @@ var complex = require('./complex');
 //
 // x = -2*PI*(k/N)
 //-------------------------------------------------
+
+import * as complex from './complex.js'
 var mapExponent = {},
     exponent = function (k, N) {
       var x = -2 * Math.PI * (k / N);
@@ -43,7 +43,7 @@ var fftMag = function (fftBins) {
 
 //-------------------------------------------------
 // Calculate Frequency Bins
-// 
+//
 // Returns an array of the frequencies (in hertz) of
 // each FFT bin provided, assuming the sampleRate is
 // samples taken per second.
@@ -60,8 +60,8 @@ var fftFreq = function (fftBins, sampleRate) {
 //-------------------------------------------------
 // Exports
 //-------------------------------------------------
-module.exports = {
-    fftMag: fftMag,
-    fftFreq: fftFreq,
-    exponent: exponent
+export {
+    fftMag,
+  fftFreq,
+exponent
 };

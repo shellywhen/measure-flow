@@ -1,7 +1,7 @@
 //-------------------------------------------------
 // Add two complex numbers
 //-------------------------------------------------
-var complexAdd = function (a, b)
+export let add = function (a, b)
 {
     return [a[0] + b[0], a[1] + b[1]];
 };
@@ -9,7 +9,7 @@ var complexAdd = function (a, b)
 //-------------------------------------------------
 // Subtract two complex numbers
 //-------------------------------------------------
-var complexSubtract = function (a, b)
+export let subtract = function (a, b)
 {
     return [a[0] - b[0], a[1] - b[1]];
 };
@@ -19,9 +19,9 @@ var complexSubtract = function (a, b)
 //
 // (a + bi) * (c + di) = (ac - bd) + (ad + bc)i
 //-------------------------------------------------
-var complexMultiply = function (a, b) 
+export let multiply = function (a, b)
 {
-    return [(a[0] * b[0] - a[1] * b[1]), 
+    return [(a[0] * b[0] - a[1] * b[1]),
             (a[0] * b[1] + a[1] * b[0])];
 };
 
@@ -30,17 +30,11 @@ var complexMultiply = function (a, b)
 //
 // sqrt(a*a + b*b)
 //-------------------------------------------------
-var complexMagnitude = function (c) 
+export let magnitude = function (c)
 {
-    return Math.sqrt(c[0]*c[0] + c[1]*c[1]); 
+    return Math.sqrt(c[0]*c[0] + c[1]*c[1]);
 };
 
 //-------------------------------------------------
 // Exports
-//-------------------------------------------------
-module.exports = {
-    add: complexAdd,
-    subtract: complexSubtract,
-    multiply: complexMultiply,
-    magnitude: complexMagnitude
-};
+//---------------------------------------------

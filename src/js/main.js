@@ -24,12 +24,7 @@ import * as Heatmap from './heatmapView.js'
 import * as Measure from './measureView.js'
 import * as DataHandler from './dataHandler.js'
 import * as Interval from './intervalConfig.js'
-async function loadFFT() {
-  let res = await load('fft-js').then(fft => {
-    window.FFT = fft
-  })
-  return res
-}
+
 String.prototype.capitalize = function() {
   return this.charAt(0).toUpperCase() + this.slice(1);
 }
@@ -46,8 +41,7 @@ d3.select('#dropdownMenuButton').html(name)
 // load data file with the above link schema
 let dataset = networkcube.loadLinkTable(url, afterLoadedData, config[0], ',', config[1])
 // create a session for this data set.
-async function afterLoadedData(dataset) {
-  await loadFFT()
+function afterLoadedData(dataset) {
   dataset.name = dataFileName
   // import data into browser's localstorage.
   networkcube.importData(session, dataset)

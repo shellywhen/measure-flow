@@ -1,4 +1,6 @@
 import * as Nodelink from './nodelinkView.js'
+import * as FFT from './util/fft.js'
+import * as fftUtil from './util/fftutil.js'
 const timeList = [1, 1000, 1000*60, 1000*60*60, 1000*60*60*24, 1000*60*60*24*7, 1000*60*60*24*30, 1000*60*60*24*365, 1000*60*60*24*365*10+2, 1000*60*60*24*36525, 1000*60*60*24*30*12*1000]
 const timePara = ['milliseconds', 'seconds', 'minutes', 'hours', 'days', 'weeks', 'months', 'years']
 const GRANULARITY_name = ['milisecond', 'second', 'minute', 'hour', 'day', 'weekday', 'month', 'year', 'decade', 'century', 'millennium']
@@ -224,7 +226,6 @@ let getBins = function (timeArray, minGran, maxGran) {
 }
 
 export let FourierTransform = function (dots, time, total = 6) {
-  let FFT = window.FFT
   let len = time[time.length - 1].index + 1
   let index = Math.ceil(Math.log2(len))
   let newlen = Math.pow(2, index)
@@ -233,8 +234,8 @@ export let FourierTransform = function (dots, time, total = 6) {
     serie[time[tid].index] = dots[tid].y
   }
   let phasors = FFT.fft(serie)
-  let frequencies = FFT.util.fftFreq(phasors, newlen)
-  let magnitudes = FFT.util.fftMag(phasors)
+  let frequencies = fftUtil.fftFreq(phasors, newlen)
+  let magnitudes = fftUtil.fftMag(phasors)
   // .slice(0, 30).filter(v => v[1]>0)
   let res  = frequencies.map((f, ix) => {
     let t = newlen / f

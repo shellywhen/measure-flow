@@ -240,7 +240,9 @@ let add_config_mode = function() {
     }
   })
 }
+
 let add_config_pack = function () {
+  window.pack_flag = false
   $('#packSwitch').change(function() {
     if (this.checked) {
       if (!window.playerMode) {
@@ -248,13 +250,18 @@ let add_config_pack = function () {
         this.checked = false
         return
       }
+      window.pack_flag = true
       // Pack Things up
       let level = window.focusGranularity.level
+      d3.selectAll('.monitor-rect').style('display', 'none')
       Measure.FRAME_INFO.forEach(frame => {
         frame.rectPack(level)
       })
     } else {
       Measure.FRAME_INFO.forEach(frame => frame.rectNormal())
+      window.pack_flag = false
+      d3.selectAll('.monitor-rect').style('display', '')
+      d3.selectAll('.strokeTimeline').style('display', '')
     }
   })
   if (!window.playerMode) return
