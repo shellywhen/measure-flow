@@ -24,7 +24,7 @@ export let title = {
   leaving: 'Leaving Link Pairs',
   volatility: 'Moving Link Pairs',
   component: 'Connected Components',
-  coeff: 'Clustering Coeffi- cient',
+  coeff: 'Clustering Coefficient',
   triangle: 'Triangles'
 }
 
@@ -70,7 +70,14 @@ export let SCHEMA = {
 'Highschool': {
     source: 1,
     target: 2,
-    time: 5
+    time: 5,
+    id: 6
+  },
+'Highschool_2012': {
+    source: 1,
+    target: 2,
+    time: 5,
+    id: 6
   },
 'Contract': {
     source: 0,
@@ -88,7 +95,7 @@ export let SCHEMA = {
     target: 1,
     time: 3
   },
- 'Embryo-Full':{
+ 'Gene':{
    source: 0,
    target: 1,
    time: 2,
@@ -103,9 +110,10 @@ export let TIME_FORMAT = {
   'Marie-Colombu':'DD/MM/YYYY',
   'Rolla-Cristofoli': 'YYYYMMDD',
   'Marguerite': 'DD-MM-YYYY',
-  'Highschool': 'MM/DD/YYYY HH:mm:ss',
+  'Highschool': 'MM/DD/YYYY HH:mm',
+  'Highschool_2012': 'MM/DD/YYYY HH:mm',
   'Contract': 'YYYYMMDD',
   'Twitter': 'YYYY-MM-DD HH:mm',
   'Embryo': 'YYYY-MM-DD HH',
-  'Embryo-Full': 'MM/DD/YYYY HH:mm:ss'
+  'Gene': 'MM/DD/YYYY HH:mm:ss'
 }

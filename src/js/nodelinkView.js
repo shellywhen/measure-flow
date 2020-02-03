@@ -92,6 +92,7 @@ let getNodeRadius = function(d) {
   // return 3
 }
 let getNodeColor = function (d) {
+  return 'black'
   if (typeof d === 'number') {
     d = nodes[d]
   }

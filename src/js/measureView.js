@@ -226,7 +226,7 @@ let brushendCallback = function (d) {
             .attr('x', xScale(brushStart))
             .attr('y',  maxY - svgHeight / 12)
             .attr('height', svgHeight / 12)
-            .attr('width', xScale(brushEnd) - xScale(brushStart))
+            .attr('width', Math.max(1, xScale(brushEnd) - xScale(brushStart)))
           canvas.select('text')
             .attr('x', (xScale(brushStart) + xScale(brushEnd))/2)
             .attr('y', textY)
@@ -910,6 +910,7 @@ Frame.prototype.updateCanvas = function () {
 }
 Frame.prototype.init = function () {
     this.container.select('.strokeTimeline').remove()
+    this.hciZoom.selectAll('rect').remove()
     let g = this.container.append('g')
       .classed('strokeTimeline', true)
       .attr('transform', `translate(${WIDTH_LEFT+MARGIN.left}, ${0})`)
@@ -990,7 +991,7 @@ Frame.prototype.rectNormal = function () {
       g.select(`.level_${v.level}`).style('display', '')
       g.selectAll('.bars')
         .attr('x', d=> xScale(d.timeStart))
-        .attr('width', d => xScale(d.timeEnd) - xScale(d.timeStart))
+        .attr('width', d => Math.max(1,xScale(d.timeEnd) - xScale(d.timeStart)))
         .attr('y', d => yScale(d.y))
         .attr('height', d => yScale(0) - yScale(d.y))
     })
@@ -1581,8 +1582,9 @@ Frame.prototype.updateLines = function () {
     .domain([0, yMax])
     .range([svgHeight, svgHeight / 12])
     .nice()
+  this.clip.attr('height', svgHeight)
   this.canvas.select('.y-axis').call(d3.axisLeft(yScale).ticks(2))
-  let degLineGenerator = d3.line().x(d => xScale(d.x)).y(d => yScale(d.y))
+  let degLineGenerator = d3.line().x(d => xScale(d.x)).y(d => yScale(d.y))///.curve(d3.curveStepBefore)
   this.canvas.selectAll('.degCurve').attr('d', d => degLineGenerator(d))
   this.init()
 }
@@ -1597,20 +1599,30 @@ Frame.prototype.drawLines = function (data) {
   this.yScale = yScale
   this.canvas.append('g').classed('y-axis', true).call(d3.axisLeft(yScale).ticks(2))
   let canvasData = data.map(getLineDatum)
-  let degLineGenerator = d3.line().x(d => xScale(d.x)).y(d => yScale(d.y))
-  let ele = this.canvas
+  let degLineGenerator = d3.line().x(d => xScale(d.x)).y(d => yScale(d.y)).curve(d3.curveStepBefore)
+  this.clip = this.canvas.append('SVG:clipPath')
+    .attr('id', 'clip_deg')
+    .append('rect')
+    .attr('x', 0)
+    .attr('y', 0)
+    .attr('height', svgHeight)
+    .attr('width', WIDTH_MIDDLE)
+
+
+  let g = this.canvas
     .append('g')
-    .selectAll('path')
+    .attr('clip-path', 'url(#clip_deg)')
+
+  g.selectAll('path')
     .data(canvasData)
     .enter()
     .append('path')
+    .attr('class', (d, i) => `degCurve deg_${i}`)
     .style('stroke', 'gray')
     .style('fill', 'none')
     .style('opacity', 0.35)
     .attr('d', degLineGenerator)
-    .attr('class', (d, i) => `degCurve deg_${i}`)
     .on('mouseover', function(d, i){
-      console.log(i)
       d3.select(`#node_${i}`).dispatch('mouseover')
       d3.select(this).style('stroke', 'orange').style('opacity', 0.8)
     })

@@ -135,9 +135,13 @@ window.afterData = function() {
 
 
 window.resetInterval = function() {
-  Measure.measureFrameInit(window.dgraph, 'measureFrame')
+  Box.drawBox()
+  let data = Heatmap.drawHeatmap('heatmapFrame')
+  Measure.measureFrameInit(window.dgraph, data, 'measureFrame')
   Config.drawConfigs()
+  Interval.drawIntervalConfig('config-interval', dgraph)
   Bookmark.drawBookmark('selection-config')
+  d3.select('#frame_linkPairNumber').select('.measureTitle').dispatch('click')
 }
 
 function loadVisualizationList() {
