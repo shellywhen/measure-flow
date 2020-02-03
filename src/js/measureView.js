@@ -1582,7 +1582,7 @@ Frame.prototype.updateLines = function () {
     .range([svgHeight, svgHeight / 12])
     .nice()
   this.canvas.select('.y-axis').call(d3.axisLeft(yScale).ticks(2))
-  let degLineGenerator = d3.line().x(d => xScale(d.x)).y(d => yScale(d.y)).curve(d3.curveCatmullRom.alpha(0.5))
+  let degLineGenerator = d3.line().x(d => xScale(d.x)).y(d => yScale(d.y))
   this.canvas.selectAll('.degCurve').attr('d', d => degLineGenerator(d))
   this.init()
 }
@@ -1597,7 +1597,7 @@ Frame.prototype.drawLines = function (data) {
   this.yScale = yScale
   this.canvas.append('g').classed('y-axis', true).call(d3.axisLeft(yScale).ticks(2))
   let canvasData = data.map(getLineDatum)
-  let degLineGenerator = d3.line().x(d => xScale(d.x)).y(d => yScale(d.y)).curve(d3.curveCatmullRom.alpha(0.5))
+  let degLineGenerator = d3.line().x(d => xScale(d.x)).y(d => yScale(d.y))
   let ele = this.canvas
     .append('g')
     .selectAll('path')
