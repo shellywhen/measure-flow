@@ -131,11 +131,43 @@ let getTriangle = function (dgraph, interval) {
     })
     return {
       'coeff': open==0?0: close / open,
-      'triangle': close / 3,
+      'triangle': Math.round(close / 3),
       'open': open
     }
   })
   return dots
+}
+
+let getTrianglesInInterval = function(dg, startId, endId) {
+  let mapping = {}
+  let nodes = Array.from(getNodeDuringInterval(dg, [startId, endId+1]))
+  let neighbors = []
+  nodes.forEach((v, i) => {
+    mapping[v]= i
+    neighbors.push(new Set())
+  })
+  let open = 0
+  let close = 0
+  for (let tid = startId; tid <= endId; tid++) {
+    let links = dgraph.timeArrays.links[tid]
+    links.forEach(lid => {
+      let src = mapping[dgraph.linkArrays.source[lid]]
+      let dst = mapping[dgraph.linkArrays.target[lid]]
+      neighbors[src].add(dst)
+      neighbors[dst].add(src)
+    })
+  }
+  neighbors.forEach((dict,k) => {
+    let list = Array.from(dict)
+    for( let i = 0; i < list.length; i++) {
+      for (let j = i+1; j < list.length; j++) {
+        if (neighbors[list[i]].has(list[j])) close++
+        open++
+      }
+    }
+})
+let coeff = open == 0 ? 0 : close / open
+return [Math.round(close/3), coeff]
 }
 
 let getNumberOfNodes = function (dgraph, interval) {
@@ -500,6 +532,7 @@ let drawTimeLine = function () {
   drawCollapseTimeLine(7, component, 'connectedComponent', 'Connected Components', xScale)
 }
 
+
 let getClustering = function(dg, intervals) {
   let coeff = []
   let tri = []
@@ -794,8 +827,11 @@ let getIntervalData = function (dgraph, startId, endId) {
   let leaving = prevPairs.size - intersectPairs.size
   let volatility = prevPairs.size + currPairs.size - 2 * intersectPairs.size
   let component = getComponentDuring (startId, endId+1, dgraph, currNodes)
+  tmp = getTrianglesInInterval(dgraph, startId, endId)
+  let triangle = tmp[0]
+  let coeff = tmp[1]
   let result = {
-    nodeNumber, linkNumber, linkPairNumber, density, redundancy, activation, coming, leaving, volatility, component
+    nodeNumber, linkNumber, linkPairNumber, density, redundancy, activation, coming, leaving, volatility, component, triangle, coeff
   }
   let linkTypes = getLinkTypesDuring (startId, endId+1, dgraph)
   Object.keys(linkTypes).forEach(k => {
