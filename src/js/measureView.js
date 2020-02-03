@@ -459,22 +459,21 @@ TimeSlider.prototype.init = function () {
        .html(`	<pattern id='pattern_interval' patternUnits='userSpaceOnUse' width='5' height='5' patternTransform='rotate(45)'> 	<line x1='0' y='0' x2='0' y2='5' stroke='lightskyblue' stroke-width='6' />	</pattern>`)
    let iconG = this.svg.append('g').attr('transform', `translate(${MARGIN.left}, ${STATIC_SLIDER_HEIGHT + 5})`)
    iconG.append('text')
-     .text('\uf144')
-     .attr('class', 'fas icon playerBtn')
-     .attr('x', '-2.4rem')
-     .attr('y', 0)
+     .text('\uf008')
+     .attr('class', 'fas icon')
+     .attr('x', '-2.9rem')
+     .attr('y', '-1.5rem')
      .style('font-family', 'Font Awesome 5 Free')
      .style('font-weight', 900)
-     .style('font-size', '1.5rem')
+     .style('font-size', '1.2rem')
      .style('fill', 'gray')
      .style('opacity', 0.5)
      .style('cursor', 'pointer')
      .on('click', function(){
-       if (!window.playerMode) return
-       self.play()
-     })
-     .on('dblclick', function() {
-       if(!window.playerMode) return
+       if(!window.playerMode) {
+         alert('Please select an interval at first.')
+         return
+       }
        let intervalIndex = self.intervalIndex
        let level = window.focusGranularity.level
        self.play(true)
@@ -490,6 +489,22 @@ TimeSlider.prototype.init = function () {
          }
         setTimeout(d => self.play(), milisecond*total)
      })
+   iconG.append('text')
+     .text('\uf144')
+     .attr('class', 'fas icon playerBtn')
+     .attr('x', '-2.4rem')
+     .attr('y', 0)
+     .style('font-family', 'Font Awesome 5 Free')
+     .style('font-weight', 900)
+     .style('font-size', '1.5rem')
+     .style('fill', 'gray')
+     .style('opacity', 0.5)
+     .style('cursor', 'pointer')
+     .on('click', function(){
+       if (!window.playerMode) return
+       self.play()
+     })
+
    iconG
      .append('text')
      .text('\uf144')
