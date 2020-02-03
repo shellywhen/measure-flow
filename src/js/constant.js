@@ -87,7 +87,13 @@ export let SCHEMA = {
     source: 0,
     target: 1,
     time: 3
-  }
+  },
+ 'Embryo-Full':{
+   source: 0,
+   target: 1,
+   time: 2,
+   id: 3
+ }
 }
 
 export let TIME_FORMAT = {
@@ -100,5 +106,6 @@ export let TIME_FORMAT = {
   'Highschool': 'MM/DD/YYYY HH:mm:ss',
   'Contract': 'YYYYMMDD',
   'Twitter': 'YYYY-MM-DD HH:mm',
-  'Embryo': 'YYYY-MM-DD HH'
+  'Embryo': 'YYYY-MM-DD HH',
+  'Embryo-Full': 'MM/DD/YYYY HH:mm:ss'
 }
