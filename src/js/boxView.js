@@ -169,11 +169,13 @@ outlier.forEach(v => {
       .attr('cy', yScale(o.data))
       .style('stroke', 'black')
       .on('mouseover', d => {
-        networkcube.sendMessage('hint', {'nodes': [o.node], action: 'add'})
-        console.log('hover!', o.node)
+        d3.select(`#node_${o.node}`).dispatch('mouseover')
+        // networkcube.sendMessage('hint', {'nodes': [o.node], action: 'add'})
+        // console.log('hover!', o.node)
       } )
       .on('mouseout', d => {
-        networkcube.sendMessage('hint', {'nodes': [o.node], action: 'delete'})
+        d3.select(`#node_${o.node}`).dispatch('mouseout')
+        // networkcube.sendMessage('hint', {'nodes': [o.node], action: 'delete'})
       })
   })
 })

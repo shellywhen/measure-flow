@@ -1604,11 +1604,11 @@ Frame.prototype.drawLines = function (data) {
     .data(canvasData)
     .enter()
     .append('path')
-    .classed('degCurve', true)
     .style('stroke', 'gray')
     .style('fill', 'none')
     .style('opacity', 0.35)
     .attr('d', degLineGenerator)
+    .attr('class', (d, i) => `degCurve deg_${i}`)
     .on('mouseover', function(d, i){
       console.log(i)
       d3.select(`#node_${i}`).dispatch('mouseover')

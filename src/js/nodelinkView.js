@@ -26,6 +26,7 @@ export let generateScreenshot = function (rank='unknown', level='unknown') {
     .clone()
     .removeAttr('id')
     .removeAttr('cursor')
+    .removeClass()
     .attr('class', 'screenshot-svg')
     .dblclick(function () {
      $(this).parent('div').remove()
@@ -102,6 +103,7 @@ let nodeOnClick = function (d) {
 let nodeOnHover = function (d) {
   let id = d.index
   let label = window.dgraph.nodeArrays.label[id]
+  d3.select(`.deg_${id}`).style('stroke', 'orange').style('opacity', 0.8)
   d3.select(this)
     .style('fill', nodeHighLightColor)
   tooltip.transition()
@@ -114,6 +116,8 @@ let nodeOnHover = function (d) {
 let nodeOutHover = function (d) {
   d3.select(this)
     .style('fill', networkcube.getPriorityColor(d))
+  let id = d.index
+  d3.select(`.deg_${id}`).style('stroke', 'gray').style('opacity', 0.35)
   tooltip.transition()
     .duration(500)
     .style('opacity', 0)
@@ -649,18 +653,18 @@ let drawNodeLink = function () {
     drawNodeLinkInPeriod(startId, endId)
     window.activeTime = {startId: startId, endId: endId, start: start, end: end}
   })
-  networkcube.addEventListener('hint', m => {
-    switch(m.body.action) {
-      case 'add':
-        dg.highlightArrays.nodeIds.push(...m.body.nodes)
-        highlightNodes(dg.highlightArrays.nodeIds)
-        break;
-      case 'delete':
-        dg.highlightArrays.nodeIds = dg.highlightArrays.nodeIds.filter(v => (! v in m.body.nodes))
-        redrawNodes(m.body.nodes)
-      break
-    }
-  })
+  // networkcube.addEventListener('hint', m => {
+  //   switch(m.body.action) {
+  //     case 'add':
+  //       dg.highlightArrays.nodeIds.push(...m.body.nodes)
+  //       highlightNodes(dg.highlightArrays.nodeIds)
+  //       break;
+  //     case 'delete':
+  //       dg.highlightArrays.nodeIds = dg.highlightArrays.nodeIds.filter(v => (! v in m.body.nodes))
+  //       redrawNodes(m.body.nodes)
+  //     break
+  //   }
+  // })
   networkcube.addEventListener('gap', m => {
     LINK_GAP = m.body
     calculateCurvedLinks()
