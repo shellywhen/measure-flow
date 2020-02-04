@@ -73,6 +73,12 @@ export let SCHEMA = {
     time: 5,
     id: 6
   },
+  'Highschool_2011': {
+      source: 1,
+      target: 2,
+      time: 5,
+      id: 6
+    },
 'Highschool_2012': {
     source: 1,
     target: 2,
@@ -112,6 +118,7 @@ export let TIME_FORMAT = {
   'Marguerite': 'DD-MM-YYYY',
   'Highschool': 'MM/DD/YYYY HH:mm',
   'Highschool_2012': 'MM/DD/YYYY HH:mm',
+  'Highschool_2011': 'MM/DD/YYYY HH:mm',
   'Contract': 'YYYYMMDD',
   'Twitter': 'YYYY-MM-DD HH:mm',
   'Embryo': 'YYYY-MM-DD HH',

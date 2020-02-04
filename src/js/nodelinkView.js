@@ -401,7 +401,7 @@ let initNodeLink = function (svg, dgraph) {
     .attr('r', 1)
     .attr('cx', 0)
     .attr('cy', 0)
-    .style('fill', d => networkcube.getPriorityColor(d))
+    .style('fill', getNodeColor)
   g.append('text')
     .text('Calculating')
     .attr('id', 'tmp')

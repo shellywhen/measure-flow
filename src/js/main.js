@@ -129,6 +129,7 @@ window.afterData = function() {
   //  Stat.drawStatView('radarDiv')
   Config.drawConfigs()
   Interval.drawIntervalConfig('config-interval', dgraph)
+
   d3.select('#frame_linkPairNumber').select('.measureTitle').dispatch('click')
   networkcube.addEventListener('subgraph', handleSubgraph)
 }
@@ -138,8 +139,8 @@ window.resetInterval = function() {
   Box.drawBox()
   let data = Heatmap.drawHeatmap('heatmapFrame')
   Measure.measureFrameInit(window.dgraph, data, 'measureFrame')
-  Config.drawConfigs()
   Interval.drawIntervalConfig('config-interval', dgraph)
+  Config.drawConfigs()
   Bookmark.drawBookmark('selection-config')
   d3.select('#frame_linkPairNumber').select('.measureTitle').dispatch('click')
 }
