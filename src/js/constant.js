@@ -73,12 +73,12 @@ export let SCHEMA = {
     time: 5,
     id: 6
   },
-  'Highschool_2011': {
-      source: 1,
-      target: 2,
-      time: 5,
-      id: 6
-    },
+'Highschool_2011': {
+    source: 1,
+    target: 2,
+    time: 5,
+    id: 6
+  },
 'Highschool_2012': {
     source: 1,
     target: 2,
